@@ -9,6 +9,7 @@
     "express": "3.4.8",
     "jade": "*",
     "mongodb": "*",
-    "node.io": "*"
+    "node.io": "*",
+    "mocha": "*"
   }
 }

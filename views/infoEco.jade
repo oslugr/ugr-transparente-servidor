@@ -1,0 +1,72 @@
+//	
+	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
+	Copyright (C) 2014  Jaime Torres Benavente
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+extends layout
+
+block content
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					a(class="first", href="/seccionesugr.html") #{seccion}
+	#general
+		#menus
+			div(id="enlaces_secciones", class="mod-menu_secciones")
+				ul
+					li(class="tipo2 item-first_level")
+						a(href="/index.html") Inicio
+
+					li(class="tipo2 item-first_level")
+						a(href="/seccionesugr.html") UGR
+
+					li(class="selected tipo2-selected item-first_level")
+						a(href="infoEconomica.html") Información Económica
+
+					li(class="tipo2 item-first_level")
+						a(href="alumnos.html") Alumnos
+
+
+			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
+				ul
+					li(class="adicional1 item-first_level")
+						a(href="#") Elemento 1er nivel
+						ul
+							li(class="tipo1 item-second_level")
+								a(href="#") Elemento 2º nivel
+
+		#pagina
+			h1#titulo_pagina
+				span.texto_titulo #{seccion}
+
+			div(id="contenido", class="sec_interior")
+				.content_doku
+					section
+						article
+							h2 Estado de Ingresos 2013
+							div(id='table_div', class="tabla")
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/57b77948-6ec2-479a-8746-30162b61f15b/resource/1afce6d6-e22e-4bfe-96c9-9b65b23011a8/download/ugrestadoingresos2013.csv") Descargar
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/presupuesto-ugr-2013-estado-de-ingresos") Datos en Opendata.ugr.es 
+
+						article
+							h2 Estado de Gastos 2013
+							div(id='table_div2', class="tabla")
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/d6a16303-6f99-482f-bcc9-66e1c45b985d/resource/1fea4370-1db1-4bc4-b804-9bbfb0b68e28/download/ugrestadoingresos2013.csv") Descargar
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/presupuesto-ugr-2013-estado-de-gastos") Datos en Opendata.ugr.es 
+
+

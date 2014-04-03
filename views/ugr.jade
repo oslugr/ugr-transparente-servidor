@@ -1,0 +1,73 @@
+//	
+	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
+	Copyright (C) 2014  Jaime Torres Benavente
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+extends layout
+
+block content
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					a(class="first", href="/seccionesugr.html") #{seccion}
+	#general
+		#menus
+			div(id="enlaces_secciones", class="mod-menu_secciones")
+				ul
+					li(class="tipo2 item-first_level")
+						a(href="/index.html") Inicio
+
+					li(class="selected tipo2-selected item-first_level")
+						a(href="/seccionesugr.html") UGR
+
+					li(class="tipo2 item-first_level")
+						a(href="infoEconomica.html") Información Económica
+
+					li(class="tipo2 item-first_level")
+						a(href="alumnos.html") Alumnos
+
+
+			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
+				ul
+					li(class="adicional1 item-first_level")
+						a(href="#") Elemento 1er nivel
+						ul
+							li(class="tipo1 item-second_level")
+								a(href="#") Elemento 2º nivel
+
+		#pagina
+			h1#titulo_pagina
+				span.texto_titulo #{seccion}
+
+			div(id="contenido", class="sec_interior")
+				.content_doku
+					ul
+						- for (var i = 0; i < 5; i++)
+							if datos[i][0]!="Plan estratégico 2006-2010"
+								if datos[i][0]!="Plan estratégico 2010-2014"
+									li
+										a(class="enlacesUGR" , href="#{datos[i][1]}") #{datos[i][0]}
+							else
+								li
+									p(id="texto_enlaceugr" , onclick="mostrar();") Plan estratégico
+										ul#ocultos(style="display:none;")
+											li
+												a(class="enlacesUGR" , href="#{datos[i][1]}") #{datos[i][0]}
+											li
+												a(class="enlacesUGR" , href="#{datos[i+1][1]}") #{datos[i+1][0]}
+

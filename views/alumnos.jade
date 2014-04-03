@@ -1,0 +1,78 @@
+//	
+	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
+	Copyright (C) 2014  Jaime Torres Benavente
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+extends layout
+
+block content
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					a(class="first", href="/seccionesugr.html") #{seccion}
+	#general
+		#menus
+			div(id="enlaces_secciones", class="mod-menu_secciones")
+				ul
+					li(class="tipo2 item-first_level")
+						a(href="/index.html") Inicio
+
+					li(class="tipo2 item-first_level")
+						a(href="/seccionesugr.html") UGR
+
+					li(class="tipo2 item-first_level")
+						a(href="infoEconomica.html") Información Económica
+
+					li(class="selected tipo2-selected item-first_level")
+						a(href="alumnos.html") Alumnos
+
+
+			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
+				ul
+					li(class="adicional1 item-first_level")
+						a(href="#") Elemento 1er nivel
+						ul
+							li(class="tipo1 item-second_level")
+								a(href="#") Elemento 2º nivel
+
+		#pagina
+			h1#titulo_pagina
+				span.texto_titulo #{seccion}
+
+			div(id="contenido", class="sec_interior")
+				.content_doku
+					section
+						article
+							h2 Matriculas UGR 2010
+							div(id='table_div', class="tabla")
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/f8eabf0b-650b-4adf-bbe5-f2affbdaa35d/resource/728af7b8-7c11-4b4f-b2d9-ad082499cc76/download/2010.csv") Descargar
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/matriculas-ugr-2010") Datos en Opendata.ugr.es 
+
+						article
+							h2 Matriculas UGR 2011
+							div(id='table_div2', class="tabla")
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/91330940-78de-4cbc-a02e-1898f171552b/resource/84f09d43-2541-4781-926a-bda87d5c463d/download/2011.csv") Descargar
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/matriculas-ugr-2011") Datos en Opendata.ugr.es 
+
+						article
+							h2 Matriculas UGR 2012
+							div(id='table_div3', class="tabla")
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/c50ba598-6a73-4edb-a729-9240b39e3e66/resource/50ef0d17-78e6-4cb5-9ad3-eb689eea3ed4/download/2012.csv") Descargar
+							a(class="descargar" href="http://opendata.ugr.es:5000/dataset/matriculas") Datos en Opendata.ugr.es 
+
+

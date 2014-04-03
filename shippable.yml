@@ -10,7 +10,6 @@ before_install:
 
 before_script:
  - mkdir -p shippable/testresults
- - cd servidor/test/
 
 script:
   - mocha

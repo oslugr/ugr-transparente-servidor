@@ -56,5 +56,5 @@ block content
 			div(id="contenido", class="sec_interior")
 				.content_doku
 					each enlace in enlaces
-						a(href="#{enlace[1]}", id="#{enlace[2]}", class="enlaces_index")
-							p #{enlace[0]}
+						a(href="#{enlace[1]}", class="enlaces_index")
+							div(id="#{enlace[2]}") #{enlace[0]}

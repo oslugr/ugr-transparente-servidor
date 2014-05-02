@@ -1,0 +1,46 @@
+{
+  "BD":"mongodb://localhost:27017/transparente",
+  "index":
+    {
+      "nombre":"Inicio",
+      "enlaces":[
+        {
+          "nombre":"Ugr",
+          "href":"seccionesugr.html",
+          "id":"en_ugr"
+        },
+        {
+          "nombre":"Información económica",
+          "href":"infoEconomica.html",
+          "id":"en_economica"
+        },
+        {
+          "nombre":"Alumnos",
+          "href":"alumnos.html",
+          "id":"en_alumnos"
+        }
+      ],
+      "texto":"El portal de Transparencia de la Universidad de Granada es un esfuerzo por publicar y facilitar el acceso a sus datos"
+    },
+
+  "ugr":
+    {
+      "nombre":"UGR"
+    },
+
+  "infEconomica":
+    {
+      "nombre":"Información Económica"
+    },
+
+  "alumnos":
+    {
+      "nombre":"Alumnos"
+    },
+
+  "error":
+    {
+      "titulo":"Page not found (Error 404)",
+      "texto":"Lo siento, la página no existe o está temporalmente inaccesible"
+    }
+}

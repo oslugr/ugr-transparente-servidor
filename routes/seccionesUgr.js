@@ -22,7 +22,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 //Variable para las configuraciones
-var conf = require('../configuracion');
+var conf = require('../app');
 
 //Variable para almacenar los datos 
 var datos = new Array();
@@ -49,7 +49,7 @@ function ObtenerDatos(url){
 //Funcion para conectarnos a la base de datos y leer la url del recurso que queremos consultar en opendata.ugr.es
 
 function conectaBD(){
-    MongoClient.connect(conf.BD, function(err,db){
+    MongoClient.connect(conf.config.BD, function(err,db){
           if(err) throw err;
    
           var coleccion = db.collection('ugr');
@@ -77,7 +77,7 @@ function conectaBD(){
 
 exports.ugr = function(req, res){
   conectaBD();
-  res.render('ugr', { seccion: conf.sec2 , datos: datos});
+  res.render('ugr', { seccion: conf.config.ugr.nombre , datos: datos});
 
 };
 

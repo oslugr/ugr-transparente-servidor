@@ -22,7 +22,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 //Variable para las configuraciones
-var conf = require('../configuracion');
+var conf = require('../app');
 
 //Variable para almacenar los datos 
 var datos = new Array();
@@ -69,7 +69,7 @@ function ObtenerDatos(url,tipo){
 //Funcion para conectarnos a la base de datos y leer la url del recurso que queremos consultar en opendata.ugr.es
 
 function conectarBD(tipo){
-    MongoClient.connect(conf.BD, function(err,db){
+    MongoClient.connect(conf.config.BD, function(err,db){
           if(err) throw err;
    
           var coleccion = db.collection('datosEconomicos');
@@ -102,6 +102,6 @@ exports.seccionEconomica = function(req, res){
   tam=datos.length;
   conectarBD(2);
   tam2=datos2.length;
-  res.render('infoEco', { seccion: conf.sec3 , datos: datos, datos2: datos2, tam: tam, tam2: tam2});
+  res.render('infoEco', { seccion: conf.config.infEconomica.nombre , datos: datos, datos2: datos2, tam: tam, tam2: tam2});
 
 };

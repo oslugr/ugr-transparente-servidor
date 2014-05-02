@@ -13,6 +13,11 @@ var path = require('path');
 
 var app = express();
 
+//Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
+var cargarConfig = require('./jsonReader');
+config=cargarConfig();
+module.exports.config = config;
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -25,7 +30,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next){
-    res.status(404).render('404_error', {titulo: "Page not found (Error 404)", texto: "Lo siento, la página no existe o está temporalmente inaccesible"});
+    res.status(404).render('404_error', {titulo: config.error.titulo, texto: config.error.texto});
 });
 
 // development only

@@ -1812,7 +1812,7 @@ li.model-resaltado-02 a.banner:hover {
 .enlaces_index{
     float:left;
     text-align: center;
-    color:white;
+    color:black;
     font-weight: bold;
     width: 100px;
     height: 100px;
@@ -1830,15 +1830,15 @@ li.model-resaltado-02 a.banner:hover {
 }
 
 #en_ugr{
-    background-color: rgba(255,0,0,0.5);
+    background-color: rgba(255,0,0,0.2);
 }
 
 #en_alumnos{
-    background-color: rgba(0,255,0,0.5);
+    background-color: rgba(0,255,0,0.2);
 }
 
 #en_economica{
-    background-color: rgba(0,0,255,0.5);
+    background-color: rgba(0,0,255,0.2);
 }
 
 

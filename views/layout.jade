@@ -72,18 +72,17 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 				| 	var data = new google.visualization.DataTable();
 
 				|	data.addColumn('number', 'Fecha');
+				|	data.addColumn('string', 'De');
 				|	data.addColumn('number', 'Cod_capitulo');
 				|	data.addColumn('string', 'Capitulo');
-				|	data.addColumn('number', 'Cod_articulo');
-				|	data.addColumn('string', 'Articulo');
-				|	data.addColumn('number', 'Cod_concepto');
+				|	data.addColumn('string', 'Cod_concepto');
 				|	data.addColumn('string', 'Concepto');
-				|	data.addColumn('string', 'Cod_subconcepto');
-				|	data.addColumn('string', 'Subconcepto');
-				|   data.addColumn('string', 'Cantidad');
+				|	data.addColumn('string', 'Cod_programa');
+				|	data.addColumn('string', 'Programa');
+				|	data.addColumn('number', 'Cantidad');
 
-				- for (var i=0;i<tam2;i++)
-					|		data.addRow([#{datos2[i][1]},#{datos2[i][2]},'#{datos2[i][3]}',#{datos2[i][4]},'#{datos2[i][5]}',#{datos2[i][6]},'#{datos2[i][7]}','#{datos2[i][8]}','#{datos2[i][9]}','#{datos2[i][10]}']);
+				- for (var i=0;i<tam;i++)
+					|		data.addRow([#{datos2[i][1]},'#{datos2[i][2]}',#{datos2[i][3]},'#{datos2[i][4]}','#{datos2[i][5]}','#{datos2[i][6]}','#{datos2[i][7]}','#{datos2[i][8]}',#{datos2[i][9]}]);
 				| var table = new google.visualization.Table(document.getElementById('table_div2'));
 				| table.draw(data, {showRowNumber: true});
 				| }

@@ -37,6 +37,31 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 					enlaces.style.display = "none";
 			}
 
+		script(type='text/javascript').
+			function mostrar_menu_administracion(){
+				var menu=document.getElementById("menu_administracion");
+				if(menu.style.display == "none"){
+					menu.style.display = "inline";
+				}else
+					menu.style.display = "none";
+			}
+
+			function mostrar_menu_docencia(){
+				var menu=document.getElementById("menu_docencia");
+				if(menu.style.display == "none"){
+					menu.style.display = "inline";
+				}else
+					menu.style.display = "none";
+			}
+
+			function mostrar_menu_gestion(){
+				var menu=document.getElementById("menu_gestion");
+				if(menu.style.display == "none"){
+					menu.style.display = "inline";
+				}else
+					menu.style.display = "none";
+			}
+
 
 		if seccion=="Información Económica"
 			script(type='text/javascript', src="https://www.google.com/jsapi") 
@@ -201,11 +226,10 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 				div(id="cabecera" class="")
 					h1#cab_inf UGR transparente
 					#formularios
-						img(src="imagenes/osl.jpg" id="logoOSL")
+						img(src="imagenes/osl.jpg", id="logoOSL", alt="logo OSL")
 						a(href="http://www.ugr.es", id="enlace_ugr") Universidad de Granada
 						span.separador_enlaces |
 						div(class="depto ejemplo_titulo")
-							h1#titulo_stack UGR transparente
 							a(href="/", id="enlace_stack") UGR transparente
 						span.separador_enlaces | 
 
@@ -222,23 +246,25 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 							li(class="banner_container model-resaltado-02 showtext")
 								a(class="banner", href="http://opendata.ugr.es")
 									strong Portal opendata de la UGR
-									em opendata.ugr.es es un portal para la publicación y consulta de datos abiertos de la UGR
+									p(class="texto_banner") opendata.ugr.es es un portal para la publicación y consulta de datos abiertos de la UGR
 
 
 							li(class="banner_container model-resaltado-02 showtext")
 								a(class="banner", href="osl.ugr.es")
 									strong Oficina de Software Libre
-									em Portal de la OSL de la Universidad de Granada
+									p(class="texto_banner") Portal de la OSL de la Universidad de Granada
 		
 
 							li(class="banner_container model-resaltado-01 showtext")
 								a(class="banner", href="http://okfn.org/")
 									strong Open Knowledge Foundation
-									em okfn.org
+									p(class="texto_banner") okfn.org
 				
 
 				#interior_pie
 					#pie
+						a(id="WAI", href="http://www.w3.org/WAI/WCAG2AA-Conformance")
+							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa")
 						a(class="cmswebmap", href="#") Mapa del sitio
 						span.separador_enlaces  | 
 						a(class="contactar", href="#") Contacto

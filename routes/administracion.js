@@ -16,54 +16,34 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-//Variable para la base de datos mongodb
-
-var MongoClient = require('mongodb').MongoClient;
-
 //Variable para las configuraciones
 var conf = require('../app');
 
-//Variable para almacenar los datos 
-var datos = new Array();
+//Variable para la base de datos mongodb
+var MongoClient = require('mongodb').MongoClient;
 
+//Variable para almacenar las tablas 
+var tablas = new Array();
 
-//Funcion para almacenar los datos del recurso que se le pasa
+//Variable para almacenar los datos
+var datos= new Array();
 
-function ObtenerDatos(url){
-
-  require('node.io').scrape(function() {
-      this.get(url, function(err, data) {
-          var lines = data.split('\n');
-          datos=new Array();
-          for (var line, i = 2, l = lines.length; i < l-1; i++) {
-              line = this.parseValues(lines[i]);
-              datos.push(line);
-              
-          }
-      });
-  });
-
-}
-
-//Funcion para conectarnos a la base de datos y leer la url del recurso que queremos consultar en opendata.ugr.es
-
-function conectaBD(){
+function conectarBD(collection,tipo){
     MongoClient.connect(conf.config.BD, function(err,db){
           if(err) throw err;
-   
-          var coleccion = db.collection('ugr');
-   
-          var cursor = coleccion.find()
+          
+          datos=new Array();
 
+          var coleccion = db.collection(collection);
+   
+          var cursor = coleccion.find({"tipo":tipo});
           cursor.each(function(err, item) {
-                  if(item != null)
-                    url=item.url
+                  if(item != null){
+                    datos.push(item);
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
-                  else{
+                  }else{
 
                     db.close();
-                    ObtenerDatos(url);
 
                   }
           });
@@ -71,14 +51,17 @@ function conectaBD(){
 }
 
 
+// Gestión de la pagina de personal
 
-
-// Funcion para gestionar la página de secciones de la ugr
-
-exports.ugr = function(req, res){
-  conectaBD();
-  res.render('ugr', { seccion: conf.config.ugr.nombre , datos: datos});
-
+exports.personal = function(req, res){
+  conectarBD("personal","informacion salarial");
+  var personal=conf.config.personal;
+  res.render(personal.plantilla, { seccion: personal.nombre ,datos: datos, tam_datos:datos.lenth, encabezado1: personal.contenido[0].encabezado, texto1: personal.contenido[0].texto, encabezado2: personal.contenido[1].encabezado, texto2: personal.contenido[1].texto});
 };
 
-  
+// Gestión de la pagina de informacion economica
+
+exports.infoEco = function(req, res){
+  var infoEco=conf.config.infoEco;
+  res.render(infoEco.plantilla, { seccion: infoEco.nombre , texto: infoEco.texto});
+};

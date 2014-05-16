@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/") #{titulo}
+					a(class="first", href="/") #{seccion}
 	#general
 		#menus
 			div(id="enlaces_secciones", class="mod-menu_secciones")
@@ -32,13 +32,42 @@ block content
 						a(href="/index.html") Inicio
 
 					li(class="tipo2 item-first_level")
-						a(href="/seccionesugr.html") UGR
+						h2(class="grupos",onclick="mostrar_menu_administracion()") Administración
+						ul(id="menu_administracion",style="display:none;")
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="personal.html") Personal
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+								a(href="infoEconomica.html") Información Económica
 
 					li(class="tipo2 item-first_level")
-						a(href="infoEconomica.html") Información Económica
+						h2(class="grupos",onclick="mostrar_menu_docencia()") Docencia
+						ul(id="menu_docencia", style="display:none;")
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="ofertaYdemanda.html") Oferta y Demanda Académica
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="claustro.html") Claustro
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+								a(href="alumnos.html") Alumnos
+
 
 					li(class="tipo2 item-first_level")
-						a(href="alumnos.html") Alumnos
+						h2(class="grupos",onclick="mostrar_menu_gestion()") Gestión e Investigación
+						ul(id="menu_gestion", style="display:none;")
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="mision.html") Misión
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="planEstrategico.html") Plan estratégico
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+								a(href="gobierno.html") Gobierno
+
+
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+								a(href="resultados.html") Resultados
 
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
@@ -51,15 +80,9 @@ block content
 
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{titulo}
+				span.texto_titulo #{seccion}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-					p #{texto}
-
-
-
-
-
-
-
+					each enlace in enlaces
+						p #{texto}

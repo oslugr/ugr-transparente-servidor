@@ -3,11 +3,12 @@
   "index":
     {
       "nombre":"Inicio",
+      "plantilla":"index",
       "enlaces":[
         {
-          "nombre":"Ugr",
-          "href":"seccionesugr.html",
-          "id":"en_ugr"
+          "nombre":"Personal",
+          "href":"personal.html",
+          "id":"en_personal"
         },
         {
           "nombre":"Información económica",
@@ -15,27 +16,114 @@
           "id":"en_economica"
         },
         {
+          "nombre":"Oferta y Demanda Académica",
+          "href":"ofertaYdemanda.html",
+          "id":"en_oferta"
+        },
+        {
+          "nombre":"Claustro",
+          "href":"claustro.html",
+          "id":"en_claustro"
+        },
+        {
           "nombre":"Alumnos",
           "href":"alumnos.html",
           "id":"en_alumnos"
+        },
+        {
+          "nombre":"Misión",
+          "href":"mision.html",
+          "id":"en_mision"
+        },
+        {
+          "nombre":"Plan estratégico",
+          "href":"planEstrategico.html",
+          "id":"en_planEst"
+        },
+        {
+          "nombre":"Gobierno",
+          "href":"gobierno.html",
+          "id":"en_gobierno"
+        },
+        {
+          "nombre":"Resultados",
+          "href":"resultados.html",
+          "id":"en_resultados"
         }
       ],
       "texto":"El portal de Transparencia de la Universidad de Granada es un esfuerzo por publicar y facilitar el acceso a sus datos"
     },
 
-  "ugr":
+  "personal":
     {
-      "nombre":"UGR"
+      "nombre":"Personal",
+      "plantilla":"personal",
+      "contenido":[
+        {
+          "encabezado":"Información Salarial",
+          "texto":"Información relativa a la oferta de recursos humanos de la universidad: personal docente e investigador (PDI) y personal de administración y servicios (PAS). Se ofrecen los datos sobre el personal contratado y sus distintas categorías referentes al curso 2013 / 2014: PAS (funcionarios y laborales) y PDI (funcionarios y laborales)."
+        },
+        {
+          "encabezado":"Banda Salarial",
+          "texto":"Información sobre la remuneración al personal universitario, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones referentes al año 2014."
+        }   
+      ] 
     },
 
-  "infEconomica":
+  "infoEco":
     {
-      "nombre":"Información Económica"
+      "nombre":"Información Económica",
+      "plantilla":"infoEco",
+      "texto":"Los datos económicos no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "ofertaYdemanda":
+    {
+      "nombre":"Oferta y Demanda Académica",
+      "plantilla":"ofYde",
+      "texto":"Los datos de oferta y demanda académica no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "claustro":
+    {
+      "nombre":"Claustro",
+      "plantilla":"claustro",
+      "texto":"Los datos del claustro no estan disponibles aún. Disculpe las molestias" 
     },
 
   "alumnos":
     {
-      "nombre":"Alumnos"
+      "nombre":"Alumnos",
+      "plantilla":"alumnos",
+      "texto":"Los datos de los alumnos no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "mision":
+    {
+      "nombre":"Misión",
+      "plantilla":"mision",
+      "texto":"Los datos sobre la mision de la UGR no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "planEstrategico":
+    {
+      "nombre":"Plan Estratégico",
+      "plantilla":"planEstrategico",
+      "texto":"Los datos sobre el plan estratégico de la UGR no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "gobierno":
+    {
+      "nombre":"Gobierno",
+      "plantilla":"gobierno",
+      "texto":"Los datos sobre el gobierno de la UGR no estan disponibles aún. Disculpe las molestias" 
+    },
+
+  "resultados":
+    {
+      "nombre":"Resultados",
+      "plantilla":"resultados",
+      "texto":"Los datos sobre los resultados de la UGR no estan disponibles aún. Disculpe las molestias" 
     },
 
   "error":

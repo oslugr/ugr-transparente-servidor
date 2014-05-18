@@ -83,6 +83,9 @@ block content
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
+
+					div(id="tabla")
+
 					h1
 						a(id="__doku_encabezado_de_primer_nivel", name="__doku_encabezado_de_primer_nivel") #{encabezado1}
 
@@ -106,11 +109,12 @@ block content
 										a(href="#{dato.url}",target="_blank")
 											img(class="link",src="imagenes/link.png", alt="link")
 									td(class="centeralign par")
-										a(href="#")
-											img(class="link",src="imagenes/view.png", alt="view")
+										img(class="view",src="imagenes/view.png", alt="view", name="#{dato.descarga}")
 									td(class="centeralign impar") 
 										a(href="#{dato.descarga}")
 											img(class="save",src="imagenes/save.png", alt="save")
+
+
 
 					h1
 						a(id="__doku_encabezado_de_primer_nivel", name="__doku_encabezado_de_primer_nivel") #{encabezado2}

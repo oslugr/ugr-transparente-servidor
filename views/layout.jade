@@ -63,161 +63,41 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			}
 
 
-		if seccion=="Información Económica"
-			script(type='text/javascript', src="https://www.google.com/jsapi") 
+		script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 
-			script(type='text/javascript')
-				| google.load('visualization', '1', {packages:['table']});
-				| google.setOnLoadCallback(drawTable);
-				| function drawTable() {
-				| 	var data = new google.visualization.DataTable();
+		script(type='text/javascript' src='https://www.google.com/jsapi')
 
-				|	data.addColumn('number', 'Fecha');
-				|	data.addColumn('number', 'Cod_capitulo');
-				|	data.addColumn('string', 'Capitulo');
-				|	data.addColumn('number', 'Cod_articulo');
-				|	data.addColumn('string', 'Articulo');
-				|	data.addColumn('number', 'Cod_concepto');
-				|	data.addColumn('string', 'Concepto');
-				|	data.addColumn('string', 'Cod_subconcepto');
-				|	data.addColumn('string', 'Subconcepto');
-				|   data.addColumn('string', 'Cantidad');
+		script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
 
-				- for (var i=0;i<tam;i++)
-					|		data.addRow([#{datos[i][1]},#{datos[i][2]},'#{datos[i][3]}',#{datos[i][4]},'#{datos[i][5]}',#{datos[i][6]},'#{datos[i][7]}','#{datos[i][8]}','#{datos[i][9]}','#{datos[i][10]}']);
-				| var table = new google.visualization.Table(document.getElementById('table_div'));
-				| table.draw(data, {showRowNumber: true});
-				| }
+		script.
+			$(document).ready(function(){
+			$(".view").click(function(){
+			$.ajax({
+			type: "GET",
+			url: $(this).attr("name"),
+			dataType: "text",
+			success: function (data) {
+			drawTable($.csv.toArrays(data));
+			}
+			});
+			});
+			});
+
+			google.load('visualization', '1', {packages:['table']});
 
 
-			script(type='text/javascript')
-				| google.load('visualization', '1', {packages:['table']});
-				| google.setOnLoadCallback(drawTable);
-				| function drawTable() {
-				| 	var data = new google.visualization.DataTable();
+			function drawTable(csv) {
+			var data = new google.visualization.DataTable();
+			for (var i = 0; i < csv[0].length; i++) {
+			data.addColumn('string', csv[0][i]);
+			}
 
-				|	data.addColumn('number', 'Fecha');
-				|	data.addColumn('string', 'De');
-				|	data.addColumn('number', 'Cod_capitulo');
-				|	data.addColumn('string', 'Capitulo');
-				|	data.addColumn('string', 'Cod_concepto');
-				|	data.addColumn('string', 'Concepto');
-				|	data.addColumn('string', 'Cod_programa');
-				|	data.addColumn('string', 'Programa');
-				|	data.addColumn('number', 'Cantidad');
-
-				- for (var i=0;i<tam;i++)
-					|		data.addRow([#{datos2[i][1]},'#{datos2[i][2]}',#{datos2[i][3]},'#{datos2[i][4]}','#{datos2[i][5]}','#{datos2[i][6]}','#{datos2[i][7]}','#{datos2[i][8]}',#{datos2[i][9]}]);
-				| var table = new google.visualization.Table(document.getElementById('table_div2'));
-				| table.draw(data, {showRowNumber: true});
-				| }
-
-
-		if seccion=="Alumnos"
-			script(type='text/javascript', src="https://www.google.com/jsapi") 
-
-			script(type='text/javascript')
-				| google.load('visualization', '1', {packages:['table']});
-				| google.setOnLoadCallback(drawTable);
-				| function drawTable() {
-				| 	var data = new google.visualization.DataTable();
-
-				|	data.addColumn('string', 'Centro');
-				|	data.addColumn('string', 'Total Centro');
-				|	data.addColumn('string', 'Titulación');
-				|	data.addColumn('string', 'Total titulación');
-				|	data.addColumn('string', 'Sexo');
-				|	data.addColumn('string', '<=18');
-				|	data.addColumn('string', '19');
-				|	data.addColumn('string', '20');
-				|	data.addColumn('string', '21');
-				|	data.addColumn('string', '22');
-				|	data.addColumn('string', '23');
-				|	data.addColumn('string', '24');
-				|	data.addColumn('string', '25');
-				|	data.addColumn('string', '26');
-				|	data.addColumn('string', '27');
-				|	data.addColumn('string', '28');
-				|	data.addColumn('string', '29');
-				|	data.addColumn('string', '30-34');
-				|	data.addColumn('string', '35-39');
-				|	data.addColumn('string', '>=40');
-				|	data.addColumn('string', 'Total Sexo');
-
-				- for (var i=0;i<tam;i++)
-					|		data.addRow(['#{datos[i][0]}','#{datos[i][1]}','#{datos[i][2]}','#{datos[i][3]}','#{datos[i][4]}','#{datos[i][5]}','#{datos[i][6]}','#{datos[i][7]}','#{datos[i][8]}','#{datos[i][9]}','#{datos[i][10]}','#{datos[i][11]}','#{datos[i][12]}','#{datos[i][13]}','#{datos[i][14]}','#{datos[i][15]}','#{datos[i][16]}','#{datos[i][17]}','#{datos[i][18]}','#{datos[i][19]}','#{datos[i][20]}']);
-				| var table = new google.visualization.Table(document.getElementById('table_div'));
-				| table.draw(data, {showRowNumber: true});
-				| }
-
-
-			script(type='text/javascript')
-				| google.load('visualization', '1', {packages:['table']});
-				| google.setOnLoadCallback(drawTable);
-				| function drawTable() {
-				| 	var data = new google.visualization.DataTable();
-
-				|	data.addColumn('string', 'Centro');
-				|	data.addColumn('string', 'Total Centro');
-				|	data.addColumn('string', 'Titulación');
-				|	data.addColumn('string', 'Total titulación');
-				|	data.addColumn('string', 'Sexo');
-				|	data.addColumn('string', '<=18');
-				|	data.addColumn('string', '19');
-				|	data.addColumn('string', '20');
-				|	data.addColumn('string', '21');
-				|	data.addColumn('string', '22');
-				|	data.addColumn('string', '23');
-				|	data.addColumn('string', '24');
-				|	data.addColumn('string', '25');
-				|	data.addColumn('string', '26');
-				|	data.addColumn('string', '27');
-				|	data.addColumn('string', '28');
-				|	data.addColumn('string', '29');
-				|	data.addColumn('string', '30-34');
-				|	data.addColumn('string', '35-39');
-				|	data.addColumn('string', '>=40');
-				|	data.addColumn('string', 'Total Sexo');
-
-				- for (var i=0;i<tam2;i++)
-					|		data.addRow(['#{datos2[i][0]}','#{datos2[i][1]}','#{datos2[i][2]}','#{datos2[i][3]}','#{datos2[i][4]}','#{datos2[i][5]}','#{datos2[i][6]}','#{datos2[i][7]}','#{datos2[i][8]}','#{datos2[i][9]}','#{datos2[i][10]}','#{datos2[i][11]}','#{datos2[i][12]}','#{datos2[i][13]}','#{datos2[i][14]}','#{datos2[i][15]}','#{datos2[i][16]}','#{datos2[i][17]}','#{datos2[i][18]}','#{datos2[i][19]}','#{datos2[i][20]}']);
-				| var table = new google.visualization.Table(document.getElementById('table_div2'));
-				| table.draw(data, {showRowNumber: true});
-				| }
-
-			script(type='text/javascript')
-				| google.load('visualization', '1', {packages:['table']});
-				| google.setOnLoadCallback(drawTable);
-				| function drawTable() {
-				| 	var data = new google.visualization.DataTable();
-
-				|	data.addColumn('string', 'Centro');
-				|	data.addColumn('string', 'Total Centro');
-				|	data.addColumn('string', 'Titulación');
-				|	data.addColumn('string', 'Total titulación');
-				|	data.addColumn('string', 'Sexo');
-				|	data.addColumn('string', '<=18');
-				|	data.addColumn('string', '19');
-				|	data.addColumn('string', '20');
-				|	data.addColumn('string', '21');
-				|	data.addColumn('string', '22');
-				|	data.addColumn('string', '23');
-				|	data.addColumn('string', '24');
-				|	data.addColumn('string', '25');
-				|	data.addColumn('string', '26');
-				|	data.addColumn('string', '27');
-				|	data.addColumn('string', '28');
-				|	data.addColumn('string', '29');
-				|	data.addColumn('string', '30-34');
-				|	data.addColumn('string', '35-39');
-				|	data.addColumn('string', '>=40');
-				|	data.addColumn('string', 'Total Sexo');
-
-				- for (var i=0;i<tam3;i++)
-					|		data.addRow(['#{datos3[i][0]}','#{datos3[i][1]}','#{datos3[i][2]}','#{datos3[i][3]}','#{datos3[i][4]}','#{datos3[i][5]}','#{datos3[i][6]}','#{datos3[i][7]}','#{datos3[i][8]}','#{datos3[i][9]}','#{datos3[i][10]}','#{datos3[i][11]}','#{datos3[i][12]}','#{datos3[i][13]}','#{datos3[i][14]}','#{datos3[i][15]}','#{datos3[i][16]}','#{datos3[i][17]}','#{datos3[i][18]}','#{datos3[i][19]}','#{datos3[i][20]}']);
-				| var table = new google.visualization.Table(document.getElementById('table_div3'));
-				| table.draw(data, {showRowNumber: true});
-				| }
+			for (var j=1; j<csv.length;j++) {
+			data.addRow(csv[j]);
+			}
+			var table = new google.visualization.Table(document.getElementById('tabla'));
+			table.draw(data, {showRowNumber: true});
+			}	
 
 
 	body

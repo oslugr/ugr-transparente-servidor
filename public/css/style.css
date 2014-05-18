@@ -1829,7 +1829,7 @@ li.model-resaltado-02 a.banner:hover {
     font-size: 1em;
 }
 
-.grupos:hover{
+.grupos:hover, .view:hover{
     cursor: pointer;
 }
 

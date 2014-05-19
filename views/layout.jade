@@ -69,38 +69,12 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 
 		script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
 
-		script.
-			$(document).ready(function(){
-			$(".view").click(function(){
-			$.ajax({
-			type: "GET",
-			url: $(this).attr("name"),
-			dataType: "text",
-			success: function (data) {
-			drawTable($.csv.toArrays(data));
-			}
-			});
-			});
-			});
-
-			google.load('visualization', '1', {packages:['table']});
-
-
-			function drawTable(csv) {
-			var data = new google.visualization.DataTable();
-			for (var i = 0; i < csv[0].length; i++) {
-			data.addColumn('string', csv[0][i]);
-			}
-
-			for (var j=1; j<csv.length;j++) {
-			data.addRow(csv[j]);
-			}
-			var table = new google.visualization.Table(document.getElementById('tabla'));
-			table.draw(data, {showRowNumber: true});
-			}	
-
+		script(src="script/generar_tabla.js")
 
 	body
+		div(id="boxes")
+			div(id="dialog" class="window")
+			div(id="mask")
 		div(id="contenedor_margenes" class="")
 			div(id="contenedor" class="")
 				div(id="cabecera" class="")

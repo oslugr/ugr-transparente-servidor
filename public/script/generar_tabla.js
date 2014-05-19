@@ -6,15 +6,6 @@ $(document).ready(function() {
         e.preventDefault(); 
         //Get the A tag
 
-        $.ajax({
-            type: "GET",
-            url: $(this).attr("name"),
-            dataType: "text",
-            success: function (data) {
-                drawTable($.csv.toArrays(data));
-            }
-        });
-
         var id = $(this).attr('href'); 
      
         //Get the screen height and width 
@@ -39,6 +30,11 @@ $(document).ready(function() {
         //transition effect 
         $(id).fadeIn(2000);
 
+        var nombre = $(this).attr('name');
+
+        $('#titulo_tabla').html(nombre);
+
+
         $.ajax({
             type: "GET",
             url: $(this).attr("rel"),
@@ -51,9 +47,7 @@ $(document).ready(function() {
     }); 
      
     //if close button is clicked 
-    $('.window .close').click(function (e) { 
-        //Cancel the link behavior 
-        e.preventDefault(); 
+    $('#close').click(function (e) {  
         $('#mask, .window').hide(); 
     });       
      
@@ -78,6 +72,6 @@ function drawTable(csv) {
     for (var j=1; j<csv.length;j++) {
         data.addRow(csv[j]);
     }
-    var table = new google.visualization.Table(document.getElementById('dialog'));
+    var table = new google.visualization.Table(document.getElementById('tabla'));
     table.draw(data, {showRowNumber: true});
 }

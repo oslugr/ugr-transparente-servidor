@@ -2008,6 +2008,33 @@ li.model-resaltado-02 a.banner:hover {
   position: fixed;  
   width:800px;
   height:400px;
-  background-color: white;
-  overflow:scroll;
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#titulo_tabla{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#close{
+    float:right;
+    margin-top: -70px;
+    margin-right: -10px;
+}
+
+#close:hover{
+    cursor: pointer;
+}
+
+#tabla{
+    overflow:scroll;
+    width: 800px;
+    height: 350px;
 }

@@ -48,13 +48,16 @@ $(document).ready(function() {
      
     //if close button is clicked 
     $('#close').click(function (e) {  
-        $('#mask, .window').hide(); 
+        $('#mask, .window').hide();
+        $('#mask, .window').HTML(""); 
     });       
      
     //if mask is clicked 
     $('#mask').click(function () { 
         $(this).hide(); 
-        $('.window').hide(); 
+        $('.window').hide();
+        $(this).HTML(""); 
+        $('.window').HTML("");  
     });           
      
 }); 

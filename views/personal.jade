@@ -104,13 +104,13 @@ block content
 								tr
 									td(class="centeralign par") #{dato.nombre}
 									td(class="centeralign impar") 
-										a(href="#{dato.url}",target="_blank")
+										a(href="#{dataset.servidor}#{dataset.url}#{dato.url}",target="_blank")
 											img(class="link",src="imagenes/link.png", alt="link")
 									td(class="centeralign par")
-										a(href="#dialog" class="view" rel="#{dato.descarga}" name="#{dato.nombre}")
+										a(href="#dialog" class="view" rel="#{dataset.servidor}#{dato.descarga}" name="#{dato.nombre}")
 											img(class="view",src="imagenes/view.png", alt="view")
 									td(class="centeralign impar") 
-										a(href="#{dato.descarga}")
+										a(href="#{dataset.servidor}#{dato.descarga}")
 											img(class="save",src="imagenes/save.png", alt="save")
 
 
@@ -118,5 +118,27 @@ block content
 						a(id="__doku_encabezado_de_primer_nivel", name="__doku_encabezado_de_primer_nivel") #{encabezado2}
 
 					.level1
-						p #{texto2}		
+						p #{texto2}
 
+					table.inline
+						tbody
+							tr
+								th.centeralign Descripción 
+								th.centeralign Datos en Opendata
+								th.centeralign Ver 
+								th.centeralign Archivo
+
+							
+							each dato in datos2
+
+								tr
+									td(class="centeralign par") #{dato.nombre}
+									td(class="centeralign impar") 
+										a(href="#{dataset.servidor}#{dataset.url}#{dato.url}",target="_blank")
+											img(class="link",src="imagenes/link.png", alt="link")
+									td(class="centeralign par")
+										a(href="#dialog" class="view" rel="#{dataset.servidor}#{dato.descarga}" name="#{dato.nombre}")
+											img(class="view",src="imagenes/view.png", alt="view")
+									td(class="centeralign impar") 
+										a(href="#{dataset.servidor}#{dato.descarga}")
+											img(class="save",src="imagenes/save.png", alt="save")

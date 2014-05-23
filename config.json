@@ -1,5 +1,6 @@
 {
   "BD":"mongodb://localhost:27017/transparente",
+  "datasets":"datasets",
   "index":
     {
       "nombre":"Inicio",
@@ -58,6 +59,8 @@
     {
       "nombre":"Personal",
       "plantilla":"personal",
+      "coleccion":"tablas",
+      "categoria":"personal",
       "contenido":[
         {
           "encabezado":"Información Salarial",

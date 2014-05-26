@@ -84,8 +84,15 @@ block content
 			div(id="contenido", class="sec_interior")
 				.content_doku
 
+					ul.enlaces
+						li.level1
+							.li 
+								a(class="enlaces-cabecera" href="##{encabezado1}") #{encabezado1}
+							.li 
+								a(class="enlaces-cabecera" href="##{encabezado2}") #{encabezado2}
+
 					h1
-						a(id="__doku_encabezado_de_primer_nivel", name="__doku_encabezado_de_primer_nivel") #{encabezado1}
+						a(id="#{encabezado1}", name="__doku_encabezado_de_primer_nivel") #{encabezado1}
 
 					.level1
 						p #{texto1}
@@ -115,7 +122,7 @@ block content
 
 
 					h1
-						a(id="__doku_encabezado_de_primer_nivel", name="__doku_encabezado_de_primer_nivel") #{encabezado2}
+						a(id="#{encabezado2}", name="__doku_encabezado_de_primer_nivel") #{encabezado2}
 
 					.level1
 						p #{texto2}
@@ -134,11 +141,11 @@ block content
 								tr
 									td(class="centeralign par") #{dato.nombre}
 									td(class="centeralign impar") 
-										a(href="#{dataset.servidor}#{dataset.url}#{dato.url}",target="_blank")
+										a(href="#{dataset2.servidor}#{dataset2.url}#{dato.url}",target="_blank")
 											img(class="link",src="imagenes/link.png", alt="link")
 									td(class="centeralign par")
-										a(href="#dialog" class="view" rel="#{dataset.servidor}#{dato.descarga}" name="#{dato.nombre}")
+										a(href="#dialog" class="view" rel="#{dataset2.servidor}#{dato.descarga}" name="#{dato.nombre}")
 											img(class="view",src="imagenes/view.png", alt="view")
 									td(class="centeralign impar") 
-										a(href="#{dataset.servidor}#{dato.descarga}")
+										a(href="#{dataset2.servidor}#{dato.descarga}")
 											img(class="save",src="imagenes/save.png", alt="save")

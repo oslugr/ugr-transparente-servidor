@@ -1843,6 +1843,10 @@ li.model-resaltado-02 a.banner:hover {
     height: 30px;
 }
 
+.enlaces-cabecera{
+    font-size: 1.2em;
+}
+
 /*********************/
 /****** index ********/
 /*********************/
@@ -2007,7 +2011,7 @@ li.model-resaltado-02 a.banner:hover {
 #boxes #dialog {
   position: fixed;  
   width:800px;
-  height:400px;
+  height:450px;
   background-color: #FAFAFA;
   -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);

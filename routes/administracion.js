@@ -30,19 +30,22 @@ var datos= new Array();
 var datos2= new Array();
 
 var servidor;
+var servidor2
 
-function conectarBD(colec,categoria,v){
+function conectarBD(colec,categoria,dataset,v){
     MongoClient.connect(conf.config.BD, function(err,db){
           if(err) throw err;
 
-          var dataset;
-
           var coleccion = db.collection(colec);
           
+          if(v==1)
+            datos= new Array();
+          else
+            datos2= new Array();
    
           var cursor = coleccion.find( { categoria: categoria } )
           cursor.each(function(err, item) {
-                  if(item != null){
+                  if(item != null && item.dataset==dataset){
                     if(v==1){
                       datos.push(item);
                     }else{
@@ -58,7 +61,11 @@ function conectarBD(colec,categoria,v){
           cursor2.each(function(err, item) {
                   if(item != null){
                     if(item.dataset==dataset){
+                      if(v==1)
                       servidor=item;
+                      else
+                        servidor2=item;
+
                     }
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
                   }else{
@@ -74,9 +81,19 @@ function conectarBD(colec,categoria,v){
 
 exports.personal = function(req, res){
   var personal=conf.config.personal;
-  conectarBD(personal.coleccion,personal.categoria,1);
-  conectarBD(personal.coleccion,personal.categoria,2);
-  res.render(personal.plantilla, { seccion: personal.nombre ,datos: datos,datos2: datos2,dataset: servidor, encabezado1: personal.contenido[0].encabezado, texto1: personal.contenido[0].texto, encabezado2: personal.contenido[1].encabezado, texto2: personal.contenido[1].texto});
+  conectarBD(personal.coleccion,personal.categoria,personal.dataset[0],1);
+  conectarBD(personal.coleccion,personal.categoria,personal.dataset[1],2);
+  res.render(personal.plantilla, { 
+    seccion: personal.nombre ,
+    datos: datos,
+    datos2: datos2,
+    dataset: servidor,
+    dataset2:servidor2, 
+    encabezado1: personal.contenido[0].encabezado, 
+    texto1: personal.contenido[0].texto, 
+    encabezado2: personal.contenido[1].encabezado, 
+    texto2: personal.contenido[1].texto
+  });
 };
 
 // Gestión de la pagina de informacion economica

@@ -61,6 +61,7 @@
       "plantilla":"personal",
       "coleccion":"tablas",
       "categoria":"personal",
+      "dataset":["informacion-salarial","banda-salarial"],
       "contenido":[
         {
           "encabezado":"Información Salarial",

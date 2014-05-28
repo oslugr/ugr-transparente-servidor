@@ -34,6 +34,11 @@ $(document).ready(function() {
 
         $('#titulo_tabla').html(nombre);
 
+        $.ajaxSetup({
+            'beforeSend' : function(xhr) {
+                xhr.overrideMimeType('text/html; charset=ISO-8859-1');
+            }
+        });
 
         $.ajax({
             type: "GET",

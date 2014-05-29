@@ -1856,132 +1856,61 @@ li.model-resaltado-02 a.banner:hover {
     text-align: center;
     color:black;
     font-weight: bold;
-    width: 100px;
-    height: 100px;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    font-size: 1.2em;
+    width: 130px;
+    height: 77px;
+    margin-left: 15px;
+    margin-bottom: 15px;
     border:medium outset white;
-    background-image: url("../imagenes/ugr.jpg");
+    background-image: url("../imagenes/ugr.png");
 
 }
 
 .enlaces_index div{
     float:left;
-    padding-top:40%;
+    padding-top:20%;
     width: 100%;
-    height: 60%;
+    height: 68%;
 }
 
 #en_personal{
-    background-color: rgba(254,46,46,0.4);
+    background-color: rgba(254,46,46,0.6);
 }
 
 #en_economica{
-    background-color: rgba(254,154,46,0.4);
+    background-color: rgba(254,154,46,0.6);
 }
 
 #en_oferta{
-    background-color: rgba(100,254,46,0.4);
+    background-color: rgba(100,254,46,0.6);
 }
 
 #en_claustro{
-    background-color: rgba(0,255,128,0.4);
+    background-color: rgba(0,255,128,0.6);
 }
 
 #en_alumnos{
-    background-color: rgba(0,191,255,0.4);
+    background-color: rgba(0,191,255,0.6);
 }
 
 #en_mision{
-    background-color: rgba(46,46,254,0.4);
+    background-color: rgba(46,46,254,0.6);
 }
 
 #en_planEst{
-    background-color: rgba(223,1,58,0.4);
+    background-color: rgba(223,1,58,0.6);
 }
 
 #en_gobierno{
-    background-color: rgba(255,255,0,0.4);
+    background-color: rgba(255,255,0,0.6);
 }
 
 #en_satisfaccion{
-    background-color: rgba(160,0,255,0.4);
+    background-color: rgba(160,0,255,0.6);
 }
 
 #en_resultados{
-    background-color: rgba(164,164,164,0.4);
-}
-
-/*********************/
-/* Sección UGR     */
-/*********************/
-
-.enlacesUGR{
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-#texto_enlaceugr{
-    font-size: 1.5em;
-    color:#404040;
-    margin-bottom: 0%;
-}
-
-#ocultos li{
-    margin-left: 30px;
-}
-
-#texto_enlaceugr:hover{
-    cursor: pointer;
-}
-
-/***************************************/
-/* Sección información Económica       */
-/***************************************/
-
-.content_doku section article{
-    width: 100%;
-    background-color: transparent;
-    margin-bottom: 5%;
-}
-
-.content_doku section article h2{
-    text-align: center;
-    border-bottom: thin dashed #0E344D;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.tabla {
-    overflow:scroll;
-    height: 400px;
-    margin-top: 50px;
-}
-
-.descargar{
-    float:left;
-    margin-top: 15px;
-    margin-bottom:60px;
-    margin-left:70px;
-   padding:1% 2%;   
-   font-family: Helvetica, Arial, sans-serif;
-   font-weight: bold;
-   font-size: 1.2em;
-   line-height: 1;
-   color: #444;
-   border: none;
-   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
-   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
-   background-image: -moz-linear-gradient(0% 100% 90deg, #BBBBBB, #FFFFFF);
-   background-color: #fff;
-   border: thin solid #f1f1f1;
-   border-radius: 5px;
-   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.descargar:hover{
-    opacity:.55;
-    cursor: pointer; 
+    background-color: rgba(164,164,164,0.6);
 }
 
 
@@ -2024,13 +1953,14 @@ li.model-resaltado-02 a.banner:hover {
 
 #titulo_tabla{
     text-align: center;
+    max-width: 700px;
     margin-bottom: 20px;
 }
 
 #close{
     float:right;
-    margin-top: -70px;
-    margin-right: -10px;
+    margin-top: 0px;
+    margin-right: 0px;
 }
 
 #close:hover{

@@ -28,15 +28,6 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
 
 		script(type='text/javascript').
-			function mostrar(){
-				var enlaces=document.getElementById("ocultos");
-				if(enlaces.style.display == "none"){
-					enlaces.style.display = "inline";
-				}else
-					enlaces.style.display = "none";
-			}
-
-		script(type='text/javascript').
 			function mostrar_menu_administracion(){
 				var menu=document.getElementById("menu_administracion");
 				if(menu.style.display == "none"){
@@ -62,19 +53,21 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			}
 
 
-		script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+		if seccion!=="Inicio"
 
-		script(type='text/javascript' src='https://www.google.com/jsapi')
+			script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 
-		script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+			script(type='text/javascript' src='https://www.google.com/jsapi')
 
-		script(src="script/generar_tabla.js")
+			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+
+			script(src="script/generar_tabla.js")
 
 	body
 		div(id="boxes")
 			div(id="dialog" class="window")
-				h1#titulo_tabla
 				img(id="close",src="imagenes/close.png", alt="close")
+				h1#titulo_tabla
 				div(id="tabla")
 			div(id="mask")
 		div(id="contenedor_margenes" class="")

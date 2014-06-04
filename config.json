@@ -51,8 +51,7 @@
           "href":"resultados.html",
           "id":"en_resultados"
         }
-      ],
-      "texto":"El portal de Transparencia de la Universidad de Granada es un esfuerzo por publicar y facilitar el acceso a sus datos"
+      ]
     },
 
   "personal":
@@ -60,7 +59,7 @@
       "nombre":"Personal",
       "plantilla":"personal",
       "coleccion":"tablas",
-      "categoria":"personal",
+      "categoria":["personal"],
       "dataset":["informacion-salarial","banda-salarial"],
       "contenido":[
         {
@@ -78,7 +77,31 @@
     {
       "nombre":"Información Económica",
       "plantilla":"infoEco",
-      "texto":"Los datos económicos no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["informacion economica"],
+      "dataset":["presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos"],
+      "contenido":[
+        {
+          "encabezado":"Presupuesto",
+          "texto":"Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
+        },
+        {
+          "encabezado":"Memoria de cuentas anuales",
+          "texto":""
+        },
+        {
+          "encabezado":"Auditoria",
+          "texto":""
+        },
+        {
+          "encabezado":"Desglose de ingresos",
+          "texto":"Información desglosada de los ingresos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por capítulos, resumen por artículos, resumen general de ingresos o comparativa de ingresos entre los años 2012-2014."
+        },
+        {
+          "encabezado":"Desglose de gastos",
+          "texto":"Información desglosada de los gastos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por estado de gastos general, gastos de personal, gastos por artículos, coste de mantenimiento de Ceuta y Melilla, programas, resumen del estado de gastos o comparativa de gastos entre los años 2012-2014."
+        }
+      ]
     },
 
   "ofertaYdemanda":

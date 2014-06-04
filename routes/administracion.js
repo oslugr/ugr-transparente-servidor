@@ -25,32 +25,34 @@ var MongoClient = require('mongodb').MongoClient;
 
 //Variable para almacenar los datos
 var datos= new Array();
-
-//Variable para almacenar los datos
 var datos2= new Array();
 
-var servidor;
-var servidor2
 
-function conectarBD(colec,categoria,dataset,v){
+var servidor= new Array();
+var servidor2= new Array();
+
+
+function conectarBD(plantilla,colec,categoria,dataset,v){
     MongoClient.connect(conf.config.BD, function(err,db){
           if(err) throw err;
 
           var coleccion = db.collection(colec);
-          
-          if(v==1)
-            datos= new Array();
-          else
-            datos2= new Array();
-   
+
+          if(plantilla==conf.config.personal.plantilla){
+            datos[v]=new Array();
+            servidor[v]= new Array();
+          }else{
+            datos2[v]=new Array();
+            servidor2[v]= new Array();
+          }
+
           var cursor = coleccion.find( { categoria: categoria } )
           cursor.each(function(err, item) {
                   if(item != null && item.dataset==dataset){
-                    if(v==1){
-                      datos.push(item);
-                    }else{
-                      datos2.push(item);
-                    }
+                    if(plantilla==conf.config.personal.plantilla)
+                      datos[v].push(item);
+                    else
+                      datos2[v].push(item);
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
                   }
           });
@@ -61,11 +63,10 @@ function conectarBD(colec,categoria,dataset,v){
           cursor2.each(function(err, item) {
                   if(item != null){
                     if(item.dataset==dataset){
-                      if(v==1)
-                      servidor=item;
+                      if(plantilla==conf.config.personal.plantilla)
+                        servidor[v].push(item);
                       else
-                        servidor2=item;
-
+                        servidor2[v].push(item);
                     }
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
                   }else{
@@ -81,18 +82,16 @@ function conectarBD(colec,categoria,dataset,v){
 
 exports.personal = function(req, res){
   var personal=conf.config.personal;
-  conectarBD(personal.coleccion,personal.categoria,personal.dataset[0],1);
-  conectarBD(personal.coleccion,personal.categoria,personal.dataset[1],2);
+  for (var i =0;i<(personal.dataset).length; i++) {
+    conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
+  }
+
   res.render(personal.plantilla, { 
     seccion: personal.nombre ,
     datos: datos,
-    datos2: datos2,
-    dataset: servidor,
-    dataset2:servidor2, 
-    encabezado1: personal.contenido[0].encabezado, 
-    texto1: personal.contenido[0].texto, 
-    encabezado2: personal.contenido[1].encabezado, 
-    texto2: personal.contenido[1].texto
+    servidores: servidor,
+    tam: (personal.dataset).length,
+    contenido: personal.contenido
   });
 };
 
@@ -100,5 +99,15 @@ exports.personal = function(req, res){
 
 exports.infoEco = function(req, res){
   var infoEco=conf.config.infoEco;
-  res.render(infoEco.plantilla, { seccion: infoEco.nombre , texto: infoEco.texto});
+  for (var i =0;i<(infoEco.dataset).length; i++) {
+    conectarBD(infoEco.plantilla,infoEco.coleccion,infoEco.categoria,infoEco.dataset[i],i);
+  }
+
+  res.render(infoEco.plantilla, { 
+    seccion: infoEco.nombre ,
+    datos: datos2,
+    servidores: servidor2,
+    tam: (infoEco.dataset).length,
+    contenido: infoEco.contenido
+  });
 };

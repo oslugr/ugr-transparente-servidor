@@ -86,66 +86,35 @@ block content
 
 					ul.enlaces
 						li.level1
-							.li 
-								a(class="enlaces-cabecera" href="##{encabezado1}") #{encabezado1}
-							.li 
-								a(class="enlaces-cabecera" href="##{encabezado2}") #{encabezado2}
+							- for (var i = 0; i < tam; i++)
+								.li 
+									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
 
-					h1
-						a(id="#{encabezado1}", name="__doku_encabezado_de_primer_nivel") #{encabezado1}
+					- for (var j = 0; j < tam; j++)
+						h1
+							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
 
-					.level1
-						p #{texto1}
+						.level1
+							p #{contenido[j].texto}
 
-					table.inline
-						tbody
-							tr
-								th.centeralign Descripción 
-								th.centeralign Datos en Opendata
-								th.centeralign Ver 
-								th.centeralign Archivo
-
-							
-							each dato in datos
-
+						table.inline
+							tbody
 								tr
-									td(class="centeralign par") #{dato.nombre}
-									td(class="centeralign impar") 
-										a(href="#{dataset.servidor}#{dataset.url}#{dato.url}",target="_blank")
-											img(class="link",src="imagenes/link.png", alt="link")
-									td(class="centeralign par")
-										a(href="#dialog" class="view" rel="#{dataset.servidor}#{dato.descarga}" name="#{dato.nombre}")
-											img(class="view",src="imagenes/view.png", alt="view")
-									td(class="centeralign impar") 
-										a(href="#{dataset.servidor}#{dato.descarga}")
-											img(class="save",src="imagenes/save.png", alt="save")
+									th.centeralign Descripción 
+									th.centeralign Datos en Opendata
+									th.centeralign Ver 
+									th.centeralign Archivo
 
+								- for (var k = 0; k < datos[j].length; k++)
+									tr
+										td(class="centeralign par") #{datos[j][k].nombre}
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
+												img(class="link",src="imagenes/link.png", alt="link")
+										td(class="centeralign par")
+											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+												img(class="view",src="imagenes/view.png", alt="view")
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
+												img(class="save",src="imagenes/save.png", alt="save")
 
-					h1
-						a(id="#{encabezado2}", name="__doku_encabezado_de_primer_nivel") #{encabezado2}
-
-					.level1
-						p #{texto2}
-
-					table.inline
-						tbody
-							tr
-								th.centeralign Descripción 
-								th.centeralign Datos en Opendata
-								th.centeralign Ver 
-								th.centeralign Archivo
-
-							
-							each dato in datos2
-
-								tr
-									td(class="centeralign par") #{dato.nombre}
-									td(class="centeralign impar") 
-										a(href="#{dataset2.servidor}#{dataset2.url}#{dato.url}",target="_blank")
-											img(class="link",src="imagenes/link.png", alt="link")
-									td(class="centeralign par")
-										a(href="#dialog" class="view" rel="#{dataset2.servidor}#{dato.descarga}" name="#{dato.nombre}")
-											img(class="view",src="imagenes/view.png", alt="view")
-									td(class="centeralign impar") 
-										a(href="#{dataset2.servidor}#{dato.descarga}")
-											img(class="save",src="imagenes/save.png", alt="save")

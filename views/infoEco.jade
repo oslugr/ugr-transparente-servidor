@@ -101,7 +101,7 @@ block content
 								tr
 									th.centeralign Descripción
 									th.centeralign Datos en Opendata
-									if  contenido[j].encabezado!=="Memoria de cuentas anuales"
+									if  contenido[j].encabezado!=="Memoria de cuentas anuales" && contenido[j].encabezado!=="Auditoria" 
 										th.centeralign Ver 
 									th.centeralign Archivo
 
@@ -111,7 +111,7 @@ block content
 										td(class="centeralign impar") 
 											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
 												img(class="link",src="imagenes/link.png", alt="link")
-										if  contenido[j].encabezado!=="Memoria de cuentas anuales"
+										if  contenido[j].encabezado!=="Memoria de cuentas anuales" && contenido[j].encabezado!=="Auditoria"
 											td(class="centeralign par")
 												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
 													img(class="view",src="imagenes/view.png", alt="view")

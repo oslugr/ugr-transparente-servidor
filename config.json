@@ -78,7 +78,7 @@
       "nombre":"Información Económica",
       "plantilla":"infoEco",
       "coleccion":"tablas",
-      "categoria":["informacion economica"],
+      "categoria":["infoEco"],
       "dataset":["presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos"],
       "contenido":[
         {

@@ -108,7 +108,19 @@
     {
       "nombre":"Oferta y Demanda Académica",
       "plantilla":"ofYde",
-      "texto":"Los datos de oferta y demanda académica no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["ofertaYdemanda"],
+      "dataset":["titulaciones","demanda"],
+            "contenido":[
+        {
+          "encabezado":"Titulaciones",
+          "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
+        },
+        {
+          "encabezado":"Demanda académica",
+          "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2012/2013."
+        }
+      ]
     },
 
   "claustro":

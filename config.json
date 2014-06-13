@@ -111,7 +111,7 @@
       "coleccion":"tablas",
       "categoria":["ofertaYdemanda"],
       "dataset":["titulaciones","demanda"],
-            "contenido":[
+      "contenido":[
         {
           "encabezado":"Titulaciones",
           "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
@@ -127,7 +127,19 @@
     {
       "nombre":"Claustro",
       "plantilla":"claustro",
-      "texto":"Los datos del claustro no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["claustro"],
+      "dataset":["perfil-profesorado","profesores-extranjeros"],
+      "contenido":[
+        {
+          "encabezado":"Perfil del profesorado",
+          "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
+        },
+        {
+          "encabezado":"Profesores extranjeros",
+          "texto":"Información sobre los profesores extranjeros del claustro de la Universidad de Granada durante los años 2009, 2010, 2011."
+        }
+      ]
     },
 
   "alumnos":

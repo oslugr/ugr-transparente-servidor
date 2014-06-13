@@ -83,4 +83,36 @@ block content
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-					p #{texto}
+					ul.enlaces
+						li.level1
+							- for (var i = 0; i < tam; i++)
+								.li 
+									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
+
+					- for (var j = 0; j < tam; j++)
+						h1
+							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+
+						.level1
+							p #{contenido[j].texto}
+
+						table.inline
+							tbody
+								tr
+									th.centeralign Descripción 
+									th.centeralign Datos en Opendata
+									th.centeralign Ver 
+									th.centeralign Archivo
+
+								- for (var k = 0; k < datos[j].length; k++)
+									tr
+										td(class="centeralign par") #{datos[j][k].nombre}
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
+												img(class="link",src="imagenes/link.png", alt="link")
+										td(class="centeralign par")
+											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+												img(class="view",src="imagenes/view.png", alt="view")
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
+												img(class="save",src="imagenes/save.png", alt="save")

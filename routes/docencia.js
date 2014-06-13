@@ -101,7 +101,17 @@ exports.ofertaYdemanda = function(req, res){
 
 exports.claustro = function(req, res){
   var claustro=conf.config.claustro;
-  res.render(claustro.plantilla, { seccion: claustro.nombre , texto: claustro.texto});
+  for (var i =0;i<(claustro.dataset).length; i++) {
+    conectarBD(claustro.plantilla,claustro.coleccion,claustro.categoria,claustro.dataset[i],i);
+  }
+
+  res.render(claustro.plantilla, { 
+    seccion: claustro.nombre ,
+    datos: datos2,
+    servidores: servidor2,
+    tam: (claustro.dataset).length,
+    contenido: claustro.contenido
+  });
 };
 
 // Gestión de la pagina de alumnos

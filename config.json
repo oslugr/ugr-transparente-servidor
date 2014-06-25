@@ -146,7 +146,23 @@
     {
       "nombre":"Alumnos",
       "plantilla":"alumnos",
-      "texto":"Los datos de los alumnos no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["alumnos"],
+      "dataset":["matriculaciones","canales-de-comunicacion","becas-ayudas"],
+      "contenido":[
+        {
+          "encabezado":"Matrículas: 2013",
+          "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada durante el curso 2013/2014. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
+        },
+        {
+          "encabezado":"Canales de comunicación",
+          "texto":"Información sobre los principales canales de representación y comunicación con los alumnos de la Universidad de Granada."
+        },
+        {
+          "encabezado":"Becas y ayudas",
+          "texto":"Información sobre la oferta de becas y ayudas disponibles para los alumnos de la Universidad de Granada."
+        }
+      ]
     },
 
   "mision":

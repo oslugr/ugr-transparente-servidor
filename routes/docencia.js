@@ -42,9 +42,12 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
           if(plantilla==conf.config.ofertaYdemanda.plantilla){
             datos[v]=new Array();
             servidor[v]= new Array();
-          }else{
+          }else if(plantilla==conf.config.claustro.plantilla){
             datos2[v]=new Array();
             servidor2[v]= new Array();
+          }else{
+            datos3[v]=new Array();
+            servidor3[v]= new Array();
           }
 
           var cursor = coleccion.find( { categoria: categoria } )
@@ -52,8 +55,10 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                   if(item != null && item.dataset==dataset){
                     if(plantilla==conf.config.ofertaYdemanda.plantilla)
                       datos[v].push(item);
-                    else
+                    else if(plantilla==conf.config.claustro.plantilla)
                       datos2[v].push(item);
+                    else
+                      datos3[v].push(item);
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
                   }
           });
@@ -66,8 +71,10 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                     if(item.dataset==dataset){
                       if(plantilla==conf.config.ofertaYdemanda.plantilla)
                         servidor[v].push(item);
-                      else
+                      else if(plantilla==conf.config.claustro.plantilla)
                         servidor2[v].push(item);
+                      else
+                        servidor3[v].push(item);
                     }
                   // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
                   }else{
@@ -118,7 +125,17 @@ exports.claustro = function(req, res){
 
 exports.alumnos = function(req, res){
   var alumnos=conf.config.alumnos;
-  res.render(alumnos.plantilla, { seccion: alumnos.nombre , texto: alumnos.texto});
+  for (var i =0;i<(alumnos.dataset).length; i++) {
+    conectarBD(alumnos.plantilla,alumnos.coleccion,alumnos.categoria,alumnos.dataset[i],i);
+  }
+
+  res.render(alumnos.plantilla, { 
+    seccion: alumnos.nombre ,
+    datos: datos3,
+    servidores: servidor3,
+    tam: (alumnos.dataset).length,
+    contenido: alumnos.contenido
+  });
 };
 
 

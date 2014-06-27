@@ -169,28 +169,80 @@
     {
       "nombre":"Misión",
       "plantilla":"mision",
-      "texto":"Los datos sobre la mision de la UGR no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["mision"],
+      "dataset":["mision"],
+      "contenido":[
+        {
+          "encabezado":"Misión de la Universidad",
+          "texto":"La misión es un elemento importante de la planificación estratégica de las universidades, que consiste en una declaración escrita que expresa el propósito o la razón de ser de la organización."
+        }
+      ]
     },
 
   "planEstrategico":
     {
       "nombre":"Plan Estratégico",
       "plantilla":"planEstrategico",
-      "texto":"Los datos sobre el plan estratégico de la UGR no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["planEstrategico"],
+      "dataset":["planEstrategico"],
+      "contenido":[
+        {
+          "encabezado":"Plan estratégico",
+          "texto":"El plan estratégico es la herramienta gerencial que permite hacer operativa la misión de la universidad. Su existencia muestra que la organización se ha preocupado por realizar un diagnóstico del entorno externo e interno, identificando las principales oportunidades y los riesgos."
+        }
+      ]
     },
 
   "gobierno":
     {
       "nombre":"Gobierno",
       "plantilla":"gobierno",
-      "texto":"Los datos sobre el gobierno de la UGR no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["gobierno"],
+      "dataset":["composicion-gobierno","estatutos"],
+      "contenido":[
+        {
+          "encabezado":"Composición de gobierno",
+          "texto":"Información sobre la composición de los miembros de sus principales órganos de gobierno profesores mencionando sus nombres y apellidos, titulación y responsabilidades de gobierno."
+        },
+        {
+          "encabezado":"Estatutos",
+          "texto":"Información sobre los estatutos de la Universidad de Granada."
+        }
+      ]
     },
 
   "resultados":
     {
       "nombre":"Resultados",
       "plantilla":"resultados",
-      "texto":"Los datos sobre los resultados de la UGR no estan disponibles aún. Disculpe las molestias" 
+      "coleccion":"tablas",
+      "categoria":["resultados"],
+      "dataset":["investigacion","academico","satisfaccion-alumnos","ranking","alumnos-fuera-comunidad"],
+      "contenido":[
+        {
+          "encabezado":"Investigación",
+          "texto":"Información sobre los principales resultados relacionados con la labor investigadora de sus profesores. "
+        },
+        {
+          "encabezado":"Académico",
+          "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los alumnos de la Universidad de Granada."
+        },
+        {
+          "encabezado":"Satisfacción alumnos",
+          "texto":"Información sobre los índices de satisfacción de los alumnos de la Universidad de Granada."
+        },
+        {
+          "encabezado":"Ranking",
+          "texto":"Información sobre la posición de la Universidad de Granada en los principales rankings internacionales. "
+        },
+        {
+          "encabezado":"Alumnos fuera de la comunidad: 2013/2014",
+          "texto":"Información relativa al número de alumnos por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
+        }
+      ]
     },
 
   "error":

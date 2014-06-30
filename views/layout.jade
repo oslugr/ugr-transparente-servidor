@@ -75,8 +75,12 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 				div(id="cabecera" class="")
 					h1#cab_inf UGR transparente
 					#formularios
-						img(src="imagenes/osl.jpg", id="logoOSL", alt="logo OSL")
-						a(href="http://www.ugr.es", id="enlace_ugr") Universidad de Granada
+						a(href="http://www.ugr.es", id="enlace-ugr")
+							img(src="img/general/logo-ugr.png", id="logoUGR", alt="logo UGR")
+
+						a(href="http://osl.ugr.es", id="enlace-osl")
+							img(src="imagenes/osl.jpg", id="logoOSL", alt="logo OSL")
+						
 						span.separador_enlaces |
 						div(class="depto ejemplo_titulo")
 							a(href="/", id="enlace_stack") UGR transparente
@@ -99,7 +103,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 
 
 							li(class="banner_container model-resaltado-02 showtext")
-								a(class="banner", href="osl.ugr.es")
+								a(class="banner", href="http://osl.ugr.es")
 									strong Oficina de Software Libre
 									p(class="texto_banner") Portal de la OSL de la Universidad de Granada
 		

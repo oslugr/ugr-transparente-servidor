@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 div#contenedor {
     margin-left: auto;
     margin-right: auto;
+    margin-top:20px;
     padding-top: 10px;
     background-repeat: no-repeat;
     font-family: Verdana,sans;
@@ -72,7 +73,7 @@ div#cabecera h1#cab_inf {
     height: 138px;
     left: 237px;
     position: absolute;
-    top: 91px;
+    top: 76px;
     width: 712px;
     background-position: center center;
     text-indent: -9999em;
@@ -81,12 +82,16 @@ div#cabecera h1#cab_inf {
     border-color: #6D6C71;
 }
 
-#logoOSL{
+#enlace-osl{
     position: absolute;
-    width: 180px;
-    height: 70px;
-    top:0px;
-    left:780px;
+    top:5px;
+    left:790px;
+    margin-bottom: 10px;
+}
+
+#logoOSL{
+    width: 170px;
+    height: 60px;
 }
 
 div#cabecera a.enlace_provisional {
@@ -121,8 +126,6 @@ div#cabecera a.enlace_provisional:hover em {
 }
 div#cabecera div#formularios {
     height: 238px;
-    background-image: url("../img/general/logo-ugr.png");
-    background-position: left top;
     border-color: #6D6C71;
 }
 div#cabecera div#formularios span#obituario {

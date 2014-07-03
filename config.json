@@ -252,7 +252,7 @@
 
   "leytransparencia":
     {
-      "nombre":"Ley de transparencia, acceso a la información pública y buen gobierno",
+      "nombre":"Ley de transparencia",
       "plantilla":"leytransparencia",
       "coleccion":"tablas",
       "categoria":["normativas"],

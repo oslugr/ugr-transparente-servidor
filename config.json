@@ -50,6 +50,11 @@
           "nombre":"Resultados",
           "href":"resultados.html",
           "id":"en_resultados"
+        },
+        {
+          "nombre":"Ley de transparencia",
+          "href":"leytransparencia.html",
+          "id":"en_leytransparencia"
         }
       ]
     },
@@ -244,6 +249,27 @@
         }
       ]
     },
+
+  "leytransparencia":
+    {
+      "nombre":"Ley de transparencia, acceso a la información pública y buen gobierno",
+      "plantilla":"leytransparencia",
+      "coleccion":"tablas",
+      "categoria":["normativas"],
+      "texto":"La transparencia, el acceso a la información pública y las normas de buen gobierno deben ser los ejes fundamentales de toda acción política. Sólo cuando la acción de los responsables públicos se somete a escrutinio, cuando los ciudadanos pueden conocer cómo se toman las decisiones que les afectan, cómo se manejan los fondos públicos o bajo qué criterios actúan nuestras instituciones podremos hablar del inicio de un proceso en el que los poderes públicos comienzan a responder a una sociedad que es crítica, exigente y que demanda participación de los poderes públicos. Esta Ley tiene por objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones de buen gobierno que deben cumplir los responsables públicos así como las consecuencias derivadas de su incumplimiento.",
+      "dataset":["leytransparenciaBOE","leytransparenciaBOJA"],
+      "contenido":[
+        {
+          "encabezado":"Ley de transparencia (BOE)",
+          "texto":""
+        },
+        {
+          "encabezado":"Ley de transparencia (BOJA)",
+          "texto":""
+        }
+      ]
+    },
+
 
   "error":
     {

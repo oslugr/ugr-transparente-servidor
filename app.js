@@ -8,6 +8,7 @@ var index = require('./routes/index');
 var docencia = require('./routes/docencia');
 var administracion = require('./routes/administracion');
 var gei = require('./routes/gestionEinvestigacion');
+var norma = require('./routes/normativas');
 var http = require('http');
 var path = require('path');
 
@@ -56,6 +57,9 @@ app.get('/mision.html',gei.mision);
 app.get('/planEstrategico.html',gei.planEstrategico);
 app.get('/gobierno.html',gei.gobierno);
 app.get('/resultados.html',gei.resultados);
+
+//Normativas
+app.get('/leytransparencia.html',norma.leytransparencia);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

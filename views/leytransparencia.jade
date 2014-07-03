@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/") #{titulo}
+					a(class="first", href="/resultados.html") Gestión e Investigación / #{seccion}
 	#general
 		#menus
 			div(id="enlaces_secciones", class="mod-menu_secciones")
@@ -33,7 +33,7 @@ block content
 
 					li(class="tipo2 item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_administracion()") Administración
-						ul(id="menu_administracion",style="display:none;")
+						ul(id="menu_administracion", style="display:none;")
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="personal.html") Personal
 
@@ -42,7 +42,7 @@ block content
 
 					li(class="tipo2 item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_docencia()") Docencia
-						ul(id="menu_docencia", style="display:none;")
+						ul(id="menu_docencia",style="display:none;")
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="ofertaYdemanda.html") Oferta y Demanda Académica
 
@@ -69,12 +69,11 @@ block content
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
 								a(href="resultados.html") Resultados
 
-					li(class="tipo2 item-first_level")
+					li(class="selected tipo2-selected item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_normativas()") Normativas
-						ul(id="menu_normativas", style="display:none;")
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+						ul(id="menu_normativas")
+							li(class="tipo1-selected item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
 								a(href="leytransparencia.html") Ley de Transparencia
-
 
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
@@ -87,8 +86,41 @@ block content
 
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{titulo}
+				span.texto_titulo #{seccion}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-						p #{texto}
+					p #{texto}
+					ul.enlaces
+						li.level1
+							- for (var i = 0; i < tam; i++)
+								.li 
+									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
+
+					- for (var j = 0; j < tam; j++)
+						h1
+							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+
+						.level1
+							p #{contenido[j].texto}
+
+						table.inline
+							tbody
+								tr
+									th.centeralign Descripción 
+									th.centeralign Datos en Opendata
+									th.centeralign Ver 
+									th.centeralign Archivo
+
+								- for (var k = 0; k < datos[j].length; k++)
+									tr
+										td(class="centeralign par") #{datos[j][k].nombre}
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
+												img(class="link",src="imagenes/link.png", alt="link")
+										td(class="centeralign par")
+											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+												img(class="view",src="imagenes/view.png", alt="view")
+										td(class="centeralign impar") 
+											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
+												img(class="save",src="imagenes/save.png", alt="save")

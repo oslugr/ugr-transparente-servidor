@@ -84,7 +84,7 @@
       "plantilla":"infoEco",
       "coleccion":"tablas",
       "categoria":["infoEco"],
-      "dataset":["presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos"],
+      "dataset":["presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos","justificante-gastos"],
       "contenido":[
         {
           "encabezado":"Presupuesto",
@@ -105,6 +105,10 @@
         {
           "encabezado":"Desglose de gastos",
           "texto":"Información desglosada de los gastos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por estado de gastos general, gastos de personal, gastos por artículos, coste de mantenimiento de Ceuta y Melilla, programas, resumen del estado de gastos o comparativa de gastos entre los años 2012-2014."
+        },
+        {
+          "encabezado":"Justificantes de gasto:",
+          "texto":"Información relativa a las subvenciones y ayudas públicas concedidas con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno. Fecha de conceptos: 10/03/2014."
         }
       ]
     },

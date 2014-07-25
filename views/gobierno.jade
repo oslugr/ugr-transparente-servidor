@@ -116,9 +116,39 @@ block content
 										td(class="centeralign impar") 
 											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
 												img(class="link",src="imagenes/link.png", alt="link")
-										td(class="centeralign par")
-											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
-												img(class="view",src="imagenes/view.png", alt="view")
+										if datos[j][k].nombre=="Gobierno de la universidad: enlaces"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+
+										else if datos[j][k].nombre=="Órganos generales de gobierno y representación"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+
+										else if datos[j][k].nombre=="Consejo social"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+
+										else if datos[j][k].nombre=="Delegaciones del rector"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+
+										else if datos[j][k].nombre=="Junta del Personal de Administración y Servicios (funcionario)"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+
+										else if datos[j][k].nombre=="Junta del Personal Docente e Investigador"
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+												
+										else
+											td(class="centeralign par")
+											
 										td(class="centeralign impar") 
 											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
 												img(class="save",src="imagenes/save.png", alt="save")

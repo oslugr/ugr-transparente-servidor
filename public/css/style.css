@@ -1884,6 +1884,11 @@ li.model-resaltado-02 a.banner:hover {
     background-color: rgba(254,154,46,0.6);
 }
 
+#en_servicios{
+    background-color: rgba(245,169,225,0.6);
+}
+
+
 #en_oferta{
     background-color: rgba(100,254,46,0.6);
 }

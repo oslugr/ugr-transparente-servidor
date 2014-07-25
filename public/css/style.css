@@ -1925,6 +1925,9 @@ li.model-resaltado-02 a.banner:hover {
     background-color: rgba(242,242,242,0.6);
 }
 
+#en_normativa{
+    background-color: rgba(136,106,8,0.6);
+}
 
 /***************************************/
 /* Ventana Modal                       */

@@ -61,6 +61,7 @@ app.get('/resultados.html',gei.resultados);
 
 //Normativas
 app.get('/leytransparencia.html',norma.leytransparencia);
+app.get('/normativa.html',norma.normativa);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

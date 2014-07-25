@@ -95,3 +95,18 @@ exports.leytransparencia = function(req, res){
     texto: leytransparencia.texto
   });
 };
+
+exports.normativa = function(req, res){
+  var normativa=conf.config.normativa;
+  for (var i =0;i<(normativa.dataset).length; i++) {
+    conectarBD(normativa.plantilla,normativa.coleccion,normativa.categoria,normativa.dataset[i],i);
+  }
+
+  res.render(normativa.plantilla, { 
+    seccion: normativa.nombre ,
+    datos: datos2,
+    servidores: servidor2,
+    tam: (normativa.dataset).length,
+    contenido: normativa.contenido
+  });
+};

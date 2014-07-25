@@ -60,6 +60,11 @@
           "nombre":"Ley de transparencia",
           "href":"leytransparencia.html",
           "id":"en_leytransparencia"
+        },
+        {
+          "nombre":"Normativa de la universidad",
+          "href":"normativa.html",
+          "id":"en_normativa"
         }
       ]
     },
@@ -294,6 +299,21 @@
         {
           "encabezado":"Ley de transparencia (BOJA)",
           "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
+        }
+      ]
+    },
+
+    "normativa":
+    {
+      "nombre":"Normativa de la Universidad",
+      "plantilla":"normativa",
+      "coleccion":"tablas",
+      "categoria":["normativas"],
+      "dataset":["normativa"],
+      "contenido":[
+        {
+          "encabezado":"Normativa y convenios",
+          "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
         }
       ]
     },

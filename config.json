@@ -309,7 +309,7 @@
       "plantilla":"normativa",
       "coleccion":"tablas",
       "categoria":["normativas"],
-      "dataset":["normativa"],
+      "dataset":["normativasUGR"],
       "contenido":[
         {
           "encabezado":"Normativa y convenios",

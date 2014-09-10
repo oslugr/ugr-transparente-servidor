@@ -1976,3 +1976,27 @@ div#banners {
     padding-top: 10px;
 
 }
+
+
+/****************/
+/* Lista banner */
+/****************/
+
+div#cabecera div#head_menu_services li.head_services_item1 {
+background-image: url(../img/general/cabecera-menu_servicios-acceso.png);
+}
+
+div#cabecera div#head_menu_services li.head_services_item2 {
+background-image: url(../img/general/cabecera-menu_servicios-biblioteca.png);
+}
+
+div#cabecera div#head_menu_services li.head_services_item3 {
+background-image: url(../img/general/cabecera-menu_servicios-correo.png);
+}
+
+div#cabecera div#head_menu_services li {
+min-height: 21px;
+padding-top: 2px;
+padding-left: 26px;
+margin-bottom: 4px;
+}

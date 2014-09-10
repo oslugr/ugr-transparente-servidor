@@ -37,8 +37,8 @@ div#cabecera div#cabecera_acciones div#elvira_container span.elvira_txt span{dis
 div#cabecera div#cabecera_acciones div#elvira_container span.elvira_txt span.elvira_primera{text-transform:uppercase;font-weight:bold}
 div#cabecera div#cabecera_acciones div#elvira_container a#biotic{width:104px;height:30px;margin:7px 0 8px;vertical-align:top}
 div#cabecera div#cabecera_acciones div#language_selector_container{margin:13px 0 15px;padding-left:85px}
-div#cabecera{background-image:url(../img/general/cabecera-completa_noimg2.png)}
-div#cabecera h1#cab_inf{text-indent:-9999em;background-image:url(../img/general/cabecera-foto.jpg);border-color:#fe9900}
+div#cabecera{background-image:url(../img/general/cabecera-completa.png)}
+div#cabecera h1#cab_inf{text-indent:-9999em;background-image:url(../img/general/foto-banner.jpg);border-color:#fe9900}
 div#cabecera a#enlace_eadministracion{color:#c68106;background:url(../img/general/cabecera-eadministracion.png) no-repeat left center}
 div#cabecera a#enlace_eadministracion:hover{color:#e35327}
 div#cabecera a#enlace_ugr{text-indent:-9999em;background-image:url(../img/general/cabecera-logo_ugr.png)}

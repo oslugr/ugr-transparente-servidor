@@ -12,7 +12,7 @@
           "id":"en_personal"
         },
         {
-          "nombre":"Información económica",
+          "nombre":"Información Económica",
           "href":"infoEconomica.html",
           "id":"en_economica"
         },
@@ -42,7 +42,7 @@
           "id":"en_mision"
         },
         {
-          "nombre":"Plan estratégico",
+          "nombre":"Plan Estratégico",
           "href":"planEstrategico.html",
           "id":"en_planEst"
         },
@@ -57,12 +57,12 @@
           "id":"en_resultados"
         },
         {
-          "nombre":"Ley de transparencia",
+          "nombre":"Ley de Transparencia",
           "href":"leytransparencia.html",
           "id":"en_leytransparencia"
         },
         {
-          "nombre":"Normativa de la universidad",
+          "nombre":"Normativa de la Universidad",
           "href":"normativa.html",
           "id":"en_normativa"
         }

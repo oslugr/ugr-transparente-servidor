@@ -293,11 +293,11 @@
       "dataset":["leytransparenciaBOE","leytransparenciaBOJA"],
       "contenido":[
         {
-          "encabezado":"Ley de transparencia (BOE)",
+          "encabezado":"Ley de transparencia, acceso a la información pública y buen gobierno",
           "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
         },
         {
-          "encabezado":"Ley de transparencia (BOJA)",
+          "encabezado":"Ley de Transparencia Pública de Andalucía",
           "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
         }
       ]

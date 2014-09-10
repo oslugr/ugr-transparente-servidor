@@ -26,12 +26,15 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		link(rel="shortcut icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
+		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
+		
+		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
 
 		script(type='text/javascript').
 			function mostrar_menu_administracion(){
 				var menu=document.getElementById("menu_administracion");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -39,7 +42,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_docencia(){
 				var menu=document.getElementById("menu_docencia");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -47,7 +50,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_gestion(){
 				var menu=document.getElementById("menu_gestion");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -55,7 +58,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_normativas(){
 				var menu=document.getElementById("menu_normativas");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -73,7 +76,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 
 	body
 		div(id="boxes")
-			div(id="dialog" class="window")
+			div(id="dialog" class="window" hidden)
 				img(id="close",src="imagenes/close.png", alt="close")
 				h1#titulo_tabla
 				div(id="tabla")
@@ -81,22 +84,55 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		div(id="contenedor_margenes" class="")
 			div(id="contenedor" class="")
 				div(id="cabecera" class="")
-					h1#cab_inf UGR transparente
-					#formularios
-						a(href="http://www.ugr.es", id="enlace-ugr")
-							img(src="img/general/logo-ugr.png", id="logoUGR", alt="logo UGR")
+					h1#cab_inf UGR Transparente
+					a(href="http://www.ugr.es" id="enlace_ugr") Universidad de Granada
+					span.separador_enlaces |
+					a(href="/" id="enlace_stack") Vicerrectorado de Estudiantes
+					span.separador_enlaces |
+					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
+					div#head_menu_services
+						ul(class="head_services MenuManager")
+							li(class="item-first_level id_2895 head_services_item1 head_services_itemid_2895 head_services_itemname_sedesdelvicerrectoradodeestudiantes head_services_nchar_39 head_services_nchar10_40 first-child")
+								a(href="/pages/menu_titulo") Sedes del Vicerrectorado de Estudiantes
+							li(class="item-first_level id_6029 head_services_item2 head_services_itemid_6029 head_services_itemname_salasdeestudio head_services_nchar_16 head_services_nchar10_20")
+								a(href="/pages/contenidos_noticias/sala_estudio_nocturna") Salas de Estudio
+							li(class="item-first_level id_3281 head_services_item3 head_services_itemid_3281 head_services_itemname_calendarioacadmico1314 head_services_nchar_26 head_services_nchar10_30 last-child")
+								a(href="http://www.ugr.es/pages/estudios/calendario") Calendario Académico 13/14
+					div#buscador
+						h2 Buscar
+						form(action="formulario_buscar" class="mod-buttons")
+							#formulario_buscar.mod-buttons
+								#buscador-input
+									label(id="buscar" for="sq")
+										input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
+									label(id="enviar_buscar" for="submit_buscar")
+										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
+					#cabecera_acciones
+						#redes
+							a(href="http://twitter.com/canalugr" id="twitter" title="Enlace a Twitter") Enlace a Twitter
+							span.separador_enlaces | 
+							a(href="http://www.facebook.com/pages/Universidad-de-Granada/119913931374784" id="facebook" title="Enlace a Facebook") Enlace a Facebook
+							span.redes_txt 
+								span.redes_primera Redes 
+								span.redes_segunda Sociales
 
-						a(href="http://osl.ugr.es", id="enlace-osl")
-							img(src="imagenes/osl.jpg", id="logoOSL", alt="logo OSL")
-						
-						span.separador_enlaces |
-						div(class="depto ejemplo_titulo")
-							a(href="/", id="enlace_stack") UGR transparente
-						span.separador_enlaces | 
+						#accesibilidad
+							a(href="http://accesible.ugr.es/ve/" id="accesible" title="Accesibilidad") 
+								span Accesibilidad
 
+						#elvira_container						
+							a(id="elvira" href="http://tueris.ugr.es/elvira/" title="Elvira, asistente virtual para la UGR")
+								span.elvira_txt 
+									span.elvira_primera Elvira
+									span.elvira_segunda Asistente Virtual
+								span.separador_enlaces |
+							a(id="biotic" href="http://biotic.ugr.es" title="CEI BioTic Granada") CEI BioTic Granada
 
-				
-
+						#language_selector_container
+							i(class="icon-large icon-flag")  
+							div(id="language_selector" class="mod-language_selector")
+								span.separador_enlaces |
+								a(class="language language-es language-selected" href="/") Español
 				block content
 
 				

@@ -14,16 +14,16 @@ a img {
 	border: medium none;
 }
 
-a, #texto_enlaceugr{
+a {
     color: #543342;
     text-decoration: none;
 }
 
-a:hover, #texto_enlaceugr:hover {
-    color: #1D0D94;
+a:hover {
+    color: #DD3B15;
 }
 
-a, a:hover, a:visited, a:active,#texto_enlaceugr, #texto_enlaceugr:visited, #texto_enlaceugr:active,#texto_enlaceugr:hover {
+a, a:hover, a:visited, a:active {
     outline: medium none;
 }
 
@@ -40,8 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 div#contenedor {
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     background-repeat: no-repeat;
     font-family: Verdana,sans;
     font-size: 11px;
@@ -60,10 +59,10 @@ span.separador_enlaces {
     display: none;
 }
 
-
 /*****************/
 /* Cabecera gral */
 /*****************/
+/*
 div#cabecera {
     position: relative;
     width: 100%;
@@ -73,25 +72,13 @@ div#cabecera h1#cab_inf {
     height: 138px;
     left: 237px;
     position: absolute;
-    top: 76px;
+    top: 91px;
     width: 712px;
     background-position: center center;
     text-indent: -9999em;
-    background-image: url("../imagenes/datos.jpg");
+    background-image: url("../img/general/cabecera-foto.jpg");
     background-position: 0 0;
     border-color: #6D6C71;
-}
-
-#enlace-osl{
-    position: absolute;
-    top:5px;
-    left:790px;
-    margin-bottom: 10px;
-}
-
-#logoOSL{
-    width: 170px;
-    height: 60px;
 }
 
 div#cabecera a.enlace_provisional {
@@ -126,6 +113,8 @@ div#cabecera a.enlace_provisional:hover em {
 }
 div#cabecera div#formularios {
     height: 238px;
+    background-image: url("../img/general/logo-ugr.png");
+    background-position: right top;
     border-color: #6D6C71;
 }
 div#cabecera div#formularios span#obituario {
@@ -172,7 +161,7 @@ div#cabecera div.depto {
 }
 
 div#cabecera div.depto.ejemplo_titulo {
-    background-image: url("../img/general/cabecera-departamento.png");
+    background-image: url("../img/general/cabecera-departamento_contitulo.png");
 }
 
 div#cabecera div.depto.ejemplo_completo {
@@ -180,13 +169,9 @@ div#cabecera div.depto.ejemplo_completo {
 }
 
 div#cabecera div.depto a {
-    float:left;
-    color:white;
-    font-size: 1em;
-    margin-top: 50px;
-    margin-left:25px;
+    text-indent: -9999em;
 }
-div#cabecera{
+div#cabecera a#enlace_stack {
     display: block;
     height: 138px;
     margin-top: -13px;
@@ -242,7 +227,7 @@ div#cabecera div#enlaces_contactos a.titulaciones_ugr:hover {
     background: none repeat scroll 0 0 transparent;
     color: #6F6F71;
 }
-
+*/
 /***************/
 /* Breadcrumbs */
 /***************/
@@ -266,7 +251,6 @@ div#rastro a {
 div#rastro a.first {
     padding-left: 27px;
     background: url("../img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
-    color:black;
 }
 div#rastro ul#rastro_breadcrumb {
     margin-top: -4px;
@@ -276,7 +260,7 @@ div#rastro a.last {
     color: #023A79;
 }
 div#rastro a:hover {
-    color: #0101DF;
+    color: #DD3B15;
     text-decoration: none;
 }
 
@@ -347,14 +331,6 @@ div#pie p#pie_credits_img {
     width: 103px;
 }
 
-div#pie a#WAI{
-    position: relative;
-    top:100px;
-    left:-20px;
-    background-image: none;
-    background: none;
-}
-
 /************/
 /* BANNERS  */
 /************/
@@ -366,12 +342,6 @@ div#banners {
     background-color: #FFFFFF;
     border-color: #B2B2B4;
     border-style: solid;
-}
-
-.texto_banner{
-    color:white;
-    padding-top: 10px;
-
 }
 
 /************/
@@ -1123,7 +1093,7 @@ div.mod-banners ul li.dont_showtext a.banner * {
     text-indent: -9999em;
 }
 div.mod-banners ul li a.banner {
-    background-color: black;
+    background-color: #FFFFFF;
     background-position: 0 0;
 }
 div.mod-banners ul li a.banner strong {
@@ -1986,4 +1956,23 @@ li.model-resaltado-02 a.banner:hover {
     overflow:scroll;
     width: 800px;
     height: 350px;
+}
+
+/************/
+/* BANNERS  */
+/************/
+div#banners {
+    border-bottom-width: 1px;
+    clear: right;
+    float: right;
+    width: 165px;
+    background-color: #FFFFFF;
+    border-color: #B2B2B4;
+    border-style: solid;
+}
+
+.texto_banner{
+    color:white;
+    padding-top: 10px;
+
 }

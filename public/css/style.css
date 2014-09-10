@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-    color: #DD3B15;
+    /*color: #DD3B15;*/
 }
 
 a, a:hover, a:visited, a:active {
@@ -1835,7 +1835,7 @@ li.model-resaltado-02 a.banner:hover {
     margin-left: 10px;
     margin-bottom: 15px;
     border:medium outset white;
-    background-image: url("../imagenes/ugr.png");
+    /*background-image: url("../imagenes/ugr.png");*/
 
 }
 
@@ -1845,58 +1845,61 @@ li.model-resaltado-02 a.banner:hover {
     width: 100%;
     height: 68%;
 }
+.enlaces_index:hover{
+    opacity: 0.85;
+    filter: alpha(opacity=85); /* For IE8 and earlier */
+}
 
 #en_personal{
-    background-color: rgba(254,46,46,0.6);
+    background-image:url(../img/inicio/personal.png);
 }
 
 #en_economica{
-    background-color: rgba(254,154,46,0.6);
+    background-image:url(../img/inicio/informacion-economica.png);
 }
 
 #en_servicios{
-    background-color: rgba(245,169,225,0.6);
+    background-image:url(../img/inicio/servicios.png);
 }
 
-
 #en_oferta{
-    background-color: rgba(100,254,46,0.6);
+    background-image:url(../img/inicio/oferta-y-demanda-academica.png);
 }
 
 #en_claustro{
-    background-color: rgba(164,164,164,0.6);
+    background-image:url(../img/inicio/claustro.png);
 }
 
 #en_alumnos{
-    background-color: rgba(0,191,255,0.6);
+    background-image:url(../img/inicio/alumnos.png);
 }
 
 #en_mision{
-    background-color: rgba(46,46,254,0.6);
+    background-image:url(../img/inicio/mision.png);
 }
 
 #en_planEst{
-    background-color: rgba(223,1,58,0.6);
+    background-image:url(../img/inicio/plan-estrategico.png);
 }
 
 #en_gobierno{
-    background-color: rgba(255,255,0,0.6);
+    background-image:url(../img/inicio/gobierno.png);
 }
 
 #en_satisfaccion{
-    background-color: rgba(160,0,255,0.6);
+    background-image:url(../img/inicio/personal.png);
 }
 
 #en_resultados{
-    background-color: rgba(0,255,128,0.6);
+    background-image:url(../img/inicio/resultados.png);
 }
 
 #en_leytransparencia{
-    background-color: rgba(242,242,242,0.6);
+    background-image:url(../img/inicio/ley-transparencia.png);
 }
 
 #en_normativa{
-    background-color: rgba(136,106,8,0.6);
+    background-image:url(../img/inicio/normativa-universidad.png);
 }
 
 /***************************************/

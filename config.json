@@ -32,8 +32,8 @@
           "id":"en_claustro"
         },
         {
-          "nombre":"Alumnos",
-          "href":"alumnos.html",
+          "nombre":"Estudiantes",
+          "href":"estudiantes.html",
           "id":"en_alumnos"
         },
         {
@@ -52,8 +52,8 @@
           "id":"en_gobierno"
         },
         {
-          "nombre":"Resultados",
-          "href":"resultados.html",
+          "nombre":"Estadísticas",
+          "href":"estadisticas.html",
           "id":"en_resultados"
         },
         {
@@ -182,7 +182,7 @@
 
   "alumnos":
     {
-      "nombre":"Alumnos",
+      "nombre":"Estudiantes",
       "plantilla":"alumnos",
       "coleccion":"tablas",
       "categoria":["alumnos"],
@@ -254,7 +254,7 @@
 
   "resultados":
     {
-      "nombre":"Resultados",
+      "nombre":"Estadísticas",
       "plantilla":"resultados",
       "coleccion":"tablas",
       "categoria":["resultados"],

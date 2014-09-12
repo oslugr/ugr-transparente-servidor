@@ -51,13 +51,13 @@ app.get('/servicios.html',administracion.servicios);
 //docencia
 app.get('/ofertaYdemanda.html',docencia.ofertaYdemanda);
 app.get('/claustro.html',docencia.claustro);
-app.get('/alumnos.html',docencia.alumnos);
+app.get('/estudiantes.html',docencia.alumnos);
 
 //Gestion e investigación
 app.get('/mision.html',gei.mision);
 app.get('/planEstrategico.html',gei.planEstrategico);
 app.get('/gobierno.html',gei.gobierno);
-app.get('/resultados.html',gei.resultados);
+app.get('/estadisticas.html',gei.resultados);
 
 //Normativas
 app.get('/leytransparencia.html',norma.leytransparencia);

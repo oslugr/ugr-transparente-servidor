@@ -3,8 +3,8 @@ div#contenedor{width:960px;margin-left:auto;margin-right:auto}
 div#contenedor{font-family:Verdana,sans;font-size:0.688em}
 div#contenedor.general div#general div.container-banners_calendar{overflow:hidden}
 div#contenedor.general div#general div#menus form.widget_loginform div#login_form_widget.mod-buttons span.userprofile a{color:#bb2b00}
-div#cabecera{width:100%;height:297px;position:relative}
-div#cabecera h1#cab_inf{width:760px;height:111px;padding-top:0;padding-bottom:0;border-width:0;position:absolute;top:134px;left:0}
+div#cabecera{width:100%;height:245px;position:relative}
+div#cabecera h1#cab_inf{width:100%;height:100%;padding-top:0;padding-bottom:0;border-width:0;position:absolute;top:80px;left:0}
 div#cabecera a#enlace_eadministracion{display:block;position:absolute;top:44px;left:242px;height:19px;padding-top:2px;padding-left:24px}
 div#cabecera a#enlace_ugr{display:block;position:absolute;top:0;left:0;height:62px;width:208px}
 div#cabecera a#enlace_stack{display:block;position:absolute;top:76px;right:0;width:960px;height:52px}
@@ -37,8 +37,8 @@ div#cabecera div#cabecera_acciones div#elvira_container span.elvira_txt span{dis
 div#cabecera div#cabecera_acciones div#elvira_container span.elvira_txt span.elvira_primera{text-transform:uppercase;font-weight:bold}
 div#cabecera div#cabecera_acciones div#elvira_container a#biotic{width:104px;height:30px;margin:7px 0 8px;vertical-align:top}
 div#cabecera div#cabecera_acciones div#language_selector_container{margin:13px 0 15px;padding-left:85px}
-div#cabecera{background-image:url(../img/general/cabecera-completa.png)}
-div#cabecera h1#cab_inf{text-indent:-9999em;background-image:url(../img/general/foto-banner.jpg);border-color:#fe9900}
+div#cabecera{background-image:url(../img/general/cabecera.png)}
+div#cabecera h1#cab_inf{text-indent:-9999em;background-image:url(../img/general/banner-lupa.jpg);border-color:#fe9900}
 div#cabecera a#enlace_eadministracion{color:#c68106;background:url(../img/general/cabecera-eadministracion.png) no-repeat left center}
 div#cabecera a#enlace_eadministracion:hover{color:#e35327}
 div#cabecera a#enlace_ugr{text-indent:-9999em;background-image:url(../img/general/cabecera-logo_ugr.png)}

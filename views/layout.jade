@@ -90,15 +90,8 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 					a(href="/" id="enlace_stack") Vicerrectorado de Estudiantes
 					span.separador_enlaces |
 					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
-					div#head_menu_services
-						ul(class="head_services MenuManager")
-							li(class="item-first_level id_1286 head_services_item1 head_services_itemid_1286 head_services_itemname_accesoidentificadosedeelectrnica head_services_nchar_38 head_services_nchar10_40 first-child")
-								a(href="http://www.ugr.es/pages/administracion/index") Acceso identificado / Sede  Electrónica
-							li(class="item-first_level id_6029 head_services_item2 head_services_itemid_6029 head_services_itemname_salasdeestudio head_services_nchar_16 head_services_nchar10_20")
-								a(href="http://biblioteca.ugr.es/") Biblioteca
-							li(class="item-first_level id_3281 head_services_item3 head_services_itemid_3281 head_services_itemname_calendarioacadmico1314 head_services_nchar_26 head_services_nchar10_30 last-child")
-								a(href="http://www.ugr.es/pages/correo") Correo electrónico
-					div#buscador
+
+					div#buscador(hidden)
 						h2 Buscar
 						form(action="formulario_buscar" class="mod-buttons")
 							#formulario_buscar.mod-buttons
@@ -107,32 +100,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 										input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
 									label(id="enviar_buscar" for="submit_buscar")
 										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
-					#cabecera_acciones
-						#redes
-							a(href="http://twitter.com/canalugr" id="twitter" title="Enlace a Twitter") Enlace a Twitter
-							span.separador_enlaces | 
-							a(href="http://www.facebook.com/pages/Universidad-de-Granada/119913931374784" id="facebook" title="Enlace a Facebook") Enlace a Facebook
-							span.redes_txt 
-								span.redes_primera Redes 
-								span.redes_segunda Sociales
-
-						#accesibilidad
-							a(href="http://accesible.ugr.es/ve/" id="accesible" title="Accesibilidad") 
-								span Accesibilidad
-
-						#elvira_container						
-							a(id="elvira" href="http://tueris.ugr.es/elvira/" title="Elvira, asistente virtual para la UGR")
-								span.elvira_txt 
-									span.elvira_primera Elvira
-									span.elvira_segunda Asistente Virtual
-								span.separador_enlaces |
-							a(id="biotic" href="http://biotic.ugr.es" title="CEI BioTic Granada") CEI BioTic Granada
-
-						#language_selector_container
-							i(class="icon-large icon-flag")  
-							div(id="language_selector" class="mod-language_selector")
-								span.separador_enlaces |
-								a(class="language language-es language-selected" href="/") Español
+					
 				block content
 
 				

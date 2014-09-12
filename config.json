@@ -194,11 +194,11 @@
         },
         {
           "encabezado":"Canales de comunicación",
-          "texto":"Información sobre los principales canales de representación y comunicación con los alumnos de la Universidad de Granada."
+          "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
         },
         {
           "encabezado":"Becas y ayudas",
-          "texto":"Información sobre la oferta de becas y ayudas disponibles para los alumnos de la Universidad de Granada."
+          "texto":"Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada."
         }
       ]
     },
@@ -266,11 +266,11 @@
         },
         {
           "encabezado":"Académico",
-          "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los alumnos de la Universidad de Granada."
+          "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
         },
         {
-          "encabezado":"Satisfacción alumnos",
-          "texto":"Información sobre los índices de satisfacción de los alumnos de la Universidad de Granada."
+          "encabezado":"Satisfacción estudiantes",
+          "texto":"Información sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
         },
         {
           "encabezado":"Ranking",
@@ -278,7 +278,7 @@
         },
         {
           "encabezado":"Alumnos fuera de la comunidad: 2013/2014",
-          "texto":"Información relativa al número de alumnos por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
+          "texto":"Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
         }
       ]
     },

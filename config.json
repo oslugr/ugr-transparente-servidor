@@ -7,6 +7,11 @@
       "plantilla":"index",
       "enlaces":[
         {
+          "nombre":"Presentación",
+          "href":"presentacion.html",
+          "id":"en_presentacion"
+        },
+        {
           "nombre":"Personal",
           "href":"personal.html",
           "id":"en_personal"

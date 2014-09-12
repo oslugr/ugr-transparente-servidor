@@ -5,10 +5,12 @@
 
 var express = require('express');
 var index = require('./routes/index');
+var pres = require('./routes/presentacion');
 var docencia = require('./routes/docencia');
 var administracion = require('./routes/administracion');
 var gei = require('./routes/gestionEinvestigacion');
 var norma = require('./routes/normativas');
+
 var http = require('http');
 var path = require('path');
 
@@ -43,6 +45,9 @@ if ('development' == app.get('env')) {
 app.get('/', index.index);
 app.get('/index.html', index.index);
 
+//presentacion
+app.get('/presentacion.html', pres.presentacion);
+
 //administracion
 app.get('/personal.html',administracion.personal);
 app.get('/infoEconomica.html',administracion.infoEco);
@@ -60,8 +65,7 @@ app.get('/gobierno.html',gei.gobierno);
 app.get('/estadisticas.html',gei.resultados);
 
 //Normativas
-app.get('/leytransparencia.html',norma.leytransparencia);
-app.get('/normativa.html',norma.normativa);
+app.get('/normativalegal.html',norma.normativa);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

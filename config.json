@@ -62,13 +62,8 @@
           "id":"en_resultados"
         },
         {
-          "nombre":"Ley de Transparencia",
-          "href":"leytransparencia.html",
-          "id":"en_leytransparencia"
-        },
-        {
-          "nombre":"Normativa de la Universidad",
-          "href":"normativa.html",
+          "nombre":"Normativa Legal",
+          "href":"normativalegal.html",
           "id":"en_normativa"
         }
       ]
@@ -288,15 +283,19 @@
       ]
     },
 
-  "leytransparencia":
+    "normativa":
     {
-      "nombre":"Ley de transparencia",
-      "plantilla":"leytransparencia",
+      "nombre":"Normativa de la Universidad",
+      "plantilla":"normativa",
       "coleccion":"tablas",
       "categoria":["normativas"],
       "texto":"Legislación de ámbito nacional y autonómico que persiguen el objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones que deben cumplir los responsables públicos al respecto.",
-      "dataset":["leytransparenciaBOE","leytransparenciaBOJA"],
+      "dataset":["normativasUGR","leytransparenciaBOE","leytransparenciaBOJA"],
       "contenido":[
+        {
+          "encabezado":"Normativa y convenios",
+          "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
+        },
         {
           "encabezado":"Ley de transparencia, acceso a la información pública y buen gobierno",
           "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
@@ -307,24 +306,13 @@
         }
       ]
     },
-
-    "normativa":
+    "presentacion":
     {
-      "nombre":"Normativa de la Universidad",
-      "plantilla":"normativa",
-      "coleccion":"tablas",
-      "categoria":["normativas"],
-      "dataset":["normativasUGR"],
-      "contenido":[
-        {
-          "encabezado":"Normativa y convenios",
-          "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
-        }
-      ]
+      "titulo":"Presentación",
+      "plantilla":"presentacion",
+      "texto":"Bienvenidos al sitio Web de la Universidad de Granada de acceso a Datos Abiertos. Nuestra Universidad, comprometida con la transparencia y consciente de la responsabilidad que tiene de ofrecer información veraz para el colectivo de la sociedad en general y particularmente la Comunidad Universitaria, pone a su disposición Transparente UGR, un portal que tiene como objetivo ofrecer acceso a la información, garantizando a su vez la veracidad de la misma, el libre acceso y la interoperabilidad de los datos.  Este portal nace con el objeto de ser algo más que un tablón de información. Su meta es convertirse en un conjunto de herramientas accesibles, simples e inteligibles puestas a disposición de la Comunidad Universitaria y que sean útiles en todos aquellos procesos relacionados con la transparencia en la demanda de información por parte de los ciudadanos."
     },
-
-
-  "error":
+    "error":
     {
       "titulo":"Page not found (Error 404)",
       "texto":"Lo siento, la página no existe o está temporalmente inaccesible"

@@ -20,22 +20,13 @@
 //Variable para las configuraciones
 var conf = require('../app');
 
-//Rellenamos el vector con los enlaces leidos del fichero de configuracion
-//Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
-var enlaces=new Array();
+// Gestión de la pagina de la presentación
 
-function leerEnlaces(){
-  for (i in conf.config.index.enlaces){
-    enlaces.push([config.index.enlaces[i].nombre,config.index.enlaces[i].href,config.index.enlaces[i].id]);
-  }
-}
+exports.presentacion = function(req, res){
+  var pres=conf.config.presentacion;
 
-//Pagina de inicio
-
-exports.index = function(req, res){
-  if(enlaces.length==0)
-    leerEnlaces();
-  res.render('index', { seccion: conf.config.index.nombre, enlaces: enlaces});
+  res.render(pres.plantilla, { 
+    titulo: pres.titulo ,
+    texto: pres.texto
+  });
 };
-
-

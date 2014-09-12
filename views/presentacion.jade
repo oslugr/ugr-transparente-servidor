@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/infoEconomica.html") Administración / #{seccion}
+					a(class="first", href="/") #{titulo}
 	#general
 		#menus
 			div(id="enlaces_secciones", class="mod-menu_secciones")
@@ -31,16 +31,16 @@ block content
 					li(class="tipo2 item-first_level")
 						a(href="/index.html") Inicio
 
-					li(class="selected tipo2-selected item-first_level")
+					li(class="tipo2 item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_administracion()") Administración
-						ul(id="menu_administracion")
+						ul(id="menu_administracion",style="display:none;")
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="personal.html") Personal
 
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="infoEconomica.html") Información Económica
 
-							li(class="tipo1-selected item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
 								a(href="servicios.html") Servicios
 
 					li(class="tipo2 item-first_level")
@@ -53,7 +53,7 @@ block content
 								a(href="claustro.html") Claustro
 
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="estudiantes.html") Estudiantes
+								a(href="etudiantes.html") Estudiantes
 
 
 					li(class="tipo2 item-first_level")
@@ -68,15 +68,16 @@ block content
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="gobierno.html") Gobierno
 
+
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
 								a(href="estadisticas.html") Estadísticas
+
 
 					li(class="tipo2 item-first_level")
 						a(href="normativa.html") Normativa legal
 
 					li(class="tipo2")
 						a(href="http://www.ugr.es/pages/contacto" target="_blank") Contacto
-
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
 				ul
@@ -88,43 +89,8 @@ block content
 
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{seccion}
+				span.texto_titulo #{titulo}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-					ul.enlaces
-						li.level1
-							- for (var i = 0; i < tam; i++)
-								.li 
-									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
-
-					- for (var j = 0; j < tam; j++)
-						h1
-							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
-
-						.level1
-							p #{contenido[j].texto}
-
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata 
-									th.centeralign Ver 
-									th.centeralign Archivo
-
-								- for (var k = 0; k < datos[j].length; k++)
-									tr
-										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar") 
-											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
-												img(class="link",src="imagenes/link.png", alt="link")
-										if datos[j][k].nombre=="Carta de servicios" || datos[j][k].nombre=="Modificación ténica puntual de la Relación de Puestos de Trabajo" || datos[j][k].nombre=="Adecuación técnica de la relación de puestos de trabajo" || datos[j][k].nombre=="Relación de puestos de trabajo: PAS"
-											td(class="centeralign par")
-										else
-											td(class="centeralign par")
-												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
-													img(class="view",src="imagenes/view.png", alt="view")
-										td(class="centeralign impar") 
-											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
-												img(class="save",src="imagenes/save.png", alt="save")
+						p #{texto}

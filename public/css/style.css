@@ -1851,6 +1851,10 @@ li.model-resaltado-02 a.banner:hover {
     filter: alpha(opacity=85); /* For IE8 and earlier */
 }
 
+#en_presentacion{
+    background-image:url(../img/inicio/presentacion.png);
+}
+
 #en_personal{
     background-image:url(../img/inicio/personal.png);
 }
@@ -1893,10 +1897,6 @@ li.model-resaltado-02 a.banner:hover {
 
 #en_resultados{
     background-image:url(../img/inicio/resultados.png);
-}
-
-#en_leytransparencia{
-    background-image:url(../img/inicio/ley-transparencia.png);
 }
 
 #en_normativa{

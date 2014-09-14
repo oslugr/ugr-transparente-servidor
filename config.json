@@ -309,7 +309,7 @@
     "presentacion":
     {
       "titulo":"Presentación",
-      "plantilla":"presentacion",
+      "plantilla":"presentacion"
     },
     "error":
     {

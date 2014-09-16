@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/resultados.html") Gestión e Investigación / #{seccion}
+					a(class="first", href="/presentacion.html") #{titulo}
 	#general
 		#menus
 			div(id="enlaces_secciones", class="mod-menu_secciones")
@@ -31,9 +31,12 @@ block content
 					li(class="tipo2 item-first_level")
 						a(href="/index.html") Inicio
 
+					li(class="selected tipo2-selected item-first_level")
+						a(href="/presentacion.html") Presentación
+
 					li(class="tipo2 item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_administracion()") Administración
-						ul(id="menu_administracion", style="display:none;")
+						ul(id="menu_administracion",style="display:none;")
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="personal.html") Personal
 
@@ -45,7 +48,7 @@ block content
 
 					li(class="tipo2 item-first_level")
 						h2(class="grupos",onclick="mostrar_menu_docencia()") Docencia
-						ul(id="menu_docencia",style="display:none;")
+						ul(id="menu_docencia", style="display:none;")
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
 								a(href="ofertaYdemanda.html") Oferta y Demanda Académica
 
@@ -53,7 +56,7 @@ block content
 								a(href="claustro.html") Claustro
 
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="alumnos.html") Alumnos
+								a(href="etudiantes.html") Estudiantes
 
 
 					li(class="tipo2 item-first_level")
@@ -70,17 +73,14 @@ block content
 
 
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="resultados.html") Resultados
+								a(href="estadisticas.html") Estadísticas
 
-					li(class="selected tipo2-selected item-first_level")
-						h2(class="grupos",onclick="mostrar_menu_normativas()") Normativas
-						ul(id="menu_normativas")
-							li(class="tipo1-selected item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="leytransparencia.html") Ley de Transparencia
 
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="normativa.html") Normativa de la universidad
+					li(class="tipo2 item-first_level")
+						a(href="normativalegal.html") Normativa Legal
 
+					li(class="tipo2")
+						a(href="http://www.ugr.es/pages/contacto" target="_blank") Contacto
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
 				ul
@@ -92,49 +92,24 @@ block content
 
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{seccion}
+				span.texto_titulo #{titulo}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-					p #{texto}
-					ul.enlaces
-						li.level1
-							- for (var i = 0; i < tam; i++)
-								.li 
-									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
-
-					- for (var j = 0; j < tam; j++)
-						h1
-							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
-
-						.level1
-							p #{contenido[j].texto}
-
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción 
-									th.centeralign Datos en Opendata
-									th.centeralign Ver 
-									th.centeralign Archivo
-
-								- for (var k = 0; k < datos[j].length; k++)
-									tr
-										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar") 
-											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
-												img(class="link",src="imagenes/link.png", alt="link")
-										if datos[j][k].nombre=="Boletín Oficial del Estado: Ley de Transparencia"
-											td(class="centeralign par")
-
-										else if datos[j][k].nombre=="Boletín Oficial de la Junta de Andalucía: Ley de Transparencia"
-											td(class="centeralign par")
-												
-										else
-											td(class="centeralign par")
-												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
-													img(class="view",src="imagenes/view.png", alt="view")
-
-										td(class="centeralign impar") 
-											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
-												img(class="save",src="imagenes/save.png", alt="save")
+					p 
+						strong Bienvenidos al sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+					
+					p. 
+						Nuestra Universidad, comprometida con la transparencia y consciente de la responsabilidad
+						que tiene de ofrecer información veraz para el colectivo de la sociedad en general y en 
+						particular a particularmente la Comunidad Universitaria, pone a su disposición el portal 
+						Transparente UGR, un portal que tiene como objetivo ofrecer acceso a la información, 
+						garantizando a su vez la veracidad de la misma, el libre acceso y la interoperabilidad de los 
+						datos.
+					
+					p. 
+						Este portal nace con el objeto de ser algo más que un tablón de información. Su meta es 
+						convertirse en un conjunto de herramientas accesibles, simples de utilizar, e inteligibles,
+						puestas a disposición de la Comunidad Universitaria y que sean útiles para en todos aquellos 
+						procesos relacionados con la transparencia y con en la demanda de información por parte de 
+						los ciudadanos.

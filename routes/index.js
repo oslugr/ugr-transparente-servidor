@@ -30,8 +30,6 @@ function leerEnlaces(){
   }
 }
 
-
-
 //Pagina de inicio
 
 exports.index = function(req, res){

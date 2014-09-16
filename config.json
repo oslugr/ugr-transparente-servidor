@@ -7,12 +7,17 @@
       "plantilla":"index",
       "enlaces":[
         {
+          "nombre":"Presentación",
+          "href":"presentacion.html",
+          "id":"en_presentacion"
+        },
+        {
           "nombre":"Personal",
           "href":"personal.html",
           "id":"en_personal"
         },
         {
-          "nombre":"Información económica",
+          "nombre":"Información Económica",
           "href":"infoEconomica.html",
           "id":"en_economica"
         },
@@ -32,8 +37,8 @@
           "id":"en_claustro"
         },
         {
-          "nombre":"Alumnos",
-          "href":"alumnos.html",
+          "nombre":"Estudiantes",
+          "href":"estudiantes.html",
           "id":"en_alumnos"
         },
         {
@@ -42,7 +47,7 @@
           "id":"en_mision"
         },
         {
-          "nombre":"Plan estratégico",
+          "nombre":"Plan Estratégico",
           "href":"planEstrategico.html",
           "id":"en_planEst"
         },
@@ -52,18 +57,13 @@
           "id":"en_gobierno"
         },
         {
-          "nombre":"Resultados",
-          "href":"resultados.html",
+          "nombre":"Estadísticas",
+          "href":"estadisticas.html",
           "id":"en_resultados"
         },
         {
-          "nombre":"Ley de transparencia",
-          "href":"leytransparencia.html",
-          "id":"en_leytransparencia"
-        },
-        {
-          "nombre":"Normativa de la universidad",
-          "href":"normativa.html",
+          "nombre":"Normativa Legal",
+          "href":"normativalegal.html",
           "id":"en_normativa"
         }
       ]
@@ -182,7 +182,7 @@
 
   "alumnos":
     {
-      "nombre":"Alumnos",
+      "nombre":"Estudiantes",
       "plantilla":"alumnos",
       "coleccion":"tablas",
       "categoria":["alumnos"],
@@ -194,11 +194,11 @@
         },
         {
           "encabezado":"Canales de comunicación",
-          "texto":"Información sobre los principales canales de representación y comunicación con los alumnos de la Universidad de Granada."
+          "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
         },
         {
           "encabezado":"Becas y ayudas",
-          "texto":"Información sobre la oferta de becas y ayudas disponibles para los alumnos de la Universidad de Granada."
+          "texto":"Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada."
         }
       ]
     },
@@ -254,7 +254,7 @@
 
   "resultados":
     {
-      "nombre":"Resultados",
+      "nombre":"Estadísticas",
       "plantilla":"resultados",
       "coleccion":"tablas",
       "categoria":["resultados"],
@@ -266,11 +266,11 @@
         },
         {
           "encabezado":"Académico",
-          "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los alumnos de la Universidad de Granada."
+          "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
         },
         {
-          "encabezado":"Satisfacción alumnos",
-          "texto":"Información sobre los índices de satisfacción de los alumnos de la Universidad de Granada."
+          "encabezado":"Satisfacción estudiantes",
+          "texto":"Información sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
         },
         {
           "encabezado":"Ranking",
@@ -278,27 +278,7 @@
         },
         {
           "encabezado":"Alumnos fuera de la comunidad: 2013/2014",
-          "texto":"Información relativa al número de alumnos por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
-        }
-      ]
-    },
-
-  "leytransparencia":
-    {
-      "nombre":"Ley de transparencia",
-      "plantilla":"leytransparencia",
-      "coleccion":"tablas",
-      "categoria":["normativas"],
-      "texto":"La transparencia, el acceso a la información pública y las normas de buen gobierno deben ser los ejes fundamentales de toda acción política. Sólo cuando la acción de los responsables públicos se somete a escrutinio, cuando los ciudadanos pueden conocer cómo se toman las decisiones que les afectan, cómo se manejan los fondos públicos o bajo qué criterios actúan nuestras instituciones podremos hablar del inicio de un proceso en el que los poderes públicos comienzan a responder a una sociedad que es crítica, exigente y que demanda participación de los poderes públicos. Esta Ley tiene por objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones de buen gobierno que deben cumplir los responsables públicos así como las consecuencias derivadas de su incumplimiento.",
-      "dataset":["leytransparenciaBOE","leytransparenciaBOJA"],
-      "contenido":[
-        {
-          "encabezado":"Ley de transparencia (BOE)",
-          "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
-        },
-        {
-          "encabezado":"Ley de transparencia (BOJA)",
-          "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
+          "texto":"Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
         }
       ]
     },
@@ -309,17 +289,29 @@
       "plantilla":"normativa",
       "coleccion":"tablas",
       "categoria":["normativas"],
-      "dataset":["normativasUGR"],
+      "texto":"Legislación de ámbito nacional y autonómico que persiguen el objeto ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones que deben cumplir los responsables públicos al respecto.",
+      "dataset":["normativasUGR","leytransparenciaBOE","leytransparenciaBOJA"],
       "contenido":[
         {
           "encabezado":"Normativa y convenios",
           "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
+        },
+        {
+          "encabezado":"Ley de transparencia, acceso a la información pública y buen gobierno",
+          "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
+        },
+        {
+          "encabezado":"Ley de Transparencia Pública de Andalucía",
+          "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
         }
       ]
     },
-
-
-  "error":
+    "presentacion":
+    {
+      "titulo":"Presentación",
+      "plantilla":"presentacion"
+    },
+    "error":
     {
       "titulo":"Page not found (Error 404)",
       "texto":"Lo siento, la página no existe o está temporalmente inaccesible"

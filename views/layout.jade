@@ -26,12 +26,15 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		link(rel="shortcut icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
+		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
+		
+		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
 
 		script(type='text/javascript').
 			function mostrar_menu_administracion(){
 				var menu=document.getElementById("menu_administracion");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -39,7 +42,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_docencia(){
 				var menu=document.getElementById("menu_docencia");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -47,7 +50,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_gestion(){
 				var menu=document.getElementById("menu_gestion");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -55,7 +58,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 			function mostrar_menu_normativas(){
 				var menu=document.getElementById("menu_normativas");
 				if(menu.style.display == "none"){
-					menu.style.display = "inline";
+					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
@@ -73,7 +76,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 
 	body
 		div(id="boxes")
-			div(id="dialog" class="window")
+			div(id="dialog" class="window" hidden)
 				img(id="close",src="imagenes/close.png", alt="close")
 				h1#titulo_tabla
 				div(id="tabla")
@@ -81,22 +84,23 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		div(id="contenedor_margenes" class="")
 			div(id="contenedor" class="")
 				div(id="cabecera" class="")
-					h1#cab_inf UGR transparente
-					#formularios
-						a(href="http://www.ugr.es", id="enlace-ugr")
-							img(src="img/general/logo-ugr.png", id="logoUGR", alt="logo UGR")
+					h1#cab_inf UGR Transparente
+					a(href="http://www.ugr.es" id="enlace_ugr") Universidad de Granada
+					span.separador_enlaces |
+					a(href="/" id="enlace_stack") Vicerrectorado de Estudiantes
+					span.separador_enlaces |
+					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
 
-						a(href="http://osl.ugr.es", id="enlace-osl")
-							img(src="imagenes/osl.jpg", id="logoOSL", alt="logo OSL")
-						
-						span.separador_enlaces |
-						div(class="depto ejemplo_titulo")
-							a(href="/", id="enlace_stack") UGR transparente
-						span.separador_enlaces | 
-
-
-				
-
+					div#buscador(hidden)
+						h2 Buscar
+						form(action="formulario_buscar" class="mod-buttons")
+							#formulario_buscar.mod-buttons
+								#buscador-input
+									label(id="buscar" for="sq")
+										input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
+									label(id="enviar_buscar" for="submit_buscar")
+										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
+					
 				block content
 
 				
@@ -111,15 +115,15 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 
 
 							li(class="banner_container model-resaltado-02 showtext")
-								a(class="banner", href="http://osl.ugr.es")
-									strong Oficina de Software Libre
-									p(class="texto_banner") Portal de la OSL de la Universidad de Granada
+								a(class="banner", href="http://secretariageneral.ugr.es/")
+									strong Secretaría General
+									p(class="texto_banner") Ver el portal de la Secretaría General de la Universidad de Granada
 		
 
-							li(class="banner_container model-resaltado-01 showtext")
-								a(class="banner", href="http://okfn.org/")
-									strong Open Knowledge Foundation
-									p(class="texto_banner") okfn.org
+							li(class="banner_container model-resaltado-02 showtext")
+								a(class="banner", href="https://docs.google.com/document/d/1mIrZYU4c6fNUUxnUQysuDhJ7SQtKw22s4WfeyUnZ4Cg/edit#heading=h.4a0kngg63a7l")
+									strong Hacia una Universidad Abierta
+									p(class="texto_banner") Ir al documento
 				
 
 				#interior_pie
@@ -128,11 +132,14 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa")
 						a(class="cmswebmap", href="#") Mapa del sitio
 						span.separador_enlaces  | 
-						a(class="contactar", href="#") Contacto
+						a(class="contactar", href="http://www.ugr.es/pages/contacto", target="_blank") Contacto
 						span.separador_enlaces  | 
 						a(class="validador", href="#") Accesibilidad
 						span.separador_enlaces  | 
 						a(class="privacidad", href="#") Política de privacidad
-						p <a href="http://www.ugr.es/pages/creditos">&copy; 2014</a> <span class="separador_enlaces"> | </span> <a href="http://www.ugr.es">Universidad de Granada</a></p>
+						p
+							a(href="http://www.ugr.es/pages/creditos") &copy; 2014
+							span.separador_enlaces | 
+							a(href="http://www.ugr.es") Universidad de Granada
 
 

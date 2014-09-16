@@ -124,6 +124,10 @@ block content
 												img(class="link",src="imagenes/link.png", alt="link")
 										if datos[j][k].nombre=="Convenio colectivo" || datos[j][k].nombre=="Ley Orgánica de Universidades"
 											td(class="centeralign par")
+										else if datos[j][k].nombre=="Boletín Oficial del Estado: Ley de Transparencia"
+											td(class="centeralign par")
+										else if datos[j][k].nombre=="Boletín Oficial de la Junta de Andalucía: Ley de Transparencia"
+											td(class="centeralign par")
 										else
 											td(class="centeralign par")
 												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")

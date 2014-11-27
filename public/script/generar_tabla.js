@@ -1,33 +1,33 @@
-$(document).ready(function() {   
- 
-    //select all the a tag with name equal to modal 
-    $('a[class=view]').click(function(e) { 
-        //Cancel the link behavior 
-        e.preventDefault(); 
+$(document).ready(function() {
+
+    //select all the a tag with name equal to modal
+    $('a[class=view]').click(function(e) {
+        //Cancel the link behavior
+        e.preventDefault();
         //Get the A tag
 
-        var id = $(this).attr('href'); 
-     
-        //Get the screen height and width 
-        var maskHeight = $(document).height(); 
-        var maskWidth = $(window).width(); 
-     
-        //Set height and width to mask to fill up the whole screen 
-        $('#mask').css({'width':maskWidth,'height':maskHeight}); 
-         
-        //transition effect       
-        $('#mask').fadeIn(10);     
-        $('#mask').fadeTo("slow",0.8);   
-     
-        //Get the window height and width 
-        var winH = $(window).height(); 
-        var winW = $(window).width(); 
-               
-        //Set the popup window to center 
-        $(id).css('top',  winH/2-$(id).height()/2); 
-        $(id).css('left', winW/2-$(id).width()/2); 
-     
-        //transition effect 
+        var id = $(this).attr('href');
+
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+        //transition effect
+        $('#mask').fadeIn(10);
+        $('#mask').fadeTo("slow",0.8);
+
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+
+        //transition effect
         $(id).fadeIn(2000);
 
         var nombre = $(this).attr('name');
@@ -47,39 +47,98 @@ $(document).ready(function() {
             success: function (data) {
                 drawTable($.csv.toArrays(data));
             }
-        });   
-     
-    }); 
-     
-    //if close button is clicked 
-    $('#close').click(function (e) {  
+        });
+
+    });
+
+    //if close button is clicked
+    $('#close').click(function (e) {
         $('#mask, .window').hide();
-        $('#mask, .window').HTML(""); 
-    });       
-     
-    //if mask is clicked 
-    $('#mask').click(function () { 
-        $(this).hide(); 
+        $('#mask, .window').HTML("");
+    });
+
+    //if mask is clicked
+    $('#mask').click(function () {
+        $(this).hide();
         $('.window').hide();
-        $(this).HTML(""); 
-        $('.window').HTML("");  
-    });           
-     
-}); 
+        $(this).HTML("");
+        $('.window').HTML("");
+    });
+
+});
 
 
 google.load('visualization', '1', {packages:['table']});
 
 
+function isNumber(cell)
+{
+  var i = 0;
+  var cont = true;
+
+  if(cell.charAt(0) == '-')
+  {
+    i++;
+  }
+
+  if(cell.charAt(0) == '0')
+  {
+      if(cell.charAt(1) != ',' && cell.charAt(1) != '')
+      {
+          cont = false;
+      }
+  }
+
+  while(cont && i < cell.length)
+  {
+    switch(cell.charAt(i))
+    {
+      case '0': i++; break;
+      case '1': i++; break;
+      case '2': i++; break;
+      case '3': i++; break;
+      case '4': i++; break;
+      case '5': i++; break;
+      case '6': i++; break;
+      case '7': i++; break;
+      case '8': i++; break;
+      case '9': i++; break;
+      case ',': i++; break;
+      default: cont = false;
+    }
+  }
+
+  return cont;
+}
+
+
 function drawTable(csv) {
     var data = new google.visualization.DataTable();
-    for (var i = 0; i < csv[0].length; i++) {
-         data.addColumn('string', csv[0][i]);
+    var i, j, a;
+
+    for (i = 0; i < csv[0].length; i++)
+    {
+      data.addColumn('string', csv[0][i]);
     }
 
-    for (var j=1; j<csv.length;j++) {
-        data.addRow(csv[j]);
+    data.addRows(csv.length - 1);
+
+    for (i = 1; i < csv.length; i++)
+    {
+      for(j = 0; j < csv[0].length; j++)
+      {
+        if(isNumber(csv[i][j]))
+        {
+          data.setCell(i-1, j, csv[i][j], csv[i][j], {style: 'text-align: right'});
+        }
+        else
+        {
+          data.setCell(i-1, j, csv[i][j]);
+        }
+      }
     }
+
+
     var table = new google.visualization.Table(document.getElementById('tabla'));
-    table.draw(data, {showRowNumber: true});
+    table.draw(data, {allowHtml: true, showRowNumber: true});
 }

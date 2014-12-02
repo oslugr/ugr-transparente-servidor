@@ -148,11 +148,19 @@
       "plantilla":"ofYde",
       "coleccion":"tablas",
       "categoria":["ofertaYdemanda"],
-      "dataset":["titulaciones","demanda","evolucion"],
+      "dataset":["titulaciones","titulaciones14-15","evolucion-oferta","demanda","evolucion"],
       "contenido":[
         {
-          "encabezado":"Titulaciones",
+          "encabezado":"Titulaciones 2013/2014",
           "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
+        },
+        {
+            "encabezado":"Titulaciones 2014/2015",
+            "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2014/2015: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
+        },
+        {
+            "encabezado":"Evolución oferta académica desde 2013",
+            "texto":"Evolución de la oferta de títulos reglados y propios de la Universidad de Granada desde el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por: año de inicio, tipo de titulación, nombre de titulación, rama de conocimiento, centro y campus."
         },
         {
           "encabezado":"Demanda académica",

@@ -83,7 +83,7 @@ function isNumber(cell)
 
   if(cell.charAt(0) == '0')
   {
-      if(cell.charAt(1) != ',')
+      if(cell.charAt(1) != ',' && cell.charAt(1) != '')
       {
           cont = false;
       }

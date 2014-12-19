@@ -1,5 +1,5 @@
 doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-//	
+//
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
 
@@ -27,7 +27,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 		link(rel="icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
 		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
-		
+
 		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
 
 		script(type='text/javascript').
@@ -100,10 +100,10 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 										input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
 									label(id="enviar_buscar" for="submit_buscar")
 										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
-					
+
 				block content
 
-				
+
 
 				#banners
 					.mod-banners
@@ -118,28 +118,30 @@ html(xmlns="http://www.w3.org/1999/xhtml", lang="es", xml:lang="es")
 								a(class="banner", href="http://secretariageneral.ugr.es/")
 									strong Secretaría General
 									p(class="texto_banner") Ver el portal de la Secretaría General de la Universidad de Granada
-		
+
 
 							li(class="banner_container model-resaltado-02 showtext")
 								a(class="banner", href="https://docs.google.com/document/d/1mIrZYU4c6fNUUxnUQysuDhJ7SQtKw22s4WfeyUnZ4Cg/edit#heading=h.4a0kngg63a7l")
 									strong Hacia una Universidad Abierta
 									p(class="texto_banner") Ir al documento
-				
+
 
 				#interior_pie
 					#pie
 						a(id="WAI", href="http://www.w3.org/WAI/WCAG2AA-Conformance")
 							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa")
 						//a(class="cmswebmap", href="#") Mapa del sitio
-						span.separador_enlaces  | 
+						span.separador_enlaces |
+						a(href="https://github.com/oslugr/ugr-transparente-servidor") Oficina de Software Libre Universidad de Granada
+						span.separador_enlaces |
+						a(href="http://www.gnu.org/licenses/gpl-3.0.html") Licencia bajo GPL v3.0
+						span.separador_enlaces  |
 						a(class="contactar", href="http://www.ugr.es/pages/contacto", target="_blank") Contacto
-						//span.separador_enlaces  | 
+						//span.separador_enlaces  |
 						//a(class="validador", href="#") Accesibilidad
-						//span.separador_enlaces  | 
+						//span.separador_enlaces  |
 						//a(class="privacidad", href="#") Política de privacidad
 						p
 							a(href="http://www.ugr.es/pages/creditos") &copy; 2014
-							span.separador_enlaces | 
+							span.separador_enlaces |
 							a(href="http://www.ugr.es") Universidad de Granada
-
-

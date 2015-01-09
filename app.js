@@ -10,6 +10,8 @@ var docencia = require('./routes/docencia');
 var administracion = require('./routes/administracion');
 var gei = require('./routes/gestionEinvestigacion');
 var norma = require('./routes/normativas');
+var sol = require('./routes/solicitudes');
+
 
 var http = require('http');
 var path = require('path');
@@ -66,6 +68,10 @@ app.get('/estadisticas.html',gei.resultados);
 
 //Normativas
 app.get('/normativalegal.html',norma.normativa);
+
+//Solicitudes
+app.get('/testdesolicitudes.html', sol.solicitudes);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

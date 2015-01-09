@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/") #{titulo}
+					a(class="first", href="/testdesolicitudes.html") #{titulo}
 	#general
 		#menus
 			div(id="enlaces_secciones", class="mod-menu_secciones")
@@ -56,7 +56,7 @@ block content
 								a(href="claustro.html") Claustro
 
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="etudiantes.html") Estudiantes
+								a(href="estudiantes.html") Estudiantes
 
 
 					li(class="tipo2 item-first_level")
@@ -75,12 +75,12 @@ block content
 							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
 								a(href="estadisticas.html") Estadísticas
 
+
 					li(class="tipo2 item-first_level")
 						a(href="normativalegal.html") Normativa Legal
 
-					li(class="tipo2")
-						a(href="http://www.ugr.es/pages/contacto" target="_blank") Contacto
-
+					li(class="selected tipo2-selected item-first_level")
+						a(href="solicitudes.html") Solicitudes
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
 				ul
@@ -96,4 +96,19 @@ block content
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-						p #{texto}
+					p
+						| <strong>Solicitud de información a la Universidad de Granada, al amparo de la&nbsp;
+						a(href="http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf" target="_blank") Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.</strong>
+
+					p
+						| Para ejercer su derecho a la información pública, los usuarios pueden tramitar sus solicitudes -identificándose mediante&nbsp;
+						a(href="https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software;jsessionid=397F5573B75B480CC39C10C33187D5E5.nodo2" target="_blank") certificado electrónico
+						| - en este&nbsp;
+						a(href="https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html" target="_blank") formulario
+						| . Los miembros de la Comunidad Universitaria podrán, alternativamente, hacer uso de sus credenciales de Acceso Identificado.
+
+					p.
+						La solicitud debe contener en el apartado "Exposición de hechos" únicamente este texto:
+
+					p
+						<em>Esta petición supone un ejercicio del derecho de acceso a información pública al amparo de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.</em>

@@ -1,4 +1,4 @@
-//	
+//
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
 
@@ -78,8 +78,8 @@ block content
 					li(class="tipo2 item-first_level")
 						a(href="normativalegal.html") Normativa Legal
 
-					li(class="tipo2")
-						a(href="http://www.ugr.es/pages/contacto" target="_blank") Contacto
+					li(class="tipo2 item-first_level")
+						a(href="solicitudes.html") Solicitud de información
 
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
@@ -100,7 +100,7 @@ block content
 					ul.enlaces
 						li.level1
 							- for (var i = 0; i < tam; i++)
-								.li 
+								.li
 									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
 
 					- for (var j = 0; j < tam; j++)
@@ -113,21 +113,20 @@ block content
 						table.inline
 							tbody
 								tr
-									th.centeralign Descripción 
+									th.centeralign Descripción
 									th.centeralign Datos en Opendata
-									th.centeralign Ver 
+									th.centeralign Ver
 									th.centeralign Archivo
 
 								- for (var k = 0; k < datos[j].length; k++)
 									tr
 										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar") 
+										td(class="centeralign impar")
 											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
 												img(class="link",src="imagenes/link.png", alt="link")
 										td(class="centeralign par")
 											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
 												img(class="view",src="imagenes/view.png", alt="view")
-										td(class="centeralign impar") 
+										td(class="centeralign impar")
 											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
 												img(class="save",src="imagenes/save.png", alt="save")
-

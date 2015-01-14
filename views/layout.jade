@@ -63,6 +63,18 @@ html(lang="es")
 					menu.style.display = "none";
 			}
 
+			function a_formulario(){
+				window.open("https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html");
+			}
+
+			function copy_clip(){
+				alert("Texto copiado");
+			}
+
+			function copia_portapapeles(){
+				window.clipboardData.setData("Text", document.getElementById("parrafo").innerHTML); 
+				alert("Texto copiado al portapapeles");
+			}
 
 		if seccion!=="Inicio"
 

@@ -6,6 +6,38 @@
     border-width: 0;
 }
 
+.botones1
+{
+    FONT-SIZE: 15px;
+    position: relative;
+    width: auto;
+    height: auto;
+    /*padding: auto 0 0 0;*/
+    margin: 100 100;
+    CURSOR: hand;
+    COLOR: #FFFFFF;
+    BORDER-BOTTOM: #336699 1px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    background-image: url("../img/banners/resaltado-01_off.png");
+}
+.botones2
+{
+    FONT-SIZE: 15px;
+    position: relative;
+    top: 15px;
+    left: 150px;
+    width: auto;
+    height: auto;
+    padding: auto 0 0 0;
+    margin: 10 10;
+    CURSOR: hand;
+    COLOR: #FFFFFF;
+    BORDER-BOTTOM: #336699 1px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    background-image: url("../img/banners/resaltado-01_off.png");
+}
+
+
 html {
     background-color: #FFFFFF;
 }
@@ -1914,7 +1946,7 @@ li.model-resaltado-02 a.banner:hover {
   background-color:#000;
   display:none;
 }
- 
+
 #boxes .window {
   position:absolute;
   width:440px;
@@ -1923,11 +1955,11 @@ li.model-resaltado-02 a.banner:hover {
   z-index:9999;
   padding:20px;
 }
- 
- 
+
+
 /* Customize your modal window here, you can add background image too */
 #boxes #dialog {
-  position: fixed;  
+  position: fixed;
   width:800px;
   height:450px;
   background-color: #FAFAFA;

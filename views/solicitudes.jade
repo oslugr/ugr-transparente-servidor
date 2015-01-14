@@ -80,7 +80,7 @@ block content
 						a(href="normativalegal.html") Normativa Legal
 
 					li(class="selected tipo2-selected item-first_level")
-						a(href="solicitudes.html") Solicitudes
+						a(href="solicitudes.html") Solicitud de información
 
 			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
 				ul
@@ -103,12 +103,24 @@ block content
 					p
 						| Para ejercer su derecho a la información pública, los usuarios pueden tramitar sus solicitudes -identificándose mediante&nbsp;
 						a(href="https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software;jsessionid=397F5573B75B480CC39C10C33187D5E5.nodo2" target="_blank") certificado electrónico
-						| - en 
+						| - en&nbsp
 						a(href="https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html" target="_blank") este formulario
 						| . Los miembros de la Comunidad Universitaria podrán, alternativamente, hacer uso de sus credenciales de Acceso Identificado.
 
 					p.
 						La solicitud debe contener en el apartado "Exposición de hechos" únicamente este texto:
 
-					p
-						<em>Esta petición supone un ejercicio del derecho de acceso a información pública al amparo de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.</em>
+					<p id = "parrafo"><em>Esta petición supone un ejercicio del derecho de acceso a información pública al amparo de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.</em>
+					</p>
+
+					//button(
+					//	class = "botones1"
+					//	type="button"
+					//	onclick="copia_portapapeles()"
+					//	) Copiar a portapapeles
+
+					button(
+						class = "botones2"
+						type="button"
+						onclick="a_formulario()"
+						) Acceso a formulario

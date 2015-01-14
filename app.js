@@ -70,7 +70,7 @@ app.get('/estadisticas.html',gei.resultados);
 app.get('/normativalegal.html',norma.normativa);
 
 //Solicitudes
-app.get('/testdesolicitudes.html', sol.solicitudes);
+app.get('/solicitudes.html', sol.solicitudes);
 
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -24,7 +24,7 @@ var conf = require('../app');
 
 exports.solicitudes = function(req, res){
 
-  res.render('testdesolicitudes', {
-    titulo: 'Solicitudes'
+  res.render('solicitudes', {
+    titulo: 'Solicitud de información'
   });
 };

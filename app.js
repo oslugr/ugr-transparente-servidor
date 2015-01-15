@@ -10,7 +10,7 @@ var docencia = require('./routes/docencia');
 var administracion = require('./routes/administracion');
 var gei = require('./routes/gestionEinvestigacion');
 var norma = require('./routes/normativas');
-var sol = require('./routes/solicitudes');
+var sol = require('./routes/testdesolicitudes');
 
 
 var http = require('http');
@@ -70,7 +70,7 @@ app.get('/estadisticas.html',gei.resultados);
 app.get('/normativalegal.html',norma.normativa);
 
 //Solicitudes
-app.get('/solicitudes.html', sol.solicitudes);
+app.get('/testdesolicitudes.html', sol.solicitudes);
 
 
 http.createServer(app).listen(app.get('port'), function(){

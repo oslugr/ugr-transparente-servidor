@@ -1861,7 +1861,7 @@ li.model-resaltado-02 a.banner:hover {
     text-align: center;
     color:#FFF;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     width: 130px;
     height: 77px;
     margin-left: 10px;
@@ -1873,8 +1873,8 @@ li.model-resaltado-02 a.banner:hover {
 }
 
 .enlaces_index div{
-    float:left;
-    padding-top:20%;
+    float: left;
+    padding-top: 20%;
     width: 100%;
     height: 68%;
 }

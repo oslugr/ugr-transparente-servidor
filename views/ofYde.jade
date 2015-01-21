@@ -26,72 +26,29 @@ block content
 					a(class="first", href="/ofertaYdemanda.html") Docencia / #{seccion}
 	#general
 		#menus
-			div(id="enlaces_secciones", class="mod-menu_secciones")
-				ul
-					li(class="tipo2 item-first_level")
-						a(href="/index.html") Inicio
+			- var mode1 = "tipo2 item-first_level"
+			- var mode2 = "tipo2 item-first_level"
+			- var mode3 = "tipo2 item-first_level"
+			- var mode4 = "selected tipo2-selected item-first_level"
+			- var mode5 = "tipo2 item-first_level"
+			- var mode6 = "tipo2 item-first_level"
+			- var mode7 = "tipo2 item-first_level"
+			- var submenu1_display = "display:none;"
+			- var submenu2_display = ""
+			- var submenu3_display = "display:none;"
+			- var item1_selected = "tipo1"
+			- var item2_selected = "tipo1"
+			- var item3_selected = "tipo1"
 
-					li(class="tipo2 item-first_level")
-						a(href="/presentacion.html") Presentación
+			- var item4_selected = "tipo1-selected"
+			- var item5_selected = "tipo1"
+			- var item6_selected = "tipo1"
 
-					li(class="tipo2 item-first_level")
-						h2(class="grupos",onclick="mostrar_menu_administracion()") Administración
-						ul(id="menu_administracion", style="display:none;")
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="personal.html") Personal
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="infoEconomica.html") Información Económica
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="servicios.html") Servicios
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="http://econtra.ugr.es/licitacion", target="_blank") Perfil del contratante
-
-					li(class="selected tipo2-selected item-first_level")
-						h2(class="grupos",onclick="mostrar_menu_docencia()") Docencia
-						ul(id="menu_docencia")
-							li(class="tipo1-selected item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="ofertaYdemanda.html") Oferta y Demanda Académica
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="claustro.html") Claustro
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="estudiantes.html") Estudiantes
-
-
-					li(class="tipo2 item-first_level")
-						h2(class="grupos",onclick="mostrar_menu_gestion()") Gestión e Investigación
-						ul(id="menu_gestion", style="display:none;")
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="mision.html") Misión
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="planEstrategico.html") Plan estratégico
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-								a(href="gobierno.html") Gobierno
-
-							li(class="tipo1 item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-								a(href="estadisticas.html") Estadísticas
-
-					li(class="tipo2 item-first_level")
-						a(href="normativalegal.html") Normativa Legal
-
-					//li(class="tipo2 item-first_level")
-					//	a(href="solicitudes.html") Solicitud de Información
-
-
-			div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
-				ul
-					li(class="adicional1 item-first_level")
-						a(href="#") Elemento 1er nivel
-						ul
-							li(class="tipo1 item-second_level")
-								a(href="#") Elemento 2º nivel
-
+			- var item7_selected = "tipo1"
+			- var item8_selected = "tipo1"
+			- var item9_selected = "tipo1"
+			- var item10_selected = "tipo1"
+			include ./plantilla_menus.jade
 		#pagina
 			h1#titulo_pagina
 				span.texto_titulo #{seccion}

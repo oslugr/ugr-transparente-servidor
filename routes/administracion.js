@@ -143,6 +143,6 @@ exports.servicios = function(req, res){
 exports.perfil = function(req, res){
 
     res.render('perfilContratante', {
-        titulo: 'Acceso al Perfil del Contratante'
+        seccion: 'Perfil del Contratante'
     });
 };

@@ -101,7 +101,7 @@
           "texto":"Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
         },
         {
-          "encabezado":"Memoria de cuentas anuales",
+          "encabezado":"Memoria de Cuentas Anuales",
           "texto":"Memoria explicativa de las cuentas anuales del presupuesto 2014."
         },
         {
@@ -109,15 +109,15 @@
           "texto":"Informe de auditoría externa de las cuentas anuales de la Universidad de Granada 2012."
         },
         {
-          "encabezado":"Desglose de ingresos",
+          "encabezado":"Desglose de Ingresos",
           "texto":"Información desglosada de los ingresos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por capítulos, resumen por artículos, resumen general de ingresos o comparativa de ingresos entre los años 2012-2014."
         },
         {
-          "encabezado":"Desglose de gastos",
+          "encabezado":"Desglose de Gastos",
           "texto":"Información desglosada de los gastos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por estado de gastos general, gastos de personal, gastos por artículos, coste de mantenimiento de Ceuta y Melilla, programas, resumen del estado de gastos o comparativa de gastos entre los años 2012-2014."
         },
         {
-          "encabezado":"Justificantes de gasto",
+          "encabezado":"Justificantes de Gasto",
           "texto":"Información relativa a las subvenciones y ayudas públicas concedidas con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno. Fecha de conceptos: 10/03/2014."
         }
       ]
@@ -132,7 +132,7 @@
       "dataset":["servicios-ugr","empleo-publico"],
       "contenido":[
         {
-          "encabezado":"Servicios de la universidad",
+          "encabezado":"Servicios de la Universidad",
           "texto":"Información sobre los servicios ofrecidos por la Universidad de Granada. Última actualización: 25/07/2014."
         },
         {
@@ -159,15 +159,15 @@
             "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2014/2015: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
         },
         {
-            "encabezado":"Evolución oferta académica desde 2013",
+            "encabezado":"Evolución de la Oferta Académica desde 2013",
             "texto":"Evolución de la oferta de títulos reglados y propios de la Universidad de Granada desde el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por: año de inicio, tipo de titulación, nombre de titulación, rama de conocimiento, centro y campus."
         },
         {
-          "encabezado":"Demanda académica",
+          "encabezado":"Demanda Académica",
           "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2013/2014."
         },
         {
-            "encabezado":"Evolución demanda académica",
+            "encabezado":"Evolución de la Demanda Académica",
             "texto":"Evolución relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada desde el curso 2012/2013."
         }
       ]
@@ -182,11 +182,11 @@
       "dataset":["perfil-profesorado","profesores-extranjeros"],
       "contenido":[
         {
-          "encabezado":"Perfil del profesorado",
+          "encabezado":"Perfil del Profesorado",
           "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
         },
         {
-          "encabezado":"Profesores extranjeros",
+          "encabezado":"Profesores Extranjeros",
           "texto":"Información sobre los profesores extranjeros del claustro de la Universidad de Granada durante los años 2009, 2010, 2011."
         }
       ]
@@ -205,11 +205,11 @@
           "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada durante el curso 2013/2014. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
         },
         {
-          "encabezado":"Canales de comunicación",
+          "encabezado":"Canales de Comunicación",
           "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
         },
         {
-          "encabezado":"Becas y ayudas",
+          "encabezado":"Becas y Ayudas",
           "texto":"Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada."
         }
       ]
@@ -239,7 +239,7 @@
       "dataset":["planEstrategico"],
       "contenido":[
         {
-          "encabezado":"Plan estratégico",
+          "encabezado":"Plan Estratégico",
           "texto":"El plan estratégico es la herramienta gerencial que permite hacer operativa la misión de la universidad. Su existencia muestra que la organización se ha preocupado por realizar un diagnóstico del entorno externo e interno, identificando las principales oportunidades y los riesgos."
         }
       ]
@@ -254,7 +254,7 @@
       "dataset":["composicion-gobierno","estatutos"],
       "contenido":[
         {
-          "encabezado":"Composición de gobierno",
+          "encabezado":"Composición de Gobierno",
           "texto":"Información sobre la composición de los miembros de sus principales órganos de gobierno profesores mencionando sus nombres y apellidos, titulación y responsabilidades de gobierno."
         },
         {
@@ -281,7 +281,7 @@
           "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
         },
         {
-          "encabezado":"Satisfacción estudiantes",
+          "encabezado":"Satisfacción Estudiantes",
           "texto":"Información sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
         },
         {
@@ -289,7 +289,7 @@
           "texto":"Información sobre la posición de la Universidad de Granada en los principales rankings internacionales. "
         },
         {
-          "encabezado":"Alumnos fuera de la comunidad: 2013/2014",
+          "encabezado":"Alumnos fuera de la Comunidad: 2013/2014",
           "texto":"Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada durante el curso 2013/2014."
         }
       ]
@@ -305,11 +305,11 @@
       "dataset":["normativasUGR","leytransparenciaBOE","leytransparenciaBOJA"],
       "contenido":[
         {
-          "encabezado":"Normativa y convenios",
+          "encabezado":"Normativa y Convenios",
           "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
         },
         {
-          "encabezado":"Ley de transparencia, acceso a la información pública y buen gobierno",
+          "encabezado":"Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
           "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
         },
         {

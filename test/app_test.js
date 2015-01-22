@@ -1,6 +1,6 @@
-// var should = require('should'); 
+// var should = require('should');
 
-var request = require('supertest');  
+var request = require('supertest');
 // hay que arrancar el servidor antes. Más adelante probaremos esto http://51elliot.blogspot.com.es/2013/08/testing-expressjs-rest-api-with-mocha.html
 
 var server=require(__dirname + '/../app.js');
@@ -19,10 +19,8 @@ describe('Web', function(){
 			     });
 		});
 
-
-
-	     it('Debería devolver uso_basico', function(){
-		    request.get("/infoEconomica.html")
+	     it('Debería devolver página personal', function(){
+		    request.get("/personal.html")
 			.expect(200)
 			.end(function(err,res) {
 				 if (err) {

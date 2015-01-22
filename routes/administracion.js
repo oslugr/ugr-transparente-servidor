@@ -60,12 +60,12 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                       datos2[v].push(item);
                     else
                       datos3[v].push(item);
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
+                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos
                   }
           });
 
           var coleccion2 = db.collection(conf.config.datasets);
-          
+
           var cursor2 = coleccion2.find()
           cursor2.each(function(err, item) {
                   if(item != null){
@@ -77,7 +77,7 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                       else
                         servidor3[v].push(item);
                     }
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
+                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos
                   }else{
                     db.close();
                   }
@@ -95,7 +95,7 @@ exports.personal = function(req, res){
     conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
   }
 
-  res.render(personal.plantilla, { 
+  res.render(personal.plantilla, {
     seccion: personal.nombre ,
     datos: datos,
     servidores: servidor,
@@ -112,7 +112,7 @@ exports.infoEco = function(req, res){
     conectarBD(infoEco.plantilla,infoEco.coleccion,infoEco.categoria,infoEco.dataset[i],i);
   }
 
-  res.render(infoEco.plantilla, { 
+  res.render(infoEco.plantilla, {
     seccion: infoEco.nombre ,
     datos: datos2,
     servidores: servidor2,
@@ -129,11 +129,20 @@ exports.servicios = function(req, res){
     conectarBD(servicios.plantilla,servicios.coleccion,servicios.categoria,servicios.dataset[i],i);
   }
 
-  res.render(servicios.plantilla, { 
+  res.render(servicios.plantilla, {
     seccion: servicios.nombre ,
     datos: datos3,
     servidores: servidor3,
     tam: (servicios.dataset).length,
     contenido: servicios.contenido
   });
+};
+
+// Gestión de la página de perfil del contratante
+
+exports.perfil = function(req, res){
+
+    res.render('perfilContratante', {
+        titulo: 'Acceso al Perfil del Contratante'
+    });
 };

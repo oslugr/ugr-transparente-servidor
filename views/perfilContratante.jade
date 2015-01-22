@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/personal.html") Administración / #{seccion}
+					a(class="first", href="/perfilContratante.html") #{titulo}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
@@ -36,10 +36,10 @@ block content
 			- var submenu1_display = ""
 			- var submenu2_display = "display:none;"
 			- var submenu3_display = "display:none;"
-			- var item1_selected = "tipo1-selected"
+			- var item1_selected = "tipo1"
 			- var item2_selected = "tipo1"
 			- var item3_selected = "tipo1"
-			- var item4_selected = "tipo1"
+			- var item4_selected = "tipo1-selected"
 
 			- var item5_selected = "tipo1"
 			- var item6_selected = "tipo1"
@@ -52,41 +52,13 @@ block content
 			include ./plantilla_menus.jade
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{seccion}
+				span.texto_titulo #{titulo}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
 
-					ul.enlaces
-						li.level1
-							- for (var i = 0; i < tam; i++)
-								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
+					p
+						| La Universidad de Granada, a través de su&nbsp;
+						a(href="http://econtra.ugr.es/licitacion", target="_blank") perfil del contratante
 
-					- for (var j = 0; j < tam; j++)
-						h1
-							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
-
-						.level1
-							p #{contenido[j].texto}
-
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata
-									th.centeralign Ver
-									th.centeralign Archivo
-
-								- for (var k = 0; k < datos[j].length; k++)
-									tr
-										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
-												img(class="link",src="imagenes/link.png", alt="link")
-										td(class="centeralign par")
-											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
-												img(class="view",src="imagenes/view.png", alt="view")
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
-												img(class="save",src="imagenes/save.png", alt="save")
+						|  pone a disposición de todos los interesados información sobre los procedimientos de licitación.

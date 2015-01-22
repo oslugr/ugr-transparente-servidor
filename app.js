@@ -51,9 +51,11 @@ app.get('/index.html', index.index);
 app.get('/presentacion.html', pres.presentacion);
 
 //administracion
+
 app.get('/personal.html',administracion.personal);
 app.get('/infoEconomica.html',administracion.infoEco);
 app.get('/servicios.html',administracion.servicios);
+app.get('/perfilContratante.html',administracion.perfil);
 
 //docencia
 app.get('/ofertaYdemanda.html',docencia.ofertaYdemanda);

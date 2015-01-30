@@ -65,12 +65,12 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                       datos3[v].push(item);
                     else
                       datos4[v].push(item);
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
+                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos
                   }
           });
 
           var coleccion2 = db.collection(conf.config.datasets);
-          
+
           var cursor2 = coleccion2.find()
           cursor2.each(function(err, item) {
                   if(item != null){
@@ -84,7 +84,7 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                       else
                         servidor4[v].push(item);
                     }
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
+                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos
                   }else{
                     db.close();
                   }
@@ -103,7 +103,7 @@ exports.mision = function(req, res){
     conectarBD(mision.plantilla,mision.coleccion,mision.categoria,mision.dataset[i],i);
   }
 
-  res.render(mision.plantilla, { 
+  res.render(mision.plantilla, {
     seccion: mision.nombre ,
     datos: datos,
     servidores: servidor,
@@ -121,7 +121,7 @@ exports.planEstrategico = function(req, res){
     conectarBD(planEst.plantilla,planEst.coleccion,planEst.categoria,planEst.dataset[i],i);
   }
 
-  res.render(planEst.plantilla, { 
+  res.render(planEst.plantilla, {
     seccion: planEst.nombre ,
     datos: datos2,
     servidores: servidor2,
@@ -138,7 +138,7 @@ exports.gobierno = function(req, res){
     conectarBD(gobierno.plantilla,gobierno.coleccion,gobierno.categoria,gobierno.dataset[i],i);
   }
 
-  res.render(gobierno.plantilla, { 
+  res.render(gobierno.plantilla, {
     seccion: gobierno.nombre ,
     datos: datos3,
     servidores: servidor3,
@@ -156,7 +156,7 @@ exports.resultados = function(req, res){
     conectarBD(resultados.plantilla,resultados.coleccion,resultados.categoria,resultados.dataset[i],i);
   }
 
-  res.render(resultados.plantilla, { 
+  res.render(resultados.plantilla, {
     seccion: resultados.nombre ,
     datos: datos4,
     servidores: servidor4,

@@ -11,6 +11,7 @@ var administracion = require('./routes/administracion');
 var gei = require('./routes/gestionEinvestigacion');
 var norma = require('./routes/normativas');
 var sol = require('./routes/testdesolicitudes');
+var map = require('./routes/mapaweb');
 
 
 var http = require('http');
@@ -73,6 +74,9 @@ app.get('/normativalegal.html',norma.normativa);
 
 //Solicitudes
 app.get('/testdesolicitudes.html', sol.solicitudes);
+
+//Mapa del sitio
+app.get('/mapaweb.html', map.mapa);
 
 
 http.createServer(app).listen(app.get('port'), function(){

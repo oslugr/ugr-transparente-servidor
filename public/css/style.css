@@ -6,6 +6,7 @@
     border-width: 0;
 }
 
+/*Style para el botón del formulario de solicitudes*/
 .botonFormulario
 {
     FONT-SIZE: 15px;
@@ -25,6 +26,63 @@
 .botonFormulario:hover
 {
     color: #0F3852;
+}
+
+/*Styles para el webmap*/
+
+ul.square_seccion {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding: 0px 0px 0px 0px;
+}
+
+ul.square_seccion2 {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding-left: 50px;
+}
+
+ul.square_seccion3 {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding-left: 70px;
+}
+
+
+.seccion{
+    color: #DD3B02;
+    FONT-SIZE: 1.3em;
+    line-height: 150%;
+}
+
+.seccion2{
+    color: #DD3B02;
+    FONT-SIZE: 1.2em;
+    line-height: 150%;
+}
+
+.seccion3{
+    color: #DD3B02;
+    FONT-SIZE: 1.1em;
+    line-height: 150%;
+}
+
+.seccion:hover {
+    color: #0F3852;
+    text-decoration: none;
+}
+
+.seccion2:hover {
+    color: #0F3852;
+    text-decoration: none;
+}
+
+.seccion3:hover {
+    color: #0F3852;
+    text-decoration: none;
 }
 
 
@@ -976,31 +1034,6 @@ div.sec_interior ul.enlaces li a:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
-
-
-
-div.sec_interior ul.seccion li div.li {
-    background-image: url("../img/interior/cabecera-nivel1_bullet.png");
-    background-position: left center;
-    border-color: #B6B5B8;
-    border-style: solid;
-}
-div.sec_interior ul.seccion li a {
-    background-color: #FFFFFF;
-    border-color: #B6B5B8;
-    color: #DD3B02;
-    line-height: 20px;
-    text-align: left;
-    text-decoration: none;
-}
-div.sec_interior ul.seccion li a:hover {
-    background-color: #DD3B02;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
 
 
 div.sec_interior ul.noenlaces {

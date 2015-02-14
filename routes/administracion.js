@@ -1,7 +1,6 @@
 /*
   Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
   Copyright (C) 2014  Jaime Torres Benavente
-  Copyright (C) 2015  German Martinez Maldonado
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -23,12 +22,6 @@ var conf = require('../app');
 //Variable para la base de datos mongodb
 var MongoClient = require('mongodb').MongoClient;
 
-// Variable para acceso a la API de CKAN
-var CKAN = require('ckan')
-
-// Variable para conectar con la API de CKAN
-var client = new CKAN.Client('http://opendata.ugr.es/');
-
 //Variable para almacenar los datos
 var datos= new Array();
 var datos2= new Array();
@@ -37,7 +30,6 @@ var datos3= new Array();
 var servidor= new Array();
 var servidor2= new Array();
 var servidor3= new Array();
-
 
 function conectarBD(plantilla,colec,categoria,dataset,v){
     MongoClient.connect(conf.config.BD, function(err,db){
@@ -88,21 +80,6 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
                   }
           });
 
-          //console.log("\n\n\nDATOS1:");
-          //console.log(datos);
-          //console.log("\n\n\nSERVIDOR1:");
-          //console.log(servidor);
-
-    });
-}
-
-function recuperaDatos(){
-    client.action('dataset_search', {
-      resource_id: '5a47a757-8670-4880-8fa0-446d054adf70',
-    },
-    function(err, out) {
-      if (err) console.log(err);
-      console.log(out);
     });
 }
 
@@ -113,8 +90,6 @@ exports.personal = function(req, res){
   for (var i =0;i<(personal.dataset).length; i++) {
     conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
   }
-
-  recuperaDatos();
 
   res.render(personal.plantilla, {
     seccion: personal.nombre ,

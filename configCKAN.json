@@ -1,0 +1,20 @@
+{
+  "personal":
+    {
+      "nombre":"Personal",
+      "plantilla":"personal",
+      "coleccion":"tablas",
+      "categoria":["personal"],
+      "dataset":["informacion-salarial","banda-salarial"],
+      "contenido":[
+        {
+          "encabezado":"Información Salarial",
+          "texto":"Información relativa a la oferta de recursos humanos de la universidad: personal docente e investigador (PDI) y personal de administración y servicios (PAS). Se ofrecen los datos sobre el personal contratado y sus distintas categorías referentes al curso 2013 / 2014: PAS (funcionarios y laborales) y PDI (funcionarios y laborales)."
+        },
+        {
+          "encabezado":"Banda Salarial",
+          "texto":"Información sobre la remuneración al personal universitario, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones referentes al año 2014."
+        }
+      ]
+    }
+}

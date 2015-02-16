@@ -31,59 +31,60 @@ html(lang="es")
 
 		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
 
-		script(type='text/javascript').
-			function mostrar_menu_administracion(){
-				var menu=document.getElementById("menu_administracion");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
+		block scripts
+			script(type='text/javascript').
+				function mostrar_menu_administracion(){
+					var menu=document.getElementById("menu_administracion");
+					if(menu.style.display == "none"){
+						menu.style.display = "block";
+					}else
+						menu.style.display = "none";
+				}
 
-			function mostrar_menu_docencia(){
-				var menu=document.getElementById("menu_docencia");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
+				function mostrar_menu_docencia(){
+					var menu=document.getElementById("menu_docencia");
+					if(menu.style.display == "none"){
+						menu.style.display = "block";
+					}else
+						menu.style.display = "none";
+				}
 
-			function mostrar_menu_gestion(){
-				var menu=document.getElementById("menu_gestion");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
+				function mostrar_menu_gestion(){
+					var menu=document.getElementById("menu_gestion");
+					if(menu.style.display == "none"){
+						menu.style.display = "block";
+					}else
+						menu.style.display = "none";
+				}
 
-			function mostrar_menu_normativas(){
-				var menu=document.getElementById("menu_normativas");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
+				function mostrar_menu_normativas(){
+					var menu=document.getElementById("menu_normativas");
+					if(menu.style.display == "none"){
+						menu.style.display = "block";
+					}else
+						menu.style.display = "none";
+				}
 
-			//function copy_clip(){
-			//	alert("Texto copiado");
-			//}
+				//function copy_clip(){
+				//	alert("Texto copiado");
+				//}
 
-			//function copia_portapapeles(){
-			//	window.clipboardData.setData("Text", document.getElementById("parrafo").innerHTML);
-			//	alert("Texto copiado al portapapeles");
-			//}
+				//function copia_portapapeles(){
+				//	window.clipboardData.setData("Text", document.getElementById("parrafo").innerHTML);
+				//	alert("Texto copiado al portapapeles");
+				//}
 
-		if seccion!=="Inicio"
-			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
-			script(src="libraries/jquery.js")
-			script(src="libraries/underscore.js")
-			script(src="libraries/backbone.js")
-			script(src="libraries/ckan.js")
-			script(src="libraries/recline.js")
-			script(type='text/javascript' src='https://www.google.com/jsapi')
-			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
-			script(src="script/generar_tabla.js")
-			script(src="script/prueba_recline.js")
+				//if seccion!=="Inicio"
+					//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+					//script(src="libraries/jquery.js")
+					//script(src="libraries/underscore.js")
+					//script(src="libraries/backbone.js")
+					//script(src="libraries/ckan.js")
+					//script(src="libraries/recline.js")
+					//script(type='text/javascript' src='https://www.google.com/jsapi')
+					//script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+					//script(src="script/generar_tabla.js")
+					//script(src="script/prueba_recline.js")
 
 	body
 		div(id="boxes")

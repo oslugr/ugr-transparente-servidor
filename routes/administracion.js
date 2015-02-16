@@ -1,6 +1,7 @@
 /*
   Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
   Copyright (C) 2014  Jaime Torres Benavente
+  Copyright (C) 2015  German Martinez Maldonado
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -30,6 +31,13 @@ var datos3= new Array();
 var servidor= new Array();
 var servidor2= new Array();
 var servidor3= new Array();
+
+function rellenar(){
+  if(plantilla==conf.configCKAN.personal.plantilla){
+    datos[v]=new Array();
+    servidor[v]= new Array();
+  }
+}
 
 function conectarBD(plantilla,colec,categoria,dataset,v){
     MongoClient.connect(conf.config.BD, function(err,db){
@@ -67,8 +75,10 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
           cursor2.each(function(err, item) {
                   if(item != null){
                     if(item.dataset==dataset){
-                      if(plantilla==conf.config.personal.plantilla)
+                      if(plantilla==conf.config.personal.plantilla){
                         servidor[v].push(item);
+                        //console.log(item);
+                        }
                       else if(plantilla==conf.config.infoEco.plantilla)
                       servidor2[v].push(item);
                       else

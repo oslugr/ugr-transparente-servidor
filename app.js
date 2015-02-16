@@ -20,8 +20,10 @@ var app = express();
 
 //Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
 var cargarConfig = require('./jsonReader');
+configCKAN=cargarConfig();
 config=cargarConfig();
 module.exports.config = config;
+module.exports.configCKAN = configCKAN;
 
 // all environments
 app.set('port', process.env.PORT || 3000);

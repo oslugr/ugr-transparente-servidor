@@ -30,6 +30,12 @@ html(lang="es")
 
 		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
 
+		noscript
+			p(class="jsDisabled")
+				| Esta página requiere funcionalidades JavaScript. Por favor,
+				a(href = "http://www.enable-javascript.com/es/" target="_blank")  habilítelo
+				|  para una correcta visualización.
+
 		script(type='text/javascript').
 			function mostrar_menu_administracion(){
 				var menu=document.getElementById("menu_administracion");
@@ -85,7 +91,7 @@ html(lang="es")
 	body
 		div(id="boxes")
 			div(id="dialog" class="window" hidden)
-				img(id="close",src="imagenes/close.png", alt="close")
+				img(id="close",src="imagenes/close.png", alt="close", longdesc="cerrar")
 				h1#titulo_tabla
 				div(id="tabla")
 			div(id="mask")
@@ -137,7 +143,7 @@ html(lang="es")
 				#interior_pie
 					#pie
 						a(id="WAI", href="http://www.w3.org/WAI/WCAG2AA-Conformance")
-							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa")
+							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa", longdesc="http://www.w3.org/WAI/WCAG2AA-Conformance")
 						a(href="mapaweb.html") Mapa del sitio
 						span.separador_enlaces |
 						a(href="https://github.com/oslugr/ugr-transparente-servidor") Este servidor es software libre

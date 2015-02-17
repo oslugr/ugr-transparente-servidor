@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
 
     var resource = '5a47a757-8670-4880-8fa0-446d054adf70';
@@ -14,3 +15,4 @@ $(document).ready(function() {
     });
 
 });
+*/

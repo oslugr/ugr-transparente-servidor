@@ -1,7 +1,7 @@
 /*
   Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
   Copyright (C) 2014  Jaime Torres Benavente
-  Copyright (C) 2015  German Martinez Maldonado
+                2015  German Martinez Maldonado
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

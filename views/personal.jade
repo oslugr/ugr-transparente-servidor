@@ -1,7 +1,7 @@
 //
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
-	Copyright (C) 2015  German Martinez Maldonado
+								2015  German Martinez Maldonado
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -19,15 +19,22 @@
 extends layout
 
 block scripts
-	script(src="libraries/jquery.js")
-	script(src="libraries/underscore.js")
-	script(src="libraries/backbone.js")
-	script(src="libraries/ckan.js")
-	script(src="libraries/recline.js")
-	script(type='text/javascript' src='https://www.google.com/jsapi')
-	script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
-	script(src="script/generar_tabla.js")
-	script(src="script/prueba_recline.js")
+	//script(src="script/prueba_recline.js")
+	script(type='text/javascript').
+		function acceso(){
+			var resource = '5a47a757-8670-4880-8fa0-446d054adf70';
+			var source = 'http://opendata.ugr.es/dataset/6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/'+resource;
+
+			var dataset = new recline.Model.Dataset({
+				url: source,
+				backend: 'ckan'
+			});
+
+			dataset.fetch().done(function(dataset) {
+				data = dataset.records.toJSON()
+				console.log(data[0]);
+			});
+		}
 
 block content
 	#rastro-idiomas
@@ -68,8 +75,8 @@ block content
 			//añadido acceso
 
 			div(id="contenido", class="sec_interior")
-				script
-					//acceso(prueba)
+				script.
+					acceso()
 				.content_doku
 
 					ul.enlaces

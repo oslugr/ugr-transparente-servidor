@@ -33,10 +33,7 @@ var servidor2= new Array();
 var servidor3= new Array();
 
 function rellenar(){
-  if(plantilla==conf.configCKAN.personal.plantilla){
-    datos[v]=new Array();
-    servidor[v]= new Array();
-  }
+  return conf.configCKAN.personal.datos;
 }
 
 function conectarBD(plantilla,colec,categoria,dataset,v){
@@ -93,28 +90,6 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
     });
 }
 
-/*
-function send(){
-  jQuery.ajax({
-     url: 'http://api.joind.in/v2.1/talks/10889',
-     data: {
-        format: 'json'
-     },
-     error: function() {
-        $('#info').html('<p>An error has occurred</p>');
-     },
-     dataType: 'jsonp',
-     success: function(data) {
-        var $title = $('<h1>').text(data.talks[0].talk_title);
-        var $description = $('<p>').text(data.talks[0].talk_description);
-        $('#info')
-           .append($title)
-           .append($description);
-     },
-     type: 'GET'
-  });
-}*/
-
 // Gestión de la pagina de personal
 
 exports.personal = function(req, res){
@@ -123,12 +98,27 @@ exports.personal = function(req, res){
     conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
   }
 
+  var prueba = rellenar();
+
+  console.log("\n\n\n");
+  console.log(datos)
+
+  /*
+  necesarios: personal.plantilla = personal
+              personal.nombre = Personal
+              datos = conf.configCKAN.personal.datos_informacion_salarial
+              servidores = informacion del servidor que no ha gestionado
+              tam = 2 (2 datasets diferentes para esta categoria)
+              contenido = texto sobre las tablas
+  */
+
+
   //send()
   //var data = ["informacion-salarial","banda-salarial"];
 
   res.render(personal.plantilla, {
     seccion: personal.nombre ,
-    datos: datos,
+    datos: prueba,
     servidores: servidor,
     tam: (personal.dataset).length,
     contenido: personal.contenido,

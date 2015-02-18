@@ -18,28 +18,7 @@
 
 extends layout
 
-block scripts
-	//script(src="script/prueba_recline.js")
-	script(type='text/javascript').
-		function datos(){
-			var data = {
-				resource_id: '5a47a757-8670-4880-8fa0-446d054adf70'
-			};
-
-			var result = JSON.parse($.ajax({
-				type: 'GET',
-				url: 'http://opendata.ugr.es/api/action/datastore_search',
-				data: data,
-				dataType: 'json',
-				global: false,
-				async:false,
-				success: function(data) {
-					return data;
-				}
-			}).responseText).result.records;
-
-			console.log(result);
-		}
+//block scripts
 
 block content
 	#rastro-idiomas
@@ -80,8 +59,8 @@ block content
 			//añadido acceso
 
 			div(id="contenido", class="sec_interior")
-				script.
-					datos();
+				//script.
+					//datos();
 
 				.content_doku
 

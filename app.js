@@ -12,7 +12,6 @@ var gei = require('./routes/gestionEinvestigacion');
 var norma = require('./routes/normativas');
 var sol = require('./routes/testdesolicitudes');
 
-
 var http = require('http');
 var path = require('path');
 
@@ -20,9 +19,12 @@ var app = express();
 
 //Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
 var cargarConfig = require('./jsonReader');
-configCKAN=cargarConfig();
 config=cargarConfig();
 module.exports.config = config;
+
+//Cargar configuración nueva
+var fs = require("fs");
+var configCKAN = JSON.parse(fs.readFileSync("configCKAN.json"));
 module.exports.configCKAN = configCKAN;
 
 // all environments

@@ -93,6 +93,28 @@ function conectarBD(plantilla,colec,categoria,dataset,v){
     });
 }
 
+/*
+function send(){
+  jQuery.ajax({
+     url: 'http://api.joind.in/v2.1/talks/10889',
+     data: {
+        format: 'json'
+     },
+     error: function() {
+        $('#info').html('<p>An error has occurred</p>');
+     },
+     dataType: 'jsonp',
+     success: function(data) {
+        var $title = $('<h1>').text(data.talks[0].talk_title);
+        var $description = $('<p>').text(data.talks[0].talk_description);
+        $('#info')
+           .append($title)
+           .append($description);
+     },
+     type: 'GET'
+  });
+}*/
+
 // Gestión de la pagina de personal
 
 exports.personal = function(req, res){
@@ -101,12 +123,16 @@ exports.personal = function(req, res){
     conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
   }
 
+  //send()
+  //var data = ["informacion-salarial","banda-salarial"];
+
   res.render(personal.plantilla, {
     seccion: personal.nombre ,
     datos: datos,
     servidores: servidor,
     tam: (personal.dataset).length,
-    contenido: personal.contenido
+    contenido: personal.contenido,
+    //data: data
   });
 };
 

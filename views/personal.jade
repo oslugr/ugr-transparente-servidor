@@ -56,12 +56,7 @@ block content
 			h1#titulo_pagina
 				span.texto_titulo #{seccion}
 
-			//añadido acceso
-
 			div(id="contenido", class="sec_interior")
-				//script.
-					//datos();
-
 				.content_doku
 
 					ul.enlaces
@@ -85,15 +80,16 @@ block content
 									th.centeralign Ver
 									th.centeralign Archivo
 
-								- for (var k = 0; k < datos[j].length; k++)
-									tr
-										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
-												img(class="link",src="imagenes/link.png", alt="link")
-										td(class="centeralign par")
-											a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
-												img(class="view",src="imagenes/view.png", alt="view")
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
-												img(class="save",src="imagenes/save.png", alt="save")
+								- for (var k = 0; k < num_datos; k++)
+									- if (datos[k].dataset.localeCompare(contenido[j].encabezado) == 0) //cambiar localeCompare por otro método más eficiente por lo visto por ahí
+										tr
+											td(class="centeralign par") #{datos[k].nombre}
+											td(class="centeralign impar")
+												a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
+													img(class="link",src="imagenes/link.png", alt="link")
+											td(class="centeralign par")
+												a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
+													img(class="view",src="imagenes/view.png", alt="view")
+											td(class="centeralign impar")
+												a(href="#{servidor}dataset/#{datos[k].descarga}")
+													img(class="save",src="imagenes/save.png", alt="save")

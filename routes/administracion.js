@@ -23,6 +23,8 @@ var conf = require('../app');
 //Variable para la base de datos mongodb
 var MongoClient = require('mongodb').MongoClient;
 
+var _ = require('underscore');
+
 //Variable para almacenar los datos
 var datos= new Array();
 var datos2= new Array();
@@ -32,8 +34,16 @@ var servidor= new Array();
 var servidor2= new Array();
 var servidor3= new Array();
 
-function rellenar(){
+function getDatos(){
   return conf.configCKAN.personal.datos;
+}
+
+function getTamDatos(datos){
+  return _.size(datos);
+}
+
+function getServidor(){
+  return conf.configCKAN.personal.servidor;
 }
 
 function conectarBD(plantilla,colec,categoria,dataset,v){
@@ -98,10 +108,9 @@ exports.personal = function(req, res){
     conectarBD(personal.plantilla,personal.coleccion,personal.categoria,personal.dataset[i],i);
   }
 
-  var prueba = rellenar();
-
-  console.log("\n\n\n");
-  console.log(datos)
+  var ndatos = getDatos();
+  var num_datos = getTamDatos(ndatos);
+  var nservidor = getServidor();
 
   /*
   necesarios: personal.plantilla = personal
@@ -116,9 +125,14 @@ exports.personal = function(req, res){
   //send()
   //var data = ["informacion-salarial","banda-salarial"];
 
+  //console.log(ndatos[0].descarga);
+
   res.render(personal.plantilla, {
     seccion: personal.nombre ,
-    datos: prueba,
+    datos: ndatos,
+    num_datos: num_datos,
+    servidor: nservidor,
+    //datos: datos,
     servidores: servidor,
     tam: (personal.dataset).length,
     contenido: personal.contenido,

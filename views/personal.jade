@@ -85,7 +85,7 @@ block content
 										tr
 											td(class="centeralign par") #{datos[k].nombre}
 											td(class="centeralign impar")
-												a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
+												a(href="#{servidor}dataset/#{datos[0].id_dataset}/resource/#{datos[k].url}",target="_blank")
 													img(class="link",src="imagenes/link.png", alt="link")
 											td(class="centeralign par")
 												a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")

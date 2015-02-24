@@ -28,9 +28,7 @@ exports.personal = function(req, res){
     servidor: conf.config.servidor,
     seccion: personal.nombre,
     contenido: personal.contenido,
-    tam: (personal.contenido).length,
     datos: personal.datos,
-    num_datos: (personal.datos).length,
   });
 };
 
@@ -42,9 +40,7 @@ exports.infoEco = function(req, res){
     servidor: conf.config.servidor,
     seccion: infoEco.nombre,
     contenido: infoEco.contenido,
-    tam: (infoEco.contenido).length,
     datos: infoEco.datos,
-    num_datos: (infoEco.datos).length,
   });
 };
 
@@ -56,9 +52,7 @@ exports.servicios = function(req, res){
     servidor: conf.config.servidor,
     seccion: servicios.nombre,
     contenido: servicios.contenido,
-    tam: (servicios.contenido).length,
     datos: servicios.datos,
-    num_datos: (servicios.datos).length,
   });
 };
 

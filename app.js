@@ -1,6 +1,6 @@
 /**
- * Module dependencies.
- */
+* Module dependencies.
+*/
 
 var express = require('express');
 var index = require('./routes/index');
@@ -16,11 +16,14 @@ var path = require('path');
 
 var app = express();
 
-//Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
+// Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
 var cargarConfig = require('./script/jsonReader');
 config=cargarConfig("./config/config.json");
 module.exports.config = config;
+
+// Archivos de configuración de cada unas de las páginas
 module.exports.personal = cargarConfig("./config/personal.json");
+module.exports.infoEco = cargarConfig("./config/infoEco.json");
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -34,7 +37,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next){
-    res.status(404).render('404_error', {titulo: config.error.titulo, texto: config.error.texto});
+  res.status(404).render('404_error', {titulo: config.error.titulo, texto: config.error.texto});
 });
 
 // development only

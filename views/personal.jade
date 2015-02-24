@@ -1,7 +1,7 @@
 //
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
-								2015  German Martinez Maldonado
+	2015  German Martinez Maldonado
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -61,11 +61,11 @@ block content
 
 					ul.enlaces
 						li.level1
-							- for (var i = 0; i < tam; i++)
+							- for (var i = 0; i < contenido.length; i++)
 								.li
 									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
 
-					- for (var j = 0; j < tam; j++)
+					- for (var j = 0; j < contenido.length; j++)
 						h1
 							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
 
@@ -80,8 +80,8 @@ block content
 									th.centeralign Ver
 									th.centeralign Archivo
 
-								- for (var k = 0; k < num_datos; k++)
-									- if (datos[k].dataset.localeCompare(contenido[j].encabezado) == 0) //cambiar localeCompare por otro método más eficiente por lo visto por ahí
+								- for (var k = 0; k < datos.length; k++)
+									- if (datos[k].dataset.localeCompare(contenido[j].encabezado) == 0)
 										tr
 											td(class="centeralign par") #{datos[k].nombre}
 											td(class="centeralign impar")

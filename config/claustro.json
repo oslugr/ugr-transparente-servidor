@@ -1,0 +1,65 @@
+{
+  "plantilla":"claustro",
+  "nombre":"Claustro",
+  "contenido":[
+    {
+      "encabezado":"Perfil del Profesorado",
+      "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
+    },
+    {
+      "encabezado":"Profesores Extranjeros",
+      "texto":"Información sobre los profesores extranjeros del claustro de la Universidad de Granada durante los años 2009, 2010 y 2011."
+    }
+  ],
+  "datos":[
+    {
+      "dataset":"Perfil del Profesorado",
+      "id_dataset":"perfil-del-profesorado",
+      "nombre":"Perfil del profesorado",
+      "url":"eac2ad23-3ea9-45f1-aee4-1f72236503d7",
+      "descarga":"ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Políticas de internacionalización",
+      "url":"6288026d-6519-4632-99f3-ae84115d9095",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/6288026d-6519-4632-99f3-ae84115d9095/download/politicasinternacionalizacion.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Mejora docente",
+      "url":"f66b3f3a-f4ab-4a18-858f-7778b5867ba8",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/f66b3f3a-f4ab-4a18-858f-7778b5867ba8/download/mejoradocente.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Programa Erasmus Mundus",
+      "url":"611aa912-f695-4f74-89ae-9f55ed8310a4",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/611aa912-f695-4f74-89ae-9f55ed8310a4/download/programaerasmusmundus.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Programa de Becas Grupo Coimbra",
+      "url":"9a9fa328-78b8-4032-abec-eddfaac26c47",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/9a9fa328-78b8-4032-abec-eddfaac26c47/download/programadebecasdelgrupocoimbra.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Programa de Aprendizaje Permanente",
+      "url":"7ef85e59-db9f-47b7-836e-6657d10d2a39",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/7ef85e59-db9f-47b7-836e-6657d10d2a39/download/programadeaprendizajepermanente.csv"
+    },
+    {
+      "dataset":"Profesores Extranjeros",
+      "id_dataset":"profesores-extranjeros-ugr",
+      "nombre":"Programa Propio",
+      "url":"5593ddda-3d9a-4704-b30c-5b69443a6de0",
+      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/5593ddda-3d9a-4704-b30c-5b69443a6de0/download/programapropio.csv"
+    }
+  ]
+}

@@ -27,6 +27,7 @@ module.exports.infoEco = cargarConfig("./config/infoEco.json");
 module.exports.servicios = cargarConfig("./config/servicios.json");
 module.exports.ofertaYdemanda = cargarConfig("./config/ofertaYdemanda.json");
 module.exports.claustro = cargarConfig("./config/claustro.json");
+module.exports.estudiantes = cargarConfig("./config/estudiantes.json");
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -65,7 +66,7 @@ app.get('/perfilContratante.html',administracion.perfil);
 //docencia
 app.get('/ofertaYdemanda.html',docencia.ofertaYdemanda);
 app.get('/claustro.html',docencia.claustro);
-app.get('/estudiantes.html',docencia.alumnos);
+app.get('/estudiantes.html',docencia.estudiantes);
 
 //Gestion e investigación
 app.get('/mision.html',gei.mision);

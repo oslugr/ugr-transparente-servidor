@@ -44,14 +44,14 @@ exports.claustro = function(req, res){
   });
 };
 
-// Gestión de la pagina de alumnos
-exports.alumnos = function(req, res){
-  var alumnos = conf.alumnos;
+// Gestión de la pagina de estudiantes
+exports.estudiantes = function(req, res){
+  var estudiantes = conf.estudiantes;
 
-  res.render(alumnos.plantilla, {
+  res.render(estudiantes.plantilla, {
     servidor: conf.config.servidor,
-    seccion: alumnos.nombre,
-    contenido: alumnos.contenido,
-    datos: alumnos.datos
+    seccion: estudiantes.nombre,
+    contenido: estudiantes.contenido,
+    datos: estudiantes.datos
   });
 };

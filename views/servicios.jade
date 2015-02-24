@@ -1,6 +1,7 @@
 //
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
+	2015  German Martinez Maldonado
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -15,15 +16,16 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 extends layout
+
+//block scripts
 
 block content
 	#rastro-idiomas
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/infoEconomica.html") Administración / #{seccion}
+					a(class="first", href="/servicios.html") Administración / #{seccion}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
@@ -36,9 +38,9 @@ block content
 			- var submenu1_display = ""
 			- var submenu2_display = "display:none;"
 			- var submenu3_display = "display:none;"
-			- var item1_selected = "tipo1"
+			- var item1_selected = "tipo1-selected"
 			- var item2_selected = "tipo1"
-			- var item3_selected = "tipo1-selected"
+			- var item3_selected = "tipo1"
 			- var item4_selected = "tipo1"
 
 			- var item5_selected = "tipo1"
@@ -56,13 +58,14 @@ block content
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
+
 					ul.enlaces
 						li.level1
-							- for (var i = 0; i < tam; i++)
+							- for (var i = 0; i < contenido.length; i++)
 								.li
 									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
 
-					- for (var j = 0; j < tam; j++)
+					- for (var j = 0; j < contenido.length; j++)
 						h1
 							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
 
@@ -77,18 +80,16 @@ block content
 									th.centeralign Ver
 									th.centeralign Archivo
 
-								- for (var k = 0; k < datos[j].length; k++)
-									tr
-										td(class="centeralign par") #{datos[j][k].nombre}
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
-												img(class="link",src="imagenes/link.png", alt="link")
-										if datos[j][k].nombre=="Carta de servicios" || datos[j][k].nombre=="Modificación ténica puntual de la Relación de Puestos de Trabajo" || datos[j][k].nombre=="Adecuación técnica de la relación de puestos de trabajo" || datos[j][k].nombre=="Relación de puestos de trabajo: PAS"
+								- for (var k = 0; k < datos.length; k++)
+									- if (datos[k].dataset.localeCompare(contenido[j].encabezado) == 0)
+										tr
+											td(class="centeralign par") #{datos[k].nombre}
+											td(class="centeralign impar")
+												a(href="#{servidor}dataset/#{datos[0].id_dataset}/resource/#{datos[k].url}",target="_blank")
+													img(class="link",src="imagenes/link.png", alt="link")
 											td(class="centeralign par")
-										else
-											td(class="centeralign par")
-												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
+												a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
 													img(class="view",src="imagenes/view.png", alt="view")
-										td(class="centeralign impar")
-											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
-												img(class="save",src="imagenes/save.png", alt="save")
+											td(class="centeralign impar")
+												a(href="#{servidor}dataset/#{datos[k].descarga}")
+													img(class="save",src="imagenes/save.png", alt="save")

@@ -24,6 +24,7 @@ module.exports.config = config;
 // Archivos de configuración de cada unas de las páginas
 module.exports.personal = cargarConfig("./config/personal.json");
 module.exports.infoEco = cargarConfig("./config/infoEco.json");
+module.exports.servicios = cargarConfig("./config/servicios.json");
 
 // all environments
 app.set('port', process.env.PORT || 3000);

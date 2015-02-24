@@ -1,0 +1,277 @@
+{
+  "plantilla":"ofertaYdemanda",
+  "nombre":"Oferta y Demanda Académica",
+  "contenido":[
+    {
+      "encabezado":"Titulaciones 2013/2014",
+      "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
+    },
+    {
+      "encabezado":"Titulaciones 2014/2015",
+      "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2014/2015: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
+    },
+    {
+      "encabezado":"Evolución de la Oferta Académica",
+      "texto":"Evolución de la oferta de títulos reglados y propios de la Universidad de Granada desde el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por: año de inicio, tipo de titulación, nombre de titulación, rama de conocimiento, centro y campus."
+    },
+    {
+      "encabezado":"Demanda Académica 2012/2013",
+      "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2012/2013."
+    },
+    {
+      "encabezado":"Demanda Académica 2013/2014",
+      "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2013/2014."
+    },
+    {
+      "encabezado":"Evolución de la Demanda Académica",
+      "texto":"Evolución relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada desde el curso 2012/2013."
+    }
+  ],
+  "datos":[
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de grado: titulaciones oficiales",
+      "url":"06cb5b3b-52bc-4596-9829-d237c3d65c6f",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/06cb5b3b-52bc-4596-9829-d237c3d65c6f/download/ofertadegradotitulaciones.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: másteres oficiales",
+      "url":"5e74f0e7-1a24-4430-980c-d09ccf4c5bb8",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/5e74f0e7-1a24-4430-980c-d09ccf4c5bb8/download/ofertademaster.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: formación del profesorado",
+      "url":"e544794c-0763-4447-9d3c-17effb2726c0",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/e544794c-0763-4447-9d3c-17effb2726c0/download/ofertaformaciondelprofesorado.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: másteres propios",
+      "url":"3a22d22f-51b2-4df0-a942-7d833fa1c189",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/3a22d22f-51b2-4df0-a942-7d833fa1c189/download/ofertadeposgradomasterespropios.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: cursos complementarios",
+      "url":"ce27df1d-dd25-4efb-91c9-0f1694d0bdd4",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/ce27df1d-dd25-4efb-91c9-0f1694d0bdd4/download/ofertadeposgradocursoscomplementarios.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: expertos",
+      "url":"5f3b6924-c272-4873-9f85-771b4e57dfd0",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/5f3b6924-c272-4873-9f85-771b4e57dfd0/download/ofertadeposgradoexpertos.csv"
+    },
+    {
+      "dataset":"Titulaciones 2013/2014",
+      "id_dataset":"titulaciones",
+      "nombre":"Oferta de posgrado: doctorado",
+      "url":"89679542-aa3b-42b0-92a5-0175513dda8f",
+      "descarga":"3b593312-a76a-4c68-a2d5-271591dde6d9/resource/89679542-aa3b-42b0-92a5-0175513dda8f/download/ofertadedoctorado.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de grado: titulaciones oficiales",
+      "url":"8f913bd2-092d-4916-b732-f2a336bd29db",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/8f913bd2-092d-4916-b732-f2a336bd29db/download/ofertadegradotitulaciones.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: másteres oficiales",
+      "url":"f3524e52-99e8-4214-a06b-0c19dc065e29",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/f3524e52-99e8-4214-a06b-0c19dc065e29/download/ofertademaster.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: formación del profesorado",
+      "url":"37132b47-951d-440d-a345-c3155a7bbf81",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/37132b47-951d-440d-a345-c3155a7bbf81/download/ofertaformaciondelprofesorado.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: másteres propios",
+      "url":"5833cc32-324f-4354-b3d2-1c0cc472ba0e",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/5833cc32-324f-4354-b3d2-1c0cc472ba0e/download/ofertadeposgradomasterespropios.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: cursos complementarios",
+      "url":"7549e5d8-b30a-4fbb-806b-0bb860b0fdab",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/7549e5d8-b30a-4fbb-806b-0bb860b0fdab/download/ofertadeposgradocursoscomplementarios.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: expertos",
+      "url":"a9ffee15-7590-4407-87f2-e622f5adb667",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/a9ffee15-7590-4407-87f2-e622f5adb667/download/ofertadeposgradoexpertos.csv"
+    },
+    {
+      "dataset":"Titulaciones 2014/2015",
+      "id_dataset":"titulaciones-14-15",
+      "nombre":"Oferta de posgrado: doctorado",
+      "url":"4feb3c28-36c1-4a22-b76b-2a48be46ace6",
+      "descarga":"a62192e7-fdd9-4c8b-a1c2-185bd712497e/resource/4feb3c28-36c1-4a22-b76b-2a48be46ace6/download/ofertadedoctorado.csv"
+    },
+    {
+      "dataset":"Evolución de la Oferta Académica",
+      "id_dataset":"evolucion-oferta-academica",
+      "nombre":"Evolución de la oferta académica",
+      "url":"7949b2be-cb68-49d6-810b-9c7658652041",
+      "descarga":"c341d9aa-2c03-4528-a99c-00eb69d28fb6/resource/7949b2be-cb68-49d6-810b-9c7658652041/download/evolucionofertaacad.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2012/2013",
+      "id_dataset":"demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria extraordinaria de septiembre",
+      "url":"9c2c1a19-dfc4-4bdc-8dc6-8e3bacc594bd",
+      "descarga":"fc43d5d9-7c70-495c-a6d6-312c05ed10c9/resource/9c2c1a19-dfc4-4bdc-8dc6-8e3bacc594bd/download/estadisticadelapruebadeaccesoparalosestudiosuniversitariosdegrado.convocatoriaordinaria"
+    },
+    {
+      "dataset":"Demanda Académica 2012/2013",
+      "id_dataset":"demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria ordinaria de junio",
+      "url":"e2b6442f-733a-4865-b665-a8e4853a1203",
+      "descarga":"fc43d5d9-7c70-495c-a6d6-312c05ed10c9/resource/e2b6442f-733a-4865-b665-a8e4853a1203/download/estadisticadelapruebadeaccesoparalosestudiosuniversitariosdegrado.convocatoriaordinaria"
+    },
+    {
+      "dataset":"Demanda Académica 2012/2013",
+      "id_dataset":"demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 25 años",
+      "url":"294ee60a-1191-4b19-bc3d-b6ebfb7c4cf2",
+      "descarga":"fc43d5d9-7c70-495c-a6d6-312c05ed10c9/resource/294ee60a-1191-4b19-bc3d-b6ebfb7c4cf2/download/estadisticadelapruebadeaccesoparamayoresde25anos.curso20122013.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2012/2013",
+      "id_dataset":"demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 45 años",
+      "url":"5be658e6-f3a9-4d37-8a24-d53eae0aae89",
+      "descarga":"fc43d5d9-7c70-495c-a6d6-312c05ed10c9/resource/5be658e6-f3a9-4d37-8a24-d53eae0aae89/download/45anos.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2012/2013",
+      "id_dataset":"demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 40 años",
+      "url":"329117a4-1c70-4850-b71e-d7b87dbc4fea",
+      "descarga":"fc43d5d9-7c70-495c-a6d6-312c05ed10c9/resource/329117a4-1c70-4850-b71e-d7b87dbc4fea/download/40anos.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2013/2014",
+      "id_dataset":"demanda-academica-14",
+      "nombre":"Prueba de acceso: convocatoria extraordinaria de septiembre",
+      "url":"a4190851-f700-4269-a229-370f4a30508f",
+      "descarga":"002a1a83-7028-4504-ba82-18fe09418f20/resource/a4190851-f700-4269-a229-370f4a30508f/download/pruebadeaccesoconvocatoriaextraordinariadeseptiembre.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2013/2014",
+      "id_dataset":"demanda-academica-14",
+      "nombre":"Prueba de acceso: convocatoria ordinaria de junio",
+      "url":"39ed2a5f-55fe-4e87-aaf9-272cd2982080",
+      "descarga":"002a1a83-7028-4504-ba82-18fe09418f20/resource/39ed2a5f-55fe-4e87-aaf9-272cd2982080/download/pruebadeaccesoconvocatoriadejunio.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2013/2014",
+      "id_dataset":"demanda-academica-14",
+      "nombre":"Prueba de acceso: mayores de 25 años",
+      "url":"b1a91530-e89f-4a59-a9a0-5cabb452abc2",
+      "descarga":"002a1a83-7028-4504-ba82-18fe09418f20/resource/b1a91530-e89f-4a59-a9a0-5cabb452abc2/download/pruebadeaccesomayoresde25.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2013/2014",
+      "id_dataset":"demanda-academica-14",
+      "nombre":"Prueba de acceso: mayores de 40 años",
+      "url":"8cf87942-cc1a-47dd-940e-d9aaa3f5ab93",
+      "descarga":"002a1a83-7028-4504-ba82-18fe09418f20/resource/8cf87942-cc1a-47dd-940e-d9aaa3f5ab93/download/pruebadeaccesomayoresde40.csv"
+    },
+    {
+      "dataset":"Demanda Académica 2013/2014",
+      "id_dataset":"demanda-academica-14",
+      "nombre":"Prueba de acceso: mayores de 45 años",
+      "url":"da01ea25-42d9-4027-a1be-145f581f3b1b",
+      "descarga":"002a1a83-7028-4504-ba82-18fe09418f20/resource/da01ea25-42d9-4027-a1be-145f581f3b1b/download/pruebadeaccesomayoresde45.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria extraordinaria de septiembre (2013/2014)",
+      "url":"88c7eb60-d29a-4833-95da-8338ea64d1b2",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/88c7eb60-d29a-4833-95da-8338ea64d1b2/download/pruebadeaccesoconvocatoriaextraordinariadeseptiembre.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria ordinaria de junio (2013/2014)",
+      "url":"db0535c8-2876-4634-8c2c-59009b86c33f",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/db0535c8-2876-4634-8c2c-59009b86c33f/download/pruebadeaccesoconvocatoriaordinariadejunio.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 25 años (2013/2014)",
+      "url":"eb4258ed-64ce-41b4-b324-2e15802108f7",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/eb4258ed-64ce-41b4-b324-2e15802108f7/download/pruebadeaccesomayoresde25.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 40 años (2013/2014)",
+      "url":"7dd7c550-98be-4bf7-859f-659666a530d9",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/7dd7c550-98be-4bf7-859f-659666a530d9/download/pruebadeaccesomayoresde40.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 45 años (2013/2014)",
+      "url":"ec84497d-6831-4bef-999d-9afcb0b2049d",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/ec84497d-6831-4bef-999d-9afcb0b2049d/download/pruebadeaccesomayoresde45.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria extraordinaria de septiembre (2012/2013)",
+      "url":"d08cea38-e441-452f-94f1-447422d54d62",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/d08cea38-e441-452f-94f1-447422d54d62/download/convocatoriaextraordinariadeseptiembre2012.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: convocatoria ordinaria de junio (2012/2013)",
+      "url":"9d9540a3-7395-4afe-9f4c-71b61ea04fac",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/9d9540a3-7395-4afe-9f4c-71b61ea04fac/download/pruebadeaccesoconvocatoriaordinariadejunio.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 25 años (2012/2013)",
+      "url":"715bed93-a6d8-4d97-9162-02c8457eaa03",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/715bed93-a6d8-4d97-9162-02c8457eaa03/download/mayores25.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 40 años (2012/2013)",
+      "url":"64b86efd-ae87-4180-b239-8b7c52268d6a",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/64b86efd-ae87-4180-b239-8b7c52268d6a/download/mayores40.csv"
+    },
+    {
+      "dataset":"Evolución de la Demanda Académica",
+      "id_dataset":"evolucion-demanda-academica",
+      "nombre":"Prueba de acceso: mayores de 45 años (2012/2013)",
+      "url":"a4c13239-7d30-415c-8b69-001293943abc",
+      "descarga":"7f5a6a24-d1ab-42dc-a497-b429413760c6/resource/a4c13239-7d30-415c-8b69-001293943abc/download/mayores45.csv"
+    }
+  ]
+}

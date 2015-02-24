@@ -1,141 +1,57 @@
 /*
-  Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
-  Copyright (C) 2014  Jaime Torres Benavente
+Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
+Copyright (C) 2014  Jaime Torres Benavente
+2015  German Martinez Maldonado
 
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 //Variable para las configuraciones
 var conf = require('../app');
 
-//Variable para la base de datos mongodb
-var MongoClient = require('mongodb').MongoClient;
-
-//Variable para almacenar los datos
-var datos= new Array();
-var datos2= new Array();
-var datos3= new Array();
-
-
-var servidor= new Array();
-var servidor2= new Array();
-var servidor3= new Array();
-
-
-function conectarBD(plantilla,colec,categoria,dataset,v){
-    MongoClient.connect(conf.config.BD, function(err,db){
-          if(err) throw err;
-
-          var coleccion = db.collection(colec);
-
-          if(plantilla==conf.config.ofertaYdemanda.plantilla){
-            datos[v]=new Array();
-            servidor[v]= new Array();
-          }else if(plantilla==conf.config.claustro.plantilla){
-            datos2[v]=new Array();
-            servidor2[v]= new Array();
-          }else{
-            datos3[v]=new Array();
-            servidor3[v]= new Array();
-          }
-
-          var cursor = coleccion.find( { categoria: categoria } )
-          cursor.each(function(err, item) {
-                  if(item != null && item.dataset==dataset){
-                    if(plantilla==conf.config.ofertaYdemanda.plantilla)
-                      datos[v].push(item);
-                    else if(plantilla==conf.config.claustro.plantilla)
-                      datos2[v].push(item);
-                    else
-                      datos3[v].push(item);
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
-                  }
-          });
-
-          var coleccion2 = db.collection(conf.config.datasets);
-          
-          var cursor2 = coleccion2.find()
-          cursor2.each(function(err, item) {
-                  if(item != null){
-                    if(item.dataset==dataset){
-                      if(plantilla==conf.config.ofertaYdemanda.plantilla)
-                        servidor[v].push(item);
-                      else if(plantilla==conf.config.claustro.plantilla)
-                        servidor2[v].push(item);
-                      else
-                        servidor3[v].push(item);
-                    }
-                  // Si no existen mas item que mostrar, cerramos la conexión con con Mongo y obtenemos los datos 
-                  }else{
-                    db.close();
-                  }
-          });
-
-    });
-}
-
 // Gestión de la pagina de oferta y demanda academica
-
 exports.ofertaYdemanda = function(req, res){
-  var ofyde=conf.config.ofertaYdemanda;
-  for (var i =0;i<(ofyde.dataset).length; i++) {
-    conectarBD(ofyde.plantilla,ofyde.coleccion,ofyde.categoria,ofyde.dataset[i],i);
-  }
+  var ofertaYdemanda = conf.ofertaYdemanda;
 
-  res.render(ofyde.plantilla, { 
-    seccion: ofyde.nombre ,
-    datos: datos,
-    servidores: servidor,
-    tam: (ofyde.dataset).length,
-    contenido: ofyde.contenido
+  res.render(ofertaYdemanda.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: ofertaYdemanda.nombre,
+    contenido: ofertaYdemanda.contenido,
+    datos: ofertaYdemanda.datos
   });
 };
 
-
-
 // Gestión de la pagina de claustro
-
 exports.claustro = function(req, res){
-  var claustro=conf.config.claustro;
-  for (var i =0;i<(claustro.dataset).length; i++) {
-    conectarBD(claustro.plantilla,claustro.coleccion,claustro.categoria,claustro.dataset[i],i);
-  }
+  var claustro = conf.claustro;
 
-  res.render(claustro.plantilla, { 
-    seccion: claustro.nombre ,
-    datos: datos2,
-    servidores: servidor2,
-    tam: (claustro.dataset).length,
-    contenido: claustro.contenido
+  res.render(claustro.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: claustro.nombre,
+    contenido: claustro.contenido,
+    datos: claustro.datos
   });
 };
 
 // Gestión de la pagina de alumnos
-
 exports.alumnos = function(req, res){
-  var alumnos=conf.config.alumnos;
-  for (var i =0;i<(alumnos.dataset).length; i++) {
-    conectarBD(alumnos.plantilla,alumnos.coleccion,alumnos.categoria,alumnos.dataset[i],i);
-  }
+  var alumnos = conf.alumnos;
 
-  res.render(alumnos.plantilla, { 
-    seccion: alumnos.nombre ,
-    datos: datos3,
-    servidores: servidor3,
-    tam: (alumnos.dataset).length,
-    contenido: alumnos.contenido
+  res.render(alumnos.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: alumnos.nombre,
+    contenido: alumnos.contenido,
+    datos: alumnos.datos
   });
 };
-
-

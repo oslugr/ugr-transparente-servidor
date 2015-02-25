@@ -31,6 +31,7 @@ module.exports.mision = cargarConfig("./config/mision.json");
 module.exports.planEstrategico = cargarConfig("./config/planEstrategico.json");
 module.exports.gobierno = cargarConfig("./config/gobierno.json");
 module.exports.estadisticas = cargarConfig("./config/estadisticas.json");
+module.exports.normativaLegal = cargarConfig("./config/normativaLegal.json");
 
 // All environments
 app.set('port', process.env.PORT || 3000);

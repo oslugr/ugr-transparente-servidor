@@ -1,0 +1,19 @@
+{
+  "plantilla":"mision",
+  "nombre":"Mision",
+  "contenido":[
+    {
+      "encabezado":"Misión de la Universidad",
+      "texto":"La misión es un elemento importante de la planificación estratégica de las universidades, que consiste en una declaración escrita que expresa el propósito o la razón de ser de la organización."
+    }
+  ],
+  "datos":[
+    {
+      "dataset":"Misión de la Universidad",
+      "id_dataset":"mision",
+      "nombre":"Misión de la Universidad",
+      "url":"b74d8d03-cca8-43ee-9eaf-e6b21ca2530e",
+      "descarga":"fe92f74f-462c-40c3-8be8-93f1e88e65fc/resource/b74d8d03-cca8-43ee-9eaf-e6b21ca2530e/download/mision.csv"
+    }
+  ]
+}

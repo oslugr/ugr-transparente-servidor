@@ -203,56 +203,56 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Complemento de productividad: PAS",
       "url":"ac0aae3c-7459-4b04-b110-c23aeed5b155",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ac0aae3c-7459-4b04-b110-c23aeed5b155/download/complementodeproductividad2014pas4tramos.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Complemento por Doctorado: profesores asociados",
       "url":"7e5c4b2b-23e1-47a4-aa00-39f93ace75d2",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/7e5c4b2b-23e1-47a4-aa00-39f93ace75d2/download/complementopordoctoradoprofesoresasociados.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Retribuciones: docentes contratados LOU",
       "url":"7d84ca24-2c1d-4799-aa5e-445a5ab4c343",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/7d84ca24-2c1d-4799-aa5e-445a5ab4c343/download/retribucionesdocentescontratadoslouformatodoc.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Retribuciones: funcionarios docentes",
       "url":"9860da72-1c4b-4647-b54a-465d4ffd53ec",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/9860da72-1c4b-4647-b54a-465d4ffd53ec/download/retribucionesfuncionariosdocentes.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Retribuciones: personal de administración y servicios (funcionarios)",
       "url":"ed992204-b8b2-4e67-86eb-2f5309d2f2fd",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ed992204-b8b2-4e67-86eb-2f5309d2f2fd/download/retribucionespersonaldeadministracionyserviciosfuncionarios.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Retribuciones: personal de administración y servicios (laboral)",
       "url":"ed155a33-d5e6-44d6-a611-2348e74ff4e8",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ed155a33-d5e6-44d6-a611-2348e74ff4e8/download/retribucionespersonaldeadministracionyservicioslaborales.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Retribuciones: personal docente con plaza vinculada",
       "url":"21e77e24-d7d7-4aae-bc3f-529a571feadc",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/21e77e24-d7d7-4aae-bc3f-529a571feadc/download/retribucionespersonaldocenteconplazavinculada.csv"
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"banda-salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
       "url":"2805349c-9c13-4915-b8b6-4921726cecf4",
       "descarga":"4b346884-e16a-4c8e-9079-aae7fec606cb/resource/2805349c-9c13-4915-b8b6-4921726cecf4/download/tramosdocenteseinvestigadorescargosacademicosyindemnizacionporresidencia.csv"

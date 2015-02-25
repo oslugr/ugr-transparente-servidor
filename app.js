@@ -28,6 +28,9 @@ module.exports.ofertaDemanda = cargarConfig("./config/ofertaDemanda.json");
 module.exports.claustro = cargarConfig("./config/claustro.json");
 module.exports.estudiantes = cargarConfig("./config/estudiantes.json");
 module.exports.mision = cargarConfig("./config/mision.json");
+module.exports.planEstrategico = cargarConfig("./config/planEstrategico.json");
+module.exports.gobierno = cargarConfig("./config/gobierno.json");
+module.exports.estadisticas = cargarConfig("./config/estadisticas.json");
 
 // All environments
 app.set('port', process.env.PORT || 3000);

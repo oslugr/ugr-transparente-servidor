@@ -27,6 +27,7 @@ module.exports.servicios = cargarConfig("./config/servicios.json");
 module.exports.ofertaDemanda = cargarConfig("./config/ofertaDemanda.json");
 module.exports.claustro = cargarConfig("./config/claustro.json");
 module.exports.estudiantes = cargarConfig("./config/estudiantes.json");
+module.exports.mision = cargarConfig("./config/mision.json");
 
 // All environments
 app.set('port', process.env.PORT || 3000);

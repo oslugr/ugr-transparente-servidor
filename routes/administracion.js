@@ -33,14 +33,14 @@ exports.personal = function(req, res){
 };
 
 // Gestión de la pagina de informacion economica
-exports.infoEco = function(req, res){
-  var infoEco = conf.infoEco;
+exports.infoEconomica = function(req, res){
+  var infoEconomica = conf.infoEconomica;
 
-  res.render(infoEco.plantilla, {
+  res.render(infoEconomica.plantilla, {
     servidor: conf.config.servidor,
-    seccion: infoEco.nombre,
-    contenido: infoEco.contenido,
-    datos: infoEco.datos,
+    seccion: infoEconomica.nombre,
+    contenido: infoEconomica.contenido,
+    datos: infoEconomica.datos,
   });
 };
 

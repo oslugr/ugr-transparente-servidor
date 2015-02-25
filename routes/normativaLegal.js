@@ -1,7 +1,6 @@
-
 /*
   Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
-  Copyright (C) 2014  Mario Heredia Moreno
+  Copyright (C) 2014  Jaime Torres Benavente
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -20,11 +19,14 @@
 //Variable para las configuraciones
 var conf = require('../app');
 
-// Gestión de la pagina de la solicitudes
+// Gestión de la pagina de normativas
+exports.normativaLegal = function(req, res){
+  var normativa = conf.normativa;
 
-exports.solicitudes = function(req, res){
-
-  res.render('testdesolicitudes', {
-    titulo: 'Solicitud de Información'
+  res.render(normativa.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: normativa.nombre,
+    contenido: normativa.contenido,
+    datos: normativa.datos,
   });
 };

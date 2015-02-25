@@ -23,19 +23,19 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/normativalegal.html") #{seccion}
+					a(class="first", href="/estadisticas.html") Gestión e Investigación / #{seccion}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
 			- var mode2 = "tipo2 item-first_level"
 			- var mode3 = "tipo2 item-first_level"
 			- var mode4 = "tipo2 item-first_level"
-			- var mode5 = "tipo2 item-first_level"
-			- var mode6 = "selected tipo2-selected item-first_level"
+			- var mode5 = "selected tipo2-selected item-first_level"
+			- var mode6 = "tipo2 item-first_level"
 			- var mode7 = "tipo2 item-first_level"
 			- var submenu1_display = "display:none;"
 			- var submenu2_display = "display:none;"
-			- var submenu3_display = "display:none;"
+			- var submenu3_display = ""
 			- var item1_selected = "tipo1"
 			- var item2_selected = "tipo1"
 			- var item3_selected = "tipo1"
@@ -48,8 +48,8 @@ block content
 			- var item8_selected = "tipo1"
 			- var item9_selected = "tipo1"
 			- var item10_selected = "tipo1"
-			- var item11_selected = "tipo1"
-			include ./plantilla_menus.jade
+			- var item11_selected = "tipo1-selected"
+			include ./plantillaMenus.jade
 		#pagina
 			h1#titulo_pagina
 				span.texto_titulo #{seccion}
@@ -79,20 +79,21 @@ block content
 
 								- for (var k = 0; k < datos[j].length; k++)
 									tr
+
 										td(class="centeralign par") #{datos[j][k].nombre}
 										td(class="centeralign impar")
 											a(href="#{servidores[j][0].servidor}#{servidores[j][0].url}#{datos[j][k].url}",target="_blank")
 												img(class="link",src="imagenes/link.png", alt="link")
-										if datos[j][k].nombre=="Convenio colectivo" || datos[j][k].nombre=="Ley Orgánica de Universidades" || datos[j][k].nombre=="Reglamento de la Delegación General de Estudiantes"
+
+										//Memoria de investigación es PDF, no se visualiza
+										if datos[j][k].nombre=="Memoria de investigación 2013/2014"
 											td(class="centeralign par")
-										else if datos[j][k].nombre=="Boletín Oficial del Estado: Ley de Transparencia"
-											td(class="centeralign par")
-										else if datos[j][k].nombre=="Boletín Oficial de la Junta de Andalucía: Ley de Transparencia"
-											td(class="centeralign par")
+
 										else
 											td(class="centeralign par")
 												a(href="#dialog" class="view" rel="#{servidores[j][0].servidor}#{datos[j][k].descarga}" name="#{datos[j][k].nombre}")
 													img(class="view",src="imagenes/view.png", alt="view")
+
 										td(class="centeralign impar")
 											a(href="#{servidores[j][0].servidor}#{datos[j][k].descarga}")
 												img(class="save",src="imagenes/save.png", alt="save")

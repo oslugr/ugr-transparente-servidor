@@ -21,14 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 var conf = require('../app');
 
 // Gestión de la pagina de oferta y demanda academica
-exports.ofertaYdemanda = function(req, res){
-  var ofertaYdemanda = conf.ofertaYdemanda;
+exports.ofertaDemanda = function(req, res){
+  var ofertaDemanda = conf.ofertaDemanda;
 
-  res.render(ofertaYdemanda.plantilla, {
+  res.render(ofertaDemanda.plantilla, {
     servidor: conf.config.servidor,
-    seccion: ofertaYdemanda.nombre,
-    contenido: ofertaYdemanda.contenido,
-    datos: ofertaYdemanda.datos
+    seccion: ofertaDemanda.nombre,
+    contenido: ofertaDemanda.contenido,
+    datos: ofertaDemanda.datos
   });
 };
 

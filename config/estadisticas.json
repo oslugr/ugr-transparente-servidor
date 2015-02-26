@@ -27,6 +27,14 @@
     {
       "dataset":"Investigación",
       "id_dataset":"investigacion",
+      "nombre":"Memoria de investigación 2013/2014",
+      "vista":0,
+      "url":"2a2e817b-8e31-4c8c-9ec3-2db50d7b2624",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/2a2e817b-8e31-4c8c-9ec3-2db50d7b2624/download/memoria201320142.0actualizacion.pdf"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
       "nombre":"Cifras en investigación: datos generales",
       "vista":1,
       "url":"dfd33860-5a95-4cce-9800-3ab8524f4d29",
@@ -35,10 +43,10 @@
     {
       "dataset":"Investigación",
       "id_dataset":"investigacion",
-      "nombre":"Top 10: categorías según producción (Web of Science)",
+      "nombre":"Estadísticas básicas (2005 - 2010)",
       "vista":1,
-      "url":"a16099ad-210b-4857-8868-6be2636f9b35",
-      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/a16099ad-210b-4857-8868-6be2636f9b35/download/top10categoriassegunproduccion.csv"
+      "url":"db998529-5cc7-4d9a-8c91-75f568194190",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/db998529-5cc7-4d9a-8c91-75f568194190/download/estadisticasbasicastodas.csv"
     },
     {
       "dataset":"Investigación",
@@ -51,14 +59,6 @@
     {
       "dataset":"Investigación",
       "id_dataset":"investigacion",
-      "nombre":"Publicaciones Web of Science: producción y visibilidad científica",
-      "vista":1,
-      "url":"5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3",
-      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3/download/indicadoresdeproduccionyvisibilidadcientifica.csv"
-    },
-    {
-      "dataset":"Investigación",
-      "id_dataset":"investigacion",
       "nombre":"Evolución: Proyectos Plan Nacional, FPU, FPI, RyC",
       "vista":1,
       "url":"34c76d8d-cd23-4358-897f-09689f2fa8a4",
@@ -67,10 +67,82 @@
     {
       "dataset":"Investigación",
       "id_dataset":"investigacion",
-      "nombre":"Memoria de investigación 2013/2014",
-      "vista":0,
-      "url":"2a2e817b-8e31-4c8c-9ec3-2db50d7b2624",
-      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/2a2e817b-8e31-4c8c-9ec3-2db50d7b2624/download/memoria201320142.0actualizacion.pdf"
+      "nombre":"Top 10: categorías según producción (Web of Science)",
+      "vista":1,
+      "url":"a16099ad-210b-4857-8868-6be2636f9b35",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/a16099ad-210b-4857-8868-6be2636f9b35/download/top10categoriassegunproduccion.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Publicaciones Web of Science: producción y visibilidad científica",
+      "vista":1,
+      "url":"5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3/download/indicadoresdeproduccionyvisibilidadcientifica.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Indicadores por categoría Web of Science de la UGR (2009-2013)",
+      "vista":1,
+      "url":"3db153bb-3fa7-409e-b216-dec7e890dca4",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/3db153bb-3fa7-409e-b216-dec7e890dca4/download/indicadoreswebsciencieugr.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"PAIDI: investigadores UGR",
+      "vista":1,
+      "url":"61840439-2f90-4f13-ba3d-699d169db110",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/61840439-2f90-4f13-ba3d-699d169db110/download/investigadoresgruposugrpaidi.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"PAIDI: indicadores básicos (2004-2014)",
+      "vista":1,
+      "url":"22a6d81b-935c-4595-9864-eb987e525aa6",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/22a6d81b-935c-4595-9864-eb987e525aa6/download/indicadoresgrupospaidiugr.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"PAIDI: Grupos de Investigación UGR",
+      "vista":1,
+      "url":"e63845da-0f5d-424e-90db-27b090f37cf6",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/e63845da-0f5d-424e-90db-27b090f37cf6/download/listadodegruposdeinvestigacionugrpertenecientesalpaidi.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Proyectos UGR VII Programa Marco de la Unión Europea",
+      "vista":1,
+      "url":"5bb589d7-9921-4610-b57a-e0cebe0fc041",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/5bb589d7-9921-4610-b57a-e0cebe0fc041/download/participacionugrenviipmeu.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Indicadores bibliométricos: Computer Science, Physics y Matemathics (2009-2013)",
+      "vista":1,
+      "url":"aed5b355-2d50-4be4-814b-b4fabc6b3f30",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/aed5b355-2d50-4be4-814b-b4fabc6b3f30/download/indicadoresbibliometricosuniversidadesespanolas.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Proyectos obtenidos: Programa Estatal 2013",
+      "vista":1,
+      "url":"a39b500a-67fd-4bbd-9ce4-a5731154964c",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/a39b500a-67fd-4bbd-9ce4-a5731154964c/download/listadoproyectosconjunta13.csv"
+    },
+    {
+      "dataset":"Investigación",
+      "id_dataset":"investigacion",
+      "nombre":"Listados de tesis doctorales (2011 - 2013)",
+      "vista":1,
+      "url":"2be5a14d-1cac-4ca8-8f16-edc092349a73",
+      "descarga":"e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/2be5a14d-1cac-4ca8-8f16-edc092349a73/download/tesisdefendidas1113.csv"
     },
     {
       "dataset":"Académico",

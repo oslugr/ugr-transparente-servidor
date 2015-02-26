@@ -39,18 +39,18 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Antigüedad en años por colectivo: PAS",
+      "nombre":"Análisis total plantilla: género",
       "vista":1,
-      "url":"83aeb2be-a3bc-40da-885e-19bf0cbb8ab0",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/83aeb2be-a3bc-40da-885e-19bf0cbb8ab0/download/antiguedadenanosporcolectivopassituaciona10122013.csv"
+      "url":"d17eaaf2-e21e-4c4a-827a-a4e4aed85834",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/d17eaaf2-e21e-4c4a-827a-a4e4aed85834/download/analisisdelpdifuncionarioporgenerodelaplantilladelaugra10122013.csv"
     },
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Antigüedad en años por colectivo: PAS Y PDI",
+      "nombre":"Antigüedad en años por colectivo: PAS",
       "vista":1,
-      "url":"07a2611d-1a0d-4eff-90f8-23efc682c2c0",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/07a2611d-1a0d-4eff-90f8-23efc682c2c0/download/antiguedadenanosporcolectivopasypdisituaciona10122013.csv"
+      "url":"83aeb2be-a3bc-40da-885e-19bf0cbb8ab0",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/83aeb2be-a3bc-40da-885e-19bf0cbb8ab0/download/antiguedadenanosporcolectivopassituaciona10122013.csv"
     },
     {
       "dataset":"Información Salarial",
@@ -63,6 +63,14 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
+      "nombre":"Antigüedad en años por colectivo: PAS Y PDI",
+      "vista":1,
+      "url":"07a2611d-1a0d-4eff-90f8-23efc682c2c0",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/07a2611d-1a0d-4eff-90f8-23efc682c2c0/download/antiguedadenanosporcolectivopasypdisituaciona10122013.csv"
+    },
+    {
+      "dataset":"Información Salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Antigüedad en años por sectores: PAS",
       "vista":1,
       "url":"089ae78d-299b-43e8-8283-99d74d1bdccc",
@@ -71,18 +79,18 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Antigüedad en años por sectores: PAS y PDI",
-      "vista":1,
-      "url":"3b45da8c-84bf-4e5c-8124-dbac9b1589af",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/3b45da8c-84bf-4e5c-8124-dbac9b1589af/download/antiguedadenanosporsectorespasypdisituaciona10122013.csv"
-    },
-    {
-      "dataset":"Información Salarial",
-      "id_dataset":"informacion-salarial",
       "nombre":"Antigüedad en años por sectores: PDI",
       "vista":1,
       "url":"9fad40be-6c92-409f-bae7-216175e94b03",
       "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9fad40be-6c92-409f-bae7-216175e94b03/download/antiguedadenanosporsectorespdisituaciona10122013.csv"
+    },
+    {
+      "dataset":"Información Salarial",
+      "id_dataset":"informacion-salarial",
+      "nombre":"Antigüedad en años por sectores: PAS y PDI",
+      "vista":1,
+      "url":"3b45da8c-84bf-4e5c-8124-dbac9b1589af",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/3b45da8c-84bf-4e5c-8124-dbac9b1589af/download/antiguedadenanosporsectorespasypdisituaciona10122013.csv"
     },
     {
       "dataset":"Información Salarial",
@@ -127,18 +135,10 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Incorporaciones por sectores: PAS",
+      "nombre":"Incorporaciones por colectivo: PDI",
       "vista":1,
-      "url":"8bc8f453-89ee-42ee-ad7f-e1fa5b95e076",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/8bc8f453-89ee-42ee-ad7f-e1fa5b95e076/download/incorporacionespasporsectoresultimos10anos.csv"
-    },
-    {
-      "dataset":"Información Salarial",
-      "id_dataset":"informacion-salarial",
-      "nombre":"Incorporaciones sobre plantilla total: PAS",
-      "vista":1,
-      "url":"5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563/download/incorporacionespassobretotalplantillaultimos10anos.csv"
+      "url":"51f3a277-165e-4bde-a0c3-8d5852838399",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/51f3a277-165e-4bde-a0c3-8d5852838399/download/incorporacionespdiporcolectivoultimos10anos.csv"
     },
     {
       "dataset":"Información Salarial",
@@ -151,26 +151,18 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Incorporaciones por sectores: PAS y PDI",
+      "nombre":"Incorporaciones por género: PAS y PDI",
       "vista":1,
-      "url":"9113eeff-5641-4dd1-91e0-a2be0491930a",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9113eeff-5641-4dd1-91e0-a2be0491930a/download/incorporacionespasypdiporsectoresultimos10anos.csv"
+      "url":"5b232a6f-4320-4078-acfb-52400aa088a9",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5b232a6f-4320-4078-acfb-52400aa088a9/download/analisispasypdiporgenerodelaplantilladelaugrincorporacionesultimos10anos.csv"
     },
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
-      "nombre":"Incorporaciones sobre plantilla total: PAS y PDI",
+      "nombre":"Incorporaciones por sectores: PAS",
       "vista":1,
-      "url":"ea76b7ca-f6d4-4d6f-a244-82175b9268a5",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/ea76b7ca-f6d4-4d6f-a244-82175b9268a5/download/incorporacionespasypdisobretotalplantillaultimos10anos.csv"
-    },
-    {
-      "dataset":"Información Salarial",
-      "id_dataset":"informacion-salarial",
-      "nombre":"Incorporaciones por colectivo: PDI",
-      "vista":1,
-      "url":"51f3a277-165e-4bde-a0c3-8d5852838399",
-      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/51f3a277-165e-4bde-a0c3-8d5852838399/download/incorporacionespdiporcolectivoultimos10anos.csv"
+      "url":"8bc8f453-89ee-42ee-ad7f-e1fa5b95e076",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/8bc8f453-89ee-42ee-ad7f-e1fa5b95e076/download/incorporacionespasporsectoresultimos10anos.csv"
     },
     {
       "dataset":"Información Salarial",
@@ -183,10 +175,34 @@
     {
       "dataset":"Información Salarial",
       "id_dataset":"informacion-salarial",
+      "nombre":"Incorporaciones por sectores: PAS y PDI",
+      "vista":1,
+      "url":"9113eeff-5641-4dd1-91e0-a2be0491930a",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9113eeff-5641-4dd1-91e0-a2be0491930a/download/incorporacionespasypdiporsectoresultimos10anos.csv"
+    },
+    {
+      "dataset":"Información Salarial",
+      "id_dataset":"informacion-salarial",
+      "nombre":"Incorporaciones sobre plantilla total: PAS",
+      "vista":1,
+      "url":"5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563/download/incorporacionespassobretotalplantillaultimos10anos.csv"
+    },
+    {
+      "dataset":"Información Salarial",
+      "id_dataset":"informacion-salarial",
       "nombre":"Incorporaciones sobre plantilla total: PDI",
       "vista":1,
       "url":"e73a5d55-4deb-4a60-a0f8-689da4c94853",
       "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/e73a5d55-4deb-4a60-a0f8-689da4c94853/download/incorporacionespdisobretotalplantillaultimos10anos.csv"
+    },
+    {
+      "dataset":"Información Salarial",
+      "id_dataset":"informacion-salarial",
+      "nombre":"Incorporaciones sobre plantilla total: PAS y PDI",
+      "vista":1,
+      "url":"ea76b7ca-f6d4-4d6f-a244-82175b9268a5",
+      "descarga":"6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/ea76b7ca-f6d4-4d6f-a244-82175b9268a5/download/incorporacionespasypdisobretotalplantillaultimos10anos.csv"
     },
     {
       "dataset":"Información Salarial",

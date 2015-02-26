@@ -94,10 +94,14 @@
       "plantilla":"infoEco",
       "coleccion":"tablas",
       "categoria":["infoEco"],
-      "dataset":["presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos","justificante-gastos"],
+      "dataset":["presupuesto15","presupuesto","memoria-cuentas-anuales","auditoria","desglose-ingresos","desglose-gastos","justificante-gastos"],
       "contenido":[
         {
-          "encabezado":"Presupuesto",
+          "encabezado": "Presupuesto 2015",
+          "texto": "Información sobre el presupuesto UGR 2015 aprobado."
+        },
+        {
+          "encabezado":"Presupuesto 2014",
           "texto":"Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
         },
         {

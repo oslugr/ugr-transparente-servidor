@@ -5,18 +5,11 @@ var express = require('express');
 var index = require('./routes/index');
 var presentacion = require('./routes/presentacion');
 var administracion = require('./routes/administracion');
-<<<<<<< HEAD
 var docencia = require('./routes/docencia');
 var gestionInvestigacion = require('./routes/gestionInvestigacion');
 var normativaLegal = require('./routes/normativaLegal');
 var testSolicitudes = require('./routes/testSolicitudes');
-=======
-var gei = require('./routes/gestionEinvestigacion');
-var norma = require('./routes/normativas');
-var sol = require('./routes/testdesolicitudes');
 var map = require('./routes/mapaweb');
-
->>>>>>> d647136a4da2af9e841eb24ff0a3c74895178897
 
 var http = require('http');
 var path = require('path');
@@ -88,14 +81,10 @@ app.get('/estadisticas.html',gestionInvestigacion.estadisticas);
 // Normativa Legal
 app.get('/normativaLegal.html',normativaLegal.normativaLegal);
 
-<<<<<<< HEAD
 // Solicitudes
 app.get('/testSolicitudes.html', testSolicitudes.testSolicitudes);
-=======
 //Mapa del sitio
 app.get('/mapaweb.html', map.mapa);
-
->>>>>>> d647136a4da2af9e841eb24ff0a3c74895178897
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

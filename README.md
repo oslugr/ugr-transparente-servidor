@@ -19,7 +19,7 @@ La web está publicada en [transparente.ugr.es](http://transparente.ugr.es).
     `cd ugr-transparente-servidor`
     `npm install`
 
-4.- La siguiente línea se encuentra en el archivo `app.js` e indica el puerto que el servidor va a estar escuchando para resolver peticiones. Para trabajar en local hemos establecido que el puerto de escucha sea el 3000, este puerto se puede cambiar por cualquier otro que no esté reservado o en uso. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al los navegadores hacer las peticiones por defecto.
+4.- La siguiente línea se encuentra en el archivo `app.js` e indica el puerto que el servidor va a estar escuchando para resolver peticiones. Para trabajar en local hemos establecido que el puerto de escucha sea el 3000, este puerto se puede cambiar por cualquier otro que no esté reservado o en uso. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto a los navegadores hacer las peticiones por defecto.
 
     `app.set('port', process.env.PORT || 3000);`
 

@@ -27,5 +27,4 @@ La web está publicada en [transparente.ugr.es](http://transparente.ugr.es).
 
     `node app.js`
 
-
-Si vas a tu navegador, en la dirección http://localhost:3000 tendrás el servidor disponible
+Si vas a tu navegador, en la dirección [http://localhost:3000](http://localhost:3000) tendrás el servidor disponible.

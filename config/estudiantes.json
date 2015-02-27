@@ -1,0 +1,52 @@
+{
+  "plantilla":"estudiantes",
+  "nombre":"Estudiantes",
+  "contenido":[
+    {
+      "encabezado":"Matrículas: 2013",
+      "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada durante el curso 2013/2014. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
+    },
+    {
+      "encabezado":"Canales de Comunicación",
+      "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
+    },
+    {
+      "encabezado":"Becas y Ayudas",
+      "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
+    }
+  ],
+  "datos":[
+    {
+      "dataset":"Matrículas: 2013",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas: grado",
+      "vista":1,
+      "url":"5df5e28b-09ca-40aa-a908-5438fd53cbda",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculas20132014.csv"
+    },
+    {
+      "dataset":"Matrículas: 2013",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas: posgrado",
+      "vista":1,
+      "url":"48167c2f-6d17-49c5-9b63-f3d1129d425b",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
+    },
+    {
+      "dataset":"Canales de Comunicación",
+      "id_dataset":"canales-de-comunicacion",
+      "nombre":"Canales de comunicación",
+      "vista":1,
+      "url":"d39a2a34-af70-4f16-96e8-d411e103668e",
+      "descarga":"8fce1497-d1ff-4f18-b9ca-e3eb4187a7aa/resource/d39a2a34-af70-4f16-96e8-d411e103668e/download/canalesdecomunicacion.csv"
+    },
+    {
+      "dataset":"Becas y Ayudas",
+      "id_dataset":"becas-y-ayudas",
+      "nombre":"Becas y ayudas",
+      "vista":1,
+      "url":"b6060564-3e4e-4d7c-a00f-2bab67229fbe",
+      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/b6060564-3e4e-4d7c-a00f-2bab67229fbe/download/becasyayudas.csv"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "plantilla":"normativaLegal",
+  "nombre":"Normativa Legal",
+  "contenido":[
+    {
+      "encabezado":"Normativa y Convenios",
+      "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
+    },
+    {
+      "encabezado":"Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+      "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
+    },
+    {
+      "encabezado":"Ley de Transparencia Pública de Andalucía",
+      "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
+    }
+  ],
+  "datos":[
+    {
+      "dataset":"Normativa y Convenios",
+      "id_dataset":"normativa-de-la-universidad",
+      "nombre":"Convenios: general",
+      "vista":1,
+      "url":"68f87a74-71f5-4846-92de-8cbb44885199",
+      "descarga":"a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/68f87a74-71f5-4846-92de-8cbb44885199/download/conveniosgeneral.csv"
+    },
+    {
+      "dataset":"Normativa y Convenios",
+      "id_dataset":"normativa-de-la-universidad",
+      "nombre":"Convenio colectivo",
+      "vista":0,
+      "url":"2f1f8385-3304-4861-aaa0-2279e61f82c9",
+      "descarga":"a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/2f1f8385-3304-4861-aaa0-2279e61f82c9/download/resolucionde10defebrerode2004.pdf"
+    },
+    {
+      "dataset":"Normativa y Convenios",
+      "id_dataset":"normativa-de-la-universidad",
+      "nombre":"Normativa: enlaces",
+      "vista":1,
+      "url":"58961aa1-d980-4f5b-9c12-fa63538999c6",
+      "descarga":"a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/58961aa1-d980-4f5b-9c12-fa63538999c6/download/enlacesnormativa.csv"
+    },
+    {
+      "dataset":"Normativa y Convenios",
+      "id_dataset":"normativa-de-la-universidad",
+      "nombre":"Ley Orgánica de Universidades",
+      "vista":0,
+      "url":"1d7347ef-9b23-4641-a340-a23f28317b19",
+      "descarga":"a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/1d7347ef-9b23-4641-a340-a23f28317b19/download/lousg.pdf"
+    },
+    {
+      "dataset":"Normativa y Convenios",
+      "id_dataset":"normativa-de-la-universidad",
+      "nombre":"Reglamento de la Delegación General de Estudiantes",
+      "vista":0,
+      "url":"a47cf692-b608-4e02-a1cd-7671a3e3bac3",
+      "descarga":"/a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/a47cf692-b608-4e02-a1cd-7671a3e3bac3/download/ncg901.pdf"
+    },
+    {
+      "dataset":"Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+      "id_dataset":"ley-de-transparencia",
+      "nombre":"Resumen: Ley de Transparencia",
+      "vista":1,
+      "url":"a057d063-a9c8-446f-b28e-6922cf4899b2",
+      "descarga":"0b9ebc44-3a2d-4dd7-af0a-b8f6f386aca8/resource/a057d063-a9c8-446f-b28e-6922cf4899b2/download/leydetransparencia.csv"
+    },
+    {
+      "dataset":"Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+      "id_dataset":"ley-de-transparencia",
+      "nombre":"Boletín Oficial del Estado: Ley de Transparencia",
+      "vista":0,
+      "url":"ac3ec6f1-67b9-479e-80ee-57f69f768c8b",
+      "descarga":"0b9ebc44-3a2d-4dd7-af0a-b8f6f386aca8/resource/ac3ec6f1-67b9-479e-80ee-57f69f768c8b/download/boea201312887.pdf"
+    },
+    {
+      "dataset":"Ley de Transparencia Pública de Andalucía",
+      "id_dataset":"ley-de-transparencia-publica-de-andalucia",
+      "nombre":"Boletín Oficial de la Junta de Andalucía: Ley de Transparencia",
+      "vista":0,
+      "url":"9bee12a0-5f19-420b-a37d-9ba95d475073",
+      "descarga":"b20f1e2a-a4c9-48a3-9895-e77f0fb54fba/resource/9bee12a0-5f19-420b-a37d-9ba95d475073/download/boja1412400024111030100050563.pdf"
+    }
+  ]
+}

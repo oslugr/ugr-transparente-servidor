@@ -2,6 +2,7 @@ doctype html
 //
 	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
 	Copyright (C) 2014  Jaime Torres Benavente
+								2015  German Martinez Maldonado
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -79,14 +80,16 @@ html(lang="es")
 			//}
 
 		if seccion!=="Inicio"
-
-			script(src="http://code.jquery.com/jquery-1.11.0.min.js")
-
+			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+			script(src="libraries/jquery.js")
+			script(src="libraries/underscore.js")
+			//script(src="libraries/backbone.js")
+			//script(src="libraries/ckan.js")
+			//script(src="libraries/recline.js")
 			script(type='text/javascript' src='https://www.google.com/jsapi')
-
 			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
-
 			script(src="script/generar_tabla.js")
+			block scripts
 
 	body
 		div(id="boxes")
@@ -117,8 +120,6 @@ html(lang="es")
 
 				block content
 
-
-
 				#banners
 					.mod-banners
 						ul
@@ -127,18 +128,15 @@ html(lang="es")
 									strong Portal OpenData
 									p(class="texto_banner") Ir al portal OpenData de publicación y consulta de datos abiertos de la Universidad de Granada
 
-
 							li(class="banner_container model-resaltado-02 showtext")
 								a(class="banner", href="http://secretariageneral.ugr.es/")
 									strong Secretaría General
 									p(class="texto_banner") Ver el portal de la Secretaría General de la Universidad de Granada
 
-
 							li(class="banner_container model-resaltado-02 showtext")
 								a(class="banner", href="https://docs.google.com/document/d/1mIrZYU4c6fNUUxnUQysuDhJ7SQtKw22s4WfeyUnZ4Cg/edit#heading=h.4a0kngg63a7l")
 									strong Hacia una Universidad Abierta
 									p(class="texto_banner") Ir al documento
-
 
 				#interior_pie
 					#pie

@@ -1,0 +1,80 @@
+{
+  "servidor":"http://opendata.ugr.es/",
+  "index":
+  {
+    "nombre":"Inicio",
+    "plantilla":"index",
+    "enlaces":[
+      {
+        "nombre":"Presentación",
+        "href":"presentacion.html",
+        "id":"en_presentacion"
+      },
+      {
+        "nombre":"Personal",
+        "href":"personal.html",
+        "id":"en_personal"
+      },
+      {
+        "nombre":"Información Económica",
+        "href":"infoEconomica.html",
+        "id":"en_economica"
+      },
+      {
+        "nombre":"Servicios",
+        "href":"servicios.html",
+        "id":"en_servicios"
+      },
+      {
+        "nombre":"Oferta y Demanda Académica",
+        "href":"ofertaDemanda.html",
+        "id":"en_oferta"
+      },
+      {
+        "nombre":"Claustro",
+        "href":"claustro.html",
+        "id":"en_claustro"
+      },
+      {
+        "nombre":"Estudiantes",
+        "href":"estudiantes.html",
+        "id":"en_alumnos"
+      },
+      {
+        "nombre":"Misión",
+        "href":"mision.html",
+        "id":"en_mision"
+      },
+      {
+        "nombre":"Plan Estratégico",
+        "href":"planEstrategico.html",
+        "id":"en_planEst"
+      },
+      {
+        "nombre":"Gobierno",
+        "href":"gobierno.html",
+        "id":"en_gobierno"
+      },
+      {
+        "nombre":"Estadísticas",
+        "href":"estadisticas.html",
+        "id":"en_resultados"
+      },
+      {
+        "nombre":"Normativa Legal",
+        "href":"normativalegal.html",
+        "id":"en_normativa"
+      }
+    ]
+  },
+  "presentacion":
+  {
+    "titulo":"Presentación",
+    "plantilla":"presentacion"
+  },
+  "error":
+  {
+    "titulo":"Page not found (Error 404)",
+    "texto":"Lo siento, la página no existe o está temporalmente inaccesible"
+  }
+}

@@ -3,7 +3,11 @@
   "nombre":"Información Económica",
   "contenido":[
     {
-      "encabezado":"Presupuesto",
+      "encabezado":"Presupuesto 2015",
+      "texto":"Información sobre el presupuesto UGR 2015 aprobado. Aviso: conjunto de datos provisional, actualmente estamos trabajando en la extracción y depuración de datos."
+    },
+    {
+      "encabezado":"Presupuesto 2014",
       "texto":"Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
     },
     {
@@ -29,7 +33,15 @@
   ],
   "datos":[
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2015",
+      "id_dataset":"presupuesto-2015",
+      "nombre":"Bases de ejecución presupuesto ejercicio 2015",
+      "vista":0,
+      "url":"8cc06dda-2705-4daf-aeb4-029e6ba7cc7c",
+      "descarga":"719545d3-e3f4-4eb6-b54b-07967a5e74e4/resource/8cc06dda-2705-4daf-aeb4-029e6ba7cc7c/download/boja1425200018216710100060944.pdf"
+    },
+    {
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Créditos distribuibles a centros",
       "vista":1,
@@ -37,7 +49,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/e0ba1fab-ebb7-4d00-ac69-db3a5b971b03/download/creditosdistribuiblesacentros.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Créditos distribuibles a centros: deducir (2014)",
       "vista":1,
@@ -45,7 +57,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/25e7e315-758b-4f51-b9c7-7904a378fffd/download/creditosdistribuiblesacentrosdeducir2014.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Créditos distribuibles a centros: detraer (2014)",
       "vista":1,
@@ -53,7 +65,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/ce7e10ce-e7ff-4ebb-a2c3-c6f29482d8cd/download/creditosdistribuiblesacentrosdetraer2014.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Estado resumen de los créditos distribuibles",
       "vista":1,
@@ -61,7 +73,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/52e4ca4f-f1cc-4653-ba9d-414ee1cb2b42/download/estadoresumendeloscreditosdistribuibles.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Docente contratado",
       "vista":1,
@@ -69,7 +81,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/b82ded6e-5188-4169-aeac-aec8c159cedf/download/docentecontratado.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Máster y otros",
       "vista":1,
@@ -77,7 +89,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/a7892d77-4d83-4d84-9fca-7625e8688b2b/download/masteryotros.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Actuaciones programa 321B: estructura y gestión universitaria",
       "vista":1,
@@ -85,7 +97,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/0511325c-cea7-44fc-af3e-40eae0ea9e17/download/actuacionesprograma321bestructuraygestionuniversitaria.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Actuaciones 422D: enseñanzas universitarias",
       "vista":1,
@@ -93,7 +105,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/3d9b4331-408f-41b6-bca3-65891868b471/download/actuacionesprograma422.densenanzasuniversitarias.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Actuaciones 541A: investigación",
       "vista":1,
@@ -101,7 +113,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/9fef022b-8c33-4acf-bccf-2790cce63223/download/actuacionesprograma541ainvestigacion.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 1ª: vicerrectorados, centros y unidades",
       "vista":1,
@@ -109,7 +121,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/662e54c2-edbb-40f3-ab0f-2ae3b657186e/download/seccion1vicerrectoradoscentrosyunidades.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 2ª: gastos estructurales",
       "vista":1,
@@ -117,7 +129,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/e23eca20-4eeb-499a-8f27-ff8c2c27f746/download/seccion2gastosestructurales.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 3ª: actividad académica",
       "vista":1,
@@ -125,7 +137,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/b956608f-9c4a-40ec-9149-79414d65d89b/download/seccion3actividadacademica.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 3ª: actividad académica y mantenimiento",
       "vista":1,
@@ -133,7 +145,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/fea617d3-0e3a-459a-963f-1afe94f03128/download/seccion3actividadacademicaymantemiento.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 3ª: coeficiente superficie ponderada",
       "vista":1,
@@ -141,7 +153,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/fcdd8576-301f-45f9-9626-066de902932a/download/seccion3coeficientesuperficieponderada.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 3ª: mantenimiento",
       "vista":1,
@@ -149,7 +161,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/a60c519e-cc9b-4e2a-8d82-00fa8f8526b4/download/seccion3mantenimiento.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Sección 3ª: superficie ponderada",
       "vista":1,
@@ -157,7 +169,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/e62d1c87-c9fe-4046-9f6f-ae31a877c807/download/seccion3superficieponderada.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Distribución económica de créditos",
       "vista":1,
@@ -165,7 +177,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/8ac7f52d-77bb-45c2-8fdf-1682dac5ea85/download/distribucioneconomica.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Créditos matriculados",
       "vista":1,
@@ -173,7 +185,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/bf54ff57-4ad5-4710-bee7-afb31e4f74c2/download/matriculas.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"PDI y PAS asignados a departamentos",
       "vista":1,
@@ -181,7 +193,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/bad66154-396b-4116-8b30-16e0b21905e6/download/plantillas.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Centro de Lenguas Modernas",
       "vista":1,
@@ -189,7 +201,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/e10a95ec-1d3c-48cc-9e69-5e8ff0b282a9/download/evoluciondeperdidasygananciasdelcentrodelenguasmodernas.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Cálculo del límite máximo de gasto",
       "vista":1,
@@ -197,7 +209,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/63062250-6058-4f2d-8fe1-62e61ac07597/download/calculodelimportedellimitemaximodegastoparaelejercicioeconomico2014.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Cajas habilitadas",
       "vista":1,
@@ -205,7 +217,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/b8c4ba7a-26fc-4d5a-80a6-cfb69dbc053b/download/cajashabilitadas.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Cálculo del límite máximo de gasto",
       "vista":1,
@@ -213,7 +225,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/63062250-6058-4f2d-8fe1-62e61ac07597/download/calculodelimportedellimitemaximodegastoparaelejercicioeconomico2014.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Proyecciones financieras 2014 - 2016",
       "vista":1,
@@ -221,7 +233,7 @@
       "descarga":"6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/a6b6fb54-27b6-47a3-b28f-3fcee9e21169/download/proyeccionesfinancieras20142016.csv"
     },
     {
-      "dataset":"Presupuesto",
+      "dataset":"Presupuesto 2014",
       "id_dataset":"presupuesto-2014-para-tic",
       "nombre":"Previsiones de reintegro",
       "vista":1,

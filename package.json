@@ -10,5 +10,8 @@
     "jade": "*",
     "node.io": "*",
     "mocha": "*"
+  },
+  "devDependencies": {
+    "supertest": "^0.15.0"
   }
 }

@@ -6,6 +6,19 @@
     border-width: 0;
 }
 
+/*Style para JavaScript deshabilitado*/
+.jsDisabled
+{
+    border:1px solid red;
+    margin:1.5em;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+    font-size:1.25em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Style para el botón del formulario de solicitudes*/
 .botonFormulario
 {
     FONT-SIZE: 15px;
@@ -25,6 +38,63 @@
 .botonFormulario:hover
 {
     color: #0F3852;
+}
+
+/*Styles para el webmap*/
+
+ul.square_seccion {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding: 0px 0px 0px 0px;
+}
+
+ul.square_seccion2 {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding-left: 50px;
+}
+
+ul.square_seccion3 {
+    list-style-type: square;
+    list-style-position: inside;
+    color: #DD3B02;
+    padding-left: 70px;
+}
+
+
+.seccion{
+    color: #DD3B02;
+    FONT-SIZE: 1.3em;
+    line-height: 150%;
+}
+
+.seccion2{
+    color: #DD3B02;
+    FONT-SIZE: 1.2em;
+    line-height: 150%;
+}
+
+.seccion3{
+    color: #DD3B02;
+    FONT-SIZE: 1.1em;
+    line-height: 150%;
+}
+
+.seccion:hover {
+    color: #0F3852;
+    text-decoration: none;
+}
+
+.seccion2:hover {
+    color: #0F3852;
+    text-decoration: none;
+}
+
+.seccion3:hover {
+    color: #0F3852;
+    text-decoration: none;
 }
 
 
@@ -976,6 +1046,8 @@ div.sec_interior ul.enlaces li a:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+
 div.sec_interior ul.noenlaces {
     border-color: #B6B5B8;
     list-style-type: none;

@@ -9,6 +9,7 @@
     "express": "3.4.8",
     "jade": "*",
     "node.io": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "underscore": "*"
   }
 }

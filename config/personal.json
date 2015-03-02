@@ -1,6 +1,6 @@
 {
-  "plantilla":"personal",
   "nombre":"Personal",
+  "plantilla":"personal",
   "contenido":[
     {
       "encabezado":"Información Salarial",

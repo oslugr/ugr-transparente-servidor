@@ -1,6 +1,6 @@
 {
-  "plantilla":"estadisticas",
   "nombre":"Estadisticas",
+  "plantilla":"estadisticas",
   "contenido":[
     {
       "encabezado":"Investigación",

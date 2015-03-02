@@ -17,22 +17,22 @@ var path = require('path');
 var app = express();
 
 // Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
-var cargarConfig = require('./script/jsonReader');
-config=cargarConfig("./config/config.json");
+var cargar = require('./lib/lector');
+config=cargar("./config/config.json");
 module.exports.config = config;
 
 // Archivos de configuración de cada unas de las páginas
-module.exports.personal = cargarConfig("./config/personal.json");
-module.exports.infoEconomica = cargarConfig("./config/infoEconomica.json");
-module.exports.servicios = cargarConfig("./config/servicios.json");
-module.exports.ofertaDemanda = cargarConfig("./config/ofertaDemanda.json");
-module.exports.claustro = cargarConfig("./config/claustro.json");
-module.exports.estudiantes = cargarConfig("./config/estudiantes.json");
-module.exports.mision = cargarConfig("./config/mision.json");
-module.exports.planEstrategico = cargarConfig("./config/planEstrategico.json");
-module.exports.gobierno = cargarConfig("./config/gobierno.json");
-module.exports.estadisticas = cargarConfig("./config/estadisticas.json");
-module.exports.normativaLegal = cargarConfig("./config/normativaLegal.json");
+module.exports.personal = cargar("./config/personal.json");
+module.exports.infoEconomica = cargar("./config/infoEconomica.json");
+module.exports.servicios = cargar("./config/servicios.json");
+module.exports.ofertaDemanda = cargar("./config/ofertaDemanda.json");
+module.exports.claustro = cargar("./config/claustro.json");
+module.exports.estudiantes = cargar("./config/estudiantes.json");
+module.exports.mision = cargar("./config/mision.json");
+module.exports.planEstrategico = cargar("./config/planEstrategico.json");
+module.exports.gobierno = cargar("./config/gobierno.json");
+module.exports.estadisticas = cargar("./config/estadisticas.json");
+module.exports.normativaLegal = cargar("./config/normativaLegal.json");
 
 // All environments
 app.set('port', process.env.PORT || 3000);

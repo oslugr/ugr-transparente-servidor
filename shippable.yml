@@ -4,9 +4,10 @@ language: node_js
 # version numbers, testing against two versions of node
 node_js:
   - 0.10.25
+  - 0.11.15
 
 before_install:
- - npm install supertest
+ - npm install 
 
 before_script:
  - mkdir -p shippable/testresults

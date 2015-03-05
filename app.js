@@ -2,14 +2,14 @@
 * Module dependencies.
 */
 var express = require('express');
-var index = require('./routes/index');
-var presentacion = require('./routes/presentacion');
-var administracion = require('./routes/administracion');
-var docencia = require('./routes/docencia');
-var gestionInvestigacion = require('./routes/gestionInvestigacion');
-var normativaLegal = require('./routes/normativaLegal');
-var testSolicitudes = require('./routes/testSolicitudes');
-var map = require('./routes/mapaweb');
+var index = require(__dirname+'/routes/index');
+var presentacion = require(__dirname+'/routes/presentacion');
+var administracion = require(__dirname+'/routes/administracion');
+var docencia = require(__dirname+'/routes/docencia');
+var gestionInvestigacion = require(__dirname+'/routes/gestionInvestigacion');
+var normativaLegal = require(__dirname+'/routes/normativaLegal');
+var testSolicitudes = require(__dirname+'/routes/testSolicitudes');
+var map = require(__dirname+'/routes/mapaweb');
 
 var http = require('http');
 var path = require('path');
@@ -17,22 +17,22 @@ var path = require('path');
 var app = express();
 
 // Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
-var cargar = require('./lib/lector');
-config=cargar("./config/config.json");
+var cargar = require(__dirname+'/lib/lector');
+config=cargar(__dirname+'/config/config.json');
 module.exports.config = config;
 
 // Archivos de configuración de cada unas de las páginas
-module.exports.personal = cargar("./config/personal.json");
-module.exports.infoEconomica = cargar("./config/infoEconomica.json");
-module.exports.servicios = cargar("./config/servicios.json");
-module.exports.ofertaDemanda = cargar("./config/ofertaDemanda.json");
-module.exports.claustro = cargar("./config/claustro.json");
-module.exports.estudiantes = cargar("./config/estudiantes.json");
-module.exports.mision = cargar("./config/mision.json");
-module.exports.planEstrategico = cargar("./config/planEstrategico.json");
-module.exports.gobierno = cargar("./config/gobierno.json");
-module.exports.estadisticas = cargar("./config/estadisticas.json");
-module.exports.normativaLegal = cargar("./config/normativaLegal.json");
+module.exports.personal = cargar(__dirname+'/config/personal.json');
+module.exports.infoEconomica = cargar(__dirname+'/config/infoEconomica.json');
+module.exports.servicios = cargar(__dirname+'/config/servicios.json');
+module.exports.ofertaDemanda = cargar(__dirname+'/config/ofertaDemanda.json');
+module.exports.claustro = cargar(__dirname+'/config/claustro.json');
+module.exports.estudiantes = cargar(__dirname+'/config/estudiantes.json');
+module.exports.mision = cargar(__dirname+'/config/mision.json');
+module.exports.planEstrategico = cargar(__dirname+'/config/planEstrategico.json');
+module.exports.gobierno = cargar(__dirname+'/config/gobierno.json');
+module.exports.estadisticas = cargar(__dirname+'/config/estadisticas.json');
+module.exports.normativaLegal = cargar(__dirname+'/config/normativaLegal.json');
 
 // All environments
 app.set('port', process.env.PORT || 3000);

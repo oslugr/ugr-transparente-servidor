@@ -10,8 +10,12 @@
     "express": "3.4.8",
     "jade": "*",
     "node.io": "*",
+    "underscore": "*",
     "mocha": "*",
-    "underscore": "*"
+    "chai": "*",
+    "should": "*",
+    "request": "*",
+    "supertest": "*"
   },
   "devDependencies": {
     "supertest": "^0.15.0"

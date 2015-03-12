@@ -25,10 +25,13 @@ cd ugr-transparente-servidor
 npm install
 ```
 
-4.- La siguiente línea se encuentra en el archivo `app.js` e indica el puerto que el servidor va a estar escuchando para resolver peticiones. Para trabajar en local hemos establecido que el puerto de escucha sea el 3000, este puerto se puede cambiar por cualquier otro que no esté reservado o en uso. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto a los navegadores hacer las peticiones por defecto.
-
+4.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos cambiar el valor del campo "puerto" en el archivo "config.json" de la carpeta "config". Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
 ```
-app.set('port', process.env.PORT || 3000);
+{
+  ...
+  "puerto":3000,
+  ...
+}
 ```
 
 5.- Lanzar el servidor con el comando `node`

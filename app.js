@@ -35,8 +35,10 @@ module.exports.estadisticas = cargar(__dirname+'/config/estadisticas.json');
 module.exports.normativaLegal = cargar(__dirname+'/config/normativaLegal.json');
 
 // All environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || config.puerto);
 app.set('views', path.join(__dirname, 'views'));
+
+// Buscar si esto es lo que habría que tocar para que se puedan previsualizar PDFs igual que las tablas
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));

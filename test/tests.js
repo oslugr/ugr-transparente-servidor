@@ -1,8 +1,10 @@
 var assert = require("assert"),
 _ = require("underscore");
-cargar = require(__dirname+"/../lib/lector.js");
+should = require('should');
+request = require('supertest');
 existe = require(__dirname+"/../lib/existe.js");
-error = false;
+cargar = require(__dirname+"/../lib/lector.js");
+server = require(__dirname + '/../app.js');
 
 describe('Comprobar existencia de archivos JSON de datos', function(){
   it('Archivo \"config.json\" existe', function(){
@@ -49,9 +51,9 @@ try{
       var config = cargar(__dirname+"/../config/config.json");
       var arrayConfig = _.toArray(config);
       var nombresConfig = _.keys(config);
-      var nombresIndex = _.keys(arrayConfig[2]);
-      var nombresPresentacion = _.keys(arrayConfig[3]);
-      var nombresError = _.keys(arrayConfig[4]);
+      var nombresIndex = _.keys(arrayConfig[3]);
+      var nombresPresentacion = _.keys(arrayConfig[4]);
+      var nombresError = _.keys(arrayConfig[5]);
       var tamaEnlaces = _.size(arrayConfig[2].enlaces);
 
       describe('Carga de archivo', function(){
@@ -61,8 +63,8 @@ try{
       });
 
       describe('Formato de archivo', function(){
-        it('Número de campos: 5', function(){
-          assert.equal(_.size(config), 5);
+        it('Número de campos: 6', function(){
+          assert.equal(_.size(config), 6);
         });
 
         describe('Campos obligatorios', function(){
@@ -72,10 +74,13 @@ try{
           it('servidor', function(){
             assert.equal(nombresConfig[1], "servidor");
           });
+          it('puerto', function(){
+            assert.equal(nombresConfig[2], "puerto");
+          });
 
           describe('index: [nombre, plantilla, enlaces: [nombre, href, id]]', function(){
             it('index', function(){
-              assert.equal(nombresConfig[2], "index");
+              assert.equal(nombresConfig[3], "index");
             });
             it('[nombre, plantilla, enlaces]', function(){
               assert.equal(nombresIndex[0], "nombre");
@@ -94,7 +99,7 @@ try{
 
           describe('presentacion: [titulo, plantilla]', function(){
             it('presentacion', function(){
-              assert.equal(nombresConfig[3], "presentacion");
+              assert.equal(nombresConfig[4], "presentacion");
             });
             it('[titulo, plantilla]', function(){
               assert.equal(nombresPresentacion[0], "titulo");
@@ -104,7 +109,7 @@ try{
 
           describe('error: [titulo, texto]', function(){
             it('error', function(){
-              assert.equal(nombresConfig[4], "error");
+              assert.equal(nombresConfig[5], "error");
             });
             it('[titulo, texto]', function(){
               assert.equal(nombresError[0], "titulo");
@@ -123,19 +128,19 @@ try{
 
           describe('index:', function(){
             it('nombre: \"Inicio\"', function(){
-              assert.equal(arrayConfig[2].nombre, "Inicio");
+              assert.equal(arrayConfig[3].nombre, "Inicio");
             });
             it('plantilla: \"index\"', function(){
-              assert.equal(arrayConfig[2].plantilla, "index");
+              assert.equal(arrayConfig[3].plantilla, "index");
             });
           });
 
           describe('presentacion:', function(){
             it('titulo: \"Presentación\"', function(){
-              assert.equal(arrayConfig[3].titulo, "Presentación");
+              assert.equal(arrayConfig[4].titulo, "Presentación");
             });
             it('plantilla: \"presentacion\"', function(){
-              assert.equal(arrayConfig[3].plantilla, "presentacion");
+              assert.equal(arrayConfig[4].plantilla, "presentacion");
             });
           });
 
@@ -811,45 +816,36 @@ try{
   });
 }
 catch(e){
-  console.log("Alguno de los archivos JSON de datos necesario no se encuentra. No es posible finalizar todos los test.");
+  console.log("Alguno de los archivos JSON de datos necesario no se encuentra. No es posible "+
+  "finalizar todos los test.");
 }
 
 
 
-//TESTS DE VERSIÓN ANTERIOR, COMENTADOS HASTA QUE LOS REVISE
+describe('Pruebas de acceso web', function(){
+  port = Number(process.env.PORT || config.puerto);
+  request = request("http://localhost:" + port);
 
-/*
-// var should = require('should');
+  // Código 200 OK. Código 404 Error.
 
-var request = require('supertest');
+  it('Página de inicio', function(){
+    request.get("/")
+    .expect(200)
+    .end(function(err,res) {
+      if (err) {
+        throw err ;
+      }
+    });
+  });
 
-// hay que arrancar el servidor antes. Más adelante probaremos esto http://51elliot.blogspot.com.es/2013/08/testing-expressjs-rest-api-with-mocha.html
-
-var server=require(__dirname + '/../app.js');
-var port = Number(process.env.PORT || 3000);
-request=request("http://localhost:"+port);
-
-describe('Web', function(){
-
-it('Debería devolver la raíz', function(){
-request.get("/")
-.expect(200)
-.end(function(err,res) {
-if (err) {
-throw err ;
-}
-});
-});
-
-it('Debería devolver página personal', function(){
-request.get("/personal.html")
-.expect(200)
-.end(function(err,res) {
-if (err) {
-throw err ;
-}
-});
-});
+  it('Página de personal', function(){
+    request.get("/personal.html")
+    .expect(200)
+    .end(function(err,res) {
+      if (err) {
+        throw err ;
+      }
+    });
+  });
 
 });
-*/

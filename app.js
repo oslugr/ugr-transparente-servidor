@@ -2,14 +2,14 @@
 * Module dependencies.
 */
 var express = require('express');
-var index = require('./routes/index');
-var presentacion = require('./routes/presentacion');
-var administracion = require('./routes/administracion');
-var docencia = require('./routes/docencia');
-var gestionInvestigacion = require('./routes/gestionInvestigacion');
-var normativaLegal = require('./routes/normativaLegal');
-var testSolicitudes = require('./routes/testSolicitudes');
-var map = require('./routes/mapaweb');
+var index = require(__dirname+'/routes/index');
+var presentacion = require(__dirname+'/routes/presentacion');
+var administracion = require(__dirname+'/routes/administracion');
+var docencia = require(__dirname+'/routes/docencia');
+var gestionInvestigacion = require(__dirname+'/routes/gestionInvestigacion');
+var normativaLegal = require(__dirname+'/routes/normativaLegal');
+var testSolicitudes = require(__dirname+'/routes/testSolicitudes');
+var map = require(__dirname+'/routes/mapaweb');
 
 var http = require('http');
 var path = require('path');
@@ -17,26 +17,28 @@ var path = require('path');
 var app = express();
 
 // Cargamos la configuracion del archivo json y la exportamos para poder usarla en toda la aplicacion
-var cargarConfig = require('./script/jsonReader');
-config=cargarConfig("./config/config.json");
+var cargar = require(__dirname+'/lib/lector');
+config=cargar(__dirname+'/config/config.json');
 module.exports.config = config;
 
 // Archivos de configuración de cada unas de las páginas
-module.exports.personal = cargarConfig("./config/personal.json");
-module.exports.infoEconomica = cargarConfig("./config/infoEconomica.json");
-module.exports.servicios = cargarConfig("./config/servicios.json");
-module.exports.ofertaDemanda = cargarConfig("./config/ofertaDemanda.json");
-module.exports.claustro = cargarConfig("./config/claustro.json");
-module.exports.estudiantes = cargarConfig("./config/estudiantes.json");
-module.exports.mision = cargarConfig("./config/mision.json");
-module.exports.planEstrategico = cargarConfig("./config/planEstrategico.json");
-module.exports.gobierno = cargarConfig("./config/gobierno.json");
-module.exports.estadisticas = cargarConfig("./config/estadisticas.json");
-module.exports.normativaLegal = cargarConfig("./config/normativaLegal.json");
+module.exports.personal = cargar(__dirname+'/config/personal.json');
+module.exports.infoEconomica = cargar(__dirname+'/config/infoEconomica.json');
+module.exports.servicios = cargar(__dirname+'/config/servicios.json');
+module.exports.ofertaDemanda = cargar(__dirname+'/config/ofertaDemanda.json');
+module.exports.claustro = cargar(__dirname+'/config/claustro.json');
+module.exports.estudiantes = cargar(__dirname+'/config/estudiantes.json');
+module.exports.mision = cargar(__dirname+'/config/mision.json');
+module.exports.planEstrategico = cargar(__dirname+'/config/planEstrategico.json');
+module.exports.gobierno = cargar(__dirname+'/config/gobierno.json');
+module.exports.estadisticas = cargar(__dirname+'/config/estadisticas.json');
+module.exports.normativaLegal = cargar(__dirname+'/config/normativaLegal.json');
 
 // All environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || config.puerto);
 app.set('views', path.join(__dirname, 'views'));
+
+// Buscar si esto es lo que habría que tocar para que se puedan previsualizar PDFs igual que las tablas
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));

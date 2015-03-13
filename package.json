@@ -1,18 +1,23 @@
 {
-    "name": "ugr-transparente-servidor",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-	"start": "node app.js"
-    },
-    "test": "mocha",
-    "dependencies": {
-	"express": "3.4.8",
-	"jade": "*",
-	"node.io": "*",
-	"mocha": "*"
-    },
-    "devDependencies": {
-	"supertest": "^0.15.0"
-    }
+  "name": "ugr-transparente-servidor",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "test": "mocha",
+  "dependencies": {
+    "express": "3.4.8",
+    "jade": "*",
+    "node.io": "*",
+    "underscore": "*",
+    "mocha": "*",
+    "chai": "*",
+    "should": "*",
+    "request": "*",
+    "supertest": "*"
+  },
+  "devDependencies": {
+    "supertest": "^0.15.0"
+  }
 }

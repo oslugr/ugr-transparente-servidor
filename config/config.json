@@ -1,5 +1,7 @@
 {
+  "nombre":"config",
   "servidor":"http://opendata.ugr.es/",
+  "puerto":3000,
   "index":
   {
     "nombre":"Inicio",

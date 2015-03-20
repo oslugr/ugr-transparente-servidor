@@ -1,0 +1,39 @@
+---
+- hosts: transparente-servidor
+  sudo: yes
+  remote_user: {user}
+
+    - name: Instalamos git
+      apt: name=git state=present
+
+    - name: Instalamos nvm para node
+      shell: >
+            curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | sh
+            creates=/home/{user}/.nvm/nvm.sh
+
+    - name: Instalamos node
+      shell: >
+            /bin/bash -c "source /home/{user}/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
+            creates=/home/{user}/.nvm/alias
+
+    - name: Instalamos npm
+      apt: name=npm state=present
+
+    - name: Instalamos forever para node.js
+      npm: name=forever global=yes state=present
+
+    - name: Creamos directorio para despliegue
+      file: path=/home/{user}/ugr-transparente-servidor/ state=directory
+
+    - name: Descargamos la aplicación de github
+      action: git repo=https://github.com/oslugr/ugr-transparente-servidor.git dest=/home/{user}/ugr-transparente-servidor
+      tags: deploy
+
+    - name: Instalamos dependencias
+      command: npm install chdir=/home/{user}/ugr-transparente-servidor
+
+    - name: Creamos servicio de inicio
+      template: src=transparente-ugr.conf dest=/etc/init/transparente-ugr.conf owner=root group=root mode=0644
+
+    - name: Lanzamos aplicación
+      shell: PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log /home/{user}/ugr-transparente-servidor/app.js

@@ -3,8 +3,8 @@
   "plantilla":"estudiantes",
   "contenido":[
     {
-      "encabezado":"Matrículas: 2013",
-      "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada durante el curso 2013/2014. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
+      "encabezado":"Matrículas",
+      "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
     },
     {
       "encabezado":"Canales de Comunicación",
@@ -17,20 +17,68 @@
   ],
   "datos":[
     {
-      "dataset":"Matrículas: 2013",
+      "dataset":"Matrículas",
       "id_dataset":"matriculas-ugr-2013",
-      "nombre":"Matrículas: grado",
+      "nombre":"Matrículas 2013/2014: grado",
       "vista":1,
       "url":"5df5e28b-09ca-40aa-a908-5438fd53cbda",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculas20132014.csv"
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculasgrado20132014.csv"
     },
     {
-      "dataset":"Matrículas: 2013",
+      "dataset":"Matrículas",
       "id_dataset":"matriculas-ugr-2013",
-      "nombre":"Matrículas: posgrado",
+      "nombre":"Matrículas 2013/2014: posgrado",
       "vista":1,
       "url":"48167c2f-6d17-49c5-9b63-f3d1129d425b",
       "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2012/2013: grado",
+      "vista":1,
+      "url":"35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/35e31a6e-ac3c-44eb-a17c-0bc274f73e9b/download/04gradomatriculasporramas1213.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2012/2013: posgrado",
+      "vista":1,
+      "url":"13e1e6c0-1311-4c96-8409-39a2cce174c7",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/13e1e6c0-1311-4c96-8409-39a2cce174c7/download/09posgradomatriculaspormaster1213.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2011/2012: grado",
+      "vista":1,
+      "url":"f621cebf-e17c-4823-b2b9-69467624e4f9",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/f621cebf-e17c-4823-b2b9-69467624e4f9/download/04gradomatriculasporramas1112.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2011/2012: posgrado",
+      "vista":1,
+      "url":"a6b6f089-7e54-422e-a717-ad478e6124b0",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/a6b6f089-7e54-422e-a717-ad478e6124b0/download/09posgradomatriculaspormaster1112.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2010/2011: grado",
+      "vista":1,
+      "url":"ac9e790f-2cfa-4f88-bf40-979b11692822",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/ac9e790f-2cfa-4f88-bf40-979b11692822/download/04gradomatriculasporramas1011.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2010/2011: posgrado",
+      "vista":1,
+      "url":"eb126186-ec40-4807-bb83-3bf1335c33fb",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
     },
     {
       "dataset":"Canales de Comunicación",

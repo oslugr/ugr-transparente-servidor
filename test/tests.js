@@ -5,6 +5,7 @@ request = require('supertest'),
 existe = require(__dirname+"/../lib/existe.js"),
 cargar = require(__dirname+"/../lib/lector.js"),
 app = require(__dirname+"/../app.js");
+acceso = cargar(__dirname+"/../test/acceso.json");
 
 describe('Comprobar existencia de archivos JSON de datos', function(){
   it('Archivo \"config.json\" existe', function(){
@@ -821,14 +822,18 @@ catch(e){
 }
 
 describe('Prueba de acceso', function(){
-  it('Índice', function(done){
-    request(app)
-    .get('/')
-    .expect(200)
-    .end(function(err, res){
-      if (err)
-        throw err;
-      done();
+  _.each(acceso.elemento, function(valor) {
+
+    it(valor.nombre, function(done){
+      request(app)
+      .get(valor.ruta)
+      .expect(200)
+      .end(function(err, res){
+        if (err){
+          throw err;
+        }
+        done();
+      });
     });
   });
 });

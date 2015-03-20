@@ -1,0 +1,68 @@
+{
+  "elemento":[
+    {
+      "nombre":"Inicio (raíz)",
+      "ruta":"/"
+    },
+    {
+      "nombre":"Inicio (index)",
+      "ruta":"/index.html"
+    },
+    {
+      "nombre":"Presentacion",
+      "ruta":"/presentacion.html"
+    },
+    {
+      "nombre":"Administración / Personal",
+      "ruta":"/personal.html"
+    },
+    {
+      "nombre":"Administración / Información Económica",
+      "ruta":"/infoEconomica.html"
+    },
+    {
+      "nombre":"Administración / Servicios",
+      "ruta":"/servicios.html"
+    },
+    {
+      "nombre":"Administración / Perfil del Contratante",
+      "ruta":"/perfilContratante.html"
+    },
+    {
+      "nombre":"Docencia / Oferta y Demanda Académica",
+      "ruta":"/ofertaDemanda.html"
+    },
+    {
+      "nombre":"Docencia / Claustro",
+      "ruta":"/claustro.html"
+    },
+    {
+      "nombre":"Docencia / Estudiantes",
+      "ruta":"/estudiantes.html"
+    },
+    {
+      "nombre":"Gestión e Investigación / Misión",
+      "ruta":"/mision.html"
+    },
+    {
+      "nombre":"Gestión e Investigación / Plan Estratégico",
+      "ruta":"/planEstrategico.html"
+    },
+    {
+      "nombre":"Gestión e Investigación / Gobierno",
+      "ruta":"/gobierno.html"
+    },
+    {
+      "nombre":"Gestión e Investigación / Estadísticas",
+      "ruta":"/estadisticas.html"
+    },
+    {
+      "nombre":"Normativa Legal",
+      "ruta":"/normativaLegal.html"
+    },
+    {
+      "nombre":"Mapa del sitio",
+      "ruta":"/mapaweb.html"
+    }
+  ]
+}

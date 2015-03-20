@@ -1,10 +1,10 @@
 var assert = require("assert"),
-_ = require("underscore");
-should = require('should');
-request = require('supertest');
-existe = require(__dirname+"/../lib/existe.js");
-cargar = require(__dirname+"/../lib/lector.js");
-server = require(__dirname + '/../app.js');
+_ = require("underscore"),
+should = require('should'),
+request = require('supertest'),
+existe = require(__dirname+"/../lib/existe.js"),
+cargar = require(__dirname+"/../lib/lector.js"),
+app = require(__dirname+"/../app.js");
 
 describe('Comprobar existencia de archivos JSON de datos', function(){
   it('Archivo \"config.json\" existe', function(){
@@ -180,7 +180,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayPersonal[2][i])
+                  var nombresContenido = _.keys(arrayPersonal[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -192,7 +192,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayPersonal[3][i])
+                  var nombresDatos = _.keys(arrayPersonal[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -246,7 +246,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayInfoEconomica[2][i])
+                  var nombresContenido = _.keys(arrayInfoEconomica[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -258,7 +258,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayInfoEconomica[3][i])
+                  var nombresDatos = _.keys(arrayInfoEconomica[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -314,7 +314,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayOfertaDemanda[2][i])
+                  var nombresContenido = _.keys(arrayOfertaDemanda[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -326,7 +326,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayOfertaDemanda[3][i])
+                  var nombresDatos = _.keys(arrayOfertaDemanda[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -380,7 +380,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayClaustro[2][i])
+                  var nombresContenido = _.keys(arrayClaustro[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -392,7 +392,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayClaustro[3][i])
+                  var nombresDatos = _.keys(arrayClaustro[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -446,7 +446,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayEstudiantes[2][i])
+                  var nombresContenido = _.keys(arrayEstudiantes[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -458,7 +458,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayEstudiantes[3][i])
+                  var nombresDatos = _.keys(arrayEstudiantes[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -514,7 +514,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayMision[2][i])
+                  var nombresContenido = _.keys(arrayMision[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -526,7 +526,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayMision[3][i])
+                  var nombresDatos = _.keys(arrayMision[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -580,7 +580,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayPlanEstrategico[2][i])
+                  var nombresContenido = _.keys(arrayPlanEstrategico[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -592,7 +592,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayPlanEstrategico[3][i])
+                  var nombresDatos = _.keys(arrayPlanEstrategico[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -646,7 +646,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayGobierno[2][i])
+                  var nombresContenido = _.keys(arrayGobierno[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -658,7 +658,7 @@ try{
               });
               it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresDatos = _.keys(arrayGobierno[3][i])
+                  var nombresDatos = _.keys(arrayGobierno[3][i]);
                   assert.equal(nombresDatos[0], "dataset");
                   assert.equal(nombresDatos[1], "id_dataset");
                   assert.equal(nombresDatos[2], "nombre");
@@ -712,7 +712,7 @@ try{
               });
               it('[encabeza, texto]', function(){
                 for(i=0; i<tamaContenido; ++i){
-                  var nombresContenido = _.keys(arrayEstadisticas[2][i])
+                  var nombresContenido = _.keys(arrayEstadisticas[2][i]);
                   assert.equal(nombresContenido[0], "encabezado");
                   assert.equal(nombresContenido[1], "texto");
                 }
@@ -779,7 +779,7 @@ try{
             });
             it('[encabeza, texto]', function(){
               for(i=0; i<tamaContenido; ++i){
-                var nombresContenido = _.keys(arrayNormativaLegal[2][i])
+                var nombresContenido = _.keys(arrayNormativaLegal[2][i]);
                 assert.equal(nombresContenido[0], "encabezado");
                 assert.equal(nombresContenido[1], "texto");
               }
@@ -791,7 +791,7 @@ try{
             });
             it('[dataset, id_dataset, nombre, vista, url, descarga]', function(){
               for(i=0; i<tamaContenido; ++i){
-                var nombresDatos = _.keys(arrayNormativaLegal[3][i])
+                var nombresDatos = _.keys(arrayNormativaLegal[3][i]);
                 assert.equal(nombresDatos[0], "dataset");
                 assert.equal(nombresDatos[1], "id_dataset");
                 assert.equal(nombresDatos[2], "nombre");
@@ -820,32 +820,15 @@ catch(e){
   "finalizar todos los test.");
 }
 
-
-
-describe('Pruebas de acceso web', function(){
-  port = Number(process.env.PORT || config.puerto);
-  request = request("http://localhost:" + port);
-
-  // Código 200 OK. Código 404 Error.
-
-  it('Página de inicio', function(){
-    request.get("/")
+describe('Prueba de acceso', function(){
+  it('Índice', function(done){
+    request(app)
+    .get('/')
     .expect(200)
-    .end(function(err,res) {
-      if (err) {
-        throw err ;
-      }
+    .end(function(err, res){
+      if (err)
+        throw err;
+      done();
     });
   });
-
-  it('Página de personal', function(){
-    request.get("/personal.html")
-    .expect(200)
-    .end(function(err,res) {
-      if (err) {
-        throw err ;
-      }
-    });
-  });
-
 });

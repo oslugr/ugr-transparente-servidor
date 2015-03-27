@@ -12,9 +12,7 @@
     "node.io": "*",
     "underscore": "*",
     "mocha": "*",
-    "chai": "*",
     "should": "*",
-    "request": "*",
     "supertest": "*"
   },
   "devDependencies": {

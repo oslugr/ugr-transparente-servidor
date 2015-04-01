@@ -22,10 +22,16 @@ git clone https://github.com/oslugr/ugr-transparente-servidor
 
 ```
 cd ugr-transparente-servidor
-npm install
+sudo npm install
 ```
 
-4.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos cambiar el valor del campo "puerto" en el archivo "config.json" de la carpeta "config". Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
+4.- Comprobamos que las dependencias de todos los módulos se cumplen:
+
+```
+npm list --depth=0
+```
+
+5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos cambiar el valor del campo "puerto" en el archivo "config.json" de la carpeta "config". Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
 ```
 {
   ...
@@ -34,10 +40,25 @@ npm install
 }
 ```
 
-5.- Lanzar el servidor con el comando `node`
+5.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`
 
 ```
-node app.js
+npm start
 ```
 
 Si vas a tu navegador, en la dirección [http://localhost:3000](http://localhost:3000) tendrás el servidor disponible.
+
+
+# Test
+
+Se han incluido test unitarios para comprobar que los archivos que contienen los datos son válidos y que las diferentes páginas del portal son accesibles. Los test son realizados con `mocha` y se ejecutan con:
+
+```
+npm test
+```
+
+También se puede ejecutar un test de cobertura realizado con `istanbul` ejecutando:
+
+```
+npm run-script coverage
+```

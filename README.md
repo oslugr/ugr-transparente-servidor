@@ -51,14 +51,8 @@ Si vas a tu navegador, en la dirección [http://localhost:3000](http://localhost
 
 # Test
 
-Se han incluido test unitarios para comprobar que los archivos que contienen los datos son válidos y que las diferentes páginas del portal son accesibles. Los test son realizados con `mocha` y se ejecutan con:
+Se han incluido test unitarios para comprobar que las diferentes funcionalidades de la aplicación funcionan correctamente, de dichas funcionalidades hay que destacar el acceso a los archivos JSON con los datos del portal (para comprobar que existen y que los datos que contienen están en un formato válido) y que las diferentes páginas del portal son accesibles. También se ha creado un test de cobertura para comprobar que toda funcionalidad del portal está cubierta y asegurada por sus correspondientes test unitarios. Los test unitarios son realizados con `mocha`(https://github.com/mochajs/mocha) y el test de cobertura es realizado con `istanbul`(https://github.com/gotwarlost/istanbul). Se ejecutan con:
 
 ```
-npm test
-```
-
-También se puede ejecutar un test de cobertura realizado con `istanbul` ejecutando:
-
-```
-npm run-script coverage
+npm test --coverage
 ```

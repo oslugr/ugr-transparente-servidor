@@ -41,7 +41,6 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha",
-    "coverage": "istanbul cover test/tests.js"
+    "test": "istanbul test _mocha"
   }
 }

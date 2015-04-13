@@ -1,1 +1,9 @@
+# Directorio instalación módulos
 node_modules
+
+# Directorio resultado test cobertura
+coverage
+
+# Logs y copias de seguridad
+*.log
+*~

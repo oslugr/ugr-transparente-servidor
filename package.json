@@ -1,23 +1,46 @@
 {
   "name": "ugr-transparente-servidor",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
+  "version": "0.2.0",
+  "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
+  "description": "Portal de transparencia de la Universidad de Granada",
+  "keywords": [
+    "opendata"
+  ],
+  "bugs": {
+    "url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
   },
-  "test": "mocha",
+  "license": "GNU General Public License v3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oslugr/ugr-transparente-servidor.git"
+  },
+  "homepage": "http://transparente.ugr.es/",
+  "main": "app.js",
+  "os": [
+    "linux"
+  ],
+  "private": true,
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "dependencies": {
-    "express": "3.4.8",
-    "jade": "*",
-    "node.io": "*",
-    "underscore": "*",
-    "mocha": "*",
-    "chai": "*",
-    "should": "*",
-    "request": "*",
-    "supertest": "*"
+    "express": "^3.4.8",
+    "jade": "^1.9.2",
+    "istanbul": "^0.3.11",
+    "node.io": "^0.5.1",
+    "should": "^5.2.0",
+    "supertest": "^0.15.0",
+    "underscore": "^1.8.2"
   },
   "devDependencies": {
-    "supertest": "^0.15.0"
+    "mocha": "^2.2.1"
+  },
+  "engines": {
+    "node": "^0.10.37"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "istanbul test _mocha"
   }
 }

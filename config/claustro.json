@@ -4,10 +4,12 @@
   "contenido":[
     {
       "encabezado":"Perfil del Profesorado",
+      "link": "perfil-del-profesorado",
       "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
     },
     {
       "encabezado":"Profesores Extranjeros",
+      "link": "profesores-extranjeros",
       "texto":"Información sobre los profesores extranjeros del claustro de la Universidad de Granada durante los años 2009, 2010 y 2011."
     }
   ],

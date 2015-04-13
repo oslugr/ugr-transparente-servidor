@@ -332,7 +332,7 @@ div#rastro {
 div#rastro li {
     display: inline;
 }
-div#rastro a {
+div#rastro span {
     margin-right: 3px;
     padding-left: 15px;
     width: 100%;
@@ -340,7 +340,7 @@ div#rastro a {
     color: #99989C;
     line-height: 24px;
 }
-div#rastro a.first {
+div#rastro span.first {
     padding-left: 27px;
     background: url("../img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
 }
@@ -348,10 +348,10 @@ div#rastro ul#rastro_breadcrumb {
     margin-top: -4px;
     border-color: #FFFFFF;
 }
-div#rastro a.last {
+div#rastro span.last {
     color: #023A79;
 }
-div#rastro a:hover {
+div#rastro span:hover {
     color: #DD3B15;
     text-decoration: none;
 }
@@ -1942,7 +1942,7 @@ li.model-resaltado-02 a.banner:hover {
 }
 .enlaces_index:hover{
     opacity: 0.85;
-    filter: alpha(opacity=85); /* For IE8 and earlier */
+    /*filter: alpha(opacity=85);*/ /* For IE8 and earlier */
 }
 
 #en_presentacion{
@@ -2027,7 +2027,7 @@ li.model-resaltado-02 a.banner:hover {
   background-color: #FAFAFA;
   -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  /*box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);*/
 
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

@@ -35,7 +35,9 @@ module.exports.estadisticas = cargar(__dirname+'/config/estadisticas.json');
 module.exports.normativaLegal = cargar(__dirname+'/config/normativaLegal.json');
 
 // All environments
-app.set('port', process.env.PORT || config.puerto);
+app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || config.puerto);
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
+
 app.set('views', path.join(__dirname, 'views'));
 
 // Buscar si esto es lo que habría que tocar para que se puedan previsualizar PDFs igual que las tablas
@@ -88,8 +90,8 @@ app.get('/testSolicitudes.html', testSolicitudes.testSolicitudes);
 //Mapa del sitio
 app.get('/mapaweb.html', map.mapa);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), app.get('ip'), function(){
+  console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
 module.exports = app;

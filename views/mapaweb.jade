@@ -23,7 +23,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/mapaweb.html") #{titulo}
+					span.first #{titulo}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
@@ -59,7 +59,11 @@ block content
 				ul.square_seccion
 					- for (var i = 0; i < tam_seccion; i++)
 						li
-							a(class="seccion", href="#{seccion_enlaces[i]}") #{seccion[i]}
+							if ((seccion[i] != "Administración") && (seccion[i] != "Docencia") && (seccion[i] != "Gestión e Investigación"))
+								a(class="seccion", href="#{seccion_enlaces[i]}") #{seccion[i]}
+							else
+								a(class="seccion", href=null) #{seccion[i]}
+
 						ul.square_seccion2
 							if seccion[i] == "Administración"
 
@@ -70,15 +74,15 @@ block content
 										if categ_admin[j] == "Personal"
 											- for (var k = 0; k < tam_dataset_personal; k++)
 												li
-													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_personal[k].encabezado}") #{dataset_personal[k].encabezado}
+													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_personal[k].link}") #{dataset_personal[k].encabezado}
 										else if categ_admin[j] == "Información Económica"
 											- for (var k = 0; k < tam_dataset_infoEco; k++)
 												li
-													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_infoEco[k].encabezado}") #{dataset_infoEco[k].encabezado}
+													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_infoEco[k].link}") #{dataset_infoEco[k].encabezado}
 										else if categ_admin[j] == "Servicios"
 											- for (var k = 0; k < tam_dataset_serv; k++)
 												li
-													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_serv[k].encabezado}") #{dataset_serv[k].encabezado}
+													a(class="seccion3", href="#{categ_admin_enlaces[j]}##{dataset_serv[k].link}") #{dataset_serv[k].encabezado}
 							else if seccion[i] == "Docencia"
 								- for (var j = 0; j < tam_categorias_doc; j++)
 									li
@@ -87,15 +91,15 @@ block content
 										if categ_doc[j] == "Oferta y Demanda"
 											- for (var k = 0; k < tam_dataset_ofYde; k++)
 												li
-													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_ofYde[k].encabezado}") #{dataset_ofYde[k].encabezado}
+													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_ofYde[k].link}") #{dataset_ofYde[k].encabezado}
 										else if categ_doc[j] == "Claustro"
 											- for (var k = 0; k < tam_dataset_claustro; k++)
 												li
-													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_claustro[k].encabezado}") #{dataset_claustro[k].encabezado}
+													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_claustro[k].link}") #{dataset_claustro[k].encabezado}
 										else if categ_doc[j] == "Estudiantes"
 											- for (var k = 0; k < tam_dataset_estudiantes; k++)
 												li
-													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_estudiantes[k].encabezado}") #{dataset_estudiantes[k].encabezado}
+													a(class="seccion3", href="#{categ_doc_enlaces[j]}##{dataset_estudiantes[k].link}") #{dataset_estudiantes[k].encabezado}
 							else if seccion[i] == "Gestión e Investigación"
 								- for (var j = 0; j < tam_categorias_gest; j++)
 									li
@@ -104,21 +108,21 @@ block content
 										if categ_gest[j] == "Misión"
 											- for (var k = 0; k < tam_dataset_mision; k++)
 												li
-													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_mision[k].encabezado}") #{dataset_mision[k].encabezado}
+													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_mision[k].link}") #{dataset_mision[k].encabezado}
 										else if categ_gest[j] == "Plan Estratégico"
 											- for (var k = 0; k < tam_dataset_plan; k++)
 												li
-													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_plan[k].encabezado}") #{dataset_plan[k].encabezado}
+													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_plan[k].link}") #{dataset_plan[k].encabezado}
 										else if categ_gest[j] == "Gobierno"
 											- for (var k = 0; k < tam_dataset_gobierno; k++)
 												li
-													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_gobierno[k].encabezado}") #{dataset_gobierno[k].encabezado}
+													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_gobierno[k].link}") #{dataset_gobierno[k].encabezado}
 										else if categ_gest[j] == "Estadísticas"
 											- for (var k = 0; k < tam_dataset_estad; k++)
 												li
-													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_estad[k].encabezado}") #{dataset_estad[k].encabezado}
+													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_estad[k].link}") #{dataset_estad[k].encabezado}
 							else if seccion[i] == "Normativa Legal"
 								ul.square_seccion3
 									- for (var j = 0; j < tam_dataset_normativa; j++)
 										li
-											a(class="seccion3", href="#{seccion_enlaces[i]}##{dataset_normativa[j].encabezado}") #{dataset_normativa[j].encabezado}
+											a(class="seccion3", href="#{seccion_enlaces[i]}##{dataset_normativa[j].link}") #{dataset_normativa[j].encabezado}

@@ -20,30 +20,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //Variable para las configuraciones
 var conf = require('../app');
 
-// Gestión de la pagina de la solicitudes
-
 exports.mapa = function(req, res){
     var secciones = ["Inicio", "Presentación", "Administración", "Docencia", "Gestión e Investigación", "Normativa Legal"];
-    var secciones_enlaces = ["index.html", "presentacion.html", "#", "#", "#", "normativalegal.html"];
+    var secciones_enlaces = ["index.html", "presentacion.html", "", "", "", "normativaLegal.html"];
 
     var categorias_admin = ["Personal", "Información Económica", "Servicios", "Perfil del Contratante"];
     var categorias_admin_enlaces = ["personal.html", "infoEconomica.html", "servicios.html", "perfilContratante.html"];
     var categorias_docencia = ["Oferta y Demanda", "Claustro", "Estudiantes"];
-    var categorias_docencia_enlaces = ["ofertaYdemanda.html", "claustro.html", "estudiantes.html"];
+    var categorias_docencia_enlaces = ["ofertaDemanda.html", "claustro.html", "estudiantes.html"];
     var categorias_gestion = ["Misión", "Plan Estratégico", "Gobierno", "Estadísticas"];
     var categorias_gestion_enlaces = ["mision.html", "planEstrategico.html", "gobierno.html", "estadisticas.html"];
 
-    var personal = conf.personal;
-    var infoEco = conf.infoEconomica;
-    var serv = conf.servicios;
-    var ofYde = conf.ofertaDemanda;
-    var claustro = conf.claustro;
-    var estudiantes = conf.estudiantes;
-    var mision = conf.mision;
-    var plan = conf.planEstrategico;
-    var gobierno = conf.gobierno;
-    var estad = conf.estadisticas;
-    var normativa = conf.normativaLegal;
+    var personal = conf.personal.contenido;
+    var infoEco = conf.infoEconomica.contenido;
+    var serv = conf.servicios.contenido;
+    var ofYde = conf.ofertaDemanda.contenido;
+    var claustro = conf.claustro.contenido;
+    var estudiantes = conf.estudiantes.contenido;
+    var mision = conf.mision.contenido;
+    var plan = conf.planEstrategico.contenido;
+    var gobierno = conf.gobierno.contenido;
+    var estad = conf.estadisticas.contenido;
+    var normativa = conf.normativaLegal.contenido;
 
 
 
@@ -66,38 +64,38 @@ exports.mapa = function(req, res){
         categ_gest_enlaces : categorias_gestion_enlaces,
         tam_categorias_gest : categorias_gestion.length,
 
-        dataset_personal: personal.contenido,
-        tam_dataset_personal: (personal.contenido).length,
+        dataset_personal: personal,
+        tam_dataset_personal: personal.length,
 
-        dataset_infoEco: infoEco.contenido,
-        tam_dataset_infoEco: (infoEco.contenido).length,
+        dataset_infoEco: infoEco,
+        tam_dataset_infoEco: infoEco.length,
 
-        dataset_serv: serv.contenido,
-        tam_dataset_serv: (serv.contenido).length,
+        dataset_serv: serv,
+        tam_dataset_serv: serv.length,
 
-        dataset_ofYde: ofYde.contenido,
-        tam_dataset_ofYde: (ofYde.contenido).length,
+        dataset_ofYde: ofYde,
+        tam_dataset_ofYde: ofYde.length,
 
-        dataset_claustro: claustro.contenido,
-        tam_dataset_claustro: (claustro.contenido).length,
+        dataset_claustro: claustro,
+        tam_dataset_claustro: claustro.length,
 
-        dataset_estudiantes: estudiantes.contenido,
-        tam_dataset_estudiantes: (estudiantes.contenido).length,
+        dataset_estudiantes: estudiantes,
+        tam_dataset_estudiantes: estudiantes.length,
 
-        dataset_mision: mision.contenido,
-        tam_dataset_mision: (mision.contenido).length,
+        dataset_mision: mision,
+        tam_dataset_mision: mision.length,
 
-        dataset_plan: plan.contenido,
-        tam_dataset_plan: (plan.contenido).length,
+        dataset_plan: plan,
+        tam_dataset_plan: plan.length,
 
-        dataset_gobierno: gobierno.contenido,
-        tam_dataset_gobierno: (gobierno.contenido).length,
+        dataset_gobierno: gobierno,
+        tam_dataset_gobierno: gobierno.length,
 
-        dataset_estad: estad.contenido,
-        tam_dataset_estad: (estad.contenido).length,
+        dataset_estad: estad,
+        tam_dataset_estad: estad.length,
 
-        dataset_normativa: normativa.contenido,
-        tam_dataset_normativa: (normativa.contenido).length
+        dataset_normativa: normativa,
+        tam_dataset_normativa: normativa.length
 
     });
 };

@@ -24,7 +24,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/normativaLegal.html") #{seccion}
+					span.first #{seccion}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
@@ -62,11 +62,11 @@ block content
 						li.level1
 							- for (var i = 0; i < contenido.length; i++)
 								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
+									a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
 
 					- for (var j = 0; j < contenido.length; j++)
 						h1
-							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+							a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
 
 						.level1
 							p #{contenido[j].texto}

@@ -4,14 +4,17 @@
   "contenido":[
     {
       "encabezado":"Normativa y Convenios",
+      "link": "normativa-y-convenios",
       "texto":"Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
     },
     {
       "encabezado":"Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+      "link": "ley-de-transparencia-acceso-y-buen-gobierno",
       "texto":"Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
     },
     {
       "encabezado":"Ley de Transparencia Pública de Andalucía",
+      "link": "ley-de-transparencia-publica-de-andalucia",
       "texto":"Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
     }
   ],

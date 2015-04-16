@@ -63,6 +63,12 @@ html(lang="es")
 					menu.style.display = "none";
 			}
 
+			function busca_en_transparente(){
+				var input = document.getElementById("sq").value;
+				input = input + " site:transparente.ugr.es";
+				document.getElementById("sq").value = input;
+			}
+
 
 		if seccion!=="Inicio"
 			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
@@ -99,16 +105,16 @@ html(lang="es")
 					span.separador_enlaces |
 					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
 
-					//
-						div#buscador
-							h2 Buscar
-							form(action="formulario_buscar" class="mod-buttons")
-								#formulario_buscar.mod-buttons
-									#buscador-input
-										label(id="buscar" for="sq")
-											input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
-										label(id="enviar_buscar" for="submit_buscar")
-											input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
+
+					div#buscador
+						h2 Buscar
+						form(action="http://www.google.es/search" target="_blank" class="mod-buttons")
+							#formulario_buscar.mod-buttons
+								#buscador-input
+									label(id="buscar" for="sq")
+										input(class="with_default_value" type="text" name="query" id="sq" placeholder="búsqueda...")
+									label(id="enviar_buscar" for="submit_buscar")
+										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar" onclick="busca_en_transparente()")
 
 				block content
 

@@ -167,6 +167,10 @@
       "ruta":"/normativaLegal.html"
     },
     {
+      "nombre":"Solicitud de Información",
+      "ruta":"/testSolicitudes.html"
+    },
+    {
       "nombre":"Mapa del sitio",
       "ruta":"/mapaweb.html"
     }

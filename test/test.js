@@ -22,8 +22,8 @@
 var _ = require("underscore"),
 should = require("should"),
 request = require("supertest"),
-existe = require(__dirname+"/../lib/existe.js"),
-cargar = require(__dirname+"/../lib/lector.js"),
+existe = require(__dirname+"/../lib/existe"),
+cargar = require(__dirname+"/../lib/cargar"),
 app = require(__dirname+"/../app.js");
 acceso = cargar(__dirname+"/../test/acceso.json");
 
@@ -206,6 +206,17 @@ describe('Prueba de acceso', function(){
         }
         done();
       });
+    });
+  });
+  it("Error", function(done){
+    request(app)
+    .get("/foo")
+    .expect(404)
+    .end(function(err, res){
+      if (err){
+        throw err;
+      }
+      done();
     });
   });
 });

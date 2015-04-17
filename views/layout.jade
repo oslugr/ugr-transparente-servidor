@@ -73,6 +73,10 @@ html(lang="es")
 				document.getElementById("sq").value = input;
 			}
 
+		if titulo === "Buscador"
+			script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+			script(type='text/javascript' src='script/formulario_buscar.js')
+
 
 		if seccion!=="Inicio"
 			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
@@ -111,14 +115,14 @@ html(lang="es")
 
 
 					div#buscador
-						h2 Buscar
-						form(action="http://www.google.es/search" target="_blank" class="mod-buttons")
+						h2 Buscar (en pruebas)
+						form(action="buscador.html" method="GET" class="mod-buttons")
 							#formulario_buscar.mod-buttons
 								#buscador-input
 									label(id="buscar" for="sq")
 										input(class="with_default_value" type="text" name="query" id="sq" placeholder="búsqueda...")
 									label(id="enviar_buscar" for="submit_buscar")
-										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar" onclick="busca_en_transparente()")
+										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
 
 				block content
 

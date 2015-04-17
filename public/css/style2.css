@@ -9,7 +9,7 @@ div#cabecera a#enlace_eadministracion{display:block;position:absolute;top:44px;l
 div#cabecera a#enlace_ugr{display:block;position:absolute;top:0;left:0;height:62px;width:208px}
 div#cabecera a#enlace_stack{display:block;position:absolute;top:76px;right:0;width:960px;height:52px}
 div#cabecera div#buscador{position:absolute;top:36px;left:740px;width:208px;height:21px}
-div#cabecera div#buscador h2{position:absolute;left:5px;line-height:20px}
+div#cabecera div#buscador h2{position:absolute;left:-70px;line-height:20px}
 div#cabecera div#formulario_buscar label#buscar{position:absolute;height:17px;width:125px;padding-top:2px;padding-bottom:0;padding-left:4px;padding-right:2px;top:1px;right:21px}
 div#cabecera div#formulario_buscar label#buscar input{width:123px}
 div#cabecera div#formulario_buscar label#enviar_buscar{position:absolute;display:block;top:1px;right:2px;width:19px;height:19px}
@@ -41,7 +41,7 @@ div#cabecera{background-image:url(../img/general/cabecera.png)}
 div#cabecera h1#cab_inf{text-indent:-9999em;background-image:url(../img/general/banner-lupa.jpg);border-color:#fe9900}
 div#cabecera a#enlace_eadministracion{color:#c68106;background:url(../img/general/cabecera-eadministracion.png) no-repeat left center}
 div#cabecera a#enlace_eadministracion:hover{color:#e35327}
-div#cabecera a#enlace_ugr{text-indent:-9999em;background-image:url(../img/general/cabecera-logo_ugr.png)}
+div#cabecera a#enlace_ugr{text-indent:-9999em;}
 div#cabecera a#enlace_stack{text-indent:-9999em}
 div#cabecera div#formularios{}
 div#cabecera div#buscador h2{color:#ffffff;font-family:Verdana,sans-serif;font-size:1.091em}

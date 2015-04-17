@@ -34,6 +34,7 @@ var gestionInvestigacion = require(__dirname+'/routes/gestionInvestigacion');
 var normativaLegal = require(__dirname+'/routes/normativaLegal');
 var testSolicitudes = require(__dirname+'/routes/testSolicitudes');
 var map = require(__dirname+'/routes/mapaweb');
+var buscador = require(__dirname+'/routes/buscador');
 
 // Librerías
 var cargar = require(__dirname+'/lib/cargar');
@@ -83,6 +84,42 @@ app.get('/normativaLegal.html',normativaLegal.normativaLegal);
 app.get('/testSolicitudes.html', testSolicitudes.testSolicitudes);
 // Mapa del sitio
 app.get('/mapaweb.html', map.mapa);
+// Buscador
+app.get('/buscador.html', buscador.buscador);
+// Archivos de datos
+app.get('/archivos/claustro', function(req, res) {
+  res.send(cargar(__dirname+'/config/claustro.json'));
+});
+app.get('/archivos/estadisticas', function(req, res) {
+  res.send(cargar(__dirname+'/config/estadisticas.json'));
+});
+app.get('/archivos/estudiantes', function(req, res) {
+  res.send(cargar(__dirname+'/config/estudiantes.json'));
+});
+app.get('/archivos/gobierno', function(req, res) {
+  res.send(cargar(__dirname+'/config/gobierno.json'));
+});
+app.get('/archivos/informacion-economica', function(req, res) {
+  res.send(cargar(__dirname+'/config/infoEconomica.json'));
+});
+app.get('/archivos/mision', function(req, res) {
+  res.send(cargar(__dirname+'/config/mision.json'));
+});
+app.get('/archivos/normativa-legal', function(req, res) {
+  res.send(cargar(__dirname+'/config/normativaLegal.json'));
+});
+app.get('/archivos/oferta-demanda', function(req, res) {
+  res.send(cargar(__dirname+'/config/ofertaDemanda.json'));
+});
+app.get('/archivos/personal', function(req, res) {
+  res.send(cargar(__dirname+'/config/personal.json'));
+});
+app.get('/archivos/plan-estrategico', function(req, res) {
+  res.send(cargar(__dirname+'/config/planEstrategico.json'));
+});
+app.get('/archivos/servicios', function(req, res) {
+  res.send(cargar(__dirname+'/config/servicios.json'));
+});
 
 // Variables de entorno (simplificar)
 app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || config.puerto);

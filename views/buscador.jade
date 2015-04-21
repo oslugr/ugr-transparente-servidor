@@ -21,26 +21,24 @@
 
 extends layout
 
-//block scripts
-
 block content
 	#rastro-idiomas
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					span.first Gestión e Investigación / #{seccion}
+					span.first #{titulo}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
 			- var mode2 = "tipo2 item-first_level"
 			- var mode3 = "tipo2 item-first_level"
 			- var mode4 = "tipo2 item-first_level"
-			- var mode5 = "selected tipo2-selected item-first_level"
+			- var mode5 = "tipo2 item-first_level"
 			- var mode6 = "tipo2 item-first_level"
 			- var mode7 = "tipo2 item-first_level"
 			- var submenu1_display = "display:none;"
 			- var submenu2_display = "display:none;"
-			- var submenu3_display = ""
+			- var submenu3_display = "display:none;"
 			- var item1_selected = "tipo1"
 			- var item2_selected = "tipo1"
 			- var item3_selected = "tipo1"
@@ -52,50 +50,14 @@ block content
 
 			- var item8_selected = "tipo1"
 			- var item9_selected = "tipo1"
-			- var item10_selected = "tipo1-selected"
+			- var item10_selected = "tipo1"
 			- var item11_selected = "tipo1"
+
 			include ./plantillaMenus.jade
 		#pagina
 			h1#titulo_pagina
-				span.texto_titulo #{seccion}
+				span.texto_titulo #{titulo}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-
-					ul.enlaces
-						li.level1
-							- for (var i = 0; i < contenido.length; i++)
-								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
-
-					- for (var j = 0; j < contenido.length; j++)
-						h1
-							a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
-
-						.level1
-							p #{contenido[j].texto}
-
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata
-									th.centeralign Ver
-									th.centeralign Archivo
-
-								- for (var k = 0; k < datos.length; k++)
-									- if (datos[k].dataset==contenido[j].encabezado)
-										tr
-											td(class="centeralign par") #{datos[k].nombre}
-											td(class="centeralign impar")
-												a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
-													img(class="link",src="imagenes/link.png", alt="link")
-											if datos[k].vista==0
-												td(class="centeralign par")
-											else
-												td(class="centeralign par")
-													a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
-														img(class="view",src="imagenes/view.png", alt="view")
-											td(class="centeralign impar")
-												a(href="#{servidor}dataset/#{datos[k].descarga}")
-													img(class="save",src="imagenes/save.png", alt="save")
+					

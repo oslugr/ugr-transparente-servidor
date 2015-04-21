@@ -1,20 +1,23 @@
 //
-	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
-	Copyright (C) 2014  Jaime Torres Benavente
-	2015  German Martinez Maldonado
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 
-	This program is free software: you can redistribute it and/or modify
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	This program is distributed in the hope that it will be useful,
+	UGR Transparente is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 
 extends layout
 
@@ -25,7 +28,7 @@ block content
 		#rastro
 			ul#rastro_breadcrumb
 				li.first
-					a(class="first", href="/infoEconomica.html") Administración / #{seccion}
+					span.first Administración / #{seccion}
 	#general
 		#menus
 			- var mode1 = "tipo2 item-first_level"
@@ -63,11 +66,11 @@ block content
 						li.level1
 							- for (var i = 0; i < contenido.length; i++)
 								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].encabezado}") #{contenido[i].encabezado}
+									a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
 
 					- for (var j = 0; j < contenido.length; j++)
 						h1
-							a(id="#{contenido[j].encabezado}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+							a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
 
 						.level1
 							p #{contenido[j].texto}

@@ -4,10 +4,12 @@
   "contenido":[
     {
       "encabezado":"Servicios de la Universidad",
+      "link": "servicios-de-la-universidad",
       "texto":"Información sobre los servicios ofrecidos por la Universidad de Granada. Última actualización: 25/07/2014."
     },
     {
       "encabezado":"Empleo Público",
+      "link": "empleo-publico",
       "texto":"Información sobre la oferta pública de empleo y la relación de puestos de trabajo de la Universidad de Granada. Última actualización: 25/07/2014."
     }
   ],

@@ -4,14 +4,17 @@
   "contenido":[
     {
       "encabezado":"Matrículas",
+      "link": "matriculas",
       "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
     },
     {
       "encabezado":"Canales de Comunicación",
+      "link": "canales-de-comunicacion",
       "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
     },
     {
       "encabezado":"Becas y Ayudas",
+      "link": "becas-y-ayudas",
       "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
     }
   ],

@@ -4,30 +4,37 @@
   "contenido":[
     {
       "encabezado":"Presupuesto 2015",
+      "link": "presupuesto-2015",
       "texto":"Información sobre el presupuesto UGR 2015 aprobado. Aviso: conjunto de datos provisional, actualmente estamos trabajando en la extracción y depuración de datos."
     },
     {
       "encabezado":"Presupuesto 2014",
+      "link": "presupuesto-2014",
       "texto":"Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
     },
     {
       "encabezado":"Memoria de Cuentas Anuales",
+      "link": "memoria-de-cuentas-anuales",
       "texto":"Memoria explicativa de las cuentas anuales del presupuesto 2014."
     },
     {
       "encabezado":"Auditoría",
+      "link": "auditoria",
       "texto":"Informe de auditoría externa de las cuentas anuales de la Universidad de Granada 2012."
     },
     {
       "encabezado":"Desglose de Ingresos",
+      "link": "desglose-de-ingresos",
       "texto":"Información desglosada de los ingresos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por capítulos, resumen por artículos, resumen general de ingresos o comparativa de ingresos entre los años 2012-2014."
     },
     {
       "encabezado":"Desglose de Gastos",
+      "link": "desglose-de-gastos",
       "texto":"Información desglosada de los gastos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por estado de gastos general, gastos de personal, gastos por artículos, coste de mantenimiento de Ceuta y Melilla, programas, resumen del estado de gastos o comparativa de gastos entre los años 2012-2014."
     },
     {
       "encabezado":"Justificantes de Gasto",
+      "link": "justificantes-de-gastos",
       "texto":"Información relativa a las subvenciones y ayudas públicas concedidas con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno. Fecha de conceptos: 10/03/2014."
     }
   ],

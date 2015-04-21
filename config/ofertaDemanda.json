@@ -4,26 +4,32 @@
   "contenido":[
     {
       "encabezado":"Titulaciones 2013/2014",
+      "link": "titulaciones-2013-2014",
       "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
     },
     {
       "encabezado":"Titulaciones 2014/2015",
+      "link": "titulaciones-2014-2015",
       "texto":"Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2014/2015: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
     },
     {
       "encabezado":"Evolución de la Oferta Académica",
+      "link": "evolucion-de-la-oferta-academica",
       "texto":"Evolución de la oferta de títulos reglados y propios de la Universidad de Granada desde el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por: año de inicio, tipo de titulación, nombre de titulación, rama de conocimiento, centro y campus."
     },
     {
       "encabezado":"Demanda Académica 2012/2013",
+      "link": "demanda-academica-2012-2013",
       "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2012/2013."
     },
     {
       "encabezado":"Demanda Académica 2013/2014",
+      "link": "demanda-academica-2013-2014",
       "texto":"Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2013/2014."
     },
     {
       "encabezado":"Evolución de la Demanda Académica",
+      "link": "evolucion-de-la-demanda-academica",
       "texto":"Evolución relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada desde el curso 2012/2013."
     }
   ],

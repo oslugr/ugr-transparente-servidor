@@ -1,21 +1,25 @@
-doctype html
 //
-	Portal web transparente.ugr.es para publicar datos de la Universidad de Granada
-	Copyright (C) 2014  Jaime Torres Benavente
-								2015  German Martinez Maldonado
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 
-	This program is free software: you can redistribute it and/or modify
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	This program is distributed in the hope that it will be useful,
+	UGR Transparente is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+doctype html
 
 html(lang="es")
 	head
@@ -23,19 +27,12 @@ html(lang="es")
 		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
 		meta(name="description", content="Universidad de Granada - UGR transparente")
 		meta(name="keywords", content="universidad, Granada, UGR transparente, ley de transparencia")
-		meta(http-equiv="content-language", name="language", content="es")
 		link(rel="shortcut icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
 		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
 
 		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
-
-		noscript
-			p(class="jsDisabled")
-				| Esta página requiere funcionalidades JavaScript. Por favor,
-				a(href = "http://www.enable-javascript.com/es/" target="_blank")  habilítelo
-				|  para una correcta visualización.
 
 		script(type='text/javascript').
 			function mostrar_menu_administracion(){
@@ -70,14 +67,16 @@ html(lang="es")
 					menu.style.display = "none";
 			}
 
-			//function copy_clip(){
-			//	alert("Texto copiado");
-			//}
+			function busca_en_transparente(){
+				var input = document.getElementById("sq").value;
+				input = input + " site:transparente.ugr.es";
+				document.getElementById("sq").value = input;
+			}
 
-			//function copia_portapapeles(){
-			//	window.clipboardData.setData("Text", document.getElementById("parrafo").innerHTML);
-			//	alert("Texto copiado al portapapeles");
-			//}
+		if titulo === "Buscador"
+			script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+			script(type='text/javascript' src='script/formulario_buscar.js')
+
 
 		if seccion!=="Inicio"
 			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
@@ -92,6 +91,12 @@ html(lang="es")
 			block scripts
 
 	body
+		noscript
+			p(class="jsDisabled")
+				| Esta página requiere funcionalidades JavaScript. Por favor,
+				a(href = "http://www.enable-javascript.com/es/" target="_blank")  habilítelo
+				|  para una correcta visualización.
+
 		div(id="boxes")
 			div(id="dialog" class="window" hidden)
 				img(id="close",src="imagenes/close.png", alt="close", longdesc="cerrar")
@@ -104,17 +109,18 @@ html(lang="es")
 					h1#cab_inf UGR Transparente
 					a(href="http://www.ugr.es" id="enlace_ugr") Universidad de Granada
 					span.separador_enlaces |
-					a(href="/" id="enlace_stack") Vicerrectorado de Estudiantes
+					a(href="/" id="enlace_stack") UGR Transparente
 					span.separador_enlaces |
 					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
 
-					div#buscador(hidden)
-						h2 Buscar
-						form(action="formulario_buscar" class="mod-buttons")
+
+					div#buscador
+						h2 Buscar (en pruebas)
+						form(action="buscador.html" method="GET" class="mod-buttons")
 							#formulario_buscar.mod-buttons
 								#buscador-input
 									label(id="buscar" for="sq")
-										input(class="with_default_value" type="text" name="query" id="sq" value="búsqueda...")
+										input(class="with_default_value" type="text" name="query" id="sq" placeholder="búsqueda...")
 									label(id="enviar_buscar" for="submit_buscar")
 										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
 

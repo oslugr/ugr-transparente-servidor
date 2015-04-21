@@ -173,6 +173,54 @@
     {
       "nombre":"Mapa del sitio",
       "ruta":"/mapaweb.html"
+    },
+    {
+      "nombre":"Buscador",
+      "ruta":"/buscador.html"
+    },
+    {
+      "nombre":"Datos de Personal",
+      "ruta":"/archivos/personal"
+    },
+    {
+      "nombre":"Datos de Información Económica",
+      "ruta":"/archivos/informacion-economica"
+    },
+    {
+      "nombre":"Datos de Servicios",
+      "ruta":"/archivos/servicios"
+    },
+    {
+      "nombre":"Datos de Oferta y Demanda",
+      "ruta":"/archivos/oferta-demanda"
+    },
+    {
+      "nombre":"Datos de Claustro",
+      "ruta":"/archivos/claustro"
+    },
+    {
+      "nombre":"Datos de Estudiantes",
+      "ruta":"/archivos/estudiantes"
+    },
+    {
+      "nombre":"Datos de Mision",
+      "ruta":"/archivos/mision"
+    },
+    {
+      "nombre":"Datos de Plan Estratégico",
+      "ruta":"/archivos/plan-estrategico"
+    },
+    {
+      "nombre":"Datos de Gobierno",
+      "ruta":"/archivos/gobierno"
+    },
+    {
+      "nombre":"Datos de Estadisticas",
+      "ruta":"/archivos/estadisticas"
+    },
+    {
+      "nombre":"Datos de Normativa Legal",
+      "ruta":"/archivos/normativa-legal"
     }
   ]
 }

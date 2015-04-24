@@ -1,5 +1,5 @@
 #	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
-#	Copyright (C) 2015 Juan Julián Merelo Guervós
+#	Copyright (C) 2015 Juan Julián Merelo Guervós, Germán Martínez Maldonado
 #
 #	This file is part of UGR Transparente.
 #
@@ -22,5 +22,6 @@ language: node_js
 
 # version numbers, testing against two versions of node
 node_js:
-  - "0.10"
+  - "0.12"
   - "0.11"
+  - "0.10"

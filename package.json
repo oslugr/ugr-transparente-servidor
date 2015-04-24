@@ -51,6 +51,6 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "istanbul test _mocha"
+    "test": "istanbul cover _mocha ./test --recursive"
   }
 }

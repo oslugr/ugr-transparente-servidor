@@ -50,7 +50,7 @@
     "node": "^0.10.37"
   },
   "scripts": {
-    "start": "PORT=3000 forever start app.js",
+    "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

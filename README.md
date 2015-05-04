@@ -31,21 +31,21 @@ sudo npm install
 npm list --depth=0
 ```
 
-5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
+5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que dejar obligatoriamente este puerto en el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, podríamos usar, por ejemplo,  el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
 ```
 {
 ...
 "scripts": {
-  "start": "PORT=3000 forever start app.js",
+  "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
   ...
 
 }
 ```
 
-6.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar esta dirección obligatoriamente por nuestra IP. Por defecto, accederemos en local a `127.0.0.1`
+6.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar esta dirección obligatoriamente por nuestra IP. Por defecto, si estamos probando la instalación de forma local, accederemos a `127.0.0.1`
 ```
 ...
-app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
 ...
 
 ```
@@ -56,7 +56,7 @@ app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 npm start
 ```
 
-Si vas a tu navegador, en la dirección [http://localhost:3000](http://localhost:3000) tendrás el servidor disponible.
+Si vas a tu navegador, y has realizado las modificaciones para una instalación en local, en [http://localhost:3000](http://localhost:3000) tendrás la aplicación disponible.
 
 
 # Test

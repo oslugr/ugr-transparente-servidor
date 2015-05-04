@@ -23,6 +23,7 @@ git clone https://github.com/oslugr/ugr-transparente-servidor
 ```
 cd ugr-transparente-servidor
 sudo npm install
+sudo npm install forever -g
 ```
 
 4.- Comprobamos que las dependencias de todos los módulos se cumplen:

@@ -21,6 +21,7 @@
 - hosts: transparente-servidor
   sudo: yes
   remote_user: {user}
+  # ¡OJO! Cambiar donde ponga {user} por el usuario de la máquina remota donde estemos realizando la instalación
 
     - name: Instalamos git
       apt: name=git state=present
@@ -55,4 +56,4 @@
       template: src=transparente-ugr.conf dest=/etc/init/transparente-ugr.conf owner=root group=root mode=0644
 
     - name: Lanzamos aplicación
-      shell: PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log /home/{user}/ugr-transparente-servidor/app.js
+      command: npm start chdir=/home/{user}/ugr-transparente-servidor

@@ -31,16 +31,26 @@ sudo npm install
 npm list --depth=0
 ```
 
-5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos cambiar el valor del campo "puerto" en el archivo "config.json" de la carpeta "config". Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
+5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar obligatoriamente este puerto por el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, hemos establecido que el puerto de escucha sea el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
 ```
 {
+...
+"scripts": {
+  "start": "PORT=3000 forever start app.js",
   ...
-  "puerto":3000,
-  ...
+
 }
 ```
 
-5.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`
+6.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar esta dirección obligatoriamente por nuestra IP. Por defecto, accederemos en local a `127.0.0.1`
+```
+...
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
+...
+
+```
+
+7.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`
 
 ```
 npm start

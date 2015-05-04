@@ -50,7 +50,7 @@
     "node": "^0.10.37"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "PORT=3000 forever start app.js",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

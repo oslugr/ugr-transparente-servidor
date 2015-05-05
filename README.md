@@ -51,10 +51,10 @@ app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
 
 ```
 
-7.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`
+7.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`. ¡Ojo! cuando lances la aplicación apareceran los logs de registro en /var, por lo que es necesario escribir el comando con permisos de superusuario.
 
 ```
-npm start
+sudo npm start
 ```
 
 Si vas a tu navegador, y has realizado las modificaciones para una instalación en local, en [http://localhost:3000](http://localhost:3000) tendrás la aplicación disponible.

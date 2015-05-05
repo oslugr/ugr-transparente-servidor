@@ -7,7 +7,7 @@ div#cabecera{width:100%;height:245px;position:relative}
 div#cabecera h1#cab_inf{width:100%;height:100%;padding-top:0;padding-bottom:0;border-width:0;position:absolute;top:80px;left:0}
 div#cabecera a#enlace_eadministracion{display:block;position:absolute;top:44px;left:242px;height:19px;padding-top:2px;padding-left:24px}
 div#cabecera a#enlace_ugr{display:block;position:absolute;top:0;left:0;height:62px;width:208px}
-div#cabecera a#enlace_stack{display:block;position:absolute;top:76px;right:0;width:960px;height:52px}
+div#cabecera a#enlace_stack{display:block;position:absolute;top:90px;right:0;width:960px;height:141px}
 div#cabecera div#buscador{position:absolute;top:36px;left:740px;width:208px;height:21px}
 div#cabecera div#buscador h2{position:absolute;left:-70px;line-height:20px}
 div#cabecera div#formulario_buscar label#buscar{position:absolute;height:17px;width:125px;padding-top:2px;padding-bottom:0;padding-left:4px;padding-right:2px;top:1px;right:21px}

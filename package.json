@@ -36,6 +36,7 @@
     "jade": "^1.9.2",
     "istanbul": "^0.3.11",
     "node.io": "^0.5.1",
+    "request": "^2.55.0",
     "should": "^5.2.0",
     "supertest": "^0.15.0",
     "underscore": "^1.8.2"
@@ -50,7 +51,8 @@
     "node": "^0.10.37"
   },
   "scripts": {
-    "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "start": "PORT=3000 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

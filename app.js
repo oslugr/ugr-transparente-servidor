@@ -38,6 +38,10 @@ var buscador = require(__dirname+'/routes/buscador');
 
 // Librerías
 var cargar = require(__dirname+'/lib/cargar');
+var escribir = require(__dirname+'/lib/putJSON');
+
+// Prueba de escritura de JSON recuperado de API
+escribir();
 
 // Crea aplicación web con Express
 var app = express();
@@ -123,7 +127,7 @@ app.get('/archivos/normativa-legal', function(req, res) {
 
 // Variables de entorno (simplificar)
 app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT);
-app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));

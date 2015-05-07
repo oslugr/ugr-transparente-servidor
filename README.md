@@ -59,6 +59,12 @@ sudo npm start
 
 Si vas a tu navegador, y has realizado las modificaciones para una instalación en local, en [http://localhost:3000](http://localhost:3000) tendrás la aplicación disponible.
 
+8.- Cuando queramos matar el proceso tendremos que usar el script `kill` que hay en el archivo `package.json`.
+
+```
+sudo npm run-script kill
+```
+
 
 # Test
 

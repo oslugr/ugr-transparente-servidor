@@ -1,3 +1,2 @@
 [transparente-servidor]
-# ¡OJO! Cambiar la siguiente dirección por la de la máquina a aprovisionar
-transparente.ugr.es
+192.168.33.33

@@ -62,7 +62,7 @@ Indicaremos el puerto con la variable `PORT` y la IP o URL con la varible `IP`. 
 {
 ...
 "scripts": {
-  "start": "PORT=3000 IP=127.0.0.1 forever start -l forever.log -a -o out.log -e err.log ./app.js",
+  "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
 ...
 }
 ```
@@ -72,15 +72,15 @@ Indicaremos el puerto con la variable `PORT` y la IP o URL con la varible `IP`. 
 {
 ...
 "scripts": {
-  "start": "PORT=80 IP=transparente.ugr.es forever start -l forever.log -a -o out.log -e err.log ./app.js",
+  "start": "PORT=80 IP=transparente.ugr.es forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
 ...
 }
 ```
 
-6.- Por último solo nos queda, arrancar la aplicación mediante un script de inicio del archivo `package.json`.
+6.- Por último solo nos queda, arrancar la aplicación mediante un script de inicio del archivo `package.json`. Es imprescindible que ejecutemos este script con permisos de superusuario debido a que los archivos de registro se almacenarán en directorios que requieren dichos permisos.
 
 ```
-npm start
+sudo npm start
 ```
 
 * Si se ha realizado la configuración para una instalación pública, al abrir el navegador y acceder a la dirección correspondiente (como es [http://transparente.ugr.es](http://transparente.ugr.es)), la aplicación debería estar funcionando para ser accesible desde cualquier lugar con acceso a internet.
@@ -90,7 +90,7 @@ npm start
 7.- Cuando queramos detener el proceso tendremos que usar el script `kill` que hay en el archivo `package.json`.
 
 ```
-sudo npm run-script kill
+npm run-script kill
 ```
 
 

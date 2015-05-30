@@ -49,7 +49,7 @@ npm list --depth=0
 ...
 "scripts": {
   "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
-  ...
+...
 
 }
 ```
@@ -68,7 +68,7 @@ app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
 sudo npm start
 ```
 
-* Si se ha realizado la configuración para una instalación pública, al abrir el navegador y acceder a la dirección correspondiente (como es `transparente.ugr.es`), la aplicación debería estar funcionando para ser accesible desde cualquier lugar con acceso a internet.
+* Si se ha realizado la configuración para una instalación pública, al abrir el navegador y acceder a la dirección correspondiente (como es [http://transparente.ugr.es](http://transparente.ugr.es)), la aplicación debería estar funcionando para ser accesible desde cualquier lugar con acceso a internet.
 
 * Si se ha realizado la configuración para una instalación local, al abrir un navegador y acceder a la dirección [http://localhost:3000](http://localhost:3000), la aplicación debería estar funcionando para ser accesible solo desde el entorno local.
 

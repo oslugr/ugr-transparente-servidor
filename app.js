@@ -38,10 +38,10 @@ var buscador = require(__dirname+'/routes/buscador');
 
 // Librerías
 var cargar = require(__dirname+'/lib/cargar');
-var escribir = require(__dirname+'/lib/putJSON');
+//var escribir = require(__dirname+'/lib/putJSON');
 
 // Prueba de escritura de JSON recuperado de API
-escribir();
+//escribir();
 
 // Crea aplicación web con Express
 var app = express();

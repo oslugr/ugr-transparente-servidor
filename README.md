@@ -24,10 +24,16 @@ node -v
 npm -v
 ```
 
-2.- Descargamos todo el contenido del repositorio para poder ejecutar la aplicación. Es preferible que siempre hagamos el clonado de un repositorio mediante SSH para lo que es necesario que primero hayamos subido nuestra clave SSH a GitHub. En la propia página de GitHub explicando como hacerlo desde [aquí](https://help.github.com/articles/generating-ssh-keys/)
+2.- Descargamos todo el contenido del repositorio para poder ejecutar la aplicación. Es preferible que siempre hagamos el clonado de un repositorio mediante SSH para lo que es necesario que primero hayamos subido nuestra clave SSH a GitHub. En la propia página de GitHub explican como hacerlo desde [aquí](https://help.github.com/articles/generating-ssh-keys/)
 
 ```
 git clone git@github.com:oslugr/ugr-transparente-servidor.git
+```
+
+Si tuvieramos problemas con la conexión SSH, siempre podremos seguir haciéndolo mediante HTTPS:
+
+```
+git clone https://github.com/oslugr/ugr-transparente-servidor.git
 ```
 
 3.- Nos situamos en el directorio de la aplicación (`ugr-transparente-servidor`) y procedemos a instalar todas las dependencias necesarias para la aplicación.
@@ -79,7 +85,7 @@ sudo npm run-script kill
 ```
 
 
-# Test
+# Tests unitarios y de cobertura
 
 Se han incluido tests unitarios para comprobar que las diferentes funcionalidades de la aplicación funcionan correctamente, de dichas funcionalidades hay que destacar el acceso a los archivos JSON con los datos del portal (para comprobar que existen y que los datos que contienen están en un formato válido) y que las diferentes páginas del portal son accesibles. También se ha creado un test de cobertura para comprobar que toda funcionalidad del portal está cubierta y asegurada por sus correspondientes test unitarios. Los test unitarios son realizados con [Mocha](https://github.com/mochajs/mocha) y el test de cobertura es realizado con [Istanbul](https://github.com/gotwarlost/istanbul). Se ejecutan con:
 

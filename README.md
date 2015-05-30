@@ -24,7 +24,7 @@ node -v
 npm -v
 ```
 
-2.- Descargamos todo el contenido del repositorio para poder ejecutar la aplicación. Es preferible que siempre hagamos el clonado de un repositorio mediante SSH para lo que es necesario que primero hayamos subido nuestra clave SSH a GitHub. En la propia página de GitHub explican como hacerlo desde [aquí](https://help.github.com/articles/generating-ssh-keys/)
+2.- Descargamos todo el contenido del repositorio para poder ejecutar la aplicación. Es preferible que siempre hagamos el clonado de un repositorio mediante SSH para lo que es necesario que primero hayamos subido nuestra clave SSH a GitHub. En la propia página de GitHub explican como hacerlo desde [aquí](https://help.github.com/articles/generating-ssh-keys/).
 
 ```
 git clone git@github.com:oslugr/ugr-transparente-servidor.git
@@ -49,29 +49,38 @@ Comprobamos también que las dependencias de todos los módulos se cumplen:
 npm list --depth=0
 ```
 
-4.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que dejar obligatoriamente este puerto en el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, podríamos usar, por ejemplo,  el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
+4.- El puerto que el servidor va a estar escuchando para resolver peticiones deberemos indicarlo en el archivo `package.json`. Para que la aplicación sea accesible de forma pública, tendremos que poner como puerte de escucha obligatoriamente el puerto 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto.
+
+Si estamos probando la aplicación de forma local, podemos usar cualquier puerto, pero siempre con un número superior a 1024, ya que los inferiore a este son puertos reservados por el sistema; por ejemplo, vamos a usar el 3000.
+
+También tenemos que indicar la IP o el URL del servidor en el que estará la aplicación ejecutándose; por ejemplo, para la ejecución de prueba ejecutamos la aplicación localmente en la dirección IP `127.0.0.1`, para la ejecución de acceso público ejecutamos la aplicación en el servidor `transparente.ugr.es`.
+
+Indicaremos el puerto con la variable `PORT` y la IP o URL con la varible `IP`. Ambas varibles se las pasamos a la aplicación en el script de inicio `npm start`.
+
+* Configuración local:
 ```
 {
 ...
 "scripts": {
-  "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+  "start": "PORT=3000 IP=127.0.0.1 forever start -l forever.log -a -o out.log -e err.log ./app.js",
 ...
-
 }
 ```
 
-5.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`, se puede introducir tanto la dirección URL como la dirección IP pública (en nuestro caso hemos puesto la dirección URL a la que responderá nuestro servidor, `transparente.ugr.es`). Si estamos realizando una instalación local para pruebas, pondremos la dirección IP local: `127.0.0.1`.
+* Configuración pública:
 ```
+{
 ...
-app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
+"scripts": {
+  "start": "PORT=80 IP=transparente.ugr.es forever start -l forever.log -a -o out.log -e err.log ./app.js",
 ...
-
+}
 ```
 
-6.- Arrancamos la aplicación mediante un script que hemos introducido en el archivo `package.json`. ¡Ojo! Cuando inicies la aplicación aparecerán los logs de registro en /var, por lo que es necesario ejecutar dicho script con permisos de superusuario.
+6.- Por último solo nos queda, arrancar la aplicación mediante un script de inicio del archivo `package.json`.
 
 ```
-sudo npm start
+npm start
 ```
 
 * Si se ha realizado la configuración para una instalación pública, al abrir el navegador y acceder a la dirección correspondiente (como es [http://transparente.ugr.es](http://transparente.ugr.es)), la aplicación debería estar funcionando para ser accesible desde cualquier lugar con acceso a internet.

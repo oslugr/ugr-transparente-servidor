@@ -51,7 +51,7 @@
   },
   "scripts": {
     "deploy-test": "fly azure",
-    "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "start": "PORT=3000 IP=127.0.0.1 forever start -l forever.log -a -o out.log -e err.log ./app.js",
     "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
     "test": "istanbul cover _mocha ./test --recursive"
   }

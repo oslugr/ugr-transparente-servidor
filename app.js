@@ -1,22 +1,22 @@
 /*
-	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
-	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
-	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 
-	This file is part of UGR Transparente.
+This file is part of UGR Transparente.
 
-	UGR Transparente is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-	UGR Transparente is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with this program. If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
 
@@ -38,6 +38,10 @@ var buscador = require(__dirname+'/routes/buscador');
 
 // Librerías
 var cargar = require(__dirname+'/lib/cargar');
+//var escribir = require(__dirname+'/lib/putJSON');
+
+// Prueba de escritura de JSON recuperado de API
+//escribir();
 
 // Crea aplicación web con Express
 var app = express();
@@ -122,8 +126,8 @@ app.get('/archivos/normativa-legal', function(req, res) {
 });
 
 // Variables de entorno (simplificar)
-app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT);
-app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
+app.set('port', process.env.PORT);
+app.set('ip', process.env.IP);
 
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));

@@ -22,6 +22,7 @@
   sudo: yes
   remote_user: {user}
   # ¡OJO! Cambiar donde ponga {user} por el usuario de la máquina remota donde estemos realizando la instalación
+  tasks:
 
     - name: Instalamos git
       apt: name=git state=present
@@ -33,8 +34,12 @@
 
     - name: Instalamos node
       shell: >
-            /bin/bash -c "source /home/{user}/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
+            /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
             creates=/home/{user}/.nvm/alias
+
+    - name: Si la instalación es sobre Ubuntu 14.10, solucionamos error de entorno de node
+      shell: ln -s /usr/bin/nodejs /usr/bin/node
+      ignore_errors: yes
 
     - name: Instalamos npm
       apt: name=npm state=present

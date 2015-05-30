@@ -8,7 +8,7 @@
     "Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
     "Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
     "Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
-    ],
+  ],
   "description": "Portal de transparencia de la Universidad de Granada",
   "keywords": [
     "opendata"
@@ -33,24 +33,26 @@
   },
   "dependencies": {
     "express": "^3.4.8",
+    "flightplan": "^0.6.2",
+    "forever": "^0.14.1",
     "jade": "^1.9.2",
-    "istanbul": "^0.3.11",
     "node.io": "^0.5.1",
-    "should": "^5.2.0",
-    "supertest": "^0.15.0",
+    "request": "^2.55.0",
     "underscore": "^1.8.2"
   },
   "devDependencies": {
     "istanbul": "^0.3.11",
+    "mocha": "^2.2.1",
     "should": "^5.2.0",
-    "supertest": "^0.15.0",
-    "mocha": "^2.2.1"
+    "supertest": "^0.15.0"
   },
   "engines": {
     "node": "^0.10.37"
   },
   "scripts": {
-    "start": "PORT=80 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "deploy": "fly test",
+    "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

@@ -8,31 +8,42 @@ La aplicación es accesible desde [http://transparente.ugr.es/](http://transpare
 
 ## Instalación
 
-1.- Instalar Node.js como indican en su [repositorio](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+1.- Lo primero es instalar **Node.js**. Para ello primero instalamos el paquete `python-software-properties` que nos permite añadir repositorios mediante el comando `add-apt-repository`. Seguidamente añadimos el repositorio para instalar **Node.js**, actualizamos la lista de paquetes e instalamos `nodejs`.
 
-(Nota: en la versión 14.10 de Ubuntu (Utopic Unicorn), se han detectado problemas para instalar Node.js desde los repositorios oficiales de la aplicación. Para solucionar esto podemos seguir las instrucciones de [este enlace](http://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/).)
-
-2.- Descargar el repositorio `git clone`
 
 ```
-git clone https://github.com/oslugr/ugr-transparente-servidor
+sudo apt-get install python-software-properties
+sudo apt-add-repository ppa:chris-lea/node.js
+sudo apt-get update && sudo apt-get install nodejs
 ```
 
-3.- Entrar al directorio `ugr-transparente-servidor` e instalar las dependencias que se usen en este repositorio.
+Comprobamos que **Node.js** y **npm** (su gestor de paquetes) se han instalado correctamente.
+
+```
+node -v
+npm -v
+```
+
+2.- Descargamos todo el contenido del repositorio para poder ejecutar la aplicación. Es preferible que siempre hagamos el clonado de un repositorio mediante SSH para lo que es necesario que primero hayamos subido nuestra clave SSH a GitHub. En la propia página de GitHub explicando como hacerlo desde [aquí](https://help.github.com/articles/generating-ssh-keys/)
+
+```
+git clone git@github.com:oslugr/ugr-transparente-servidor.git
+```
+
+3.- Nos situamos en el directorio de la aplicación (`ugr-transparente-servidor`) y procedemos a instalar todas las dependencias necesarias para la aplicación.
 
 ```
 cd ugr-transparente-servidor
 sudo npm install
-sudo npm install forever -g
 ```
 
-4.- Comprobamos que las dependencias de todos los módulos se cumplen:
+Comprobamos también que las dependencias de todos los módulos se cumplen:
 
 ```
 npm list --depth=0
 ```
 
-5.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que dejar obligatoriamente este puerto en el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, podríamos usar, por ejemplo,  el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
+4.- Para indicar el puerto que el servidor va a estar escuchando para resolver peticiones, deberemos modificarlo en el archivo `package.json`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que dejar obligatoriamente este puerto en el 80, ya que este es el puerto por defecto al que los navegadores harán las peticiones por defecto; pero como durante el desarrolllo trabajaremos habitualmente en local, y no se puede usar el puerto 80 porque es un puerto reservado, podríamos usar, por ejemplo,  el 3000, aunque este puerto se puede cambiar por cualquier otro que no esté reservado o en uso.
 ```
 {
 ...
@@ -43,7 +54,7 @@ npm list --depth=0
 }
 ```
 
-6.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`. Si vamos a instalar la aplicación en un servidor de acceso público tendremos que cambiar esta dirección obligatoriamente por nuestra IP. Por defecto, si estamos probando la instalación de forma local, accederemos a `127.0.0.1`
+5.- Para indicar la dirección IP donde accederemos, deberemos modificar la variable "ip" en el archivo `app.js`, se puede introducir tanto la dirección URL como la dirección IP pública (en nuestro caso hemos puesto la dirección URL a la que responderá nuestro servidor, `transparente.ugr.es`). Si estamos realizando una instalación local para pruebas, pondremos la dirección IP local: `127.0.0.1`.
 ```
 ...
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
@@ -51,15 +62,17 @@ app.set('ip', process.env.OPENSHIFT_NODEJS_IP || 'transparente.ugr.es');
 
 ```
 
-7.- Lanzaremos la aplicación mediante un script que hemos introducido en el archivo `package.json`. ¡Ojo! cuando lances la aplicación apareceran los logs de registro en /var, por lo que es necesario escribir el comando con permisos de superusuario.
+6.- Arrancamos la aplicación mediante un script que hemos introducido en el archivo `package.json`. ¡Ojo! Cuando inicies la aplicación aparecerán los logs de registro en /var, por lo que es necesario ejecutar dicho script con permisos de superusuario.
 
 ```
 sudo npm start
 ```
 
-Si vas a tu navegador, y has realizado las modificaciones para una instalación en local, en [http://localhost:3000](http://localhost:3000) tendrás la aplicación disponible.
+* Si se ha realizado la configuración para una instalación pública, al abrir el navegador y acceder a la dirección correspondiente (como es `transparente.ugr.es`), la aplicación debería estar funcionando para ser accesible desde cualquier lugar con acceso a internet.
 
-8.- Cuando queramos matar el proceso tendremos que usar el script `kill` que hay en el archivo `package.json`.
+* Si se ha realizado la configuración para una instalación local, al abrir un navegador y acceder a la dirección [http://localhost:3000](http://localhost:3000), la aplicación debería estar funcionando para ser accesible solo desde el entorno local.
+
+7.- Cuando queramos detener el proceso tendremos que usar el script `kill` que hay en el archivo `package.json`.
 
 ```
 sudo npm run-script kill

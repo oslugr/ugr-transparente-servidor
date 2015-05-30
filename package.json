@@ -54,3 +54,5 @@
     "start": "PORT=3000 forever start -l forever.log -a -o out.log -e err.log ./app.js",
     "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
     "test": "istanbul cover _mocha ./test --recursive"
+  }
+}

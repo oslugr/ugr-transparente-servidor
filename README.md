@@ -12,6 +12,8 @@ La aplicación es accesible desde [http://transparente.ugr.es/](http://transpare
 
 (Nota: en la versión 14.10 de Ubuntu (Utopic Unicorn), se han detectado problemas para instalar Node.js desde los repositorios oficiales de la aplicación. Para solucionar esto podemos seguir las instrucciones de [este enlace](http://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/).)
 
+[PONER COMANDOS]
+
 2.- Descargar el repositorio `git clone`
 
 ```
@@ -23,7 +25,6 @@ git clone https://github.com/oslugr/ugr-transparente-servidor
 ```
 cd ugr-transparente-servidor
 sudo npm install
-sudo npm install forever -g
 ```
 
 4.- Comprobamos que las dependencias de todos los módulos se cumplen:
@@ -84,3 +85,30 @@ Disponemos de una integración continua que nos permite detectar automáticament
 Para introducir la integración continua vamos a usar [Travis CI](https://travis-ci.org/). Para poder usarlo, activamos continua como explican en la propia [página](http://docs.travis-ci.com/user/getting-started/) de Travis CI, lo más importante es activar el uso de Travis para nuestro repositorio y crear el archivo de configuración `.travis.yml`.
 
 A partir de ahora, con cada nuevo cambio que publiquemos en el repositorio del proyecto se generará una build del programa en Travis que ejecutará los scripts básicos de `npm`: `npm install` y `npm test`. Ya solo nos queda comprobar el resultado de estas [builds](https://travis-ci.org/oslugr/ugr-transparente-servidor/builds).
+
+
+# Despliegue automático
+
+copiar clave ssh en github
+
+ssh-keygen -t rsa -b 4096 -C "germaaan@gmail.com"
+
+Introducir ruta del archivo id_rsa
+Introducir contraseña
+The key's randomart image is:
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+pide contraseña
+
+
+cat ~/.ssh/id_rsa.pub
+
+copiar en la pagina de github
+
+ssh -T git@github.com
+Hi germaaan! You've successfully authenticated, but GitHub does not provide shell access.
+
+No poner el git clone
+git clone https://github.com/oslugr/ugr-transparente-servidor.git

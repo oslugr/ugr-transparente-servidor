@@ -50,9 +50,9 @@
     "node": "^0.10.37"
   },
   "scripts": {
-    "deploy": "fly test",
-    "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "deploy": "fly transparente",
     "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
+    "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

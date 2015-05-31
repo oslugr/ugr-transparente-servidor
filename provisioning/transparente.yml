@@ -1,0 +1,58 @@
+#	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+#	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+#
+#	This file is part of UGR Transparente.
+#
+#	UGR Transparente is free software: you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation, either version 3 of the License, or
+#	(at your option) any later version.
+#
+#	UGR Transparente is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#
+#	You should have received a copy of the GNU General Public License
+#	along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+---
+- hosts: transparente
+  sudo: yes
+  remote_user: "{{user}}"
+  tasks:
+    - name: Añadiendo repositorio para instalar Node.js...
+      apt_repository: repo='ppa:chris-lea/node.js'
+
+    - name: Actualizando lista de paquetes...
+      apt: update_cache=yes
+
+    - name: Instalando git...
+      apt: name=git state=present
+
+    - name: Instalando Node.js...
+      apt: name=nodejs state=present
+
+    - name: Clonando repositorio con la aplicación...
+      git: repo=https://github.com/oslugr/ugr-transparente-servidor.git
+           dest=/home/"{{user}}"/ugr-transparente-servidor
+           version=master
+
+    - name: Cambiando propietario del directorio de la aplicación...
+      file: path=/home/"{{user}}"/ugr-transparente-servidor
+            owner="{{user}}" group="{{user}}" state=directory recurse=yes
+
+    - name: Instalando las dependencias de la aplicación...
+      npm: path=/home/"{{user}}"/ugr-transparente-servidor
+
+    - name: Cambiando parámetros de acceso (1/2)...
+      command: sed "s/IP=127.0.0.1/IP=transparente.ugr.es/" -i
+              /home/"{{user}}"/ugr-transparente-servidor/package.json
+
+    - name: Cambiando parámetros de acceso (2/2)...
+      command: sed "s/PORT=3000/PORT=80/" -i
+              /home/"{{user}}"/ugr-transparente-servidor/package.json
+
+    - name: Arrancando el servidor...
+      command: chdir=ugr-transparente-servidor npm start

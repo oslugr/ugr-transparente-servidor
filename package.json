@@ -33,14 +33,14 @@
   },
   "dependencies": {
     "express": "^3.4.8",
-    "flightplan": "^0.6.2",
-    "forever": "^0.14.1",
     "jade": "^1.9.2",
     "node.io": "^0.5.1",
     "request": "^2.55.0",
     "underscore": "^1.8.2"
   },
   "devDependencies": {
+    "flightplan": "^0.6.2",
+    "forever": "^0.14.1",
     "istanbul": "^0.3.11",
     "mocha": "^2.2.1",
     "should": "^5.2.0",

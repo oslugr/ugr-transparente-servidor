@@ -236,7 +236,7 @@ Esta carpeta es la que contiene todos los *scripts* escritos en **Node.js** que 
 
 Los módulos que usa la aplicación no se distribuyen con la misma, si no que se instalan cuando se descarga la aplicación. En esta carpeta es donde se almacenan los archivos de todos los módulos instalados.
 
-## Carpetas test, coverage y provisioning
+## Carpetas `test`, `coverage` y `provisioning`
 
 Al igual que diferenciábamos entre módulos para la aplicación y módulos para el desarrollo, las carpetas anteriores serian las carpetas de la aplicación, mientras que estas serian las carpetas de los módulos para el desarrollo.
 

@@ -22,6 +22,22 @@
     {
       "dataset":"Matrículas",
       "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2014/2015: grado",
+      "vista":1,
+      "url":"113ce86c-23b4-4d19-b518-001f5aedd285",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
+      "nombre":"Matrículas 2014/2015: posgrado",
+      "vista":1,
+      "url":"2d4cb129-cda1-4737-8834-d25f269e29bb",
+      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/2d4cb129-cda1-4737-8834-d25f269e29bb/download/201415matriculasposgrado.csv"
+    },
+    {
+      "dataset":"Matrículas",
+      "id_dataset":"matriculas-ugr-2013",
       "nombre":"Matrículas 2013/2014: grado",
       "vista":1,
       "url":"5df5e28b-09ca-40aa-a908-5438fd53cbda",

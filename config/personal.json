@@ -70,6 +70,14 @@
     {
       "dataset":"Información Salarial 2015",
       "id_dataset":"informacion-salarial-2015",
+      "nombre":"PDI contratado",
+      "vista":1,
+      "url":"81e5e765-a3b9-43de-83ce-18f2537060dd",
+      "descarga":"985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/81e5e765-a3b9-43de-83ce-18f2537060dd/download/docenteinvestigadorcontratado.csv"
+    },
+    {
+      "dataset":"Información Salarial 2015",
+      "id_dataset":"informacion-salarial-2015",
       "nombre":"PDI funcionario",
       "vista":1,
       "url":"36773411-4152-4f3b-abe8-6db00628434f",

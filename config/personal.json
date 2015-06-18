@@ -341,7 +341,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Complemento de productividad: PAS",
       "vista":1,
       "url":"ac0aae3c-7459-4b04-b110-c23aeed5b155",
@@ -349,7 +349,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Complemento por Doctorado: profesores asociados",
       "vista":1,
       "url":"7e5c4b2b-23e1-47a4-aa00-39f93ace75d2",
@@ -357,7 +357,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Retribuciones: docentes contratados LOU",
       "vista":1,
       "url":"7d84ca24-2c1d-4799-aa5e-445a5ab4c343",
@@ -365,7 +365,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Retribuciones: funcionarios docentes",
       "vista":1,
       "url":"9860da72-1c4b-4647-b54a-465d4ffd53ec",
@@ -373,7 +373,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Retribuciones: personal de administración y servicios (funcionarios)",
       "vista":1,
       "url":"ed992204-b8b2-4e67-86eb-2f5309d2f2fd",
@@ -381,7 +381,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Retribuciones: personal de administración y servicios (laboral)",
       "vista":1,
       "url":"ed155a33-d5e6-44d6-a611-2348e74ff4e8",
@@ -389,7 +389,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Retribuciones: personal docente con plaza vinculada",
       "vista":1,
       "url":"21e77e24-d7d7-4aae-bc3f-529a571feadc",
@@ -397,7 +397,7 @@
     },
     {
       "dataset":"Banda Salarial",
-      "id_dataset":"informacion-salarial",
+      "id_dataset":"bandas-salariales",
       "nombre":"Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
       "vista":1,
       "url":"2805349c-9c13-4915-b8b6-4921726cecf4",

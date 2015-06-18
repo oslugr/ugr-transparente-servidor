@@ -13,7 +13,7 @@
       "texto":"Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
     },
     {
-      "encabezado":"Satisfacción Estudiantes",
+      "encabezado":"Satisfacción de los Estudiantes",
       "link": "satisfacion-estudiantes",
       "texto":"Información sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
     },
@@ -23,8 +23,8 @@
       "texto":"Información sobre la posición de la Universidad de Granada en los principales rankings internacionales."
     },
     {
-      "encabezado":"Alumnos fuera de la Comunidad",
-      "link": "alumnos-fuera-de-la-comunidad",
+      "encabezado":"Alumnos de fuera de la Comunidad",
+      "link": "alumnos-fuera-comunidad",
       "texto":"Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada."
     }
   ],
@@ -190,7 +190,7 @@
       "descarga":"5334df3b-4a3d-4f80-b09f-7801f673057b/resource/b8a65ae8-4aa9-4910-8949-505ec649a48e/download/duracionmediadelosestudiostotaltitulaciones.csv"
     },
     {
-      "dataset":"Satisfacción Estudiantes",
+      "dataset":"Satisfacción de los Estudiantes",
       "id_dataset":"satisfaccion-alumnos",
       "nombre":"Satisfacción de alumnos",
       "vista":1,
@@ -246,16 +246,16 @@
       "descarga":"62be6e13-0fd9-457c-a599-738a08be937b/resource/d3907cb6-9ee9-48a3-ab24-1c3e1f58e1d0/download/disciplinascientificasdondelaugrsesituaeneltop10.csv"
     },
     {
-      "dataset":"Alumnos fuera de la Comunidad",
-      "id_dataset":"alumnos-fuera-de-la-comunidad",
+      "dataset":"Alumnos de fuera de la Comunidad",
+      "id_dataset":"alumnos-fuera-comunidad",
       "nombre":"Origen geográfico de los alumnos: 2014/2015",
       "vista":1,
       "url":"69eb0514-5f58-42c9-ae93-fa94ee09e6e1",
       "descarga":"c4f4ff66-1c82-4dea-8185-50d99db85338/resource/69eb0514-5f58-42c9-ae93-fa94ee09e6e1/download/201415matriculasgradoorigen.csv"
     },
     {
-      "dataset":"Alumnos fuera de la Comunidad",
-      "id_dataset":"alumnos-fuera-de-la-comunidad",
+      "dataset":"Alumnos de fuera de la Comunidad",
+      "id_dataset":"alumnos-fuera-comunidad",
       "nombre":"Origen geográfico de los alumnos: 2013/2014",
       "vista":1,
       "url":"be87cafa-b043-4bc8-84b6-86d03ed59df5",

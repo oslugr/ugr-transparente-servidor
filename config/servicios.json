@@ -4,7 +4,7 @@
   "contenido":[
     {
       "encabezado":"Servicios de la Universidad",
-      "link": "servicios-de-la-universidad",
+      "link": "servicios-universidad",
       "texto":"Información sobre los servicios ofrecidos por la Universidad de Granada. Última actualización: 25/07/2014."
     },
     {
@@ -16,7 +16,7 @@
   "datos":[
     {
       "dataset":"Servicios de la Universidad",
-      "id_dataset":"servicios-de-la-universidad",
+      "id_dataset":"servicios-universidad",
       "nombre":"Carta de servicios",
       "vista":0,
       "url":"5ec20f79-cd33-4ade-b5fe-52d84d0737ee",
@@ -24,7 +24,7 @@
     },
     {
       "dataset":"Servicios de la Universidad",
-      "id_dataset":"servicios-de-la-universidad",
+      "id_dataset":"servicios-universidad",
       "nombre":"Catálogo de procedimientos administrativos",
       "vista":1,
       "url":"bf115ee2-a8f8-4cf1-87c5-f55320b6605b",
@@ -32,7 +32,7 @@
     },
     {
       "dataset":"Servicios de la Universidad",
-      "id_dataset":"servicios-de-la-universidad",
+      "id_dataset":"servicios-universidad",
       "nombre":"Sede física y atención al público",
       "vista":1,
       "url":"f7786b3d-96a0-4599-aae1-3c58995cda32",

@@ -4,7 +4,7 @@
   "contenido":[
     {
       "encabezado":"Perfil del Profesorado",
-      "link": "perfil-del-profesorado",
+      "link": "perfil-profesorado",
       "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
     },
     {
@@ -16,7 +16,7 @@
   "datos":[
     {
       "dataset":"Perfil del Profesorado",
-      "id_dataset":"perfil-del-profesorado",
+      "id_dataset":"perfil-profesorado",
       "nombre":"Perfil del profesorado",
       "vista":1,
       "url":"eac2ad23-3ea9-45f1-aee4-1f72236503d7",

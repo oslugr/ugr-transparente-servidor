@@ -9,12 +9,12 @@
     },
     {
       "encabezado":"Canales de Comunicación",
-      "link": "canales-de-comunicacion",
+      "link": "canales-comunicacion",
       "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
     },
     {
       "encabezado":"Becas y Ayudas",
-      "link": "becas-y-ayudas",
+      "link": "becas-ayudas",
       "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
     }
   ],
@@ -101,7 +101,7 @@
     },
     {
       "dataset":"Canales de Comunicación",
-      "id_dataset":"canales-de-comunicacion",
+      "id_dataset":"canales-comunicacion",
       "nombre":"Canales de comunicación",
       "vista":1,
       "url":"d39a2a34-af70-4f16-96e8-d411e103668e",
@@ -109,7 +109,7 @@
     },
     {
       "dataset":"Becas y Ayudas",
-      "id_dataset":"becas-y-ayudas",
+      "id_dataset":"becas-ayudas",
       "nombre":"Becas y ayudas",
       "vista":1,
       "url":"b6060564-3e4e-4d7c-a00f-2bab67229fbe",

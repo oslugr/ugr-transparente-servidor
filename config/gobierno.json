@@ -1,7 +1,12 @@
 {
-  "nombre":"composicion-gobierno",
-  "plantilla":"composicion-gobierno",
+  "nombre":"Gobierno",
+  "plantilla":"gobierno",
   "contenido":[
+    {
+      "encabezado":"Resultados de las Elecciones",
+      "link": "resultados-elecciones",
+      "texto":"Resultados de las elecciones a rector de la Universidad de Granada."
+    },
     {
       "encabezado":"Composición de Gobierno",
       "link": "composicion-gobierno",
@@ -14,6 +19,14 @@
     }
   ],
   "datos":[
+    {
+      "dataset":"Resultados de las Elecciones",
+      "id_dataset":"resultados-elecciones",
+      "nombre":"Resultados de las elecciones",
+      "vista":1,
+      "url":"a954f2f5-f925-4f7d-9362-d718825c3bec",
+      "descarga":"28d44e9b-18bb-46aa-9e68-21c8593ba6bb/resource/a954f2f5-f925-4f7d-9362-d718825c3bec/download/resultadoselecciones2015.csv"
+    },
     {
       "dataset":"Composición de Gobierno",
       "id_dataset":"composicion-gobierno",
@@ -152,11 +165,11 @@
     },
     {
       "dataset":"Estatutos",
-      "id_dataset":"estatutos",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Estatutos de la universidad",
       "vista":0,
-      "url":"bd222e95-8809-4a34-b618-4d8c9f455f7b",
-      "descarga":"ff5a8da9-d00f-46e8-9001-8c2b7bb41524/resource/bd222e95-8809-4a34-b618-4d8c9f455f7b/download/estatutos.csv"
+      "url":"7bf6f70c-ccb5-49f5-a700-68254fa42586",
+      "descarga":"af255ffc-ad76-48bc-9db1-f49aa818489e/resource/7bf6f70c-ccb5-49f5-a700-68254fa42586/download/juntadelpdi.csv"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "nombre":"Gobierno",
-  "plantilla":"gobierno",
+  "nombre":"composicion-gobierno",
+  "plantilla":"composicion-gobierno",
   "contenido":[
     {
       "encabezado":"Composición de Gobierno",
@@ -16,7 +16,7 @@
   "datos":[
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Gobierno de la universidad",
       "vista":0,
       "url":"c81ce5c6-2b4b-4845-96f1-0c56c899ade7",
@@ -24,7 +24,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Órganos generales de gobierno y representación",
       "vista":1,
       "url":"b0cb908c-a6e3-40f9-882c-5b095c24849d",
@@ -32,7 +32,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Organigrama: equipo de gobierno",
       "vista":0,
       "url":"6f60b015-4676-4118-8645-e425f928accf",
@@ -40,7 +40,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Consejo de gobierno",
       "vista":0,
       "url":"aef207c0-bfd2-4997-b438-18c6e0f7ba3f",
@@ -48,7 +48,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Consejo social",
       "vista":1,
       "url":"e31764d0-9261-4062-8a4f-a8650e0cab2d",
@@ -56,7 +56,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Equipo amplio de gobierno",
       "vista":0,
       "url":"add488d9-950d-45c3-8c3c-23d641480577",
@@ -64,7 +64,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Delegaciones del rector",
       "vista":1,
       "url":"ab3c89cc-0d24-4f59-bbf6-27246ebde79c",
@@ -72,7 +72,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Delegación General de Estudiantes",
       "vista":1,
       "url":"db185b62-811d-4304-aba8-93d7c233b749",
@@ -80,7 +80,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Organigrama: secretaría general",
       "vista":0,
       "url":"86c0811c-4699-418f-89bb-c51efd5147ab",
@@ -88,7 +88,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Mesa del claustro universitario",
       "vista":0,
       "url":"223291f8-17b6-4eed-a8b4-20967cb73bc6",
@@ -96,7 +96,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Claustro universitario: profesorado con vinculación permanente",
       "vista":0,
       "url":"cd1c80c8-60b1-4b23-946e-d89b55e09fe4",
@@ -104,7 +104,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Claustro universitario: resto PDI",
       "vista":0,
       "url":"2b22193d-a7af-42c6-8b9f-cc02d2d53f44",
@@ -112,7 +112,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Claustro universitario: estudiantes",
       "vista":0,
       "url":"2203044d-707f-4048-b61b-876ff0e9eaeb",
@@ -120,7 +120,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Claustro universitario: PAS",
       "vista":0,
       "url":"6b6269dd-f923-4aba-b1f2-8b25804b39ef",
@@ -128,7 +128,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Claustro universitario: profesorado emérito e investigador",
       "vista":0,
       "url":"522c2562-714e-40b2-8e0a-fd0e9c563c37",
@@ -136,7 +136,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Junta del Personal de Administración y Servicios (funcionario)",
       "vista":1,
       "url":"3a2027a1-6a47-438f-a5cf-08dde4c55978",
@@ -144,7 +144,7 @@
     },
     {
       "dataset":"Composición de Gobierno",
-      "id_dataset":"gobierno",
+      "id_dataset":"composicion-gobierno",
       "nombre":"Junta del Personal Docente e Investigador",
       "vista":1,
       "url":"7bf6f70c-ccb5-49f5-a700-68254fa42586",
@@ -152,11 +152,11 @@
     },
     {
       "dataset":"Estatutos",
-      "id_dataset":"gobierno",
+      "id_dataset":"estatutos",
       "nombre":"Estatutos de la universidad",
       "vista":0,
-      "url":"7bf6f70c-ccb5-49f5-a700-68254fa42586",
-      "descarga":"af255ffc-ad76-48bc-9db1-f49aa818489e/resource/7bf6f70c-ccb5-49f5-a700-68254fa42586/download/juntadelpdi.csv"
+      "url":"bd222e95-8809-4a34-b618-4d8c9f455f7b",
+      "descarga":"ff5a8da9-d00f-46e8-9001-8c2b7bb41524/resource/bd222e95-8809-4a34-b618-4d8c9f455f7b/download/estatutos.csv"
     }
   ]
 }

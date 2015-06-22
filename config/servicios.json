@@ -43,49 +43,64 @@
       "id_dataset":"empleo-publico",
       "nombre":"Modificación técnica puntual de la Relación de Puestos de Trabajo",
       "vista":0,
-      "url":"08cb7c37-ed75-42b7-b51c-95284ee2ec0c","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/08cb7c37-ed75-42b7-b51c-95284ee2ec0c/download/d22.pdf"
+      "url":"08cb7c37-ed75-42b7-b51c-95284ee2ec0c",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/08cb7c37-ed75-42b7-b51c-95284ee2ec0c/download/d22.pdf"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Adecuación técnica de la relación de puestos de trabajo",
       "vista":0,
-      "url":"897a95ff-0cfc-4643-a188-b98f1e8b9cf3","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/897a95ff-0cfc-4643-a188-b98f1e8b9cf3/download/resolucionde5demarzode2008rpt.pdf"
+      "url":"897a95ff-0cfc-4643-a188-b98f1e8b9cf3",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/897a95ff-0cfc-4643-a188-b98f1e8b9cf3/download/resolucionde5demarzode2008rpt.pdf"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Relación de puestos de trabajo: PAS",
       "vista":0,
-      "url":"2fe26a5d-4ea1-4c57-b73c-ac96ab177967","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/2fe26a5d-4ea1-4c57-b73c-ac96ab177967/download/resolucionde3dediciembrede2004.pdf"
+      "url":"2fe26a5d-4ea1-4c57-b73c-ac96ab177967",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/2fe26a5d-4ea1-4c57-b73c-ac96ab177967/download/resolucionde3dediciembrede2004.pdf"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Oferta de empleo público: plazas vinculadas al Servicio Andaluz de Salud",
       "vista":1,
-      "url":"9e9b6724-e96d-4a90-9ff8-021f6c25bb31","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/9e9b6724-e96d-4a90-9ff8-021f6c25bb31/download/ofertapublicadeempleopdifuncionarioii.csv"
+      "url":"9e9b6724-e96d-4a90-9ff8-021f6c25bb31",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/9e9b6724-e96d-4a90-9ff8-021f6c25bb31/download/ofertapublicadeempleopdifuncionarioii.csv"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Oferta de empleo público: PDI funcionario",
       "vista":1,
-      "url":"b62d7a7e-5204-442c-8473-17f609d61167","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/b62d7a7e-5204-442c-8473-17f609d61167/download/ofertaempleopublicopdifuncionario.csv"
+      "url":"b62d7a7e-5204-442c-8473-17f609d61167",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/b62d7a7e-5204-442c-8473-17f609d61167/download/ofertaempleopublicopdifuncionario.csv"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Oferta de empleo público: PAS funcionario",
       "vista":1,
-      "url":"e366a359-d811-4458-8ab7-d097f4d27c4c","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/e366a359-d811-4458-8ab7-d097f4d27c4c/download/anexoipersonalfuncionario.csv"
+      "url":"e366a359-d811-4458-8ab7-d097f4d27c4c",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/e366a359-d811-4458-8ab7-d097f4d27c4c/download/anexoipersonalfuncionario.csv"
     },
     {
       "dataset":"Empleo Público",
       "id_dataset":"empleo-publico",
       "nombre":"Oferta de empleo público: PAS laboral",
       "vista":1,
-      "url":"277999a9-fc68-415c-8b5e-3c58daf87ae9","descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/277999a9-fc68-415c-8b5e-3c58daf87ae9/download/anexoiipersonallaboral.csv"
+      "url":"277999a9-fc68-415c-8b5e-3c58daf87ae9",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/277999a9-fc68-415c-8b5e-3c58daf87ae9/download/anexoiipersonallaboral.csv"
+    },
+    {
+      "dataset":"Empleo Público",
+      "id_dataset":"empleo-publico",
+      "nombre":"Contratos: grupos y proyectos",
+      "vista":1,
+      "url":"091661b7-7782-4e42-a2fe-41190b7b1600",
+      "descarga":"7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/091661b7-7782-4e42-a2fe-41190b7b1600/download/contratosgruposyproyectos.csv"
     }
   ]
 }

@@ -21,7 +21,7 @@
   "datos":[
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2014/2015: grado",
       "vista":1,
       "url":"113ce86c-23b4-4d19-b518-001f5aedd285",
@@ -29,7 +29,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2014/2015: posgrado",
       "vista":1,
       "url":"2d4cb129-cda1-4737-8834-d25f269e29bb",
@@ -37,7 +37,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2013/2014: grado",
       "vista":1,
       "url":"5df5e28b-09ca-40aa-a908-5438fd53cbda",
@@ -45,7 +45,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2013/2014: posgrado",
       "vista":1,
       "url":"48167c2f-6d17-49c5-9b63-f3d1129d425b",
@@ -53,7 +53,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2012/2013: grado",
       "vista":1,
       "url":"35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
@@ -61,7 +61,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2012/2013: posgrado",
       "vista":1,
       "url":"13e1e6c0-1311-4c96-8409-39a2cce174c7",
@@ -69,7 +69,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2011/2012: grado",
       "vista":1,
       "url":"f621cebf-e17c-4823-b2b9-69467624e4f9",
@@ -77,7 +77,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2011/2012: posgrado",
       "vista":1,
       "url":"a6b6f089-7e54-422e-a717-ad478e6124b0",
@@ -85,7 +85,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2010/2011: grado",
       "vista":1,
       "url":"ac9e790f-2cfa-4f88-bf40-979b11692822",
@@ -93,7 +93,7 @@
     },
     {
       "dataset":"Matrículas",
-      "id_dataset":"matriculas-ugr-2013",
+      "id_dataset":"matriculas",
       "nombre":"Matrículas 2010/2011: posgrado",
       "vista":1,
       "url":"eb126186-ec40-4807-bb83-3bf1335c33fb",
@@ -114,6 +114,14 @@
       "vista":1,
       "url":"b6060564-3e4e-4d7c-a00f-2bab67229fbe",
       "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/b6060564-3e4e-4d7c-a00f-2bab67229fbe/download/becasyayudas.csv"
+    },
+    {
+      "dataset":"Becas y Ayudas",
+      "id_dataset":"becas-ayudas",
+      "nombre":"Becas: política científica e investigación",
+      "vista":1,
+      "url":"cb3137b1-d086-48c4-b5b0-3a76f5743f11",
+      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/cb3137b1-d086-48c4-b5b0-3a76f5743f11/download/becaspoliticacientificaeinvestigacion.csv"
     }
   ]
 }

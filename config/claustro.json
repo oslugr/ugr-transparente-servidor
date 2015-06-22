@@ -4,7 +4,7 @@
   "contenido":[
     {
       "encabezado":"Perfil del Profesorado",
-      "link": "perfil-del-profesorado",
+      "link": "perfil-profesorado",
       "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
     },
     {
@@ -16,7 +16,7 @@
   "datos":[
     {
       "dataset":"Perfil del Profesorado",
-      "id_dataset":"perfil-del-profesorado",
+      "id_dataset":"perfil-profesorado",
       "nombre":"Perfil del profesorado",
       "vista":1,
       "url":"eac2ad23-3ea9-45f1-aee4-1f72236503d7",
@@ -24,7 +24,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Movilidad profesorado 2013/2014",
       "vista":1,
       "url":"7864eea7-e9e6-4979-9342-c57024285975",
@@ -32,7 +32,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Políticas de internacionalización",
       "vista":1,
       "url":"6288026d-6519-4632-99f3-ae84115d9095",
@@ -40,7 +40,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Mejora docente",
       "vista":1,
       "url":"f66b3f3a-f4ab-4a18-858f-7778b5867ba8",
@@ -48,7 +48,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Programa Erasmus Mundus",
       "vista":1,
       "url":"611aa912-f695-4f74-89ae-9f55ed8310a4",
@@ -56,7 +56,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Programa de Becas Grupo Coimbra",
       "vista":1,
       "url":"9a9fa328-78b8-4032-abec-eddfaac26c47",
@@ -64,7 +64,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Programa de Aprendizaje Permanente",
       "vista":1,
       "url":"7ef85e59-db9f-47b7-836e-6657d10d2a39",
@@ -72,7 +72,7 @@
     },
     {
       "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros-ugr",
+      "id_dataset":"profesores-extranjeros",
       "nombre":"Programa Propio",
       "vista":1,
       "url":"5593ddda-3d9a-4704-b30c-5b69443a6de0",

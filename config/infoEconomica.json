@@ -43,6 +43,11 @@
       "texto":"Información desglosada de los gastos de la Universidad de Granada durante el año 2014. Los datos se pueden encontrar separados por estado de gastos general, gastos de personal, gastos por artículos, coste de mantenimiento de Ceuta y Melilla, programas, resumen del estado de gastos o comparativa de gastos entre los años 2012-2014."
     },
     {
+      "encabezado":"Justificantes de Gastos: 2015",
+      "link": "justificantes-gastos-2015",
+      "texto":"Información relativa a las subvenciones y ayudas públicas concedidas durante el curso 2014/2015, con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno."
+    },
+    {
       "encabezado":"Justificantes de Gastos: 2014",
       "link": "justificantes-gastos-2014",
       "texto":"Información relativa a las subvenciones y ayudas públicas concedidas con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno. Fecha de conceptos: 10/03/2014."
@@ -776,6 +781,70 @@
       "vista":1,
       "url":"45332386-01fe-41b8-b3c5-26ad42d309bd",
       "descarga":"eadf3a87-192d-43cf-b068-1cb479e51035/resource/45332386-01fe-41b8-b3c5-26ad42d309bd/download/edificiossituacionjuridicayvaloraciona31122013enviado.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 441.00",
+      "vista":1,
+      "url":"9930bca8-71e0-4363-ba7c-d347f11c7bd9",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/9930bca8-71e0-4363-ba7c-d347f11c7bd9/download/441.00.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 445.00",
+      "vista":1,
+      "url":"0796dbc9-0ecc-48ae-ac21-dee894e37eef",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/0796dbc9-0ecc-48ae-ac21-dee894e37eef/download/445.00.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 480",
+      "vista":1,
+      "url":"e76ae5bc-2133-43f2-98ef-70e03e1088cb",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/e76ae5bc-2133-43f2-98ef-70e03e1088cb/download/480.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 483",
+      "vista":1,
+      "url":"c16c1288-091e-48bd-a5a1-ed336832bc7e",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/c16c1288-091e-48bd-a5a1-ed336832bc7e/download/483.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 484",
+      "vista":1,
+      "url":"497fb9e6-14a8-4230-bf28-60a03317dbba",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/497fb9e6-14a8-4230-bf28-60a03317dbba/download/484.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 485",
+      "vista":1,
+      "url":"297a8e97-4572-4b96-b1c4-dde5295a6171",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/297a8e97-4572-4b96-b1c4-dde5295a6171/download/485.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Concepto 490",
+      "vista":1,
+      "url":"76cd656a-625e-4b22-997f-bd6def87d340",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/76cd656a-625e-4b22-997f-bd6def87d340/download/490.csv"
+    },
+    {
+      "dataset":"Justificantes de Gastos: 2015",
+      "id_dataset":"justificantes-gastos-2015",
+      "nombre":"Edificios",
+      "vista":1,
+      "url":"f87f330d-7913-47a3-a4ed-ba9a911e156f",
+      "descarga":"fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/f87f330d-7913-47a3-a4ed-ba9a911e156f/download/edificiosconsitjuridica.csv"
     }
   ]
 }

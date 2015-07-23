@@ -16,6 +16,11 @@
       "encabezado":"Becas y Ayudas",
       "link": "becas-ayudas",
       "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
+    },
+    {
+      "encabezado":"Empleo de Egresados",
+      "link": "empleo-egresados",
+      "texto":"Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2011, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015."
     }
   ],
   "datos":[
@@ -122,6 +127,22 @@
       "vista":1,
       "url":"cb3137b1-d086-48c4-b5b0-3a76f5743f11",
       "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/cb3137b1-d086-48c4-b5b0-3a76f5743f11/download/becaspoliticacientificaeinvestigacion.csv"
+    },
+    {
+      "dataset":"Empleo de Egresados",
+      "id_dataset":"empleo-egresados",
+      "nombre":"Empleo y valoración de estudios",
+      "vista":1,
+      "url":"e3b49997-55af-4dcd-91ad-8ff2c173faa5",
+      "descarga":"472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/e3b49997-55af-4dcd-91ad-8ff2c173faa5/download/adecuaciondeempleoyvaloraciondeestudios.csv"
+    },
+    {
+      "dataset":"Empleo de Egresados",
+      "id_dataset":"empleo-egresados",
+      "nombre":"Empleo de egresados",
+      "vista":1,
+      "url":"86cff619-46ac-47d6-b32e-2c8fafba9c03",
+      "descarga":"472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/86cff619-46ac-47d6-b32e-2c8fafba9c03/download/empleoegresados.csv"
     }
   ]
 }

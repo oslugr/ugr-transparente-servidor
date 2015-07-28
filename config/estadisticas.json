@@ -198,6 +198,22 @@
       "descarga":"91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/a1249731-84f3-46fe-86c9-c2d5266f5aad/download/satisfaccionalumnos.csv"
     },
     {
+      "dataset":"Satisfacción de los Estudiantes",
+      "id_dataset":"satisfaccion-estudiantes",
+      "nombre":"Satisfacción general: egresados 2011",
+      "vista":1,
+      "url":"00032bf5-a184-451a-9175-0edcb7d000fc",
+      "descarga":"91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/00032bf5-a184-451a-9175-0edcb7d000fc/download/satisfaccionegresados2011general.csv"
+    },
+    {
+      "dataset":"Satisfacción de los Estudiantes",
+      "id_dataset":"satisfaccion-estudiantes",
+      "nombre":"Valoración oferta formativa: egresados 2011",
+      "vista":1,
+      "url":"7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40",
+      "descarga":"91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40/download/satisfaccionegresadosvaloracionofertaformativa.csv"
+    },
+    {
       "dataset":"Ranking",
       "id_dataset":"ranking",
       "nombre":"Evolución: ranking de Shanghai",

@@ -123,6 +123,14 @@
     {
       "dataset":"Becas y Ayudas",
       "id_dataset":"becas-ayudas",
+      "nombre":"Becas: egresados 2011",
+      "vista":1,
+      "url":"7851c4b8-912a-40e2-8e9f-865427d3b8be",
+      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
+    },
+    {
+      "dataset":"Becas y Ayudas",
+      "id_dataset":"becas-ayudas",
       "nombre":"Becas: política científica e investigación",
       "vista":1,
       "url":"cb3137b1-d086-48c4-b5b0-3a76f5743f11",

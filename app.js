@@ -32,7 +32,7 @@ var administracion = require(__dirname+'/routes/administracion');
 var docencia = require(__dirname+'/routes/docencia');
 var gestionInvestigacion = require(__dirname+'/routes/gestionInvestigacion');
 var normativaLegal = require(__dirname+'/routes/normativaLegal');
-var testSolicitudes = require(__dirname+'/routes/testSolicitudes');
+var solicitudInfo = require(__dirname+'/routes/solicitudInfo');
 var map = require(__dirname+'/routes/mapaweb');
 var buscador = require(__dirname+'/routes/buscador');
 
@@ -85,7 +85,7 @@ app.get('/estadisticas.html',gestionInvestigacion.estadisticas);
 // Normativa Legal
 app.get('/normativaLegal.html',normativaLegal.normativaLegal);
 // Solicitudes de Información
-app.get('/testSolicitudes.html', testSolicitudes.testSolicitudes);
+app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 // Mapa del sitio
 app.get('/mapaweb.html', map.mapa);
 // Buscador

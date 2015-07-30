@@ -25,9 +25,9 @@ var conf = require('../app');
 
 // Gestión de la pagina de la solicitudes
 
-exports.testSolicitudes = function(req, res){
+exports.solicitudInfo = function(req, res){
 
-	res.render('testSolicitudes', {
+	res.render('solicitudInfo', {
 		titulo: 'Solicitud de Información'
 	});
 };

@@ -77,7 +77,6 @@ html(lang="es")
 			script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 			script(type='text/javascript' src='script/formulario_buscar.js')
 
-
 		if seccion!=="Inicio"
 			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 			script(src="libraries/jquery.js")
@@ -115,12 +114,12 @@ html(lang="es")
 
 
 					div#buscador
-						h2 Buscar (en pruebas)
+						h2 Buscador del portal
 						form(action="buscador.html" method="GET" class="mod-buttons")
 							#formulario_buscar.mod-buttons
 								#buscador-input
 									label(id="buscar" for="sq")
-										input(class="with_default_value" type="text" name="query" id="sq" placeholder="búsqueda...")
+										input(class="with_default_value" type="text" name="query" id="sq" placeholder="Búsqueda...")
 									label(id="enviar_buscar" for="submit_buscar")
 										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
 

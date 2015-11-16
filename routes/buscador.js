@@ -23,10 +23,10 @@
 var conf = require('../app');
 
 // Gestión de la pagina del buscador
-exports.buscador = function(req, res){
+exports.buscador = function(req, res) {
 
-    res.render('buscador', {
-        titulo: 'Buscador'
-    });
+  res.render('buscador', {
+    titulo: 'Buscador'
+  });
 
 };

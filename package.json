@@ -11,7 +11,9 @@
   ],
   "description": "Portal de transparencia de la Universidad de Granada",
   "keywords": [
-    "opendata"
+    "opendata",
+    "transparencia",
+    "ugr"
   ],
   "bugs": {
     "url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
@@ -33,26 +35,46 @@
   },
   "dependencies": {
     "express": "^3.4.8",
-    "jade": "^1.9.2",
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
     "node.io": "^0.5.1",
-    "request": "^2.55.0",
-    "underscore": "^1.8.2"
+    "request": "^2.65.0",
+    "serve-favicon": "^2.3.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "flightplan": "^0.6.2",
+    "bower": "^1.6.5",
+    "coveralls": "^2.11.4",
     "forever": "^0.14.1",
-    "istanbul": "^0.3.11",
-    "mocha": "^2.2.1",
-    "should": "^5.2.0",
-    "supertest": "^0.15.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-docco": "0.0.4",
+    "gulp-install": "^0.6.0",
+    "gulp-istanbul": "^0.10.2",
+    "gulp-jshint": "^1.12.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "should": "^7.1.1",
+    "supertest": "^1.1.0"
   },
   "engines": {
-    "node": "^0.10.37"
+    "node": ">=0.12.7"
   },
   "scripts": {
     "deploy": "fly transparente",
     "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
-    "start": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "start_": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
+    "start": "PORT=3000 IP=127.0.0.1 node app",
     "test": "istanbul cover _mocha ./test --recursive"
   }
 }

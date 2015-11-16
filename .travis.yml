@@ -17,11 +17,15 @@
 #	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-# language setting
+# Languaje de la aplicación
 language: node_js
 
-# version numbers, testing against two versions of node
+# Versiones con las que correr los tests
 node_js:
   - "0.12"
   - "0.11"
   - "0.10"
+
+# Dependencias que es necesario instalar
+before_install:
+  - "npm -g install gulp"

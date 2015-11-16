@@ -19,7 +19,7 @@
 */
 
 
-function datos(){
+function datos() {
   var data = {
     resource_id: '5a47a757-8670-4880-8fa0-446d054adf70'
   };
@@ -30,7 +30,7 @@ function datos(){
     data: data,
     dataType: 'json',
     global: false,
-    async:false,
+    async: false,
     success: function(data) {
       return data;
     }

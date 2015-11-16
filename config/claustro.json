@@ -1,50 +1,42 @@
 {
-  "nombre":"Claustro",
-  "plantilla":"claustro",
-  "contenido":[
-    {
-      "encabezado":"Perfil del Profesorado",
-      "link": "perfil-profesorado",
-      "texto":"Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
-    },
-    {
-      "encabezado":"Profesores Extranjeros",
-      "link": "profesores-extranjeros",
-      "texto":"Información sobre los profesores extranjeros del claustro de la Universidad de Granada en los periodos 2009-2011 y 2013-2014."
-    }
-  ],
-  "datos":[
-    {
-      "dataset":"Perfil del Profesorado",
-      "id_dataset":"perfil-profesorado",
-      "nombre":"Perfil del profesorado",
-      "vista":1,
-      "url":"eac2ad23-3ea9-45f1-aee4-1f72236503d7",
-      "descarga":"ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
-    },
-    {
-      "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros",
-      "nombre":"Movilidad profesorado 2013/2014",
-      "vista":1,
-      "url":"7864eea7-e9e6-4979-9342-c57024285975",
-      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/7864eea7-e9e6-4979-9342-c57024285975/download/total.csv"
-    },
-    {
-      "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros",
-      "nombre":"Políticas de internacionalización 2009/2014",
-      "vista":1,
-      "url":"6288026d-6519-4632-99f3-ae84115d9095",
-      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/6288026d-6519-4632-99f3-ae84115d9095/download/politicasinternacionalizacion.csv"
-    },
-    {
-      "dataset":"Profesores Extranjeros",
-      "id_dataset":"profesores-extranjeros",
-      "nombre":"Movilidad profesorado 2010/2011",
-      "vista":1,
-      "url":"af254c49-2f46-4a41-a825-73c7ffa5a733",
-      "descarga":"421a22b9-e2e1-4605-a649-625d587484ee/resource/af254c49-2f46-4a41-a825-73c7ffa5a733/download/movilidadtotalpdi.csv"
-    }
-  ]
+  "nombre": "Claustro",
+  "plantilla": "claustro",
+  "contenido": [{
+    "encabezado": "Perfil del Profesorado",
+    "link": "perfil-profesorado",
+    "texto": "Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
+  }, {
+    "encabezado": "Profesores Extranjeros",
+    "link": "profesores-extranjeros",
+    "texto": "Información sobre los profesores extranjeros del claustro de la Universidad de Granada en los periodos 2009-2011 y 2013-2014."
+  }],
+  "datos": [{
+    "dataset": "Perfil del Profesorado",
+    "id_dataset": "perfil-profesorado",
+    "nombre": "Perfil del profesorado",
+    "vista": 1,
+    "url": "eac2ad23-3ea9-45f1-aee4-1f72236503d7",
+    "descarga": "ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
+  }, {
+    "dataset": "Profesores Extranjeros",
+    "id_dataset": "profesores-extranjeros",
+    "nombre": "Movilidad profesorado 2013/2014",
+    "vista": 1,
+    "url": "7864eea7-e9e6-4979-9342-c57024285975",
+    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/7864eea7-e9e6-4979-9342-c57024285975/download/total.csv"
+  }, {
+    "dataset": "Profesores Extranjeros",
+    "id_dataset": "profesores-extranjeros",
+    "nombre": "Políticas de internacionalización 2009/2014",
+    "vista": 1,
+    "url": "6288026d-6519-4632-99f3-ae84115d9095",
+    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/6288026d-6519-4632-99f3-ae84115d9095/download/politicasinternacionalizacion.csv"
+  }, {
+    "dataset": "Profesores Extranjeros",
+    "id_dataset": "profesores-extranjeros",
+    "nombre": "Movilidad profesorado 2010/2011",
+    "vista": 1,
+    "url": "af254c49-2f46-4a41-a825-73c7ffa5a733",
+    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/af254c49-2f46-4a41-a825-73c7ffa5a733/download/movilidadtotalpdi.csv"
+  }]
 }

@@ -31,9 +31,11 @@ plan.target('transparente', {
 // Acciones a ejecutar remotamente
 plan.remote(function(remote) {
   remote.log('Creando copia de seguridad...');
-  remote.sudo('cp -Rf ugr-transparente-servidor ugr-transparente-servidor.bak', {user: process.env.USER});
+  remote.sudo('cp -Rf ugr-transparente-servidor ugr-transparente-servidor.bak', {
+    user: process.env.USER
+  });
 
-  remote.with('cd ugr-transparente-servidor',function() {
+  remote.with('cd ugr-transparente-servidor', function() {
     remote.log('Deteniendo el servidor...');
     remote.exec('sudo npm run-script kill');
     remote.log('Restableciendo parámetros de acceso...');

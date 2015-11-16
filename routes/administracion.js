@@ -24,7 +24,7 @@
 var conf = require('../app');
 
 // Gestión de la pagina de personal
-exports.personal = function(req, res){
+exports.personal = function(req, res) {
   var personal = conf.personal;
 
   res.render(personal.plantilla, {
@@ -36,7 +36,7 @@ exports.personal = function(req, res){
 };
 
 // Gestión de la pagina de informacion economica
-exports.infoEconomica = function(req, res){
+exports.infoEconomica = function(req, res) {
   var infoEconomica = conf.infoEconomica;
 
   res.render(infoEconomica.plantilla, {
@@ -48,7 +48,7 @@ exports.infoEconomica = function(req, res){
 };
 
 // Gestión de la página de servicios
-exports.servicios = function(req, res){
+exports.servicios = function(req, res) {
   var servicios = conf.servicios;
 
   res.render(servicios.plantilla, {
@@ -60,7 +60,7 @@ exports.servicios = function(req, res){
 };
 
 // Gestión de la página de perfil del contratante
-exports.perfil = function(req, res){
+exports.perfil = function(req, res) {
   res.render('perfilContratante', {
     seccion: 'Perfil del Contratante'
   });

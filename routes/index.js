@@ -25,18 +25,20 @@ var conf = require('../app');
 
 //Rellenamos el vector con los enlaces leidos del fichero de configuracion
 //Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
-var enlaces=new Array();
+var enlaces = new Array();
 
-function leerEnlaces(){
-  for (i in conf.config.index.enlaces){
-    enlaces.push([config.index.enlaces[i].nombre,config.index.enlaces[i].href,config.index.enlaces[i].id]);
+function leerEnlaces() {
+  for (i in conf.config.index.enlaces) {
+    enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
   }
 }
 
 //Pagina de inicio
-
-exports.index = function(req, res){
-  if(enlaces.length==0)
-  leerEnlaces();
-  res.render('index', { seccion: conf.config.index.nombre, enlaces: enlaces});
+exports.index = function(req, res) {
+  if (enlaces.length == 0)
+    leerEnlaces();
+  res.render('index', {
+    seccion: conf.config.index.nombre,
+    enlaces: enlaces
+  });
 };

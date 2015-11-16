@@ -25,11 +25,11 @@ var conf = require('../app');
 
 // Gestión de la pagina de la presentación
 
-exports.presentacion = function(req, res){
-  var pres=conf.config.presentacion;
+exports.presentacion = function(req, res) {
+  var pres = conf.config.presentacion;
 
   res.render(pres.plantilla, {
-    titulo: pres.titulo ,
+    titulo: pres.titulo,
     texto: pres.texto
   });
 };

@@ -1,5 +1,5 @@
 {
-  "archivos":[
+  "archivos": [
     "config.json",
     "personal.json",
     "infoEconomica.json",
@@ -13,214 +13,164 @@
     "estadisticas.json",
     "normativaLegal.json"
   ],
-  "categorias":[
-    {
-      "descripcion":"Sección Administración",
-      "nombre":"administracion",
-      "secciones":[
-        {
-          "descripcion":"Datos de Personal",
-          "archivo":"personal.json",
-          "nombre":"Personal",
-          "plantilla":"personal"
-        },
-        {
-          "descripcion":"Datos de Información Económica",
-          "archivo":"infoEconomica.json",
-          "nombre":"Información Económica",
-          "plantilla":"infoEconomica"
-        },
-        {
-          "descripcion":"Datos de Servicios",
-          "archivo":"servicios.json",
-          "nombre":"Servicios",
-          "plantilla":"servicios"
-        }
-      ]
-    },
-    {
-      "descripcion":"Sección Docencia",
-      "nombre":"docencia",
-      "secciones":[
-        {
-          "descripcion":"Datos de Oferta y Demanda Académica",
-          "archivo":"ofertaDemanda.json",
-          "nombre":"Oferta y Demanda Académica",
-          "plantilla":"ofertaDemanda"
-        },
-        {
-          "descripcion":"Datos de Claustro",
-          "archivo":"claustro.json",
-          "nombre":"Claustro",
-          "plantilla":"claustro"
-        },
-        {
-          "descripcion":"Datos de Estudiantes",
-          "archivo":"estudiantes.json",
-          "nombre":"Estudiantes",
-          "plantilla":"estudiantes"
-        }
-      ]
-    },
-    {
-      "descripcion":"Sección Gestión e Investigación",
-      "nombre":"gestionInvestigacion",
-      "secciones":[
-        {
-          "descripcion":"Datos de Mision",
-          "archivo":"mision.json",
-          "nombre":"Mision",
-          "plantilla":"mision"
-        },
-        {
-          "descripcion":"Datos de Plan Estratégico",
-          "archivo":"planEstrategico.json",
-          "nombre":"Plan Estratégico",
-          "plantilla":"planEstrategico"
-        },
-        {
-          "descripcion":"Datos de Gobierno",
-          "archivo":"gobierno.json",
-          "nombre":"Gobierno",
-          "plantilla":"gobierno"
-        },
-        {
-          "descripcion":"Estadísticas",
-          "archivo":"estadisticas.json",
-          "nombre":"Estadísticas",
-          "plantilla":"estadisticas"
-        }
-      ]
-    },
-    {
-      "descripcion":"Sección Normativa Legal",
-      "nombre":"normativaLegal",
-      "secciones":[
-        {
-          "descripcion":"Datos de Normativa Legal",
-          "archivo":"normativaLegal.json",
-          "nombre":"Normativa Legal",
-          "plantilla":"normativaLegal"
-        }
-      ]
-    }
-  ],
-  "elemento":[
-    {
-      "nombre":"Inicio (raíz)",
-      "ruta":"/"
-    },
-    {
-      "nombre":"Inicio (index)",
-      "ruta":"/index.html"
-    },
-    {
-      "nombre":"Presentacion",
-      "ruta":"/presentacion.html"
-    },
-    {
-      "nombre":"Administración / Personal",
-      "ruta":"/personal.html"
-    },
-    {
-      "nombre":"Administración / Información Económica",
-      "ruta":"/infoEconomica.html"
-    },
-    {
-      "nombre":"Administración / Servicios",
-      "ruta":"/servicios.html"
-    },
-    {
-      "nombre":"Administración / Perfil del Contratante",
-      "ruta":"/perfilContratante.html"
-    },
-    {
-      "nombre":"Docencia / Oferta y Demanda Académica",
-      "ruta":"/ofertaDemanda.html"
-    },
-    {
-      "nombre":"Docencia / Claustro",
-      "ruta":"/claustro.html"
-    },
-    {
-      "nombre":"Docencia / Estudiantes",
-      "ruta":"/estudiantes.html"
-    },
-    {
-      "nombre":"Gestión e Investigación / Misión",
-      "ruta":"/mision.html"
-    },
-    {
-      "nombre":"Gestión e Investigación / Plan Estratégico",
-      "ruta":"/planEstrategico.html"
-    },
-    {
-      "nombre":"Gestión e Investigación / Gobierno",
-      "ruta":"/gobierno.html"
-    },
-    {
-      "nombre":"Gestión e Investigación / Estadísticas",
-      "ruta":"/estadisticas.html"
-    },
-    {
-      "nombre":"Normativa Legal",
-      "ruta":"/normativaLegal.html"
-    },
-    {
-      "nombre":"Solicitud de Información",
-      "ruta":"/solicitudInfo.html"
-    },
-    {
-      "nombre":"Mapa del sitio",
-      "ruta":"/mapaweb.html"
-    },
-    {
-      "nombre":"Buscador",
-      "ruta":"/buscador.html"
-    },
-    {
-      "nombre":"Datos de Personal",
-      "ruta":"/archivos/personal"
-    },
-    {
-      "nombre":"Datos de Información Económica",
-      "ruta":"/archivos/informacion-economica"
-    },
-    {
-      "nombre":"Datos de Servicios",
-      "ruta":"/archivos/servicios"
-    },
-    {
-      "nombre":"Datos de Oferta y Demanda",
-      "ruta":"/archivos/oferta-demanda"
-    },
-    {
-      "nombre":"Datos de Claustro",
-      "ruta":"/archivos/claustro"
-    },
-    {
-      "nombre":"Datos de Estudiantes",
-      "ruta":"/archivos/estudiantes"
-    },
-    {
-      "nombre":"Datos de Mision",
-      "ruta":"/archivos/mision"
-    },
-    {
-      "nombre":"Datos de Plan Estratégico",
-      "ruta":"/archivos/plan-estrategico"
-    },
-    {
-      "nombre":"Datos de Gobierno",
-      "ruta":"/archivos/gobierno"
-    },
-    {
-      "nombre":"Datos de Estadisticas",
-      "ruta":"/archivos/estadisticas"
-    },
-    {
-      "nombre":"Datos de Normativa Legal",
-      "ruta":"/archivos/normativa-legal"
-    }
-  ]
+  "categorias": [{
+    "descripcion": "Sección Administración",
+    "nombre": "administracion",
+    "secciones": [{
+      "descripcion": "Datos de Personal",
+      "archivo": "personal.json",
+      "nombre": "Personal",
+      "plantilla": "personal"
+    }, {
+      "descripcion": "Datos de Información Económica",
+      "archivo": "infoEconomica.json",
+      "nombre": "Información Económica",
+      "plantilla": "infoEconomica"
+    }, {
+      "descripcion": "Datos de Servicios",
+      "archivo": "servicios.json",
+      "nombre": "Servicios",
+      "plantilla": "servicios"
+    }]
+  }, {
+    "descripcion": "Sección Docencia",
+    "nombre": "docencia",
+    "secciones": [{
+      "descripcion": "Datos de Oferta y Demanda Académica",
+      "archivo": "ofertaDemanda.json",
+      "nombre": "Oferta y Demanda Académica",
+      "plantilla": "ofertaDemanda"
+    }, {
+      "descripcion": "Datos de Claustro",
+      "archivo": "claustro.json",
+      "nombre": "Claustro",
+      "plantilla": "claustro"
+    }, {
+      "descripcion": "Datos de Estudiantes",
+      "archivo": "estudiantes.json",
+      "nombre": "Estudiantes",
+      "plantilla": "estudiantes"
+    }]
+  }, {
+    "descripcion": "Sección Gestión e Investigación",
+    "nombre": "gestionInvestigacion",
+    "secciones": [{
+      "descripcion": "Datos de Mision",
+      "archivo": "mision.json",
+      "nombre": "Mision",
+      "plantilla": "mision"
+    }, {
+      "descripcion": "Datos de Plan Estratégico",
+      "archivo": "planEstrategico.json",
+      "nombre": "Plan Estratégico",
+      "plantilla": "planEstrategico"
+    }, {
+      "descripcion": "Datos de Gobierno",
+      "archivo": "gobierno.json",
+      "nombre": "Gobierno",
+      "plantilla": "gobierno"
+    }, {
+      "descripcion": "Estadísticas",
+      "archivo": "estadisticas.json",
+      "nombre": "Estadísticas",
+      "plantilla": "estadisticas"
+    }]
+  }, {
+    "descripcion": "Sección Normativa Legal",
+    "nombre": "normativaLegal",
+    "secciones": [{
+      "descripcion": "Datos de Normativa Legal",
+      "archivo": "normativaLegal.json",
+      "nombre": "Normativa Legal",
+      "plantilla": "normativaLegal"
+    }]
+  }],
+  "elemento": [{
+    "nombre": "Inicio (raíz)",
+    "ruta": "/"
+  }, {
+    "nombre": "Inicio (index)",
+    "ruta": "/index.html"
+  }, {
+    "nombre": "Presentacion",
+    "ruta": "/presentacion.html"
+  }, {
+    "nombre": "Administración / Personal",
+    "ruta": "/personal.html"
+  }, {
+    "nombre": "Administración / Información Económica",
+    "ruta": "/infoEconomica.html"
+  }, {
+    "nombre": "Administración / Servicios",
+    "ruta": "/servicios.html"
+  }, {
+    "nombre": "Administración / Perfil del Contratante",
+    "ruta": "/perfilContratante.html"
+  }, {
+    "nombre": "Docencia / Oferta y Demanda Académica",
+    "ruta": "/ofertaDemanda.html"
+  }, {
+    "nombre": "Docencia / Claustro",
+    "ruta": "/claustro.html"
+  }, {
+    "nombre": "Docencia / Estudiantes",
+    "ruta": "/estudiantes.html"
+  }, {
+    "nombre": "Gestión e Investigación / Misión",
+    "ruta": "/mision.html"
+  }, {
+    "nombre": "Gestión e Investigación / Plan Estratégico",
+    "ruta": "/planEstrategico.html"
+  }, {
+    "nombre": "Gestión e Investigación / Gobierno",
+    "ruta": "/gobierno.html"
+  }, {
+    "nombre": "Gestión e Investigación / Estadísticas",
+    "ruta": "/estadisticas.html"
+  }, {
+    "nombre": "Normativa Legal",
+    "ruta": "/normativaLegal.html"
+  }, {
+    "nombre": "Solicitud de Información",
+    "ruta": "/solicitudInfo.html"
+  }, {
+    "nombre": "Mapa del sitio",
+    "ruta": "/mapaweb.html"
+  }, {
+    "nombre": "Buscador",
+    "ruta": "/buscador.html"
+  }, {
+    "nombre": "Datos de Personal",
+    "ruta": "/archivos/personal"
+  }, {
+    "nombre": "Datos de Información Económica",
+    "ruta": "/archivos/informacion-economica"
+  }, {
+    "nombre": "Datos de Servicios",
+    "ruta": "/archivos/servicios"
+  }, {
+    "nombre": "Datos de Oferta y Demanda",
+    "ruta": "/archivos/oferta-demanda"
+  }, {
+    "nombre": "Datos de Claustro",
+    "ruta": "/archivos/claustro"
+  }, {
+    "nombre": "Datos de Estudiantes",
+    "ruta": "/archivos/estudiantes"
+  }, {
+    "nombre": "Datos de Mision",
+    "ruta": "/archivos/mision"
+  }, {
+    "nombre": "Datos de Plan Estratégico",
+    "ruta": "/archivos/plan-estrategico"
+  }, {
+    "nombre": "Datos de Gobierno",
+    "ruta": "/archivos/gobierno"
+  }, {
+    "nombre": "Datos de Estadisticas",
+    "ruta": "/archivos/estadisticas"
+  }, {
+    "nombre": "Datos de Normativa Legal",
+    "ruta": "/archivos/normativa-legal"
+  }]
 }

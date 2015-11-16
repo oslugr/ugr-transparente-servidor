@@ -22,46 +22,53 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 // Dependencias
 var express = require('express');
+
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var debug = require('debug')('ugr-transparente-servidor:server');
+var favicon = require('serve-favicon');
 var http = require('http');
+var logger = require('morgan');
 var path = require('path');
 
+global.root = path.resolve(__dirname);
+
 // Rutas
-var index = require(__dirname+'/routes/index');
-var presentacion = require(__dirname+'/routes/presentacion');
-var administracion = require(__dirname+'/routes/administracion');
-var docencia = require(__dirname+'/routes/docencia');
-var gestionInvestigacion = require(__dirname+'/routes/gestionInvestigacion');
-var normativaLegal = require(__dirname+'/routes/normativaLegal');
-var solicitudInfo = require(__dirname+'/routes/solicitudInfo');
-var map = require(__dirname+'/routes/mapaweb');
-var buscador = require(__dirname+'/routes/buscador');
+var index = require(root + '/routes/index');
+var presentacion = require(root + '/routes/presentacion');
+var administracion = require(root + '/routes/administracion');
+var docencia = require(root + '/routes/docencia');
+var gestionInvestigacion = require(root + '/routes/gestionInvestigacion');
+var normativaLegal = require(root + '/routes/normativaLegal');
+var solicitudInfo = require(root + '/routes/solicitudInfo');
+var map = require(root + '/routes/mapaweb');
+var buscador = require(root + '/routes/buscador');
 
 // Librerías
-var cargar = require(__dirname+'/lib/cargar');
-//var escribir = require(__dirname+'/lib/putJSON');
-
+var cargar = require(root + '/lib/cargar');
 // Prueba de escritura de JSON recuperado de API
+//var escribir = require(__dirname+'/lib/putJSON');
 //escribir();
 
 // Crea aplicación web con Express
 var app = express();
 
 // Carga y exporta el archivo de configuración de la aplicación
-config = cargar(__dirname+'/config/config.json');
+config = cargar(root + '/config/config.json');
 module.exports.config = config;
 
 // Archivos de configuración de cada unas de las páginas
-module.exports.personal = cargar(__dirname+'/config/personal.json');
-module.exports.infoEconomica = cargar(__dirname+'/config/infoEconomica.json');
-module.exports.servicios = cargar(__dirname+'/config/servicios.json');
-module.exports.ofertaDemanda = cargar(__dirname+'/config/ofertaDemanda.json');
-module.exports.claustro = cargar(__dirname+'/config/claustro.json');
-module.exports.estudiantes = cargar(__dirname+'/config/estudiantes.json');
-module.exports.mision = cargar(__dirname+'/config/mision.json');
-module.exports.planEstrategico = cargar(__dirname+'/config/planEstrategico.json');
-module.exports.gobierno = cargar(__dirname+'/config/gobierno.json');
-module.exports.estadisticas = cargar(__dirname+'/config/estadisticas.json');
-module.exports.normativaLegal = cargar(__dirname+'/config/normativaLegal.json');
+module.exports.personal = cargar(root + '/config/personal.json');
+module.exports.infoEconomica = cargar(root + '/config/infoEconomica.json');
+module.exports.servicios = cargar(root + '/config/servicios.json');
+module.exports.ofertaDemanda = cargar(root + '/config/ofertaDemanda.json');
+module.exports.claustro = cargar(root + '/config/claustro.json');
+module.exports.estudiantes = cargar(root + '/config/estudiantes.json');
+module.exports.mision = cargar(root + '/config/mision.json');
+module.exports.planEstrategico = cargar(root + '/config/planEstrategico.json');
+module.exports.gobierno = cargar(root + '/config/gobierno.json');
+module.exports.estadisticas = cargar(root + '/config/estadisticas.json');
+module.exports.normativaLegal = cargar(root + '/config/normativaLegal.json');
 
 // Inicio
 app.get('/', index.index);
@@ -69,86 +76,94 @@ app.get('/index.html', index.index);
 // Presentacion
 app.get('/presentacion.html', presentacion.presentacion);
 // Administracion
-app.get('/personal.html',administracion.personal);
-app.get('/infoEconomica.html',administracion.infoEconomica);
-app.get('/servicios.html',administracion.servicios);
-app.get('/perfilContratante.html',administracion.perfil);
+app.get('/personal.html', administracion.personal);
+app.get('/infoEconomica.html', administracion.infoEconomica);
+app.get('/servicios.html', administracion.servicios);
+app.get('/perfilContratante.html', administracion.perfil);
 // Docencia
-app.get('/ofertaDemanda.html',docencia.ofertaDemanda);
-app.get('/claustro.html',docencia.claustro);
-app.get('/estudiantes.html',docencia.estudiantes);
+app.get('/ofertaDemanda.html', docencia.ofertaDemanda);
+app.get('/claustro.html', docencia.claustro);
+app.get('/estudiantes.html', docencia.estudiantes);
 // Gestion e Investigación
-app.get('/mision.html',gestionInvestigacion.mision);
-app.get('/planEstrategico.html',gestionInvestigacion.planEstrategico);
-app.get('/gobierno.html',gestionInvestigacion.gobierno);
-app.get('/estadisticas.html',gestionInvestigacion.estadisticas);
+app.get('/mision.html', gestionInvestigacion.mision);
+app.get('/planEstrategico.html', gestionInvestigacion.planEstrategico);
+app.get('/gobierno.html', gestionInvestigacion.gobierno);
+app.get('/estadisticas.html', gestionInvestigacion.estadisticas);
 // Normativa Legal
-app.get('/normativaLegal.html',normativaLegal.normativaLegal);
+app.get('/normativaLegal.html', normativaLegal.normativaLegal);
 // Solicitudes de Información
 app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 // Mapa del sitio
 app.get('/mapaweb.html', map.mapa);
 // Buscador
 app.get('/buscador.html', buscador.buscador);
+
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {
-  res.send(cargar(__dirname+'/config/personal.json'));
+  res.send(cargar(root + '/config/personal.json'));
 });
 app.get('/archivos/informacion-economica', function(req, res) {
-  res.send(cargar(__dirname+'/config/infoEconomica.json'));
+  res.send(cargar(root + '/config/infoEconomica.json'));
 });
 app.get('/archivos/servicios', function(req, res) {
-  res.send(cargar(__dirname+'/config/servicios.json'));
+  res.send(cargar(root + '/config/servicios.json'));
 });
 app.get('/archivos/oferta-demanda', function(req, res) {
-  res.send(cargar(__dirname+'/config/ofertaDemanda.json'));
+  res.send(cargar(root + '/config/ofertaDemanda.json'));
 });
 app.get('/archivos/claustro', function(req, res) {
-  res.send(cargar(__dirname+'/config/claustro.json'));
+  res.send(cargar(root + '/config/claustro.json'));
 });
 app.get('/archivos/estudiantes', function(req, res) {
-  res.send(cargar(__dirname+'/config/estudiantes.json'));
+  res.send(cargar(root + '/config/estudiantes.json'));
 });
 app.get('/archivos/mision', function(req, res) {
-  res.send(cargar(__dirname+'/config/mision.json'));
+  res.send(cargar(root + '/config/mision.json'));
 });
 app.get('/archivos/plan-estrategico', function(req, res) {
-  res.send(cargar(__dirname+'/config/planEstrategico.json'));
+  res.send(cargar(root + '/config/planEstrategico.json'));
 });
 app.get('/archivos/gobierno', function(req, res) {
-  res.send(cargar(__dirname+'/config/gobierno.json'));
+  res.send(cargar(root + '/config/gobierno.json'));
 });
 app.get('/archivos/estadisticas', function(req, res) {
-  res.send(cargar(__dirname+'/config/estadisticas.json'));
+  res.send(cargar(root + '/config/estadisticas.json'));
 });
 app.get('/archivos/normativa-legal', function(req, res) {
-  res.send(cargar(__dirname+'/config/normativaLegal.json'));
+  res.send(cargar(root + '/config/normativaLegal.json'));
 });
 
-// Variables de entorno (simplificar)
+// Variables de entorno (puerto de escucha y dirección IP)
 app.set('port', process.env.PORT);
 app.set('ip', process.env.IP);
-
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));
-
-// Motor de visualización (no permite visualizar PDFs)
+// Motor de visualización
 app.set('view engine', 'jade');
 
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(app.router);
+// Favicon
+app.use(favicon(root + '/public/favicon/favicon.ico'));
+// Logger de solicitudes HTTP
+app.use(logger('dev'));
+// Parseadores
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(cookieParser());
+//Manejador de enrutado
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next){
-  res.status(404).render('404_error', {titulo: config.error.titulo, texto: config.error.texto});
+// Manejador de errores:
+app.use(function(req, res, next) {
+  res.status(404).render('404_error', {
+    titulo: config.error.titulo,
+    texto: config.error.texto
+  });
 });
 
 // Creación del servidor
-http.createServer(app).listen(app.get('port'), app.get('ip'), function(){
+http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
   console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
-// Se exporta el módulo para poder pasarle los tests
 module.exports = app;

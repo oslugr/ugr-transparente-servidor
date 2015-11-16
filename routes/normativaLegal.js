@@ -24,7 +24,7 @@
 var conf = require('../app');
 
 // Gestión de la pagina de normativas
-exports.normativaLegal = function(req, res){
+exports.normativaLegal = function(req, res) {
   var normativa = conf.normativaLegal;
 
   res.render(normativa.plantilla, {

@@ -1,156 +1,134 @@
 {
-  "nombre":"Estudiantes",
-  "plantilla":"estudiantes",
-  "contenido":[
-    {
-      "encabezado":"Matrículas",
-      "link": "matriculas",
-      "texto":"Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
-    },
-    {
-      "encabezado":"Canales de Comunicación",
-      "link": "canales-comunicacion",
-      "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
-    },
-    {
-      "encabezado":"Becas y Ayudas",
-      "link": "becas-ayudas",
-      "texto":"Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
-    },
-    {
-      "encabezado":"Empleo de Egresados",
-      "link": "empleo-egresados",
-      "texto":"Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2011, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015."
-    }
-  ],
-  "datos":[
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2014/2015: grado",
-      "vista":1,
-      "url":"113ce86c-23b4-4d19-b518-001f5aedd285",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2014/2015: posgrado",
-      "vista":1,
-      "url":"2d4cb129-cda1-4737-8834-d25f269e29bb",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/2d4cb129-cda1-4737-8834-d25f269e29bb/download/201415matriculasposgrado.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2013/2014: grado",
-      "vista":1,
-      "url":"5df5e28b-09ca-40aa-a908-5438fd53cbda",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculasgrado20132014.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2013/2014: posgrado",
-      "vista":1,
-      "url":"48167c2f-6d17-49c5-9b63-f3d1129d425b",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2012/2013: grado",
-      "vista":1,
-      "url":"35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/35e31a6e-ac3c-44eb-a17c-0bc274f73e9b/download/04gradomatriculasporramas1213.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2012/2013: posgrado",
-      "vista":1,
-      "url":"13e1e6c0-1311-4c96-8409-39a2cce174c7",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/13e1e6c0-1311-4c96-8409-39a2cce174c7/download/09posgradomatriculaspormaster1213.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2011/2012: grado",
-      "vista":1,
-      "url":"f621cebf-e17c-4823-b2b9-69467624e4f9",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/f621cebf-e17c-4823-b2b9-69467624e4f9/download/04gradomatriculasporramas1112.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2011/2012: posgrado",
-      "vista":1,
-      "url":"a6b6f089-7e54-422e-a717-ad478e6124b0",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/a6b6f089-7e54-422e-a717-ad478e6124b0/download/09posgradomatriculaspormaster1112.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2010/2011: grado",
-      "vista":1,
-      "url":"ac9e790f-2cfa-4f88-bf40-979b11692822",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/ac9e790f-2cfa-4f88-bf40-979b11692822/download/04gradomatriculasporramas1011.csv"
-    },
-    {
-      "dataset":"Matrículas",
-      "id_dataset":"matriculas",
-      "nombre":"Matrículas 2010/2011: posgrado",
-      "vista":1,
-      "url":"eb126186-ec40-4807-bb83-3bf1335c33fb",
-      "descarga":"a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
-    },
-    {
-      "dataset":"Canales de Comunicación",
-      "id_dataset":"canales-comunicacion",
-      "nombre":"Canales de comunicación",
-      "vista":1,
-      "url":"d39a2a34-af70-4f16-96e8-d411e103668e",
-      "descarga":"8fce1497-d1ff-4f18-b9ca-e3eb4187a7aa/resource/d39a2a34-af70-4f16-96e8-d411e103668e/download/canalesdecomunicacion.csv"
-    },
-    {
-      "dataset":"Becas y Ayudas",
-      "id_dataset":"becas-ayudas",
-      "nombre":"Becas y ayudas",
-      "vista":1,
-      "url":"b6060564-3e4e-4d7c-a00f-2bab67229fbe",
-      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/b6060564-3e4e-4d7c-a00f-2bab67229fbe/download/becasyayudas.csv"
-    },
-    {
-      "dataset":"Becas y Ayudas",
-      "id_dataset":"becas-ayudas",
-      "nombre":"Becas: egresados 2011",
-      "vista":1,
-      "url":"7851c4b8-912a-40e2-8e9f-865427d3b8be",
-      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
-    },
-    {
-      "dataset":"Becas y Ayudas",
-      "id_dataset":"becas-ayudas",
-      "nombre":"Becas: política científica e investigación",
-      "vista":1,
-      "url":"cb3137b1-d086-48c4-b5b0-3a76f5743f11",
-      "descarga":"36dc4e7f-678e-48cb-b901-5541c410e043/resource/cb3137b1-d086-48c4-b5b0-3a76f5743f11/download/becaspoliticacientificaeinvestigacion.csv"
-    },
-    {
-      "dataset":"Empleo de Egresados",
-      "id_dataset":"empleo-egresados",
-      "nombre":"Empleo y valoración de estudios",
-      "vista":1,
-      "url":"e3b49997-55af-4dcd-91ad-8ff2c173faa5",
-      "descarga":"472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/e3b49997-55af-4dcd-91ad-8ff2c173faa5/download/adecuaciondeempleoyvaloraciondeestudios.csv"
-    },
-    {
-      "dataset":"Empleo de Egresados",
-      "id_dataset":"empleo-egresados",
-      "nombre":"Empleo de egresados",
-      "vista":1,
-      "url":"86cff619-46ac-47d6-b32e-2c8fafba9c03",
-      "descarga":"472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/86cff619-46ac-47d6-b32e-2c8fafba9c03/download/empleoegresados.csv"
-    }
-  ]
+  "nombre": "Estudiantes",
+  "plantilla": "estudiantes",
+  "contenido": [{
+    "encabezado": "Matrículas",
+    "link": "matriculas",
+    "texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
+  }, {
+    "encabezado": "Canales de Comunicación",
+    "link": "canales-comunicacion",
+    "texto": "Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
+  }, {
+    "encabezado": "Becas y Ayudas",
+    "link": "becas-ayudas",
+    "texto": "Información sobre los principales canales de representación y comunicación con los estudiantes de la Universidad de Granada."
+  }, {
+    "encabezado": "Empleo de Egresados",
+    "link": "empleo-egresados",
+    "texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2011, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015."
+  }],
+  "datos": [{
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2014/2015: grado",
+    "vista": 1,
+    "url": "113ce86c-23b4-4d19-b518-001f5aedd285",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2014/2015: posgrado",
+    "vista": 1,
+    "url": "2d4cb129-cda1-4737-8834-d25f269e29bb",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/2d4cb129-cda1-4737-8834-d25f269e29bb/download/201415matriculasposgrado.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2013/2014: grado",
+    "vista": 1,
+    "url": "5df5e28b-09ca-40aa-a908-5438fd53cbda",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculasgrado20132014.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2013/2014: posgrado",
+    "vista": 1,
+    "url": "48167c2f-6d17-49c5-9b63-f3d1129d425b",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2012/2013: grado",
+    "vista": 1,
+    "url": "35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/35e31a6e-ac3c-44eb-a17c-0bc274f73e9b/download/04gradomatriculasporramas1213.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2012/2013: posgrado",
+    "vista": 1,
+    "url": "13e1e6c0-1311-4c96-8409-39a2cce174c7",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/13e1e6c0-1311-4c96-8409-39a2cce174c7/download/09posgradomatriculaspormaster1213.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2011/2012: grado",
+    "vista": 1,
+    "url": "f621cebf-e17c-4823-b2b9-69467624e4f9",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/f621cebf-e17c-4823-b2b9-69467624e4f9/download/04gradomatriculasporramas1112.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2011/2012: posgrado",
+    "vista": 1,
+    "url": "a6b6f089-7e54-422e-a717-ad478e6124b0",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/a6b6f089-7e54-422e-a717-ad478e6124b0/download/09posgradomatriculaspormaster1112.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2010/2011: grado",
+    "vista": 1,
+    "url": "ac9e790f-2cfa-4f88-bf40-979b11692822",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/ac9e790f-2cfa-4f88-bf40-979b11692822/download/04gradomatriculasporramas1011.csv"
+  }, {
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2010/2011: posgrado",
+    "vista": 1,
+    "url": "eb126186-ec40-4807-bb83-3bf1335c33fb",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
+  }, {
+    "dataset": "Canales de Comunicación",
+    "id_dataset": "canales-comunicacion",
+    "nombre": "Canales de comunicación",
+    "vista": 1,
+    "url": "d39a2a34-af70-4f16-96e8-d411e103668e",
+    "descarga": "8fce1497-d1ff-4f18-b9ca-e3eb4187a7aa/resource/d39a2a34-af70-4f16-96e8-d411e103668e/download/canalesdecomunicacion.csv"
+  }, {
+    "dataset": "Becas y Ayudas",
+    "id_dataset": "becas-ayudas",
+    "nombre": "Becas y ayudas",
+    "vista": 1,
+    "url": "b6060564-3e4e-4d7c-a00f-2bab67229fbe",
+    "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/b6060564-3e4e-4d7c-a00f-2bab67229fbe/download/becasyayudas.csv"
+  }, {
+    "dataset": "Becas y Ayudas",
+    "id_dataset": "becas-ayudas",
+    "nombre": "Becas: egresados 2011",
+    "vista": 1,
+    "url": "7851c4b8-912a-40e2-8e9f-865427d3b8be",
+    "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
+  }, {
+    "dataset": "Becas y Ayudas",
+    "id_dataset": "becas-ayudas",
+    "nombre": "Becas: política científica e investigación",
+    "vista": 1,
+    "url": "cb3137b1-d086-48c4-b5b0-3a76f5743f11",
+    "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/cb3137b1-d086-48c4-b5b0-3a76f5743f11/download/becaspoliticacientificaeinvestigacion.csv"
+  }, {
+    "dataset": "Empleo de Egresados",
+    "id_dataset": "empleo-egresados",
+    "nombre": "Empleo y valoración de estudios",
+    "vista": 1,
+    "url": "e3b49997-55af-4dcd-91ad-8ff2c173faa5",
+    "descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/e3b49997-55af-4dcd-91ad-8ff2c173faa5/download/adecuaciondeempleoyvaloraciondeestudios.csv"
+  }, {
+    "dataset": "Empleo de Egresados",
+    "id_dataset": "empleo-egresados",
+    "nombre": "Empleo de egresados",
+    "vista": 1,
+    "url": "86cff619-46ac-47d6-b32e-2c8fafba9c03",
+    "descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/86cff619-46ac-47d6-b32e-2c8fafba9c03/download/empleoegresados.csv"
+  }]
 }

@@ -23,7 +23,7 @@
 var conf = require('../app');
 
 // Gestión de la pagina de oferta y demanda academica
-exports.ofertaDemanda = function(req, res){
+exports.ofertaDemanda = function(req, res) {
   var ofertaDemanda = conf.ofertaDemanda;
 
   res.render(ofertaDemanda.plantilla, {
@@ -35,7 +35,7 @@ exports.ofertaDemanda = function(req, res){
 };
 
 // Gestión de la pagina de claustro
-exports.claustro = function(req, res){
+exports.claustro = function(req, res) {
   var claustro = conf.claustro;
 
   res.render(claustro.plantilla, {
@@ -47,7 +47,7 @@ exports.claustro = function(req, res){
 };
 
 // Gestión de la pagina de estudiantes
-exports.estudiantes = function(req, res){
+exports.estudiantes = function(req, res) {
   var estudiantes = conf.estudiantes;
 
   res.render(estudiantes.plantilla, {

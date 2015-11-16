@@ -24,7 +24,7 @@
 var conf = require('../app');
 
 // Gestión de la pagina de la mision
-exports.mision = function(req, res){
+exports.mision = function(req, res) {
   var mision = conf.mision;
 
   res.render(mision.plantilla, {
@@ -36,7 +36,7 @@ exports.mision = function(req, res){
 };
 
 // Gestión de la pagina del paln estrategico
-exports.planEstrategico = function(req, res){
+exports.planEstrategico = function(req, res) {
   var planEstrategico = conf.planEstrategico;
 
   res.render(planEstrategico.plantilla, {
@@ -48,7 +48,7 @@ exports.planEstrategico = function(req, res){
 };
 
 // Gestión de la pagina del gobierno
-exports.gobierno = function(req, res){
+exports.gobierno = function(req, res) {
   var gobierno = conf.gobierno;
 
   res.render(gobierno.plantilla, {
@@ -60,7 +60,7 @@ exports.gobierno = function(req, res){
 };
 
 // Gestión de la pagina de resultados
-exports.estadisticas = function(req, res){
+exports.estadisticas = function(req, res) {
   var estadisticas = conf.estadisticas;
 
   res.render(estadisticas.plantilla, {

@@ -4,6 +4,9 @@ node_modules
 # Directorio resultado test cobertura
 coverage
 
+# Directorio de librerías instaladas con Bower
+public/lib
+
 # Logs y copias de seguridad
 *.log
 *~

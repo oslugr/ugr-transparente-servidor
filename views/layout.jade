@@ -74,18 +74,13 @@ html(lang="es")
 			}
 
 		if titulo === "Buscador"
-			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 			script(src="lib/jquery/dist/jquery.min.js")
 			script(type='text/javascript' src='script/formulario_buscar.js')
 
 		if seccion!=="Inicio"
-			//script(src="http://code.jquery.com/jquery-1.11.0.min.js")
-			script(src="libraries/jquery.js")
-			script(src="libraries/underscore.js")
-			//script(src="libraries/backbone.js")
-			//script(src="libraries/ckan.js")
-			//script(src="libraries/recline.js")
 			script(type='text/javascript' src='https://www.google.com/jsapi')
+			script(src="lib/jquery/dist/jquery.min.js")
+			script(src="lib/underscore/underscore-min.js")
 			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
 			script(src="script/generar_tabla.js")
 			block scripts

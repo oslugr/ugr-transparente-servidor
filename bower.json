@@ -14,7 +14,8 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "jquery": "jquery#^1.9.0"
+    "jquery": "jquery#^1.9.0",
+    "underscore": "underscore#^1.8.3"
   },
   "resolutions": {
     "jquery": "^1.9.0"

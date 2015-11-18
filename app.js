@@ -134,8 +134,8 @@ app.get('/archivos/normativa-legal', function(req, res) {
 });
 
 // Variables de entorno (puerto de escucha y dirección IP)
-app.set('port', process.env.PORT);
-app.set('ip', process.env.IP);
+app.set('port', process.env.PORT | 3000);
+app.set('ip', process.env.IP | "127.0.0.1");
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));
 // Motor de visualización

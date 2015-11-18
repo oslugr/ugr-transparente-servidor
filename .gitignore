@@ -10,3 +10,4 @@ public/lib
 # Logs y copias de seguridad
 *.log
 *~
+*.out

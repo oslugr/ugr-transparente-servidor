@@ -32,8 +32,6 @@ html(lang="es")
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
 		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
 
-		link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css", media="all")
-
 		script(type='text/javascript').
 			function mostrar_menu_administracion(){
 				var menu=document.getElementById("menu_administracion");
@@ -78,9 +76,9 @@ html(lang="es")
 			script(type='text/javascript' src='script/formulario_buscar.js')
 
 		if seccion!=="Inicio"
-			script(type='text/javascript' src='https://www.google.com/jsapi')
 			script(src="lib/jquery/dist/jquery.min.js")
 			script(src="lib/underscore/underscore-min.js")
+			script(type='text/javascript' src='https://www.google.com/jsapi')
 			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
 			script(src="script/generar_tabla.js")
 			block scripts
@@ -108,7 +106,6 @@ html(lang="es")
 					span.separador_enlaces |
 					a(href="http://www.ugr.es/pages/administracion" id="enlace_eadministracion") Administración electrónica
 
-
 					div#buscador
 						h2 Buscador del portal
 						form(action="buscador.html" method="GET" class="mod-buttons")
@@ -120,7 +117,6 @@ html(lang="es")
 										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar")
 
 				block content
-
 				#banners
 					.mod-banners
 						ul

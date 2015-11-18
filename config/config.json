@@ -61,6 +61,6 @@
   },
   "error": {
     "titulo": "Page not found (Error 404)",
-    "texto": "Lo siento, la página no existe o está temporalmente inaccesible"
+    "texto": "Lo siento, la página no existe o está temporalmente inaccesible."
   }
 }

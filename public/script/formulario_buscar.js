@@ -18,6 +18,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+
 $(function() {
 
   function transformarCaracteres(cadena) {
@@ -40,7 +41,6 @@ $(function() {
 
     return (cadena);
   }
-
 
   var contenido = $('.content_doku'), //Lugar donde resultadosemos los resultados
     query = location.search, //Se obtiene la consulta

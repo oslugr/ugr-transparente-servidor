@@ -74,7 +74,7 @@
     "deploy": "fly transparente",
     "kill": "ps aux | grep 'app.js' | grep -v grep | awk '{print \"sudo kill -9 \" $2}' | sh",
     "start_": "PORT=3000 IP=127.0.0.1 forever start -l /var/log/forever.log -a -o /var/log/out.log -e /var/log/err.log ./app.js",
-    "start": "nohup node app &",
+    "start": "nohup node app.js &",
     "pretest": "bower install",
     "test": "istanbul cover _mocha ./test --recursive"
   }

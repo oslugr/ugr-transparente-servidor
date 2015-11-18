@@ -20,7 +20,6 @@
 
 
 $(document).ready(function() {
-
   //select all the a tag with name equal to modal
   $('a[class=view]').click(function(e) {
     //Cancel the link behavior
@@ -91,11 +90,9 @@ $(document).ready(function() {
 
 });
 
-
 google.load('visualization', '1', {
   packages: ['table']
 });
-
 
 function isNumber(cell) {
   var i = 0;
@@ -154,9 +151,9 @@ function isNumber(cell) {
   return cont;
 }
 
-
 function drawTable(csv) {
   var data = new google.visualization.DataTable();
+  var table = new google.visualization.Table(document.getElementById('tabla'));
   var i, j, a;
 
   for (i = 0; i < csv[0].length; i++) {
@@ -177,8 +174,6 @@ function drawTable(csv) {
     }
   }
 
-
-  var table = new google.visualization.Table(document.getElementById('tabla'));
   table.draw(data, {
     allowHtml: true,
     showRowNumber: true

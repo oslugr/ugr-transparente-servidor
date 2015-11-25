@@ -43,8 +43,7 @@
     "morgan": "^1.6.1",
     "node.io": "^0.5.1",
     "request": "^2.65.0",
-    "serve-favicon": "^2.3.0",
-    "underscore": "^1.8.3"
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
     "flightplan": "^0.6.2",
@@ -65,7 +64,8 @@
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "should": "^7.1.1",
-    "supertest": "^1.1.0"
+    "supertest": "^1.1.0",
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": ">=0.12.7"

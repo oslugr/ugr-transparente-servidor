@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- EXTERNAL LIBS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="papaparse.min.js"></script>
+  <script src="underscore-min.js"></script>
+
+  <!-- EXAMPLE SCRIPT -->
+  <script>
+    // onload callback
+    function drawChart() {
+      var file = "http://opendata.ugr.es/dataset/a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv";
+
+      // JSONP request
+      var jsonData = $.ajax({
+        type: "GET",
+        url: file,
+        dataType: "text",
+      }).done(function(results) {
+        var datatable = new google.visualization.DataTable();
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        var json = Papa.parse(results);
+        var numColumnas = _.size(json.data) - 2;
+        var numFilas = _.size(json.data[0]);
+        var i, j;
+
+        var titulos = json.data[0];
+
+        _.each(titulos, function(valor) {
+          datatable.addColumn('string', valor);
+        });
+
+        datatable.addRows(numColumnas);
+
+        for (i = 0; i < numColumnas; i++) {
+          for (j = 0; j < numFilas; j++) {
+            if (_.isNumber(json.data[i + 1][j])) {
+              datatable.setCell(i, j, json.data[i + 1][j], {
+                style: 'text-align: right'
+              });
+            } else {
+              datatable.setCell(i, j, json.data[i + 1][j]);
+            }
+          }
+        }
+
+        table.draw(datatable, {
+          showRowNumber: true,
+          width: '100%',
+          height: '100%'
+        });
+      });
+    }
+
+    // load chart lib
+    google.load("visualization", "1.1", {
+      packages: ["table"]
+    });
+
+    // call drawChart once google charts is loaded
+    google.setOnLoadCallback(drawChart);
+  </script>
+
+</head>
+
+<body>
+  <div id="table_div" style="width: 100%;"></div>
+</body>
+
+</html>

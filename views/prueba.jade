@@ -1,0 +1,64 @@
+//
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+extends layout
+
+block content
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					span.first #{seccion}
+	#general
+		#menus
+			- var mode1 = "selected tipo2-selected item-first_level"
+			- var mode2 = "tipo2 item-first_level"
+			- var mode3 = "tipo2 item-first_level"
+			- var mode4 = "tipo2 item-first_level"
+			- var mode5 = "tipo2 item-first_level"
+			- var mode6 = "tipo2 item-first_level"
+			- var mode7 = "tipo2 item-first_level"
+			- var submenu1_display = "display:none;"
+			- var submenu2_display = "display:none;"
+			- var submenu3_display = "display:none;"
+			- var item1_selected = "tipo1"
+			- var item2_selected = "tipo1"
+			- var item3_selected = "tipo1"
+			- var item4_selected = "tipo1"
+
+			- var item5_selected = "tipo1"
+			- var item6_selected = "tipo1"
+			- var item7_selected = "tipo1"
+
+			- var item8_selected = "tipo1"
+			- var item9_selected = "tipo1"
+			- var item10_selected = "tipo1"
+			- var item11_selected = "tipo1"
+			include ./plantillaMenus.jade
+		#pagina
+			h1#titulo_pagina
+				span.texto_titulo #{seccion}
+
+			div(id="contenido", class="sec_interior")
+				.content_doku
+					each enlace in enlaces
+						a(href="#{enlace[1]}", class="enlaces_index")
+							div(id="#{enlace[2]}") #{enlace[0]}

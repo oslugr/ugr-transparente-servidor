@@ -2,19 +2,20 @@
 <html>
 
 <head>
-  <!-- EXTERNAL LIBS-->
+
+  <!-- Librerías externas -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://www.google.com/jsapi"></script>
   <script src="papaparse.min.js"></script>
   <script src="underscore-min.js"></script>
 
-  <!-- EXAMPLE SCRIPT -->
+  <!-- Script de visualización de tablas -->
   <script>
-    // onload callback
+    // Callback ejecutado al cargar
     function drawChart() {
       var file = "http://opendata.ugr.es/dataset/a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv";
 
-      // JSONP request
+      // Petición JSONP para obtener los datos de la tabla
       var jsonData = $.ajax({
         type: "GET",
         url: file,
@@ -23,27 +24,34 @@
         var datatable = new google.visualization.DataTable();
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
-        var json = Papa.parse(results);
-        var numColumnas = _.size(json.data) - 2;
-        var numFilas = _.size(json.data[0]);
-        var i, j;
+        var datos = (Papa.parse(results)).data;
 
-        var titulos = json.data[0];
+        if (_.size(datos) >= 3) {
+          var numColumnas = _.size(datos[0]);
+          var numFilas = _.size(datos) - 2;
+          var i = 0;
+          var j = 0;
 
-        _.each(titulos, function(valor) {
-          datatable.addColumn('string', valor);
-        });
+          var titulos = datos[0];
 
-        datatable.addRows(numColumnas);
-
-        for (i = 0; i < numColumnas; i++) {
-          for (j = 0; j < numFilas; j++) {
-            if (_.isNumber(json.data[i + 1][j])) {
-              datatable.setCell(i, j, json.data[i + 1][j], {
-                style: 'text-align: right'
-              });
+          _.each(titulos, function(valor) {
+            if (_.isNaN(parseInt(datos[1][i]))) {
+              datatable.addColumn('string', valor);
             } else {
-              datatable.setCell(i, j, json.data[i + 1][j]);
+              datatable.addColumn('number', valor);
+            }
+            i++;
+          });
+
+          datatable.addRows(numFilas);
+
+          for (i = 0; i < numFilas; i++) {
+            for (j = 0; j < numColumnas; j++) {
+              if (_.isNaN(parseInt(datos[i + 1][j]))) {
+                datatable.setCell(i, j, datos[i + 1][j]);
+              } else {
+                datatable.setCell(i, j, parseInt(datos[i + 1][j]));
+              }
             }
           }
         }
@@ -56,12 +64,12 @@
       });
     }
 
-    // load chart lib
+    // Carga la API de Google para visualización de tablas
     google.load("visualization", "1.1", {
       packages: ["table"]
     });
 
-    // call drawChart once google charts is loaded
+    // Llama al callback de visualización cuando la librería de la API de Google es cargada
     google.setOnLoadCallback(drawChart);
   </script>
 

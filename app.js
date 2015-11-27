@@ -43,6 +43,7 @@ var normativaLegal = require(root + '/routes/normativaLegal');
 var solicitudInfo = require(root + '/routes/solicitudInfo');
 var map = require(root + '/routes/mapaweb');
 var buscador = require(root + '/routes/buscador');
+var prueba = require(root + '/routes/prueba');
 
 // Librerías
 var cargar = require(root + '/lib/cargar');
@@ -69,6 +70,7 @@ module.exports.planEstrategico = cargar(root + '/config/planEstrategico.json');
 module.exports.gobierno = cargar(root + '/config/gobierno.json');
 module.exports.estadisticas = cargar(root + '/config/estadisticas.json');
 module.exports.normativaLegal = cargar(root + '/config/normativaLegal.json');
+module.exports.prueba = cargar(root + '/config/prueba.json');
 
 // Inicio
 app.get('/', index.index);
@@ -97,6 +99,9 @@ app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 app.get('/mapaweb.html', map.mapa);
 // Buscador
 app.get('/buscador.html', buscador.buscador);
+// Prueba
+app.get('/prueba.html', prueba.personal);
+
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {

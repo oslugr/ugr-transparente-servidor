@@ -22,7 +22,7 @@
         dataType: "text",
       }).done(function(results) {
         var datatable = new google.visualization.DataTable();
-        var table = new google.visualization.Table(document.getElementById('table_div'));
+        var table = new google.visualization.Table(document.getElementById('tabla'));
 
         var datos = (Papa.parse(results)).data;
 
@@ -76,7 +76,7 @@
 </head>
 
 <body>
-  <div id="table_div" style="width: 100%;"></div>
+  <div id="tabla" style="width: 100%;"></div>
 </body>
 
 </html>

@@ -1,6 +1,421 @@
-[
-  "administracion",
-  "docencia",
-  "gestion-e-investigacion",
-  "normativa-legal"
-]
+{
+  "nombre": "Personal",
+  "plantilla": "prueba",
+  "contenido": [{
+    "encabezado": "Información Salarial: 2015",
+    "link": "informacion-salarial-2015",
+    "texto": "Información relativa a la oferta de recursos humanos de la universidad: personal docente e investigador (PDI) y personal de administración y servicios (PAS). Se ofrecen los datos sobre el personal contratado y sus distintas categorías referentes al curso 2014 / 2015: PAS (funcionarios y laborales) y PDI (funcionarios y laborales)."
+  }, {
+    "encabezado": "Información Salarial: 2014",
+    "link": "informacion-salarial-2014",
+    "texto": "Información relativa a la oferta de recursos humanos de la universidad: personal docente e investigador (PDI) y personal de administración y servicios (PAS). Se ofrecen los datos sobre el personal contratado y sus distintas categorías referentes al curso 2013 / 2014: PAS (funcionarios y laborales) y PDI (funcionarios y laborales)."
+  }, {
+    "encabezado": "Bandas Salariales: 2015",
+    "link": "bandas-salariales-2015",
+    "texto": "Información sobre la remuneración al personal universitario, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones referentes al curso 2014/2015."
+  }, {
+    "encabezado": "Bandas Salariales: 2014",
+    "link": "bandas-salariales-2015",
+    "texto": "Información sobre la remuneración al personal universitario, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones referentes al curso 2013/2014."
+  }],
+  "datos": [{
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Análisis total plantilla: género",
+    "vista": 1,
+    "url": "51d53138-0408-4257-9909-57acea137a58",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/51d53138-0408-4257-9909-57acea137a58/download/analisisgeneroplantillatotal.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Antigüedad en años: total plantilla",
+    "vista": 1,
+    "url": "11c9d538-042b-460e-852f-7b06e9a1bbb2",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/11c9d538-042b-460e-852f-7b06e9a1bbb2/download/analisisgeneroantiguedadaniosplantilla.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Cargos académicos",
+    "vista": 1,
+    "url": "3c4c9b8b-ba7b-46a4-b855-38ec440688db",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/3c4c9b8b-ba7b-46a4-b855-38ec440688db/download/cargosacademicos.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Cuota patronal de la Seguridad Social",
+    "vista": 1,
+    "url": "9cae70e2-6a5b-48a0-a92f-3a3d1f97f964",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/9cae70e2-6a5b-48a0-a92f-3a3d1f97f964/download/cuotaseguridadsocial.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Estado resumen de gastos de personal",
+    "vista": 1,
+    "url": "48afd45e-8c61-47e4-90bd-e0a9f59a6827",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/48afd45e-8c61-47e4-90bd-e0a9f59a6827/download/resumencapitulo1.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Incorporaciones sobre plantilla total: PAS y PDI",
+    "vista": 1,
+    "url": "455f020b-460c-49e2-9a6f-4555d7cd73c8",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/455f020b-460c-49e2-9a6f-4555d7cd73c8/download/analisisgenero10aniosporplantilla.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "PDI contratado",
+    "vista": 1,
+    "url": "81e5e765-a3b9-43de-83ce-18f2537060dd",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/81e5e765-a3b9-43de-83ce-18f2537060dd/download/docenteinvestigadorcontratado.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "PDI funcionario",
+    "vista": 1,
+    "url": "36773411-4152-4f3b-abe8-6db00628434f",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/36773411-4152-4f3b-abe8-6db00628434f/download/docenteinvestigadorfuncionario.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Retribuciones básicas del PAS funcionario",
+    "vista": 1,
+    "url": "2da5a477-aa3c-4e1b-aeb2-fe6a53d957f6",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/2da5a477-aa3c-4e1b-aeb2-fe6a53d957f6/download/retribucionesbasicaspasfuncionario.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Retribuciones complementarias del PAS funcionario",
+    "vista": 1,
+    "url": "d8d5c011-f75d-4ef9-a343-532651acb824",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/d8d5c011-f75d-4ef9-a343-532651acb824/download/retribucionescomplempasfuncionario.csv"
+  }, {
+    "dataset": "Información Salarial: 2015",
+    "id_dataset": "informacion-salarial-2015",
+    "nombre": "Retribuciones del PAS laboral",
+    "vista": 1,
+    "url": "3648ee95-1782-499f-bc38-9766f1617e07",
+    "descarga": "985a8e1e-734b-432a-ac65-a7da6a4143d0/resource/3648ee95-1782-499f-bc38-9766f1617e07/download/retribucionespaslaboral.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Análisis PAS funcionario: género",
+    "vista": 1,
+    "url": "5a47a757-8670-4880-8fa0-446d054adf70",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5a47a757-8670-4880-8fa0-446d054adf70/download/analisisdelpasfuncionarioporgenerodelaplantilladelaugra10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Análisis PAS laboral: género",
+    "vista": 1,
+    "url": "a32645c4-2d1e-4e8d-8110-e2fa054c3ff1",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/a32645c4-2d1e-4e8d-8110-e2fa054c3ff1/download/analisisdelpaslaboralporgenerodelaplantilladelaugra10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Análisis PDI funcionario: género",
+    "vista": 1,
+    "url": "d1d51183-7ad6-4c36-b71d-54db87da9e9d",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/d1d51183-7ad6-4c36-b71d-54db87da9e9d/download/analisisdelpdicontratadoporgenerodelaplantilladelaugra10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Análisis PDI contratado: género",
+    "vista": 1,
+    "url": "df22f82a-837b-4d5f-83d9-66db3faad413",
+    "descarga": "df22f82a-837b-4d5f-83d9-66db3faad413/download/analisisdelpdifuncionarioporgenerodelaplantilladelaugra10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Análisis total plantilla: género",
+    "vista": 1,
+    "url": "d17eaaf2-e21e-4c4a-827a-a4e4aed85834",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/d17eaaf2-e21e-4c4a-827a-a4e4aed85834/download/analisisdelpdifuncionarioporgenerodelaplantilladelaugra10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por colectivo: PAS",
+    "vista": 1,
+    "url": "83aeb2be-a3bc-40da-885e-19bf0cbb8ab0",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/83aeb2be-a3bc-40da-885e-19bf0cbb8ab0/download/antiguedadenanosporcolectivopassituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por colectivo: PDI",
+    "vista": 1,
+    "url": "59418237-a82e-4b98-ab79-b37619b6d611",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/59418237-a82e-4b98-ab79-b37619b6d611/download/antiguedadenanosporcolectivopdisituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por colectivo: PAS Y PDI",
+    "vista": 1,
+    "url": "07a2611d-1a0d-4eff-90f8-23efc682c2c0",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/07a2611d-1a0d-4eff-90f8-23efc682c2c0/download/antiguedadenanosporcolectivopasypdisituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por sectores: PAS",
+    "vista": 1,
+    "url": "089ae78d-299b-43e8-8283-99d74d1bdccc",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/089ae78d-299b-43e8-8283-99d74d1bdccc/download/antiguedadenanosporsectorespassituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por sectores: PDI",
+    "vista": 1,
+    "url": "9fad40be-6c92-409f-bae7-216175e94b03",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9fad40be-6c92-409f-bae7-216175e94b03/download/antiguedadenanosporsectorespdisituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años por sectores: PAS y PDI",
+    "vista": 1,
+    "url": "3b45da8c-84bf-4e5c-8124-dbac9b1589af",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/3b45da8c-84bf-4e5c-8124-dbac9b1589af/download/antiguedadenanosporsectorespasypdisituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Antigüedad en años: total plantilla",
+    "vista": 1,
+    "url": "0200708b-ccfa-4e09-96e9-4e4de35149ca",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/0200708b-ccfa-4e09-96e9-4e4de35149ca/download/antiguedadenanossobretotalplantillasituaciona10122013.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Cargos académicos",
+    "vista": 1,
+    "url": "9d7a5640-5450-4338-9f17-d187408238fc",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9d7a5640-5450-4338-9f17-d187408238fc/download/cargosacademicos2014.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Cuota patronal de la Seguridad Social",
+    "vista": 1,
+    "url": "55cc0671-fa97-455c-8949-74181255ce55",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/55cc0671-fa97-455c-8949-74181255ce55/download/cuotapatronaldelaseguridadsocial2014.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Estado resumen de gastos de personal",
+    "vista": 1,
+    "url": "ee4da3ca-a924-43ff-b97a-6968e0097daa",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/ee4da3ca-a924-43ff-b97a-6968e0097daa/download/estadoresumendegastosdepersonal2014.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por colectivo: PAS",
+    "vista": 1,
+    "url": "3bc07ab3-20e9-4023-a178-b55b2c0b2e96",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/3bc07ab3-20e9-4023-a178-b55b2c0b2e96/download/incorporacionespasporcolectivoultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por colectivo: PDI",
+    "vista": 1,
+    "url": "51f3a277-165e-4bde-a0c3-8d5852838399",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/51f3a277-165e-4bde-a0c3-8d5852838399/download/incorporacionespdiporcolectivoultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por colectivo: PAS y PDI",
+    "vista": 1,
+    "url": "38399700-2856-49d4-aed4-fb0a91127e0f",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/38399700-2856-49d4-aed4-fb0a91127e0f/download/incorporacionespasypdiporcolectivoultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por género: PAS y PDI",
+    "vista": 1,
+    "url": "5b232a6f-4320-4078-acfb-52400aa088a9",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5b232a6f-4320-4078-acfb-52400aa088a9/download/analisispasypdiporgenerodelaplantilladelaugrincorporacionesultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por sectores: PAS",
+    "vista": 1,
+    "url": "8bc8f453-89ee-42ee-ad7f-e1fa5b95e076",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/8bc8f453-89ee-42ee-ad7f-e1fa5b95e076/download/incorporacionespasporsectoresultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por sectores: PDI",
+    "vista": 1,
+    "url": "431dab7f-588f-4f6a-8baa-b7df2b52030e",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/431dab7f-588f-4f6a-8baa-b7df2b52030e/download/incorporacionespdiporsectoresultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones por sectores: PAS y PDI",
+    "vista": 1,
+    "url": "9113eeff-5641-4dd1-91e0-a2be0491930a",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/9113eeff-5641-4dd1-91e0-a2be0491930a/download/incorporacionespasypdiporsectoresultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones sobre plantilla total: PAS",
+    "vista": 1,
+    "url": "5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/5ec3e4f4-d40a-4e97-bde4-1eb6fe75c563/download/incorporacionespassobretotalplantillaultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones sobre plantilla total: PDI",
+    "vista": 1,
+    "url": "e73a5d55-4deb-4a60-a0f8-689da4c94853",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/e73a5d55-4deb-4a60-a0f8-689da4c94853/download/incorporacionespdisobretotalplantillaultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Incorporaciones sobre plantilla total: PAS y PDI",
+    "vista": 1,
+    "url": "ea76b7ca-f6d4-4d6f-a244-82175b9268a5",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/ea76b7ca-f6d4-4d6f-a244-82175b9268a5/download/incorporacionespasypdisobretotalplantillaultimos10anos.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Personal docente e investigador contratado",
+    "vista": 1,
+    "url": "6293d444-9114-4a63-83c1-5ac48d5a13e8",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/6293d444-9114-4a63-83c1-5ac48d5a13e8/download/personaldocenteeinvestigacioncontratado.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Personal docente e investigador funcionario",
+    "vista": 1,
+    "url": "96e0d3b8-4317-46ca-b878-b30be635c3db",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/96e0d3b8-4317-46ca-b878-b30be635c3db/download/personaldocenteeinvestigacionfuncionarios.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Retribuciones básicas del PAS funcionario",
+    "vista": 1,
+    "url": "24015c3e-03c4-4195-924a-1f31b0091cbc",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/24015c3e-03c4-4195-924a-1f31b0091cbc/download/retribucionesbasicasdelpasfuncionario2014.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Retribuciones complementarias del PAS funcionario",
+    "vista": 1,
+    "url": "ca910f69-ea7f-4999-99f5-b93a777e0145",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/ca910f69-ea7f-4999-99f5-b93a777e0145/download/retribucionescomplementariasdelpasfuncionario2014.csv"
+  }, {
+    "dataset": "Información Salarial: 2014",
+    "id_dataset": "informacion-salarial-2014",
+    "nombre": "Retribuciones del PAS laboral",
+    "vista": 1,
+    "url": "b235dbbd-4fe1-4d72-a241-0f46e3770b3d",
+    "descarga": "6b39c91f-f6f3-4f09-a7ce-19329b4d9b40/resource/b235dbbd-4fe1-4d72-a241-0f46e3770b3d/download/retribucionesdelpaslaboral2014.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Complemento de productividad: PAS",
+    "vista": 1,
+    "url": "e8bb4921-5121-4a19-80b9-d62457003957",
+    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/e8bb4921-5121-4a19-80b9-d62457003957/download/complementodeproductividad2014pas4tramos.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Complemento por Doctorado: profesores asociados",
+    "vista": 1,
+    "url": "89421bf2-d3f7-47fa-8e91-52de59e299ce",
+    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/89421bf2-d3f7-47fa-8e91-52de59e299ce/download/complementopordoctoradoprofesoresasociados.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Retribuciones: docentes contratados LOU",
+    "vista": 1,
+    "url": "1860f0d3-2d53-4ab8-b3d4-0226b8461e66",
+    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/1860f0d3-2d53-4ab8-b3d4-0226b8461e66/download/retribucionesdocentescontratadoslou.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Retribuciones: funcionarios docentes",
+    "vista": 1,
+    "url": "91353992-5fa3-453f-8647-1dd3016d6397",
+    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/91353992-5fa3-453f-8647-1dd3016d6397/download/retribucionesfucionariosdocentes.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Retribuciones: personal de administración y servicios (funcionarios)",
+    "vista": 1,
+    "url": "9065d637-9df4-4784-a70e-1a7f1d5d1c13",
+    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/9065d637-9df4-4784-a70e-1a7f1d5d1c13/download/retribucionespersonaldeadministracionyserviciosfuncionarios.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Retribuciones: personal de administración y servicios (laboral)",
+    "vista": 1,
+    "url": "ff4d5ae9-e45b-44a0-8690-3715bcb11116",
+    "descarga": "http://opendata.ugr.es/dataset/71e01655-9d3b-4f91-a849-a42f2c55633c/resource/ff4d5ae9-e45b-44a0-8690-3715bcb11116/download/retribucionespersonaldeadministracionyservicioslaborales.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Retribuciones: personal docente con plaza vinculada",
+    "vista": 1,
+    "url": "a07ce2b9-a1d6-4506-ad4c-7accef4ff2a1",
+    "descarga": "http://opendata.ugr.es/dataset/71e01655-9d3b-4f91-a849-a42f2c55633c/resource/a07ce2b9-a1d6-4506-ad4c-7accef4ff2a1/download/retribucionespersonaldocenteconplazavinculada.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2015",
+    "id_dataset": "bandas-salariales-2015",
+    "nombre": "Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
+    "vista": 1,
+    "url": "2a5a0614-155b-47c3-9c8b-d1aa0c077765",
+    "descarga": "http://opendata.ugr.es/dataset/71e01655-9d3b-4f91-a849-a42f2c55633c/resource/2a5a0614-155b-47c3-9c8b-d1aa0c077765/download/tramosdocenteseinvestigadorescargosacademicoseindemnizacionporresidencia.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Complemento de productividad: PAS",
+    "vista": 1,
+    "url": "ac0aae3c-7459-4b04-b110-c23aeed5b155",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ac0aae3c-7459-4b04-b110-c23aeed5b155/download/complementodeproductividad2014pas4tramos.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Complemento por Doctorado: profesores asociados",
+    "vista": 1,
+    "url": "7e5c4b2b-23e1-47a4-aa00-39f93ace75d2",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/7e5c4b2b-23e1-47a4-aa00-39f93ace75d2/download/complementopordoctoradoprofesoresasociados.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Retribuciones: docentes contratados LOU",
+    "vista": 1,
+    "url": "7d84ca24-2c1d-4799-aa5e-445a5ab4c343",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/7d84ca24-2c1d-4799-aa5e-445a5ab4c343/download/retribucionesdocentescontratadoslouformatodoc.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Retribuciones: funcionarios docentes",
+    "vista": 1,
+    "url": "9860da72-1c4b-4647-b54a-465d4ffd53ec",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/9860da72-1c4b-4647-b54a-465d4ffd53ec/download/retribucionesfuncionariosdocentes.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Retribuciones: personal de administración y servicios (funcionarios)",
+    "vista": 1,
+    "url": "ed992204-b8b2-4e67-86eb-2f5309d2f2fd",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ed992204-b8b2-4e67-86eb-2f5309d2f2fd/download/retribucionespersonaldeadministracionyserviciosfuncionarios.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Retribuciones: personal de administración y servicios (laboral)",
+    "vista": 1,
+    "url": "ed155a33-d5e6-44d6-a611-2348e74ff4e8",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/ed155a33-d5e6-44d6-a611-2348e74ff4e8/download/retribucionespersonaldeadministracionyservicioslaborales.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Retribuciones: personal docente con plaza vinculada",
+    "vista": 1,
+    "url": "21e77e24-d7d7-4aae-bc3f-529a571feadc",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/21e77e24-d7d7-4aae-bc3f-529a571feadc/download/retribucionespersonaldocenteconplazavinculada.csv"
+  }, {
+    "dataset": "Bandas Salariales: 2014",
+    "id_dataset": "bandas-salariales-2014",
+    "nombre": "Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
+    "vista": 1,
+    "url": "2805349c-9c13-4915-b8b6-4921726cecf4",
+    "descarga": "4b346884-e16a-4c8e-9079-aae7fec606cb/resource/2805349c-9c13-4915-b8b6-4921726cecf4/download/tramosdocenteseinvestigadorescargosacademicosyindemnizacionporresidencia.csv"
+  }]
+}

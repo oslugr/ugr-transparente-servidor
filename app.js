@@ -140,7 +140,7 @@ app.get('/archivos/normativa-legal', function(req, res) {
 
 // Variables de entorno (puerto de escucha y dirección IP)
 app.set('ip', process.env.IP || '0.0.0.0');
-app.set('port', process.env.PORT || 5000 || 3000 || 80);
+app.set('port', process.env.PORT || 5000 || 3000);
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));
 // Motor de visualización

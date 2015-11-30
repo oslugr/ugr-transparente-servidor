@@ -125,17 +125,14 @@
     "nombre": "Gestión e Investigación / Gobierno",
     "ruta": "/gobierno.html"
   }, {
-    "nombre": "Gestión e Investigación / Estadísticas",
-    "ruta": "/estadisticas.html"
+    "nombre": "Gestión e Investigación / Rendimiento",
+    "ruta": "/rendimiento.html"
   }, {
     "nombre": "Normativa Legal",
     "ruta": "/normativaLegal.html"
   }, {
     "nombre": "Solicitud de Información",
     "ruta": "/solicitudInfo.html"
-  }, {
-    "nombre": "Mapa del sitio",
-    "ruta": "/mapaweb.html"
   }, {
     "nombre": "Buscador",
     "ruta": "/buscador.html"
@@ -167,8 +164,8 @@
     "nombre": "Datos de Gobierno",
     "ruta": "/archivos/gobierno"
   }, {
-    "nombre": "Datos de Estadisticas",
-    "ruta": "/archivos/estadisticas"
+    "nombre": "Datos de Rendimiento",
+    "ruta": "/archivos/rendimiento"
   }, {
     "nombre": "Datos de Normativa Legal",
     "ruta": "/archivos/normativa-legal"

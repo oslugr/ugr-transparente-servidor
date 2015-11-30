@@ -53,22 +53,22 @@
     "dataset": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
     "id_dataset": "ley-transparencia",
     "nombre": "Resumen: Ley de Transparencia",
-    "vista": 1,
-    "url": "a057d063-a9c8-446f-b28e-6922cf4899b2",
-    "descarga": "0b9ebc44-3a2d-4dd7-af0a-b8f6f386aca8/resource/a057d063-a9c8-446f-b28e-6922cf4899b2/download/leydetransparencia.csv"
+    "vista": 0,
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
     "id_dataset": "ley-transparencia",
     "nombre": "Boletín Oficial del Estado: Ley de Transparencia",
     "vista": 0,
-    "url": "ac3ec6f1-67b9-479e-80ee-57f69f768c8b",
-    "descarga": "0b9ebc44-3a2d-4dd7-af0a-b8f6f386aca8/resource/ac3ec6f1-67b9-479e-80ee-57f69f768c8b/download/boea201312887.pdf"
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Ley de Transparencia Pública de Andalucía",
     "id_dataset": "ley-transparencia-publica-andalucia",
     "nombre": "Boletín Oficial de la Junta de Andalucía: Ley de Transparencia",
     "vista": 0,
-    "url": "9bee12a0-5f19-420b-a37d-9ba95d475073",
-    "descarga": "b20f1e2a-a4c9-48a3-9895-e77f0fb54fba/resource/9bee12a0-5f19-420b-a37d-9ba95d475073/download/boja1412400024111030100050563.pdf"
+    "url": 0,
+    "descarga": 0
   }]
 }

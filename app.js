@@ -96,12 +96,11 @@ app.get('/normativaLegal.html', normativaLegal.normativaLegal);
 // Solicitudes de Información
 app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 // Mapa del sitio
-app.get('/mapaweb.html', map.mapa);
+//app.get('/mapaweb.html', map.mapa);
 // Buscador
 app.get('/buscador.html', buscador.buscador);
-// Prueba
+// Prueba para nueva visualización de tablas
 app.get('/prueba.html', prueba.personal);
-
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {

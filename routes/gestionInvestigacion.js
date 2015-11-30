@@ -60,13 +60,13 @@ exports.gobierno = function(req, res) {
 };
 
 // Gestión de la pagina de resultados
-exports.estadisticas = function(req, res) {
-  var estadisticas = conf.estadisticas;
+exports.rendimiento = function(req, res) {
+  var rendimiento = conf.rendimiento;
 
-  res.render(estadisticas.plantilla, {
+  res.render(rendimiento.plantilla, {
     servidor: conf.config.servidor,
-    seccion: estadisticas.nombre,
-    contenido: estadisticas.contenido,
-    datos: estadisticas.datos,
+    seccion: rendimiento.nombre,
+    contenido: rendimiento.contenido,
+    datos: rendimiento.datos,
   });
 };

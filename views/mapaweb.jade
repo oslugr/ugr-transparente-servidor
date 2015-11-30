@@ -120,10 +120,10 @@ block content
 											- for (var k = 0; k < tam_dataset_gobierno; k++)
 												li
 													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_gobierno[k].link}") #{dataset_gobierno[k].encabezado}
-										else if categ_gest[j] == "Estadísticas"
-											- for (var k = 0; k < tam_dataset_estad; k++)
+										else if categ_gest[j] == "Rendimiento"
+											- for (var k = 0; k < tam_dataset_rendi; k++)
 												li
-													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_estad[k].link}") #{dataset_estad[k].encabezado}
+													a(class="seccion3", href="#{categ_gest_enlaces[j]}##{dataset_rendi[k].link}") #{dataset_rendi[k].encabezado}
 							else if seccion[i] == "Normativa Legal"
 								ul.square_seccion3
 									- for (var j = 0; j < tam_dataset_normativa; j++)

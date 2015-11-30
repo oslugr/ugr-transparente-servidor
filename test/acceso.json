@@ -10,7 +10,7 @@
     "estudiantes.json",
     "planEstrategico.json",
     "gobierno.json",
-    "estadisticas.json",
+    "rendimiento.json",
     "normativaLegal.json"
   ],
   "categorias": [{
@@ -70,10 +70,10 @@
       "nombre": "Gobierno",
       "plantilla": "gobierno"
     }, {
-      "descripcion": "Estadísticas",
-      "archivo": "estadisticas.json",
-      "nombre": "Estadísticas",
-      "plantilla": "estadisticas"
+      "descripcion": "Rendimiento",
+      "archivo": "rendimiento.json",
+      "nombre": "Rendimiento",
+      "plantilla": "rendimiento"
     }]
   }, {
     "descripcion": "Sección Normativa Legal",

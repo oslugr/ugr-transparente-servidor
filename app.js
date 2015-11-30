@@ -68,7 +68,7 @@ module.exports.estudiantes = cargar(root + '/config/estudiantes.json');
 module.exports.mision = cargar(root + '/config/mision.json');
 module.exports.planEstrategico = cargar(root + '/config/planEstrategico.json');
 module.exports.gobierno = cargar(root + '/config/gobierno.json');
-module.exports.estadisticas = cargar(root + '/config/estadisticas.json');
+module.exports.rendimiento = cargar(root + '/config/rendimiento.json');
 module.exports.normativaLegal = cargar(root + '/config/normativaLegal.json');
 module.exports.prueba = cargar(root + '/config/prueba.json');
 
@@ -90,7 +90,7 @@ app.get('/estudiantes.html', docencia.estudiantes);
 app.get('/mision.html', gestionInvestigacion.mision);
 app.get('/planEstrategico.html', gestionInvestigacion.planEstrategico);
 app.get('/gobierno.html', gestionInvestigacion.gobierno);
-app.get('/estadisticas.html', gestionInvestigacion.estadisticas);
+app.get('/rendimiento.html', gestionInvestigacion.rendimiento);
 // Normativa Legal
 app.get('/normativaLegal.html', normativaLegal.normativaLegal);
 // Solicitudes de Información
@@ -131,8 +131,8 @@ app.get('/archivos/plan-estrategico', function(req, res) {
 app.get('/archivos/gobierno', function(req, res) {
   res.send(cargar(root + '/config/gobierno.json'));
 });
-app.get('/archivos/estadisticas', function(req, res) {
-  res.send(cargar(root + '/config/estadisticas.json'));
+app.get('/archivos/rendimiento', function(req, res) {
+  res.send(cargar(root + '/config/rendimiento.json'));
 });
 app.get('/archivos/normativa-legal', function(req, res) {
   res.send(cargar(root + '/config/normativaLegal.json'));

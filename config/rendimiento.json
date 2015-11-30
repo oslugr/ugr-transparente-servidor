@@ -1,6 +1,6 @@
 {
-  "nombre": "Estadísticas",
-  "plantilla": "estadisticas",
+  "nombre": "Rendimiento",
+  "plantilla": "rendimiento",
   "contenido": [{
     "encabezado": "Investigación",
     "link": "investigacion",

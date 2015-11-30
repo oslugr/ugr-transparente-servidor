@@ -46,8 +46,8 @@
       "href": "gobierno.html",
       "id": "en_gobierno"
     }, {
-      "nombre": "Estadísticas",
-      "href": "estadisticas.html",
+      "nombre": "Rendimiento",
+      "href": "rendimiento.html",
       "id": "en_resultados"
     }, {
       "nombre": "Normativa Legal",
@@ -60,7 +60,7 @@
     "plantilla": "presentacion"
   },
   "error": {
-    "titulo": "Page not found (Error 404)",
+    "titulo": "Página no encontrada (Error 404)",
     "texto": "Lo siento, la página no existe o está temporalmente inaccesible."
   }
 }

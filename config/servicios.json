@@ -15,22 +15,8 @@
     "id_dataset": "servicios-universidad",
     "nombre": "Carta de servicios",
     "vista": 0,
-    "url": "5ec20f79-cd33-4ade-b5fe-52d84d0737ee",
-    "descarga": "79a026f0-da86-4bbf-9e32-02102df5d3f5/resource/5ec20f79-cd33-4ade-b5fe-52d84d0737ee/download/cartadeserviciospublicadaenboja.20142015.pdf"
-  }, {
-    "dataset": "Servicios de la Universidad",
-    "id_dataset": "servicios-universidad",
-    "nombre": "Catálogo de procedimientos administrativos",
-    "vista": 1,
-    "url": "bf115ee2-a8f8-4cf1-87c5-f55320b6605b",
-    "descarga": "79a026f0-da86-4bbf-9e32-02102df5d3f5/resource/bf115ee2-a8f8-4cf1-87c5-f55320b6605b/download/catalogodeprocedimientosadministrativos.csv"
-  }, {
-    "dataset": "Servicios de la Universidad",
-    "id_dataset": "servicios-universidad",
-    "nombre": "Sede física y atención al público",
-    "vista": 1,
-    "url": "f7786b3d-96a0-4599-aae1-3c58995cda32",
-    "descarga": "79a026f0-da86-4bbf-9e32-02102df5d3f5/resource/f7786b3d-96a0-4599-aae1-3c58995cda32/download/sedeycontacto.csv"
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Empleo Público",
     "id_dataset": "empleo-publico",
@@ -80,12 +66,5 @@
     "vista": 1,
     "url": "277999a9-fc68-415c-8b5e-3c58daf87ae9",
     "descarga": "7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/277999a9-fc68-415c-8b5e-3c58daf87ae9/download/anexoiipersonallaboral.csv"
-  }, {
-    "dataset": "Empleo Público",
-    "id_dataset": "empleo-publico",
-    "nombre": "Contratos: grupos y proyectos",
-    "vista": 1,
-    "url": "091661b7-7782-4e42-a2fe-41190b7b1600",
-    "descarga": "7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/091661b7-7782-4e42-a2fe-41190b7b1600/download/contratosgruposyproyectos.csv"
   }]
 }

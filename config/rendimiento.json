@@ -165,13 +165,6 @@
   }, {
     "dataset": "Satisfacción de los Estudiantes",
     "id_dataset": "satisfaccion-estudiantes",
-    "nombre": "Satisfacción de alumnos",
-    "vista": 1,
-    "url": "a1249731-84f3-46fe-86c9-c2d5266f5aad",
-    "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/a1249731-84f3-46fe-86c9-c2d5266f5aad/download/satisfaccionalumnos.csv"
-  }, {
-    "dataset": "Satisfacción de los Estudiantes",
-    "id_dataset": "satisfaccion-estudiantes",
     "nombre": "Satisfacción general: egresados 2011",
     "vista": 1,
     "url": "00032bf5-a184-451a-9175-0edcb7d000fc",
@@ -197,13 +190,6 @@
     "vista": 1,
     "url": "0730d0fc-7d2c-442b-afdb-bf45a407a760",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/0730d0fc-7d2c-442b-afdb-bf45a407a760/download/posiciondelauniversidaddegranadaenlosdistintoscamposcientificosdelosrankingsisi.csv"
-  }, {
-    "dataset": "Ranking",
-    "id_dataset": "ranking",
-    "nombre": "Principales rankings",
-    "vista": 1,
-    "url": "4e23db7a-3058-44a1-a838-f4b9b9de59fc",
-    "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/4e23db7a-3058-44a1-a838-f4b9b9de59fc/download/ranking.csv"
   }, {
     "dataset": "Ranking",
     "id_dataset": "ranking",

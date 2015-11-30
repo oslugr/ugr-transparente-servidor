@@ -18,37 +18,37 @@
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Convenios: general",
-    "vista": 1,
-    "url": "68f87a74-71f5-4846-92de-8cbb44885199",
-    "descarga": "a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/68f87a74-71f5-4846-92de-8cbb44885199/download/conveniosgeneral.csv"
+    "vista": 0,
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Convenio colectivo",
     "vista": 0,
-    "url": "2f1f8385-3304-4861-aaa0-2279e61f82c9",
-    "descarga": "a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/2f1f8385-3304-4861-aaa0-2279e61f82c9/download/resolucionde10defebrerode2004.pdf"
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Normativa: enlaces",
-    "vista": 1,
-    "url": "58961aa1-d980-4f5b-9c12-fa63538999c6",
-    "descarga": "a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/58961aa1-d980-4f5b-9c12-fa63538999c6/download/enlacesnormativa.csv"
+    "vista": 0,
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Ley Orgánica de Universidades",
     "vista": 0,
-    "url": "1d7347ef-9b23-4641-a340-a23f28317b19",
-    "descarga": "a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/1d7347ef-9b23-4641-a340-a23f28317b19/download/lousg.pdf"
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Reglamento de la Delegación General de Estudiantes",
     "vista": 0,
-    "url": "a47cf692-b608-4e02-a1cd-7671a3e3bac3",
-    "descarga": "/a14fb05c-3f1e-4541-86a6-66affc470bcf/resource/a47cf692-b608-4e02-a1cd-7671a3e3bac3/download/ncg901.pdf"
+    "url": 0,
+    "descarga": 0
   }, {
     "dataset": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
     "id_dataset": "ley-transparencia",

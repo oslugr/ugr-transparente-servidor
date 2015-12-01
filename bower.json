@@ -18,6 +18,7 @@
     "underscore": "underscore#^1.8.3"
   },
   "resolutions": {
-    "jquery": "^1.9.0"
+    "jquery": "jquery#1.9.0",
+    "fullcalendar": "fullcalendar#2.5.0"
   }
 }

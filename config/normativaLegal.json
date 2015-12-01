@@ -5,14 +5,6 @@
     "encabezado": "Normativa y Convenios",
     "link": "normativa-convenios",
     "texto": "Información relativa a la normativa por la que se rige la Universidad de Granada. Última actualización: 25/07/2014."
-  }, {
-    "encabezado": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
-    "link": "ley-transparencia-acceso-buen-gobierno",
-    "texto": "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno."
-  }, {
-    "encabezado": "Ley de Transparencia Pública de Andalucía",
-    "link": "ley-transparencia-publica-andalucia",
-    "texto": "Ley 1/2014, de 24 de junio, de Transparencia Pública de Andalucía."
   }],
   "datos": [{
     "dataset": "Normativa y Convenios",
@@ -46,27 +38,6 @@
     "dataset": "Normativa y Convenios",
     "id_dataset": "normativa-convenios",
     "nombre": "Reglamento de la Delegación General de Estudiantes",
-    "vista": 0,
-    "url": 0,
-    "descarga": 0
-  }, {
-    "dataset": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
-    "id_dataset": "ley-transparencia",
-    "nombre": "Resumen: Ley de Transparencia",
-    "vista": 0,
-    "url": 0,
-    "descarga": 0
-  }, {
-    "dataset": "Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno",
-    "id_dataset": "ley-transparencia",
-    "nombre": "Boletín Oficial del Estado: Ley de Transparencia",
-    "vista": 0,
-    "url": 0,
-    "descarga": 0
-  }, {
-    "dataset": "Ley de Transparencia Pública de Andalucía",
-    "id_dataset": "ley-transparencia-publica-andalucia",
-    "nombre": "Boletín Oficial de la Junta de Andalucía: Ley de Transparencia",
     "vista": 0,
     "url": 0,
     "descarga": 0

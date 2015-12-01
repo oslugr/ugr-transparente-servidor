@@ -81,13 +81,13 @@ describe('Test de carga y formato de JSONs', function() {
           });
         });
 
-        describe('presentacion: [titulo, plantilla]', function() {
-          it('presentacion', function() {
-            config.should.have.property("presentacion");
+        describe('infoInstitucional: [titulo, plantilla]', function() {
+          it('infoInstitucional', function() {
+            config.should.have.property("infoInstitucional");
           });
           it('[titulo, plantilla]', function() {
-            config.presentacion.should.have.property("titulo");
-            config.presentacion.should.have.property("plantilla");
+            config.infoInstitucional.should.have.property("titulo");
+            config.infoInstitucional.should.have.property("plantilla");
           });
         });
 
@@ -119,12 +119,12 @@ describe('Test de carga y formato de JSONs', function() {
           });
         });
 
-        describe('presentacion:', function() {
-          it('titulo: \"Presentación\"', function() {
-            config.presentacion.titulo.should.be.exactly("Presentación");
+        describe('infoInstitucional:', function() {
+          it('titulo: \"Información institucional\"', function() {
+            config.infoInstitucional.titulo.should.be.exactly("Información institucional");
           });
-          it('plantilla: \"presentacion\"', function() {
-            config.presentacion.plantilla.should.be.exactly("presentacion");
+          it('plantilla: \"infoInstitucional\"', function() {
+            config.infoInstitucional.plantilla.should.be.exactly("infoInstitucional");
           });
         });
 

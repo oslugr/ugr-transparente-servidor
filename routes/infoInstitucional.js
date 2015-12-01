@@ -23,10 +23,10 @@
 //Variable para las configuraciones
 var conf = require('../app');
 
-// Gestión de la pagina de la presentación
+// Gestión de la pagina de la información institucional
 
-exports.presentacion = function(req, res) {
-  var pres = conf.config.presentacion;
+exports.infoInstitucional = function(req, res) {
+  var pres = conf.config.infoInstitucional;
 
   res.render(pres.plantilla, {
     titulo: pres.titulo,

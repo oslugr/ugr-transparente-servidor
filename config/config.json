@@ -6,8 +6,8 @@
     "nombre": "Inicio",
     "plantilla": "index",
     "enlaces": [{
-      "nombre": "Presentación",
-      "href": "presentacion.html",
+      "nombre": "Información institucional",
+      "href": "infoInstitucional.html",
       "id": "en_presentacion"
     }, {
       "nombre": "Personal",
@@ -55,9 +55,9 @@
       "id": "en_normativa"
     }]
   },
-  "presentacion": {
-    "titulo": "Presentación",
-    "plantilla": "presentacion"
+  "infoInstitucional": {
+    "titulo": "Información institucional",
+    "plantilla": "infoInstitucional"
   },
   "error": {
     "titulo": "Página no encontrada (Error 404)",

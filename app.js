@@ -35,7 +35,7 @@ global.root = path.resolve(__dirname);
 
 // Rutas
 var index = require(root + '/routes/index');
-var presentacion = require(root + '/routes/presentacion');
+var infoInstitucional = require(root + '/routes/infoInstitucional');
 var administracion = require(root + '/routes/administracion');
 var docencia = require(root + '/routes/docencia');
 var gestionInvestigacion = require(root + '/routes/gestionInvestigacion');
@@ -75,8 +75,8 @@ module.exports.prueba = cargar(root + '/config/prueba.json');
 // Inicio
 app.get('/', index.index);
 app.get('/index.html', index.index);
-// Presentacion
-app.get('/presentacion.html', presentacion.presentacion);
+// Información institucional
+app.get('/infoInstitucional.html', infoInstitucional.infoInstitucional);
 // Administracion
 app.get('/personal.html', administracion.personal);
 app.get('/infoEconomica.html', administracion.infoEconomica);

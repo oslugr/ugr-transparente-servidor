@@ -92,8 +92,8 @@
     "nombre": "Inicio (index)",
     "ruta": "/index.html"
   }, {
-    "nombre": "Presentacion",
-    "ruta": "/presentacion.html"
+    "nombre": "Información institucional",
+    "ruta": "/infoInstitucional.html"
   }, {
     "nombre": "Administración / Personal",
     "ruta": "/personal.html"

@@ -44,6 +44,7 @@ var solicitudInfo = require(root + '/routes/solicitudInfo');
 var map = require(root + '/routes/mapaweb');
 var buscador = require(root + '/routes/buscador');
 var prueba = require(root + '/routes/prueba');
+var calendario = require(root + '/routes/calendario');
 
 // Librerías
 var cargar = require(root + '/lib/cargar');
@@ -101,6 +102,7 @@ app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 app.get('/buscador.html', buscador.buscador);
 // Prueba para nueva visualización de tablas
 app.get('/prueba.html', prueba.personal);
+app.get('/calendario.html', calendario.index);
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {

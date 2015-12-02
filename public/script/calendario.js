@@ -31,7 +31,7 @@ $(document).ready(function() {
     googleCalendarApiKey: 'AIzaSyBFCmtCtxpOYfY1vQdFCaKvUDmifwRgFjI',
     events: {
       googleCalendarId: 'n0ncqp3ltptoujheevpt88l5sk@group.calendar.google.com'
-    }
+    },
 
     // defaultDate: '2015-12-12',
 

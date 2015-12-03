@@ -1,6 +1,6 @@
 /*
     UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
-    Copyright (C) 2014 Mario Heredia Moreno
+    Copyright (C) 2015 Germán Martínez Maldonado
 
     This file is part of UGR Transparente.
 
@@ -19,24 +19,26 @@
 */
 
 
+var gCalId = 'n0ncqp3ltptoujheevpt88l5sk@group.calendar.google.com';
+var gApi = 'AIzaSyBFCmtCtxpOYfY1vQdFCaKvUDmifwRgFjI';
+
 $(document).ready(function() {
 
   $('#calendar').fullCalendar({
-    header: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'month,basicWeek,basicDay'
-    },
+    // header: {
+    //   left: 'prev,next today',
+    //   center: 'title',
+    //   right: 'month,basicWeek,basicDay'
+    // },
 
-    googleCalendarApiKey: 'AIzaSyBFCmtCtxpOYfY1vQdFCaKvUDmifwRgFjI',
     events: {
-      googleCalendarId: 'n0ncqp3ltptoujheevpt88l5sk@group.calendar.google.com'
+      googleCalendarId: gCalId,
     },
 
     // defaultDate: '2015-12-12',
 
-    editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    // editable: true,
+    // eventLimit: true, // allow "more" link when too many events
 
     // events: [
     // 	{

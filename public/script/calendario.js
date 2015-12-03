@@ -29,11 +29,12 @@ $(document).ready(function() {
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     },
+    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     buttonText: {
-      today: 'today',
-      month: 'month',
-      week: 'week',
-      day: 'day'
+      today: 'Hoy',
+      month: 'Mes',
+      week: 'Semana',
+      day: 'Día'
     },
     googleCalendarApiKey: gApi,
     events: {

@@ -2,15 +2,125 @@
   "nombre": "Gobierno",
   "plantilla": "gobierno",
   "contenido": [{
+    "tipo": 1,
+    "encabezado": "Órganos Generales de Gobierno y Representación",
+    "link": "organos-generales-gobierno-representacion",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Equipo de Gobierno Amplio",
+    "link": "equipo-gobierno-amplio",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Consejo Social",
+    "link": "consejo-social",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Claustro",
+    "link": "claustro",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Consejo de Gobierno",
+    "link": "consejo-gobierno",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Órganos de Gobierno de Facultades y Escuelas",
+    "link": "organos-gobierno-facultades-escuelas",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Órganos de Gobierno de los Departamentos",
+    "link": "organos-gobierno-departamentos",
+    "texto": ""
+  }, {
+    "tipo": 0,
     "encabezado": "Composición de Gobierno",
     "link": "composicion-gobierno",
     "texto": "Información sobre la composición de los miembros de sus principales órganos de gobierno mencionando sus nombres y apellidos, titulación y responsabilidades de gobierno."
   }, {
+    "tipo": 0,
     "encabezado": "Estatutos",
     "link": "estatutos",
     "texto": "Información sobre los estatutos de la Universidad de Granada."
   }],
   "datos": [{
+    "tipo": 1,
+    "dataset": "Órganos Generales de Gobierno y Representación",
+    "id_dataset": "organos-generales-gobierno-representacion",
+    "nombre": "Órganos Generales de Gobierno y Representación",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/equipo"
+  }, {
+    "tipo": 1,
+    "dataset": "Equipo de Gobierno Amplio",
+    "id_dataset": "equipo-gobierno-amplio",
+    "nombre": "Equipo de Gobierno Amplio",
+    "url": "http://www.ugr.es/~gabcomunicacion/EquipodeGobiernoAmplioUGR.pdf"
+  }, {
+    "tipo": 1,
+    "dataset": "Consejo Social",
+    "id_dataset": "consejo-social",
+    "nombre": "Composición",
+    "url": "http://consejosocial.ugr.es/pages/composicion"
+  }, {
+    "tipo": 1,
+    "dataset": "Claustro",
+    "id_dataset": "claustro",
+    "nombre": "Composición",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/composicion/composicion"
+  }, {
+    "tipo": 1,
+    "dataset": "Claustro",
+    "id_dataset": "claustro",
+    "nombre": "Mesa del Claustro",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/mesaclaustro/!"
+  }, {
+    "tipo": 1,
+    "dataset": "Claustro",
+    "id_dataset": "claustro",
+    "nombre": "Comisiones del Claustro",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/comisiones"
+  }, {
+    "tipo": 1,
+    "dataset": "Claustro",
+    "id_dataset": "claustro",
+    "nombre": "Acuerdos del Claustro",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/acuerdosclaustro/acuerdoscu"
+  }, {
+    "tipo": 1,
+    "dataset": "Consejo de Gobierno",
+    "id_dataset": "consejo-gobierno",
+    "nombre": "Composición",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/composicioncg/!"
+  }, {
+    "tipo": 1,
+    "dataset": "Consejo de Gobierno",
+    "id_dataset": "consejo-gobierno",
+    "nombre": "Comisiones del Consejo de Gobierno",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/comisiones"
+  }, {
+    "tipo": 1,
+    "dataset": "Consejo de Gobierno",
+    "id_dataset": "consejo-gobierno",
+    "nombre": "Acuerdos del Consejo de Gobierno",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/acuerdoscg"
+  }, {
+    "tipo": 1,
+    "dataset": "Órganos de Gobierno de Facultades y Escuelas",
+    "id_dataset": "organos-gobierno-facultades-escuelas",
+    "nombre": "Órganos de Gobierno de Facultades y Escuelas",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/acuerdoscg"
+  }, {
+    "tipo": 1,
+    "dataset": "Órganos de Gobierno de los Departamentos",
+    "id_dataset": "organos-gobierno-departamentos",
+    "nombre": "Órganos de Gobierno de los Departamentos",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/departamentos"
+  }, {
+    "tipo": 0,
     "dataset": "Composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Gobierno de la Universidad de Granada",
@@ -18,6 +128,7 @@
     "url": "59f55b53-0239-44dd-ba60-6d32aba053f5",
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/59f55b53-0239-44dd-ba60-6d32aba053f5/download/gobiernoactualtotal.csv"
   }, {
+    "tipo": 0,
     "dataset": "Estatutos",
     "id_dataset": "composicion-gobierno",
     "nombre": "Estatutos de la universidad",

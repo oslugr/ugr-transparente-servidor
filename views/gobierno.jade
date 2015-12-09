@@ -62,6 +62,36 @@ block content
 			div(id="contenido", class="sec_interior")
 				.content_doku
 
+					//-
+						ul.enlaces
+							li.level1
+								- for (var i = 0; i < contenido.length; i++)
+									.li
+										a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
+
+							- for (var j = 0; j < contenido.length; j++)
+								h1
+									a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+								.level1
+									p #{contenido[j].texto}
+								table.inline
+									tbody
+										tr
+											th.centeralign Descripción
+											th.centeralign Enlace
+
+										- for (var k = 0; k < datos.length; k++)
+											- if (datos[k].dataset==contenido[j].encabezado)
+												tr
+													td(class="centeralign par") #{datos[k].nombre}
+
+													if datos[k].url==0
+														td(class="centeralign impar")
+													else
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
+																img(class="link",src="imagenes/link.png", alt="link")
+
 					ul.enlaces
 						li.level1
 							- for (var i = 0; i < contenido.length; i++)
@@ -75,36 +105,45 @@ block content
 						.level1
 							p #{contenido[j].texto}
 
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata
-									th.centeralign Ver
-									th.centeralign Archivo
+							table.inline
+								tbody
+									tr
+										if contenido[j].tipo==1
+											th.centeralign Descripción
+											th.centeralign Enlace
+										else
+											th.centeralign Descripción
+											th.centeralign Datos en Opendata
+											th.centeralign Ver
+											th.centeralign Archivo
 
-								- for (var k = 0; k < datos.length; k++)
-									- if (datos[k].dataset==contenido[j].encabezado)
-										tr
-											td(class="centeralign par") #{datos[k].nombre}
+									- for (var k = 0; k < datos.length; k++)
+										- if (datos[k].dataset==contenido[j].encabezado)
+											tr
+												td(class="centeralign par") #{datos[k].nombre}
 
-											if datos[k].url==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
-														img(class="link",src="imagenes/link.png", alt="link")
+												if datos[k].tipo==1
+													td(class="centeralign impar")
+														a(href="#{datos[k].url}",target="_blank")
+															img(class="link",src="imagenes/link.png", alt="link")
+												else
+													if datos[k].url==0
+														td(class="centeralign impar")
+													else
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
+																img(class="link",src="imagenes/link.png", alt="link")
 
-											if datos[k].vista==0
-												td(class="centeralign par")
-											else
-												td(class="centeralign par")
-													a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
-														img(class="view",src="imagenes/view.png", alt="view")
+													if datos[k].vista==0
+														td(class="centeralign par")
+													else
+														td(class="centeralign par")
+															a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
+																img(class="view",src="imagenes/view.png", alt="view")
 
-											if datos[k].descarga==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].descarga}")
-														img(class="save",src="imagenes/save.png", alt="save")
+													if datos[k].descarga==0
+														td(class="centeralign impar")
+													else
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{datos[k].descarga}")
+																img(class="save",src="imagenes/save.png", alt="save")

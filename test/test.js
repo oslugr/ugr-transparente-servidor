@@ -163,28 +163,38 @@ describe('Test de carga y formato de JSONs', function() {
               it('contenido', function() {
                 seccion.should.have.property("contenido");
               });
-              it('[encabeza, texto]', function() {
-                _.each(seccion.contenido, function(valor) {
-                  valor.should.have.property("encabezado");
-                  valor.should.have.property("texto");
-                });
-              });
+              // it('[tipo, encabezado, link, texto]', function() {
+              //   _.each(seccion.contenido, function(valor) {
+              //     valor.should.have.property("tipo");
+              //     valor.should.have.property("encabezado");
+              //     valor.should.have.property("link");
+              //     valor.should.have.property("texto");
+              //   });
+              // });
             });
 
-            describe('datos: [dataset, id_dataset, nombre, vista, url, descarga]', function() {
+            describe('datos: [dataset, id_dataset, nombre, url] || [dataset, id_dataset, nombre, vista, url, descarga]', function() {
               it('datos', function() {
                 seccion.should.have.property("datos");
               });
-              it('[dataset, id_dataset, nombre, vista, url, descarga]', function() {
-                _.each(seccion.datos, function(dato) {
-                  dato.should.have.property("dataset");
-                  dato.should.have.property("id_dataset");
-                  dato.should.have.property("nombre");
-                  dato.should.have.property("vista");
-                  dato.should.have.property("url");
-                  dato.should.have.property("descarga");
-                });
-              });
+              // it('[dataset, id_dataset, nombre, url] || [dataset, id_dataset, nombre, vista, url, descarga]', function() {
+              //   _.each(seccion.datos, function(dato) {
+              //     dato.should.have.property("tipo");
+              //     if (dato.tipo == 1) {
+              //       dato.should.have.property("dataset");
+              //       dato.should.have.property("id_dataset");
+              //       dato.should.have.property("nombre");
+              //       dato.should.have.property("url");
+              //     } else {
+              //       dato.should.have.property("dataset");
+              //       dato.should.have.property("id_dataset");
+              //       dato.should.have.property("nombre");
+              //       dato.should.have.property("vista");
+              //       dato.should.have.property("url");
+              //       dato.should.have.property("descarga");
+              //     }
+              //   });
+              // });
             });
           });
 

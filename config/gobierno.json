@@ -123,6 +123,46 @@
     "tipo": 0,
     "dataset": "Composición de Gobierno",
     "id_dataset": "composicion-gobierno",
+    "nombre": "Equipo de Gobierno",
+    "vista": 1,
+    "url": "64b3dffb-4cd0-4c1e-ae48-ee7c56f0a9ed",
+    "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/64b3dffb-4cd0-4c1e-ae48-ee7c56f0a9ed/download/equipodegobierno.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Composición de Gobierno",
+    "id_dataset": "composicion-gobierno",
+    "nombre": "Consejo Social",
+    "vista": 1,
+    "url": "72b131a6-55d2-4c4f-9005-d799df0c47f0",
+    "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/72b131a6-55d2-4c4f-9005-d799df0c47f0/download/consejosocial.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Composición de Gobierno",
+    "id_dataset": "composicion-gobierno",
+    "nombre": "Consejo de Gobierno",
+    "vista": 1,
+    "url": "0c98abf7-a1f7-4d07-a8dd-36f37fba76e9",
+    "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/0c98abf7-a1f7-4d07-a8dd-36f37fba76e9/download/consejodegobierno.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Composición de Gobierno",
+    "id_dataset": "composicion-gobierno",
+    "nombre": "Claustro Universitario",
+    "vista": 1,
+    "url": "af6186f6-d17d-49a3-851f-54d1a5e71e76",
+    "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/af6186f6-d17d-49a3-851f-54d1a5e71e76/download/claustro.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Composición de Gobierno",
+    "id_dataset": "composicion-gobierno",
+    "nombre": "Equipo Amplio de Gobierno",
+    "vista": 1,
+    "url": "fc7351b9-bd71-420c-b6a3-b3fc4d60b7ba",
+    "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/fc7351b9-bd71-420c-b6a3-b3fc4d60b7ba/download/equipoampliodegobierno.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Composición de Gobierno",
+    "id_dataset": "composicion-gobierno",
     "nombre": "Gobierno de la Universidad de Granada",
     "vista": 1,
     "url": "59f55b53-0239-44dd-ba60-6d32aba053f5",

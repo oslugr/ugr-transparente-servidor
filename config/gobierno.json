@@ -50,73 +50,61 @@
   "datos": [{
     "tipo": 1,
     "dataset": "Órganos Generales de Gobierno y Representación",
-    "id_dataset": "organos-generales-gobierno-representacion",
     "nombre": "Órganos Generales Unipersonales de gobierno y representación",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/equipo"
   }, {
     "tipo": 1,
     "dataset": "Equipo de Gobierno Amplio",
-    "id_dataset": "equipo-gobierno-amplio",
     "nombre": "Equipo de Gobierno Amplio",
     "url": "http://www.ugr.es/~gabcomunicacion/EquipodeGobiernoAmplioUGR.pdf"
   }, {
     "tipo": 1,
     "dataset": "Consejo Social",
-    "id_dataset": "consejo-social",
     "nombre": "Composición del Consejo Social",
     "url": "http://consejosocial.ugr.es/pages/composicion"
   }, {
     "tipo": 1,
     "dataset": "Claustro",
-    "id_dataset": "claustro",
     "nombre": "Composicion del Claustro Universitario",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/composicion/composicion"
   }, {
     "tipo": 1,
     "dataset": "Claustro",
-    "id_dataset": "claustro",
     "nombre": "Mesa del Claustro Universitario",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/mesaclaustro/!"
   }, {
     "tipo": 1,
     "dataset": "Claustro",
-    "id_dataset": "claustro",
     "nombre": "Comisiones del Consejo de Gobierno",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/comisiones"
   }, {
     "tipo": 1,
     "dataset": "Claustro",
-    "id_dataset": "claustro",
     "nombre": "Acuerdos del Claustro Universitario",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/acuerdosclaustro/acuerdoscu"
   }, {
     "tipo": 1,
     "dataset": "Consejo de Gobierno",
-    "id_dataset": "consejo-gobierno",
     "nombre": "Composición del Consejo de Gobierno",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/composicioncg/!"
   }, {
     "tipo": 1,
     "dataset": "Consejo de Gobierno",
-    "id_dataset": "consejo-gobierno",
     "nombre": "Comisiones del Consejo de Gobierno",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/comisiones"
   }, {
     "tipo": 1,
     "dataset": "Consejo de Gobierno",
-    "id_dataset": "consejo-gobierno",
     "nombre": "Acuerdos del Consejo de Gobierno",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/acuerdoscg"
   }, {
     "tipo": 1,
     "dataset": "Órganos de Gobierno de Facultades y Escuelas",
-    "id_dataset": "organos-gobierno-facultades-escuelas",
     "nombre": "Órganos de Gobierno de Facultades y Escuelas",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/facultades_escuelas"
   }, {
     "tipo": 1,
     "dataset": "Órganos de Gobierno de los Departamentos",
-    "id_dataset": "organos-gobierno-departamentos",
     "nombre": "Órganos de gobierno de los Departamentos Universitarios",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/departamentos"
   }, {

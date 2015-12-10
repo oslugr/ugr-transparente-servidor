@@ -62,47 +62,61 @@ block content
 
 					ul.enlaces
 						li.level1
-							- for (var i = 0; i < contenido.length; i++)
+							each valor in contenido
 								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
+									a(class="enlaces-cabecera" href="##{valor.link}") #{valor.encabezado}
 
-					- for (var j = 0; j < contenido.length; j++)
+					each valor in contenido
 						h1
-							a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+							a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 
 						.level1
-							p #{contenido[j].texto}
+							p #{valor.texto}
 
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata
-									th.centeralign Ver
-									th.centeralign Archivo
+							table.inline
+								colgroup
+									col(span='1', style='width: 80%;')
+									col(span='1', style='width: 20%;')
+								tbody
+									tr
+										if valor.tipo==1
+											th.centeralign Descripción
+											th.centeralign Enlace
+										else
+											th.centeralign Descripción
+											th.centeralign Datos en Opendata
+											th.centeralign Ver
+											th.centeralign Archivo
 
-								- for (var k = 0; k < datos.length; k++)
-									- if (datos[k].dataset==contenido[j].encabezado)
-										tr
-											td(class="centeralign par") #{datos[k].nombre}
+									each elemento in datos
+										if elemento.dataset==valor.encabezado
+											tr
+												if elemento.tipo==1
+													td(class="centeralign par") #{elemento.nombre}
 
-											if datos[k].url==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
-														img(class="link",src="imagenes/link.png", alt="link")
+													td(class="centeralign impar")
+														a(href="#{elemento.url}",target="_blank")
+															img(class="link",src="imagenes/link.png", alt="link")
+												else
+													td(class="centeralign par") #{elemento.nombre}
 
-											if datos[k].vista==0
-												td(class="centeralign par")
-											else
-												td(class="centeralign par")
-													a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
-														img(class="view",src="imagenes/view.png", alt="view")
+													if elemento.url==0
+														td(class="centeralign impar")
+													else
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
+																img(class="link",src="imagenes/link.png", alt="link")
 
-											if datos[k].descarga==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].descarga}")
-														img(class="save",src="imagenes/save.png", alt="save")
+													if elemento.vista==0
+														td(class="centeralign par")
+													else
+														td(class="centeralign par")
+															a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
+																img(class="view",src="imagenes/view.png", alt="view")
+
+													if elemento.descarga==0
+														td(class="centeralign impar")
+													else
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{elemento.descarga}")
+																img(class="save",src="imagenes/save.png", alt="save")

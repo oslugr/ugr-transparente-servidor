@@ -76,6 +76,9 @@ block content
 							p #{valor.texto}
 
 							table.inline
+								colgroup
+									col(span='1', style='width: 80%;')
+									col(span='1', style='width: 20%;')
 								tbody
 									tr
 										if valor.tipo==1
@@ -91,12 +94,6 @@ block content
 										if elemento.dataset==valor.encabezado
 											tr
 												if elemento.tipo==1
-													//- var mitad = Math.round((elemento.nombre.length+1)/2)
-													//- var espacio = ""
-													//- for (var i = 0; i < mitad; i++)
-													//	- espacio += "&nbsp;"
-
-													//td(class="centeralign par") !{espacio}#{elemento.nombre}
 													td(class="centeralign par") #{elemento.nombre}
 
 													td(class="centeralign impar")

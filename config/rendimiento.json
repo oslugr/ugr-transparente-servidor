@@ -2,27 +2,33 @@
   "nombre": "Rendimiento",
   "plantilla": "rendimiento",
   "contenido": [{
+    "tipo": 0,
     "encabezado": "Investigación",
     "link": "investigacion",
     "texto": "Información sobre los principales resultados relacionados con la labor investigadora de sus profesores."
   }, {
+    "tipo": 0,
     "encabezado": "Académico",
     "link": "academico",
     "texto": "Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
   }, {
+    "tipo": 0,
     "encabezado": "Satisfacción de los Estudiantes",
     "link": "satisfacion-estudiantes",
     "texto": "Información sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
   }, {
+    "tipo": 0,
     "encabezado": "Ranking",
     "link": "ranking",
     "texto": "Información sobre la posición de la Universidad de Granada en los principales rankings internacionales."
   }, {
+    "tipo": 0,
     "encabezado": "Estudiantes de fuera de la Comunidad",
     "link": "estudiantes-fuera-comunidad",
     "texto": "Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada."
   }],
   "datos": [{
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Memoria de investigación 2013/2014",
@@ -30,6 +36,7 @@
     "url": "2a2e817b-8e31-4c8c-9ec3-2db50d7b2624",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/2a2e817b-8e31-4c8c-9ec3-2db50d7b2624/download/memoria201320142.0actualizacion.pdf"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Cifras en investigación: datos generales",
@@ -37,6 +44,7 @@
     "url": "dfd33860-5a95-4cce-9800-3ab8524f4d29",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/dfd33860-5a95-4cce-9800-3ab8524f4d29/download/cifraseninvestigaciondatosgenerales.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Estadísticas básicas (2005 - 2010)",
@@ -44,6 +52,7 @@
     "url": "db998529-5cc7-4d9a-8c91-75f568194190",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/db998529-5cc7-4d9a-8c91-75f568194190/download/estadisticasbasicastodas.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Producción científica, grupos y personal de investigación por ponencia",
@@ -51,6 +60,7 @@
     "url": "ca62e5bb-2dd1-47c7-a529-b0d988caf588",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/ca62e5bb-2dd1-47c7-a529-b0d988caf588/download/produccioncientificagruposypersonaldeinvestigacionporponencia20092013.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Evolución: Proyectos Plan Nacional, FPU, FPI, RyC",
@@ -58,6 +68,7 @@
     "url": "34c76d8d-cd23-4358-897f-09689f2fa8a4",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/34c76d8d-cd23-4358-897f-09689f2fa8a4/download/evolucionanualproyectosplannacionalfpufpiyryc.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Top 10: categorías según producción (Web of Science)",
@@ -65,6 +76,7 @@
     "url": "a16099ad-210b-4857-8868-6be2636f9b35",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/a16099ad-210b-4857-8868-6be2636f9b35/download/top10categoriassegunproduccion.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Publicaciones Web of Science: producción y visibilidad científica",
@@ -72,6 +84,7 @@
     "url": "5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/5c1191dc-d9c1-4e7a-8a1b-51d0a144dac3/download/indicadoresdeproduccionyvisibilidadcientifica.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Indicadores por categoría Web of Science de la UGR (2009-2013)",
@@ -79,6 +92,7 @@
     "url": "3db153bb-3fa7-409e-b216-dec7e890dca4",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/3db153bb-3fa7-409e-b216-dec7e890dca4/download/indicadoreswebsciencieugr.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "PAIDI: investigadores UGR",
@@ -86,6 +100,7 @@
     "url": "61840439-2f90-4f13-ba3d-699d169db110",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/61840439-2f90-4f13-ba3d-699d169db110/download/investigadoresgruposugrpaidi.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "PAIDI: indicadores básicos (2004-2014)",
@@ -93,6 +108,7 @@
     "url": "22a6d81b-935c-4595-9864-eb987e525aa6",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/22a6d81b-935c-4595-9864-eb987e525aa6/download/indicadoresgrupospaidiugr.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "PAIDI: Grupos de Investigación UGR",
@@ -100,6 +116,7 @@
     "url": "e63845da-0f5d-424e-90db-27b090f37cf6",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/e63845da-0f5d-424e-90db-27b090f37cf6/download/listadodegruposdeinvestigacionugrpertenecientesalpaidi.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Proyectos UGR VII Programa Marco de la Unión Europea",
@@ -107,6 +124,7 @@
     "url": "5bb589d7-9921-4610-b57a-e0cebe0fc041",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/5bb589d7-9921-4610-b57a-e0cebe0fc041/download/participacionugrenviipmeu.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Indicadores bibliométricos: Computer Science, Physics y Matemathics (2009-2013)",
@@ -114,6 +132,7 @@
     "url": "aed5b355-2d50-4be4-814b-b4fabc6b3f30",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/aed5b355-2d50-4be4-814b-b4fabc6b3f30/download/indicadoresbibliometricosuniversidadesespanolas.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Proyectos obtenidos: Programa Estatal 2013",
@@ -121,6 +140,7 @@
     "url": "a39b500a-67fd-4bbd-9ce4-a5731154964c",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/a39b500a-67fd-4bbd-9ce4-a5731154964c/download/listadoproyectosconjunta13.csv"
   }, {
+    "tipo": 0,
     "dataset": "Investigación",
     "id_dataset": "investigacion",
     "nombre": "Listados de tesis doctorales (2011 - 2013)",
@@ -128,6 +148,7 @@
     "url": "2be5a14d-1cac-4ca8-8f16-edc092349a73",
     "descarga": "e1975e32-6bdc-4341-9c1c-b7701cf41f84/resource/2be5a14d-1cac-4ca8-8f16-edc092349a73/download/tesisdefendidas1113.csv"
   }, {
+    "tipo": 0,
     "dataset": "Académico",
     "id_dataset": "academico",
     "nombre": "Tasa de rendimiento, éxito y evaluación 2013/2014",
@@ -135,6 +156,7 @@
     "url": "06fcfcca-e4d2-484f-8c07-f8aa6ca35eb1",
     "descarga": "5334df3b-4a3d-4f80-b09f-7801f673057b/resource/06fcfcca-e4d2-484f-8c07-f8aa6ca35eb1/download/tasaderendimientototal.csv"
   }, {
+    "tipo": 0,
     "dataset": "Académico",
     "id_dataset": "academico",
     "nombre": "Número medio de créditos 2013/2014",
@@ -142,6 +164,7 @@
     "url": "9fa254dc-08ae-4649-a497-f71754f4ac4b",
     "descarga": "5334df3b-4a3d-4f80-b09f-7801f673057b/resource/9fa254dc-08ae-4649-a497-f71754f4ac4b/download/totalcreditosmatriculados.csv"
   }, {
+    "tipo": 0,
     "dataset": "Académico",
     "id_dataset": "academico",
     "nombre": "Tasa de rendimiento, éxito y evaluación 2012/2013",
@@ -149,6 +172,7 @@
     "url": "403534ce-9135-4d60-9f8a-0ad035aceaf1",
     "descarga": "5334df3b-4a3d-4f80-b09f-7801f673057b/resource/403534ce-9135-4d60-9f8a-0ad035aceaf1/download/tasaderendimientoexitoyevaluacion.csv"
   }, {
+    "tipo": 0,
     "dataset": "Académico",
     "id_dataset": "academico",
     "nombre": "Número medio de créditos 2012/2013",
@@ -156,6 +180,7 @@
     "url": "0a22981d-dfa7-472b-b4a6-c1c6adf516d5",
     "descarga": "5334df3b-4a3d-4f80-b09f-7801f673057b/resource/0a22981d-dfa7-472b-b4a6-c1c6adf516d5/download/numeromediodecreditostotal.csv"
   }, {
+    "tipo": 0,
     "dataset": "Académico",
     "id_dataset": "academico",
     "nombre": "Duración media de los estudios 2007/2011",
@@ -163,6 +188,7 @@
     "url": "b8a65ae8-4aa9-4910-8949-505ec649a48e",
     "descarga": "5334df3b-4a3d-4f80-b09f-7801f673057b/resource/b8a65ae8-4aa9-4910-8949-505ec649a48e/download/duracionmediadelosestudiostotaltitulaciones.csv"
   }, {
+    "tipo": 0,
     "dataset": "Satisfacción de los Estudiantes",
     "id_dataset": "satisfaccion-estudiantes",
     "nombre": "Satisfacción general: egresados 2011",
@@ -170,6 +196,7 @@
     "url": "00032bf5-a184-451a-9175-0edcb7d000fc",
     "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/00032bf5-a184-451a-9175-0edcb7d000fc/download/satisfaccionegresados2011general.csv"
   }, {
+    "tipo": 0,
     "dataset": "Satisfacción de los Estudiantes",
     "id_dataset": "satisfaccion-estudiantes",
     "nombre": "Valoración oferta formativa: egresados 2011",
@@ -177,6 +204,7 @@
     "url": "7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40",
     "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40/download/satisfaccionegresadosvaloracionofertaformativa.csv"
   }, {
+    "tipo": 0,
     "dataset": "Ranking",
     "id_dataset": "ranking",
     "nombre": "Evolución: ranking de Shanghai",
@@ -184,6 +212,7 @@
     "url": "ba9ed205-39d0-4df2-ae95-72f766f74c11",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/ba9ed205-39d0-4df2-ae95-72f766f74c11/download/evoluciondelaposiciondelasuniversidadesespanolasenelrankingdeshanghai.csv"
   }, {
+    "tipo": 0,
     "dataset": "Ranking",
     "id_dataset": "ranking",
     "nombre": "Posición: rankings ISI",
@@ -191,6 +220,7 @@
     "url": "0730d0fc-7d2c-442b-afdb-bf45a407a760",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/0730d0fc-7d2c-442b-afdb-bf45a407a760/download/posiciondelauniversidaddegranadaenlosdistintoscamposcientificosdelosrankingsisi.csv"
   }, {
+    "tipo": 0,
     "dataset": "Ranking",
     "id_dataset": "ranking",
     "nombre": "Citación de investigadores: Google Scholar",
@@ -198,6 +228,7 @@
     "url": "c985229e-f0a4-44b7-94d8-7744406397fd",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/c985229e-f0a4-44b7-94d8-7744406397fd/download/investigadoresugrperfilgoogle.csv"
   }, {
+    "tipo": 0,
     "dataset": "Ranking",
     "id_dataset": "ranking",
     "nombre": "Campos científicos: nivel nacional",
@@ -205,6 +236,7 @@
     "url": "368e054b-4a9d-48a2-b173-86447322086c",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/368e054b-4a9d-48a2-b173-86447322086c/download/posicionen12camposcientificosanivelnacional.csv"
   }, {
+    "tipo": 0,
     "dataset": "Ranking",
     "id_dataset": "ranking",
     "nombre": "Disciplinas científicas: Top 10",
@@ -212,6 +244,7 @@
     "url": "d3907cb6-9ee9-48a3-ab24-1c3e1f58e1d0",
     "descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/d3907cb6-9ee9-48a3-ab24-1c3e1f58e1d0/download/disciplinascientificasdondelaugrsesituaeneltop10.csv"
   }, {
+    "tipo": 0,
     "dataset": "Estudiantes de fuera de la Comunidad",
     "id_dataset": "estudiantes-fuera-comunidad",
     "nombre": "Origen geográfico de los alumnos: 2014/2015",
@@ -219,6 +252,7 @@
     "url": "69eb0514-5f58-42c9-ae93-fa94ee09e6e1",
     "descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/69eb0514-5f58-42c9-ae93-fa94ee09e6e1/download/201415matriculasgradoorigen.csv"
   }, {
+    "tipo": 0,
     "dataset": "Estudiantes de fuera de la Comunidad",
     "id_dataset": "estudiantes-fuera-comunidad",
     "nombre": "Origen geográfico de los alumnos: 2013/2014",

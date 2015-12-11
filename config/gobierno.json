@@ -38,14 +38,9 @@
     "texto": ""
   }, {
     "tipo": 0,
-    "encabezado": "Composición de Gobierno",
+    "encabezado": "Datos de composición de Gobierno",
     "link": "composicion-gobierno",
     "texto": "Información sobre la composición de los miembros de sus principales órganos de gobierno mencionando sus nombres y apellidos, titulación y responsabilidades de gobierno."
-  }, {
-    "tipo": 0,
-    "encabezado": "Estatutos",
-    "link": "estatutos",
-    "texto": "Información sobre los estatutos de la Universidad de Granada."
   }],
   "datos": [{
     "tipo": 1,
@@ -75,8 +70,8 @@
   }, {
     "tipo": 1,
     "dataset": "Claustro",
-    "nombre": "Comisiones del Consejo de Gobierno",
-    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/consejo_de_gobierno/comisiones"
+    "nombre": "Comisiones del Claustro",
+    "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/composicion/comisiones"
   }, {
     "tipo": 1,
     "dataset": "Claustro",
@@ -109,7 +104,7 @@
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/departamentos"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Equipo de Gobierno",
     "vista": 1,
@@ -117,7 +112,7 @@
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/64b3dffb-4cd0-4c1e-ae48-ee7c56f0a9ed/download/equipodegobierno.csv"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Consejo Social",
     "vista": 1,
@@ -125,7 +120,7 @@
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/72b131a6-55d2-4c4f-9005-d799df0c47f0/download/consejosocial.csv"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Consejo de Gobierno",
     "vista": 1,
@@ -133,7 +128,7 @@
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/0c98abf7-a1f7-4d07-a8dd-36f37fba76e9/download/consejodegobierno.csv"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Claustro Universitario",
     "vista": 1,
@@ -141,7 +136,7 @@
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/af6186f6-d17d-49a3-851f-54d1a5e71e76/download/claustro.csv"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
     "nombre": "Equipo Amplio de Gobierno",
     "vista": 1,
@@ -149,19 +144,11 @@
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/fc7351b9-bd71-420c-b6a3-b3fc4d60b7ba/download/equipoampliodegobierno.csv"
   }, {
     "tipo": 0,
-    "dataset": "Composición de Gobierno",
+    "dataset": "Datos de composición de Gobierno",
     "id_dataset": "composicion-gobierno",
-    "nombre": "Gobierno de la Universidad de Granada",
+    "nombre": "Gobierno total de la Universidad de Granada",
     "vista": 1,
     "url": "59f55b53-0239-44dd-ba60-6d32aba053f5",
     "descarga": "af255ffc-ad76-48bc-9db1-f49aa818489e/resource/59f55b53-0239-44dd-ba60-6d32aba053f5/download/gobiernoactualtotal.csv"
-  }, {
-    "tipo": 0,
-    "dataset": "Estatutos",
-    "id_dataset": "composicion-gobierno",
-    "nombre": "Estatutos de la universidad",
-    "vista": 0,
-    "url": "b5bc08e5-192f-42a7-9d4f-b19695098e64",
-    "descarga": "ff5a8da9-d00f-46e8-9001-8c2b7bb41524/resource/b5bc08e5-192f-42a7-9d4f-b19695098e64/download/d9.pdf"
   }]
 }

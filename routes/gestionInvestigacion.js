@@ -23,30 +23,6 @@
 //Variable para las configuraciones
 var conf = require('../app');
 
-// Gestión de la pagina de la mision
-exports.mision = function(req, res) {
-  var mision = conf.mision;
-
-  res.render(mision.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: mision.nombre,
-    contenido: mision.contenido,
-    datos: mision.datos,
-  });
-};
-
-// Gestión de la pagina del paln estrategico
-exports.planEstrategico = function(req, res) {
-  var planEstrategico = conf.planEstrategico;
-
-  res.render(planEstrategico.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: planEstrategico.nombre,
-    contenido: planEstrategico.contenido,
-    datos: planEstrategico.datos,
-  });
-};
-
 // Gestión de la pagina del gobierno
 exports.gobierno = function(req, res) {
   var gobierno = conf.gobierno;

@@ -55,16 +55,6 @@
     "descripcion": "Sección Gestión e Investigación",
     "nombre": "gestionInvestigacion",
     "secciones": [{
-      "descripcion": "Datos de Mision",
-      "archivo": "mision.json",
-      "nombre": "Mision",
-      "plantilla": "mision"
-    }, {
-      "descripcion": "Datos de Plan Estratégico",
-      "archivo": "planEstrategico.json",
-      "nombre": "Plan Estratégico",
-      "plantilla": "planEstrategico"
-    }, {
       "descripcion": "Datos de Gobierno",
       "archivo": "gobierno.json",
       "nombre": "Gobierno",
@@ -101,9 +91,6 @@
     "nombre": "Administración / Información Económica",
     "ruta": "/infoEconomica.html"
   }, {
-    "nombre": "Administración / Servicios",
-    "ruta": "/servicios.html"
-  }, {
     "nombre": "Administración / Perfil del Contratante",
     "ruta": "/perfilContratante.html"
   }, {
@@ -115,12 +102,6 @@
   }, {
     "nombre": "Docencia / Estudiantes",
     "ruta": "/estudiantes.html"
-  }, {
-    "nombre": "Gestión e Investigación / Misión",
-    "ruta": "/mision.html"
-  }, {
-    "nombre": "Gestión e Investigación / Plan Estratégico",
-    "ruta": "/planEstrategico.html"
   }, {
     "nombre": "Gestión e Investigación / Gobierno",
     "ruta": "/gobierno.html"
@@ -154,12 +135,6 @@
   }, {
     "nombre": "Datos de Estudiantes",
     "ruta": "/archivos/estudiantes"
-  }, {
-    "nombre": "Datos de Mision",
-    "ruta": "/archivos/mision"
-  }, {
-    "nombre": "Datos de Plan Estratégico",
-    "ruta": "/archivos/plan-estrategico"
   }, {
     "nombre": "Datos de Gobierno",
     "ruta": "/archivos/gobierno"

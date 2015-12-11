@@ -18,10 +18,6 @@
       "href": "infoEconomica.html",
       "id": "en_economica"
     }, {
-      "nombre": "Servicios",
-      "href": "servicios.html",
-      "id": "en_servicios"
-    }, {
       "nombre": "Oferta y Demanda Académica",
       "href": "ofertaDemanda.html",
       "id": "en_oferta"
@@ -33,14 +29,6 @@
       "nombre": "Estudiantes",
       "href": "estudiantes.html",
       "id": "en_alumnos"
-    }, {
-      "nombre": "Misión",
-      "href": "mision.html",
-      "id": "en_mision"
-    }, {
-      "nombre": "Plan Estratégico",
-      "href": "planEstrategico.html",
-      "id": "en_planEst"
     }, {
       "nombre": "Gobierno",
       "href": "gobierno.html",

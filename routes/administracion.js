@@ -47,18 +47,6 @@ exports.infoEconomica = function(req, res) {
   });
 };
 
-// Gestión de la página de servicios
-exports.servicios = function(req, res) {
-  var servicios = conf.servicios;
-
-  res.render(servicios.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: servicios.nombre,
-    contenido: servicios.contenido,
-    datos: servicios.datos,
-  });
-};
-
 // Gestión de la página de perfil del contratante
 exports.perfil = function(req, res) {
   res.render('perfilContratante', {

@@ -62,12 +62,9 @@ module.exports.config = config;
 // Archivos de configuración de cada unas de las páginas
 module.exports.personal = cargar(root + '/config/personal.json');
 module.exports.infoEconomica = cargar(root + '/config/infoEconomica.json');
-module.exports.servicios = cargar(root + '/config/servicios.json');
 module.exports.ofertaDemanda = cargar(root + '/config/ofertaDemanda.json');
 module.exports.claustro = cargar(root + '/config/claustro.json');
 module.exports.estudiantes = cargar(root + '/config/estudiantes.json');
-module.exports.mision = cargar(root + '/config/mision.json');
-module.exports.planEstrategico = cargar(root + '/config/planEstrategico.json');
 module.exports.gobierno = cargar(root + '/config/gobierno.json');
 module.exports.rendimiento = cargar(root + '/config/rendimiento.json');
 module.exports.normativaLegal = cargar(root + '/config/normativaLegal.json');
@@ -81,15 +78,12 @@ app.get('/infoInstitucional.html', infoInstitucional.infoInstitucional);
 // Administracion
 app.get('/personal.html', administracion.personal);
 app.get('/infoEconomica.html', administracion.infoEconomica);
-app.get('/servicios.html', administracion.servicios);
 app.get('/perfilContratante.html', administracion.perfil);
 // Docencia
 app.get('/ofertaDemanda.html', docencia.ofertaDemanda);
 app.get('/claustro.html', docencia.claustro);
 app.get('/estudiantes.html', docencia.estudiantes);
 // Gestion e Investigación
-app.get('/mision.html', gestionInvestigacion.mision);
-app.get('/planEstrategico.html', gestionInvestigacion.planEstrategico);
 app.get('/gobierno.html', gestionInvestigacion.gobierno);
 app.get('/rendimiento.html', gestionInvestigacion.rendimiento);
 // Normativa Legal
@@ -122,12 +116,6 @@ app.get('/archivos/claustro', function(req, res) {
 });
 app.get('/archivos/estudiantes', function(req, res) {
   res.send(cargar(root + '/config/estudiantes.json'));
-});
-app.get('/archivos/mision', function(req, res) {
-  res.send(cargar(root + '/config/mision.json'));
-});
-app.get('/archivos/plan-estrategico', function(req, res) {
-  res.send(cargar(root + '/config/planEstrategico.json'));
 });
 app.get('/archivos/gobierno', function(req, res) {
   res.send(cargar(root + '/config/gobierno.json'));

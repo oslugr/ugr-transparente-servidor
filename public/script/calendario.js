@@ -23,11 +23,12 @@ var gCalId = 'n0ncqp3ltptoujheevpt88l5sk@group.calendar.google.com';
 var gApi = 'AIzaSyB8AuYY5vvEUw4UC2v3g8G7rShJFyTYfbM';
 
 $(document).ready(function() {
+  tmpView = 'list';
   $('#calendar').fullCalendar({
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'month,agendaWeek,agendaDay,list'
+      right: 'month,agendaWeek,agendaDay list'
     },
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],

@@ -1,0 +1,85 @@
+//
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+	Copyright (C) 2015 Germán Martínez Maldonado
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+extends layout
+
+block content
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					span.first #{titulo}
+	#general
+		#menus
+			- var mode1 = "tipo2 item-first_level"
+			- var mode2 = "tipo2 item-first_level"
+			- var mode3 = "tipo2 item-first_level"
+			- var mode4 = "tipo2 item-first_level"
+			- var mode5 = "tipo2 item-first_level"
+			- var mode6 = "tipo2 item-first_level"
+			- var mode7 = "tipo2 item-first_level"
+
+			- var submenu1_display = "display:none;"
+			- var submenu2_display = "display:none;"
+			- var submenu3_display = "display:none;"
+
+			- var item1_selected = "tipo1"
+			- var item2_selected = "tipo1"
+			- var item3_selected = "tipo1"
+
+			- var item4_selected = "tipo1"
+			- var item5_selected = "tipo1"
+			- var item6_selected = "tipo1"
+
+			- var item7_selected = "tipo1"
+			- var item8_selected = "tipo1"
+
+			include ./plantillaMenus.jade
+		#pagina
+			h1#titulo_pagina
+				span.texto_titulo #{titulo}
+
+			div(id="contenido", class="sec_interior")
+				.content_doku
+
+					h1
+						a(name="__doku_encabezado_de_primer_nivel") Rectora Magnífica de la Universidad de Granada:
+
+					ul.enlaces
+						li.level1
+							.li
+								a(class="enlaces-cabecera" href="http://www.ugr.es/pages/gobierno/rectoramagnificadelauniversidaddegranada",target="_blank") D.ª Pilar Aranda Ramírez
+
+					h1
+						a(name="__doku_encabezado_de_primer_nivel") Enlaces de interés:
+					ul.enlaces
+						li.level1
+							.li
+								a(class="enlaces-cabecera" href="http://rectorado.ugr.es/pages/equipo-gobierno",target="_blank") Equipo de Gobierno
+							.li
+								a(class="enlaces-cabecera" href="http://www.juntadeandalucia.es/boja/2015/151/BOJA15-151-00001-13759-01_00074790.pdf",target="_blank") Orden de suplencias de la Rectora
+							.li
+								a(class="enlaces-cabecera" href="http://secretariageneral.ugr.es/pages/normativa/fichasugr/boja15197000051647001_00077437/!",target="_blank") Delegación de competencias de la Rectora
+							.li
+								a(class="enlaces-cabecera" href="http://www.ugr.es/~defensor/",target="_blank") Defensor Universitario
+							.li
+								a(class="enlaces-cabecera" href="http://secretariageneral.ugr.es/pages/actascg/2015/actascg120315/documentos/calendacademico20152016/!",target="_blank") Calendario académico
+							.li
+								a(class="enlaces-cabecera" href="http://calidad.ugr.es/unidades",target="_blank") Cartas de Servicio y Contratos Programa

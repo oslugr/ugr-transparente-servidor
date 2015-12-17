@@ -45,6 +45,7 @@ var map = require(root + '/routes/mapaweb');
 var buscador = require(root + '/routes/buscador');
 var prueba = require(root + '/routes/prueba');
 var calendario = require(root + '/routes/calendario');
+var calendarioSolo = require(root + '/routes/calendarioSolo');
 
 // Librerías
 var cargar = require(root + '/lib/cargar');
@@ -97,6 +98,7 @@ app.get('/buscador.html', buscador.buscador);
 // Prueba para nueva visualización de tablas
 app.get('/prueba.html', prueba.personal);
 app.get('/calendario.html', calendario.index);
+app.get('/calendarioSolo.html', calendarioSolo.index);
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {

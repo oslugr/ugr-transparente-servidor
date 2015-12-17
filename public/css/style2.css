@@ -1713,7 +1713,3 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 .icon-renren:before {
   content: "\f18b"
 }
-th.fc-day-header{
-  background-color: #FFFFFF;
-  color: black;
-}

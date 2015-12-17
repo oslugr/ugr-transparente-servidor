@@ -468,17 +468,6 @@ div#general {
   background-repeat: repeat-y;
   border-color: #FFFFFF;
 }
-div#general_calendario {
-  border-width: 0 0 1px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 772px;
-  background-image: url("../img/general/sombra_izq_calendario.png");
-  background-position: left center;
-  background-repeat: repeat-y;
-  border-color: #FFFFFF;
-}
 div#menus {
   border-bottom-width: 1px;
   float: left;
@@ -531,11 +520,32 @@ div#pagina div#contenido {
   padding-left: 25px;
   padding-right: 25px;
 }
+div#general_calendario {
+  border-width: 0 0 1px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 772px;
+  height: 600px;
+  background-image: url("../img/general/sombra_izq_calendario.png");
+  background-position: left center;
+  background-repeat: repeat-y;
+  border-color: #FFFFFF;
+}
+div#calendar {
+  font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  width: 700px;
+}
 div#calendario {
   float: left;
   margin-bottom: 10px;
   padding-bottom: 30px;
   width: 772px;
+  height: 550px;
   background-color: #FFFFFF;
   background-image: url("../img/interior/calendario-fondo.png");
   background-position: left 41px;

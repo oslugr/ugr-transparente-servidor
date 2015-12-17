@@ -18,14 +18,24 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-extends layoutCalendario
+extends layout
 
 block content
-	#general
-		#pagina
+
+	#rastro-idiomas
+		#rastro
+			ul#rastro_breadcrumb
+				li.first
+					span.first #{titulo}
+	#general_calendario
+		#calendario
 			h1#titulo_pagina
 				span.texto_titulo #{titulo}
 
 			div(id="contenido", class="sec_interior")
 				.content_doku
-				#calendar
+
+				ul.enlaces
+					li.level1
+						.li
+							a(class="enlaces-cabecera" href="#{enlace}") Volver a Información institucional

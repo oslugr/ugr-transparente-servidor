@@ -468,6 +468,17 @@ div#general {
   background-repeat: repeat-y;
   border-color: #FFFFFF;
 }
+div#general_calendario {
+  border-width: 0 0 1px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 772px;
+  background-image: url("../img/general/sombra_izq_calendario.png");
+  background-position: left center;
+  background-repeat: repeat-y;
+  border-color: #FFFFFF;
+}
 div#menus {
   border-bottom-width: 1px;
   float: left;
@@ -516,6 +527,43 @@ div#pagina h1#titulo_pagina span.texto_titulo {
   background-position: 0 bottom;
 }
 div#pagina div#contenido {
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+div#calendario {
+  float: left;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  width: 772px;
+  background-color: #FFFFFF;
+  background-image: url("../img/interior/calendario-fondo.png");
+  background-position: left 41px;
+  background-repeat: no-repeat;
+}
+div#calendario h1#titulo_pagina {
+  min-height: 34px;
+  padding-left: 62px;
+  padding-top: 7px;
+  position: relative;
+  background-color: #FFFFFF;
+  background-image: url("../img/interior/pagina-titulo_principal.png");
+  border-bottom-style: solid;
+  border-color: #DD3B02;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+div#calendario h1#titulo_pagina span.texto_titulo {
+  display: block;
+  min-height: 26px;
+  width: 772px;
+  padding-left: 13px;
+  padding-top: 8px;
+  background-color: #000000;
+  background-image: url("../img/interior/calendario-titulo_principal-h1.png");
+  background-position: 0 bottom;
+}
+div#calendario div#contenido {
   margin-top: 20px;
   padding-left: 25px;
   padding-right: 25px;

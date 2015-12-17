@@ -23,11 +23,11 @@
 //Variable para las configuraciones
 var conf = require('../app');
 
-
 //Pagina de inicio
 exports.index = function(req, res) {
   res.render('calendario', {
     seccion: "calendario",
-    titulo: "Calendario"
+    titulo: "Calendario",
+    enlace: "infoInstitucional.html"
   });
 };

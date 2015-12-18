@@ -1,213 +1,213 @@
 {
-	"nombre": "Estudiantes",
-	"plantilla": "estudiantes",
-	"contenido": [{
-		"tipo": 1,
-		"encabezado": "Información sobre becas",
-		"link": "informacion-sobre-becas",
-		"texto": ""
-	}, {
-		"tipo": 1,
-		"encabezado": "Canales de comunicación y representación",
-		"link": "canales-comunicacion-representacion",
-		"texto": ""
-	}, {
-		"tipo": 0,
-		"encabezado": "Matrículas",
-		"link": "matriculas",
-		"texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
-	}, {
-		"tipo": 0,
-		"encabezado": "Datos sobre becas y ayudas",
-		"link": "datos-becas-ayudas",
-		"texto": "Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
-	}, {
-		"tipo": 0,
-		"encabezado": "Origen de los estudiantes",
-		"link": "origen-estudiantes",
-		"texto": "Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada."
-	}],
-	"datos": [{
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Becas y ayudas de carácter general (MECD)",
-		"url": "http://ve.ugr.es/pages/becas/ministerio"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Becas del Plan Propio de la Universidad de Granada",
-		"url": "http://ve.ugr.es/pages/becas/propias"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Movilidad Internacional",
-		"url": "http://internacional.ugr.es/pages/perfiles/estudiantes/estudiantes_ugr"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Movilidad Nacional (SICUE)",
-		"url": "http://ve.ugr.es/pages/sae/sicue"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Becas de Colaboración de Estudiantes Universitarios",
-		"url": "http://consejosocial.ugr.es/pages/banners/becas-colaboracion/distribucion-becas-de-colaboracion-20152016"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Gestión de alojamientos",
-		"url": "http://ve.ugr.es/pages/alojamiento"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Becas de iniciación a la investigación",
-		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p5"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Becas a iniciación a la investigacón para estudiantes de máster",
-		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p5m"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Formación de Investigadores FPU",
-		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p6"
-	}, {
-		"tipo": 1,
-		"dataset": "Información sobre becas",
-		"nombre": "Perfeccionamiento de doctores",
-		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p8"
-	}, {
-		"tipo": 1,
-		"dataset": "Canales de comunicación y representación",
-		"nombre": "Guía del alumnado 2015 - 2016",
-		"url": "http://ve.ugr.es/pages/sipe/jornadas_recepcion/guias/guia1516/"
-	}, {
-		"tipo": 1,
-		"dataset": "Canales de comunicación y representación",
-		"nombre": "Delegación General de Estudiantes",
-		"url": "http://dge.ugr.es/"
-	}, {
-		"tipo": 1,
-		"dataset": "Canales de comunicación y representación",
-		"nombre": "CanalUGR",
-		"url": "http://canal.ugr.es/"
-	}, {
-		"tipo": 1,
-		"dataset": "Canales de comunicación y representación",
-		"nombre": "Vicerrectorado de Estudiantes y Empleabilidad",
-		"url": "http://ve.ugr.es/"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2014/2015: grado",
-		"vista": 1,
-		"url": "113ce86c-23b4-4d19-b518-001f5aedd285",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2014/2015: posgrado",
-		"vista": 1,
-		"url": "2d4cb129-cda1-4737-8834-d25f269e29bb",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/2d4cb129-cda1-4737-8834-d25f269e29bb/download/201415matriculasposgrado.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2013/2014: grado",
-		"vista": 1,
-		"url": "5df5e28b-09ca-40aa-a908-5438fd53cbda",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculasgrado20132014.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2013/2014: posgrado",
-		"vista": 1,
-		"url": "48167c2f-6d17-49c5-9b63-f3d1129d425b",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2012/2013: grado",
-		"vista": 1,
-		"url": "35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/35e31a6e-ac3c-44eb-a17c-0bc274f73e9b/download/04gradomatriculasporramas1213.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2012/2013: posgrado",
-		"vista": 1,
-		"url": "13e1e6c0-1311-4c96-8409-39a2cce174c7",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/13e1e6c0-1311-4c96-8409-39a2cce174c7/download/09posgradomatriculaspormaster1213.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2011/2012: grado",
-		"vista": 1,
-		"url": "f621cebf-e17c-4823-b2b9-69467624e4f9",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/f621cebf-e17c-4823-b2b9-69467624e4f9/download/04gradomatriculasporramas1112.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2011/2012: posgrado",
-		"vista": 1,
-		"url": "a6b6f089-7e54-422e-a717-ad478e6124b0",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/a6b6f089-7e54-422e-a717-ad478e6124b0/download/09posgradomatriculaspormaster1112.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2010/2011: grado",
-		"vista": 1,
-		"url": "ac9e790f-2cfa-4f88-bf40-979b11692822",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/ac9e790f-2cfa-4f88-bf40-979b11692822/download/04gradomatriculasporramas1011.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Matrículas",
-		"id_dataset": "matriculas",
-		"nombre": "Matrículas 2010/2011: posgrado",
-		"vista": 1,
-		"url": "eb126186-ec40-4807-bb83-3bf1335c33fb",
-		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Datos sobre becas y ayudas",
-		"id_dataset": "becas-ayudas",
-		"nombre": "Becas: Egresados Grado 2011",
-		"vista": 1,
-		"url": "7851c4b8-912a-40e2-8e9f-865427d3b8be",
-		"descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Datos sobre becas y ayudas",
-		"id_dataset": "becas-ayudas",
-		"nombre": "Becas: Egresados Máster 2011",
-		"vista": 1,
-		"url": "f92b1419-45c6-43af-b9ba-c93ef71995bf",
-		"descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/f92b1419-45c6-43af-b9ba-c93ef71995bf/download/egresadosmaster2011becas.csv"
-	},  {
-		"tipo": 0,
-		"dataset": "Origen de los estudiantes",
-		"id_dataset": "estudiantes-fuera-comunidad",
-		"nombre": "Origen geográfico de los alumnos: 2014/2015",
-		"vista": 1,
-		"url": "69eb0514-5f58-42c9-ae93-fa94ee09e6e1",
-		"descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/69eb0514-5f58-42c9-ae93-fa94ee09e6e1/download/201415matriculasgradoorigen.csv"
-	}, {
-		"tipo": 0,
-		"dataset": "Origen de los estudiantes",
-		"id_dataset": "estudiantes-fuera-comunidad",
-		"nombre": "Origen geográfico de los alumnos: 2013/2014",
-		"vista": 1,
-		"url": "be87cafa-b043-4bc8-84b6-86d03ed59df5",
-		"descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/be87cafa-b043-4bc8-84b6-86d03ed59df5/download/origengeograficoalumnos.csv"
-	}]
+  "nombre": "Estudiantes",
+  "plantilla": "estudiantes",
+  "contenido": [{
+    "tipo": 1,
+    "encabezado": "Información sobre becas",
+    "link": "informacion-sobre-becas",
+    "texto": ""
+  }, {
+    "tipo": 1,
+    "encabezado": "Canales de comunicación y representación",
+    "link": "canales-comunicacion-representacion",
+    "texto": ""
+  }, {
+    "tipo": 0,
+    "encabezado": "Matrículas",
+    "link": "matriculas",
+    "texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
+  }, {
+    "tipo": 0,
+    "encabezado": "Datos sobre becas y ayudas",
+    "link": "datos-becas-ayudas",
+    "texto": "Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
+  }, {
+    "tipo": 0,
+    "encabezado": "Origen de los estudiantes",
+    "link": "origen-estudiantes",
+    "texto": "Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada."
+  }],
+  "datos": [{
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Becas y ayudas de carácter general (MECD)",
+    "url": "http://ve.ugr.es/pages/becas/ministerio"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Becas del Plan Propio de la Universidad de Granada",
+    "url": "http://ve.ugr.es/pages/becas/propias"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Movilidad Internacional",
+    "url": "http://internacional.ugr.es/pages/perfiles/estudiantes/estudiantes_ugr"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Movilidad Nacional (SICUE)",
+    "url": "http://ve.ugr.es/pages/sae/sicue"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Becas de Colaboración de Estudiantes Universitarios",
+    "url": "http://consejosocial.ugr.es/pages/banners/becas-colaboracion/distribucion-becas-de-colaboracion-20152016"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Gestión de alojamientos",
+    "url": "http://ve.ugr.es/pages/alojamiento"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Becas de iniciación a la investigación",
+    "url": "http://investigacion.ugr.es/pages/planpropio/2015/p5"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Becas a iniciación a la investigacón para estudiantes de máster",
+    "url": "http://investigacion.ugr.es/pages/planpropio/2015/p5m"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Formación de Investigadores FPU",
+    "url": "http://investigacion.ugr.es/pages/planpropio/2015/p6"
+  }, {
+    "tipo": 1,
+    "dataset": "Información sobre becas",
+    "nombre": "Perfeccionamiento de doctores",
+    "url": "http://investigacion.ugr.es/pages/planpropio/2015/p8"
+  }, {
+    "tipo": 1,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Guía del alumnado 2015 - 2016",
+    "url": "http://ve.ugr.es/pages/sipe/jornadas_recepcion/guias/guia1516/"
+  }, {
+    "tipo": 1,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Delegación General de Estudiantes",
+    "url": "http://dge.ugr.es/"
+  }, {
+    "tipo": 1,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "CanalUGR",
+    "url": "http://canal.ugr.es/"
+  }, {
+    "tipo": 1,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Vicerrectorado de Estudiantes y Empleabilidad",
+    "url": "http://ve.ugr.es/"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2014/2015: grado",
+    "vista": 1,
+    "url": "113ce86c-23b4-4d19-b518-001f5aedd285",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/113ce86c-23b4-4d19-b518-001f5aedd285/download/201415matriculasgradoramas.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2014/2015: posgrado",
+    "vista": 1,
+    "url": "2d4cb129-cda1-4737-8834-d25f269e29bb",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/2d4cb129-cda1-4737-8834-d25f269e29bb/download/201415matriculasposgrado.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2013/2014: grado",
+    "vista": 1,
+    "url": "5df5e28b-09ca-40aa-a908-5438fd53cbda",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/5df5e28b-09ca-40aa-a908-5438fd53cbda/download/matriculasgrado20132014.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2013/2014: posgrado",
+    "vista": 1,
+    "url": "48167c2f-6d17-49c5-9b63-f3d1129d425b",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/48167c2f-6d17-49c5-9b63-f3d1129d425b/download/matriculasposgrado20132014.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2012/2013: grado",
+    "vista": 1,
+    "url": "35e31a6e-ac3c-44eb-a17c-0bc274f73e9b",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/35e31a6e-ac3c-44eb-a17c-0bc274f73e9b/download/04gradomatriculasporramas1213.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2012/2013: posgrado",
+    "vista": 1,
+    "url": "13e1e6c0-1311-4c96-8409-39a2cce174c7",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/13e1e6c0-1311-4c96-8409-39a2cce174c7/download/09posgradomatriculaspormaster1213.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2011/2012: grado",
+    "vista": 1,
+    "url": "f621cebf-e17c-4823-b2b9-69467624e4f9",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/f621cebf-e17c-4823-b2b9-69467624e4f9/download/04gradomatriculasporramas1112.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2011/2012: posgrado",
+    "vista": 1,
+    "url": "a6b6f089-7e54-422e-a717-ad478e6124b0",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/a6b6f089-7e54-422e-a717-ad478e6124b0/download/09posgradomatriculaspormaster1112.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2010/2011: grado",
+    "vista": 1,
+    "url": "ac9e790f-2cfa-4f88-bf40-979b11692822",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/ac9e790f-2cfa-4f88-bf40-979b11692822/download/04gradomatriculasporramas1011.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Matrículas",
+    "id_dataset": "matriculas",
+    "nombre": "Matrículas 2010/2011: posgrado",
+    "vista": 1,
+    "url": "eb126186-ec40-4807-bb83-3bf1335c33fb",
+    "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Datos sobre becas y ayudas",
+    "id_dataset": "becas-ayudas",
+    "nombre": "Becas: Egresados Grado 2011",
+    "vista": 1,
+    "url": "7851c4b8-912a-40e2-8e9f-865427d3b8be",
+    "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Datos sobre becas y ayudas",
+    "id_dataset": "becas-ayudas",
+    "nombre": "Becas: Egresados Máster 2011",
+    "vista": 1,
+    "url": "f92b1419-45c6-43af-b9ba-c93ef71995bf",
+    "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/f92b1419-45c6-43af-b9ba-c93ef71995bf/download/egresadosmaster2011becas.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Origen de los estudiantes",
+    "id_dataset": "estudiantes-fuera-comunidad",
+    "nombre": "Origen geográfico de los alumnos: 2014/2015",
+    "vista": 1,
+    "url": "69eb0514-5f58-42c9-ae93-fa94ee09e6e1",
+    "descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/69eb0514-5f58-42c9-ae93-fa94ee09e6e1/download/201415matriculasgradoorigen.csv"
+  }, {
+    "tipo": 0,
+    "dataset": "Origen de los estudiantes",
+    "id_dataset": "estudiantes-fuera-comunidad",
+    "nombre": "Origen geográfico de los alumnos: 2013/2014",
+    "vista": 1,
+    "url": "be87cafa-b043-4bc8-84b6-86d03ed59df5",
+    "descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/be87cafa-b043-4bc8-84b6-86d03ed59df5/download/origengeograficoalumnos.csv"
+  }]
 }

@@ -86,7 +86,7 @@
     "tipo": 0,
     "dataset": "Satisfacción de los Estudiantes",
     "id_dataset": "satisfaccion-estudiantes",
-    "nombre": "Satisfacción general: egresados 2011",
+    "nombre": "Egresados 2011: satisfacción valoración de oferta formativa",
     "vista": 1,
     "url": "00032bf5-a184-451a-9175-0edcb7d000fc",
     "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/00032bf5-a184-451a-9175-0edcb7d000fc/download/satisfaccionegresados2011general.csv"
@@ -94,10 +94,10 @@
     "tipo": 0,
     "dataset": "Satisfacción de los Estudiantes",
     "id_dataset": "satisfaccion-estudiantes",
-    "nombre": "Valoración oferta formativa: egresados 2011",
+    "nombre": "Egresados Máster 2011: satisfacción y valoración de oferta formativa",
     "vista": 1,
-    "url": "7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40",
-    "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/7cd05cda-0ebe-4b12-b83d-9d1dd94d0e40/download/satisfaccionegresadosvaloracionofertaformativa.csv"
+    "url": "ac6b9d47-b735-498d-aeb7-38dd27bc7a3c",
+    "descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/ac6b9d47-b735-498d-aeb7-38dd27bc7a3c/download/satisfaccionyvaloraciondelaofertaformativaegresadosmaster.csv"
   }, {
     "tipo": 0,
     "dataset": "Ranking",

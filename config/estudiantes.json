@@ -3,8 +3,8 @@
 	"plantilla": "estudiantes",
 	"contenido": [{
 		"tipo": 1,
-		"encabezado": "Becas",
-		"link": "becas",
+		"encabezado": "Información sobre becas",
+		"link": "informacion-sobre-becas",
 		"texto": ""
 	}, {
 		"tipo": 1,
@@ -18,58 +18,63 @@
 		"texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
 	}, {
 		"tipo": 0,
+		"encabezado": "Datos sobre becas y ayudas",
+		"link": "datos-becas-ayudas",
+		"texto": "Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
+	}, {
+		"tipo": 0,
 		"encabezado": "Origen de los estudiantes",
 		"link": "origen-estudiantes",
 		"texto": "Información relativa al número de estudiantes por comunidades y extranjeros matriculados en la Universidad de Granada."
 	}],
 	"datos": [{
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Becas y ayudas de carácter general (MECD)",
 		"url": "http://ve.ugr.es/pages/becas/ministerio"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Becas del Plan Propio de la Universidad de Granada",
 		"url": "http://ve.ugr.es/pages/becas/propias"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Movilidad Internacional",
 		"url": "http://internacional.ugr.es/pages/perfiles/estudiantes/estudiantes_ugr"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Movilidad Nacional (SICUE)",
 		"url": "http://ve.ugr.es/pages/sae/sicue"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Becas de Colaboración de Estudiantes Universitarios",
 		"url": "http://consejosocial.ugr.es/pages/banners/becas-colaboracion/distribucion-becas-de-colaboracion-20152016"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Gestión de alojamientos",
 		"url": "http://ve.ugr.es/pages/alojamiento"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Becas de iniciación a la investigación",
 		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p5"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Becas a iniciación a la investigacón para estudiantes de máster",
 		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p5m"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Formación de Investigadores FPU",
 		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p6"
 	}, {
 		"tipo": 1,
-		"dataset": "Becas",
+		"dataset": "Información sobre becas",
 		"nombre": "Perfeccionamiento de doctores",
 		"url": "http://investigacion.ugr.es/pages/planpropio/2015/p8"
 	}, {
@@ -173,6 +178,22 @@
 		"url": "eb126186-ec40-4807-bb83-3bf1335c33fb",
 		"descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
 	}, {
+		"tipo": 0,
+		"dataset": "Datos sobre becas y ayudas",
+		"id_dataset": "becas-ayudas",
+		"nombre": "Becas: Egresados Grado 2011",
+		"vista": 1,
+		"url": "7851c4b8-912a-40e2-8e9f-865427d3b8be",
+		"descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/7851c4b8-912a-40e2-8e9f-865427d3b8be/download/becastotal.csv"
+	}, {
+		"tipo": 0,
+		"dataset": "Datos sobre becas y ayudas",
+		"id_dataset": "becas-ayudas",
+		"nombre": "Becas: Egresados Máster 2011",
+		"vista": 1,
+		"url": "f92b1419-45c6-43af-b9ba-c93ef71995bf",
+		"descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/f92b1419-45c6-43af-b9ba-c93ef71995bf/download/egresadosmaster2011becas.csv"
+	},  {
 		"tipo": 0,
 		"dataset": "Origen de los estudiantes",
 		"id_dataset": "estudiantes-fuera-comunidad",

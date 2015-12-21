@@ -526,8 +526,7 @@ div#general_calendario {
   overflow: hidden;
   position: relative;
   width: 772px;
-  height: 1000px;
-  background-image: url("../img/general/sombra_izq_calendario.png");
+  height: 700px;
   background-position: left center;
   background-repeat: repeat-y;
   border-color: #FFFFFF;
@@ -539,6 +538,7 @@ div#calendar {
   top: 400px;
   left: 200px;
   width: 53%;
+  z-index: 10;
 }
 div#calendario {
   float: left;

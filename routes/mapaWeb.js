@@ -39,38 +39,46 @@ exports.mapaWeb = function(req, res) {
       enlace: "",
       subsecciones: [{
         nombre: "Personal",
-        enlace: "personal.html"
+        enlace: "personal.html",
+        contenido: conf.personal.contenido
       }, {
         nombre: "Información Económica",
-        enlace: "infoEconomica.html"
+        enlace: "infoEconomica.html",
+        contenido: conf.infoEconomica.contenido
       }, {
         nombre: "Perfil del Contratante",
-        enlace: "perfilContratante.html"
+        enlace: "perfilContratante.html",
+        contenido: ""
       }]
     }, {
       nombre: "Docencia",
       enlace: "",
       subsecciones: [{
         nombre: "Oferta y Demanda Académica",
-        enlace: "ofertaDemanda.html"
+        enlace: "ofertaDemanda.html",
+        contenido: conf.ofertaDemanda.contenido
       }, {
         nombre: "Claustro",
-        enlace: "claustro.html"
+        enlace: "claustro.html",
+        contenido: conf.claustro.contenido
       }, {
         nombre: "Estudiantes",
-        enlace: "estudiantes.html"
+        enlace: "estudiantes.html",
+        contenido: conf.estudiantes.contenido
       }]
     }, {
       nombre: "Gestión e Investigación",
       enlace: "",
       subsecciones: [{
         nombre: "Gobierno",
-        enlace: "gobierno.html"
+        enlace: "gobierno.html",
+        contenido: conf.gobierno.contenido
       }, {
         nombre: "Rendimiento",
-        enlace: "rendimiento.html"
+        enlace: "rendimiento.html",
+        contenido: conf.rendimiento.contenido
       }]
-    },{
+    }, {
       nombre: "Normativa Legal",
       enlace: "normativaLegal.html",
       subsecciones: []

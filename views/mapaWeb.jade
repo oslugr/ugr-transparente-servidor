@@ -72,3 +72,7 @@ block content
 							each subseccion in seccion.subsecciones
 								li
 									a(class="seccion2", href="#{subseccion.enlace}") #{subseccion.nombre}
+								ul.square_seccion3
+									each entrada in subseccion.contenido
+										li
+											a(class="seccion3", href="#{subseccion.enlace}##{entrada.link}") #{entrada.encabezado}

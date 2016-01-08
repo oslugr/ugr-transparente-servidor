@@ -36,20 +36,16 @@ exports.mapa = function(req, res) {
 
   var personal = conf.personal.contenido;
   var infoEco = conf.infoEconomica.contenido;
-  var serv = conf.servicios.contenido;
   var ofYde = conf.ofertaDemanda.contenido;
   var claustro = conf.claustro.contenido;
   var estudiantes = conf.estudiantes.contenido;
-  var mision = conf.mision.contenido;
-  var plan = conf.planEstrategico.contenido;
   var gobierno = conf.gobierno.contenido;
-  var estad = conf.estadisticas.contenido;
   var normativa = conf.normativaLegal.contenido;
 
 
 
 
-  res.render('mapaweb', {
+  res.render('mapa', {
     titulo: 'Mapa del sitio',
     seccion: secciones,
     tam_seccion: secciones.length,
@@ -73,8 +69,6 @@ exports.mapa = function(req, res) {
     dataset_infoEco: infoEco,
     tam_dataset_infoEco: infoEco.length,
 
-    dataset_serv: serv,
-    tam_dataset_serv: serv.length,
 
     dataset_ofYde: ofYde,
     tam_dataset_ofYde: ofYde.length,
@@ -85,17 +79,10 @@ exports.mapa = function(req, res) {
     dataset_estudiantes: estudiantes,
     tam_dataset_estudiantes: estudiantes.length,
 
-    dataset_mision: mision,
-    tam_dataset_mision: mision.length,
-
-    dataset_plan: plan,
-    tam_dataset_plan: plan.length,
 
     dataset_gobierno: gobierno,
     tam_dataset_gobierno: gobierno.length,
 
-    dataset_estad: estad,
-    tam_dataset_estad: estad.length,
 
     dataset_normativa: normativa,
     tam_dataset_normativa: normativa.length

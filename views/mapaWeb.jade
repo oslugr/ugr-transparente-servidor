@@ -61,10 +61,14 @@ block content
 
 				ul.square_seccion
 					each seccion in secciones
-						li
-							a(class="seccion", href="#{seccion.nombre}") #{seccion.nombre}
+						if (seccion.enlace == "")
+							li
+								a(class="seccion", href=null) #{seccion.nombre}
+						else
+							li
+								a(class="seccion", href="#{seccion.enlace}") #{seccion.nombre}
 
 						ul.square_seccion2
 							each subseccion in seccion.subsecciones
 								li
-									a(class="seccion2", href="#{subseccion.nombre}") #{subseccion.nombre}
+									a(class="seccion2", href="#{subseccion.enlace}") #{subseccion.nombre}

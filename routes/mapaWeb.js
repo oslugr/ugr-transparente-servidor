@@ -24,34 +24,60 @@
 var conf = require('../app');
 
 exports.mapaWeb = function(req, res) {
-
-  var secciones
-  var secciones = ["Inicio", "Información Institucional", "Administración", "Docencia", "Gestión e Investigación", "Normativa Legal"];
-  var administracion = ["Personal", "Información Económica", "Perfil del Contratante"];
-  var docencia = ["Oferta y Demanda", "Claustro", "Estudiantes"];
-  var gestionInvestigacion = ["Misión", "Plan Estratégico", "Gobierno", "rendimientoísticas"];
-
-  var enlacesSecciones = ["index.html", "infoInstitucional.html", "", "", "", "normativaLegal.html"];
-  var enlacesAdministracion = ["personal.html", "infoEconomicanomica.html", "perfilContratante.html"];
-  var enlacesDocencia = ["ofertaDemanda.html", "claustro.html", "estudiantes.html"];
-  var enlacesGestionInvestigacion = ["gobierno.html", "rendimiento.html"];
-
-  var personal = conf.personal.contenido;
-  var infoEconomica = conf.infoEconomica.contenido;
-  var ofertaDemanda = conf.ofertaDemanda.contenido;
-  var claustro = conf.claustro.contenido;
-  var estudiantes = conf.estudiantes.contenido;
-  var gobierno = conf.gobierno.contenido;
-  var rendimiento = conf.rendimiento.contenido;
-  var normativaLegal = conf.normativaLegal.contenido;
-
   res.render('mapaWeb', {
     titulo: 'Mapa del sitio',
     secciones: [{
+      nombre: "Inicio",
+      enlace: "index.html",
+      subsecciones: []
+    }, {
+      nombre: "Información Institucional",
+      enlace: "infoInstitucional.html",
+      subsecciones: []
+    }, {
       nombre: "Administración",
+      enlace: "",
       subsecciones: [{
-        nombre: "Personal"
+        nombre: "Personal",
+        enlace: "personal.html"
+      }, {
+        nombre: "Información Económica",
+        enlace: "infoEconomica.html"
+      }, {
+        nombre: "Perfil del Contratante",
+        enlace: "perfilContratante.html"
       }]
+    }, {
+      nombre: "Docencia",
+      enlace: "",
+      subsecciones: [{
+        nombre: "Oferta y Demanda Académica",
+        enlace: "ofertaDemanda.html"
+      }, {
+        nombre: "Claustro",
+        enlace: "claustro.html"
+      }, {
+        nombre: "Estudiantes",
+        enlace: "estudiantes.html"
+      }]
+    }, {
+      nombre: "Gestión e Investigación",
+      enlace: "",
+      subsecciones: [{
+        nombre: "Gobierno",
+        enlace: "gobierno.html"
+      }, {
+        nombre: "Rendimiento",
+        enlace: "rendimiento.html"
+      }]
+    },{
+      nombre: "Normativa Legal",
+      enlace: "normativaLegal.html",
+      subsecciones: []
+    }, {
+      nombre: "Solicitud de Información",
+      enlace: "solicitudInfo.html",
+      subsecciones: []
     }]
   });
 }

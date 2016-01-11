@@ -41,7 +41,6 @@ var docencia = require(root + '/routes/docencia');
 var gestionInvestigacion = require(root + '/routes/gestionInvestigacion');
 var normativaLegal = require(root + '/routes/normativaLegal');
 var solicitudInfo = require(root + '/routes/solicitudInfo');
-var mapa = require(root + '/routes/mapa');
 var mapaWeb = require(root + '/routes/mapaWeb');
 var buscador = require(root + '/routes/buscador');
 var prueba = require(root + '/routes/prueba');
@@ -92,8 +91,6 @@ app.get('/rendimiento.html', gestionInvestigacion.rendimiento);
 app.get('/normativaLegal.html', normativaLegal.normativaLegal);
 // Solicitudes de Información
 app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
-// Mapa del sitio
-app.get('/mapa.html', mapa.mapa);
 // Mapa del sitio
 app.get('/mapaWeb.html', mapaWeb.mapaWeb);
 // Buscador

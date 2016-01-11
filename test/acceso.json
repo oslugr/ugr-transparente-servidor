@@ -114,6 +114,10 @@
   }, {
     "nombre": "Solicitud de Información",
     "ruta": "/solicitudInfo.html"
+
+  }, {
+    "nombre": "Mapa web",
+    "ruta": "/mapaWeb.html"
   }, {
     "nombre": "Buscador",
     "ruta": "/buscador.html"

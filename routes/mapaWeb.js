@@ -80,8 +80,12 @@ exports.mapaWeb = function(req, res) {
       }]
     }, {
       nombre: "Normativa Legal",
-      enlace: "normativaLegal.html",
-      subsecciones: []
+      enlace: "",
+      subsecciones: [{
+        nombre: "Normativa Legal",
+        enlace: "normativaLegal.html",
+        contenido: conf.normativaLegal.contenido
+      }]
     }, {
       nombre: "Solicitud de Información",
       enlace: "solicitudInfo.html",

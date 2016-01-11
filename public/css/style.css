@@ -1997,44 +1997,32 @@ li.model-resaltado-02 a.banner:hover {
   /*filter: alpha(opacity=85);*/
   /* For IE8 and earlier */
 }
-#en_presentacion {
-  background-image: url(../img/inicio/presentacion.png);
+#en_infoInstitucional {
+  background-image: url(../img/inicio/infoInstitucional.png);
 }
 #en_personal {
   background-image: url(../img/inicio/personal.png);
 }
-#en_economica {
-  background-image: url(../img/inicio/informacion-economica.png);
+#en_infoEconomica {
+  background-image: url(../img/inicio/infoEconomica.png);
 }
-#en_servicios {
-  background-image: url(../img/inicio/servicios.png);
-}
-#en_oferta {
-  background-image: url(../img/inicio/oferta-y-demanda-academica.png);
+#en_ofertaDemanda {
+  background-image: url(../img/inicio/ofertaDemanda.png);
 }
 #en_claustro {
   background-image: url(../img/inicio/claustro.png);
 }
-#en_alumnos {
+#en_estudiantes {
   background-image: url(../img/inicio/estudiantes.png);
-}
-#en_mision {
-  background-image: url(../img/inicio/mision.png);
-}
-#en_planEst {
-  background-image: url(../img/inicio/plan-estrategico.png);
 }
 #en_gobierno {
   background-image: url(../img/inicio/gobierno.png);
 }
-#en_satisfaccion {
-  background-image: url(../img/inicio/personal.png);
+#en_rendimiento {
+  background-image: url(../img/inicio/rendimiento.png);
 }
-#en_resultados {
-  background-image: url(../img/inicio/estadisticas.png);
-}
-#en_normativa {
-  background-image: url(../img/inicio/normativa-universidad.png);
+#en_normativaLegal {
+  background-image: url(../img/inicio/normativaLegal.png);
 }
 
 /***************************************/

@@ -8,7 +8,7 @@
     "enlaces": [{
       "nombre": "Información institucional",
       "href": "infoInstitucional.html",
-      "id": "en_presentacion"
+      "id": "en_infoInstitucional"
     }, {
       "nombre": "Personal",
       "href": "personal.html",
@@ -16,11 +16,11 @@
     }, {
       "nombre": "Información Económica",
       "href": "infoEconomica.html",
-      "id": "en_economica"
+      "id": "en_infoEconomica"
     }, {
       "nombre": "Oferta y Demanda Académica",
       "href": "ofertaDemanda.html",
-      "id": "en_oferta"
+      "id": "en_ofertaDemanda"
     }, {
       "nombre": "Claustro",
       "href": "claustro.html",
@@ -28,7 +28,7 @@
     }, {
       "nombre": "Estudiantes",
       "href": "estudiantes.html",
-      "id": "en_alumnos"
+      "id": "en_estudiantes"
     }, {
       "nombre": "Gobierno",
       "href": "gobierno.html",
@@ -36,11 +36,11 @@
     }, {
       "nombre": "Rendimiento",
       "href": "rendimiento.html",
-      "id": "en_resultados"
+      "id": "en_rendimiento"
     }, {
       "nombre": "Normativa Legal",
       "href": "normativaLegal.html",
-      "id": "en_normativa"
+      "id": "en_normativaLegal"
     }]
   },
   "infoInstitucional": {

@@ -3,7 +3,6 @@
     "config.json",
     "personal.json",
     "infoEconomica.json",
-    "servicios.json",
     "ofertaDemanda.json",
     "mision.json",
     "claustro.json",
@@ -26,11 +25,6 @@
       "archivo": "infoEconomica.json",
       "nombre": "Información Económica",
       "plantilla": "infoEconomica"
-    }, {
-      "descripcion": "Datos de Servicios",
-      "archivo": "servicios.json",
-      "nombre": "Servicios",
-      "plantilla": "servicios"
     }]
   }, {
     "descripcion": "Sección Docencia",
@@ -114,7 +108,6 @@
   }, {
     "nombre": "Solicitud de Información",
     "ruta": "/solicitudInfo.html"
-
   }, {
     "nombre": "Mapa web",
     "ruta": "/mapaWeb.html"
@@ -126,13 +119,10 @@
     "ruta": "/archivos/personal"
   }, {
     "nombre": "Datos de Información Económica",
-    "ruta": "/archivos/informacion-economica"
-  }, {
-    "nombre": "Datos de Servicios",
-    "ruta": "/archivos/servicios"
-  }, {
+    "ruta": "/archivos/infoEconomica"
+  },{
     "nombre": "Datos de Oferta y Demanda",
-    "ruta": "/archivos/oferta-demanda"
+    "ruta": "/archivos/ofertaDemanda"
   }, {
     "nombre": "Datos de Claustro",
     "ruta": "/archivos/claustro"
@@ -147,6 +137,6 @@
     "ruta": "/archivos/rendimiento"
   }, {
     "nombre": "Datos de Normativa Legal",
-    "ruta": "/archivos/normativa-legal"
+    "ruta": "/archivos/normativaLegal"
   }]
 }

@@ -43,9 +43,9 @@ var normativaLegal = require(root + '/routes/normativaLegal');
 var solicitudInfo = require(root + '/routes/solicitudInfo');
 var mapaWeb = require(root + '/routes/mapaWeb');
 var buscador = require(root + '/routes/buscador');
-var prueba = require(root + '/routes/prueba');
 var calendario = require(root + '/routes/calendario');
 var calendarioSolo = require(root + '/routes/calendarioSolo');
+var prueba = require(root + '/routes/prueba');
 
 // Librerías
 var cargar = require(root + '/lib/cargar');
@@ -95,22 +95,20 @@ app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 app.get('/mapaWeb.html', mapaWeb.mapaWeb);
 // Buscador
 app.get('/buscador.html', buscador.buscador);
-// Prueba para nueva visualización de tablas
-app.get('/prueba.html', prueba.personal);
+// Calendario
 app.get('/calendario.html', calendario.index);
 app.get('/calendarioSolo.html', calendarioSolo.index);
+// Prueba para nueva visualización de tablas
+app.get('/prueba.html', prueba.personal);
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {
   res.send(cargar(root + '/config/personal.json'));
 });
-app.get('/archivos/informacion-economica', function(req, res) {
+app.get('/archivos/infoEconomica', function(req, res) {
   res.send(cargar(root + '/config/infoEconomica.json'));
 });
-app.get('/archivos/servicios', function(req, res) {
-  res.send(cargar(root + '/config/servicios.json'));
-});
-app.get('/archivos/oferta-demanda', function(req, res) {
+app.get('/archivos/ofertaDemanda', function(req, res) {
   res.send(cargar(root + '/config/ofertaDemanda.json'));
 });
 app.get('/archivos/claustro', function(req, res) {
@@ -125,7 +123,7 @@ app.get('/archivos/gobierno', function(req, res) {
 app.get('/archivos/rendimiento', function(req, res) {
   res.send(cargar(root + '/config/rendimiento.json'));
 });
-app.get('/archivos/normativa-legal', function(req, res) {
+app.get('/archivos/normativaLegal', function(req, res) {
   res.send(cargar(root + '/config/normativaLegal.json'));
 });
 

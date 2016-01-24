@@ -115,6 +115,14 @@ block content
 														td(class="centeralign impar")
 															a(href="#{elemento.url}",target="_blank")
 																img(class="link",src="imagenes/link2.png", alt="link")
+													when 3
+														td(class="centeralign par") #{elemento.nombre}
+														td(class="centeralign impar")
+															a(href="doc/#{elemento.url}",target="_blank")
+																img(class="view",src="imagenes/view.png", alt="view")
+														td(class="centeralign par")
+															a(href="doc/#{elemento.url}", download="")
+																img(class="save",src="imagenes/save.png", alt="save")
 													when 4
 														td(class="centeralign par") #{elemento.nombre}
 														td(class="centeralign impar")

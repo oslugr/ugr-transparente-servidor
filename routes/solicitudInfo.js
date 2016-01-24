@@ -28,6 +28,6 @@ var conf = require('../app');
 exports.solicitudInfo = function(req, res) {
 
   res.render('solicitudInfo', {
-    titulo: 'Solicitud de Información'
+    seccion: 'Solicitud de Información'
   });
 };

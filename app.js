@@ -149,7 +149,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // Manejador de errores:
 app.use(function(req, res, next) {
-  res.status(404).render('404_error', {
+  res.status(404).render('error_404', {
     titulo: config.error.titulo,
     texto: config.error.texto
   });

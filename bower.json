@@ -15,11 +15,10 @@
   "private": true,
   "dependencies": {
     "fullcalendar": "fullcalendar#^2.5.0",
-    "jquery": "jquery#^1.9.0",
+    "jquery": "jquery#^2.2.0",
+    "jquery-ui": "jquery-ui#^1.11.4",
+    "lightbox2": "lightbox2#^2.8.2",
     "moment": "moment#^2.10.6",
     "underscore": "underscore#^1.8.3"
-  },
-  "resolutions": {
-    "jquery": "jquery#1.9.0"
   }
 }

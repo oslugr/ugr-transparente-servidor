@@ -2,6 +2,7 @@
 	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+	Copyright (C) 2016 Germán Martínez Maldonado
 
 	This file is part of UGR Transparente.
 
@@ -20,8 +21,6 @@
 
 
 extends layout
-
-//block scripts
 
 block content
 	#rastro-idiomas
@@ -42,7 +41,7 @@ block content
 			- var submenu1_display = ""
 			- var submenu2_display = "display:none;"
 			- var submenu3_display = "display:none;"
-			
+
 			- var item1_selected = "tipo1"
 			- var item2_selected = "tipo1-selected"
 			- var item3_selected = "tipo1"
@@ -54,7 +53,7 @@ block content
 			- var item7_selected = "tipo1"
 			- var item8_selected = "tipo1"
 
-			include ./plantillaMenus.jade
+			include ./menu.jade
 		#pagina
 			h1#titulo_pagina
 				span.texto_titulo #{seccion}
@@ -64,47 +63,63 @@ block content
 
 					ul.enlaces
 						li.level1
-							- for (var i = 0; i < contenido.length; i++)
+							each valor in contenido
 								.li
-									a(class="enlaces-cabecera" href="##{contenido[i].link}") #{contenido[i].encabezado}
+									a(class="enlaces-cabecera" href="##{valor.link}") #{valor.encabezado}
 
-					- for (var j = 0; j < contenido.length; j++)
+					each valor in contenido
 						h1
-							a(id="#{contenido[j].link}", name="__doku_encabezado_de_primer_nivel") #{contenido[j].encabezado}
+							a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 
 						.level1
-							p #{contenido[j].texto}
+							p #{valor.texto}
 
-						table.inline
-							tbody
-								tr
-									th.centeralign Descripción
-									th.centeralign Datos en Opendata
-									th.centeralign Ver
-									th.centeralign Archivo
+							table.inline
+								colgroup
+									col(span='1', style='width: 90%;')
+									col(span='1', style='width: 10%;')
+								tbody
+									tr
+										case valor.tipo
+											when 1
+												th.centeralign Descripción
+												th.centeralign Datos en Opendata
+												th.centeralign Ver
+												th.centeralign Descargar
+											when 2
+												th.centeralign Descripción
+												th.centeralign Enlace
+											when 3
+											when 4
+												th.centeralign Descripción
+												th.centeralign Ver
+												th.centeralign Descargar
 
-								- for (var k = 0; k < datos.length; k++)
-									- if (datos[k].dataset==contenido[j].encabezado)
-										tr
-											td(class="centeralign par") #{datos[k].nombre}
-
-											if datos[k].url==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].id_dataset}/resource/#{datos[k].url}",target="_blank")
-														img(class="link",src="imagenes/link.png", alt="link")
-
-											if datos[k].vista==0
-												td(class="centeralign par")
-											else
-												td(class="centeralign par")
-													a(href="#dialog" class="view" rel="#{servidor}dataset/#{datos[k].descarga}" name="#{datos[k].nombre}")
-														img(class="view",src="imagenes/view.png", alt="view")
-
-											if datos[k].descarga==0
-												td(class="centeralign impar")
-											else
-												td(class="centeralign impar")
-													a(href="#{servidor}dataset/#{datos[k].descarga}")
-														img(class="save",src="imagenes/save.png", alt="save")
+									each elemento in datos
+										if elemento.dataset==valor.encabezado
+											tr
+												case elemento.tipo
+													when 1
+														td(class="centeralign par") #{elemento.nombre}
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
+																img(class="link",src="imagenes/link.png", alt="link")
+														td(class="centeralign par")
+															a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
+																img(class="view",src="imagenes/view.png", alt="view")
+														td(class="centeralign impar")
+															a(href="#{servidor}dataset/#{elemento.descarga}")
+																img(class="save",src="imagenes/save.png", alt="save")
+													when 2
+														td(class="centeralign par") #{elemento.nombre}
+														td(class="centeralign impar")
+															a(href="#{elemento.url}",target="_blank")
+																img(class="link",src="imagenes/link2.png", alt="link")
+													when 4
+														td(class="centeralign par") #{elemento.nombre}
+														td(class="centeralign impar")
+															a(href="graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
+																img(class="view",src="imagenes/view.png", alt="view")
+														td(class="centeralign par")
+															a(href="graph/#{elemento.url}", download="")
+																img(class="save",src="imagenes/save.png", alt="save")

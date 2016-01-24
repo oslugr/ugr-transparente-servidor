@@ -26,8 +26,7 @@ var conf = require('../app');
 //Pagina de inicio
 exports.index = function(req, res) {
   res.render('calendarioSolo', {
-    seccion: "calendario",
-    titulo: "Calendario",
+    seccion: "Calendario",
     enlace: "infoInstitucional.html"
   });
 };

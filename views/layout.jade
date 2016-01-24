@@ -31,63 +31,40 @@ html(lang="es")
 		link(rel="icon", href="/img/general/favicon.ico", type="image/vnd.microsoft.icon")
 		link(href='lib/fullcalendar/dist/fullcalendar.css', rel='stylesheet')
 		link(href='lib/fullcalendar/dist/fullcalendar.print.css', rel='stylesheet', media='print')
+		link(rel='stylesheet', href='lib/jquery-ui/themes/smoothness/jquery-ui.min.css')
+		link(rel='stylesheet', href='lib/lightbox2/dist/css/lightbox.min.css')
 		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
 		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
 
 		script(type='text/javascript').
-			function mostrar_menu_administracion(){
-				var menu=document.getElementById("menu_administracion");
+			function mostrar_menu(nombre){
+				var menu=document.getElementById(nombre);
+
 				if(menu.style.display == "none"){
 					menu.style.display = "block";
 				}else
 					menu.style.display = "none";
 			}
 
-			function mostrar_menu_docencia(){
-				var menu=document.getElementById("menu_docencia");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
-
-			function mostrar_menu_gestion(){
-				var menu=document.getElementById("menu_gestion");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
-
-			function mostrar_menu_normativas(){
-				var menu=document.getElementById("menu_normativas");
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
-
-			function busca_en_transparente(){
-				var input = document.getElementById("sq").value;
-				input = input + " site:transparente.ugr.es";
-				document.getElementById("sq").value = input;
-			}
-
-		if titulo === "Buscador"
-			script(src="lib/jquery/dist/jquery.min.js")
-			script(type='text/javascript' src='script/buscar.js')
-
-		if seccion!=="Inicio"
-			script(src='lib/moment/min/moment.min.js')
-			script(src='lib/jquery/dist/jquery.min.js')
-			script(src='lib/fullcalendar/dist/fullcalendar.min.js')
-			script(src='lib/fullcalendar/dist/gcal.js')
-			script(src='script/calendario.js')
-			script(src="lib/underscore/underscore-min.js")
-			script(type='text/javascript' src='https://www.google.com/jsapi')
-			script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
-			script(src="script/generar_tabla.js")
-			block scripts
+		case seccion
+			when "Inicio"
+				block scripts
+			when "Buscador"
+				script(src="lib/jquery/dist/jquery.min.js")
+				script(type='text/javascript' src='script/buscar.js')
+			when "Calendario"
+				script(src='lib/moment/min/moment.min.js')
+				script(src='lib/jquery/dist/jquery.min.js')
+				script(src='lib/fullcalendar/dist/fullcalendar.min.js')
+				script(src='lib/fullcalendar/dist/gcal.js')
+				script(src='script/calendario.js')
+			default
+				script(src='lib/jquery/dist/jquery.min.js')
+				script(src='lib/jquery-ui/jquery-ui.min.js')
+				script(src="lib/underscore/underscore-min.js")
+				script(type='text/javascript' src='https://www.google.com/jsapi')
+				script(src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+				script(src="script/generar_tabla.js")
 
 	body
 		noscript
@@ -164,6 +141,8 @@ html(lang="es")
 						//span.separador_enlaces  |
 						//a(class="privacidad", href="#") Política de privacidad
 						p
-							a(href="http://www.ugr.es/pages/creditos") &copy; 2015
+							a(href="http://www.ugr.es/pages/creditos") &copy; 2016
 							span.separador_enlaces |
 							a(href="http://www.ugr.es")  Universidad de Granada
+
+		//script(src='lib/lightbox2/dist/js/lightbox-plus-jquery.min.js')

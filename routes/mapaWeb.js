@@ -25,7 +25,7 @@ var conf = require('../app');
 
 exports.mapaWeb = function(req, res) {
   res.render('mapaWeb', {
-    titulo: 'Mapa del sitio',
+    seccion: 'Mapa del sitio',
     secciones: [{
       nombre: "Inicio",
       enlace: "index.html",

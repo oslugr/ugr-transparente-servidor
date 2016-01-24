@@ -27,7 +27,7 @@ var conf = require('../app');
 exports.buscador = function(req, res) {
 
   res.render('buscador', {
-    titulo: 'Buscador'
+    seccion: 'Buscador'
   });
 
 };

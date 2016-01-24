@@ -29,7 +29,7 @@ exports.infoInstitucional = function(req, res) {
   var pres = conf.config.infoInstitucional;
 
   res.render(pres.plantilla, {
-    titulo: pres.titulo,
+    seccion: pres.titulo,
     texto: pres.texto
   });
 };

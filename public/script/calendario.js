@@ -22,9 +22,9 @@
 var gCalId = 'n0ncqp3ltptoujheevpt88l5sk@group.calendar.google.com';
 var gApi = 'AIzaSyB8AuYY5vvEUw4UC2v3g8G7rShJFyTYfbM';
 
-$(document).ready(function() {
+calendario(document).ready(function() {
   tmpView = 'list';
-  $('#calendar').fullCalendar({
+  calendario('#calendar').fullCalendar({
     header: {
       left: 'prev,next today',
       center: 'title',

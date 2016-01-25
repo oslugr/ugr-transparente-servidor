@@ -12,12 +12,12 @@
     "link": "presupuesto-2014",
     "texto": "Información sobre el presupuesto UGR 2014 aprobado y el grado de ejecución del mismo."
   }, {
-    "tipo": 1,
+    "tipo": 3,
     "encabezado": "Memoria de Cuentas Anuales",
     "link": "memoria-cuentas-anuales",
     "texto": "Memoria explicativa de las cuentas anuales del presupuesto 2014."
   }, {
-    "tipo": 1,
+    "tipo": 3,
     "encabezado": "Auditoría",
     "link": "auditoria",
     "texto": "Relación de informes de auditoría externa de las cuentas anuales de la Universidad de Granada."
@@ -51,21 +51,6 @@
     "encabezado": "Justificantes de Gastos: 2014",
     "link": "justificantes-gastos-2014",
     "texto": "Información relativa a las subvenciones y ayudas públicas concedidas con indicación de su importe, objetivo o finalidad y proveedores, según el título I, cap. II, artículo 8. 1. c (información económica, presupuestaria y estadística) de la ley 19/2013, de 9 de diciembre, llamada Ley de Transparencia, Acceso a la Información Pública y Buen Gobierno. Fecha de conceptos: 10/03/2014."
-  }, {
-    "tipo": 2,
-    "encabezado": "Ejemplo enlace",
-    "link": "ejemplo-enlace",
-    "texto": "Ejemplo enlace"
-  }, {
-    "tipo": 3,
-    "encabezado": "Ejemplo PDF",
-    "link": "ejemplo-pdf",
-    "texto": "Ejemplo pdf"
-  }, {
-    "tipo": 4,
-    "encabezado": "Ejemplo imagen",
-    "link": "ejemplo-imagen",
-    "texto": "Ejemplo imagen"
   }],
   "datos": [{
     "tipo": 1,
@@ -390,26 +375,20 @@
     "url": "5ee7cd87-fecd-40a9-802c-caaabac254da",
     "descarga": "6bafcf73-06a4-421a-8b2f-b7ce6ce6e757/resource/5ee7cd87-fecd-40a9-802c-caaabac254da/download/tarifasporelusodelocaleseinstalaciones.csv"
   }, {
-    "tipo": 1,
+    "tipo": 3,
     "dataset": "Memoria de Cuentas Anuales",
-    "id_dataset": "memoria-cuentas-anuales",
     "nombre": "Memoria cuentas anuales 2014",
-    "url": "3edb6bc1-27b2-4246-92de-da6b2dadb6db",
-    "descarga": "2d8a3e53-c9d7-46b5-a93e-e3f409988873/resource/3edb6bc1-27b2-4246-92de-da6b2dadb6db/download/pto2014memoria.pdf"
+    "url": "memoria_cuentas_anuales_2014.pdf"
   }, {
-    "tipo": 1,
+    "tipo": 3,
     "dataset": "Auditoría",
-    "id_dataset": "auditoria",
     "nombre": "Informe de auditoría de cuentas anuales 2013",
-    "url": "261be9fa-be81-4b60-9b08-357e99a2a191",
-    "descarga": "c0b038c7-d417-4e35-aae1-fca3cb81b4c5/resource/261be9fa-be81-4b60-9b08-357e99a2a191/download/informeauditoriacuentasanuales2013.pdf"
+    "url": "informe_auditoria_cuentas_anuales_2013.pdf"
   }, {
-    "tipo": 1,
+    "tipo": 3,
     "dataset": "Auditoría",
-    "id_dataset": "auditoria",
     "nombre": "Informe de auditoría de cuentas anuales 2012",
-    "url": "8d2bcec0-0e5d-4ab5-9e8d-8bcef3c5f1c7",
-    "descarga": "c0b038c7-d417-4e35-aae1-fca3cb81b4c5/resource/8d2bcec0-0e5d-4ab5-9e8d-8bcef3c5f1c7/download/1.pdf"
+    "url": "informe_auditoria_cuentas_anuales_2012.pdf"
   }, {
     "tipo": 1,
     "dataset": "Desglose de Ingresos: 2015",
@@ -760,20 +739,5 @@
     "nombre": "Edificios",
     "url": "f87f330d-7913-47a3-a4ed-ba9a911e156f",
     "descarga": "fb44f5c9-2429-40a0-a8e8-153a34c93d7c/resource/f87f330d-7913-47a3-a4ed-ba9a911e156f/download/edificiosconsitjuridica.csv"
-  }, {
-    "tipo": 2,
-    "dataset": "Ejemplo enlace",
-    "nombre": "Prueba enlace",
-    "url": "http://canal.ugr.es/"
-  }, {
-    "tipo": 3,
-    "dataset": "Ejemplo PDF",
-    "nombre": "Informe blah",
-    "url": "informe_auditoria_cuentas_anuales_2012.pdf"
-  }, {
-    "tipo": 4,
-    "dataset": "Ejemplo imagen",
-    "nombre": "PDI extranjero por sexo y categorías",
-    "url": "pdi_extranjero_sexo_categorias.png"
   }]
 }

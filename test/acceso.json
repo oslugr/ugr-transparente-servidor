@@ -118,7 +118,7 @@
   }, {
     "nombre": "Datos de Información Económica",
     "ruta": "/archivos/infoEconomica"
-  },{
+  }, {
     "nombre": "Datos de Oferta y Demanda",
     "ruta": "/archivos/ofertaDemanda"
   }, {

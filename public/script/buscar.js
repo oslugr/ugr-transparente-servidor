@@ -60,7 +60,7 @@ $(function() {
   if (consulta.length > 3) {
     var numResultados = 0;
 
-    $.each(archivos, function(index, nombre){
+    $.each(archivos, function(index, nombre) {
 
       $.getJSON(nombre, function(data) {
           $.each(data, function(clave, valor) {

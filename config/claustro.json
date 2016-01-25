@@ -28,23 +28,16 @@
     "tipo": 1,
     "dataset": "Datos de Profesores Extranjeros",
     "id_dataset": "profesores-extranjeros",
-    "nombre": "Movilidad profesorado 2013/2014",
-    "url": "7864eea7-e9e6-4979-9342-c57024285975",
-    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/7864eea7-e9e6-4979-9342-c57024285975/download/total.csv"
+    "nombre": "Origen del Profesorado 2015/2016",
+    "url": "05ec9a34-c63b-4952-8288-dfc659091e3f",
+    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/05ec9a34-c63b-4952-8288-dfc659091e3f/download/pdiextranjeros.csv"
   }, {
     "tipo": 1,
     "dataset": "Datos de Profesores Extranjeros",
     "id_dataset": "profesores-extranjeros",
-    "nombre": "Políticas de internacionalización 2009/2014",
-    "url": "6288026d-6519-4632-99f3-ae84115d9095",
-    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/6288026d-6519-4632-99f3-ae84115d9095/download/politicasinternacionalizacion.csv"
-  }, {
-    "tipo": 1,
-    "dataset": "Datos de Profesores Extranjeros",
-    "id_dataset": "profesores-extranjeros",
-    "nombre": "Movilidad profesorado 2010/2011",
-    "url": "af254c49-2f46-4a41-a825-73c7ffa5a733",
-    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/af254c49-2f46-4a41-a825-73c7ffa5a733/download/movilidadtotalpdi.csv"
+    "nombre": "Perfil de Profesores Extranjeros 2015/2016",
+    "url": "39e8ee28-3e26-4aff-9c2d-fb1e358a0474",
+    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/39e8ee28-3e26-4aff-9c2d-fb1e358a0474/download/categoriapdiextranjero.csv"
   }, {
     "tipo": 4,
     "dataset": "Gráficos de Profesores Extranjeros",

@@ -18,74 +18,73 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-$(document).ready(function() {
+tabla(document).ready(function() {
   //select all the a tag with name equal to modal
-  $('a[class=view]').click(function(e) {
+  tabla('a[class=view]').click(function(e) {
     //Cancel the link behavior
     e.preventDefault();
     //Get the A tag
 
-    var id = $(this).attr('href');
+    var id = tabla(this).attr('href');
 
     //Get the screen height and width
-    var maskHeight = $(document).height();
-    var maskWidth = $(window).width();
+    var maskHeight = tabla(document).height();
+    var maskWidth = tabla(window).width();
 
     //Set height and width to mask to fill up the whole screen
-    $('#mask').css({
+    tabla('#mask').css({
       'width': maskWidth,
       'height': maskHeight
     });
 
     //transition effect
-    $('#mask').fadeIn(10);
-    $('#mask').fadeTo("slow", 0.8);
+    tabla('#mask').fadeIn(10);
+    tabla('#mask').fadeTo("slow", 0.8);
 
     //Get the window height and width
-    var winH = $(window).height();
-    var winW = $(window).width();
+    var winH = tabla(window).height();
+    var winW = tabla(window).width();
 
     //Set the popup window to center
-    $(id).css('top', winH / 2 - $(id).height() / 2);
-    $(id).css('left', winW / 2 - $(id).width() / 2);
+    tabla(id).css('top', winH / 2 - tabla(id).height() / 2);
+    tabla(id).css('left', winW / 2 - tabla(id).width() / 2);
 
     //transition effect
-    $(id).fadeIn(2000);
+    tabla(id).fadeIn(2000);
 
-    var nombre = $(this).attr('name');
+    var nombre = tabla(this).attr('name');
 
-    $('#titulo_tabla').html(nombre);
+    tabla('#titulo_tabla').html(nombre);
 
-    $.ajaxSetup({
+    tabla.ajaxSetup({
       'beforeSend': function(xhr) {
         xhr.overrideMimeType('text/html; charset=ISO-8859-1');
       }
     });
 
-    $.ajax({
+    tabla.ajax({
       type: "GET",
-      url: $(this).attr("rel"),
+      url: tabla(this).attr("rel"),
       dataType: "text",
       success: function(data) {
-        drawTable($.csv.toArrays(data));
+        drawTable(tabla.csv.toArrays(data));
       }
     });
 
   });
 
   //if close button is clicked
-  $('#close').click(function(e) {
-    $('#mask, .window').hide();
-    $('#mask, .window').HTML("");
+  tabla('#close').click(function(e) {
+    tabla('#mask, .window').hide();
+    tabla('#mask, .window').HTML("");
   });
 
   //if mask is clicked
-  $('#mask').click(function() {
-    $(this).hide();
-    $('.window').hide();
-    $(this).HTML("");
-    $('.window').HTML("");
+  tabla('#mask').click(function() {
+    tabla(this).hide();
+    tabla('.window').hide();
+    tabla(this).HTML("");
+    tabla('.window').HTML("");
   });
 
 });

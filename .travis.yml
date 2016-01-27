@@ -29,3 +29,7 @@ node_js:
 # Dependencias que es necesario instalar
 before_install:
   - "npm -g install gulp"
+  
+# Coveralls coverage
+after_success:
+    - npm run coveralls

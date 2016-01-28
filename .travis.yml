@@ -22,9 +22,10 @@ language: node_js
 
 # Versiones con las que correr los tests
 node_js:
+  - "stable"    
+  - "5.5.0"    
+  - "4.2.6"
   - "0.12"
-  - "0.11"
-  - "0.10"
 
 # Dependencias que es necesario instalar
 before_install:

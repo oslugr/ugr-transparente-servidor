@@ -1145,7 +1145,7 @@ div.sec_interior ul.enlaces li a:hover, div.sec_interior ul.enlaces li a.doble_i
 }
 div.sec_interior ul.enlaces ul.enlaces li a, div.sec_interior ul.enlaces ul.enlaces li a.doble_interno {
   background-image: url("../img/interior/lista_enlaces-nivel2_off.gif");
-  color: #6D6C71;
+  color: #0F3852;
 }
 div.sec_interior ul.enlaces ul.enlaces li a:hover, div.sec_interior ul.enlaces ul.enlaces li a.doble_interno:hover {
   background-color: #6D6C71;

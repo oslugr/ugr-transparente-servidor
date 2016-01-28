@@ -42,7 +42,7 @@ describe('Test de carga y formato de JSONs', function() {
 
     describe('Carga de archivo', function() {
       it('Cargado', function() {
-        config.should.not.be.null;
+        config.should.not.be.null; //cambiar esto
       });
     });
 
@@ -140,7 +140,7 @@ describe('Test de carga y formato de JSONs', function() {
 
           describe('Carga de archivo', function() {
             it('Cargado', function() {
-              seccion.should.not.be.null;
+              seccion.should.not.be.null; //cambiar esto
             });
           });
 

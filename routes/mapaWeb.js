@@ -92,4 +92,4 @@ exports.mapaWeb = function(req, res) {
       subsecciones: []
     }]
   });
-}
+};

@@ -80,5 +80,5 @@ calendario(document).ready(function() {
       */
       return false;
     }
-  })
+});
 });

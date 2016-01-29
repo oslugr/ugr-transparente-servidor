@@ -119,9 +119,9 @@
     "tipo": 1,
     "dataset": "Datos sobre oferta de empleo PAS",
     "id_dataset": "empleo-publico",
-    "nombre": "Complemento de productividad: PAS",
+    "nombre": "Oferta pública de empleo",
     "url": "d2e04ba3-4bbb-4c55-bfd7-bdce880a413b",
-    "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/e8bb4921-5121-4a19-80b9-d62457003957/download/complementodeproductividad2014pas4tramos.csv"
+    "descarga": "7c36f10b-3d20-41db-8b8b-b5a5d1f99fff/resource/d2e04ba3-4bbb-4c55-bfd7-bdce880a413b/download/empleopublicopas.csv"
   }, {
     "tipo": 2,
     "dataset": "Junta de Personal de Administración y Servicios",

@@ -27,9 +27,11 @@ node_js:
   - "4.2.6"
   - "0.12"
 
+sudo: false
+
 # Dependencias que es necesario instalar
-before_install:
-  - "npm -g install gulp"
+#before_install:
+#  - "npm -g install gulp"
   
 # Coveralls coverage
 after_success:

@@ -13,11 +13,6 @@
     "texto": "Información relativa a la oferta de títulos reglados y propios de la Universidad de Granada durante el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por ramas, campus y centros."
   }, {
     "tipo": 1,
-    "encabezado": "Evolución de la Oferta Académica",
-    "link": "evolucion-oferta-academica",
-    "texto": "Evolución de la oferta de títulos reglados y propios de la Universidad de Granada desde el curso 2013/2014: oferta de grado (titulaciones oficiales) y oferta de posgrado (másteres oficiales, formación del profesorado, másteres propios, cursos complementarios, expertos, doctorado). Los datos se ofrecen separados por: año de inicio, tipo de titulación, nombre de titulación, rama de conocimiento, centro y campus."
-  }, {
-    "tipo": 1,
     "encabezado": "Demanda Académica: 2013/2014",
     "link": "demanda-academica-2013-2014",
     "texto": "Información relativa al número total de solicitudes de matrícula demandadas en la Universidad de Granada del curso 2013/2014."
@@ -130,13 +125,6 @@
     "nombre": "Oferta de posgrado: doctorado",
     "url": "89679542-aa3b-42b0-92a5-0175513dda8f",
     "descarga": "3b593312-a76a-4c68-a2d5-271591dde6d9/resource/89679542-aa3b-42b0-92a5-0175513dda8f/download/ofertadedoctorado.csv"
-  }, {
-    "tipo": 1,
-    "dataset": "Evolución de la Oferta Académica",
-    "id_dataset": "evolucion-oferta-academica",
-    "nombre": "Evolución de la oferta académica",
-    "url": "7949b2be-cb68-49d6-810b-9c7658652041",
-    "descarga": "c341d9aa-2c03-4528-a99c-00eb69d28fb6/resource/7949b2be-cb68-49d6-810b-9c7658652041/download/evolucionofertaacad.csv"
   }, {
     "tipo": 1,
     "dataset": "Demanda Académica: 2013/2014",

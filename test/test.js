@@ -208,6 +208,7 @@ describe('Test de carga y formato de JSONs', function() {
 describe('Prueba de acceso', function() {
   _.each(acceso.elemento, function(valor) {
     it(valor.nombre, function(done) {
+        this.timeout(4000);
       request(app)
         .get(valor.ruta)
         .expect(200)

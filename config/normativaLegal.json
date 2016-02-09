@@ -69,6 +69,21 @@
     "url": "http://secretariageneral.ugr.es/bougr/pages/bougr75/_doc/nre753"
   }, {
     "tipo": 2,
+    "dataset": "Gestión Económica",
+    "nombre": "Bases de ejecución del presupuesto 2016",
+    "url": "http://gerencia.ugr.es/pages/vger_eco/basesdeejecuciondelpresupuesto2016/"
+  }, {
+    "tipo": 2,
+    "dataset": "Gestión Económica",
+    "nombre": "Normas de Gestión Económica DEROGADO",
+    "url": "http://www.juntadeandalucia.es/boja/boletines/2012/4/d/updf/d22.pdf"
+  }, {
+    "tipo": 2,
+    "dataset": "Gestión Económica",
+    "nombre": "Normas para la Liquidación y Tramitación de Indemnizaciones por Razón de Servicio, Indemnizaciones de Gastos por Desplazamientos y Estancia de Personal Externo",
+    "url": "http://gerencia.ugr.es/pages/vger_eco/normasparalaliquidacionytramitaciondeindemnizacionesporrazondeservicio"
+  }, {
+    "tipo": 2,
     "dataset": "Ordenación Académica",
     "nombre": "Normas de permanencia",
     "url": "http://secretariageneral.ugr.es/pages/normativa/temas/perindex"

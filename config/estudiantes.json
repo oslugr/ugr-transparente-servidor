@@ -20,7 +20,12 @@
     "tipo": 1,
     "encabezado": "Datos sobre becas y ayudas",
     "link": "datos-becas-ayudas",
-    "texto": "Información sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
+    "texto": "Datos sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
+  }, {
+    "tipo": 3,
+    "encabezado": "Informes sobre becas y ayudas",
+    "link": "informes-becas-ayudas",
+    "texto": "Informes sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 9/02/2015."
   }, {
     "tipo": 1,
     "encabezado": "Origen de los estudiantes",
@@ -221,6 +226,16 @@
     "nombre": "Becas: Egresados Máster 2011",
     "url": "f92b1419-45c6-43af-b9ba-c93ef71995bf",
     "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/f92b1419-45c6-43af-b9ba-c93ef71995bf/download/egresadosmaster2011becas.csv"
+  }, {
+    "tipo": 3,
+    "dataset": "Informes sobre becas y ayudas",
+    "nombre": "Internacionalización",
+    "url": "internacionalizacion_2014_2015.pdf"
+  }, {
+    "tipo": 3,
+    "dataset": "Informes sobre becas y ayudas",
+    "nombre": "Becas y ayudas al estudio",
+    "url": "becas_ayudas_estudio_2014_2015.pdf"
   }, {
     "tipo": 1,
     "dataset": "Origen de los estudiantes",

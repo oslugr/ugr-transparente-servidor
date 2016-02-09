@@ -98,6 +98,46 @@
     "nombre": "Vicerrectorado de Estudiantes y Empleabilidad",
     "url": "http://ve.ugr.es/"
   }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Servicio de Asistencia Estudiantil",
+    "url": "http://ve.ugr.es/pages/sae"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Secretariado de Asociacionismo, Cultura y Sociedad",
+    "url": "http://ve.ugr.es/pages/asociacionismo"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Unidad de Orientación Académica, Gabinete Psicopedagógico",
+    "url": "http://ve.ugr.es/pages/gpp"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Secretariado de Información y Participación Estudiantil",
+    "url": "http://ve.ugr.es/pages/sipe"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Unidad de Orientación Profesional y Empleabilidad. Centro de Promoción de Empleo y Prácticas",
+    "url": "http://ve.ugr.es/pages/empleo-practicas"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Gabinete de Orientación para la Salud",
+    "url": "http://ve.ugr.es/pages/cjos"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Centro Cultural Casa de Porras - Casa del Estudiante",
+    "url": "http://ve.ugr.es/pages/casa-de-porras"
+  }, {
+    "tipo": 2,
+    "dataset": "Canales de comunicación y representación",
+    "nombre": "Servicio de Alumnos",
+    "url": "http://serviciodealumnos.ugr.es/pages/app-servicio-alumnos"
+  }, {
     "tipo": 1,
     "dataset": "Matrículas",
     "id_dataset": "matriculas",

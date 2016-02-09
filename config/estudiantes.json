@@ -17,15 +17,15 @@
     "link": "matriculas",
     "texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado."
   }, {
-    "tipo": 1,
-    "encabezado": "Datos sobre becas y ayudas",
-    "link": "datos-becas-ayudas",
-    "texto": "Datos sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
-  }, {
     "tipo": 3,
     "encabezado": "Informes sobre becas y ayudas",
     "link": "informes-becas-ayudas",
     "texto": "Informes sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 9/02/2015."
+  }, {
+    "tipo": 1,
+    "encabezado": "Datos sobre becas y ayudas",
+    "link": "datos-becas-ayudas",
+    "texto": "Datos sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 17/12/2015."
   }, {
     "tipo": 1,
     "encabezado": "Origen de los estudiantes",
@@ -213,6 +213,16 @@
     "url": "eb126186-ec40-4807-bb83-3bf1335c33fb",
     "descarga": "a6353c6f-130a-48bb-82a7-500a2fc457e1/resource/eb126186-ec40-4807-bb83-3bf1335c33fb/download/09posgradomatriculaspormaster1011.csv"
   }, {
+    "tipo": 3,
+    "dataset": "Informes sobre becas y ayudas",
+    "nombre": "Internacionalización",
+    "url": "internacionalizacion_2014_2015.pdf"
+  }, {
+    "tipo": 3,
+    "dataset": "Informes sobre becas y ayudas",
+    "nombre": "Becas y ayudas al estudio",
+    "url": "becas_ayudas_estudio_2014_2015.pdf"
+  }, {
     "tipo": 1,
     "dataset": "Datos sobre becas y ayudas",
     "id_dataset": "becas-ayudas",
@@ -226,16 +236,6 @@
     "nombre": "Becas: Egresados Máster 2011",
     "url": "f92b1419-45c6-43af-b9ba-c93ef71995bf",
     "descarga": "36dc4e7f-678e-48cb-b901-5541c410e043/resource/f92b1419-45c6-43af-b9ba-c93ef71995bf/download/egresadosmaster2011becas.csv"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre becas y ayudas",
-    "nombre": "Internacionalización",
-    "url": "internacionalizacion_2014_2015.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre becas y ayudas",
-    "nombre": "Becas y ayudas al estudio",
-    "url": "becas_ayudas_estudio_2014_2015.pdf"
   }, {
     "tipo": 1,
     "dataset": "Origen de los estudiantes",

@@ -121,8 +121,8 @@ describe('Test de carga y formato de JSONs', function() {
         });
 
         describe('infoInstitucional:', function() {
-          it('titulo: \"Información institucional\"', function() {
-            config.infoInstitucional.titulo.should.be.exactly("Información institucional");
+          it('titulo: \"Información Institucional\"', function() {
+            config.infoInstitucional.titulo.should.be.exactly("Información Institucional");
           });
           it('plantilla: \"infoInstitucional\"', function() {
             config.infoInstitucional.plantilla.should.be.exactly("infoInstitucional");

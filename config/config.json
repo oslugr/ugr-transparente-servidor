@@ -6,7 +6,7 @@
     "nombre": "Inicio",
     "plantilla": "index",
     "enlaces": [{
-      "nombre": "Información institucional",
+      "nombre": "Información Institucional",
       "href": "infoInstitucional.html",
       "id": "en_infoInstitucional"
     }, {
@@ -44,7 +44,7 @@
     }]
   },
   "infoInstitucional": {
-    "titulo": "Información institucional",
+    "titulo": "Información Institucional",
     "plantilla": "infoInstitucional"
   },
   "error": {

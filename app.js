@@ -101,6 +101,14 @@ app.get('/calendarioSolo.html', calendarioSolo.index);
 // Prueba para nueva visualización de tablas
 app.get('/prueba.html', prueba.personal);
 
+//REMOVE THIS
+app.get('/prueba/tablas',function(req, res) {
+  res.render('prueba_tablas', {
+    name:"Arthur Dent"
+  });
+});
+//*******
+
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {
   res.send(cargar(root + '/config/personal.json'));
@@ -127,6 +135,7 @@ app.get('/archivos/normativaLegal', function(req, res) {
   res.send(cargar(root + '/config/normativaLegal.json'));
 });
 
+
 // Variables de entorno (puerto de escucha y dirección IP)
 app.set('port', process.env.PORT);
 app.set('ip', process.env.IP);
@@ -146,7 +155,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 //Manejador de enrutado
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 // Manejador de errores:
 app.use(function(req, res, next) {
   res.status(404).render('error_404', {
@@ -154,7 +163,6 @@ app.use(function(req, res, next) {
     texto: config.error.texto
   });
 });
-
 // Creación del servidor
 http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
   console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));

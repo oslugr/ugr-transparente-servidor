@@ -59,6 +59,11 @@
     "url": "http://consejosocial.ugr.es/pages/composicion"
   }, {
     "tipo": 2,
+    "dataset": "Consejo Social",
+    "nombre": "Memoria de actividades",
+    "url": "http://consejosocial.ugr.es/pages/banners/memoria/memorias-de-actividades"
+  }, {
+    "tipo": 2,
     "dataset": "Claustro",
     "nombre": "Composicion del Claustro Universitario",
     "url": "http://secretariageneral.ugr.es/pages/org_gobierno/claustro_universitario/composicion/composicion"

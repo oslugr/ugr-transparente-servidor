@@ -21,6 +21,7 @@
 
 
 extends layout
+include tablas.jade	
 
 block content
 	#rastro-idiomas
@@ -80,67 +81,5 @@ block content
 											.li
 												a(class="enlaces-cabecera" href="##{valor.link}") #{valor.encabezado}
 
-					each valor in contenido
-						h1
-							a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
-
-						.level1
-							p #{valor.texto}
-
-							table.inline
-								colgroup
-									col(span='1', style='width: 90%;')
-									col(span='1', style='width: 10%;')
-								tbody
-									tr
-										case valor.tipo
-											when 1
-												th.centeralign Descripción
-												th.centeralign Datos en Opendata
-												th.centeralign Ver
-												th.centeralign Descargar
-											when 2
-												th.centeralign Descripción
-												th.centeralign Enlace
-											when 3
-											when 4
-												th.centeralign Descripción
-												th.centeralign Ver
-												th.centeralign Descargar
-
-									each elemento in datos
-										if elemento.dataset==valor.encabezado
-											tr
-												case elemento.tipo
-													when 1
-														td(class="centeralign par") #{elemento.nombre}
-														td(class="centeralign impar")
-															a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
-																img(class="link",src="imagenes/link.png", alt="link")
-														td(class="centeralign par")
-															a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
-																img(class="view",src="imagenes/view.png", alt="view")
-														td(class="centeralign impar")
-															a(href="#{servidor}dataset/#{elemento.descarga}")
-																img(class="save",src="imagenes/save.png", alt="save")
-													when 2
-														td(class="centeralign par") #{elemento.nombre}
-														td(class="centeralign impar")
-															a(href="#{elemento.url}",target="_blank")
-																img(class="link",src="imagenes/link2.png", alt="link")
-													when 3
-														td(class="centeralign par") #{elemento.nombre}
-														td(class="centeralign impar")
-															a(href="doc/#{elemento.url}",target="_blank")
-																img(class="view",src="imagenes/pdf.png", alt="view")
-														td(class="centeralign par")
-															a(href="doc/#{elemento.url}", download="")
-																img(class="save",src="imagenes/flecha.png", alt="save")
-													when 4
-														td(class="centeralign par") #{elemento.nombre}
-														td(class="centeralign impar")
-															a(href="graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
-																img(class="view",src="imagenes/grafico.png", alt="view")
-														td(class="centeralign par")
-															a(href="graph/#{elemento.url}", download="")
-																img(class="save",src="imagenes/flecha.png", alt="save")
+	
+					+ generar_tablas(contenido,datos)

@@ -33,32 +33,32 @@ html(lang="es")
 		link(href='lib/fullcalendar/dist/fullcalendar.print.css', rel='stylesheet', media='print')
 		link(rel='stylesheet', href='lib/jquery-ui/themes/smoothness/jquery-ui.min.css')
 		link(rel='stylesheet', href='lib/lightbox2/dist/css/lightbox.min.css')
-		link(rel="stylesheet", id="css-style", type="text/css", href="css/style.css", media="all")
-		link(rel="stylesheet", id="css-style2", type="text/css", href="css/style2.css", media="all")
+		link(rel="stylesheet", id="css-style", type="text/css", href="/css/style.css", media="all")
+		link(rel="stylesheet", id="css-style2", type="text/css", href="/css/style2.css", media="all")
 
 		case seccion
 			when "Inicio"
 				block scripts
 			when "Buscador"
-				script(type='text/javascript', src="lib/jquery/dist/jquery.min.js")
-				script(type='text/javascript' src='script/buscar.js')
+				script(type='text/javascript', src="/lib/jquery/dist/jquery.min.js")
+				script(type='text/javascript' src='/script/buscar.js')
 			when "Calendario"
-				script(type='text/javascript', src='lib/moment/min/moment.min.js')
-				script(type='text/javascript', src='lib/jquery/dist/jquery.min.js')
-				script(type='text/javascript', src='lib/fullcalendar/dist/fullcalendar.min.js')
-				script(type='text/javascript', src='lib/fullcalendar/dist/gcal.js')
+				script(type='text/javascript', src='/lib/moment/min/moment.min.js')
+				script(type='text/javascript', src='/lib/jquery/dist/jquery.min.js')
+				script(type='text/javascript', src='/lib/fullcalendar/dist/fullcalendar.min.js')
+				script(type='text/javascript', src='/lib/fullcalendar/dist/gcal.js')
 				script(type='text/javascript').
 					var calendario = $.noConflict(true);
-				script(type='text/javascript', src='script/calendario.js')
+				script(type='text/javascript', src='/script/calendario.js')
 			default
-				script(type='text/javascript', src='lib/jquery/dist/jquery.min.js')
-				script(type='text/javascript', src='lib/jquery-ui/jquery-ui.min.js')
-				script(type='text/javascript', src="lib/underscore/underscore-min.js")
-				script(type='text/javascript' src='https://www.google.com/jsapi')
-				script(type='text/javascript', src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+				script(type='text/javascript', src='/lib/jquery/dist/jquery.min.js')
+				script(type='text/javascript', src='/lib/jquery-ui/jquery-ui.min.js')
+				script(type='text/javascript', src="/lib/underscore/underscore-min.js")
+				script(type='text/javascript' src='/https://www.google.com/jsapi')
+				script(type='text/javascript', src="/http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
 				script(type='text/javascript').
 					var tabla = $.noConflict(true);
-				script(type='text/javascript', src="script/generar_tabla.js")
+				script(type='text/javascript', src="/script/generar_tabla.js")
 
 		script(type='text/javascript').
 			function mostrar_menu(nombre){
@@ -79,7 +79,7 @@ html(lang="es")
 
 		div(id="boxes")
 			div(id="dialog" class="window" hidden)
-				img(id="close",src="imagenes/close.png", alt="close", longdesc="cerrar")
+				img(id="close",src="/imagenes/close.png", alt="close", longdesc="cerrar")
 				h1#titulo_tabla
 				div(id="tabla")
 			div(id="mask")
@@ -102,7 +102,7 @@ html(lang="es")
 										input(class="with_default_value" type="text" name="query" id="sq" placeholder="Búsqueda..."
 										title="Búqueda")
 									label(id="enviar_buscar" for="submit_buscar")
-										input(type="image" src="./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar"
+										input(type="image" src="/./img/transp.gif" alt="iniciar búsqueda" name="submit" id="submit_buscar" class="image-buscar"
 										title="Enviar búsqueda")
 
 				block content
@@ -132,7 +132,7 @@ html(lang="es")
 				#interior_pie
 					#pie
 						a(id="WAI", href="http://www.w3.org/WAI/WCAG2AA-Conformance")
-							img(src="imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa", longdesc="http://www.w3.org/WAI/WCAG2AA-Conformance")
+							img(src="/imagenes/wcag2aa.gif", id="wcag2aa", alt="wcag2aa", longdesc="http://www.w3.org/WAI/WCAG2AA-Conformance")
 						a(href="mapaWeb.html") Mapa del sitio
 						span.separador_enlaces |
 						a(href="https://github.com/oslugr/ugr-transparente-servidor") Este servidor es software libre
@@ -151,4 +151,4 @@ html(lang="es")
 							span.separador_enlaces |
 							a(href="http://www.ugr.es")  Universidad de Granada
 
-		script(src='lib/lightbox2/dist/js/lightbox-plus-jquery.js')
+		script(src='/lib/lightbox2/dist/js/lightbox-plus-jquery.js')

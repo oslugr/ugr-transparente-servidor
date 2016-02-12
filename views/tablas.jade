@@ -1,0 +1,102 @@
+
+//+ table1(myvalor,mydata)
+
+mixin table1 (valor,datos)
+	h1
+		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
+	.level1
+		p #{valor.texto}
+		table.inline
+			colgroup
+				col(span='1', style='width: 90%;')
+				col(span='1', style='width: 10%;')
+			tbody
+				tr
+					th.centeralign Descripción
+					th.centeralign Datos en Opendata
+					th.centeralign Ver
+					th.centeralign Descargar
+				each elemento in datos
+					if elemento.dataset==valor.encabezado
+						tr
+							td(class="centeralign par") #{elemento.nombre}
+							td(class="centeralign impar")
+								a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
+									img(class="link",src="/imagenes/link.png", alt="link")
+							td(class="centeralign par")
+								a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
+									img(class="view",src="/imagenes/view.png", alt="view")
+							td(class="centeralign impar")
+								a(href="#{servidor}dataset/#{elemento.descarga}")
+									img(class="save",src="/imagenes/save.png", alt="save")
+
+mixin table2 (valor,datos)
+	h1
+		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
+	.level1
+		p #{valor.texto}
+		table.inline
+			colgroup
+				col(span='1', style='width: 90%;')
+				col(span='1', style='width: 10%;')
+			tbody
+				tr
+					th.centeralign Descripción
+					th.centeralign Enlace
+				each elemento in datos
+					if elemento.dataset==valor.encabezado
+						tr
+							td(class="centeralign par") #{elemento.nombre}
+							td(class="centeralign impar")
+								a(href="#{elemento.url}",target="_blank")
+									img(class="link",src="/imagenes/link2.png", alt="link")
+									
+
+mixin table3 (valor,datos)
+	h1
+		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
+	.level1
+		p #{valor.texto}
+		table.inline
+			colgroup
+				col(span='1', style='width: 90%;')
+				col(span='1', style='width: 10%;')
+			tbody
+				tr
+					th.centeralign Descripción
+					th.centeralign Ver
+					th.centeralign Descargar
+				each elemento in datos
+					if elemento.dataset==valor.encabezado
+						tr
+							td(class="centeralign par") #{elemento.nombre}
+							td(class="centeralign impar")
+								a(href="#{elemento.url}",target="_blank")
+									img(class="link",src="/imagenes/link2.png", alt="link")
+									
+
+mixin table4 (valor,datos)
+	h1
+		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
+	.level1
+		p #{valor.texto}
+		table.inline
+			colgroup
+				col(span='1', style='width: 90%;')
+				col(span='1', style='width: 10%;')
+			tbody
+				tr
+					th.centeralign Descripción
+					th.centeralign Ver
+					th.centeralign Descargar
+				each elemento in datos
+					if elemento.dataset==valor.encabezado
+						tr
+							td(class="centeralign par") #{elemento.nombre}
+							td(class="centeralign impar")
+								a(href="graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
+									img(class="view",src="/imagenes/grafico.png", alt="view")
+							td(class="centeralign par")
+								a(href="graph/#{elemento.url}", download="")
+									img(class="save",src="/imagenes/flecha.png", alt="save")						
+									

@@ -101,6 +101,15 @@ app.get('/calendarioSolo.html', calendarioSolo.index);
 // Prueba para nueva visualización de tablas
 app.get('/prueba.html', prueba.personal);
 
+// Redirección a archivos PDF
+/*
+app.get('/doc/:nombre', function(req, res) {
+  res.json({
+	   doc: req.params.nombre
+  });
+});
+*/
+
 //REMOVE THIS
 app.get('/prueba/tablas',function(req, res) {
   res.render('prueba_tablas', {

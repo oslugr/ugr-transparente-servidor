@@ -2,11 +2,23 @@
   "nombre": "Personal",
   "plantilla": "personal",
   "contenido": [{
+    "tipo": 3,
+    "seccion": "",
+    "encabezado": "Información sobre Personal",
+    "link": "informes-personal",
+    "texto": "Información sobre el personal de la Universidad de Granada."
+  }, {
+    "tipo": 3,
+    "seccion": "pdi",
+    "encabezado": "Informes sobre retribuciones del PDI",
+    "link": "informes-retribuciones-pdi",
+    "texto": "Informes de la información sobre la remuneración al Personal Docente e Investigador, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
+  }, {
     "tipo": 1,
     "seccion": "pdi",
-    "encabezado": "Bandas salariales PDI",
-    "link": "bandas-salariales-pdi",
-    "texto": "Información sobre la remuneración al Personal Docente e Investigador, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
+    "encabezado": "Datos sobre retribuciones del PDI",
+    "link": "datos-retribuciones-pdi",
+    "texto": "Datos de la información sobre la remuneración al Personal Docente e Investigador, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
   }, {
     "tipo": 2,
     "seccion": "pdi",
@@ -26,11 +38,23 @@
     "link": "junta-pdi",
     "texto": ""
   }, {
+    "tipo": 3,
+    "seccion": "pas",
+    "encabezado": "Informes sobre retribuciones del PAS",
+    "link": "informes-retribuciones-pas",
+    "texto": "Informes de la información sobre la remuneración al Personal de Administración y Servicios, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
+  }, {
     "tipo": 1,
     "seccion": "pas",
-    "encabezado": "Bandas salariales PAS",
-    "link": "bandas-salariales-pas",
-    "texto": "Información sobre la remuneración al Personal de Administración y Servicios, según las respectivas categorías. Datos sobre las bandas salariales aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
+    "encabezado": "Datos sobre retribuciones del PAS",
+    "link": "datos-retribuciones-pas",
+    "texto": "Datos de la información sobre la remuneración al Personal de Administración y Servicios, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones."
+  }, {
+    "tipo": 2,
+    "seccion": "pas",
+    "encabezado": "Oferta de empleo PAS",
+    "link": "oferta-empleo-pas",
+    "texto": "Información sobre oferta de Empleo Público del Personal de Administración y Servicios de la Universidad de Granada disponible en el Servicio de Personal Docente e Investigador. Fecha de actualización: 15/02/2015."
   }, {
     "tipo": 1,
     "seccion": "pas",
@@ -45,29 +69,49 @@
     "texto": ""
   }],
   "datos": [{
+    "tipo": 3,
+    "dataset": "Información sobre Personal",
+    "nombre": "Resumen de gastos del personal 2016",
+    "url": "resumen_retribuciones_2016.pdf"
+  }, {
+    "tipo": 3,
+    "dataset": "Información sobre Personal",
+    "nombre": "Análisis de género",
+    "url": "analisis_genero_plantilla_ugr.pdf"
+  }, {
+    "tipo": 3,
+    "dataset": "Información sobre Personal",
+    "nombre": "Retribuciones por cargos académicos",
+    "url": "retribuciones_cargos_academicos_2016.pdf"
+  }, {
+    "tipo": 3,
+    "dataset": "Informes sobre retribuciones del PDI",
+    "nombre": "Retribuciones básicas del PDI 2016",
+    "url": "retribuciones_pdi_2016.pdf"
+  }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PDI",
+    "dataset": "Datos sobre retribuciones del PDI",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
     "url": "2a5a0614-155b-47c3-9c8b-d1aa0c077765",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/2a5a0614-155b-47c3-9c8b-d1aa0c077765/download/tramosdocenteseinvestigadorescargosacademicoseindemnizacionporresidencia.csv"
   }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PDI",
+    "dataset": "Datos sobre retribuciones del PDI",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Retribuciones: funcionarios docentes",
     "url": "91353992-5fa3-453f-8647-1dd3016d6397",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/91353992-5fa3-453f-8647-1dd3016d6397/download/retribucionesfucionariosdocentes.csv"
   }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PDI",
+    "dataset": "Datos sobre retribuciones del PDI",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Retribuciones: docentes contratados LOU",
     "url": "1860f0d3-2d53-4ab8-b3d4-0226b8461e66",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/1860f0d3-2d53-4ab8-b3d4-0226b8461e66/download/retribucionesdocentescontratadoslou.csv"
   }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PDI",
+    "dataset": "Datos sobre retribuciones del PDI",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Retribuciones: personal docente con plaza vinculada",
     "url": "a07ce2b9-a1d6-4506-ad4c-7accef4ff2a1",
@@ -83,6 +127,11 @@
     "nombre": "Concursos públicos: contratos adscritos a Proyectos, Grupos y Convenios de Investigación",
     "url": "http://investigacion.ugr.es/pages/personal/normas_calen"
   }, {
+    "tipo": 2,
+    "dataset": "Oferta de empleo PDI",
+    "nombre": "Oferta de empleo público 2015",
+    "url": "http://serviciopdi.ugr.es/general/oep/"
+  }, {
     "tipo": 1,
     "dataset": "Datos sobre oferta de empleo PDI",
     "id_dataset": "empleo-publico",
@@ -95,26 +144,41 @@
     "nombre": "Junta de Personal Docente e Investigador",
     "url": "http://www.ugr.es/~jpdi/main.html"
   }, {
+    "tipo": 3,
+    "dataset": "Informes sobre retribuciones del PAS",
+    "nombre": "Retribuciones básicas del PAS 2016",
+    "url": "retribuciones_pas_2016.pdf"
+  }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PAS",
+    "dataset": "Datos sobre retribuciones del PAS",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Retribuciones: PAS funcionarios",
     "url": "9065d637-9df4-4784-a70e-1a7f1d5d1c13",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/9065d637-9df4-4784-a70e-1a7f1d5d1c13/download/retribucionespersonaldeadministracionyserviciosfuncionarios.csv"
   }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PAS",
+    "dataset": "Datos sobre retribuciones del PAS",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Retribuciones: PAS laboral",
     "url": "ff4d5ae9-e45b-44a0-8690-3715bcb11116",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/ff4d5ae9-e45b-44a0-8690-3715bcb11116/download/retribucionespersonaldeadministracionyservicioslaborales.csv"
   }, {
     "tipo": 1,
-    "dataset": "Bandas salariales PAS",
+    "dataset": "Datos sobre retribuciones del PAS",
     "id_dataset": "bandas-salariales-2015",
     "nombre": "Complemento de productividad: PAS",
     "url": "e8bb4921-5121-4a19-80b9-d62457003957",
     "descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/e8bb4921-5121-4a19-80b9-d62457003957/download/complementodeproductividad2014pas4tramos.csv"
+  }, {
+    "tipo": 2,
+    "dataset": "Oferta de empleo PAS",
+    "nombre": "Oferta de empleo público 2015",
+    "url": "http://serviciopas.ugr.es/pages/oferta_empleo/ope2015/2015"
+  }, {
+    "tipo": 2,
+    "dataset": "Oferta de empleo PAS",
+    "nombre": "Anuncios desarrollo oferta de empleo",
+    "url": "http://serviciopas.ugr.es/pages/tabla_plazos"
   }, {
     "tipo": 1,
     "dataset": "Datos sobre oferta de empleo PAS",

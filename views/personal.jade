@@ -21,7 +21,7 @@
 
 
 extends layout
-include tablas.jade	
+include tablas.jade
 
 block content
 	#rastro-idiomas
@@ -64,6 +64,10 @@ block content
 
 					ul.enlaces
 						li.level1
+							each valor in contenido
+								if valor.seccion == ""
+									.li
+										a(class="enlaces-cabecera" href="##{valor.link}") #{valor.encabezado}
 							.li
 								a(class="enlaces-cabecera" href=null) Personal Docente e Investigador
 							ul.enlaces
@@ -81,5 +85,5 @@ block content
 											.li
 												a(class="enlaces-cabecera" href="##{valor.link}") #{valor.encabezado}
 
-	
+
 					+ generar_tablas(contenido,datos)

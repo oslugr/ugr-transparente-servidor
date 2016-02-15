@@ -50,7 +50,7 @@ mixin table2 (valor,datos)
 							td(class="centeralign impar")
 								a(href="#{elemento.url}",target="_blank")
 									img(class="link",src="/imagenes/link2.png", alt="link")
-									
+
 
 mixin table3 (valor,datos)
 	h1
@@ -76,7 +76,7 @@ mixin table3 (valor,datos)
 							td(class="centeralign par")
 								a(href="doc/#{elemento.url}", download="")
 									img(class="save",src="imagenes/flecha.png", alt="save")
-									
+
 
 mixin table4 (valor,datos)
 	h1
@@ -100,8 +100,10 @@ mixin table4 (valor,datos)
 								a(href="graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
 									img(class="view",src="/imagenes/grafico.png", alt="view")
 							td(class="centeralign par")
-								a(href="graph/#{elemento.url}", download="") img(class="save",src="/imagenes/flecha.png", alt="save")	
-															
+								a(href="graph/#{elemento.url}", download="")
+									img(class="save",src="/imagenes/flecha.png", alt="save")
+
+
 mixin generar_tablas (contenido,datos)
 	each valor in contenido
 		case valor.tipo

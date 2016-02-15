@@ -2,6 +2,7 @@
 	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+	Copyright (C) 2016 Andrés Ortiz Corrales
 
 	This file is part of UGR Transparente.
 
@@ -19,57 +20,62 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-div(id="enlaces_secciones", class="mod-menu_secciones")
-	ul
-		li(class="#{mode1}")
-			a(href="/index.html") Inicio
+mixin menu (seleccion)
+	- var first_level="tipo2 item-first_level"
+	- var first_level_selected="selected tipo2-selected item-first_level"
+	- var submenu_display=""
+	- var submenu_hide="display:none;"
+	- var item="tipo1"
+	- var item_selected="tipo1-selected"
 
-		li(class="#{mode2}")
-			a(href="/infoInstitucional.html") Información Institucional
+	div(id="enlaces_secciones", class="mod-menu_secciones")
+		ul
+			+ first_level_item ("Inicio","/index.html",false)
+			+ first_level_item ("Información Institucional","/infoInstitucional.html",false)
+			+ first_level_menu ("Administración","menu_administración",false)
+				+ second_level_item ("Personal","/personal.html",false)
+				+ second_level_item ("Información Económica","/infoEconomica.html",false)
+				+ second_level_item ("Perfil del Contratante","/perfilContratante.html",false)
+			+ first_level_menu ("Docencia","menu_docencia",false)
+				+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",false)
+				+ second_level_item ("Claustro","/claustro.html",false)
+				+ second_level_item ("Estudiantes","/estudiantes.html",false)
+			+ first_level_menu ("Gestión e Investigación","menu_gestion",false)
+				+ second_level_item ("Gobierno","/gobierno.html",false)
+				+ second_level_item ("Rendimiento","/rendimiento.html",false)
+			+ first_level_item ("Normativa Legar","/normativa.html",false)
+			+ first_level_item ("Solicitud de Infformación","/solicitudInfo.html",false)
 
-		li(class="#{mode3}")
-			a(class="grupos",onclick="mostrar_menu('menu_administracion')") Administración
-			ul(id="menu_administracion", style="#{submenu1_display}")
-				li(class="#{item1_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="personal.html") Personal
 
-				li(class="#{item2_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="infoEconomica.html") Información Económica
 
-				li(class="#{item3_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="perfilContratante.html") Perfil del Contratante
+//First level Item			
+mixin first_level_item (name,link,selected)
+	if selected
+		li(class="selected tipo2-selected item-first_level")
+			a(href="#{link}") #{name}
+	else
+		li(class="tipo2 item-first_level")
+			a(href="#{link}") #{name}
 
-		li(class="#{mode4}")
-			a(class="grupos",onclick="mostrar_menu('menu_docencia')") Docencia
-			ul(id="menu_docencia", style="#{submenu2_display}")
-				li(class="#{item4_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="ofertaDemanda.html") Oferta y Demanda Académica
+//Menu with second_level items
+mixin first_level_menu (name,menu_id,selected)
+	if selected
+		- var item_class="selected tipo2-selected item-first_level"
+		- var submenu_display=""
+	else
+		- var item_class="tipo2 item-first_level"
+		- var submenu_display="display:none;"
 
-				li(class="#{item5_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="claustro.html") Claustro
+	li(class="#{item_class}")
+		a(class="grupos",onclick="mostrar_menu('#{menu_id}')") #{name}
+		ul(id="#{menu_id}", style="#{submenu_display}")
+			block
 
-				li(class="#{item6_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-					a(href="estudiantes.html") Estudiantes
-
-		li(class="#{mode5}")
-			a(class="grupos",onclick="mostrar_menu('menu_gestion')") Gestión e Investigación
-			ul(id="menu_gestion", style="#{submenu3_display}")
-				li(class="#{item7_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
-					a(href="gobierno.html") Gobierno
-
-				li(class="#{item8_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-					a(href="rendimiento.html") Rendimiento
-
-		li(class="#{mode6}")
-			a(href="normativaLegal.html") Normativa Legal
-
-		li(class="#{mode7}")
-			a(href="solicitudInfo.html") Solicitud de Información
-
-div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
-	ul
-		li(class="adicional1 item-first_level")
-			a(href="#") Elemento 1er nivel
-			ul
-				li(class="tipo1 item-second_level")
-					a(href="#") Elemento 2º nivel
+//Item in a second level
+mixin second_level_item (name,link,selected)
+	if selected
+		- var item_class="tipo1-selected"
+	else
+		- var item_class="tipo1"
+	li(class="#{item_class} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+		a(href="#{link}") #{name}

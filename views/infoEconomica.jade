@@ -22,6 +22,7 @@
 
 extends layout
 include tablas.jade
+include menu.jade
 
 block content
 	#rastro-idiomas
@@ -54,7 +55,7 @@ block content
 			- var item7_selected = "tipo1"
 			- var item8_selected = "tipo1"
 
-			include ./menu.jade
+			+ menu()
 		#pagina
 			h1#titulo_pagina
 				span.texto_titulo #{seccion}

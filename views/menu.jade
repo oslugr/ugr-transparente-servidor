@@ -2,7 +2,6 @@
 	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
-	Copyright (C) 2016 Andrés Ortiz Corrales
 
 	This file is part of UGR Transparente.
 
@@ -20,65 +19,57 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-mixin menu (seleccion)
-	#menus
-		- var show1=false
-		- var show2=false
-		- var show3=false
-		if seleccion=="Personal" || seleccion=="Información Económica" || seleccion=="Perfil del Contratante"
-			- var show1=true
-		if seleccion=="Oferta y Demanda Académica" || seleccion=="Claustro" || seleccion=="Estudiantes"
-			- var show2=true
-		if seleccion=="Gobierno" || seleccion=="Rendimiento"
-			- var show3=true
-			
-		div(id="enlaces_secciones", class="mod-menu_secciones")
+div(id="enlaces_secciones", class="mod-menu_secciones")
+	ul
+		li(class="#{mode1}")
+			a(href="/index.html") Inicio
+
+		li(class="#{mode2}")
+			a(href="/infoInstitucional.html") Información Institucional
+
+		li(class="#{mode3}")
+			a(class="grupos",onclick="mostrar_menu('menu_administracion')") Administración
+			ul(id="menu_administracion", style="#{submenu1_display}")
+				li(class="#{item1_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="personal.html") Personal
+
+				li(class="#{item2_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="infoEconomica.html") Información Económica
+
+				li(class="#{item3_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="perfilContratante.html") Perfil del Contratante
+
+		li(class="#{mode4}")
+			a(class="grupos",onclick="mostrar_menu('menu_docencia')") Docencia
+			ul(id="menu_docencia", style="#{submenu2_display}")
+				li(class="#{item4_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="ofertaDemanda.html") Oferta y Demanda Académica
+
+				li(class="#{item5_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="claustro.html") Claustro
+
+				li(class="#{item6_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+					a(href="estudiantes.html") Estudiantes
+
+		li(class="#{mode5}")
+			a(class="grupos",onclick="mostrar_menu('menu_gestion')") Gestión e Investigación
+			ul(id="menu_gestion", style="#{submenu3_display}")
+				li(class="#{item7_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 first-child")
+					a(href="gobierno.html") Gobierno
+
+				li(class="#{item8_selected} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
+					a(href="rendimiento.html") Rendimiento
+
+		li(class="#{mode6}")
+			a(href="normativaLegal.html") Normativa Legal
+
+		li(class="#{mode7}")
+			a(href="solicitudInfo.html") Solicitud de Información
+
+div(id="frecuentes", class="mod-menu_secciones menu_frecuentes", style="display: none;")
+	ul
+		li(class="adicional1 item-first_level")
+			a(href="#") Elemento 1er nivel
 			ul
-				+ first_level_item ("Inicio","/index.html",seleccion)
-				+ first_level_item ("Información Institucional","/infoInstitucional.html",seleccion)
-				+ first_level_menu ("Administración","menu_administración",show1)
-					+ second_level_item ("Personal","/personal.html",seleccion)
-					+ second_level_item ("Información Económica","/infoEconomica.html",seleccion)
-					+ second_level_item ("Perfil del Contratante","/perfilContratante.html",seleccion)
-				+ first_level_menu ("Docencia","menu_docencia",show2)
-					+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",seleccion)
-					+ second_level_item ("Claustro","/claustro.html",seleccion)
-					+ second_level_item ("Estudiantes","/estudiantes.html",seleccion)
-				+ first_level_menu ("Gestión e Investigación","menu_gestion",show3)
-					+ second_level_item ("Gobierno","/gobierno.html",seleccion)
-					+ second_level_item ("Rendimiento","/rendimiento.html",seleccion)
-				+ first_level_item ("Normativa Legal","/normativaLegal.html",seleccion)
-				+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
-
-
-//First level Item			
-mixin first_level_item (name,link,selected)
-	if selected==name
-		li(class="selected tipo2-selected item-first_level")
-			a(href="#{link}") #{name}
-	else
-		li(class="tipo2 item-first_level")
-			a(href="#{link}") #{name}
-
-//Menu with second_level items
-mixin first_level_menu (name,menu_id,selected)
-	if selected
-		- var item_class="selected tipo2-selected item-first_level"
-		- var submenu_display=""
-	else
-		- var item_class="tipo2 item-first_level"
-		- var submenu_display="display:none;"
-
-	li(class="#{item_class}")
-		a(class="grupos",onclick="mostrar_menu('#{menu_id}')") #{name}
-		ul(id="#{menu_id}", style="#{submenu_display}")
-			block
-
-//Item in a second level
-mixin second_level_item (name,link,selected)
-	if selected==name
-		- var item_class="tipo1-selected"
-	else
-		- var item_class="tipo1"
-	li(class="#{item_class} item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child")
-		a(href="#{link}") #{name}
+				li(class="tipo1 item-second_level")
+					a(href="#") Elemento 2º nivel

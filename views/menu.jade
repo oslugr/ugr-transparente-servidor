@@ -21,34 +21,34 @@
 
 
 mixin menu (seleccion)
-	- var show1=false
-	- var show2=false
-	- var show3=false
-	if seleccion=="Personal" || seleccion=="Información Económica" || seleccion=="Perfil del Contratante"
-		- var show1=true
-	if seleccion=="Oferta y Demanda Académica" || seleccion=="Claustro" || seleccion=="Estudiantes"
-		- var show2=true
-	if seleccion=="Gobierno" || seleccion=="Rendimiento"
-		- var show3=true
-		
-	div(id="enlaces_secciones", class="mod-menu_secciones")
-		ul
-			+ first_level_item ("Inicio","/index.html",seleccion)
-			+ first_level_item ("Información Institucional","/infoInstitucional.html",seleccion)
-			+ first_level_menu ("Administración","menu_administración",show1)
-				+ second_level_item ("Personal","/personal.html",seleccion)
-				+ second_level_item ("Información Económica","/infoEconomica.html",seleccion)
-				+ second_level_item ("Perfil del Contratante","/perfilContratante.html",seleccion)
-			+ first_level_menu ("Docencia","menu_docencia",show2)
-				+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",seleccion)
-				+ second_level_item ("Claustro","/claustro.html",seleccion)
-				+ second_level_item ("Estudiantes","/estudiantes.html",seleccion)
-			+ first_level_menu ("Gestión e Investigación","menu_gestion",show3)
-				+ second_level_item ("Gobierno","/gobierno.html",seleccion)
-				+ second_level_item ("Rendimiento","/rendimiento.html",seleccion)
-			+ first_level_item ("Normativa Legar","/normativa.html",seleccion)
-			+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
-
+	#menus
+		- var show1=false
+		- var show2=false
+		- var show3=false
+		if seleccion=="Personal" || seleccion=="Información Económica" || seleccion=="Perfil del Contratante"
+			- var show1=true
+		if seleccion=="Oferta y Demanda Académica" || seleccion=="Claustro" || seleccion=="Estudiantes"
+			- var show2=true
+		if seleccion=="Gobierno" || seleccion=="Rendimiento"
+			- var show3=true
+			
+		div(id="enlaces_secciones", class="mod-menu_secciones")
+			ul
+				+ first_level_item ("Inicio","/index.html",seleccion)
+				+ first_level_item ("Información Institucional","/infoInstitucional.html",seleccion)
+				+ first_level_menu ("Administración","menu_administración",show1)
+					+ second_level_item ("Personal","/personal.html",seleccion)
+					+ second_level_item ("Información Económica","/infoEconomica.html",seleccion)
+					+ second_level_item ("Perfil del Contratante","/perfilContratante.html",seleccion)
+				+ first_level_menu ("Docencia","menu_docencia",show2)
+					+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",seleccion)
+					+ second_level_item ("Claustro","/claustro.html",seleccion)
+					+ second_level_item ("Estudiantes","/estudiantes.html",seleccion)
+				+ first_level_menu ("Gestión e Investigación","menu_gestion",show3)
+					+ second_level_item ("Gobierno","/gobierno.html",seleccion)
+					+ second_level_item ("Rendimiento","/rendimiento.html",seleccion)
+				+ first_level_item ("Normativa Legal","/normativaLegal.html",seleccion)
+				+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
 
 
 //First level Item			

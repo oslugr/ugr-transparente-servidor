@@ -45,13 +45,9 @@ var mapaWeb = require(root + '/routes/mapaWeb');
 var buscador = require(root + '/routes/buscador');
 var calendario = require(root + '/routes/calendario');
 var calendarioSolo = require(root + '/routes/calendarioSolo');
-var prueba = require(root + '/routes/prueba');
 
 // Librerías
 var cargar = require(root + '/lib/cargar');
-// Prueba de escritura de JSON recuperado de API
-//var escribir = require(__dirname+'/lib/putJSON');
-//escribir();
 
 // Crea aplicación web con Express
 var app = express();
@@ -69,7 +65,6 @@ module.exports.estudiantes = cargar(root + '/config/estudiantes.json');
 module.exports.gobierno = cargar(root + '/config/gobierno.json');
 module.exports.rendimiento = cargar(root + '/config/rendimiento.json');
 module.exports.normativaLegal = cargar(root + '/config/normativaLegal.json');
-module.exports.prueba = cargar(root + '/config/prueba.json');
 
 // Inicio
 app.get('/', index.index);
@@ -98,8 +93,6 @@ app.get('/buscador.html', buscador.buscador);
 // Calendario
 app.get('/calendario.html', calendario.index);
 app.get('/calendarioSolo.html', calendarioSolo.index);
-// Prueba para nueva visualización de tablas
-app.get('/prueba.html', prueba.personal);
 
 // Archivos de datos
 app.get('/archivos/personal', function(req, res) {
@@ -147,7 +140,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 //Manejador de enrutado
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // Manejador de errores:
 app.use(function(req, res, next) {
   res.status(404).render('error_404', {

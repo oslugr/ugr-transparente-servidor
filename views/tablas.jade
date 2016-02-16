@@ -88,10 +88,10 @@ mixin table3 (valor,datos)
 						tr
 							td(class="centeralign par") #{elemento.nombre}
 							td(class="centeralign impar")
-								a(href="static/doc/#{elemento.url}",target="_blank")
+								a(href="/doc/#{elemento.url}",target="_blank")
 									img(class="view",src="/imagenes/pdf.png", alt="view")
 							td(class="centeralign par")
-								a(href="static/doc/#{elemento.url}", download="")
+								a(href="/doc/#{elemento.url}", download="")
 									img(class="save",src="/imagenes/flecha.png", alt="save")
 
 
@@ -114,10 +114,10 @@ mixin table4 (valor,datos)
 						tr
 							td(class="centeralign par") #{elemento.nombre}
 							td(class="centeralign impar")
-								a(href="static/graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
+								a(href="/graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
 									img(class="view",src="/imagenes/grafico.png", alt="view")
 							td(class="centeralign par")
-								a(href="static/graph/#{elemento.url}", download="")
+								a(href="/graph/#{elemento.url}", download="")
 									img(class="save",src="/imagenes/flecha.png", alt="save")
 
 

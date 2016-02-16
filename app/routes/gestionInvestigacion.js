@@ -21,16 +21,28 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina de normativas
-exports.normativaLegal = function(req, res) {
-  var normativa = conf.normativaLegal;
+// Gestión de la pagina del gobierno
+exports.gobierno = function(req, res) {
+  var gobierno = conf.gobierno;
 
-  res.render(normativa.plantilla, {
+  res.render(gobierno.plantilla, {
     servidor: conf.config.servidor,
-    seccion: normativa.nombre,
-    contenido: normativa.contenido,
-    datos: normativa.datos,
+    seccion: gobierno.nombre,
+    contenido: gobierno.contenido,
+    datos: gobierno.datos,
+  });
+};
+
+// Gestión de la pagina de resultados
+exports.rendimiento = function(req, res) {
+  var rendimiento = conf.rendimiento;
+
+  res.render(rendimiento.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: rendimiento.nombre,
+    contenido: rendimiento.contenido,
+    datos: rendimiento.datos,
   });
 };

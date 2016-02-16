@@ -21,28 +21,40 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina del gobierno
-exports.gobierno = function(req, res) {
-  var gobierno = conf.gobierno;
+// Gestión de la pagina de oferta y demanda academica
+exports.ofertaDemanda = function(req, res) {
+  var ofertaDemanda = conf.ofertaDemanda;
 
-  res.render(gobierno.plantilla, {
+  res.render(ofertaDemanda.plantilla, {
     servidor: conf.config.servidor,
-    seccion: gobierno.nombre,
-    contenido: gobierno.contenido,
-    datos: gobierno.datos,
+    seccion: ofertaDemanda.nombre,
+    contenido: ofertaDemanda.contenido,
+    datos: ofertaDemanda.datos
   });
 };
 
-// Gestión de la pagina de resultados
-exports.rendimiento = function(req, res) {
-  var rendimiento = conf.rendimiento;
+// Gestión de la pagina de claustro
+exports.claustro = function(req, res) {
+  var claustro = conf.claustro;
 
-  res.render(rendimiento.plantilla, {
+  res.render(claustro.plantilla, {
     servidor: conf.config.servidor,
-    seccion: rendimiento.nombre,
-    contenido: rendimiento.contenido,
-    datos: rendimiento.datos,
+    seccion: claustro.nombre,
+    contenido: claustro.contenido,
+    datos: claustro.datos
+  });
+};
+
+// Gestión de la pagina de estudiantes
+exports.estudiantes = function(req, res) {
+  var estudiantes = conf.estudiantes;
+
+  res.render(estudiantes.plantilla, {
+    servidor: conf.config.servidor,
+    seccion: estudiantes.nombre,
+    contenido: estudiantes.contenido,
+    datos: estudiantes.datos
   });
 };

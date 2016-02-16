@@ -21,13 +21,12 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina del buscador
-exports.buscador = function(req, res) {
-
-  res.render('buscador', {
-    seccion: 'Buscador'
+//Pagina de inicio
+exports.index = function(req, res) {
+  res.render('calendarioSolo', {
+    seccion: "Calendario",
+    enlace: "infoInstitucional.html"
   });
-
 };

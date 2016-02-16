@@ -21,16 +21,16 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina de personal
-exports.personal = function(req, res) {
-  var personal = conf.prueba;
+// Gestión de la pagina de normativas
+exports.normativaLegal = function(req, res) {
+  var normativa = conf.normativaLegal;
 
-  res.render(personal.plantilla, {
+  res.render(normativa.plantilla, {
     servidor: conf.config.servidor,
-    seccion: personal.nombre,
-    contenido: personal.contenido,
-    datos: personal.datos,
+    seccion: normativa.nombre,
+    contenido: normativa.contenido,
+    datos: normativa.datos,
   });
 };

@@ -21,40 +21,24 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina de oferta y demanda academica
-exports.ofertaDemanda = function(req, res) {
-  var ofertaDemanda = conf.ofertaDemanda;
+//Rellenamos el vector con los enlaces leidos del fichero de configuracion
+//Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
+var enlaces=[];
 
-  res.render(ofertaDemanda.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: ofertaDemanda.nombre,
-    contenido: ofertaDemanda.contenido,
-    datos: ofertaDemanda.datos
-  });
-};
+function leerEnlaces() {
+  for (var i in conf.config.index.enlaces) {
+    enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
+  }
+}
 
-// Gestión de la pagina de claustro
-exports.claustro = function(req, res) {
-  var claustro = conf.claustro;
-
-  res.render(claustro.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: claustro.nombre,
-    contenido: claustro.contenido,
-    datos: claustro.datos
-  });
-};
-
-// Gestión de la pagina de estudiantes
-exports.estudiantes = function(req, res) {
-  var estudiantes = conf.estudiantes;
-
-  res.render(estudiantes.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: estudiantes.nombre,
-    contenido: estudiantes.contenido,
-    datos: estudiantes.datos
+//Pagina de inicio
+exports.index = function(req, res) {
+  if (enlaces.length === 0)
+    leerEnlaces();
+  res.render('index', {
+    seccion: conf.config.index.nombre,
+    enlaces: enlaces
   });
 };

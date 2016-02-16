@@ -21,7 +21,7 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
 exports.mapaWeb = function(req, res) {
   res.render('mapaWeb', {

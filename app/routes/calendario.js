@@ -21,35 +21,12 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina de personal
-exports.personal = function(req, res) {
-  var personal = conf.personal;
-
-  res.render(personal.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: personal.nombre,
-    contenido: personal.contenido,
-    datos: personal.datos,
-  });
-};
-
-// Gestión de la pagina de informacion economica
-exports.infoEconomica = function(req, res) {
-  var infoEconomica = conf.infoEconomica;
-
-  res.render(infoEconomica.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: infoEconomica.nombre,
-    contenido: infoEconomica.contenido,
-    datos: infoEconomica.datos,
-  });
-};
-
-// Gestión de la página de perfil del contratante
-exports.perfil = function(req, res) {
-  res.render('perfilContratante', {
-    seccion: 'Perfil del Contratante'
+//Pagina de inicio
+exports.index = function(req, res) {
+  res.render('calendario', {
+    seccion: "Calendario",
+    enlace: "infoInstitucional.html"
   });
 };

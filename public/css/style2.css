@@ -221,16 +221,16 @@ div#cabecera div#cabecera_acciones div#language_selector_container {
   padding-left: 85px
 }
 div#cabecera {
-  background-image: url(../img/general/cabecera.png)
+  background-image: url("/img/general/cabecera.png")
 }
 div#cabecera h1#cab_inf {
   text-indent: -9999em;
-  background-image: url(../img/general/banner-lupa.jpg);
+  background-image: url("/img/general/banner-lupa.jpg");
   border-color: #fe9900
 }
 div#cabecera a#enlace_eadministracion {
   color: #c68106;
-  background: url(../img/general/cabecera-eadministracion.png) no-repeat left center
+  background: url("/img/general/cabecera-eadministracion.png") no-repeat left center
 }
 div#cabecera a#enlace_eadministracion:hover {
   color: #e35327
@@ -263,10 +263,10 @@ div#cabecera input#submit_buscar {
 }
 div#cabecera input#submit_buscar {
   background-color: transparent;
-  background-image: url(../img/general/cabecera-buscar_submit_off.png)
+  background-image: url("/img/general/cabecera-buscar_submit_off.png")
 }
 div#cabecera input#submit_buscar:hover {
-  background-image: url(../img/general/cabecera-buscar_submit_on.png)
+  background-image: url("/img/general/cabecera-buscar_submit_on.png")
 }
 div#cabecera div#language_selector_container i {
   color: #f5b972;
@@ -277,13 +277,13 @@ div#cabecera div#language_selector {
   border-color: #f5b972
 }
 div#cabecera div#language_selector a {
-  background-image: url(../img/languages/header-lang_off.png);
+  background-image: url("/img/languages/header-lang_off.png");
   background-position: left center;
   color: #f5b972;
   border-color: #f5b972
 }
 div#cabecera div#language_selector a:hover {
-  background-image: url(../img/languages/header-lang_on.png);
+  background-image: url("/img/languages/header-lang_on.png");
   color: #e35327
 }
 div#cabecera div#language_selector a.language-en {
@@ -299,7 +299,7 @@ div#cabecera div#language_selector a.language-es:hover {
   background-image: none
 }
 div#cabecera div#head_menu_services li {
-  background-image: url(../img/general/cabecera-item-menu_servicios.png);
+  background-image: url("/img/general/cabecera-item-menu_servicios.png");
   background-position: left 4px
 }
 div#cabecera div#head_menu_services li a {
@@ -343,22 +343,22 @@ div#cabecera div#cabecera_acciones div#elvira_container span.elvira_txt {
   color: #9a999d
 }
 div#cabecera div#cabecera_acciones div#redes a#facebook {
-  background-image: url(../img/general/facebook_head-off.png)
+  background-image: url("/img/general/facebook_head-off.png")
 }
 div#cabecera div#cabecera_acciones div#redes a#facebook:hover {
-  background-image: url(../img/general/facebook_head-on.png)
+  background-image: url("/img/general/facebook_head-on.png")
 }
 div#cabecera div#cabecera_acciones div#redes a#twitter {
-  background-image: url(../img/general/twitter_head-off.png)
+  background-image: url("/img/general/twitter_head-off.png")
 }
 div#cabecera div#cabecera_acciones div#redes a#twitter:hover {
-  background-image: url(../img/general/twitter_head-on.png)
+  background-image: url("/img/general/twitter_head-on.png")
 }
 div#cabecera div#cabecera_acciones div#accesibilidad a#accesible {
-  background-image: url(../img/general/accesibilidad-head-off.png)
+  background-image: url("/img/general/accesibilidad-head-off.png")
 }
 div#cabecera div#cabecera_acciones div#accesibilidad a#accesible:hover {
-  background-image: url(../img/general/accesibilidad-head-on.png)
+  background-image: url("/img/general/accesibilidad-head-on.png")
 }
 div#cabecera div#cabecera_acciones div#accesibilidad a#accesible:hover span, div#cabecera div#cabecera_acciones div#elvira_container a#elvira:hover span.elvira_txt {
   color: #e35327
@@ -373,20 +373,20 @@ div#cabecera div#cabecera_acciones div#language_selector_container div#language_
   color: #e35327
 }
 div#cabecera a#elvira {
-  background-image: url(../img/general/cabecera-elvira_off.png);
+  background-image: url("/img/general/cabecera-elvira_off.png");
 }
 div#cabecera a#elvira:hover {
-  background-image: url(../img/general/cabecera-elvira_on.png);
+  background-image: url("/img/general/cabecera-elvira_on.png");
   ;
   color: #e35327
 }
 div#cabecera a#biotic {
-  background-image: url(../img/general/cabecera-biotic_off.png);
+  background-image: url("/img/general/cabecera-biotic_off.png");
   ;
   text-indent: -9999em
 }
 div#cabecera a#biotic:hover {
-  background-image: url(../img/general/cabecera-biotic_on.png);
+  background-image: url("/img/general/cabecera-biotic_on.png");
 }
 span.separador_enlaces {
   display: none
@@ -396,8 +396,8 @@ span.separador_enlaces {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.eot?v=3.2.1');
-  src: url('../css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('/css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('/css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/css/3rdpart/awesome-3.2.1/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal
 }

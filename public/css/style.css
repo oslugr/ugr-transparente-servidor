@@ -32,7 +32,7 @@
   color: #000000;
   BORDER-BOTTOM: #336699 1px solid;
   FONT-FAMILY: Arial, Helvetica, sans-serif;
-  background-image: url("../img/general/menu-subitem_on.png");
+  background-image: url("/img/general/menu-subitem_on.png");
 }
 .botonFormulario:hover {
   color: #0F3852;
@@ -125,7 +125,7 @@ div#contenedor_margenes {
   width: 1024px;
 }
 div#sombras {
-  background-image: url("../img/general/sombra.png");
+  background-image: url("/img/general/sombra.png");
   background-repeat: repeat-y;
 }
 span.separador_enlaces {
@@ -155,7 +155,7 @@ div#cabecera h1#cab_inf {
     width: 712px;
     background-position: center center;
     text-indent: -9999em;
-    background-image: url("../img/general/cabecera-foto.jpg");
+    background-image: url("/img/general/cabecera-foto.jpg");
     background-position: 0 0;
     border-color: #6D6C71;
 }
@@ -167,12 +167,12 @@ div#cabecera a.enlace_provisional {
     margin-top: 62px;
     min-height: 19px;
     padding-left: 26px;
-    background-image: url("../img/general/cabecera-flecha_off.png");
+    background-image: url("/img/general/cabecera-flecha_off.png");
     background-position: 0 0;
     font-size: 90%;
 }
 div#cabecera a.enlace_provisional:hover {
-    background-image: url("../img/general/cabecera-flecha_on.png");
+    background-image: url("/img/general/cabecera-flecha_on.png");
 }
 div#cabecera a.enlace_provisional strong {
     display: block;
@@ -192,7 +192,7 @@ div#cabecera a.enlace_provisional:hover em {
 }
 div#cabecera div#formularios {
     height: 238px;
-    background-image: url("../img/general/logo-ugr.png");
+    background-image: url("/img/general/logo-ugr.png");
     background-position: right top;
     border-color: #6D6C71;
 }
@@ -233,18 +233,18 @@ div#cabecera div.depto {
     float: left;
     height: 138px;
     width: 949px;
-    background-image: url("../img/general/cabecera-departamento.png");
+    background-image: url("/img/general/cabecera-departamento.png");
     background-repeat: no-repeat;
     border-color: #6D6C71;
     border-style: solid;
 }
 
 div#cabecera div.depto.ejemplo_titulo {
-    background-image: url("../img/general/cabecera-departamento_contitulo.png");
+    background-image: url("/img/general/cabecera-departamento_contitulo.png");
 }
 
 div#cabecera div.depto.ejemplo_completo {
-    background-image: url("../img/general/cabecera-departamento_OLD.png");
+    background-image: url("/img/general/cabecera-departamento_OLD.png");
 }
 
 div#cabecera div.depto a {
@@ -330,13 +330,13 @@ div#rastro span {
   margin-right: 3px;
   padding-left: 15px;
   width: 100%;
-  background: url("../img/general/rastro-enlace-sig.png") no-repeat scroll 0 60% transparent;
+  background: url("/img/general/rastro-enlace-sig.png") no-repeat scroll 0 60% transparent;
   color: #99989C;
   line-height: 24px;
 }
 div#rastro span.first {
   padding-left: 27px;
-  background: url("../img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
+  background: url("/img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
 }
 div#rastro ul#rastro_breadcrumb {
   margin-top: -4px;
@@ -367,7 +367,7 @@ div#pie {
   padding-left: 0;
   text-align: right;
   background-color: #FFFFFF;
-  background-image: url("../img/general/pie-fondo.png");
+  background-image: url("/img/general/pie-fondo.png");
   background-position: 0 0;
   background-repeat: repeat-x;
   border-color: #6D6C71;
@@ -379,7 +379,7 @@ div#pie a {
   margin-top: 17px;
   padding-right: 20px;
   text-align: right;
-  background: url("../img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
+  background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
   color: #FFFFFF;
 }
 div#pie p {
@@ -401,7 +401,7 @@ div#pie p a {
   color: #8A8A8A;
 }
 div#pie a:hover {
-  background: url("../img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
+  background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
   color: #FFFFFF;
 }
 div#pie p a:hover {
@@ -463,7 +463,7 @@ div#general {
   overflow: hidden;
   position: relative;
   width: 772px;
-  background-image: url("../img/general/sombra_izq.png");
+  background-image: url("/img/general/sombra_izq.png");
   background-position: left center;
   background-repeat: repeat-y;
   border-color: #FFFFFF;
@@ -490,7 +490,7 @@ div#pagina {
   padding-bottom: 30px;
   width: 513px;
   background-color: #FFFFFF;
-  background-image: url("../img/interior/contenido-fondo.png");
+  background-image: url("/img/interior/contenido-fondo.png");
   background-position: left 41px;
   background-repeat: no-repeat;
 }
@@ -500,7 +500,7 @@ div#pagina h1#titulo_pagina {
   padding-top: 7px;
   position: relative;
   background-color: #FFFFFF;
-  background-image: url("../img/interior/pagina-titulo_principal.png");
+  background-image: url("/img/interior/pagina-titulo_principal.png");
   border-bottom-style: solid;
   border-color: #DD3B02;
   color: #FFFFFF;
@@ -512,7 +512,7 @@ div#pagina h1#titulo_pagina span.texto_titulo {
   padding-left: 13px;
   padding-top: 8px;
   background-color: #000000;
-  background-image: url("../img/interior/pagina-titulo_principal-h1.png");
+  background-image: url("/img/interior/pagina-titulo_principal-h1.png");
   background-position: 0 bottom;
 }
 div#pagina div#contenido {
@@ -547,7 +547,7 @@ div#calendario {
   width: 772px;
   height: 455px;
   background-color: #FFFFFF;
-  background-image: url("../img/interior/calendario-fondo.png");
+  background-image: url("/img/interior/calendario-fondo.png");
   background-position: left 41px;
   background-repeat: no-repeat;
 }
@@ -557,7 +557,7 @@ div#calendario h1#titulo_pagina {
   padding-top: 7px;
   position: relative;
   background-color: #FFFFFF;
-  background-image: url("../img/interior/pagina-titulo_principal.png");
+  background-image: url("/img/interior/pagina-titulo_principal.png");
   border-bottom-style: solid;
   border-color: #DD3B02;
   color: #FFFFFF;
@@ -570,7 +570,7 @@ div#calendario h1#titulo_pagina span.texto_titulo {
   padding-left: 13px;
   padding-top: 8px;
   background-color: #000000;
-  background-image: url("../img/interior/calendario-titulo_principal-h1.png");
+  background-image: url("/img/interior/calendario-titulo_principal-h1.png");
   background-position: 0 bottom;
 }
 div#calendario div#contenido {
@@ -579,7 +579,7 @@ div#calendario div#contenido {
   padding-right: 25px;
 }
 div#interior_pie {
-  background-image: url("../img/general/sombra_dcha.png");
+  background-image: url("/img/general/sombra_dcha.png");
   background-position: right center;
   background-repeat: repeat-y;
 }
@@ -590,7 +590,7 @@ div.sec_interior a.doble_externo strong {
   margin-left: 0.5em;
   margin-right: 0.5em;
   padding: 0 14px 0 1px;
-  background-image: url("../img/interior/enlace_doble-fondo_off.png");
+  background-image: url("/img/interior/enlace_doble-fondo_off.png");
   background-position: right center;
   color: #0F3852;
   text-transform: uppercase;
@@ -604,7 +604,7 @@ div.sec_interior h1 {
   padding-bottom: 15px;
   padding-top: 5px;
   background-color: #FFFFFF;
-  background-image: url("../img/interior/sombra-inferior-cabecera-nivel1.png");
+  background-image: url("/img/interior/sombra-inferior-cabecera-nivel1.png");
   background-position: 0 bottom;
   background-repeat: repeat-x;
   color: #0F3852;
@@ -618,7 +618,7 @@ div.sec_interior h1 a {
   margin-bottom: 5px;
   padding-bottom: 2px;
   padding-left: 19px;
-  background-image: url("../img/interior/cabecera-nivel1_bullet.png");
+  background-image: url("/img/interior/cabecera-nivel1_bullet.png");
   background-position: 0 6px;
   border-color: #718593;
   color: #0F3852;
@@ -733,7 +733,7 @@ div.sec_interior ul ul {
 div.sec_interior ul li {
   margin-bottom: 6px;
   padding-left: 10px;
-  background-image: url("../img/interior/lista-nivel1.png");
+  background-image: url("/img/interior/lista-nivel1.png");
   background-position: left 4px;
   background-repeat: no-repeat;
   color: #404040;
@@ -918,7 +918,7 @@ div.sec_interior a.doble_externo {
 }
 div.sec_interior a.doble_externo strong {}
 div.sec_interior a.doble_externo:hover strong {
-  background-image: url("../img/interior/enlace_doble-fondo_on.png");
+  background-image: url("/img/interior/enlace_doble-fondo_on.png");
   color: #DD3B15;
 }
 div.sec_interior a.autolink {
@@ -931,7 +931,7 @@ div.sec_interior h2 {
 }
 div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {}
 div.sec_interior h3, div.sec_interior h4, div.sec_interior h5, div.sec_interior h6 {
-  background-image: url("../img/interior/cabecera-nivel2.png");
+  background-image: url("/img/interior/cabecera-nivel2.png");
   background-position: 0 4px;
   color: #0F3852;
   font-size: 13px;
@@ -982,13 +982,13 @@ div.sec_interior table.titulacion tr td {
   color: #404040;
 }
 div.sec_interior ul li a {
-  background-image: url("../img/interior/lista_enlaces-nivel1-flecha_off.gif");
+  background-image: url("/img/interior/lista_enlaces-nivel1-flecha_off.gif");
   background-position: right center;
   color: #404040;
 }
 div.sec_interior ul li a:hover {
   background-color: #DD3B15;
-  background-image: url("../img/interior/lista_enlaces-nivel1-flecha_on.png");
+  background-image: url("/img/interior/lista_enlaces-nivel1-flecha_on.png");
   color: #FFFFFF;
 }
 div.sec_interior ul li a.media:hover {
@@ -1010,7 +1010,7 @@ div.sec_interior ol li {
   text-align: justify;
 }
 div.sec_interior ol li a {
-  background-image: url("../img/interior/lista-flecha-nivel1.png");
+  background-image: url("/img/interior/lista-flecha-nivel1.png");
   background-position: right center;
   color: #404040;
 }
@@ -1035,14 +1035,14 @@ div.sec_interior ul.departamento li.level1 ul {
   text-transform: none;
 }
 div.sec_interior ul.departamento li.level1 ul li {
-  background-image: url("../img/interior/lista_departamento-sublista_item.png");
+  background-image: url("/img/interior/lista_departamento-sublista_item.png");
   background-position: 0 5px;
 }
 div.sec_interior ul.departamento li.level1 ul li a {
-  background-image: url("../img/interior/lista_departamento-sublista_enlace.png");
+  background-image: url("/img/interior/lista_departamento-sublista_enlace.png");
 }
 div.sec_interior ul.departamento li.level1 ul li a:hover {
-  background-image: url("../img/interior/lista_enlaces-nivel1-flecha_on.png");
+  background-image: url("/img/interior/lista_enlaces-nivel1-flecha_on.png");
 }
 div.sec_interior ul.departamento li.level1 ul li a.autolink {
   background: none repeat scroll 0 0 transparent;
@@ -1062,13 +1062,13 @@ div.sec_interior ul.departamento li.level1 ul.departamento li.level2 {
 }
 div.sec_interior ul.departamento li.level1 ul.departamento li.level2 a {
   background-color: #EBEBEB;
-  background-image: url("../img/interior/lista_departamento-enlace_destacado_off.png");
+  background-image: url("/img/interior/lista_departamento-enlace_destacado_off.png");
   background-position: 0 2px;
   color: #404040;
   text-decoration: none;
 }
 div.sec_interior ul.departamento li.level1 ul.departamento li.level2 a:hover {
-  background-image: url("../img/interior/lista_departamento-enlace_destacado_on.png");
+  background-image: url("/img/interior/lista_departamento-enlace_destacado_on.png");
   color: #DD3B15;
   text-decoration: none;
 }
@@ -1083,14 +1083,14 @@ div.sec_interior ul.enlaces li {
   background-image: none;
 }
 div.sec_interior ul.enlaces li div.li em {
-  background-image: url("../img/interior/lista-fondo.gif");
+  background-image: url("/img/interior/lista-fondo.gif");
   background-position: 0 50%;
   background-repeat: no-repeat;
   font-style: normal;
   font-weight: normal;
 }
 div.sec_interior ul.enlaces li div.li {
-  background-image: url("../img/interior/lista_enlaces-nivel1_off.png");
+  background-image: url("/img/interior/lista_enlaces-nivel1_off.png");
   background-position: left center;
   border-color: #B6B5B8;
   border-style: solid;
@@ -1117,48 +1117,48 @@ div.sec_interior ul.noenlaces li {
   border-color: #B6B5B8;
 }
 div.sec_interior ul.noenlaces li div.li em {
-  background-image: url("../img/interior/lista-fondo.gif");
+  background-image: url("/img/interior/lista-fondo.gif");
   background-position: 6px 50%;
   background-repeat: no-repeat;
   font-style: normal;
   font-weight: normal;
 }
 div.sec_interior ul.enlaces li a.doble_externo, div.sec_interior ul.enlaces ul.enlaces li a.doble_externo, div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a.doble_externo {
-  background-image: url("../img/interior/enlace_doble-lista_enlaces-externo_separador.gif");
+  background-image: url("/img/interior/enlace_doble-lista_enlaces-externo_separador.gif");
   background-position: left bottom;
 }
 div.sec_interior ul.enlaces li a.doble_externo:hover, div.sec_interior ul.enlaces ul.enlaces li a.doble_externo:hover, div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a.doble_externo:hover {
   background-color: #DD3B02;
-  background-image: url("../img/interior/enlace_doble-lista_enlaces-externo_separador.gif");
+  background-image: url("/img/interior/enlace_doble-lista_enlaces-externo_separador.gif");
 }
 div.sec_interior ul.enlaces li a, div.sec_interior ul.enlaces li a.doble_interno {
-  background-image: url("../img/interior/lista_enlaces-nivel1-flecha_off.gif");
+  background-image: url("/img/interior/lista_enlaces-nivel1-flecha_off.gif");
 }
 div.sec_interior ul.enlaces li.level2 div.li {
-  background-image: url("../img/interior/lista_enlaces-nivel2-circulo_off.png");
+  background-image: url("/img/interior/lista_enlaces-nivel2-circulo_off.png");
 }
 div.sec_interior ul.enlaces li.level3 div.li {
-  background-image: url("../img/interior/lista_enlaces-nivel3-circulo_off.png");
+  background-image: url("/img/interior/lista_enlaces-nivel3-circulo_off.png");
 }
 div.sec_interior ul.enlaces li a:hover, div.sec_interior ul.enlaces li a.doble_interno:hover {
-  background-image: url("../img/interior/lista_enlaces-nivel1-flecha_on.png");
+  background-image: url("/img/interior/lista_enlaces-nivel1-flecha_on.png");
 }
 div.sec_interior ul.enlaces ul.enlaces li a, div.sec_interior ul.enlaces ul.enlaces li a.doble_interno {
-  background-image: url("../img/interior/lista_enlaces-nivel2_off.gif");
+  background-image: url("/img/interior/lista_enlaces-nivel2_off.gif");
   color: #0F3852;
 }
 div.sec_interior ul.enlaces ul.enlaces li a:hover, div.sec_interior ul.enlaces ul.enlaces li a.doble_interno:hover {
   background-color: #6D6C71;
-  background-image: url("../img/interior/lista_enlaces-nivel2_on.png");
+  background-image: url("/img/interior/lista_enlaces-nivel2_on.png");
   color: #FFFFFF;
 }
 div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a, div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a.doble_interno {
-  background-image: url("../img/interior/lista_enlaces-nivel3_off.png");
+  background-image: url("/img/interior/lista_enlaces-nivel3_off.png");
   color: #A7A7AA;
 }
 div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a:hover, div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a.doble_interno:hover {
   background-color: #A7A7AA;
-  background-image: url("../img/interior/lista_enlaces-nivel3_on.png");
+  background-image: url("/img/interior/lista_enlaces-nivel3_on.png");
   color: #FFFFFF;
 }
 div.sec_interior div.footnotes {
@@ -1541,29 +1541,29 @@ div.mod-forms fieldset textarea {
   font-size: 1em;
 }
 div.mod-forms fieldset input.submit_img {
-  background-image: url("../img/interior/formulario-enviar_off.png");
+  background-image: url("/img/interior/formulario-enviar_off.png");
   outline: medium none;
   text-indent: -9999em;
 }
 div.mod-forms fieldset input.submit_img:hover {
-  background-image: url("../img/interior/formulario-enviar_on.png");
+  background-image: url("/img/interior/formulario-enviar_on.png");
   outline: medium none;
 }
 div.mod-forms fieldset input.submit_img:active {
-  background-image: url("../img/interior/formulario-enviar_on.png");
+  background-image: url("/img/interior/formulario-enviar_on.png");
   outline: medium none;
 }
 div.mod-forms fieldset input.cancel_img {
-  background-image: url("../img/interior/formulario-cancelar_off.png");
+  background-image: url("/img/interior/formulario-cancelar_off.png");
   outline: medium none;
   text-indent: -9999em;
 }
 div.mod-forms fieldset input.cancel_img:hover {
-  background-image: url("../img/interior/formulario-cancelar_on.png");
+  background-image: url("/img/interior/formulario-cancelar_on.png");
   outline: medium none;
 }
 div.mod-forms fieldset input.cancel_img:active {
-  background-image: url("../img/interior/formulario-cancelar_on.png");
+  background-image: url("/img/interior/formulario-cancelar_on.png");
   outline: medium none;
 }
 div.mod-forms fieldset .uploadprogress {
@@ -1650,53 +1650,53 @@ div.mod-menu_secciones ul li a, div.mod-menu_secciones ul li h2 {
 }
 div.mod-menu_secciones ul li.tipo1 a, div.mod-menu_secciones ul li.tipo1 h2, div.mod-menu_secciones ul ul li.tipo1 a, div.mod-menu_secciones ul ul li.tipo1 h2 {
   background-color: #FFFFFF;
-  background-image: url("../img/general/menu-subitem_off.png");
+  background-image: url("/img/general/menu-subitem_off.png");
   background-position: 0 center;
   border-color: #AAABAF;
   color: #6D6C71;
 }
 div.mod-menu_secciones ul li.tipo1 a:hover, div.mod-menu_secciones ul li.tipo1 h2:hover, div.mod-menu_secciones ul ul li.tipo1 a:hover, div.mod-menu_secciones ul ul li.tipo1 h2:hover {
   background-color: #FFFFFF;
-  background-image: url("../img/general/menu-subitem_on.png");
+  background-image: url("/img/general/menu-subitem_on.png");
   border-color: #AAABAF;
   color: #0F3852;
 }
 div.mod-menu_secciones ul li.tipo2 a, div.mod-menu_secciones ul li.tipo2 h2, div.mod-menu_secciones ul ul li.tipo2 a, div.mod-menu_secciones ul ul li.tipo2 h2 {
   background-color: #FFFFFF;
-  background-image: url("../img/general/menu-item_off.png");
+  background-image: url("/img/general/menu-item_off.png");
   border-color: #AAABAF;
   color: #024EA4;
 }
 div.mod-menu_secciones ul li.tipo2 a:hover, div.mod-menu_secciones ul li.tipo2 h2:hover, div.mod-menu_secciones ul ul li.tipo2 a:hover, div.mod-menu_secciones ul ul li.tipo2 h2:hover {
   background-color: #FFFFFF;
-  background-image: url("../img/general/menu-item_on.png");
+  background-image: url("/img/general/menu-item_on.png");
   color: #024EA4;
 }
 div.mod-menu_secciones ul li.tipo2-selected a, div.mod-menu_secciones ul li.tipo2-selected h2, div.mod-menu_secciones ul li.tipo2-selected a:hover, div.mod-menu_secciones ul li.tipo2-selected h2:hover {
   background-color: black;
-  background-image: url("../img/general/menu-item_actual_off.png");
+  background-image: url("/img/general/menu-item_actual_off.png");
   background-position: 0 center;
   border-color: #AAABAF;
   color: #FFFFFF;
 }
 div.mod-menu_secciones ul li.tipo1-selected a, div.mod-menu_secciones ul li.tipo1-selected h2, div.mod-menu_secciones ul li.tipo1-selected a:hover, div.mod-menu_secciones ul li.tipo1-selected h2:hover {
   background-color: #FFFFFF;
-  background-image: url("../img/general/menu-subitem_on.png");
+  background-image: url("/img/general/menu-subitem_on.png");
   border-color: #AAABAF;
   color: #0F3852;
 }
 div.mod-menu_secciones ul li.adicional1 a, div.mod-menu_secciones ul li.adicional1 h2 {
-  background-image: url("../img/general/menu-item_buscador_off.png");
+  background-image: url("/img/general/menu-item_buscador_off.png");
   border-color: #AAABAF;
   color: #6D6C71;
 }
 div.mod-menu_secciones ul li.adicional1 a:hover, div.mod-menu_secciones ul li.adicional1 h2:hover {
-  background-image: url("../img/general/menu-item_buscador_on.png");
+  background-image: url("/img/general/menu-item_buscador_on.png");
   border-color: #AAABAF;
   color: #FFFFFF;
 }
 div.mod-menu_secciones ul li.adicional1-selected a, div.mod-menu_secciones ul li.adicional1-selected a:hover {
-  background-image: url("../img/general/menu-item_buscador_on.png");
+  background-image: url("/img/general/menu-item_buscador_on.png");
   border-color: #AAABAF;
   color: #FFFFFF;
 }
@@ -1857,16 +1857,16 @@ div.page-list a.pager_navigation {
   background-position: center 80%;
 }
 div.page-list a.pager_prev {
-  background: url("../img/general/paginador-anterior-off.png") no-repeat scroll 0 2px transparent;
+  background: url("/img/general/paginador-anterior-off.png") no-repeat scroll 0 2px transparent;
 }
 div.page-list a.pager_prev:hover {
-  background: url("../img/general/paginador-anterior-on.png") no-repeat scroll 0 2px transparent;
+  background: url("/img/general/paginador-anterior-on.png") no-repeat scroll 0 2px transparent;
 }
 div.page-list a.pager_next {
-  background: url("../img/general/paginador-siguiente-off.png") no-repeat scroll 0 2px transparent;
+  background: url("/img/general/paginador-siguiente-off.png") no-repeat scroll 0 2px transparent;
 }
 div.page-list a.pager_next:hover {
-  background: url("../img/general/paginador-siguiente-on.png") no-repeat scroll 0 2px transparent;
+  background: url("/img/general/paginador-siguiente-on.png") no-repeat scroll 0 2px transparent;
 }
 div.page-list a.pager_hidden {
   background-image: none;
@@ -1895,13 +1895,13 @@ div.mod-forms div.forms_big fieldset {
   width: 510px;
 }
 div.borde-exterior {
-  background-image: url("../img/interior/cabecera-nivel1_fondo.png");
+  background-image: url("/img/interior/cabecera-nivel1_fondo.png");
   background-repeat: repeat-x;
   height: 12px;
   width: 519px;
 }
 div.borde-ficha {
-  background-image: url("../img/interior/cabecera-nivel1_fondo.png");
+  background-image: url("/img/interior/cabecera-nivel1_fondo.png");
   background-repeat: repeat-x;
   height: 12px;
   width: 529px;
@@ -1927,16 +1927,16 @@ div.genericfield div.file {
   padding-left: 22px;
 }
 li.model-resaltado-01 a.banner {
-  background-image: url("../img/banners/resaltado-01_off.png");
+  background-image: url("/img/banners/resaltado-01_off.png");
 }
 li.model-resaltado-01 a.banner:hover {
-  background-image: url("../img/banners/resaltado-01_on.png");
+  background-image: url("/img/banners/resaltado-01_on.png");
 }
 li.model-resaltado-02 a.banner {
-  background-image: url("../img/banners/resaltado-02_off.png");
+  background-image: url("/img/banners/resaltado-02_off.png");
 }
 li.model-resaltado-02 a.banner:hover {
-  background-image: url("../img/banners/resaltado-02_on.png");
+  background-image: url("/img/banners/resaltado-02_on.png");
 }
 
 /*********************/
@@ -1984,7 +1984,7 @@ li.model-resaltado-02 a.banner:hover {
   margin-bottom: 15px;
   border: medium outset white;
   font-family: Verdana;
-  /*background-image: url("../imagenes/ugr.png");*/
+  /*background-image: url("/imagenes/ugr.png");*/
 }
 .enlaces_index div {
   float: left;
@@ -1998,31 +1998,31 @@ li.model-resaltado-02 a.banner:hover {
   /* For IE8 and earlier */
 }
 #en_infoInstitucional {
-  background-image: url(../img/inicio/infoInstitucional.png);
+  background-image: url("/img/inicio/infoInstitucional.png");
 }
 #en_personal {
-  background-image: url(../img/inicio/personal.png);
+  background-image: url("/img/inicio/personal.png");
 }
 #en_infoEconomica {
-  background-image: url(../img/inicio/infoEconomica.png);
+  background-image: url("/img/inicio/infoEconomica.png");
 }
 #en_ofertaDemanda {
-  background-image: url(../img/inicio/ofertaDemanda.png);
+  background-image: url("/img/inicio/ofertaDemanda.png");
 }
 #en_claustro {
-  background-image: url(../img/inicio/claustro.png);
+  background-image: url("/img/inicio/claustro.png");
 }
 #en_estudiantes {
-  background-image: url(../img/inicio/estudiantes.png);
+  background-image: url("/img/inicio/estudiantes.png");
 }
 #en_gobierno {
-  background-image: url(../img/inicio/gobierno.png);
+  background-image: url("/img/inicio/gobierno.png");
 }
 #en_rendimiento {
-  background-image: url(../img/inicio/rendimiento.png);
+  background-image: url("/img/inicio/rendimiento.png");
 }
 #en_normativaLegal {
-  background-image: url(../img/inicio/normativaLegal.png);
+  background-image: url("/img/inicio/normativaLegal.png");
 }
 
 /***************************************/
@@ -2115,13 +2115,13 @@ div#banners {
 /****************/
 
 div#cabecera div#head_menu_services li.head_services_item1 {
-  background-image: url(../img/general/cabecera-menu_servicios-acceso.png);
+  background-image: url("/img/general/cabecera-menu_servicios-acceso.png");
 }
 div#cabecera div#head_menu_services li.head_services_item2 {
-  background-image: url(../img/general/cabecera-menu_servicios-biblioteca.png);
+  background-image: url("/img/general/cabecera-menu_servicios-biblioteca.png");
 }
 div#cabecera div#head_menu_services li.head_services_item3 {
-  background-image: url(../img/general/cabecera-menu_servicios-correo.png);
+  background-image: url("/img/general/cabecera-menu_servicios-correo.png");
 }
 div#cabecera div#head_menu_services li {
   min-height: 21px;

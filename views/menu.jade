@@ -21,36 +21,39 @@
 
 
 mixin menu (seleccion)
-	- var first_level="tipo2 item-first_level"
-	- var first_level_selected="selected tipo2-selected item-first_level"
-	- var submenu_display=""
-	- var submenu_hide="display:none;"
-	- var item="tipo1"
-	- var item_selected="tipo1-selected"
-
+	- var show1=false
+	- var show2=false
+	- var show3=false
+	if seleccion=="Personal" || seleccion=="Información Económica" || seleccion=="Perfil del Contratante"
+		- var show1=true
+	if seleccion=="Oferta y Demanda Académica" || seleccion=="Claustro" || seleccion=="Estudiantes"
+		- var show2=true
+	if seleccion=="Gobierno" || seleccion=="Rendimiento"
+		- var show3=true
+		
 	div(id="enlaces_secciones", class="mod-menu_secciones")
 		ul
-			+ first_level_item ("Inicio","/index.html",false)
-			+ first_level_item ("Información Institucional","/infoInstitucional.html",false)
-			+ first_level_menu ("Administración","menu_administración",false)
-				+ second_level_item ("Personal","/personal.html",false)
-				+ second_level_item ("Información Económica","/infoEconomica.html",false)
-				+ second_level_item ("Perfil del Contratante","/perfilContratante.html",false)
-			+ first_level_menu ("Docencia","menu_docencia",false)
-				+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",false)
-				+ second_level_item ("Claustro","/claustro.html",false)
-				+ second_level_item ("Estudiantes","/estudiantes.html",false)
-			+ first_level_menu ("Gestión e Investigación","menu_gestion",false)
-				+ second_level_item ("Gobierno","/gobierno.html",false)
-				+ second_level_item ("Rendimiento","/rendimiento.html",false)
-			+ first_level_item ("Normativa Legar","/normativa.html",false)
-			+ first_level_item ("Solicitud de Infformación","/solicitudInfo.html",false)
+			+ first_level_item ("Inicio","/index.html",seleccion)
+			+ first_level_item ("Información Institucional","/infoInstitucional.html",seleccion)
+			+ first_level_menu ("Administración","menu_administración",show1)
+				+ second_level_item ("Personal","/personal.html",seleccion)
+				+ second_level_item ("Información Económica","/infoEconomica.html",seleccion)
+				+ second_level_item ("Perfil del Contratante","/perfilContratante.html",seleccion)
+			+ first_level_menu ("Docencia","menu_docencia",show2)
+				+ second_level_item ("Oferta y Demanda Académica","/ofertaDemanda.html",seleccion)
+				+ second_level_item ("Claustro","/claustro.html",seleccion)
+				+ second_level_item ("Estudiantes","/estudiantes.html",seleccion)
+			+ first_level_menu ("Gestión e Investigación","menu_gestion",show3)
+				+ second_level_item ("Gobierno","/gobierno.html",seleccion)
+				+ second_level_item ("Rendimiento","/rendimiento.html",seleccion)
+			+ first_level_item ("Normativa Legar","/normativa.html",seleccion)
+			+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
 
 
 
 //First level Item			
 mixin first_level_item (name,link,selected)
-	if selected
+	if selected==name
 		li(class="selected tipo2-selected item-first_level")
 			a(href="#{link}") #{name}
 	else
@@ -73,7 +76,7 @@ mixin first_level_menu (name,menu_id,selected)
 
 //Item in a second level
 mixin second_level_item (name,link,selected)
-	if selected
+	if selected==name
 		- var item_class="tipo1-selected"
 	else
 		- var item_class="tipo1"

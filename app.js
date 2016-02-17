@@ -31,7 +31,6 @@ var http = require('http');
 var logger = require('morgan');
 var path = require('path');
 
-
 var routes=require('./app/routes.js');
 
 
@@ -40,6 +39,7 @@ var cargar = require('./lib/cargar');
 // Prueba de escritura de JSON recuperado de API
 //var escribir = require(__dirname+'/lib/putJSON');
 //escribir();
+
 
 // Crea aplicación web con Express
 var app = express();
@@ -50,6 +50,7 @@ config = cargar('./config/config.json');
 module.exports.config = config;
 
 // Archivos de configuración de cada unas de las páginas
+
 module.exports.personal = cargar('./config/personal.json');
 module.exports.infoEconomica = cargar('./config/infoEconomica.json');
 module.exports.ofertaDemanda = cargar('./config/ofertaDemanda.json');
@@ -61,7 +62,7 @@ module.exports.normativaLegal = cargar('./config/normativaLegal.json');
 module.exports.prueba = cargar('./config/prueba.json');
 
 //will set all roots
-//TODO:maybe 
+//TODO:maybe use a middleware
 routes(app);
 
 // Variables de entorno (puerto de escucha y dirección IP)
@@ -83,7 +84,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 //Manejador de enrutado
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // Manejador de errores:
 app.use(function(req, res, next) {
   res.status(404).render('error_404', {

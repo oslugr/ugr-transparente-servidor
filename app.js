@@ -120,10 +120,10 @@ app.get('/archivos/normativaLegal', function(req, res) {
   res.send(cargar(root + '/config/normativaLegal.json'));
 });
 
-
-// Variables de entorno (puerto de escucha y dirección IP)
-app.set('port', process.env.PORT);
-app.set('ip', process.env.IP);
+// Variables de entorno
+app.set('port', process.env.PORT || 3000);
+app.set('ip', process.env.IP || "127.0.0.1");
+app.set('env', process.env.ENV);
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));
 // Motor de visualización
@@ -140,7 +140,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 //Manejador de enrutado
-// app.use(express.static('public'));
+if (app.get('env') == "dev") {
+  app.use(express.static('public'));
+}
 // Manejador de errores:
 app.use(function(req, res, next) {
   res.status(404).render('error_404', {

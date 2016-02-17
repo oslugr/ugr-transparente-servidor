@@ -7,6 +7,9 @@ coverage
 # Directorio de librerías instaladas con Bower
 public/lib
 
+# Directorios de archivos binarios
+imagenes img doc graph
+
 # Logs y copias de seguridad
 *.log
 *~

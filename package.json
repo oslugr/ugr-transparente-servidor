@@ -59,9 +59,9 @@
     "npm": ">=2.14.12"
   },
   "scripts": {
-    "start": "ENV=prod pm2 start app.js",
+    "start": "ENV=prod pm2 start app.js && pm2 save",
     "stop": "pm2 stop app",
-    "restart": "ENV=prod pm2 restart app.js",
+    "restart": "ENV=prod pm2 restart app.js && pm2 save",
     "test": "istanbul cover _mocha ./test --recursive",
     "dev": "ENV=dev pm2 start app.js",
     "rdev": "ENV=dev pm2 restart app.js",
@@ -69,6 +69,7 @@
     "postinstall": "bower install",
     "pretest": "bower install",
     "check": "npm-check",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "save": "pm2 save"
   }
 }

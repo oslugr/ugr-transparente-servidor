@@ -8,7 +8,7 @@ coverage
 public/lib
 
 # Directorios de archivos binarios
-imagenes img doc graph
+public/imagenes public/img public/doc public/graph
 
 # Logs y copias de seguridad
 *.log

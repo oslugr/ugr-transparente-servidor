@@ -59,7 +59,6 @@ module.exports.estudiantes = cargar('./config/estudiantes.json');
 module.exports.gobierno = cargar('./config/gobierno.json');
 module.exports.rendimiento = cargar('./config/rendimiento.json');
 module.exports.normativaLegal = cargar('./config/normativaLegal.json');
-module.exports.prueba = cargar('./config/prueba.json');
 
 //will set all roots
 //TODO:maybe use a middleware

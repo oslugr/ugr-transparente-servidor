@@ -1,6 +1,6 @@
 {
   "archivos": [
-    "config.json",
+    "config.js",
     "personal.json",
     "infoEconomica.json",
     "ofertaDemanda.json",
@@ -8,7 +8,9 @@
     "estudiantes.json",
     "gobierno.json",
     "rendimiento.json",
-    "normativaLegal.json"
+    "normativaLegal.json",
+    "index.json",
+    "infoInstitucional.json"
   ],
   "categorias": [{
     "descripcion": "Sección Administración",

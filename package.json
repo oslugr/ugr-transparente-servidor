@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.0",
+
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "express": "^4.13.3",
@@ -44,13 +45,13 @@
   },
   "devDependencies": {
     "bower": "^1.7.7",
+    "chai": "^3.5.0",
     "coveralls": "^2.11.4",
     "istanbul": "^0.4.0",
     "jade": "^1.11.0",
     "mocha": "^2.4.5",
     "npm-check": "^4.1.4",
     "pm2": "^1.0.1",
-    "should": "^8.2.2",
     "supertest": "^1.2.0",
     "underscore": "^1.8.3"
   },

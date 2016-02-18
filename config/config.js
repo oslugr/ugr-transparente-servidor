@@ -22,7 +22,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 var cargar = require('../lib/cargar');
 
 module.exports={
-    //nombre: "config",
     servidor: "http://opendata.ugr.es/",
     puerto: 3000,
     personal: cargar('./config/personal.json'),

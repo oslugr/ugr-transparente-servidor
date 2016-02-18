@@ -2,6 +2,7 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+  Copyright (C) 2016 Andrés Ortiz Corrales
 
   This file is part of UGR Transparente.
 
@@ -21,40 +22,40 @@
 
 
 //Variable para las configuraciones
-var conf = require('../../app');
+var config = require('../../config/config');
 
 // Gestión de la pagina de oferta y demanda academica
 exports.ofertaDemanda = function(req, res) {
-  var ofertaDemanda = conf.ofertaDemanda;
+    var ofertaDemanda = config.ofertaDemanda;
 
-  res.render(ofertaDemanda.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: ofertaDemanda.nombre,
-    contenido: ofertaDemanda.contenido,
-    datos: ofertaDemanda.datos
-  });
+    res.render(ofertaDemanda.plantilla, {
+        servidor: config.servidor,
+        seccion: ofertaDemanda.nombre,
+        contenido: ofertaDemanda.contenido,
+        datos: ofertaDemanda.datos
+    });
 };
 
 // Gestión de la pagina de claustro
 exports.claustro = function(req, res) {
-  var claustro = conf.claustro;
+    var claustro = config.claustro;
 
-  res.render(claustro.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: claustro.nombre,
-    contenido: claustro.contenido,
-    datos: claustro.datos
-  });
+    res.render(claustro.plantilla, {
+        servidor: config.servidor,
+        seccion: claustro.nombre,
+        contenido: claustro.contenido,
+        datos: claustro.datos
+    });
 };
 
 // Gestión de la pagina de estudiantes
 exports.estudiantes = function(req, res) {
-  var estudiantes = conf.estudiantes;
+    var estudiantes = config.estudiantes;
 
-  res.render(estudiantes.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: estudiantes.nombre,
-    contenido: estudiantes.contenido,
-    datos: estudiantes.datos
-  });
+    res.render(estudiantes.plantilla, {
+        servidor: config.servidor,
+        seccion: estudiantes.nombre,
+        contenido: estudiantes.contenido,
+        datos: estudiantes.datos
+    });
 };

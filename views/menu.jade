@@ -31,7 +31,7 @@ mixin menu (seleccion)
 			- var show2=true
 		if seleccion=="Gobierno" || seleccion=="Rendimiento"
 			- var show3=true
-			
+
 		div(id="enlaces_secciones", class="mod-menu_secciones")
 			ul
 				+ first_level_item ("Inicio","/index.html",seleccion)
@@ -51,7 +51,7 @@ mixin menu (seleccion)
 				+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
 
 
-//First level Item			
+//First level Item
 mixin first_level_item (name,link,selected)
 	if selected==name
 		li(class="selected tipo2-selected item-first_level")

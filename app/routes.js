@@ -33,7 +33,6 @@ var buscador = require('./routes/buscador');
 var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
 
-var cargar = require('../lib/cargar');
 
 //Generate all the routes
 module.exports=function(app){
@@ -90,5 +89,4 @@ module.exports=function(app){
     app.get('/archivos/normativaLegal', function(req, res) {
       res.send(cargar('../config/normativaLegal.json'));
     });
-    
 };

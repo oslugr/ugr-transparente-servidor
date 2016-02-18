@@ -24,8 +24,8 @@ var _ = require("underscore"),
   request = require("supertest"),
   existe = require(__dirname + "/../lib/existe"),
   cargar = require(__dirname + "/../lib/cargar"),
-  app = require(__dirname + "/../app.js");
-acceso = cargar(__dirname + "/../test/acceso.json");
+  app = require(__dirname + "/../app.js"),
+  acceso = cargar(__dirname + "/../test/acceso.json");
 
 describe('Comprobar existencia de archivos JSON de datos', function() {
   _.each(acceso.archivos, function(valor) {
@@ -42,7 +42,7 @@ describe('Test de carga y formato de JSONs', function() {
 
     describe('Carga de archivo', function() {
       it('Cargado', function() {
-         should.exist(config); //cambiar esto
+        should.exist(config); //cambiar esto
       });
     });
 
@@ -111,7 +111,7 @@ describe('Test de carga y formato de JSONs', function() {
         });
 
         describe('index:', function() {
-            this.timeout(4000);
+          this.timeout(4000);
           it('nombre: \"Inicio\"', function() {
             config.index.nombre.should.be.exactly("Inicio");
           });
@@ -208,7 +208,7 @@ describe('Test de carga y formato de JSONs', function() {
 describe('Prueba de acceso', function() {
   _.each(acceso.elemento, function(valor) {
     it(valor.nombre, function(done) {
-        this.timeout(4000);
+      this.timeout(4000);
       request(app)
         .get(valor.ruta)
         .expect(200)

@@ -2,6 +2,7 @@
 UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+Copyright (C) 2016 Andrés Ortiz Corrales
 
 This file is part of UGR Transparente.
 
@@ -31,42 +32,28 @@ var http = require('http');
 var logger = require('morgan');
 var path = require('path');
 
-var routes=require('./app/routes.js');
-
-
-// Librerías
-var cargar = require('./lib/cargar');
-// Prueba de escritura de JSON recuperado de API
-//var escribir = require(__dirname+'/lib/putJSON');
-//escribir();
-
+var routes=require('./app/routes');
+var config=require('./config/config');
 
 // Crea aplicación web con Express
 var app = express();
 
 
-// Carga y exporta el archivo de configuración de la aplicación
-config = cargar('./config/config.json');
-module.exports.config = config;
+
 
 // Archivos de configuración de cada unas de las páginas
 
-module.exports.personal = cargar('./config/personal.json');
-module.exports.infoEconomica = cargar('./config/infoEconomica.json');
-module.exports.ofertaDemanda = cargar('./config/ofertaDemanda.json');
-module.exports.claustro = cargar('./config/claustro.json');
-module.exports.estudiantes = cargar('./config/estudiantes.json');
-module.exports.gobierno = cargar('./config/gobierno.json');
-module.exports.rendimiento = cargar('./config/rendimiento.json');
-module.exports.normativaLegal = cargar('./config/normativaLegal.json');
 
 //will set all roots
 //TODO:maybe use a middleware
 routes(app);
 
-// Variables de entorno (puerto de escucha y dirección IP)
-app.set('port', process.env.PORT);
-app.set('ip', process.env.IP);
+// Variables de entorno
+app.set('port', process.env.PORT || 3000);
+app.set('ip', process.env.IP || "127.0.0.1");
+app.set('env', process.env.ENV);
+
+
 // Directorio con las plantillas
 app.set('views', path.join(__dirname, 'views'));
 // Motor de visualización
@@ -83,14 +70,16 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 //Manejador de enrutado
-// app.use(express.static('public'));
+if (app.get('env') == "dev") {
+  app.use(express.static('public'));
+}
 // Manejador de errores:
 app.use(function(req, res, next) {
   res.status(404).render('error_404', {
     titulo: config.error.titulo,
     texto: config.error.texto
   });
-});
+});   
 // Creación del servidor
 http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
   console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));

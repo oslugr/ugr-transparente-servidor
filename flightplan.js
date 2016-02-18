@@ -37,12 +37,12 @@ plan.remote(function(remote) {
 
   remote.with('cd ugr-transparente-servidor', function() {
     remote.log('Deteniendo el servidor...');
-    remote.exec('npm run-script kill');
+    remote.exec('npm stop');
     remote.log('Obteniendo cambios...');
     remote.exec('git pull');
     remote.log('Instalando dependencias...');
-    remote.exec('sudo npm install');
+    remote.exec('npm install');
     remote.log('Arrancando el servidor...');
-    remote.exec('sudo npm start');
+    remote.exec('npm start');
   });
 });

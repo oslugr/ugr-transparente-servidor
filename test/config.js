@@ -1,3 +1,6 @@
+var express = require('express');
+
+
 module.exports = {
 	archivosJSON: [
 		"personal.json",
@@ -27,7 +30,8 @@ module.exports = {
 		'/mapaWeb.html',
 		'/buscador.html',
 		'/calendario.html',
-		'/calendarioSolo.html'
+		'/calendarioSolo.html',
+		'/ofertaDemanda.html'
 	],
 	archivosBuscador: [
 		'/archivos/personal',
@@ -38,5 +42,20 @@ module.exports = {
 		'/archivos/gobierno',
 		'/archivos/rendimiento',
 		'/archivos/normativaLegal'
-	]
+	],
+	initServer: function(done, dev) {
+		if (dev === true) process.env.ENV = "dev";
+		else process.env.ENV="prod";
+		var app = express();
+		var serverConfig = require('../app/serverConfig');
+		var routes = require('../app/routes');
+		serverConfig(app);
+		routes(app);
+
+		server = app.listen(app.get('port'), app.get('ip'), function() {
+			done(app, server);
+		});
+
+
+	}
 };

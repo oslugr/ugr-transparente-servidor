@@ -20,16 +20,20 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-var http = require('http');
-var app = require('./app/server'); //creates server
+var express = require('express');
+var app = express();
+
+var serverConfig = require('./app/serverConfig'); //creates server
 var routes = require('./app/routes');
 
+//will set server configuration
+serverConfig(app);
 //will set all routes
 routes(app);
 
 // Creación del servidor
-http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
+server = app.listen(app.get('port'), app.get('ip'), function() {
 	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
-module.exports = app;
+module.exports = server;

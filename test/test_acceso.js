@@ -22,23 +22,22 @@
 var assert = require('chai').assert;
 var request = require('supertest');
 var async = require('async');
-var http = require('http');
 
 var config = require('./config.js');
 
-
 describe('Pruebas de acceso', function() {
+	var server;
 	var app;
-
 	before(function(done) {
 		this.timeout(3000);
-		app = require('../app/server'); //creates server
-		var routes = require('../app/routes');
-		routes(app);
-
-		http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
+		config.initServer(function(app2, server2) {
+			server = server2;
+			app = app2;
 			done();
-		});
+		}, true);
+	});
+	after(function() {
+		server.close();
 	});
 
 	it("Acceso a páginas", function(done) {
@@ -52,6 +51,13 @@ describe('Pruebas de acceso', function() {
 					callback();
 				});
 		}, function() {
+			done();
+		});
+	});
+	it("Acceso a recursos", function(done) {
+		//TODO: check all resources
+		request(app).get('/imagenes/ugr.png').expect(200).end(function(err, res) {
+			assert.notOk(err);
 			done();
 		});
 	});
@@ -76,6 +82,31 @@ describe('Pruebas de acceso', function() {
 					callback();
 				});
 		}, function() {
+			done();
+		});
+	});
+});
+
+
+
+describe("Pruebas en producción", function() {
+	var server;
+	var app;
+	before(function(done) {
+		this.timeout(3000);
+		config.initServer(function(app2, server2) {
+			server = server2;
+			app = app2;
+			done();
+		}, false);
+	});
+	after(function() {
+		server.close();
+	});
+
+	it("Configuración de produccion", function(done) {
+		request(app).get('/imagenes/ugr.png').expect(404).end(function(err, res) {
+			assert.notOk(err);
 			done();
 		});
 	});

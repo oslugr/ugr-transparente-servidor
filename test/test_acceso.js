@@ -22,14 +22,23 @@
 var assert = require('chai').assert;
 var request = require('supertest');
 var async = require('async');
+var http = require('http');
 
 var config = require('./config.js');
 
 
 describe('Pruebas de acceso', function() {
 	var app;
-	before(function() {
-		app = require('../app.js');
+
+	before(function(done) {
+		this.timeout(3000);
+		app = require('../app/server'); //creates server
+		var routes = require('../app/routes');
+		routes(app);
+
+		http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
+			done();
+		});
 	});
 
 	it("Acceso a páginas", function(done) {

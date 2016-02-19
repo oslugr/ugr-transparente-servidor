@@ -19,10 +19,6 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-//Variable para las configuraciones
-var conf = require('../../app');
-
 // Gestión de la pagina del buscador
 exports.buscador = function(req, res) {
 

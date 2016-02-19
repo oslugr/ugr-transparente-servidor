@@ -74,6 +74,7 @@ describe('Pruebas de acceso', function() {
 	it("Archivos de buscador", function(done) {
 		this.timeout(5000);
 		async.eachSeries(config.archivosBuscador, function(url, callback) {
+			//TODO: probar varios archivos
 			request(app).get(url)
 				.expect(200)
 				.expect('Content-Type', "application/json; charset=utf-8")

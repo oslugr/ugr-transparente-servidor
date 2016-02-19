@@ -22,52 +22,27 @@
 var assert = require('chai').assert;
 var _ = require("underscore");
 
-var config=require('./config.js');
+var config = require('./config.js');
 
 describe('Archivos de configuración', function() {
     //Compueba que existen los archivos JSON
-    it("Carga Archivos JSON",function(){
-        var existe=require('../lib/existe');
-        var cargar=require('../lib/cargar');
+    it("Carga Archivos JSON", function() {
+        var existe = require('../lib/existe');
+        var cargar = require('../lib/cargar');
         _.each(config.archivosJSON, function(valor) {
-            assert.ok(existe('./config/'+valor));
-            var file=cargar('./config/'+valor);
+            assert.ok(existe('./config/' + valor));
+            var file = cargar('./config/' + valor);
             assert.ok(file);
         });
     });
-    it("Archivo de configuración",function(){
-        var config2=require('../config/config');
+    it("Archivo de configuración", function() {
+        var config2 = require('../config/config');
         assert.ok(config2);
         assert.ok(config2.puerto);
         assert.ok(config2.servidor);
-    });  
-});
-
-/*
-describe('Prueba de acceso', function() {
-  _.each(acceso.elemento, function(valor) {
-    it(valor.nombre, function(done) {
-      this.timeout(4000);
-      request(app)
-        .get(valor.ruta)
-        .expect(200)
-        .end(function(err, res) {
-          if (err) {
-            throw err;
-          }
-          done();
-        });
+        for (var i in config2) assert.ok(config2[i]);
     });
-  });
-  it("Error", function(done) {
-    request(app)
-      .get("/foo")
-      .expect(404)
-      .end(function(err, res) {
-        if (err) {
-          throw err;
-        }
-        done();
-      });
-  });
-});*/
+    it.skip("Formato de archivos de datos",function(done){
+        done(new Error('Test Not implemented'));
+    });
+});

@@ -39,11 +39,6 @@ var config=require('./config/config');
 var app = express();
 
 
-
-
-// Archivos de configuración de cada unas de las páginas
-
-
 //will set all roots
 //TODO:maybe use a middleware
 routes(app);

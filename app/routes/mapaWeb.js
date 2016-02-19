@@ -21,7 +21,7 @@
 
 
 //Variable para las configuraciones
-var conf = require('../../config/config');
+var config = require('../../config/config');
 
 exports.mapaWeb = function(req, res) {
   res.render('mapaWeb', {
@@ -44,7 +44,7 @@ exports.mapaWeb = function(req, res) {
       }, {
         nombre: "Información Económica",
         enlace: "infoEconomica.html",
-        contenido: confif.infoEconomica.contenido
+        contenido: config.infoEconomica.contenido
       }, {
         nombre: "Perfil del Contratante",
         enlace: "perfilContratante.html",

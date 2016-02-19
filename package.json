@@ -36,7 +36,6 @@
   },
   "dependencies": {
     "body-parser": "^1.15.0",
-
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "express": "^4.13.3",
@@ -44,6 +43,7 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
+    "async": "^1.5.2",
     "bower": "^1.7.7",
     "chai": "^3.5.0",
     "coveralls": "^2.11.4",
@@ -63,7 +63,7 @@
     "start": "ENV=prod pm2 start app.js && pm2 save",
     "stop": "pm2 stop app",
     "restart": "ENV=prod pm2 restart app.js && pm2 save",
-    "test": "istanbul cover _mocha ./test --recursive",
+    "test": "istanbul cover _mocha",
     "dev": "ENV=dev node app.js",
     "rdev": "ENV=dev pm2 restart app.js",
     "deploy": "fly transparente",

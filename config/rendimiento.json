@@ -91,16 +91,23 @@
 		"tipo": 1,
 		"dataset": "Datos sobre satisfacción de los estudiantes",
 		"id_dataset": "satisfaccion-estudiantes",
-		"nombre": "Egresados 2011: satisfacción valoración de oferta formativa",
+		"nombre": "Satisfacción y valoración: egresados 2015",
+		"url": "8d5c0820-a459-4d40-b300-35845b867c93",
+		"descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/8d5c0820-a459-4d40-b300-35845b867c93/download/satisfaccionyvaloraciondeofertaformativaypracticas.csv"
+	}, {
+		"tipo": 1,
+		"dataset": "Datos sobre satisfacción de los estudiantes",
+		"id_dataset": "satisfaccion-estudiantes",
+		"nombre": "Satisfacción y valoración: egresados máster 2015",
 		"url": "00032bf5-a184-451a-9175-0edcb7d000fc",
 		"descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/00032bf5-a184-451a-9175-0edcb7d000fc/download/satisfaccionegresados2011general.csv"
 	}, {
 		"tipo": 1,
 		"dataset": "Datos sobre satisfacción de los estudiantes",
 		"id_dataset": "satisfaccion-estudiantes",
-		"nombre": "Egresados Máster 2011: satisfacción y valoración de oferta formativa",
-		"url": "ac6b9d47-b735-498d-aeb7-38dd27bc7a3c",
-		"descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/ac6b9d47-b735-498d-aeb7-38dd27bc7a3c/download/satisfaccionyvaloraciondelaofertaformativaegresadosmaster.csv"
+		"nombre": "Evaluación del profesorado 2014/2015",
+		"url": "225b6d24-b2b5-402c-a7ee-0e41f286b1cd",
+		"descarga": "91c6002e-1892-4b67-adb4-ab0c5bd6daab/resource/225b6d24-b2b5-402c-a7ee-0e41f286b1cd/download/evaluaciondelprofesorado.csv"
 	}, {
 		"tipo": 1,
 		"dataset": "Ranking",

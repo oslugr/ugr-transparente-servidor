@@ -24,7 +24,7 @@
 
 exports.solicitudInfo = function(req, res) {
 
-  res.render('solicitudInfo', {
-    seccion: 'Solicitud de Información'
-  });
+	res.render('solicitudInfo', {
+		seccion: 'Solicitud de Información'
+	});
 };

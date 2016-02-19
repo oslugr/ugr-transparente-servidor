@@ -1,128 +1,128 @@
 {
-  "nombre": "Información Económica",
-  "plantilla": "infoEconomica",
-  "contenido": [{
-    "tipo": 3,
-    "seccion": "2016",
-    "encabezado": "Informes sobre información económica 2016",
-    "link": "informes-2016",
-    "texto": "Informes sobre la información económica para el año 2016 de la Universidad de Granada."
-  }, {
-    "tipo": 2,
-    "seccion": "2015",
-    "encabezado": "Datos sobre información económica 2015",
-    "link": "datos-2015",
-    "texto": "Datos sobre la información económica para el año 2015 de la Universidad de Granada."
-  }, {
-    "tipo": 2,
-    "seccion": "2014",
-    "encabezado": "Datos sobre información económica 2014",
-    "link": "datos-2014",
-    "texto": "Datos sobre la información económica para el año 2014 de la Universidad de Granada."
-  }, {
-    "tipo": 3,
-    "seccion": "",
-    "encabezado": "Memoria de Cuentas Anuales",
-    "link": "memoria-cuentas-anuales",
-    "texto": "Memoria explicativa de las cuentas anuales del presupuesto de la Universidad de Granada."
-  }, {
-    "tipo": 3,
-    "seccion": "",
-    "encabezado": "Auditoría",
-    "link": "auditoria",
-    "texto": "Relación de informes de auditoría externa de las cuentas anuales de la Universidad de Granada."
-  }, {
-    "tipo": 2,
-    "seccion": "",
-    "encabezado": "Perfil del Contratante",
-    "link": "perfil-contratante",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "seccion": "",
-    "encabezado": "Convenios",
-    "link": "convenios",
-    "texto": ""
-  }],
-  "datos": [{
-    "tipo": 3,
-    "dataset": "Informes sobre información económica 2016",
-    "nombre": "Presupuesto",
-    "url": "presupuesto_2016.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre información económica 2016",
-    "nombre": "Estado de Ingresos",
-    "url": "estado_ingresos_2016.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre información económica 2016",
-    "nombre": "Estado de Gastos",
-    "url": "estado_gastos_2016.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre información económica 2016",
-    "nombre": "Cuotas patronales a la Seguridad Social",
-    "url": "cuota_patronal_2016.pdf"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2015",
-    "nombre": "Presupuesto",
-    "url": "http://opendata.ugr.es/dataset/presupuesto-2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2015",
-    "nombre": "Ingresos",
-    "url": "http://opendata.ugr.es/dataset/desglose-ingresos-2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2015",
-    "nombre": "Gastos",
-    "url": "http://opendata.ugr.es/dataset/desglose-gastos-2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2014",
-    "nombre": "Presupuesto",
-    "url": "http://opendata.ugr.es/dataset/presupuesto-2014"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2014",
-    "nombre": "Ingresos",
-    "url": "http://opendata.ugr.es/dataset/desglose-ingresos-2014"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre información económica 2014",
-    "nombre": "Gastos",
-    "url": "http://opendata.ugr.es/dataset/desglose-gastos-2014"
-  }, {
-    "tipo": 3,
-    "dataset": "Memoria de Cuentas Anuales",
-    "nombre": "Memoria cuentas anuales 2014",
-    "url": "memoria_cuentas_anuales_2014.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Auditoría",
-    "nombre": "Informe de auditoría de cuentas anuales 2014",
-    "url": "informe_auditoria_cuentas_anuales_2014.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Auditoría",
-    "nombre": "Informe de auditoría de cuentas anuales 2013",
-    "url": "informe_auditoria_cuentas_anuales_2013.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Auditoría",
-    "nombre": "Informe de auditoría de cuentas anuales 2012",
-    "url": "informe_auditoria_cuentas_anuales_2012.pdf"
-  }, {
-    "tipo": 2,
-    "dataset": "Perfil del Contratante",
-    "nombre": "Últimos Anuncios",
-    "url": "http://econtra.ugr.es/licitacion/UltimosExpte.do"
-  }, {
-    "tipo": 2,
-    "dataset": "Convenios",
-    "nombre": "Buscador de Convenios de la Universidad de Granada",
-    "url": "http://oficinavirtual.ugr.es/convenios/index.jsp"
-  }]
+	"nombre": "Información Económica",
+	"plantilla": "infoEconomica",
+	"contenido": [{
+		"tipo": 3,
+		"seccion": "2016",
+		"encabezado": "Informes sobre información económica 2016",
+		"link": "informes-2016",
+		"texto": "Informes sobre la información económica para el año 2016 de la Universidad de Granada."
+	}, {
+		"tipo": 2,
+		"seccion": "2015",
+		"encabezado": "Datos sobre información económica 2015",
+		"link": "datos-2015",
+		"texto": "Datos sobre la información económica para el año 2015 de la Universidad de Granada."
+	}, {
+		"tipo": 2,
+		"seccion": "2014",
+		"encabezado": "Datos sobre información económica 2014",
+		"link": "datos-2014",
+		"texto": "Datos sobre la información económica para el año 2014 de la Universidad de Granada."
+	}, {
+		"tipo": 3,
+		"seccion": "",
+		"encabezado": "Memoria de Cuentas Anuales",
+		"link": "memoria-cuentas-anuales",
+		"texto": "Memoria explicativa de las cuentas anuales del presupuesto de la Universidad de Granada."
+	}, {
+		"tipo": 3,
+		"seccion": "",
+		"encabezado": "Auditoría",
+		"link": "auditoria",
+		"texto": "Relación de informes de auditoría externa de las cuentas anuales de la Universidad de Granada."
+	}, {
+		"tipo": 2,
+		"seccion": "",
+		"encabezado": "Perfil del Contratante",
+		"link": "perfil-contratante",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"seccion": "",
+		"encabezado": "Convenios",
+		"link": "convenios",
+		"texto": ""
+	}],
+	"datos": [{
+		"tipo": 3,
+		"dataset": "Informes sobre información económica 2016",
+		"nombre": "Presupuesto",
+		"url": "presupuesto_2016.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Informes sobre información económica 2016",
+		"nombre": "Estado de Ingresos",
+		"url": "estado_ingresos_2016.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Informes sobre información económica 2016",
+		"nombre": "Estado de Gastos",
+		"url": "estado_gastos_2016.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Informes sobre información económica 2016",
+		"nombre": "Cuotas patronales a la Seguridad Social",
+		"url": "cuota_patronal_2016.pdf"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2015",
+		"nombre": "Presupuesto",
+		"url": "http://opendata.ugr.es/dataset/presupuesto-2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2015",
+		"nombre": "Ingresos",
+		"url": "http://opendata.ugr.es/dataset/desglose-ingresos-2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2015",
+		"nombre": "Gastos",
+		"url": "http://opendata.ugr.es/dataset/desglose-gastos-2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2014",
+		"nombre": "Presupuesto",
+		"url": "http://opendata.ugr.es/dataset/presupuesto-2014"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2014",
+		"nombre": "Ingresos",
+		"url": "http://opendata.ugr.es/dataset/desglose-ingresos-2014"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre información económica 2014",
+		"nombre": "Gastos",
+		"url": "http://opendata.ugr.es/dataset/desglose-gastos-2014"
+	}, {
+		"tipo": 3,
+		"dataset": "Memoria de Cuentas Anuales",
+		"nombre": "Memoria cuentas anuales 2014",
+		"url": "memoria_cuentas_anuales_2014.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Auditoría",
+		"nombre": "Informe de auditoría de cuentas anuales 2014",
+		"url": "informe_auditoria_cuentas_anuales_2014.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Auditoría",
+		"nombre": "Informe de auditoría de cuentas anuales 2013",
+		"url": "informe_auditoria_cuentas_anuales_2013.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Auditoría",
+		"nombre": "Informe de auditoría de cuentas anuales 2012",
+		"url": "informe_auditoria_cuentas_anuales_2012.pdf"
+	}, {
+		"tipo": 2,
+		"dataset": "Perfil del Contratante",
+		"nombre": "Últimos Anuncios",
+		"url": "http://econtra.ugr.es/licitacion/UltimosExpte.do"
+	}, {
+		"tipo": 2,
+		"dataset": "Convenios",
+		"nombre": "Buscador de Convenios de la Universidad de Granada",
+		"url": "http://oficinavirtual.ugr.es/convenios/index.jsp"
+	}]
 }

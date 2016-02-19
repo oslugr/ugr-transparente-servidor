@@ -25,24 +25,24 @@ var _ = require("underscore");
 var config = require('./config.js');
 
 describe('Archivos de configuración', function() {
-    //Compueba que existen los archivos JSON
-    it("Carga Archivos JSON", function() {
-        var existe = require('../lib/existe');
-        var cargar = require('../lib/cargar');
-        _.each(config.archivosJSON, function(valor) {
-            assert.ok(existe('./config/' + valor));
-            var file = cargar('./config/' + valor);
-            assert.ok(file);
-        });
-    });
-    it("Archivo de configuración", function() {
-        var config2 = require('../config/config');
-        assert.ok(config2);
-        assert.ok(config2.puerto);
-        assert.ok(config2.servidor);
-        for (var i in config2) assert.ok(config2[i]);
-    });
-    it.skip("Formato de archivos de datos",function(done){
-        done(new Error('Test Not implemented'));
-    });
+	//Compueba que existen los archivos JSON
+	it("Carga Archivos JSON", function() {
+		var existe = require('../lib/existe');
+		var cargar = require('../lib/cargar');
+		_.each(config.archivosJSON, function(valor) {
+			assert.ok(existe('./config/' + valor));
+			var file = cargar('./config/' + valor);
+			assert.ok(file);
+		});
+	});
+	it("Archivo de configuración", function() {
+		var config2 = require('../config/config');
+		assert.ok(config2);
+		assert.ok(config2.puerto);
+		assert.ok(config2.servidor);
+		for (var i in config2) assert.ok(config2[i]);
+	});
+	it.skip("Formato de archivos de datos", function(done) {
+		done(new Error('Test Not implemented'));
+	});
 });

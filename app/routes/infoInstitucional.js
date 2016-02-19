@@ -27,10 +27,10 @@ var config = require('../../config/config');
 // Gestión de la pagina de la información institucional
 
 exports.infoInstitucional = function(req, res) {
-  var pres = config.infoInstitucional;
+	var pres = config.infoInstitucional;
 
-  res.render(pres.plantilla, {
-    seccion: pres.titulo,
-    texto: pres.texto
-  });
+	res.render(pres.plantilla, {
+		seccion: pres.titulo,
+		texto: pres.texto
+	});
 };

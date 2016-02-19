@@ -1,211 +1,211 @@
 {
-  "nombre": "Normativa Legal",
-  "plantilla": "normativaLegal",
-  "contenido": [{
-    "tipo": 2,
-    "encabezado": "Estatutos",
-    "link": "estatutos",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Gestión Económica",
-    "link": "gestion-economica",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Ordenación Académica",
-    "link": "ordenacion-academica",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Gestión de Personal Docente e Investigador",
-    "link": "gestion-pdi",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Gestión de Personal de Administración y Servicios",
-    "link": "gestion-pas",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Plan Propio",
-    "link": "plan-propio",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "encabezado": "Otras Normativas",
-    "link": "otras-normativas",
-    "texto": ""
-  }],
-  "datos": [{
-    "tipo": 2,
-    "dataset": "Estatutos",
-    "nombre": "Estatutos",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/ugr/estatutos"
-  }, {
-    "tipo": 2,
-    "dataset": "Estatutos",
-    "nombre": "Reglamento de la Delegación General de Estudiantes",
-    "url": "http://ve.ugr.es/pages/delegacion/reglamento_dge"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión Económica",
-    "nombre": "Manuales e Instrucciones",
-    "url": "http://ofcontrolinterno.ugr.es/pages/manuales_instrucciones"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión Económica",
-    "nombre": "Programación de la Oficina de Control Interno 2015",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/ugr/nre923"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión Económica",
-    "nombre": "Plan de Mecenazgo",
-    "url": "http://secretariageneral.ugr.es/bougr/pages/bougr75/_doc/nre753"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión Económica",
-    "nombre": "Bases de ejecución del presupuesto 2016",
-    "url": "http://gerencia.ugr.es/pages/vger_eco/basesdeejecuciondelpresupuesto2016/"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión Económica",
-    "nombre": "Normas para la Liquidación y Tramitación de Indemnizaciones por Razón de Servicio, Indemnizaciones de Gastos por Desplazamientos y Estancia de Personal Externo",
-    "url": "http://gerencia.ugr.es/pages/vger_eco/normasparalaliquidacionytramitaciondeindemnizacionesporrazondeservicio"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normas de permanencia",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/temas/perindex"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa para la creación, modificación, suspensión temporal o definitiva y gestión de títulos de Grado",
-    "url": "http://secretariageneral.ugr.es/bougr/pages/bougr96/_doc/ncg961"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa de permanencia para las enseñanzas universitarias oficiales de grado y máster",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/ugr/bougr130611%20"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa reguladora de los estudios de máster universitario",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg951"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa reguladora de las enseñanzas oficiales de Doctorado y del título de Doctor",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/bougr110512"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre974"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016 para los estudios de Másteres y Programas de Doctorado",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre977"
-  }, {
-    "tipo": 2,
-    "dataset": "Ordenación Académica",
-    "nombre": "Normativa reguladora de las Enseñanzas Propias",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg733"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Normativa de la Universidad de Granada que regula el procedimiento de los concursos de acceso a los cuerpos docentes universitarios, aprobada por el Consejo de Gobierno de la Universidad de Granada en sesión celebrada el día 7 de octubre de 2008 y modificada para su adaptación a los nuevos Estatutos en sesión del Consejo de Gobierno celebrada el 27 de septiembre de 2011",
-    "url": "http://www.juntadeandalucia.es/boja/2011/199/8"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Normativa para la contratación de profesores sustitutos interinos en la Universidad de Granada, aprobada en Consejo de Gobierno de 22 de septiembre de 2008",
-    "url": "http://serviciopdi.ugr.es/contratado/concursopublico/sustitutointerino/normativa.html"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Primer Convenio Colectivo del personal docente e investigador con contrato laboral de las Universidades Públicas de Andalucía, publicado en el BOJA de 9 de mayo de 2008",
-    "url": "http://www.juntadeandalucia.es/boja/2008/92/65"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Criterios generales de valoración de méritos para la contratación de profesorado de la Universidad de Granada, aprobados en Consejo de Gobierno de 23 de julio de 2004 y modificados en Consejo de Gobierno en su sesión de 28 de julio de 2011",
-    "url": "http://www.juntadeandalucia.es/boja/2011/154/24"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Normativa de Regulación de las actividades de los colaboradores extraordinarios y de la formalización de solicitudes de nombramiento de colaborador extraordinario para su adecuación al artículo 131 de los Estatutos, aprobada en Consejo de Gobierno de 4 de diciembre de 2012",
-    "url": "http://secretariageneral.ugr.es/bougr/pages/bougr66/ncg666/"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Normativa reguladora de la figura de Profesor Emérito en la Universidad de Granada, aprobada en Consejo de Gobierno de 18 de diciembre de 2012",
-    "url": "http://secretariageneral.ugr.es/bougr/pages/bougr67/ncg673"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Normativa reguladora de los concursos de profesores contratados doctores con plaza vinculada, aprobada en Consejo de Gobierno de 30 de octubre de 2015",
-    "url": "http://secretariageneral.ugr.es/bougr/pages/bougr99/_doc/ncg992"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal Docente e Investigador",
-    "nombre": "Otras normativas relacionadas con el Personal Docente e Investigador",
-    "url": "http://serviciopdi.ugr.es/general/normativa/"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Reglamento del Personal de Administración y Servicios",
-    "url": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/19970725reglamentodelpas"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Relación de Puestos de Trabajo del Personal de Administración y Servicios",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/resolucionde3dediciembrede2004"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Procedimiento para la concesión de comisiones de servicio internas",
-    "url": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/20121120comisionesdeserviciomodificado2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Complento de productividad y mejora de la calidad de los servicios",
-    "url": "http://gerencia.ugr.es/pages/recursos_humanos/cpmcs"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Jornada, vacaciones, permisos y licencias y Calendario laboral 2015",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre972"
-  }, {
-    "tipo": 2,
-    "dataset": "Gestión de Personal de Administración y Servicios",
-    "nombre": "Otras normativas relacionadas con el Personal de Administración y Servicios",
-    "url": "http://serviciopas.ugr.es/pages/normativa"
-  }, {
-    "tipo": 2,
-    "dataset": "Plan Propio",
-    "nombre": "Plan Propio de Investigación",
-    "url": "http://investigacion.ugr.es/pages/planpropio/2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Plan Propio",
-    "nombre": "Plan Propio de Internacionalización",
-    "url": "http://internacional.ugr.es/pages/plan_propio/ppi-2015/planpropiointernacionalizacion2015"
-  }, {
-    "tipo": 2,
-    "dataset": "Plan Propio",
-    "nombre": "Plan Propio de Becas",
-    "url": "http://ve.ugr.es/pages/becas/propias"
-  }, {
-    "tipo": 2,
-    "dataset": "Otras Normativas",
-    "nombre": "Otra Normativa",
-    "url": "http://secretariageneral.ugr.es/pages/normativa/ugr/otranormativa"
-  }, {
-    "tipo": 2,
-    "dataset": "Otras Normativas",
-    "nombre": "Normativa Universitaria",
-    "url": "http://secretariageneral.ugr.es/pages/normativa"
-  }]
+	"nombre": "Normativa Legal",
+	"plantilla": "normativaLegal",
+	"contenido": [{
+		"tipo": 2,
+		"encabezado": "Estatutos",
+		"link": "estatutos",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Gestión Económica",
+		"link": "gestion-economica",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Ordenación Académica",
+		"link": "ordenacion-academica",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Gestión de Personal Docente e Investigador",
+		"link": "gestion-pdi",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Gestión de Personal de Administración y Servicios",
+		"link": "gestion-pas",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Plan Propio",
+		"link": "plan-propio",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"encabezado": "Otras Normativas",
+		"link": "otras-normativas",
+		"texto": ""
+	}],
+	"datos": [{
+		"tipo": 2,
+		"dataset": "Estatutos",
+		"nombre": "Estatutos",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/ugr/estatutos"
+	}, {
+		"tipo": 2,
+		"dataset": "Estatutos",
+		"nombre": "Reglamento de la Delegación General de Estudiantes",
+		"url": "http://ve.ugr.es/pages/delegacion/reglamento_dge"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión Económica",
+		"nombre": "Manuales e Instrucciones",
+		"url": "http://ofcontrolinterno.ugr.es/pages/manuales_instrucciones"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión Económica",
+		"nombre": "Programación de la Oficina de Control Interno 2015",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/ugr/nre923"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión Económica",
+		"nombre": "Plan de Mecenazgo",
+		"url": "http://secretariageneral.ugr.es/bougr/pages/bougr75/_doc/nre753"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión Económica",
+		"nombre": "Bases de ejecución del presupuesto 2016",
+		"url": "http://gerencia.ugr.es/pages/vger_eco/basesdeejecuciondelpresupuesto2016/"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión Económica",
+		"nombre": "Normas para la Liquidación y Tramitación de Indemnizaciones por Razón de Servicio, Indemnizaciones de Gastos por Desplazamientos y Estancia de Personal Externo",
+		"url": "http://gerencia.ugr.es/pages/vger_eco/normasparalaliquidacionytramitaciondeindemnizacionesporrazondeservicio"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normas de permanencia",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/temas/perindex"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa para la creación, modificación, suspensión temporal o definitiva y gestión de títulos de Grado",
+		"url": "http://secretariageneral.ugr.es/bougr/pages/bougr96/_doc/ncg961"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa de permanencia para las enseñanzas universitarias oficiales de grado y máster",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/ugr/bougr130611%20"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa reguladora de los estudios de máster universitario",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg951"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa reguladora de las enseñanzas oficiales de Doctorado y del título de Doctor",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/bougr110512"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre974"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016 para los estudios de Másteres y Programas de Doctorado",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre977"
+	}, {
+		"tipo": 2,
+		"dataset": "Ordenación Académica",
+		"nombre": "Normativa reguladora de las Enseñanzas Propias",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg733"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Normativa de la Universidad de Granada que regula el procedimiento de los concursos de acceso a los cuerpos docentes universitarios, aprobada por el Consejo de Gobierno de la Universidad de Granada en sesión celebrada el día 7 de octubre de 2008 y modificada para su adaptación a los nuevos Estatutos en sesión del Consejo de Gobierno celebrada el 27 de septiembre de 2011",
+		"url": "http://www.juntadeandalucia.es/boja/2011/199/8"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Normativa para la contratación de profesores sustitutos interinos en la Universidad de Granada, aprobada en Consejo de Gobierno de 22 de septiembre de 2008",
+		"url": "http://serviciopdi.ugr.es/contratado/concursopublico/sustitutointerino/normativa.html"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Primer Convenio Colectivo del personal docente e investigador con contrato laboral de las Universidades Públicas de Andalucía, publicado en el BOJA de 9 de mayo de 2008",
+		"url": "http://www.juntadeandalucia.es/boja/2008/92/65"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Criterios generales de valoración de méritos para la contratación de profesorado de la Universidad de Granada, aprobados en Consejo de Gobierno de 23 de julio de 2004 y modificados en Consejo de Gobierno en su sesión de 28 de julio de 2011",
+		"url": "http://www.juntadeandalucia.es/boja/2011/154/24"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Normativa de Regulación de las actividades de los colaboradores extraordinarios y de la formalización de solicitudes de nombramiento de colaborador extraordinario para su adecuación al artículo 131 de los Estatutos, aprobada en Consejo de Gobierno de 4 de diciembre de 2012",
+		"url": "http://secretariageneral.ugr.es/bougr/pages/bougr66/ncg666/"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Normativa reguladora de la figura de Profesor Emérito en la Universidad de Granada, aprobada en Consejo de Gobierno de 18 de diciembre de 2012",
+		"url": "http://secretariageneral.ugr.es/bougr/pages/bougr67/ncg673"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Normativa reguladora de los concursos de profesores contratados doctores con plaza vinculada, aprobada en Consejo de Gobierno de 30 de octubre de 2015",
+		"url": "http://secretariageneral.ugr.es/bougr/pages/bougr99/_doc/ncg992"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal Docente e Investigador",
+		"nombre": "Otras normativas relacionadas con el Personal Docente e Investigador",
+		"url": "http://serviciopdi.ugr.es/general/normativa/"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Reglamento del Personal de Administración y Servicios",
+		"url": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/19970725reglamentodelpas"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Relación de Puestos de Trabajo del Personal de Administración y Servicios",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/resolucionde3dediciembrede2004"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Procedimiento para la concesión de comisiones de servicio internas",
+		"url": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/20121120comisionesdeserviciomodificado2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Complento de productividad y mejora de la calidad de los servicios",
+		"url": "http://gerencia.ugr.es/pages/recursos_humanos/cpmcs"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Jornada, vacaciones, permisos y licencias y Calendario laboral 2015",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre972"
+	}, {
+		"tipo": 2,
+		"dataset": "Gestión de Personal de Administración y Servicios",
+		"nombre": "Otras normativas relacionadas con el Personal de Administración y Servicios",
+		"url": "http://serviciopas.ugr.es/pages/normativa"
+	}, {
+		"tipo": 2,
+		"dataset": "Plan Propio",
+		"nombre": "Plan Propio de Investigación",
+		"url": "http://investigacion.ugr.es/pages/planpropio/2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Plan Propio",
+		"nombre": "Plan Propio de Internacionalización",
+		"url": "http://internacional.ugr.es/pages/plan_propio/ppi-2015/planpropiointernacionalizacion2015"
+	}, {
+		"tipo": 2,
+		"dataset": "Plan Propio",
+		"nombre": "Plan Propio de Becas",
+		"url": "http://ve.ugr.es/pages/becas/propias"
+	}, {
+		"tipo": 2,
+		"dataset": "Otras Normativas",
+		"nombre": "Otra Normativa",
+		"url": "http://secretariageneral.ugr.es/pages/normativa/ugr/otranormativa"
+	}, {
+		"tipo": 2,
+		"dataset": "Otras Normativas",
+		"nombre": "Normativa Universitaria",
+		"url": "http://secretariageneral.ugr.es/pages/normativa"
+	}]
 }

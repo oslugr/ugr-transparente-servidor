@@ -32,8 +32,8 @@ var http = require('http');
 var logger = require('morgan');
 var path = require('path');
 
-var routes=require('./app/routes');
-var config=require('./config/config');
+var routes = require('./app/routes');
+var config = require('./config/config');
 
 // Crea aplicación web con Express
 var app = express();
@@ -61,23 +61,23 @@ app.use(logger('dev'));
 // Parseadores
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: false
+	extended: false
 }));
 app.use(cookieParser());
 //Manejador de enrutado
 if (app.get('env') == "dev") {
-  app.use(express.static('public'));
+	app.use(express.static('public'));
 }
 // Manejador de errores:
 app.use(function(req, res, next) {
-  res.status(404).render('error_404', {
-    titulo: config.error.titulo,
-    texto: config.error.texto
-  });
-});   
+	res.status(404).render('error_404', {
+		titulo: config.error.titulo,
+		texto: config.error.texto
+	});
+});
 // Creación del servidor
 http.createServer(app).listen(app.get('port'), app.get('ip'), function() {
-  console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
+	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
 module.exports = app;

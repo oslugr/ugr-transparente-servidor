@@ -26,20 +26,20 @@ var config = require('../../config/config');
 
 //Rellenamos el vector con los enlaces leidos del fichero de configuracion
 //Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
-var enlaces=[];
+var enlaces = [];
 
 function leerEnlaces() {
-  for (var i in config.index.enlaces) {
-    enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
-  }
+	for (var i in config.index.enlaces) {
+		enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
+	}
 }
 
 //Pagina de inicio
 exports.index = function(req, res) {
-  if (enlaces.length === 0)
-    leerEnlaces();
-  res.render('index', {
-    seccion: config.index.nombre,
-    enlaces: enlaces
-  });
+	if (enlaces.length === 0)
+		leerEnlaces();
+	res.render('index', {
+		seccion: config.index.nombre,
+		enlaces: enlaces
+	});
 };

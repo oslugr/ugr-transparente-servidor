@@ -24,8 +24,8 @@
 
 //Pagina de inicio
 exports.index = function(req, res) {
-  res.render('calendario', {
-    seccion: "Calendario",
-    enlace: "infoInstitucional.html"
-  });
+	res.render('calendario', {
+		seccion: "Calendario",
+		enlace: "infoInstitucional.html"
+	});
 };

@@ -26,12 +26,12 @@ var config = require('../../config/config');
 
 // Gestión de la pagina de normativas
 exports.normativaLegal = function(req, res) {
-  var normativa = config.normativaLegal;
+	var normativa = config.normativaLegal;
 
-  res.render(normativa.plantilla, {
-    servidor: config.servidor,
-    seccion: normativa.nombre,
-    contenido: normativa.contenido,
-    datos: normativa.datos,
-  });
+	res.render(normativa.plantilla, {
+		servidor: config.servidor,
+		seccion: normativa.nombre,
+		contenido: normativa.contenido,
+		datos: normativa.datos,
+	});
 };

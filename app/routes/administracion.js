@@ -26,31 +26,31 @@ var config = require('../../config/config');
 
 // Gestión de la pagina de personal
 exports.personal = function(req, res) {
-  var personal = config.personal;
+	var personal = config.personal;
 
-  res.render(personal.plantilla, {
-    servidor: config.servidor,
-    seccion: personal.nombre,
-    contenido: personal.contenido,
-    datos: personal.datos,
-  });
+	res.render(personal.plantilla, {
+		servidor: config.servidor,
+		seccion: personal.nombre,
+		contenido: personal.contenido,
+		datos: personal.datos,
+	});
 };
 
 // Gestión de la pagina de informacion economica
 exports.infoEconomica = function(req, res) {
-  var infoEconomica = config.infoEconomica;
+	var infoEconomica = config.infoEconomica;
 
-  res.render(infoEconomica.plantilla, {
-    servidor: config.servidor,
-    seccion: infoEconomica.nombre,
-    contenido: infoEconomica.contenido,
-    datos: infoEconomica.datos,
-  });
+	res.render(infoEconomica.plantilla, {
+		servidor: config.servidor,
+		seccion: infoEconomica.nombre,
+		contenido: infoEconomica.contenido,
+		datos: infoEconomica.datos,
+	});
 };
 
 // Gestión de la página de perfil del contratante
 exports.perfil = function(req, res) {
-  res.render('perfilContratante', {
-    seccion: 'Perfil del Contratante'
-  });
+	res.render('perfilContratante', {
+		seccion: 'Perfil del Contratante'
+	});
 };

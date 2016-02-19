@@ -26,24 +26,24 @@ var config = require('../../config/config');
 
 // Gestión de la pagina del gobierno
 exports.gobierno = function(req, res) {
-    var gobierno = config.gobierno;
+	var gobierno = config.gobierno;
 
-    res.render(gobierno.plantilla, {
-        servidor: config.servidor,
-        seccion: gobierno.nombre,
-        contenido: gobierno.contenido,
-        datos: gobierno.datos,
-    });
+	res.render(gobierno.plantilla, {
+		servidor: config.servidor,
+		seccion: gobierno.nombre,
+		contenido: gobierno.contenido,
+		datos: gobierno.datos,
+	});
 };
 
 // Gestión de la pagina de resultados
 exports.rendimiento = function(req, res) {
-    var rendimiento = config.rendimiento;
+	var rendimiento = config.rendimiento;
 
-    res.render(rendimiento.plantilla, {
-        servidor: config.servidor,
-        seccion: rendimiento.nombre,
-        contenido: rendimiento.contenido,
-        datos: rendimiento.datos,
-    });
+	res.render(rendimiento.plantilla, {
+		servidor: config.servidor,
+		seccion: rendimiento.nombre,
+		contenido: rendimiento.contenido,
+		datos: rendimiento.datos,
+	});
 };

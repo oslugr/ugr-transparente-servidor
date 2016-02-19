@@ -1,41 +1,41 @@
 {
-    "nombre": "Inicio",
-    "plantilla": "index",
-    "enlaces": [{
-      "nombre": "Información Institucional",
-      "href": "infoInstitucional.html",
-      "id": "en_infoInstitucional"
-    }, {
-      "nombre": "Personal",
-      "href": "personal.html",
-      "id": "en_personal"
-    }, {
-      "nombre": "Información Económica",
-      "href": "infoEconomica.html",
-      "id": "en_infoEconomica"
-    }, {
-      "nombre": "Oferta y Demanda Académica",
-      "href": "ofertaDemanda.html",
-      "id": "en_ofertaDemanda"
-    }, {
-      "nombre": "Claustro",
-      "href": "claustro.html",
-      "id": "en_claustro"
-    }, {
-      "nombre": "Estudiantes",
-      "href": "estudiantes.html",
-      "id": "en_estudiantes"
-    }, {
-      "nombre": "Gobierno",
-      "href": "gobierno.html",
-      "id": "en_gobierno"
-    }, {
-      "nombre": "Rendimiento",
-      "href": "rendimiento.html",
-      "id": "en_rendimiento"
-    }, {
-      "nombre": "Normativa Legal",
-      "href": "normativaLegal.html",
-      "id": "en_normativaLegal"
-    }]
+	"nombre": "Inicio",
+	"plantilla": "index",
+	"enlaces": [{
+		"nombre": "Información Institucional",
+		"href": "infoInstitucional.html",
+		"id": "en_infoInstitucional"
+	}, {
+		"nombre": "Personal",
+		"href": "personal.html",
+		"id": "en_personal"
+	}, {
+		"nombre": "Información Económica",
+		"href": "infoEconomica.html",
+		"id": "en_infoEconomica"
+	}, {
+		"nombre": "Oferta y Demanda Académica",
+		"href": "ofertaDemanda.html",
+		"id": "en_ofertaDemanda"
+	}, {
+		"nombre": "Claustro",
+		"href": "claustro.html",
+		"id": "en_claustro"
+	}, {
+		"nombre": "Estudiantes",
+		"href": "estudiantes.html",
+		"id": "en_estudiantes"
+	}, {
+		"nombre": "Gobierno",
+		"href": "gobierno.html",
+		"id": "en_gobierno"
+	}, {
+		"nombre": "Rendimiento",
+		"href": "rendimiento.html",
+		"id": "en_rendimiento"
+	}, {
+		"nombre": "Normativa Legal",
+		"href": "normativaLegal.html",
+		"id": "en_normativaLegal"
+	}]
 }

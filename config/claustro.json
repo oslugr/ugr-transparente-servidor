@@ -1,62 +1,62 @@
 {
-  "nombre": "Claustro",
-  "plantilla": "claustro",
-  "contenido": [{
-    "tipo": 1,
-    "encabezado": "Perfil del Profesorado",
-    "link": "perfil-profesorado",
-    "texto": "Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
-  }, {
-    "tipo": 1,
-    "encabezado": "Datos de Profesores Extranjeros",
-    "link": "datos-profesores-extranjeros",
-    "texto": "Información y datos sobre los profesores extranjeros de la Universidad de Granada. Fuente: Oficina de Datos, Información y Prospectiva (ODIP). Última actualización: 25/01/2016"
-  }, {
-    "tipo": 4,
-    "encabezado": "Gráficos de Profesores Extranjeros",
-    "link": "graficos-profesores-extranjeros",
-    "texto": ""
-  }],
-  "datos": [{
-    "tipo": 1,
-    "dataset": "Perfil del Profesorado",
-    "id_dataset": "perfil-profesorado",
-    "nombre": "Perfil del profesorado",
-    "url": "eac2ad23-3ea9-45f1-aee4-1f72236503d7",
-    "descarga": "ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
-  }, {
-    "tipo": 1,
-    "dataset": "Datos de Profesores Extranjeros",
-    "id_dataset": "profesores-extranjeros",
-    "nombre": "Origen del Profesorado 2015/2016",
-    "url": "05ec9a34-c63b-4952-8288-dfc659091e3f",
-    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/05ec9a34-c63b-4952-8288-dfc659091e3f/download/pdiextranjeros.csv"
-  }, {
-    "tipo": 1,
-    "dataset": "Datos de Profesores Extranjeros",
-    "id_dataset": "profesores-extranjeros",
-    "nombre": "Perfil de Profesores Extranjeros 2015/2016",
-    "url": "39e8ee28-3e26-4aff-9c2d-fb1e358a0474",
-    "descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/39e8ee28-3e26-4aff-9c2d-fb1e358a0474/download/categoriapdiextranjero.csv"
-  }, {
-    "tipo": 4,
-    "dataset": "Gráficos de Profesores Extranjeros",
-    "nombre": "Personal Docente e Investigador Extranjero",
-    "url": "personal_docente_investigador_extranjero.png"
-  }, {
-    "tipo": 4,
-    "dataset": "Gráficos de Profesores Extranjeros",
-    "nombre": "Procedencia PDI Extranjero",
-    "url": "procedencia_pdi_extranjero.png"
-  }, {
-    "tipo": 4,
-    "dataset": "Gráficos de Profesores Extranjeros",
-    "nombre": "Perfil PDI Extranjero",
-    "url": "perfil_pdi_extranjero.png"
-  }, {
-    "tipo": 4,
-    "dataset": "Gráficos de Profesores Extranjeros",
-    "nombre": "PDI Extranjero por sexo y categorías",
-    "url": "pdi_extranjero_sexo_categorias.png"
-  }]
+	"nombre": "Claustro",
+	"plantilla": "claustro",
+	"contenido": [{
+		"tipo": 1,
+		"encabezado": "Perfil del Profesorado",
+		"link": "perfil-profesorado",
+		"texto": "Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
+	}, {
+		"tipo": 1,
+		"encabezado": "Datos de Profesores Extranjeros",
+		"link": "datos-profesores-extranjeros",
+		"texto": "Información y datos sobre los profesores extranjeros de la Universidad de Granada. Fuente: Oficina de Datos, Información y Prospectiva (ODIP). Última actualización: 25/01/2016"
+	}, {
+		"tipo": 4,
+		"encabezado": "Gráficos de Profesores Extranjeros",
+		"link": "graficos-profesores-extranjeros",
+		"texto": ""
+	}],
+	"datos": [{
+		"tipo": 1,
+		"dataset": "Perfil del Profesorado",
+		"id_dataset": "perfil-profesorado",
+		"nombre": "Perfil del profesorado",
+		"url": "eac2ad23-3ea9-45f1-aee4-1f72236503d7",
+		"descarga": "ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
+	}, {
+		"tipo": 1,
+		"dataset": "Datos de Profesores Extranjeros",
+		"id_dataset": "profesores-extranjeros",
+		"nombre": "Origen del Profesorado 2015/2016",
+		"url": "05ec9a34-c63b-4952-8288-dfc659091e3f",
+		"descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/05ec9a34-c63b-4952-8288-dfc659091e3f/download/pdiextranjeros.csv"
+	}, {
+		"tipo": 1,
+		"dataset": "Datos de Profesores Extranjeros",
+		"id_dataset": "profesores-extranjeros",
+		"nombre": "Perfil de Profesores Extranjeros 2015/2016",
+		"url": "39e8ee28-3e26-4aff-9c2d-fb1e358a0474",
+		"descarga": "421a22b9-e2e1-4605-a649-625d587484ee/resource/39e8ee28-3e26-4aff-9c2d-fb1e358a0474/download/categoriapdiextranjero.csv"
+	}, {
+		"tipo": 4,
+		"dataset": "Gráficos de Profesores Extranjeros",
+		"nombre": "Personal Docente e Investigador Extranjero",
+		"url": "personal_docente_investigador_extranjero.png"
+	}, {
+		"tipo": 4,
+		"dataset": "Gráficos de Profesores Extranjeros",
+		"nombre": "Procedencia PDI Extranjero",
+		"url": "procedencia_pdi_extranjero.png"
+	}, {
+		"tipo": 4,
+		"dataset": "Gráficos de Profesores Extranjeros",
+		"nombre": "Perfil PDI Extranjero",
+		"url": "perfil_pdi_extranjero.png"
+	}, {
+		"tipo": 4,
+		"dataset": "Gráficos de Profesores Extranjeros",
+		"nombre": "PDI Extranjero por sexo y categorías",
+		"url": "pdi_extranjero_sexo_categorias.png"
+	}]
 }

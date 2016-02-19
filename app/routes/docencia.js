@@ -26,36 +26,36 @@ var config = require('../../config/config');
 
 // Gestión de la pagina de oferta y demanda academica
 exports.ofertaDemanda = function(req, res) {
-    var ofertaDemanda = config.ofertaDemanda;
+	var ofertaDemanda = config.ofertaDemanda;
 
-    res.render(ofertaDemanda.plantilla, {
-        servidor: config.servidor,
-        seccion: ofertaDemanda.nombre,
-        contenido: ofertaDemanda.contenido,
-        datos: ofertaDemanda.datos
-    });
+	res.render(ofertaDemanda.plantilla, {
+		servidor: config.servidor,
+		seccion: ofertaDemanda.nombre,
+		contenido: ofertaDemanda.contenido,
+		datos: ofertaDemanda.datos
+	});
 };
 
 // Gestión de la pagina de claustro
 exports.claustro = function(req, res) {
-    var claustro = config.claustro;
+	var claustro = config.claustro;
 
-    res.render(claustro.plantilla, {
-        servidor: config.servidor,
-        seccion: claustro.nombre,
-        contenido: claustro.contenido,
-        datos: claustro.datos
-    });
+	res.render(claustro.plantilla, {
+		servidor: config.servidor,
+		seccion: claustro.nombre,
+		contenido: claustro.contenido,
+		datos: claustro.datos
+	});
 };
 
 // Gestión de la pagina de estudiantes
 exports.estudiantes = function(req, res) {
-    var estudiantes = config.estudiantes;
+	var estudiantes = config.estudiantes;
 
-    res.render(estudiantes.plantilla, {
-        servidor: config.servidor,
-        seccion: estudiantes.nombre,
-        contenido: estudiantes.contenido,
-        datos: estudiantes.datos
-    });
+	res.render(estudiantes.plantilla, {
+		servidor: config.servidor,
+		seccion: estudiantes.nombre,
+		contenido: estudiantes.contenido,
+		datos: estudiantes.datos
+	});
 };

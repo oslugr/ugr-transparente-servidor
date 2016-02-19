@@ -27,47 +27,47 @@ var config = require('./config.js');
 
 
 describe('Pruebas de acceso', function() {
-    var app;
-    before(function() {
-        app = require('../app.js');
-    });
+	var app;
+	before(function() {
+		app = require('../app.js');
+	});
 
-    it("Acceso a páginas", function(done) {
-        this.timeout(10000);
-        async.eachSeries(config.direcciones, function(url, callback) {
-            request(app).get(url)
-                .expect(200)
-                .expect('Content-Type', "text/html; charset=utf-8")
-                .end(function(err, res) {
-                    assert.notOk(err);
-                    callback();
-                });
-        }, function() {
-            done();
-        });
-    });
-    it("Error", function(done) {
-        request(app)
-            .get("/foo")
-            .expect(404)
-            .end(function(err, res) {
-                assert.notOk(err);
-                done();
-            });
-    });
+	it("Acceso a páginas", function(done) {
+		this.timeout(10000);
+		async.eachSeries(config.direcciones, function(url, callback) {
+			request(app).get(url)
+				.expect(200)
+				.expect('Content-Type', "text/html; charset=utf-8")
+				.end(function(err, res) {
+					assert.notOk(err);
+					callback();
+				});
+		}, function() {
+			done();
+		});
+	});
+	it("Error", function(done) {
+		request(app)
+			.get("/foo")
+			.expect(404)
+			.end(function(err, res) {
+				assert.notOk(err);
+				done();
+			});
+	});
 
-    it("Archivos de buscador", function(done) {
-        this.timeout(5000);
-        async.eachSeries(config.archivosBuscador, function(url, callback) {
-            request(app).get(url)
-                .expect(200)
-                .expect('Content-Type', "application/json; charset=utf-8")
-                .end(function(err, res) {
-                    assert.notOk(err);
-                    callback();
-                });
-        }, function() {
-            done();
-        });
-    });
+	it("Archivos de buscador", function(done) {
+		this.timeout(5000);
+		async.eachSeries(config.archivosBuscador, function(url, callback) {
+			request(app).get(url)
+				.expect(200)
+				.expect('Content-Type', "application/json; charset=utf-8")
+				.end(function(err, res) {
+					assert.notOk(err);
+					callback();
+				});
+		}, function() {
+			done();
+		});
+	});
 });

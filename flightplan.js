@@ -23,26 +23,26 @@ var plan = require('flightplan');
 
 // Configuración
 plan.target('transparente', {
-  host: 'transparente.ugr.es',
-  username: process.env.USER,
-  agent: process.env.SSH_AUTH_SOCK
+	host: 'transparente.ugr.es',
+	username: process.env.USER,
+	agent: process.env.SSH_AUTH_SOCK
 });
 
 // Acciones a ejecutar remotamente
 plan.remote(function(remote) {
-  remote.log('Creando copia de seguridad...');
-  remote.sudo('cp -Rf ugr-transparente-servidor ugr-transparente-servidor.bak', {
-    user: process.env.USER
-  });
+	remote.log('Creando copia de seguridad...');
+	remote.sudo('cp -Rf ugr-transparente-servidor ugr-transparente-servidor.bak', {
+		user: process.env.USER
+	});
 
-  remote.with('cd ugr-transparente-servidor', function() {
-    remote.log('Deteniendo el servidor...');
-    remote.exec('npm stop');
-    remote.log('Obteniendo cambios...');
-    remote.exec('git pull');
-    remote.log('Instalando dependencias...');
-    remote.exec('npm install');
-    remote.log('Arrancando el servidor...');
-    remote.exec('npm start');
-  });
+	remote.with('cd ugr-transparente-servidor', function() {
+		remote.log('Deteniendo el servidor...');
+		remote.exec('npm stop');
+		remote.log('Obteniendo cambios...');
+		remote.exec('git pull');
+		remote.log('Instalando dependencias...');
+		remote.exec('npm install');
+		remote.log('Arrancando el servidor...');
+		remote.exec('npm start');
+	});
 });

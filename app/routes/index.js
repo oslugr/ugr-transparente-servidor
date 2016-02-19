@@ -2,6 +2,7 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+  Copyright (C) 2016 Andrés Ortiz Corrales
 
   This file is part of UGR Transparente.
 
@@ -21,28 +22,24 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var config = require('../../config/config');
 
-// Gestión de la pagina del gobierno
-exports.gobierno = function(req, res) {
-  var gobierno = conf.gobierno;
+//Rellenamos el vector con los enlaces leidos del fichero de configuracion
+//Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
+var enlaces=[];
 
-  res.render(gobierno.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: gobierno.nombre,
-    contenido: gobierno.contenido,
-    datos: gobierno.datos,
-  });
-};
+function leerEnlaces() {
+  for (var i in config.index.enlaces) {
+    enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
+  }
+}
 
-// Gestión de la pagina de resultados
-exports.rendimiento = function(req, res) {
-  var rendimiento = conf.rendimiento;
-
-  res.render(rendimiento.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: rendimiento.nombre,
-    contenido: rendimiento.contenido,
-    datos: rendimiento.datos,
+//Pagina de inicio
+exports.index = function(req, res) {
+  if (enlaces.length === 0)
+    leerEnlaces();
+  res.render('index', {
+    seccion: config.index.nombre,
+    enlaces: enlaces
   });
 };

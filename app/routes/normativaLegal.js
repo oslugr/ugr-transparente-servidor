@@ -2,7 +2,8 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
-
+  Copyright (C) 2016 Andrés Ortiz Corrales
+  
   This file is part of UGR Transparente.
 
   UGR Transparente is free software: you can redistribute it and/or modify
@@ -21,14 +22,14 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var config = require('../../config/config');
 
 // Gestión de la pagina de normativas
 exports.normativaLegal = function(req, res) {
-  var normativa = conf.normativaLegal;
+  var normativa = config.normativaLegal;
 
   res.render(normativa.plantilla, {
-    servidor: conf.config.servidor,
+    servidor: config.servidor,
     seccion: normativa.nombre,
     contenido: normativa.contenido,
     datos: normativa.datos,

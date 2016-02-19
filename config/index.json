@@ -1,8 +1,4 @@
 {
-  "nombre": "config",
-  "servidor": "http://opendata.ugr.es/",
-  "puerto": 3000,
-  "index": {
     "nombre": "Inicio",
     "plantilla": "index",
     "enlaces": [{
@@ -42,13 +38,4 @@
       "href": "normativaLegal.html",
       "id": "en_normativaLegal"
     }]
-  },
-  "infoInstitucional": {
-    "titulo": "Información Institucional",
-    "plantilla": "infoInstitucional"
-  },
-  "error": {
-    "titulo": "Página no encontrada (Error 404)",
-    "texto": "Lo siento, la página no existe o está temporalmente inaccesible."
-  }
 }

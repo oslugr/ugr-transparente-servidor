@@ -21,7 +21,7 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var config = require('../../config/config');
 
 exports.mapaWeb = function(req, res) {
   res.render('mapaWeb', {
@@ -40,11 +40,11 @@ exports.mapaWeb = function(req, res) {
       subsecciones: [{
         nombre: "Personal",
         enlace: "personal.html",
-        contenido: conf.personal.contenido
+        contenido: config.personal.contenido
       }, {
         nombre: "Información Económica",
         enlace: "infoEconomica.html",
-        contenido: conf.infoEconomica.contenido
+        contenido: config.infoEconomica.contenido
       }, {
         nombre: "Perfil del Contratante",
         enlace: "perfilContratante.html",
@@ -56,15 +56,15 @@ exports.mapaWeb = function(req, res) {
       subsecciones: [{
         nombre: "Oferta y Demanda Académica",
         enlace: "ofertaDemanda.html",
-        contenido: conf.ofertaDemanda.contenido
+        contenido: config.ofertaDemanda.contenido
       }, {
         nombre: "Claustro",
         enlace: "claustro.html",
-        contenido: conf.claustro.contenido
+        contenido: config.claustro.contenido
       }, {
         nombre: "Estudiantes",
         enlace: "estudiantes.html",
-        contenido: conf.estudiantes.contenido
+        contenido: config.estudiantes.contenido
       }]
     }, {
       nombre: "Gestión e Investigación",
@@ -72,11 +72,11 @@ exports.mapaWeb = function(req, res) {
       subsecciones: [{
         nombre: "Gobierno",
         enlace: "gobierno.html",
-        contenido: conf.gobierno.contenido
+        contenido: config.gobierno.contenido
       }, {
         nombre: "Rendimiento",
         enlace: "rendimiento.html",
-        contenido: conf.rendimiento.contenido
+        contenido: config.rendimiento.contenido
       }]
     }, {
       nombre: "Normativa Legal",
@@ -84,7 +84,7 @@ exports.mapaWeb = function(req, res) {
       subsecciones: [{
         nombre: "Normativa Legal",
         enlace: "normativaLegal.html",
-        contenido: conf.normativaLegal.contenido
+        contenido: config.normativaLegal.contenido
       }]
     }, {
       nombre: "Solicitud de Información",

@@ -21,40 +21,13 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var conf = require('../../app');
 
-// Gestión de la pagina de oferta y demanda academica
-exports.ofertaDemanda = function(req, res) {
-  var ofertaDemanda = conf.ofertaDemanda;
+// Gestión de la pagina del buscador
+exports.buscador = function(req, res) {
 
-  res.render(ofertaDemanda.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: ofertaDemanda.nombre,
-    contenido: ofertaDemanda.contenido,
-    datos: ofertaDemanda.datos
+  res.render('buscador', {
+    seccion: 'Buscador'
   });
-};
 
-// Gestión de la pagina de claustro
-exports.claustro = function(req, res) {
-  var claustro = conf.claustro;
-
-  res.render(claustro.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: claustro.nombre,
-    contenido: claustro.contenido,
-    datos: claustro.datos
-  });
-};
-
-// Gestión de la pagina de estudiantes
-exports.estudiantes = function(req, res) {
-  var estudiantes = conf.estudiantes;
-
-  res.render(estudiantes.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: estudiantes.nombre,
-    contenido: estudiantes.contenido,
-    datos: estudiantes.datos
-  });
 };

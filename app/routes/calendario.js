@@ -2,6 +2,8 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+  Copyright (C) 2016 Andrés Ortiz Corrales
+  
 
   This file is part of UGR Transparente.
 
@@ -20,12 +22,9 @@
 */
 
 
-//Variable para las configuraciones
-var conf = require('../app');
-
 //Pagina de inicio
 exports.index = function(req, res) {
-  res.render('calendarioSolo', {
+  res.render('calendario', {
     seccion: "Calendario",
     enlace: "infoInstitucional.html"
   });

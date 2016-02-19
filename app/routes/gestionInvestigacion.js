@@ -2,6 +2,7 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+  Copyright (C) 2016 Andrés Ortiz Corrales
 
   This file is part of UGR Transparente.
 
@@ -21,35 +22,28 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var config = require('../../config/config');
 
-// Gestión de la pagina de personal
-exports.personal = function(req, res) {
-  var personal = conf.personal;
+// Gestión de la pagina del gobierno
+exports.gobierno = function(req, res) {
+    var gobierno = config.gobierno;
 
-  res.render(personal.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: personal.nombre,
-    contenido: personal.contenido,
-    datos: personal.datos,
-  });
+    res.render(gobierno.plantilla, {
+        servidor: config.servidor,
+        seccion: gobierno.nombre,
+        contenido: gobierno.contenido,
+        datos: gobierno.datos,
+    });
 };
 
-// Gestión de la pagina de informacion economica
-exports.infoEconomica = function(req, res) {
-  var infoEconomica = conf.infoEconomica;
+// Gestión de la pagina de resultados
+exports.rendimiento = function(req, res) {
+    var rendimiento = config.rendimiento;
 
-  res.render(infoEconomica.plantilla, {
-    servidor: conf.config.servidor,
-    seccion: infoEconomica.nombre,
-    contenido: infoEconomica.contenido,
-    datos: infoEconomica.datos,
-  });
-};
-
-// Gestión de la página de perfil del contratante
-exports.perfil = function(req, res) {
-  res.render('perfilContratante', {
-    seccion: 'Perfil del Contratante'
-  });
+    res.render(rendimiento.plantilla, {
+        servidor: config.servidor,
+        seccion: rendimiento.nombre,
+        contenido: rendimiento.contenido,
+        datos: rendimiento.datos,
+    });
 };

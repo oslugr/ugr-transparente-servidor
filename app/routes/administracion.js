@@ -2,6 +2,7 @@
   UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+  Copyright (C) 2016 Andrés Ortiz Corrales
 
   This file is part of UGR Transparente.
 
@@ -21,13 +22,35 @@
 
 
 //Variable para las configuraciones
-var conf = require('../app');
+var config = require('../../config/config');
 
-// Gestión de la pagina del buscador
-exports.buscador = function(req, res) {
+// Gestión de la pagina de personal
+exports.personal = function(req, res) {
+  var personal = config.personal;
 
-  res.render('buscador', {
-    seccion: 'Buscador'
+  res.render(personal.plantilla, {
+    servidor: config.servidor,
+    seccion: personal.nombre,
+    contenido: personal.contenido,
+    datos: personal.datos,
   });
+};
 
+// Gestión de la pagina de informacion economica
+exports.infoEconomica = function(req, res) {
+  var infoEconomica = config.infoEconomica;
+
+  res.render(infoEconomica.plantilla, {
+    servidor: config.servidor,
+    seccion: infoEconomica.nombre,
+    contenido: infoEconomica.contenido,
+    datos: infoEconomica.datos,
+  });
+};
+
+// Gestión de la página de perfil del contratante
+exports.perfil = function(req, res) {
+  res.render('perfilContratante', {
+    seccion: 'Perfil del Contratante'
+  });
 };

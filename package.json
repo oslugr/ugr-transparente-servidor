@@ -43,14 +43,15 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
+    "async": "^1.5.2",
     "bower": "^1.7.7",
+    "chai": "^3.5.0",
     "coveralls": "^2.11.4",
     "istanbul": "^0.4.0",
     "jade": "^1.11.0",
     "mocha": "^2.4.5",
     "npm-check": "^4.1.4",
     "pm2": "^1.0.1",
-    "should": "^8.2.2",
     "supertest": "^1.2.0",
     "underscore": "^1.8.3"
   },
@@ -62,8 +63,8 @@
     "start": "ENV=prod pm2 start app.js && pm2 save",
     "stop": "pm2 stop app",
     "restart": "ENV=prod pm2 restart app.js && pm2 save",
-    "test": "istanbul cover _mocha ./test --recursive",
-    "dev": "ENV=dev pm2 start app.js",
+    "test": "istanbul cover _mocha",
+    "dev": "ENV=dev node app.js",
     "rdev": "ENV=dev pm2 restart app.js",
     "deploy": "fly transparente",
     "postinstall": "bower install",

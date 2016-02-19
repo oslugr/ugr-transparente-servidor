@@ -34,6 +34,11 @@ describe('Archivos de configuración', function() {
 			var file = cargar('./config/' + valor);
 			assert.ok(file);
 		});
+		
+		assert.notOk(existe('./foo'));
+		console.log("<Prueba de Error>");
+		assert.notOk(cargar('./foo'));
+		
 	});
 	it("Archivo de configuración", function() {
 		var config2 = require('../config/config');

@@ -29,9 +29,9 @@ node_js:
 
 sudo: false
 
-# Dependencias que es necesario instalar
-#before_install:
-#  - "npm -g install gulp"
+# Descargar contenido estátco
+before_install:
+  - "./getRecursos.sh"
   
 # Coveralls coverage
 after_success:

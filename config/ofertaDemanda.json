@@ -1,96 +1,96 @@
 {
-  "nombre": "Oferta y Demanda Académica",
-  "plantilla": "ofertaDemanda",
-  "contenido": [{
-    "tipo": 3,
-    "seccion": "",
-    "encabezado": "Estructura académica y de docencia",
-    "link": "estructura-academica-docencia",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "seccion": "oferta-academica",
-    "encabezado": "Información general",
-    "link": "informacion-general",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "seccion": "oferta-academica",
-    "encabezado": "Datos de oferta académica",
-    "link": "datos-oferta-academica",
-    "texto": ""
-  }, {
-    "tipo": 3,
-    "seccion": "oferta-demanda-plazas",
-    "encabezado": "Informes sobre oferta y demanda",
-    "link": "informes-oferta-demanda",
-    "texto": ""
-  }, {
-    "tipo": 2,
-    "seccion": "oferta-demanda-plazas",
-    "encabezado": "Datos sobre oferta y demanda",
-    "link": "datos-oferta-demanda",
-    "texto": ""
-  }],
-  "datos": [{
-    "tipo": 3,
-    "dataset": "Estructura académica y de docencia",
-    "nombre": "Estructura académica y de docencia",
-    "url": "estructura_academica_docencia_2014_2015.pdf"
-  }, {
-    "tipo": 2,
-    "dataset": "Información general",
-    "nombre": "Grado",
-    "url": "http://www.ugr.es/pages/estudios/titulaciones/centros"
-  }, {
-    "tipo": 2,
-    "dataset": "Información general",
-    "nombre": "Máster",
-    "url": "http://escuelaposgrado.ugr.es/pages/masteres_oficiales/oferta_formativa/oferta-completa"
-  }, {
-    "tipo": 2,
-    "dataset": "Información general",
-    "nombre": "Doctorado",
-    "url": "http://escuelaposgrado.ugr.es/doctorado/oferta_programas_doctorado/oferta"
-  }, {
-    "tipo": 2,
-    "dataset": "Información general",
-    "nombre": "Títulos propios",
-    "url": "http://escuelaposgrado.ugr.es/pages/titulos_propios/oferta_formativa"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos de oferta académica",
-    "nombre": "Titulaciones 2014 - 2015",
-    "url": "http://opendata.ugr.es/dataset/titulaciones-14-15"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos de oferta académica",
-    "nombre": "Titulaciones 2013 - 2014",
-    "url": "http://opendata.ugr.es/dataset/titulaciones-13-14"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre oferta y demanda",
-    "nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
-    "url": "oferta_demanda_grados_2014_2015.pdf"
-  }, {
-    "tipo": 3,
-    "dataset": "Informes sobre oferta y demanda",
-    "nombre": "Procedimientos de acceso curso 2015 - 2016",
-    "url": "procedimiento_acceso_2015_2016.pdf"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre oferta y demanda",
-    "nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
-    "url": "http://opendata.ugr.es/dataset/demanda-academica"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre oferta y demanda",
-    "nombre": "Procedimientos de acceso 2013 - 2014 ",
-    "url": "http://opendata.ugr.es/dataset/demanda-academica-13-14"
-  }, {
-    "tipo": 2,
-    "dataset": "Datos sobre oferta y demanda",
-    "nombre": "Procedimientos de acceso 2012 - 2013",
-    "url": "http://opendata.ugr.es/dataset/demanda-academica-12-13"
-  }]
+	"nombre": "Oferta y Demanda Académica",
+	"plantilla": "ofertaDemanda",
+	"contenido": [{
+		"tipo": 3,
+		"seccion": "",
+		"encabezado": "Estructura académica y de docencia",
+		"link": "estructura-academica-docencia",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"seccion": "oferta-academica",
+		"encabezado": "Información general",
+		"link": "informacion-general",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"seccion": "oferta-academica",
+		"encabezado": "Datos de oferta académica",
+		"link": "datos-oferta-academica",
+		"texto": ""
+	}, {
+		"tipo": 3,
+		"seccion": "oferta-demanda-plazas",
+		"encabezado": "Informes sobre oferta y demanda",
+		"link": "informes-oferta-demanda",
+		"texto": ""
+	}, {
+		"tipo": 2,
+		"seccion": "oferta-demanda-plazas",
+		"encabezado": "Datos sobre oferta y demanda",
+		"link": "datos-oferta-demanda",
+		"texto": ""
+	}],
+	"datos": [{
+		"tipo": 3,
+		"dataset": "Estructura académica y de docencia",
+		"nombre": "Estructura académica y de docencia",
+		"url": "estructura_academica_docencia_2014_2015.pdf"
+	}, {
+		"tipo": 2,
+		"dataset": "Información general",
+		"nombre": "Grado",
+		"url": "http://www.ugr.es/pages/estudios/titulaciones/centros"
+	}, {
+		"tipo": 2,
+		"dataset": "Información general",
+		"nombre": "Máster",
+		"url": "http://escuelaposgrado.ugr.es/pages/masteres_oficiales/oferta_formativa/oferta-completa"
+	}, {
+		"tipo": 2,
+		"dataset": "Información general",
+		"nombre": "Doctorado",
+		"url": "http://escuelaposgrado.ugr.es/doctorado/oferta_programas_doctorado/oferta"
+	}, {
+		"tipo": 2,
+		"dataset": "Información general",
+		"nombre": "Títulos propios",
+		"url": "http://escuelaposgrado.ugr.es/pages/titulos_propios/oferta_formativa"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos de oferta académica",
+		"nombre": "Titulaciones 2014 - 2015",
+		"url": "http://opendata.ugr.es/dataset/titulaciones-14-15"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos de oferta académica",
+		"nombre": "Titulaciones 2013 - 2014",
+		"url": "http://opendata.ugr.es/dataset/titulaciones-13-14"
+	}, {
+		"tipo": 3,
+		"dataset": "Informes sobre oferta y demanda",
+		"nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
+		"url": "oferta_demanda_grados_2014_2015.pdf"
+	}, {
+		"tipo": 3,
+		"dataset": "Informes sobre oferta y demanda",
+		"nombre": "Procedimientos de acceso curso 2015 - 2016",
+		"url": "procedimiento_acceso_2015_2016.pdf"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre oferta y demanda",
+		"nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
+		"url": "http://opendata.ugr.es/dataset/demanda-academica"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre oferta y demanda",
+		"nombre": "Procedimientos de acceso 2013 - 2014 ",
+		"url": "http://opendata.ugr.es/dataset/demanda-academica-13-14"
+	}, {
+		"tipo": 2,
+		"dataset": "Datos sobre oferta y demanda",
+		"nombre": "Procedimientos de acceso 2012 - 2013",
+		"url": "http://opendata.ugr.es/dataset/demanda-academica-12-13"
+	}]
 }

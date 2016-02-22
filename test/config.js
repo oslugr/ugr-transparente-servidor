@@ -43,7 +43,7 @@ module.exports = {
 		'/archivos/rendimiento',
 		'/archivos/normativaLegal'
 	],
-	archivosEstaticos:{
+	archivosEstaticos: {
 		produccion: [
 			'/favicon/favicon.ico',
 			'/css/style.css',
@@ -52,15 +52,15 @@ module.exports = {
 			'/script/calendario.js',
 			'/script/generar_tabla.js'
 		],
-		desarrollo:[
+		desarrollo: [
 			'/img/transp.gif',
 			'/imagenes/osl.jpg',
-			'/graph/perfil_pdi_extranjero.png'			
-		]		
+			'/graph/perfil_pdi_extranjero.png'
+		]
 	},
 	initServer: function(done, dev) {
 		if (dev === true) process.env.ENV = "dev";
-		else process.env.ENV="prod";
+		else process.env.ENV = "prod";
 		var app = express();
 		var serverConfig = require('../app/serverConfig');
 		var routes = require('../app/routes');

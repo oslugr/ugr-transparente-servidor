@@ -55,9 +55,14 @@ describe('Pruebas de acceso', function() {
 		});
 	});
 	it("Acceso a recursos", function(done) {
-		//TODO: check all resources
-		request(app).get('/imagenes/ugr.png').expect(200).end(function(err, res) {
-			assert.notOk(err);
+		this.timeout(5000);
+		var files = config.archivosEstaticos.produccion.concat(config.archivosEstaticos.desarrollo);
+		async.eachSeries(files, function(url, callback) {
+			request(app).get(url).expect(200).end(function(err, res) {
+				assert.notOk(err);
+				callback();
+			});
+		}, function() {
 			done();
 		});
 	});
@@ -74,7 +79,6 @@ describe('Pruebas de acceso', function() {
 	it("Archivos de buscador", function(done) {
 		this.timeout(5000);
 		async.eachSeries(config.archivosBuscador, function(url, callback) {
-			//TODO: probar varios archivos
 			request(app).get(url)
 				.expect(200)
 				.expect('Content-Type', "application/json; charset=utf-8")
@@ -105,9 +109,21 @@ describe("Pruebas en producción", function() {
 		server.close();
 	});
 
-	it("Configuración de produccion", function(done) {
+	it("Configuración de producción", function(done) {
 		request(app).get('/imagenes/ugr.png').expect(404).end(function(err, res) {
 			assert.notOk(err);
+			done();
+		});
+	});
+	it.skip("Archivos estáticos en producción", function(done) {
+		this.timeout(5000);
+		async.eachSeries(config.archivosEstaticos.produccion, function(url, callback) {
+			console.log(url);
+			request(app).get(url).expect(200).end(function(err, res) {
+				assert.notOk(err);
+				callback();
+			});
+		}, function() {
 			done();
 		});
 	});

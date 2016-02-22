@@ -44,16 +44,16 @@ module.exports = {
 		'/archivos/normativaLegal'
 	],
 	archivosEstaticos: [
-			'/favicon/favicon.ico',
-			'/css/style.css',
-			'/css/style2.css',
-			'/script/buscar.js',
-			'/script/calendario.js',
-			'/script/generar_tabla.js',
-			'/img/transp.gif',
-			'/imagenes/osl.jpg',
-			'/graph/perfil_pdi_extranjero.png'
-		],
+		'/favicon/favicon.ico',
+		'/css/style.css',
+		'/css/style2.css',
+		'/script/buscar.js',
+		'/script/calendario.js',
+		'/script/generar_tabla.js',
+		'/img/transp.gif',
+		'/imagenes/osl.jpg',
+		'/graph/perfil_pdi_extranjero.png'
+	],
 	initServer: function(done, dev) {
 		if (dev === true) process.env.ENV = "dev";
 		else process.env.ENV = "prod";

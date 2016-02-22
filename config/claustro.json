@@ -3,16 +3,19 @@
 	"plantilla": "claustro",
 	"contenido": [{
 		"tipo": 1,
+		"seccion": "",
 		"encabezado": "Perfil del Profesorado",
 		"link": "perfil-profesorado",
 		"texto": "Información sobre el perfil académico e invesgador del personal docente de la Universidad de Granada."
 	}, {
 		"tipo": 1,
+		"seccion": "Profesores extranjeros",
 		"encabezado": "Datos de Profesores Extranjeros",
 		"link": "datos-profesores-extranjeros",
 		"texto": "Información y datos sobre los profesores extranjeros de la Universidad de Granada. Fuente: Oficina de Datos, Información y Prospectiva (ODIP). Última actualización: 25/01/2016"
 	}, {
 		"tipo": 4,
+		"seccion": "Profesores extranjeros",
 		"encabezado": "Gráficos de Profesores Extranjeros",
 		"link": "graficos-profesores-extranjeros",
 		"texto": ""

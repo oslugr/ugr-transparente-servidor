@@ -32,7 +32,7 @@ exports.gobierno = function(req, res) {
 		servidor: config.servidor,
 		seccion: gobierno.nombre,
 		contenido: gobierno.contenido,
-		datos: gobierno.datos,
+		datos: gobierno.datos
 	});
 };
 
@@ -44,6 +44,6 @@ exports.rendimiento = function(req, res) {
 		servidor: config.servidor,
 		seccion: rendimiento.nombre,
 		contenido: rendimiento.contenido,
-		datos: rendimiento.datos,
+		datos: rendimiento.datos
 	});
 };

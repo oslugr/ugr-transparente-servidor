@@ -3,36 +3,43 @@
 	"plantilla": "normativaLegal",
 	"contenido": [{
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Estatutos",
 		"link": "estatutos",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Gestión Económica",
 		"link": "gestion-economica",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Ordenación Académica",
 		"link": "ordenacion-academica",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Gestión de Personal Docente e Investigador",
 		"link": "gestion-pdi",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Gestión de Personal de Administración y Servicios",
 		"link": "gestion-pas",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Plan Propio",
 		"link": "plan-propio",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Otras Normativas",
 		"link": "otras-normativas",
 		"texto": ""

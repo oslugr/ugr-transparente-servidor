@@ -9,25 +9,25 @@
 		"texto": ""
 	}, {
 		"tipo": 2,
-		"seccion": "oferta-academica",
+		"seccion": "Oferta académica",
 		"encabezado": "Información general",
 		"link": "informacion-general",
 		"texto": ""
 	}, {
 		"tipo": 2,
-		"seccion": "oferta-academica",
+		"seccion": "Oferta académica",
 		"encabezado": "Datos de oferta académica",
 		"link": "datos-oferta-academica",
 		"texto": ""
 	}, {
 		"tipo": 3,
-		"seccion": "oferta-demanda-plazas",
+		"seccion": "Oferta y demanda de plazas",
 		"encabezado": "Informes sobre oferta y demanda",
 		"link": "informes-oferta-demanda",
 		"texto": ""
 	}, {
 		"tipo": 2,
-		"seccion": "oferta-demanda-plazas",
+		"seccion": "Oferta y demanda de plazas",
 		"encabezado": "Datos sobre oferta y demanda",
 		"link": "datos-oferta-demanda",
 		"texto": ""

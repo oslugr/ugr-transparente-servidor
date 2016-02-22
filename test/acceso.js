@@ -55,9 +55,13 @@ describe('Pruebas de acceso', function() {
 		});
 	});
 	it("Acceso a recursos", function(done) {
-		//TODO: check all resources
-		request(app).get('/imagenes/ugr.png').expect(200).end(function(err, res) {
-			assert.notOk(err);
+		this.timeout(5000);
+		async.eachSeries(config.archivosEstaticos, function(url, callback) {
+			request(app).get(url).expect(200).end(function(err, res) {
+				assert.notOk(err);
+				callback();
+			});
+		}, function() {
 			done();
 		});
 	});
@@ -87,8 +91,6 @@ describe('Pruebas de acceso', function() {
 	});
 });
 
-
-
 describe("Pruebas en producción", function() {
 	var server;
 	var app;
@@ -104,9 +106,14 @@ describe("Pruebas en producción", function() {
 		server.close();
 	});
 
-	it("Configuración de produccion", function(done) {
-		request(app).get('/imagenes/ugr.png').expect(404).end(function(err, res) {
-			assert.notOk(err);
+	it("Archivos estáticos en producción", function(done) {
+		this.timeout(5000);
+		async.eachSeries(config.archivosEstaticos, function(url, callback) {
+			request(app).get(url).expect(404).end(function(err, res) {
+				assert.notOk(err);
+				callback();
+			});
+		}, function() {
 			done();
 		});
 	});

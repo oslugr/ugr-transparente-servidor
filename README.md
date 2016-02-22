@@ -1,7 +1,10 @@
 # UGR Transparente
-[![Coverage Status](https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master)](https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master)
 [![Build Status](https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=master)](https://travis-ci.org/oslugr/ugr-transparente-servidor)
+[![Coverage Status](https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master)](https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master)
 [![Dependency Status](https://gemnasium.com/oslugr/ugr-transparente-servidor.svg)](https://gemnasium.com/oslugr/ugr-transparente-servidor)
+[![License Status](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Node](https://img.shields.io/badge/node-4.2.6-blue.svg)](https://nodejs.org/en/)
+[![Code Climate](https://codeclimate.com/github/oslugr/ugr-transparente-servidor/badges/gpa.svg)](https://codeclimate.com/github/oslugr/ugr-transparente-servidor)
 
 -------------------
 

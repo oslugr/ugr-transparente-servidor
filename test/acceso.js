@@ -56,8 +56,7 @@ describe('Pruebas de acceso', function() {
 	});
 	it("Acceso a recursos", function(done) {
 		this.timeout(5000);
-		var files = config.archivosEstaticos.produccion.concat(config.archivosEstaticos.desarrollo);
-		async.eachSeries(files, function(url, callback) {
+		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
 				assert.notOk(err);
 				callback();
@@ -92,8 +91,6 @@ describe('Pruebas de acceso', function() {
 	});
 });
 
-
-
 describe("Pruebas en producción", function() {
 	var server;
 	var app;
@@ -109,17 +106,10 @@ describe("Pruebas en producción", function() {
 		server.close();
 	});
 
-	it("Configuración de producción", function(done) {
-		request(app).get('/imagenes/ugr.png').expect(404).end(function(err, res) {
-			assert.notOk(err);
-			done();
-		});
-	});
-	it.skip("Archivos estáticos en producción", function(done) {
+	it("Archivos estáticos en producción", function(done) {
 		this.timeout(5000);
-		async.eachSeries(config.archivosEstaticos.produccion, function(url, callback) {
-			console.log(url);
-			request(app).get(url).expect(200).end(function(err, res) {
+		async.eachSeries(config.archivosEstaticos, function(url, callback) {
+			request(app).get(url).expect(404).end(function(err, res) {
 				assert.notOk(err);
 				callback();
 			});

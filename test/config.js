@@ -45,7 +45,7 @@ module.exports = {
 	],
 	initServer: function(done, dev) {
 		if (dev === true) process.env.ENV = "dev";
-		else process.env.ENV="prod";
+		else process.env.ENV = "prod";
 		var app = express();
 		var serverConfig = require('../app/serverConfig');
 		var routes = require('../app/routes');

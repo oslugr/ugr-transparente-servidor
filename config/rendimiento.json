@@ -3,36 +3,43 @@
 	"plantilla": "rendimiento",
 	"contenido": [{
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Labor investigadora",
 		"link": "labor-investigadora",
 		"texto": ""
 	}, {
 		"tipo": 2,
+		"seccion": "",
 		"encabezado": "Empleabilidad",
 		"link": "empleabilidad",
 		"texto": ""
 	}, {
 		"tipo": 1,
+		"seccion": "",
 		"encabezado": "Rendimiento académico",
 		"link": "rendimiento-academico",
 		"texto": "Información sobre los principales datos relacionados con el rendimiento académico de los estudiantes de la Universidad de Granada."
 	}, {
 		"tipo": 3,
+		"seccion": "",
 		"encabezado": "Informes sobre satisfacción de los estudiantes",
 		"link": "informes-satisfacion-estudiantes",
 		"texto": "Informes sobre sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
 	}, {
 		"tipo": 1,
+		"seccion": "",
 		"encabezado": "Datos sobre satisfacción de los estudiantes",
 		"link": "datos-satisfacion-estudiantes",
 		"texto": "Datos sobre sobre los índices de satisfacción de los estudiantes de la Universidad de Granada."
 	}, {
 		"tipo": 1,
+		"seccion": "",
 		"encabezado": "Ranking",
 		"link": "ranking",
 		"texto": "Información sobre la posición de la Universidad de Granada en los principales rankings internacionales."
 	}, {
 		"tipo": 1,
+		"seccion": "",
 		"encabezado": "Empleo de egresados",
 		"link": "empleo-egresados",
 		"texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2012, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015."

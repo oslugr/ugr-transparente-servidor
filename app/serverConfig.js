@@ -59,7 +59,7 @@ module.exports = function(app) {
 	}));
 	app.use(cookieParser());
 	//Manejador de enrutado
-	if (app.get('env') == "dev") {
+	if (app.get('env') === "dev") {
 		app.use(express.static('./public'));
 	}
 };

@@ -44,7 +44,7 @@ ul.square_seccion {
   list-style-type: square;
   list-style-position: inside;
   color: #DD3B02;
-  padding: 0px 0px 0px 0px;
+  padding: 0 0 0 0;
 }
 ul.square_seccion2 {
   list-style-type: square;
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: normal;
 }
-div#contenedor {
+#contenedor {
   margin-left: auto;
   margin-right: auto;
   /*padding-top: 10px;*/
@@ -119,12 +119,12 @@ div#contenedor {
   font-size: 11px;
   width: 950px;
 }
-div#contenedor_margenes {
+#contenedor_margenes {
   margin-left: auto;
   margin-right: auto;
   width: 1024px;
 }
-div#sombras {
+#sombras {
   background-image: url("/img/general/sombra.png");
   background-repeat: repeat-y;
 }
@@ -142,12 +142,12 @@ span.separador_enlaces {
 
 
 /*
-div#cabecera {
+#cabecera {
     position: relative;
     width: 100%;
 	border-color: #6D6C71;
 }
-div#cabecera h1#cab_inf {
+#cabecera h1#cab_inf {
     height: 138px;
     left: 237px;
     position: absolute;
@@ -160,7 +160,7 @@ div#cabecera h1#cab_inf {
     border-color: #6D6C71;
 }
 
-div#cabecera a.enlace_provisional {
+#cabecera a.enlace_provisional {
     display: block;
     float: left;
     margin-left: 204px;
@@ -171,10 +171,10 @@ div#cabecera a.enlace_provisional {
     background-position: 0 0;
     font-size: 90%;
 }
-div#cabecera a.enlace_provisional:hover {
+#cabecera a.enlace_provisional:hover {
     background-image: url("/img/general/cabecera-flecha_on.png");
 }
-div#cabecera a.enlace_provisional strong {
+#cabecera a.enlace_provisional strong {
     display: block;
     color: #FFFFFF;
     font-style: normal;
@@ -182,40 +182,40 @@ div#cabecera a.enlace_provisional strong {
     line-height: 0.8em;
     text-transform: uppercase;
 }
-div#cabecera a.enlace_provisional em {
+#cabecera a.enlace_provisional em {
     color: #846E78;
     font-style: normal;
     font-weight: normal;
 }
-div#cabecera a.enlace_provisional:hover em {
+#cabecera a.enlace_provisional:hover em {
     color: #FFFFFF;
 }
-div#cabecera div#formularios {
+#cabecera #formularios {
     height: 238px;
     background-image: url("/img/general/logo-ugr.png");
     background-position: right top;
     border-color: #6D6C71;
 }
-div#cabecera div#formularios span#obituario {
+#cabecera #formularios span#obituario {
     display: none;
 }
-div#cabecera.activar_obituario div#formularios label#buscar {
+#cabecera.activar_obituario #formularios label#buscar {
     right: 91px;
 }
-div#cabecera.activar_obituario div#formularios label#buscar input {
+#cabecera.activar_obituario #formularios label#buscar input {
     width: 10em;
 }
-div#cabecera.activar_obituario div#formularios label#enviar_buscar {
+#cabecera.activar_obituario #formularios label#enviar_buscar {
     right: 67px;
 }
-div#cabecera.activar_obituario div#formularios span#obituario {
+#cabecera.activar_obituario #formularios span#obituario {
     display: block;
     height: 52px;
     position: absolute;
     right: 0;
     width: 52px;
 }
-div#cabecera a#enlace_ugr {
+#cabecera a#enlace_ugr {
     display: block;
     height: 69px;
     margin-left: 750px;
@@ -223,11 +223,11 @@ div#cabecera a#enlace_ugr {
     width: 200px;
 	text-indent: -9999em;
 }
-div#cabecera div.depto span {
+#cabecera div.depto span {
     display: block;
     text-indent: -9999em;
 }
-div#cabecera div.depto {
+#cabecera div.depto {
     border-bottom: 10px none;
     border-top: 10px none;
     float: left;
@@ -239,18 +239,18 @@ div#cabecera div.depto {
     border-style: solid;
 }
 
-div#cabecera div.depto.ejemplo_titulo {
+#cabecera div.depto.ejemplo_titulo {
     background-image: url("/img/general/cabecera-departamento_contitulo.png");
 }
 
-div#cabecera div.depto.ejemplo_completo {
+#cabecera div.depto.ejemplo_completo {
     background-image: url("/img/general/cabecera-departamento_OLD.png");
 }
 
-div#cabecera div.depto a {
+#cabecera div.depto a {
     text-indent: -9999em;
 }
-div#cabecera a#enlace_stack {
+#cabecera a#enlace_stack {
     display: block;
     height: 138px;
     margin-top: -13px;
@@ -260,16 +260,16 @@ div#cabecera a#enlace_stack {
     font-size: 23px;
     letter-spacing: -0.2px;
 }
-div#cabecera a#enlace_stack_subtit {
+#cabecera a#enlace_stack_subtit {
     display: block;
     padding-left: 57px;
     padding-top: 0;
 }
-div#cabecera div#enlaces_contactos {
+#cabecera #enlaces_contactos {
     border-bottom: 1px solid;
     height: 31px;
 }
-div#cabecera div#enlaces_contactos a {
+#cabecera #enlaces_contactos a {
     display: block;
     float: right;
     height: 13px;
@@ -277,7 +277,7 @@ div#cabecera div#enlaces_contactos a {
     min-width: 80px;
     padding-left: 18px;
 }
-div#cabecera div#enlaces_contactos a.titulaciones {
+#cabecera #enlaces_contactos a.titulaciones {
     float: left;
     margin-top: 6px;
     padding: 0 0 0 6px;
@@ -288,7 +288,7 @@ div#cabecera div#enlaces_contactos a.titulaciones {
     padding-right: 10px;
     text-transform: uppercase;
 }
-div#cabecera div#enlaces_contactos a.titulaciones_ugr {
+#cabecera #enlaces_contactos a.titulaciones_ugr {
     float: left;
     margin-top: 6px;
     padding: 0;
@@ -298,11 +298,11 @@ div#cabecera div#enlaces_contactos a.titulaciones_ugr {
     letter-spacing: 2px;
 }
 
-div#cabecera div#enlaces_contactos a.titulaciones:hover {
+#cabecera #enlaces_contactos a.titulaciones:hover {
     background: none repeat scroll 0 0 transparent;
     color: #D73B12;
 }
-div#cabecera div#enlaces_contactos a.titulaciones_ugr:hover {
+#cabecera #enlaces_contactos a.titulaciones_ugr:hover {
     background: none repeat scroll 0 0 transparent;
     color: #6F6F71;
 }
@@ -317,16 +317,16 @@ div#cabecera div#enlaces_contactos a.titulaciones_ugr:hover {
 
 /***************/
 
-div#rastro {
+#rastro {
   min-height: 20px;
   padding: 4px 0 0;
   line-height: 24px;
   text-align: left;
 }
-div#rastro li {
+#rastro li {
   display: inline;
 }
-div#rastro span {
+#rastro span {
   margin-right: 3px;
   padding-left: 15px;
   width: 100%;
@@ -334,18 +334,18 @@ div#rastro span {
   color: #99989C;
   line-height: 24px;
 }
-div#rastro span.first {
+#rastro span.first {
   padding-left: 27px;
   background: url("/img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
 }
-div#rastro ul#rastro_breadcrumb {
+#rastro ul#rastro_breadcrumb {
   margin-top: -4px;
   border-color: #FFFFFF;
 }
-div#rastro span.last {
+#rastro span.last {
   color: #023A79;
 }
-div#rastro span:hover {
+#rastro span:hover {
   color: #DD3B15;
   text-decoration: none;
 }
@@ -358,7 +358,7 @@ div#rastro span:hover {
 
 /***************/
 
-div#pie {
+#pie {
   border-top-width: 1px;
   clear: both;
   height: 115px;
@@ -372,7 +372,7 @@ div#pie {
   background-repeat: repeat-x;
   border-color: #6D6C71;
 }
-div#pie a {
+#pie a {
   display: block;
   float: left;
   margin-left: 20px;
@@ -382,7 +382,7 @@ div#pie a {
   background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
   color: #FFFFFF;
 }
-div#pie p {
+#pie p {
   height: 18px;
   margin-right: 0;
   margin-top: 115px;
@@ -392,7 +392,7 @@ div#pie p {
   border-color: #C4C4C4;
   color: #8A8A8A;
 }
-div#pie p a {
+#pie p a {
   display: inline;
   float: none;
   margin: 0;
@@ -400,22 +400,22 @@ div#pie p a {
   background-image: none;
   color: #8A8A8A;
 }
-div#pie a:hover {
+#pie a:hover {
   background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
   color: #FFFFFF;
 }
-div#pie p a:hover {
+#pie p a:hover {
   background-image: none;
   color: #DADADA;
   text-decoration: underline;
 }
-div#pie p#pie_credits_txt {
+#pie p#pie_credits_txt {
   float: left;
   position: absolute;
   text-indent: -999px;
   top: -142px;
 }
-div#pie p#pie_credits_img {
+#pie p#pie_credits_img {
   float: left;
   position: relative;
   top: -138px;
@@ -430,7 +430,7 @@ div#pie p#pie_credits_img {
 
 /************/
 
-div#banners {
+#banners {
   border-bottom-width: 1px;
   clear: right;
   float: right;
@@ -448,16 +448,16 @@ div#banners {
 
 /************/
 
-div#lateral_doku {
+#lateral_doku {
   clear: right;
   float: right;
   margin-top: 7px;
   width: 162px;
 }
-div#contenido {
+#contenido {
   color: #4D4D4D;
 }
-div#general {
+#general {
   border-width: 0 0 1px;
   float: left;
   overflow: hidden;
@@ -468,7 +468,7 @@ div#general {
   background-repeat: repeat-y;
   border-color: #FFFFFF;
 }
-div#menus {
+#menus {
   border-bottom-width: 1px;
   float: left;
   height: 1%;
@@ -478,13 +478,13 @@ div#menus {
   border-color: #B2B2B4;
   border-style: solid;
 }
-div#frecuentes {
+#frecuentes {
   margin-bottom: -1px;
   margin-top: -1px;
   padding-top: 0;
   background-position: left top;
 }
-div#pagina {
+#pagina {
   float: right;
   margin-bottom: 10px;
   padding-bottom: 30px;
@@ -494,7 +494,7 @@ div#pagina {
   background-position: left 41px;
   background-repeat: no-repeat;
 }
-div#pagina h1#titulo_pagina {
+#pagina h1#titulo_pagina {
   min-height: 34px;
   padding-left: 62px;
   padding-top: 7px;
@@ -506,7 +506,7 @@ div#pagina h1#titulo_pagina {
   color: #FFFFFF;
   font-size: 18px;
 }
-div#pagina h1#titulo_pagina span.texto_titulo {
+#pagina h1#titulo_pagina span.texto_titulo {
   display: block;
   min-height: 26px;
   padding-left: 13px;
@@ -515,12 +515,12 @@ div#pagina h1#titulo_pagina span.texto_titulo {
   background-image: url("/img/interior/pagina-titulo_principal-h1.png");
   background-position: 0 bottom;
 }
-div#pagina div#contenido {
+#pagina #contenido {
   margin-top: 20px;
   padding-left: 25px;
   padding-right: 25px;
 }
-div#general_calendario {
+#general_calendario {
   border-width: 0 0 1px;
   float: left;
   overflow: hidden;
@@ -531,7 +531,7 @@ div#general_calendario {
   background-repeat: repeat-y;
   border-color: #FFFFFF;
 }
-div#calendar {
+#calendar {
   font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
   font-size: 14px;
   position: absolute;
@@ -540,7 +540,7 @@ div#calendar {
   width: 53%;
   z-index: 10;
 }
-div#calendario {
+#calendario {
   float: left;
   margin-bottom: 10px;
   padding-bottom: 30px;
@@ -551,7 +551,7 @@ div#calendario {
   background-position: left 41px;
   background-repeat: no-repeat;
 }
-div#calendario h1#titulo_pagina {
+#calendario h1#titulo_pagina {
   min-height: 34px;
   padding-left: 62px;
   padding-top: 7px;
@@ -563,7 +563,7 @@ div#calendario h1#titulo_pagina {
   color: #FFFFFF;
   font-size: 18px;
 }
-div#calendario h1#titulo_pagina span.texto_titulo {
+#calendario h1#titulo_pagina span.texto_titulo {
   display: block;
   min-height: 26px;
   width: 772px;
@@ -573,12 +573,12 @@ div#calendario h1#titulo_pagina span.texto_titulo {
   background-image: url("/img/interior/calendario-titulo_principal-h1.png");
   background-position: 0 bottom;
 }
-div#calendario div#contenido {
+#calendario #contenido {
   margin-top: 20px;
   padding-left: 25px;
   padding-right: 25px;
 }
-div#interior_pie {
+#interior_pie {
   background-image: url("/img/general/sombra_dcha.png");
   background-position: right center;
   background-repeat: repeat-y;
@@ -2092,7 +2092,7 @@ li.model-resaltado-02 a.banner:hover {
 
 /************/
 
-div#banners {
+#banners {
   border-bottom-width: 1px;
   clear: right;
   float: right;
@@ -2114,16 +2114,16 @@ div#banners {
 
 /****************/
 
-div#cabecera div#head_menu_services li.head_services_item1 {
+#cabecera #head_menu_services li.head_services_item1 {
   background-image: url("/img/general/cabecera-menu_servicios-acceso.png");
 }
-div#cabecera div#head_menu_services li.head_services_item2 {
+#cabecera #head_menu_services li.head_services_item2 {
   background-image: url("/img/general/cabecera-menu_servicios-biblioteca.png");
 }
-div#cabecera div#head_menu_services li.head_services_item3 {
+#cabecera #head_menu_services li.head_services_item3 {
   background-image: url("/img/general/cabecera-menu_servicios-correo.png");
 }
-div#cabecera div#head_menu_services li {
+#cabecera #head_menu_services li {
   min-height: 21px;
   padding-top: 2px;
   padding-left: 26px;

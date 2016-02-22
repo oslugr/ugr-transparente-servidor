@@ -29,7 +29,8 @@ var config = require('../../config/config');
 var enlaces = [];
 
 function leerEnlaces() {
-	for (var i in config.index.enlaces) {
+	var l = config.index.enlaces.length;
+	for (var i = 0; i < l; i++) {
 		enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
 	}
 }

@@ -130,5 +130,5 @@ La aplicación se encuentra estructurada de forma similar a cualquier proyecto d
 * `public/`: Archivos públicos del portal
 * `views/`: Vistas de las paginas con [Jade](http://jade-lang.com/)
 * `test/`: Archivos de tests unitarios y de integración
-* `provisioning/`: Archivos de aprovisionamiento
+* `provisioning/`: Archivos de provisionamiento
 

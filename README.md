@@ -13,7 +13,7 @@ Portal de transparencia de la [UGR](http://www.ugr.es/) para publicar los datos 
 
 La aplicación es accesible desde <http://transparente.ugr.es>.
 
-## Instalación manual
+## Instalación
 1. En caso de no tener instalado `git`:
 ```
 sudo apt-get install git
@@ -51,42 +51,24 @@ npm start
 npm restart|stop
 ```
 
-# Instalación automática (aprovisionamiento)
+## Provisionamiento
 También podemos instalar la aplicación automáticamente aprovisionando el servidor con todo lo necesario mediante [Ansible](http://www.ansible.com/home).
-
-1. En este caso lo primero que tenemos que hacer asegurarnos que tenemos conexión mediante SSH al servidor, para simplificar la conexión copiaremos nuestro archivo de claves al servidor; a considerar que `USUARIO` es el usuario con el que accedemos al servidor y que `transparente.ugr.es` es la dirección de nuestro servidor en este caso.
-
-```
-ssh-copy-id USUARIO@transparente.ugr.es
-```
-
-Ahora comprobamos que podemos acceder directamente al servidor sin tener que introducir contraseña.
-
-```
-ssh USUARIO@transparente.ugr.es
-```
-
-2.- Instalamos **Ansible** como cualquier otro paquete:
 
 ```
 sudo apt-get install ansible
 ```
 
-3.- El archivo `ansible_hosts` dentro de la carpeta `provisioning` contiene la dirección del servidor que vamos a aprovisionar con ansible_hosts. Esta dirección puede ser una dirección IP o una dirección URL.
-
+1. El archivo `ansible_hosts` dentro de la carpeta `provisioning` contiene la dirección del servidor; esta dirección puede ser una dirección IP o una dirección URL.
 ```
 [transparente]
 transparente.ugr.es
 ```
 
-4.- Vamos a comprobar que tenemos conexión SSH con el servidor mediante **Ansible** usando el comando `ping`.
-
+2. Comprobamos que tenemos conexión SSH con el servidor.
 ```
 ANSIBLE_HOSTS=provisioning/ansible_hosts ansible transparente -u USUARIO -m ping
 ```
-
 Si el acceso es correcto la respuesta del servidor será la siguiente:
-
 ```
 transparente.ugr.es | success >> {
     "changed": false,
@@ -94,15 +76,13 @@ transparente.ugr.es | success >> {
 }
 ```
 
-5.- Por último solo nos queda ejecutar el aprovisionamiento. Ansible recibirá como variable de entorno la ruta del `ansible_hosts` (`ANSIBLE_HOSTS=provisioning/ansible_hosts`) y como parámetro el usuario con el que accederemos al servidor (`--extra-vars "user=USUARIO"`). El archivo `provisioning/transparente.yml` es el **playbook**, el archivo de instrucciones que **Ansible** seguirá para saber que tareas tiene que llevar a cabo durante el aprovisionamiento.
+3. Para ejecutar el provisionamiento Ansible recibirá como variable de entorno la ruta del `ansible_hosts` (`ANSIBLE_HOSTS=provisioning/ansible_hosts`) y como parámetro el usuario con el que accederemos al servidor (`--extra-vars "user=USUARIO"`). El archivo `provisioning/transparente.yml` es el **playbook**, el archivo de instrucciones que **Ansible** seguirá para saber que tareas tiene que llevar a cabo durante el provisionamiento.
 
 ```
 ANSIBLE_HOSTS=provisioning/ansible_hosts ansible-playbook provisioning/transparente.yml --extra-vars "user=USUARIO"
 ```
 
-6.- De igual forma que cuando hicimos la instalación manual, podremos comprobar desde un navegador que accediendo a la dirección de nuestro servidor este debe estar operativo.
-
-# Tests unitarios y de cobertura
+## Testing
 Se han incluido tests unitarios para comprobar que las diferentes funcionalidades de la aplicación funcionan correctamente, de dichas funcionalidades hay que destacar el acceso a los archivos JSON con los datos del portal (para comprobar que existen y que los datos que contienen están en un formato válido) y que las diferentes páginas del portal son accesibles. También se ha creado un test de cobertura para comprobar que toda funcionalidad del portal está cubierta y asegurada por sus correspondientes test unitarios. Los test unitarios son realizados con [Mocha](https://github.com/mochajs/mocha) y el test de cobertura es realizado con [Istanbul](https://github.com/gotwarlost/istanbul). Se ejecutan con:
 
 ```
@@ -111,40 +91,30 @@ npm test
 
 El resultado de los tests unitarios se mostrarán por pantalla como salida de la ejecución del script; a su vez, el resultado de los tests de cobertura se almacenarán en el archivo `coverage/lcov-report/index.html`, mostrando el porcentaje del código que está cubierto por los test unitarios.
 
-# Integración continua
+## Integración continua
 Disponemos de una integración continua que nos permite detectar automáticamente mediante la ejecución de pruebas los fallos que se produzcan cuando se actualiza el código, evitando así encontrarnos problemas inesperados durante el despliegue de la aplicación.
 
 Para introducir la integración continua vamos a usar [Travis CI](https://travis-ci.org/). Para poder usarlo, activamos continua como explican en la propia [página](http://docs.travis-ci.com/user/getting-started/) de **Travis CI**, lo más importante es activar el uso de Travis para nuestro repositorio y crear el archivo de configuración `.travis.yml`.
 
 A partir de ahora, con cada nuevo cambio que publiquemos en el repositorio del proyecto se generará una build del programa en Travis que ejecutará los _scripts_ básicos de **NPM**: `npm install` y `npm test`. Ya solo nos queda comprobar el resultado de estas [builds](https://travis-ci.org/oslugr/ugr-transparente-servidor/builds).
 
-# Despliegue automático
+## Despliegue automático
 Cuando hagamos cambios en nuestra aplicación y queramos aplicarlos en el servidor, no es necesario que accedamos a él manualmente y apliquemos dichos cambios, podemos usar [Flightplan](https://github.com/pstadler/flightplan) para hacer esto automáticamente.
 
-Si queremos utilizar **Flightplan** para el despliegue automático es necesario que tengamos nuestra clave SSH copiada en el servidor como hicimos para el aprovisionamiento.
+Si queremos utilizar **Flightplan** para el despliegue automático es necesario que tengamos nuestra clave SSH copiada en el servidor como hicimos para el provisionamiento.
 
 ```
 ssh-copy-id USUARIO@transparente.ugr.es
 ```
 
-El archivo en el que hemos definido la configuración para el despliegue automático es `flightplan.js`. Podemos diferenciar dos partes esenciales: `plan.target` y `plan.remote`; el primero indica los parámetros para acceder al servidor, el segundo indica las tareas a realizar durante el despliegue.
-
-Además, si algún comando tiene que ser ejecutado con permisos de superusuario (como en este caso algunos de los _scripts_ de **NPM**), es necesario que se añadan al archivo `/etc/sudoers` para que no se solicite la contraseña del usuario cuando se vayan a ejecutar; si no hacemos esto, la ejecución de **Flightplan** dará un error y no finalizará correctamente.
-
-```
-...
-ALL ALL=NOPASSWD: /usr/bin/npm
-...
-```
-
-Solo falta dar a **Flightplan** la orden de despliegue automático, donde `USUARIO` es el usuario con permisos de superusuario con el que accederemos al servidor:
+El archivo en el que hemos definido la configuración para el despliegue automático es `flightplan.js`. Podemos diferenciar dos partes esenciales: `plan.target` y `plan.remote`; el primero indica los parámetros para acceder al servidor, el segundo indica las tareas a realizar durante el despliegue. Solo falta dar a **Flightplan** la orden de despliegue automático, donde `USUARIO` es el usuario con permisos de superusuario con el que accederemos al servidor:
 
 ```
 USER=USUARIO npm run-script deploy
 ```
 
-# Estructura de la aplicación
-## Archivos en raíz
+## Estructura de la aplicación
+# Archivos en raíz
 De los archivos que nos encontramos en la carpeta raíz, tenemos por un lado los archivos de carácter informativo como son este mismo archivo (`README.md`) y el archivo con la licencia de la aplicación (`LICENSE`); los archivos de configuración de diversas utilidades (`.gitignore` de **Git**, `.travis.yml` de **Travis CI** y `flightplan.js` de **Flightplan**); y finalmente los archivos más importantes de la aplicación: `app.js` y `package.json`.
 - `app.js` es la aplicación en si misma, es donde se crea el servidor mediante **Express** y se configuran tanto las rutas de acceso a las diferentes páginas como el resto de aspectos de acceso al servidor.
 - `package.json` es esencialmente el archivo que documenta una aplicación hecha en **Node.js**. Es imprescindible que contenga el nombre y la versión de la aplicación, pero además puede contener mucha más información como quienes son los desarrolladores/colaboradores, descripción, licencia, repositorio o página web. Además también tiene otra parte que además de descriptiva es más bien funcional: **dependencias** y **scripts**
@@ -174,4 +144,4 @@ La carpeta **test** correspondería al _script_ que pasa los test unitarios con 
 
 La carpeta **coverage** correspondería a los archivos de resultados generados una vez que los test unitarios han sido comprobados con **Istanbul** para conocer la cobertura que proporcionan los test unitarios a nuestro código.
 
-La carpeta **provisioning** correspondería al archivo de configuración que nos permite realizar el aprovisionamiento del servidor con **Ansible** (`transparente.yml`) y el archivo que con la dirección del servidor a aprovisionar (`ansible_host`).
+La carpeta **provisioning** correspondería al archivo de configuración que nos permite realizar el provisionamiento del servidor con **Ansible** (`transparente.yml`) y el archivo que con la dirección del servidor a provisionar (`ansible_host`).

@@ -39,13 +39,13 @@
 		"texto": "Información sobre la posición de la Universidad de Granada en los principales rankings internacionales."
 	}, {
 		"tipo": 2,
-		"seccion": "Empleabilidad",
+		"seccion": "Empleo de egresados",
 		"encabezado": "Estudio de egresados",
 		"link": "estudio-egresados",
 		"texto": ""
 	}, {
 		"tipo": 1,
-		"seccion": "Empleabilidad",
+		"seccion": "Empleo de egresados",
 		"encabezado": "Datos de empleo de egresados",
 		"link": "datos-empleo-egresados",
 		"texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2012, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015."

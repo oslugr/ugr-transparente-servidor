@@ -20,7 +20,7 @@
 		"link": "datos-2014",
 		"texto": "Datos sobre la información económica para el año 2014 de la Universidad de Granada."
 	}, {
-		"tipo": 3,
+		"tipo": 2,
 		"seccion": "",
 		"encabezado": "Memoria de Cuentas Anuales",
 		"link": "memoria-cuentas-anuales",
@@ -95,10 +95,10 @@
 		"nombre": "Gastos",
 		"url": "http://opendata.ugr.es/dataset/desglose-gastos-2014"
 	}, {
-		"tipo": 3,
+		"tipo": 2,
 		"dataset": "Memoria de Cuentas Anuales",
-		"nombre": "Memoria cuentas anuales 2014",
-		"url": "memoria_cuentas_anuales_2014.pdf"
+		"nombre": "Memoria cuentas anuales",
+		"url": "http://gerencia.ugr.es/pages/vger_eco/cuentas-anuales/cuentas-anuales"
 	}, {
 		"tipo": 3,
 		"dataset": "Auditoría",

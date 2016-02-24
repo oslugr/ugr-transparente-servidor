@@ -40,8 +40,6 @@ plan.remote(function(remote) {
 		remote.exec('npm stop');
 		remote.log('Obteniendo cambios...');
 		remote.exec('git pull');
-		remote.log('Instalando dependencias...');
-		remote.exec('npm install');
 		remote.log('Arrancando el servidor...');
 		remote.exec('npm start');
 	});

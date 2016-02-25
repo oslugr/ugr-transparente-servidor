@@ -1,20 +1,8 @@
 var express = require('express');
 
-
+//Configuración de los tests
 module.exports = {
-	archivosJSON: [
-		"personal.json",
-		"infoEconomica.json",
-		"ofertaDemanda.json",
-		"claustro.json",
-		"estudiantes.json",
-		"gobierno.json",
-		"rendimiento.json",
-		"normativaLegal.json",
-		"index.json",
-		"infoInstitucional.json"
-	],
-	direcciones: [
+	direcciones: [ //Direcciones a probar
 		'/',
 		'/index.html',
 		'/infoInstitucional.html',
@@ -33,7 +21,7 @@ module.exports = {
 		'/calendarioSolo.html',
 		'/ofertaDemanda.html'
 	],
-	archivosBuscador: [
+	archivosBuscador: [ //direcciones del buscador
 		'/archivos/personal',
 		'/archivos/infoEconomica',
 		'/archivos/ofertaDemanda',
@@ -43,7 +31,7 @@ module.exports = {
 		'/archivos/rendimiento',
 		'/archivos/normativaLegal'
 	],
-	archivosEstaticos: [
+	archivosEstaticos: [ //archivos estáticos a probar
 		'/favicon/favicon.ico',
 		'/css/style.css',
 		'/css/style2.css',
@@ -54,7 +42,7 @@ module.exports = {
 		'/imagenes/osl.jpg',
 		'/graph/perfil_pdi_extranjero.png'
 	],
-	initServer: function(done, dev) {
+	initServer: function(done, dev) { //Función para iniciar el servidor express
 		if (dev === true) process.env.ENV = "dev";
 		else process.env.ENV = "prod";
 		var app = express();
@@ -66,7 +54,5 @@ module.exports = {
 		server = app.listen(app.get('port'), app.get('ip'), function() {
 			done(app, server);
 		});
-
-
 	}
 };

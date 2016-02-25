@@ -19,7 +19,7 @@ La aplicación es accesible desde <http://transparente.ugr.es>.
     ```
     sudo apt-get install git
     ```
-    
+
 2. Instalamos **Node.js**:
     ```
     wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
@@ -113,7 +113,7 @@ ssh-copy-id USUARIO@transparente.ugr.es
 El archivo en el que hemos definido la configuración para el despliegue automático es `flightplan.js`. Podemos diferenciar dos partes esenciales: `plan.target` y `plan.remote`; el primero indica los parámetros para acceder al servidor, el segundo indica las tareas a realizar durante el despliegue. Solo falta dar a **Flightplan** la orden de despliegue automático, donde `USUARIO` es el usuario con permisos de superusuario con el que accederemos al servidor:
 
 ```
-USER=USUARIO npm run-script deploy
+USER=USUARIO npm run deploy
 ```
 
 # Estructura de la aplicación
@@ -131,4 +131,3 @@ La aplicación se encuentra estructurada de forma similar a cualquier proyecto d
 * `views/`: Vistas de las paginas con [Jade](http://jade-lang.com/)
 * `test/`: Archivos de tests unitarios y de integración
 * `provisioning/`: Archivos de provisionamiento
-

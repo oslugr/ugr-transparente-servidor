@@ -36,7 +36,7 @@ var calendarioSolo = require('./routes/calendarioSolo');
 var config = require('../config/config');
 
 
-//Generate all the routes
+//Routes de las urls de transparente
 module.exports = function(app) {
 	// Inicio
 	app.get('/', index.index);

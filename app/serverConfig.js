@@ -35,7 +35,7 @@ var express = require('express');
 
 var config = require('../config/config');
 
-
+//Configura el servidor express app
 module.exports = function(app) {
 	// Variables de entorno
 	app.set('port', process.env.PORT || config.puerto);

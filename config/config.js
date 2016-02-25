@@ -18,22 +18,19 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-// Librerías
-var cargar = require('../lib/cargar');
-
 module.exports = {
 	servidor: "http://opendata.ugr.es/",
 	puerto: 3000,
-	personal: cargar('./config/personal.json'),
-	infoEconomica: cargar('./config/infoEconomica.json'),
-	ofertaDemanda: cargar('./config/ofertaDemanda.json'),
-	claustro: cargar('./config/claustro.json'),
-	estudiantes: cargar('./config/estudiantes.json'),
-	gobierno: cargar('./config/gobierno.json'),
-	rendimiento: cargar('./config/rendimiento.json'),
-	normativaLegal: cargar('./config/normativaLegal.json'),
-	infoInstitucional: cargar('./config/infoInstitucional.json'),
-	index: cargar('./config/index.json'),
+	personal: require('./personal.json'),
+	infoEconomica: require('./infoEconomica.json'),
+	ofertaDemanda: require('./ofertaDemanda.json'),
+	claustro: require('./claustro.json'),
+	estudiantes: require('./estudiantes.json'),
+	gobierno: require('./gobierno.json'),
+	rendimiento: require('./rendimiento.json'),
+	normativaLegal: require('./normativaLegal.json'),
+	infoInstitucional: require('./infoInstitucional.json'),
+	index: require('./index.json'),
 	error: {
 		"titulo": "Página no encontrada (Error 404)",
 		"texto": "Lo siento, la página no existe o está temporalmente inaccesible."

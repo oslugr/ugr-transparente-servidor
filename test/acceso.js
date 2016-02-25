@@ -59,6 +59,7 @@ describe('Pruebas de acceso', function() {
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
 				assert.notOk(err);
+				assert.ok(res);
 				callback();
 			});
 		}, function() {

@@ -20,7 +20,7 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-//Pagina de inicio
+// Pagina de inicio
 exports.index = function(req, res) {
 	res.render('calendarioSolo', {
 		seccion: "Calendario",

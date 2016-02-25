@@ -25,5 +25,4 @@ exports.buscador = function(req, res) {
 	res.render('buscador', {
 		seccion: 'Buscador'
 	});
-
 };

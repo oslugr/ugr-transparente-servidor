@@ -3,7 +3,7 @@
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
   Copyright (C) 2016 Andrés Ortiz Corrales
-  
+
 
   This file is part of UGR Transparente.
 
@@ -22,7 +22,7 @@
 */
 
 
-//Pagina de inicio
+// Pagina de inicio
 exports.index = function(req, res) {
 	res.render('calendario', {
 		seccion: "Calendario",

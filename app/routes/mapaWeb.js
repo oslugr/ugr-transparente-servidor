@@ -20,7 +20,7 @@
 */
 
 
-//Variable para las configuraciones
+// Variable para las configuraciones
 var config = require('../../config/config');
 
 exports.mapaWeb = function(req, res) {

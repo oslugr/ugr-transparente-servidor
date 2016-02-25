@@ -1,3 +1,4 @@
+//- Genera menú de navegación por secciones
 mixin menu (seleccion)
 	#menus
 		- var show1=false
@@ -27,7 +28,6 @@ mixin menu (seleccion)
 					+ second_level_item ("Rendimiento","/rendimiento.html",seleccion)
 				+ first_level_item ("Normativa Legal","/normativaLegal.html",seleccion)
 				+ first_level_item ("Solicitud de Información","/solicitudInfo.html",seleccion)
-
 
 //First level Item
 mixin first_level_item (name,link,selected)

@@ -21,11 +21,11 @@
 */
 
 
-//Variable para las configuraciones
+// Variable para las configuraciones
 var config = require('../../config/config');
 
-//Rellenamos el vector con los enlaces leidos del fichero de configuracion
-//Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
+// Rellenamos el vector con los enlaces leidos del fichero de configuracion
+// Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
 var enlaces = [];
 
 function leerEnlaces() {
@@ -35,7 +35,7 @@ function leerEnlaces() {
 	}
 }
 
-//Pagina de inicio
+// Pagina de inicio
 exports.index = function(req, res) {
 	if (enlaces.length === 0)
 		leerEnlaces();

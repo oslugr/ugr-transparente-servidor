@@ -21,7 +21,7 @@
 */
 
 
-//Variable para las configuraciones
+// Variable para las configuraciones
 var config = require('../../config/config');
 
 // Gestión de la pagina de oferta y demanda academica

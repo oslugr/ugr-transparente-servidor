@@ -19,37 +19,37 @@
 */
 
 tabla(document).ready(function() {
-	//select all the a tag with name equal to modal
+	// Select all the a tag with name equal to modal
 	tabla('a[class=view]').click(function(e) {
-		//Cancel the link behavior
+		// Cancel the link behavior
 		e.preventDefault();
-		//Get the A tag
+		// Get the A tag
 
 		var id = tabla(this).attr('href');
 
-		//Get the screen height and width
+		// Get the screen height and width
 		var maskHeight = tabla(document).height();
 		var maskWidth = tabla(window).width();
 
-		//Set height and width to mask to fill up the whole screen
+		// Set height and width to mask to fill up the whole screen
 		tabla('#mask').css({
 			'width': maskWidth,
 			'height': maskHeight
 		});
 
-		//transition effect
+		// Transition effect
 		tabla('#mask').fadeIn(10);
 		tabla('#mask').fadeTo("slow", 0.8);
 
-		//Get the window height and width
+		// Get the window height and width
 		var winH = tabla(window).height();
 		var winW = tabla(window).width();
 
-		//Set the popup window to center
+		// Set the popup window to center
 		tabla(id).css('top', winH / 2 - tabla(id).height() / 2);
 		tabla(id).css('left', winW / 2 - tabla(id).width() / 2);
 
-		//transition effect
+		// Transition effect
 		tabla(id).fadeIn(2000);
 
 		var nombre = tabla(this).attr('name');
@@ -73,13 +73,13 @@ tabla(document).ready(function() {
 
 	});
 
-	//if close button is clicked
+	// If close button is clicked
 	tabla('#close').click(function(e) {
 		tabla('#mask, .window').hide();
 		tabla('#mask, .window').HTML("");
 	});
 
-	//if mask is clicked
+	// If mask is clicked
 	tabla('#mask').click(function() {
 		tabla(this).hide();
 		tabla('.window').hide();

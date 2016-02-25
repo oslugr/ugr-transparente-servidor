@@ -1,3 +1,4 @@
+//- Genera tablas con contenido de datos
 mixin table1 (valor,datos)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
@@ -27,6 +28,8 @@ mixin table1 (valor,datos)
 								a(href="#{servidor}dataset/#{elemento.descarga}")
 									img(class="save",src="/imagenes/save.png", alt="save")
 
+
+//- Genera tablas con contenido de enlaces
 mixin table2 (valor,datos)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
@@ -49,6 +52,7 @@ mixin table2 (valor,datos)
 									img(class="link",src="/imagenes/link2.png", alt="link")
 
 
+//- Genera tablas con contenido de PDFs
 mixin table3 (valor,datos)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
@@ -75,6 +79,7 @@ mixin table3 (valor,datos)
 									img(class="save",src="/imagenes/flecha.png", alt="save")
 
 
+//- Genera tablas con contenido de imagenes
 mixin table4 (valor,datos)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
@@ -101,6 +106,7 @@ mixin table4 (valor,datos)
 									img(class="save",src="/imagenes/flecha.png", alt="save")
 
 
+//- Genera todas las tablas de la página
 mixin generar_tablas (contenido,datos)
 	each valor in contenido
 		case valor.tipo

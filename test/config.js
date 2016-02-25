@@ -1,8 +1,8 @@
 var express = require('express');
 
-//Configuración de los tests
+// Configuración de los tests
 module.exports = {
-	direcciones: [ //Direcciones a probar
+	direcciones: [ // Direcciones a probar
 		'/',
 		'/index.html',
 		'/infoInstitucional.html',
@@ -21,7 +21,7 @@ module.exports = {
 		'/calendarioSolo.html',
 		'/ofertaDemanda.html'
 	],
-	archivosBuscador: [ //direcciones del buscador
+	archivosBuscador: [ // Direcciones del buscador
 		'/archivos/personal',
 		'/archivos/infoEconomica',
 		'/archivos/ofertaDemanda',
@@ -31,7 +31,7 @@ module.exports = {
 		'/archivos/rendimiento',
 		'/archivos/normativaLegal'
 	],
-	archivosEstaticos: [ //archivos estáticos a probar
+	archivosEstaticos: [ // Archivos estáticos a probar
 		'/favicon/favicon.ico',
 		'/css/style.css',
 		'/css/style2.css',
@@ -42,7 +42,7 @@ module.exports = {
 		'/imagenes/osl.jpg',
 		'/graph/perfil_pdi_extranjero.png'
 	],
-	initServer: function(done, dev) { //Función para iniciar el servidor express
+	initServer: function(done, dev) { // Función para iniciar el servidor express
 		if (dev === true) process.env.ENV = "dev";
 		else process.env.ENV = "prod";
 		var app = express();

@@ -20,6 +20,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+
 // Rutas
 var index = require('./routes/index');
 var infoInstitucional = require('./routes/infoInstitucional');
@@ -35,8 +36,7 @@ var calendarioSolo = require('./routes/calendarioSolo');
 
 var config = require('../config/config');
 
-
-//Routes de las urls de transparente
+// Routes de las urls de transparente
 module.exports = function(app) {
 	// Inicio
 	app.get('/', index.index);
@@ -91,6 +91,7 @@ module.exports = function(app) {
 	app.get('/archivos/normativaLegal', function(req, res) {
 		res.send(config.normativaLegal);
 	});
+
 	// Manejador de errores:
 	app.use(function(req, res, next) {
 		res.status(404).render('error_404', {

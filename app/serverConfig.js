@@ -21,7 +21,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
 
-
 // Dependencias
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -32,16 +31,14 @@ var logger = require('morgan');
 var path = require('path');
 var express = require('express');
 
-
 var config = require('../config/config');
 
-//Configura el servidor express app
+// Configura el servidor express app
 module.exports = function(app) {
 	// Variables de entorno
 	app.set('port', process.env.PORT || config.puerto);
 	app.set('ip', process.env.IP || "127.0.0.1");
 	app.set('env', process.env.ENV);
-
 
 	// Directorio con las plantillas
 	app.set('views', 'views');
@@ -58,7 +55,7 @@ module.exports = function(app) {
 		extended: false
 	}));
 	app.use(cookieParser());
-	//Manejador de enrutado
+	// Manejador de enrutado
 	if (app.get('env') === "dev") {
 		app.use(express.static('./public'));
 	}

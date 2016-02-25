@@ -21,7 +21,6 @@
 
 
 // Gestión de la pagina de la solicitudes
-
 exports.solicitudInfo = function(req, res) {
 
 	res.render('solicitudInfo', {

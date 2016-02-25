@@ -3,7 +3,7 @@
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
   Copyright (C) 2016 Andrés Ortiz Corrales
-  
+
   This file is part of UGR Transparente.
 
   UGR Transparente is free software: you can redistribute it and/or modify
@@ -21,11 +21,10 @@
 */
 
 
-//Variable para las configuraciones
+// Variable para las configuraciones
 var config = require('../../config/config');
 
 // Gestión de la pagina de la información institucional
-
 exports.infoInstitucional = function(req, res) {
 	var pres = config.infoInstitucional;
 

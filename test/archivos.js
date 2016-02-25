@@ -23,9 +23,9 @@ var assert = require('chai').assert;
 var _ = require("underscore");
 
 var config = require('./config.js');
-//Comprobación de los archivos de configuración
+// Comprobación de los archivos de configuración
 describe('Archivos de configuración', function() {
-	//Comprueba valores del archivo de configuración
+	// Comprueba valores del archivo de configuración
 	it("Archivo de configuración", function() {
 		var config2 = require('../config/config');
 		assert.ok(config2);
@@ -33,7 +33,7 @@ describe('Archivos de configuración', function() {
 		assert.ok(config2.servidor);
 		for (var i in config2) assert.ok(config2[i]);
 	});
-	//COmprobación de formato de archivos de dadtos
+	// Comprobación de formato de archivos de dadtos
 	it.skip("Formato de archivos de datos", function(done) {
 		done(new Error('Test Not implemented'));
 	});

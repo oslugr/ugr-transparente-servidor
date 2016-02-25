@@ -36,6 +36,32 @@ var calendarioSolo = require('./routes/calendarioSolo');
 
 var config = require('../config/config');
 
+//Ejemplo de Rutas configurables
+/*
+var routesConfig=[
+	{
+		url:"/personal.html",
+		plantilla: "personal",
+		datos: "personal"
+	}	
+];
+var routeConf;
+function setRoute(req,res){
+	res.render(routeConf.plantilla, {
+		servidor: config.servidor,
+		datos: routeConf.datos
+	});
+}
+function setRoutes(){
+	for(var i=0;i<routesConfig.length;i++){
+		routeConf=routesConfig[i];
+		app.get(routeConf.url,setRoute);		
+		}
+	}	
+}
+*/
+
+
 // Routes de las urls de transparente
 module.exports = function(app) {
 	// Inicio

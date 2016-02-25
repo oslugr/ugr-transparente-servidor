@@ -25,6 +25,7 @@ var async = require('async');
 
 var config = require('./config.js');
 
+//Pruebas de acceso a las páginas y recursos
 describe('Pruebas de acceso', function() {
 	var server;
 	var app;
@@ -39,7 +40,7 @@ describe('Pruebas de acceso', function() {
 	after(function() {
 		server.close();
 	});
-
+	//Acceso a todas las páginas del servidor, deben devolver código 200 y un html
 	it("Acceso a páginas", function(done) {
 		this.timeout(10000);
 		async.eachSeries(config.direcciones, function(url, callback) {
@@ -54,18 +55,19 @@ describe('Pruebas de acceso', function() {
 			done();
 		});
 	});
+	//Acceso a recursos estáticos
 	it("Acceso a recursos", function(done) {
 		this.timeout(5000);
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
 				assert.notOk(err);
-				assert.ok(res);
 				callback();
 			});
 		}, function() {
 			done();
 		});
 	});
+	//Comprueba un acceso a página inexistente (404)
 	it("Error", function(done) {
 		request(app)
 			.get("/foo")
@@ -75,7 +77,7 @@ describe('Pruebas de acceso', function() {
 				done();
 			});
 	});
-
+	//Comprueba las direcciones a los datos del buscador, espera un json código 200
 	it("Archivos de buscador", function(done) {
 		this.timeout(5000);
 		async.eachSeries(config.archivosBuscador, function(url, callback) {
@@ -84,6 +86,8 @@ describe('Pruebas de acceso', function() {
 				.expect('Content-Type', "application/json; charset=utf-8")
 				.end(function(err, res) {
 					assert.notOk(err);
+					assert.ok(res.body);
+					assert.ok(res.body.nombre);
 					callback();
 				});
 		}, function() {
@@ -92,6 +96,7 @@ describe('Pruebas de acceso', function() {
 	});
 });
 
+//Pruebas de acceso con configuración de producción
 describe("Pruebas en producción", function() {
 	var server;
 	var app;
@@ -106,7 +111,7 @@ describe("Pruebas en producción", function() {
 	after(function() {
 		server.close();
 	});
-
+	//Acceso a archivos estáticos en producción debe devolver 404
 	it("Archivos estáticos en producción", function(done) {
 		this.timeout(5000);
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
@@ -114,6 +119,21 @@ describe("Pruebas en producción", function() {
 				assert.notOk(err);
 				callback();
 			});
+		}, function() {
+			done();
+		});
+	});
+	//Acceso a todas las páginas del servidor, deben devolver código 200 y un html
+	it("Acceso a páginas", function(done) {
+		this.timeout(10000);
+		async.eachSeries(config.direcciones, function(url, callback) {
+			request(app).get(url)
+				.expect(200)
+				.expect('Content-Type', "text/html; charset=utf-8")
+				.end(function(err, res) {
+					assert.notOk(err);
+					callback();
+				});
 		}, function() {
 			done();
 		});

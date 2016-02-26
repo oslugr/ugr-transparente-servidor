@@ -1,5 +1,5 @@
 //- Genera tablas con contenido de datos
-mixin table1 (valor,datos)
+mixin table1 (valor)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 	.level1
@@ -14,23 +14,22 @@ mixin table1 (valor,datos)
 					th.centeralign Datos en Opendata
 					th.centeralign Ver
 					th.centeralign Descargar
-				each elemento in datos
-					if elemento.dataset==valor.encabezado
-						tr
-							td(class="centeralign par") #{elemento.nombre}
-							td(class="centeralign impar")
-								a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
-									img(class="link",src="/imagenes/link.png", alt="link")
-							td(class="centeralign par")
-								a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
-									img(class="view",src="/imagenes/view.png", alt="view")
-							td(class="centeralign impar")
-								a(href="#{servidor}dataset/#{elemento.descarga}")
-									img(class="save",src="/imagenes/save.png", alt="save")
+				each elemento in valor.datos
+					tr
+						td(class="centeralign par") #{elemento.nombre}
+						td(class="centeralign impar")
+							a(href="#{servidor}dataset/#{elemento.id_dataset}/resource/#{elemento.url}",target="_blank")
+								img(class="link",src="/imagenes/link.png", alt="link")
+						td(class="centeralign par")
+							a(href="#dialog" class="view" rel="#{servidor}dataset/#{elemento.descarga}" name="#{elemento.nombre}")
+								img(class="view",src="/imagenes/view.png", alt="view")
+						td(class="centeralign impar")
+							a(href="#{servidor}dataset/#{elemento.descarga}")
+								img(class="save",src="/imagenes/save.png", alt="save")
 
 
 //- Genera tablas con contenido de enlaces
-mixin table2 (valor,datos)
+mixin table2 (valor)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 	.level1
@@ -43,17 +42,16 @@ mixin table2 (valor,datos)
 				tr
 					th.centeralign Descripción
 					th.centeralign Enlace
-				each elemento in datos
-					if elemento.dataset==valor.encabezado
-						tr
-							td(class="centeralign par") #{elemento.nombre}
-							td(class="centeralign impar")
-								a(href="#{elemento.url}",target="_blank")
-									img(class="link",src="/imagenes/link2.png", alt="link")
+				each elemento in valor.datos
+					tr
+						td(class="centeralign par") #{elemento.nombre}
+						td(class="centeralign impar")
+							a(href="#{elemento.url}",target="_blank")
+								img(class="link",src="/imagenes/link2.png", alt="link")
 
 
 //- Genera tablas con contenido de PDFs
-mixin table3 (valor,datos)
+mixin table3 (valor)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 	.level1
@@ -67,20 +65,19 @@ mixin table3 (valor,datos)
 					th.centeralign Descripción
 					th.centeralign Ver
 					th.centeralign Descargar
-				each elemento in datos
-					if elemento.dataset==valor.encabezado
-						tr
-							td(class="centeralign par") #{elemento.nombre}
-							td(class="centeralign impar")
-								a(href="/doc/#{elemento.url}",target="_blank")
-									img(class="view",src="/imagenes/pdf.png", alt="view")
-							td(class="centeralign par")
-								a(href="/doc/#{elemento.url}", download="")
-									img(class="save",src="/imagenes/flecha.png", alt="save")
+				each elemento in valor.datos
+					tr
+						td(class="centeralign par") #{elemento.nombre}
+						td(class="centeralign impar")
+							a(href="/doc/#{elemento.url}",target="_blank")
+								img(class="view",src="/imagenes/pdf.png", alt="view")
+						td(class="centeralign par")
+							a(href="/doc/#{elemento.url}", download="")
+								img(class="save",src="/imagenes/flecha.png", alt="save")
 
 
 //- Genera tablas con contenido de imagenes
-mixin table4 (valor,datos)
+mixin table4 (valor)
 	h1
 		a(id="#{valor.link}", name="__doku_encabezado_de_primer_nivel") #{valor.encabezado}
 	.level1
@@ -94,27 +91,26 @@ mixin table4 (valor,datos)
 					th.centeralign Descripción
 					th.centeralign Ver
 					th.centeralign Descargar
-				each elemento in datos
-					if elemento.dataset==valor.encabezado
-						tr
-							td(class="centeralign par") #{elemento.nombre}
-							td(class="centeralign impar")
-								a(href="/graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
-									img(class="view",src="/imagenes/grafico.png", alt="view")
-							td(class="centeralign par")
-								a(href="/graph/#{elemento.url}", download="")
-									img(class="save",src="/imagenes/flecha.png", alt="save")
+				each elemento in valor.datos
+					tr
+						td(class="centeralign par") #{elemento.nombre}
+						td(class="centeralign impar")
+							a(href="/graph/#{elemento.url}", data-lightbox="image-1", data-title="#{elemento.nombre}")
+								img(class="view",src="/imagenes/grafico.png", alt="view")
+						td(class="centeralign par")
+							a(href="/graph/#{elemento.url}", download="")
+								img(class="save",src="/imagenes/flecha.png", alt="save")
 
 
 //- Genera todas las tablas de la página
-mixin generar_tablas (contenido,datos)
+mixin generar_tablas (contenido)
 	each valor in contenido
 		case valor.tipo
 			when 1
-				+ table1(valor,datos)
+				+ table1(valor)
 			when 2
-				+ table2(valor,datos)
+				+ table2(valor)
 			when 3
-				+ table3(valor,datos)
+				+ table3(valor)
 			when 4
-				+ table4(valor,datos)
+				+ table4(valor)

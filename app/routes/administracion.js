@@ -32,7 +32,6 @@ exports.personal = function(req, res) {
 		servidor: config.servidor,
 		seccion: personal.nombre,
 		contenido: personal.contenido,
-		datos: personal.datos
 	});
 };
 
@@ -44,7 +43,6 @@ exports.infoEconomica = function(req, res) {
 		servidor: config.servidor,
 		seccion: infoEconomica.nombre,
 		contenido: infoEconomica.contenido,
-		datos: infoEconomica.datos
 	});
 };
 

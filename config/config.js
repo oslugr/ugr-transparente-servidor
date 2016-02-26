@@ -22,16 +22,18 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 module.exports = {
 	servidor: "http://opendata.ugr.es/",
 	puerto: 3000,
-	personal: require('./personal.json'),
-	infoEconomica: require('./infoEconomica.json'),
-	ofertaDemanda: require('./ofertaDemanda.json'),
-	claustro: require('./claustro.json'),
-	estudiantes: require('./estudiantes.json'),
-	gobierno: require('./gobierno.json'),
-	rendimiento: require('./rendimiento.json'),
-	normativaLegal: require('./normativaLegal.json'),
-	infoInstitucional: require('./infoInstitucional.json'),
-	index: require('./index.json'),
+	archivosJson: {
+		personal: require('./personal.json'),
+		infoEconomica: require('./infoEconomica.json'),
+		ofertaDemanda: require('./ofertaDemanda.json'),
+		claustro: require('./claustro.json'),
+		estudiantes: require('./estudiantes.json'),
+		gobierno: require('./gobierno.json'),
+		rendimiento: require('./rendimiento.json'),
+		normativaLegal: require('./normativaLegal.json'),
+		infoInstitucional: require('./infoInstitucional.json'),
+		index: require('./index.json')
+	},
 	error: {
 		"titulo": "Página no encontrada (Error 404)",
 		"texto": "Lo siento, la página no existe o está temporalmente inaccesible."

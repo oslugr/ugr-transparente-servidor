@@ -24,28 +24,6 @@
 // Variable para las configuraciones
 var config = require('../../config/config');
 
-// Gestión de la pagina de personal
-exports.personal = function(req, res) {
-	var personal = config.personal;
-
-	res.render(personal.plantilla, {
-		servidor: config.servidor,
-		seccion: personal.nombre,
-		contenido: personal.contenido,
-	});
-};
-
-// Gestión de la pagina de informacion economica
-exports.infoEconomica = function(req, res) {
-	var infoEconomica = config.infoEconomica;
-
-	res.render(infoEconomica.plantilla, {
-		servidor: config.servidor,
-		seccion: infoEconomica.nombre,
-		contenido: infoEconomica.contenido,
-	});
-};
-
 // Gestión de la página de perfil del contratante
 exports.perfil = function(req, res) {
 	res.render('perfilContratante', {

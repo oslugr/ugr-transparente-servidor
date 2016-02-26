@@ -21,7 +21,7 @@
 
 
 // Variable para las configuraciones
-var config = require('../../config/config');
+var config = require('../../config/config').archivosJson;
 
 exports.mapaWeb = function(req, res) {
 	res.render('mapaWeb', {

@@ -29,9 +29,9 @@ var config = require('../../config/config');
 var enlaces = [];
 
 function leerEnlaces() {
-	var l = config.index.enlaces.length;
+	var l = config.archivosJson.index.enlaces.length;
 	for (var i = 0; i < l; i++) {
-		enlaces.push([config.index.enlaces[i].nombre, config.index.enlaces[i].href, config.index.enlaces[i].id]);
+		enlaces.push([config.archivosJson.index.enlaces[i].nombre, config.archivosJson.index.enlaces[i].href, config.archivosJson.index.enlaces[i].id]);
 	}
 }
 
@@ -40,7 +40,7 @@ exports.index = function(req, res) {
 	if (enlaces.length === 0)
 		leerEnlaces();
 	res.render('index', {
-		seccion: config.index.nombre,
+		seccion: config.archivosJson.index.nombre,
 		enlaces: enlaces
 	});
 };

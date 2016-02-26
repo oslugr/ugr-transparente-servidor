@@ -26,7 +26,7 @@ var config = require('../../config/config');
 
 // Gestión de la pagina de la información institucional
 exports.infoInstitucional = function(req, res) {
-	var pres = config.infoInstitucional;
+	var pres = config.archivosJson.infoInstitucional;
 
 	res.render(pres.plantilla, {
 		seccion: pres.titulo,

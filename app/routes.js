@@ -21,101 +21,126 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
 
-// Rutas
+// Rutas especificas
 var index = require('./routes/index');
+
 var infoInstitucional = require('./routes/infoInstitucional');
-var administracion = require('./routes/administracion');
-var docencia = require('./routes/docencia');
-var gestionInvestigacion = require('./routes/gestionInvestigacion');
-var normativaLegal = require('./routes/normativaLegal');
 var solicitudInfo = require('./routes/solicitudInfo');
 var mapaWeb = require('./routes/mapaWeb');
 var buscador = require('./routes/buscador');
 var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
+var administracion = require('./routes/administracion');
+
 
 var config = require('../config/config');
+var jsons=config.archivosJson;
+
 
 //Ejemplo de Rutas configurables
-/*
-var routesConfig=[
-	{
-		url:"/personal.html",
-		plantilla: "personal",
-		datos: "personal"
-	}	
+
+var routesConfig = [{
+    	url: "/personal.html",
+    	plantilla: "personal",
+    	datos: jsons.personal
+    },
+    {
+        url: "/infoEconomica.html",
+        plantilla: "infoEconomica",
+        datos: jsons.infoEconomica
+    },
+    {
+        url: "/ofertaDemanda.html",
+        plantilla: "ofertaDemanda",
+        datos: jsons.ofertaDemanda    
+    },
+    {
+        url: "/claustro.html",
+        plantilla: "claustro",
+        datos: jsons.claustro
+    },
+    {
+        url: "/estudiantes.html",
+        plantilla: "estudiantes",
+        datos: jsons.estudiantes        
+    },
+    {
+        url: "/gobierno.html",
+        plantilla: "gobierno",
+        datos: jsons.gobierno
+    },
+    {
+        url: "/rendimiento.html",
+        plantilla: "rendimiento",
+        datos: jsons.rendimiento
+    },
+    {
+        url:"/normativaLegal.html",
+        plantilla: "normativaLegal",
+        datos: jsons.normativaLegal
+    }
 ];
-var routeConf;
-function setRoute(req,res){
-	res.render(routeConf.plantilla, {
-		servidor: config.servidor,
-		datos: routeConf.datos
-	});
-}
-function setRoutes(){
-	for(var i=0;i<routesConfig.length;i++){
-		routeConf=routesConfig[i];
-		app.get(routeConf.url,setRoute);		
-		}
-	}	
-}
-*/
 
-
-// Routes de las urls de transparente
 module.exports = function(app) {
+
+    function setRoute(routeConf) {
+        return function(req,res){
+            res.render(routeConf.plantilla, {
+        		servidor: config.servidor,
+        		seccion: routeConf.datos.nombre,
+        		contenido: routeConf.datos.contenido,
+        	});
+        };
+    }
+	for (var i = 0; i < routesConfig.length; i++) {
+		app.get(routesConfig[i].url,setRoute(routesConfig[i]));
+	}
+
+
+    //LEGACY Routes
 	// Inicio
 	app.get('/', index.index);
 	app.get('/index.html', index.index);
-	// Información institucional
-	app.get('/infoInstitucional.html', infoInstitucional.infoInstitucional);
-	// Administracion
-	app.get('/personal.html', administracion.personal);
-	app.get('/infoEconomica.html', administracion.infoEconomica);
-	app.get('/perfilContratante.html', administracion.perfil);
-	// Docencia
-	app.get('/ofertaDemanda.html', docencia.ofertaDemanda);
-	app.get('/claustro.html', docencia.claustro);
-	app.get('/estudiantes.html', docencia.estudiantes);
-	// Gestion e Investigación
-	app.get('/gobierno.html', gestionInvestigacion.gobierno);
-	app.get('/rendimiento.html', gestionInvestigacion.rendimiento);
-	// Normativa Legal
-	app.get('/normativaLegal.html', normativaLegal.normativaLegal);
-	// Solicitudes de Información
-	app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
-	// Mapa del sitio
-	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
-	// Buscador
-	app.get('/buscador.html', buscador.buscador);
-	// Calendario
-	app.get('/calendario.html', calendario.index);
-	app.get('/calendarioSolo.html', calendarioSolo.index);
+    
+    // Información institucional
+    app.get('/infoInstitucional.html', infoInstitucional.infoInstitucional);
+    // Solicitudes de Información
+    app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
+    // Mapa del sitio
+    app.get('/mapaWeb.html', mapaWeb.mapaWeb);
+    // Buscador
+    app.get('/buscador.html', buscador.buscador);
+    // Calendario
+    app.get('/calendario.html', calendario.index);
+    app.get('/calendarioSolo.html', calendarioSolo.index);
+    
+    app.get('/perfilContratante.html', administracion.perfil);
+
 
 	// Archivos de datos
 	app.get('/archivos/personal', function(req, res) {
-		res.send(config.personal);
+		res.send(jsons.personal);
 	});
 	app.get('/archivos/infoEconomica', function(req, res) {
-		res.send(config.infoEconomica);
+		res.send(jsons.infoEconomica);
 	});
 	app.get('/archivos/ofertaDemanda', function(req, res) {
-		res.send(config.ofertaDemanda);
+		res.send(jsons.ofertaDemanda);
 	});
 	app.get('/archivos/claustro', function(req, res) {
-		res.send(config.claustro);
+		res.send(jsons.claustro);
 	});
 	app.get('/archivos/estudiantes', function(req, res) {
-		res.send(config.estudiantes);
+		res.send(jsons.estudiantes);
 	});
 	app.get('/archivos/gobierno', function(req, res) {
-		res.send(config.gobierno);
+		res.send(jsons.gobierno);
 	});
 	app.get('/archivos/rendimiento', function(req, res) {
-		res.send(config.rendimiento);
+		res.send(jsons.rendimiento);
 	});
 	app.get('/archivos/normativaLegal', function(req, res) {
-		res.send(config.normativaLegal);
+		res.send(jsons.normativaLegal);
 	});
 
 	// Manejador de errores:

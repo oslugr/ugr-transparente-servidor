@@ -1,3 +1,9 @@
+mixin item(valor)
+	.li
+		a(class="enlaces-cabecera" href="#{valor.link}",target="_blank") #{valor.item}
+
+	
+
 extends layout
 include menu.jade
 

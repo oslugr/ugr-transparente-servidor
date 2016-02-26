@@ -1,6 +1,5 @@
 {
 	"nombre": "Estudiantes",
-	"plantilla": "estudiantes",
 	"contenido": [{
 		"tipo": 1,
 		"seccion": "Matrículas",

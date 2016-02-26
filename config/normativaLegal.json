@@ -42,7 +42,7 @@
 		"encabezado": "Ordenación Académica",
 		"link": "ordenacion-academica",
 		"texto": "",
-		"dats": [{
+		"datos": [{
 			"nombre": "Normas de permanencia",
 			"url": "http://secretariageneral.ugr.es/pages/normativa/temas/perindex"
 		}, {

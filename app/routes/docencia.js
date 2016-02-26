@@ -32,7 +32,6 @@ exports.ofertaDemanda = function(req, res) {
 		servidor: config.servidor,
 		seccion: ofertaDemanda.nombre,
 		contenido: ofertaDemanda.contenido,
-		datos: ofertaDemanda.datos
 	});
 };
 
@@ -44,7 +43,6 @@ exports.claustro = function(req, res) {
 		servidor: config.servidor,
 		seccion: claustro.nombre,
 		contenido: claustro.contenido,
-		datos: claustro.datos
 	});
 };
 
@@ -56,6 +54,5 @@ exports.estudiantes = function(req, res) {
 		servidor: config.servidor,
 		seccion: estudiantes.nombre,
 		contenido: estudiantes.contenido,
-		datos: estudiantes.datos
 	});
 };

@@ -32,6 +32,5 @@ exports.normativaLegal = function(req, res) {
 		servidor: config.servidor,
 		seccion: normativa.nombre,
 		contenido: normativa.contenido,
-		datos: normativa.datos
 	});
 };

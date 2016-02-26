@@ -78,16 +78,17 @@
 		"datos": [{
 			"nombre": "Órganos de Gobierno de Facultades y Escuelas",
 			"url": "http://secretariageneral.ugr.es/pages/org_gobierno/facultades_escuelas"
-		}, {
-			"nombre": "Órganos de gobierno de los Departamentos Universitarios",
-			"url": "http://secretariageneral.ugr.es/pages/org_gobierno/departamentos"
 		}]
 	}, {
 		"tipo": 2,
 		"seccion": "",
 		"encabezado": "Órganos de Gobierno de los Departamentos",
 		"link": "organos-gobierno-departamentos",
-		"texto": ""
+		"texto": "",
+		"datos": [{
+			"nombre": "Órganos de gobierno de los Departamentos Universitarios",
+			"url": "http://secretariageneral.ugr.es/pages/org_gobierno/departamentos"
+		}]
 	}, {
 		"tipo": 1,
 		"seccion": "",

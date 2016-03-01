@@ -2,6 +2,7 @@
     UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
     Copyright (C) 2014 Mario Heredia Moreno
     Copyright (C) 2015 Germán Martínez Maldonado
+	Copyright (C) 2016 Andrés Ortiz Corrales
 
     This file is part of UGR Transparente.
 
@@ -63,32 +64,25 @@ $(function() {
 		$.each(archivos, function(index, nombre) {
 
 			$.getJSON(nombre, function(data) {
-					$.each(data, function(clave, valor) {
-						if (clave == "contenido") {
-							$.each(valor, function(campo, contenido) {
+					console.log(data);
 
-								// Si la consulta coincide con parte de la descripción del conjunto de datos.
-								if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
-									resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + contenido.link + "'>" + contenido.encabezado + "</a></li>";
-									numResultados++;
-								}
-							});
-						}
-
-						if (clave == "datos") {
+					$.each(data.contenido, function(campo, contenido) {
+						if (campo === "datos") {
 							// Por cada campo de datos.
 							$.each(valor, function(tabla, contenido) {
-
 								// Si la consulta coincide con parte del título de la tabla.
 								if (contenido.nombre.toLowerCase().indexOf(consulta) > -1) {
 									resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html'>" + contenido.nombre + "</a></li>";
 									numResultados++;
 								}
-
 							});
 						}
+						// Si la consulta coincide con parte de la descripción del conjunto de datos.
+						else if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
+							resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + contenido.link + "'>" + contenido.encabezado + "</a></li>";
+							numResultados++;
+						}
 					});
-
 				})
 				.done(function() {
 					if (numResultados == 1) {

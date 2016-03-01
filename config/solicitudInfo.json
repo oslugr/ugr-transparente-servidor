@@ -1,4 +1,5 @@
 {
-    "nombre": "Solicitud de Información",
-    "contenido": {}
+	"nombre": "Solicitud de Información",
+	"plantilla": "solicitudInfo",
+	"contenido": {}
 }

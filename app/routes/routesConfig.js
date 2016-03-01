@@ -59,11 +59,11 @@ module.exports = {
 		url: "/infoInstitucional.html",
 		plantilla: "infoInstitucional",
 		datos: jsons.infoInstitucional
-	},{
+	}, {
 		url: "/perfilContratante.html",
 		plantilla: "perfilContratante",
 		datos: jsons.perfilContratante
-	},{
+	}, {
 		url: "/solicitudInfo.html",
 		plantilla: "solicitudInfo",
 		datos: jsons.solicitudInfo

@@ -30,6 +30,7 @@ exports.infoInstitucional = function(req, res) {
 
 	res.render(pres.plantilla, {
 		seccion: pres.titulo,
-		texto: pres.texto
+		texto: pres.texto,
+		contenido: pres.contenido
 	});
 };

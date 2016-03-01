@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt-get install unzip
 wget -N http://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip
 
 unzip chromedriver_linux64.zip

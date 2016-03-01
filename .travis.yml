@@ -29,9 +29,14 @@ node_js:
 
 sudo: false
 
-# Descargar ChromeDriver y contenido estátco
+addons:
+  apt:
+    packages:
+    - unzip
+
+# Descargar contenido estátco
 before_install:
-  - "./installChromedriver.sh"
+  - "./installChromedriverTravis.sh"
   - "./getRecursos.sh"
 
 # Coveralls coverage

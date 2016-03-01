@@ -25,7 +25,6 @@ node_js:
   - stable
   - 5.5.0
   - 4.2.6
-  - 0.12
 
 sudo: false
 

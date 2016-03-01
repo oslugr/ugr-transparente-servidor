@@ -24,7 +24,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 // Rutas especificas
 var index = require('./routes/index');
 var mapaWeb = require('./routes/mapaWeb');
-var buscador = require('./routes/buscador');
 var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
 
@@ -59,8 +58,6 @@ module.exports = function(app) {
 
 	// Mapa del sitio
 	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
-	// Buscador
-	app.get('/buscador.html', buscador.buscador);
 	// Calendario
 	app.get('/calendario.html', calendario.index);
 	app.get('/calendarioSolo.html', calendarioSolo.index);

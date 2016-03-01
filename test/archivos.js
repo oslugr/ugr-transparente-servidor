@@ -1,6 +1,6 @@
 /*
 	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
-  Copyright (C) 2015 Germán Martínez Maldonado
+    Copyright (C) 2015 Germán Martínez Maldonado
 	Copyright (C) 2016 Andrés Ortiz Corrales
 
 	This file is part of UGR Transparente.

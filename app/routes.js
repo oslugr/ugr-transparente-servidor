@@ -23,7 +23,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 // Rutas especificas
 var index = require('./routes/index');
-
 var solicitudInfo = require('./routes/solicitudInfo');
 var mapaWeb = require('./routes/mapaWeb');
 var buscador = require('./routes/buscador');
@@ -33,74 +32,11 @@ var administracion = require('./routes/administracion');
 
 
 var config = require('../config/config');
-var jsons = config.archivosJson;
 
 
-//Ejemplo de Rutas configurables
-
-var routesConfig = [{
-	url: "/personal.html",
-	plantilla: "personal",
-	datos: jsons.personal
-}, {
-	url: "/infoEconomica.html",
-	plantilla: "infoEconomica",
-	datos: jsons.infoEconomica
-}, {
-	url: "/ofertaDemanda.html",
-	plantilla: "ofertaDemanda",
-	datos: jsons.ofertaDemanda
-}, {
-	url: "/claustro.html",
-	plantilla: "claustro",
-	datos: jsons.claustro
-}, {
-	url: "/estudiantes.html",
-	plantilla: "estudiantes",
-	datos: jsons.estudiantes
-}, {
-	url: "/gobierno.html",
-	plantilla: "gobierno",
-	datos: jsons.gobierno
-}, {
-	url: "/rendimiento.html",
-	plantilla: "rendimiento",
-	datos: jsons.rendimiento
-}, {
-	url: "/normativaLegal.html",
-	plantilla: "normativaLegal",
-	datos: jsons.normativaLegal
-}, {
-	url: "/infoInstitucional.html",
-	plantilla: "infoInstitucional",
-	datos: jsons.infoInstitucional
-}];
-
-var routesArchivos = [{
-	url: '/personal',
-	datos: jsons.personal
-}, {
-	url: '/infoEconomica',
-	datos: jsons.infoEconomica
-}, {
-	url: '/ofertaDemanda',
-	datos: jsons.ofertaDemanda
-}, {
-	url: '/claustro',
-	datos: jsons.claustro
-}, {
-	url: '/estudiantes',
-	datos: jsons.estudiantes
-}, {
-	url: '/gobierno',
-	datos: jsons.gobierno
-}, {
-	url: '/rendimiento',
-	datos: jsons.rendimiento
-}, {
-	url: '/normativaLegal',
-	datos: jsons.normativaLegal
-}];
+//Rutas configurables
+var routesList = require('./routes/routesConfig').routes;
+var routesBusqueda = require('./routes/routesConfig').routesBusqueda;
 
 module.exports = function(app) {
 
@@ -113,8 +49,8 @@ module.exports = function(app) {
 			});
 		};
 	}
-	for (var i = 0; i < routesConfig.length; i++) {
-		app.get(routesConfig[i].url, setRoute(routesConfig[i]));
+	for (var i = 0; i < routesList.length; i++) {
+		app.get(routesList[i].url, setRoute(routesList[i]));
 	}
 
 
@@ -145,8 +81,8 @@ module.exports = function(app) {
 			res.json(routeConf.datos);
 		};
 	}
-	for (i = 0; i < routesArchivos.length; i++) {
-		app.get('/archivos' + routesArchivos[i].url, setRouteArchivos(routesArchivos[i]));
+	for (i = 0; i < routesBusqueda.length; i++) {
+		app.get('/archivos' + routesBusqueda[i].url, setRouteArchivos(routesBusqueda[i]));
 	}
 
 	// Manejador de errores:

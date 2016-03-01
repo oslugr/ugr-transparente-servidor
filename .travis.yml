@@ -22,10 +22,10 @@ language: node_js
 
 # Versiones con las que correr los tests
 node_js:
-  - "stable"
-  - "5.5.0"
-  - "4.2.6"
-  - "0.12"
+  - stable
+  - 5.5.0
+  - 4.2.6
+  - 0.12
 
 sudo: false
 
@@ -36,8 +36,9 @@ addons:
 
 # Descargar contenido estátco
 before_install:
-  - "./installChromedriverTravis.sh"
-  - "./getRecursos.sh"
+  - export PATH=$PWD:$PATH
+  - ./installChromedriverTravis.sh
+  - ./getRecursos.sh
 
 # Coveralls coverage
 after_success:

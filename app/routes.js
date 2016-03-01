@@ -24,7 +24,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 // Rutas especificas
 var index = require('./routes/index');
 
-var infoInstitucional = require('./routes/infoInstitucional');
 var solicitudInfo = require('./routes/solicitudInfo');
 var mapaWeb = require('./routes/mapaWeb');
 var buscador = require('./routes/buscador');
@@ -78,6 +77,11 @@ var routesConfig = [{
         url:"/normativaLegal.html",
         plantilla: "normativaLegal",
         datos: jsons.normativaLegal
+    },
+    {
+        url:"/infoInstitucional.html",
+        plantilla:"infoInstitucional",
+        datos: jsons.infoInstitucional        
     }
 ];
 
@@ -102,8 +106,7 @@ module.exports = function(app) {
 	app.get('/', index.index);
 	app.get('/index.html', index.index);
     
-    // Información institucional
-    app.get('/infoInstitucional.html', infoInstitucional.infoInstitucional);
+    
     // Solicitudes de Información
     app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
     // Mapa del sitio

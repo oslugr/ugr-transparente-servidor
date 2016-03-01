@@ -59,6 +59,11 @@ module.exports = {
 		url: "/infoInstitucional.html",
 		plantilla: "infoInstitucional",
 		datos: jsons.infoInstitucional
+	},{
+		url: "/perfilContratante.html",
+		plantilla: "perfilContratante",
+		datos: jsons.perfilContratante
+		
 	}],
 	routesBusqueda: [{
 		url: '/personal',

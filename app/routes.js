@@ -85,6 +85,40 @@ var routesConfig = [{
     }
 ];
 
+var routesArchivos=[
+    {
+        url:'/personal',
+        datos: jsons.personal
+    },
+    {
+        url: '/infoEconomica',
+        datos: jsons.infoEconomica
+    },
+    {
+        url: '/ofertaDemanda',
+        datos: jsons.ofertaDemanda
+    },
+    {
+        url: '/claustro',
+        datos: jsons.claustro        
+    },
+    {
+        url: '/estudiantes',
+        datos: jsons.estudiantes
+    },
+    {
+        url: '/gobierno',
+        datos: jsons.gobierno
+    },
+    {
+        url: '/rendimiento',
+        datos: jsons.rendimiento
+    },
+    {
+        url: '/normativaLegal',
+        datos: jsons.normativaLegal
+    }];
+
 module.exports = function(app) {
 
     function setRoute(routeConf) {
@@ -120,31 +154,17 @@ module.exports = function(app) {
     app.get('/perfilContratante.html', administracion.perfil);
 
 
+    
+
 	// Archivos de datos
-	app.get('/archivos/personal', function(req, res) {
-		res.send(jsons.personal);
-	});
-	app.get('/archivos/infoEconomica', function(req, res) {
-		res.send(jsons.infoEconomica);
-	});
-	app.get('/archivos/ofertaDemanda', function(req, res) {
-		res.send(jsons.ofertaDemanda);
-	});
-	app.get('/archivos/claustro', function(req, res) {
-		res.send(jsons.claustro);
-	});
-	app.get('/archivos/estudiantes', function(req, res) {
-		res.send(jsons.estudiantes);
-	});
-	app.get('/archivos/gobierno', function(req, res) {
-		res.send(jsons.gobierno);
-	});
-	app.get('/archivos/rendimiento', function(req, res) {
-		res.send(jsons.rendimiento);
-	});
-	app.get('/archivos/normativaLegal', function(req, res) {
-		res.send(jsons.normativaLegal);
-	});
+    function setRouteArchivos(routeConf) {
+        return function(req,res){
+            res.json(routeConf.datos);
+        };
+    }
+    for (var i = 0; i < routesArchivos.length; i++) {
+        app.get('/archivos' + routesArchivos[i].url,setRouteArchivos(routesArchivos[i]));
+    }
 
 	// Manejador de errores:
 	app.use(function(req, res, next) {

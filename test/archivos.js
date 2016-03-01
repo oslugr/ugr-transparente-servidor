@@ -20,7 +20,7 @@
 */
 
 var assert = require('chai').assert;
-var _ = require("underscore");
+var jsons = require('../config/config').archivosJson;
 
 var config = require('./config.js');
 // Comprobación de los archivos de configuración
@@ -33,8 +33,14 @@ describe('Archivos de configuración', function() {
 		assert.ok(config2.servidor);
 		for (var i in config2) assert.ok(config2[i]);
 	});
-	// Comprobación de formato de archivos de dadtos
-	it.skip("Formato de archivos de datos", function(done) {
-		done(new Error('Test Not implemented'));
+	// Comprobación de formato de archivos de datos
+	it("Formato de archivos de datos", function() {
+		for (var i in jsons) {
+			var obj = jsons[i];
+			assert.property(obj, "nombre");
+			assert.property(obj, "plantilla");
+			if (i === "index") assert.property(obj, "enlaces");
+			else assert.property(jsons[i], "contenido");
+		}
 	});
 });

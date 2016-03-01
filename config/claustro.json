@@ -1,6 +1,6 @@
 {
 	"nombre": "Claustro",
-	"plantlla":"personal",
+	"plantilla": "personal",
 	"contenido": [{
 		"tipo": 1,
 		"seccion": "",

@@ -23,7 +23,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 // Rutas especificas
 var index = require('./routes/index');
-var solicitudInfo = require('./routes/solicitudInfo');
 var mapaWeb = require('./routes/mapaWeb');
 var buscador = require('./routes/buscador');
 var calendario = require('./routes/calendario');
@@ -58,9 +57,6 @@ module.exports = function(app) {
 	app.get('/', index.index);
 	app.get('/index.html', index.index);
 
-
-	// Solicitudes de Información
-	app.get('/solicitudInfo.html', solicitudInfo.solicitudInfo);
 	// Mapa del sitio
 	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
 	// Buscador

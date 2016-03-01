@@ -63,7 +63,10 @@ module.exports = {
 		url: "/perfilContratante.html",
 		plantilla: "perfilContratante",
 		datos: jsons.perfilContratante
-		
+	},{
+		url: "/solicitudInfo.html",
+		plantilla: "solicitudInfo",
+		datos: jsons.solicitudInfo
 	}],
 	routesBusqueda: [{
 		url: '/personal',

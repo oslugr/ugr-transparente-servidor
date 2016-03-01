@@ -33,7 +33,8 @@ module.exports = {
 		normativaLegal: require('./normativaLegal.json'),
 		infoInstitucional: require('./infoInstitucional.json'),
 		index: require('./index.json'),
-		perfilContratante: require('./perfilContratante.json')
+		perfilContratante: require('./perfilContratante.json'),
+		solicitudInfo: require('./solicitudInfo.json')
 	},
 	error: {
 		"titulo": "Página no encontrada (Error 404)",

@@ -29,19 +29,11 @@ node_js:
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-    - unzip
-
-# Descargar contenido estátco
-before_install:
+# Descargar contenido estático y ejecutar servidor X virtual
+before_script:
   - ./getRecursos.sh
-  - ./installChromedriverTravis.sh
-  - /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16
-  - export PATH=$PWD:$PATH
   - export DISPLAY=:99.0
-  - sleep 3
+  - sh -e /etc/init.d/xvfb start
 
 # Coveralls coverage
 after_success:

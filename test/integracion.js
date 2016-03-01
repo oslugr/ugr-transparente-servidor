@@ -6,7 +6,7 @@ describe("Prueba de test integración", function() {
 	var driver;
 
 	before(function() {
-		driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+		driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.firefox()).build();
 	});
 
 	after(function() {

@@ -28,7 +28,6 @@ var mapaWeb = require('./routes/mapaWeb');
 var buscador = require('./routes/buscador');
 var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
-var administracion = require('./routes/administracion');
 
 
 var config = require('../config/config');
@@ -69,10 +68,6 @@ module.exports = function(app) {
 	// Calendario
 	app.get('/calendario.html', calendario.index);
 	app.get('/calendarioSolo.html', calendarioSolo.index);
-
-	app.get('/perfilContratante.html', administracion.perfil);
-
-
 
 
 	// Archivos de datos

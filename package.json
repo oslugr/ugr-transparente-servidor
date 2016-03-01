@@ -53,6 +53,7 @@
 		"mocha": "^2.4.5",
 		"npm-check": "^4.1.4",
 		"pm2": "^1.0.1",
+		"selenium-webdriver": "^2.52.0",
 		"supertest": "^1.2.0",
 		"underscore": "^1.8.3"
 	},

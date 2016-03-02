@@ -4,7 +4,7 @@
 	"contenido": [{
 		"tipo": 1,
 		"seccion": "Matrículas",
-		"encabezado": "Datos de matrículación",
+		"encabezado": "Datos de matriculación",
 		"link": "datos-matriculación",
 		"texto": "Datos sobre las matrículas realizadas en la Universidad de Granada desde el curso 2010/2011. Se ofrece la información relativa a las matrículas realizadas en grado y posgrado.",
 		"datos": [{

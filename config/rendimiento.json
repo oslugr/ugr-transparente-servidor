@@ -147,7 +147,7 @@
 		"seccion": "Empleabilidad",
 		"encabezado": "Datos de empleo de egresados",
 		"link": "datos-empleo-egresados",
-		"texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2012, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015.",
+		"texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2011, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015.",
 		"datos": [{
 			"dataset": "Datos de empleo de egresados",
 			"id_dataset": "empleo-egresados",

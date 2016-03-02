@@ -133,7 +133,7 @@
 		}]
 	}, {
 		"tipo": 2,
-		"seccion": "Empleo de egresados",
+		"seccion": "Empleabilidad",
 		"encabezado": "Estudio de egresados",
 		"link": "estudio-egresados",
 		"texto": "",
@@ -144,32 +144,32 @@
 		}]
 	}, {
 		"tipo": 1,
-		"seccion": "Empleo de egresados",
+		"seccion": "Empleabilidad",
 		"encabezado": "Datos de empleo de egresados",
 		"link": "datos-empleo-egresados",
 		"texto": "Datos relativos a empleo de los estudiantes egresados de la Universidad de Granada referentes al año 2012, extraídos del Estudio de Egresados de la Universidad de Granada \"La inserción laboral en el Campus de Excelencia Internacional BioTic\", publicado durante el año 2015.",
 		"datos": [{
 			"dataset": "Datos de empleo de egresados",
 			"id_dataset": "empleo-egresados",
-			"nombre": "Egresados Grado 2011: empleo y valoración de estudios",
+			"nombre": "Empleo y valoración de estudios: egresados 2015",
 			"url": "e3b49997-55af-4dcd-91ad-8ff2c173faa5",
 			"descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/e3b49997-55af-4dcd-91ad-8ff2c173faa5/download/adecuaciondeempleoyvaloraciondeestudios.csv"
 		}, {
 			"dataset": "Datos de empleo de egresados",
 			"id_dataset": "empleo-egresados",
-			"nombre": "Egresados Grado 2011: datos de empleo",
+			"nombre": "Datos de empleo: egresados 2015",
 			"url": "86cff619-46ac-47d6-b32e-2c8fafba9c03",
 			"descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/86cff619-46ac-47d6-b32e-2c8fafba9c03/download/empleoegresados.csv"
 		}, {
 			"dataset": "Datos de empleo de egresados",
 			"id_dataset": "empleo-egresados",
-			"nombre": "Egresados Máster 2011: empleo y valoración de estudios",
+			"nombre": "Empleo y valoración de estudios: egresados máster 2015",
 			"url": "38231723-85e4-41e1-99a9-9edc94acee1b",
 			"descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/38231723-85e4-41e1-99a9-9edc94acee1b/download/adecuaciondeempleoyvaloraciondelosestudiosegresadosmaster2011.csv"
 		}, {
 			"dataset": "Datos de empleo de egresados",
 			"id_dataset": "empleo-egresados",
-			"nombre": "Egresados Máster 2011: datos de empleo",
+			"nombre": "Datos de empleo: egresados máster 2015",
 			"url": "bbdc7982-6389-4456-bcbd-dffc6889b4c9",
 			"descarga": "472e5360-acdc-4e20-9081-ddb2c37d7e99/resource/bbdc7982-6389-4456-bcbd-dffc6889b4c9/download/empleoegresadosmaster2011.csv"
 		}]

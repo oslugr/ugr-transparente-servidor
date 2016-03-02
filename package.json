@@ -40,6 +40,7 @@
 		"debug": "^2.2.0",
 		"express": "^4.13.3",
 		"morgan": "^1.6.1",
+		"node-sass": "^3.4.2",
 		"serve-favicon": "^2.3.0"
 	},
 	"devDependencies": {
@@ -74,6 +75,7 @@
 		"check": "npm-check",
 		"coveralls": "cat ./coverage/lcov.info | coveralls",
 		"save": "pm2 save",
-		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js package.json"
+		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js package.json",
+		"sass": "node-sass ./public/styles/*.scss -o ./public/styles/css"
 	}
 }

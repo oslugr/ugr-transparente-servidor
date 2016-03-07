@@ -9,7 +9,7 @@ gulp.task('default',['test'], function() {
 });
 
 gulp.task('install',function(){
-gulp.src(['./bower.json', './package.json'])
+return gulp.src(['./bower.json', './package.json'])
 	.pipe(install());
 });
 

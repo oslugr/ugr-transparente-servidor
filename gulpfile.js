@@ -5,12 +5,12 @@ var istanbul = require('gulp-istanbul');
 var shell=require('gulp-shell');
 
 
-gulp.task('default',['test'], function() {
+gulp.task('default',['install','test'], function() {
 	// place code for your default task here
 });
 
 gulp.task('install',function(){
-return gulp.src(['./bower.json', './package.json'])
+return gulp.src(['./bower.json'])
 	.pipe(install())
 	.pipe(shell("bash getRecursos.sh"));
 });
@@ -23,7 +23,7 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test','install'], function () {
+gulp.task('test', ['pre-test'], function () {
   return gulp.src(['test/*.js'])
     .pipe(mocha())
     .pipe(istanbul.writeReports())

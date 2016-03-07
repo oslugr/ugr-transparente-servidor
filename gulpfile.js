@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var install = require('gulp-install');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
+var shell=require('gulp-shell');
 
 
 gulp.task('default',['test'], function() {
@@ -10,7 +11,8 @@ gulp.task('default',['test'], function() {
 
 gulp.task('install',function(){
 return gulp.src(['./bower.json', './package.json'])
-	.pipe(install());
+	.pipe(install())
+	.pipe(shell("bash getRecursos.sh"));
 });
 
 gulp.task('pre-test', function () {

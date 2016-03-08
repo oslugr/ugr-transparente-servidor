@@ -15,7 +15,7 @@ gulp.task('install', function() {
 		.pipe(shell("bash getRecursos.sh"));
 });
 
-gulp.task('pre-test', ['install','stop'], function() {
+gulp.task('pre-test', ['install', 'stop'], function() {
 	return gulp.src(['app/*/*.js', 'app/*.js'])
 		// Covering files
 		.pipe(istanbul())
@@ -35,7 +35,7 @@ gulp.task('test', ['pre-test'], function() {
 		}));
 });
 
-gulp.task('start',['test'], function() {
+gulp.task('start', ['test'], function() {
 	return pm2.connect(function(err) {
 		if (err) console.log(err);
 		pm2.start('app.js', function(err, app) {
@@ -48,7 +48,7 @@ gulp.task('stop', function() {
 	return pm2.connect(function(err) {
 		if (err) console.log(err);
 		pm2.stop('all', function(err, proc) {
-			if(err) console.log(err);
+			if (err) console.log(err);
 			pm2.disconnect();
 		});
 	});

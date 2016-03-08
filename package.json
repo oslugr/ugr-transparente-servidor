@@ -71,7 +71,7 @@
 		"start": "ENV=prod pm2 start app.js && pm2 save",
 		"stop": "pm2 stop app",
 		"restart": "ENV=prod pm2 restart app.js && pm2 save",
-		"test": "gulp test",
+		"test": "istanbul cover _mocha",
 		"dev": "ENV=dev node app.js",
 		"rdev": "ENV=dev pm2 restart app.js",
 		"deploy": "fly transparente",

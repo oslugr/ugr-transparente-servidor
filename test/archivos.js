@@ -38,7 +38,6 @@ describe('Archivos de configuración', function() {
 		for (var i in jsons) {
 			var obj = jsons[i];
 			assert.property(obj, "nombre");
-			assert.property(obj, "plantilla");
 			if (i === "index") assert.property(obj, "enlaces");
 			else assert.property(jsons[i], "contenido");
 		}

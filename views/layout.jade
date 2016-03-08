@@ -61,15 +61,8 @@ html(lang="es")
 					var tabla = $.noConflict(true);
 				script(type='text/javascript', src="/script/generar_tabla.js")
 
-		script(type='text/javascript').
-			function mostrar_menu(nombre){
-				var menu=document.getElementById(nombre);
-
-				if(menu.style.display == "none"){
-					menu.style.display = "block";
-				}else
-					menu.style.display = "none";
-			}
+		script(type='text/javascript', src='/script/desplegables.js')
+			
 
 	body
 		noscript

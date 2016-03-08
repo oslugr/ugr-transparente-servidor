@@ -5,7 +5,7 @@ var istanbul = require('gulp-istanbul');
 var shell = require('gulp-shell');
 var pm2 = require('pm2');
 
-gulp.task('default', ['run'], function() {
+gulp.task('default', ['start'], function() {
 	// place code for your default task here
 });
 
@@ -35,7 +35,7 @@ gulp.task('test', ['pre-test'], function() {
 		}));
 });
 
-gulp.task('run',['test'], function() {
+gulp.task('start',['test'], function() {
 	return pm2.connect(function(err) {
 		if (err) console.log(err);
 		pm2.start('app.js', function(err, app) {

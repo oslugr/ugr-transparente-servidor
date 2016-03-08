@@ -1,4 +1,6 @@
+var _ = require("underscore");
 var webdriver = require("selenium-webdriver");
+var WebElement = require("selenium-webdriver").WebElement;
 var assert = require("chai").assert;
 var config = require("./config");
 
@@ -33,4 +35,14 @@ describe("Prueba de navegación automática", function() {
 			done();
 		});
 	});
+
+	it("Entrada menú", function(done) {
+		driver.findElements(webdriver.By.className("item-first_level")).then(function(items) {
+			_.each(items, function(item) {
+				console.log(item.getText());
+			});
+			done();
+		});
+	});
+
 });

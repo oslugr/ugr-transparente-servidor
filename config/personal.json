@@ -1,6 +1,5 @@
 {
 	"nombre": "Personal",
-	"plantilla": "personal",
 	"contenido": [{
 		"tipo": 3,
 		"seccion": "",
@@ -16,7 +15,7 @@
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
 			"nombre": "Análisis de género",
-				"url": "2015_analisis_genero_plantilla.pdf"
+			"url": "2015_analisis_genero_plantilla.pdf"
 		}, {
 			"tipo": 3,
 			"dataset": "Información sobre Personal",

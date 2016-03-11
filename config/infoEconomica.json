@@ -61,13 +61,13 @@
 		"texto": "Relación de informes de auditoría externa de las cuentas anuales de la Universidad de Granada.",
 		"datos": [{
 			"nombre": "Informe de auditoría de cuentas anuales 2014",
-			"url": "informe_auditoria_cuentas_anuales_2014.pdf"
+			"url": "2014_informe_auditoria_cuentas_anuales.pdf"
 		}, {
 			"nombre": "Informe de auditoría de cuentas anuales 2013",
-			"url": "informe_auditoria_cuentas_anuales_2013.pdf"
+			"url": "2013_informe_auditoria_cuentas_anuales.pdf"
 		}, {
 			"nombre": "Informe de auditoría de cuentas anuales 2012",
-			"url": "informe_auditoria_cuentas_anuales_2012.pdf"
+			"url": "2012_informe_auditoria_cuentas_anuales.pdf"
 		}]
 	}, {
 		"tipo": 2,

@@ -11,17 +11,17 @@
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
 			"nombre": "Resumen de gastos del personal 2016",
-			"url": "resumen_retribuciones_2016.pdf"
+			"url": "2016_resumen_retribuciones.pdf"
 		}, {
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
 			"nombre": "Análisis de género",
-			"url": "analisis_genero_plantilla_ugr.pdf"
+				"url": "2015_analisis_genero_plantilla.pdf"
 		}, {
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
 			"nombre": "Retribuciones por cargos académicos",
-			"url": "retribuciones_cargos_academicos_2016.pdf"
+			"url": "2016_retribuciones_cargos_academicos.pdf"
 		}]
 	}, {
 		"tipo": 3,
@@ -33,7 +33,7 @@
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PDI",
 			"nombre": "Retribuciones básicas del PDI 2016",
-			"url": "retribuciones_pdi_2016.pdf"
+			"url": "2016_retribuciones_pdi.pdf"
 		}]
 	}, {
 		"tipo": 1,
@@ -128,7 +128,7 @@
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PAS",
 			"nombre": "Retribuciones básicas del PAS 2016",
-			"url": "retribuciones_pas_2016.pdf"
+			"url": "2016_retribuciones_pas.pdf"
 		}]
 	}, {
 		"tipo": 1,

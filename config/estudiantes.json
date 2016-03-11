@@ -146,10 +146,10 @@
 		"texto": "Informes sobre la oferta de becas y ayudas disponibles para los estudiantes de la Universidad de Granada. Última actualización: 9/02/2015.",
 		"datos": [{
 			"nombre": "Internacionalización",
-			"url": "internacionalizacion_2014_2015.pdf"
+			"url": "2014_2015_internacionalizacion.pdf"
 		}, {
 			"nombre": "Becas y ayudas al estudio",
-			"url": "becas_ayudas_estudio_2014_2015.pdf"
+			"url": "2014_2015_becas_ayudas_estudio.pdf"
 		}]
 	}, {
 		"tipo": 1,

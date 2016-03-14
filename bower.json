@@ -14,11 +14,11 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "fullcalendar": "^2.5.0",
-    "jquery": "^2.2.0",
+    "jquery": "^2.2.1",
+    "fullcalendar": "^2.6.1",
     "jquery-ui": "^1.11.4",
     "lightbox2": "^2.8.2",
-    "moment": "^2.10.6",
+    "moment": "^2.12.0",
     "underscore": "^1.8.3"
   }
 }

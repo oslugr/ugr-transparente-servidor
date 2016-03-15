@@ -14,7 +14,7 @@ gulp.task('install-dependencies', function() {
 		.pipe(install());
 });
 
-gulp.task('get-resources',shell.task("bash getRecursos.sh"));
+gulp.task('get-resources', shell.task("bash getRecursos.sh"));
 
 gulp.task('pre-test', ['install-dependencies', 'stop', 'get-resources'], function() {
 	return gulp.src(['app/*/*.js', 'app/*.js'])

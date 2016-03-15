@@ -12,7 +12,7 @@ function clickAll(browser,selector, done) {
 	}, done);
 }
 
-describe.only('Pruebas de Navegabilidad', function() {
+describe('Pruebas de Navegabilidad', function() {
 	var server;
 	var app;
 	var browser;
@@ -49,7 +49,6 @@ describe.only('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#enlaces_secciones');
 			browser.assert.elements('.item-first_level', 7);
 			browser.assert.elements('.item-second_level', 8);
-
 			//Check menus are hide
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');

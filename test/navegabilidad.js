@@ -31,14 +31,14 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-        it.skip('Menu',function(done){
-            
-            
-            
-        });
-        it.skip('Index Menu',function(done){
-            
-            
-        });
+		it.skip('Menu', function(done) {
+
+
+
+		});
+		it.skip('Index Menu', function(done) {
+
+
+		});
 	});
 });

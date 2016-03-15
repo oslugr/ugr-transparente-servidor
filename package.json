@@ -1,85 +1,85 @@
 {
-  "name": "ugr-transparente-servidor",
-  "version": "0.9.2",
-  "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
-  "contributors": [
-    "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
-    "Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
-    "Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
-    "Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
-    "Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
-    "Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
-  ],
-  "description": "Portal de transparencia de la Universidad de Granada",
-  "keywords": [
-    "opendata",
-    "transparencia",
-    "ugr"
-  ],
-  "bugs": {
-    "url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
-  },
-  "license": "GPL-3.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/oslugr/ugr-transparente-servidor.git"
-  },
-  "homepage": "http://transparente.ugr.es/",
-  "main": "app.js",
-  "os": [
-    "linux"
-  ],
-  "private": true,
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "dependencies": {
-    "body-parser": "^1.15.0",
-    "cookie-parser": "^1.4.0",
-    "debug": "^2.2.0",
-    "express": "^4.13.4",
-    "morgan": "^1.7.0",
-    "node-sass": "^3.4.2",
-    "serve-favicon": "^2.3.0",
-    "jade": "^1.11.0"
-  },
-  "devDependencies": {
-    "async": "^1.5.2",
-    "bower": "^1.7.7",
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.8",
-    "flightplan": "^0.6.13",
-    "gulp": "^3.9.1",
-    "gulp-install": "^0.6.0",
-    "gulp-istanbul": "^0.10.3",
-    "gulp-mocha": "^2.2.0",
-    "gulp-shell": "^0.5.2",
-    "istanbul": "^0.4.2",
-    "js-beautify": "^1.6.2",
-    "mocha": "^2.4.5",
-    "npm-check": "^4.1.4",
-    "pm2": "^1.0.2",
-    "supertest": "^1.2.0",
-    "underscore": "^1.8.3",
-    "zombie": "^4.2.1"
-  },
-  "engines": {
-    "node": ">=4.2.6",
-    "npm": ">=2.14.12"
-  },
-  "scripts": {
-    "start": "ENV=prod pm2 start app.js && pm2 save",
-    "stop": "pm2 stop app",
-    "restart": "ENV=prod pm2 restart app.js && pm2 save",
-    "test": "gulp test",
-    "dev": "ENV=dev node app.js",
-    "rdev": "ENV=dev pm2 restart app.js",
-    "deploy": "fly transparente",
-    "check": "npm-check",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "save": "pm2 save",
-    "beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js package.json",
-    "sass": "node-sass ./public/styles/*.scss -o ./public/styles/css"
-  }
+	"name": "ugr-transparente-servidor",
+	"version": "0.9.2",
+	"author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
+	"contributors": [
+		"Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
+		"Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
+		"Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
+		"Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
+		"Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
+		"Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
+	],
+	"description": "Portal de transparencia de la Universidad de Granada",
+	"keywords": [
+		"opendata",
+		"transparencia",
+		"ugr"
+	],
+	"bugs": {
+		"url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
+	},
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oslugr/ugr-transparente-servidor.git"
+	},
+	"homepage": "http://transparente.ugr.es/",
+	"main": "app.js",
+	"os": [
+		"linux"
+	],
+	"private": true,
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"dependencies": {
+		"body-parser": "^1.15.0",
+		"cookie-parser": "^1.4.0",
+		"debug": "^2.2.0",
+		"express": "^4.13.4",
+		"morgan": "^1.7.0",
+		"node-sass": "^3.4.2",
+		"serve-favicon": "^2.3.0",
+		"jade": "^1.11.0"
+	},
+	"devDependencies": {
+		"async": "^1.5.2",
+		"bower": "^1.7.7",
+		"chai": "^3.5.0",
+		"coveralls": "^2.11.8",
+		"flightplan": "^0.6.13",
+		"gulp": "^3.9.1",
+		"gulp-install": "^0.6.0",
+		"gulp-istanbul": "^0.10.3",
+		"gulp-mocha": "^2.2.0",
+		"gulp-shell": "^0.5.2",
+		"istanbul": "^0.4.2",
+		"js-beautify": "^1.6.2",
+		"mocha": "^2.4.5",
+		"npm-check": "^4.1.4",
+		"pm2": "^1.0.2",
+		"supertest": "^1.2.0",
+		"underscore": "^1.8.3",
+		"zombie": "^4.2.1"
+	},
+	"engines": {
+		"node": ">=4.2.6",
+		"npm": ">=2.14.12"
+	},
+	"scripts": {
+		"start": "ENV=prod pm2 start app.js && pm2 save",
+		"stop": "pm2 stop app",
+		"restart": "ENV=prod pm2 restart app.js && pm2 save",
+		"test": "gulp test",
+		"dev": "ENV=dev node app.js",
+		"rdev": "ENV=dev pm2 restart app.js",
+		"deploy": "fly transparente",
+		"check": "npm-check",
+		"coveralls": "cat ./coverage/lcov.info | coveralls",
+		"save": "pm2 save",
+		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js package.json",
+		"sass": "node-sass ./public/styles/*.scss -o ./public/styles/css"
+	}
 }

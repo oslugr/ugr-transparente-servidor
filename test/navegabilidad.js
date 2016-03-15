@@ -5,7 +5,7 @@ var async = require('async');
 
 Browser.localhost('localhost', 3000);
 
-function clickAll(browser,selector, done) {
+function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
 	async.each(buttons, function(item, cb) {
 		browser.fire(item, 'click', cb);
@@ -55,12 +55,12 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_gestion', 'display', 'none');
 
 
-			clickAll(browser,'.grupos', function(err) {
+			clickAll(browser, '.grupos', function(err) {
 				assert.notOk(err);
 				browser.assert.style('#menu_administración', 'display', 'block');
 				browser.assert.style('#menu_docencia', 'display', 'block');
 				browser.assert.style('#menu_gestion', 'display', 'block');
-				clickAll(browser,'.grupos', function(err) {
+				clickAll(browser, '.grupos', function(err) {
 					assert.notOk(err);
 					browser.assert.style('#menu_administración', 'display', 'none');
 					browser.assert.style('#menu_docencia', 'display', 'none');

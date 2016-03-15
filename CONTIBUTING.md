@@ -24,7 +24,7 @@ Se puede observar el estado actual del desarrollo (tareas por realizar, bugs...)
 ## Guía de estilo
 
 ### JavaScript
-El código desarrollado seguirá los estándares de JavaScript dados por **jshint** además del uso de notación _cameCase_ tanto para archivos como variables y funciones (las clases comenzarán por mayúscula, de acuerdo al estandar).
+El código desarrollado seguirá los estándares de JavaScript dados por **jshint** además del uso de notación _cameCase_ tanto para archivos como variables y funciones (las clases comenzarán por mayúscula, de acuerdo al estandar). Ejecutar el comando `npm run jshint` para comprobar si el código sigue los estándares
 
 Todo el código de JS debe ser legible e indentado de una forma estándar, para realizar indentación automática, ejecutar `npm run beautify` y asegurar que el código modificado se encuentra en la lista de archivos de js-beautify
 

@@ -1,24 +1,24 @@
 {
-  "name": "ugr-transparente-servidor",
-  "version": "0.2.0",
-  "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
-  "contributors": [
-    "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
-    "Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
-    "Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
-    "Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
-    "Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
-  ],
-  "description": "Portal de transparencia de la Universidad de Granada",
-  "main": "app.js",
-  "license": "GPL-3.0",
-  "private": true,
-  "dependencies": {
-    "jquery": "^2.2.1",
-    "fullcalendar": "^2.6.1",
-    "jquery-ui": "^1.11.4",
-    "lightbox2": "^2.8.2",
-    "moment": "^2.12.0",
-    "underscore": "^1.8.3"
-  }
+	"name": "ugr-transparente-servidor",
+	"version": "0.2.0",
+	"author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
+	"contributors": [
+		"Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
+		"Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
+		"Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
+		"Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
+		"Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
+	],
+	"description": "Portal de transparencia de la Universidad de Granada",
+	"main": "app.js",
+	"license": "GPL-3.0",
+	"private": true,
+	"dependencies": {
+		"jquery": "^2.2.1",
+		"fullcalendar": "^2.6.1",
+		"jquery-ui": "^1.11.4",
+		"lightbox2": "^2.8.2",
+		"moment": "^2.12.0",
+		"underscore": "^1.8.3"
+	}
 }

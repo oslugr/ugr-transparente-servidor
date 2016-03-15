@@ -9,13 +9,14 @@ gulp.task('default', ['start'], function() {
 	// place code for your default task here
 });
 
-gulp.task('install', function() {
+gulp.task('install-dependencies', function() {
 	return gulp.src(['./bower.json', './package.json'])
-		.pipe(install())
-		.pipe(shell("bash getRecursos.sh"));
+		.pipe(install());
 });
 
-gulp.task('pre-test', ['install', 'stop'], function() {
+gulp.task('get-resources',shell.task("bash getRecursos.sh"));
+
+gulp.task('pre-test', ['install-dependencies', 'stop', 'get-resources'], function() {
 	return gulp.src(['app/*/*.js', 'app/*.js'])
 		// Covering files
 		.pipe(istanbul())

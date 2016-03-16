@@ -5,7 +5,7 @@ var istanbul = require('gulp-istanbul');
 var shell = require('gulp-shell');
 var pm2 = require('pm2');
 
-gulp.task('default', function() {
+gulp.task('default',["start"], function() {
 	// place code for your default task here
 });
 
@@ -13,7 +13,7 @@ gulp.task('default', function() {
 gulp.task('get-resources', shell.task("bash getRecursos.sh"));
 
 gulp.task('install',['get-resources'], function() {
-	return gulp.src(['./bower.json', './package.json'])
+	return gulp.src(['./bower.json'])
 		.pipe(install());
 });
 

@@ -12,7 +12,7 @@ function clickAll(browser, selector, done) {
 	}, done);
 }
 
-describe('Pruebas de Navegabilidad', function() {
+describe.only('Pruebas de Navegabilidad', function() {
 	var server;
 	var app;
 	var browser;
@@ -120,20 +120,54 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#pagina');
 			browser.assert.element('h1#titulo_pagina');
 			browser.assert.text('#titulo_pagina span','Inicio');
-			browser.assert.element('#pagina #contenido')						
+			browser.assert.element('#pagina #contenido');
 		});
 		it('Index Menu', function() {
-			//TODO: check links
-			browser.assert.text('a > #en_infoInstitucional','Información Institucional');
-			browser.assert.text('a > #en_personal','Personal');
-			browser.assert.text('a > #en_infoEconomica','Información Económica');
-			browser.assert.text('a > #en_ofertaDemanda','Oferta y Demanda Académica');
-			browser.assert.text('a > #en_claustro','Claustro');
-			browser.assert.text('a > #en_estudiantes','Estudiantes');
-			browser.assert.text('a > #en_gobierno','Gobierno');
-			browser.assert.text('a > #en_rendimiento','Rendimiento');
-			browser.assert.text('a > #en_normativaLegal','Normativa Legal');
-
+			var elem;
+			elem=browser.query('a > #en_infoInstitucional');
+			browser.assert.text(elem,'Información Institucional');
+			browser.assert.attribute(elem.parentNode,'href','/infoInstitucional.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_personal');
+			browser.assert.text(elem,'Personal');
+			browser.assert.attribute(elem.parentNode,'href','/personal.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_infoEconomica');
+			browser.assert.text(elem,'Información Económica');
+			browser.assert.attribute(elem.parentNode,'href','/infoEconomica.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_ofertaDemanda');
+			browser.assert.text(elem,'Oferta y Demanda Académica');
+			browser.assert.attribute(elem.parentNode,'href','/ofertaDemanda.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_claustro');
+			browser.assert.text(elem,'Claustro');
+			browser.assert.attribute(elem.parentNode,'href','/claustro.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_estudiantes');
+			browser.assert.text(elem,'Estudiantes');
+			browser.assert.attribute(elem.parentNode,'href','/estudiantes.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_gobierno');
+			browser.assert.text(elem,'Gobierno');
+			browser.assert.attribute(elem.parentNode,'href','/gobierno.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_rendimiento');
+			browser.assert.text(elem,'Rendimiento');
+			browser.assert.attribute(elem.parentNode,'href','/rendimiento.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
+			
+			elem=browser.query('a > #en_normativaLegal');
+			browser.assert.text(elem,'Normativa Legal');
+			browser.assert.attribute(elem.parentNode,'href','/normativaLegal.html');
+			browser.assert.hasClass(elem.parentNode,'enlaces_index');
 		});
 
 	});

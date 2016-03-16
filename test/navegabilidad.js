@@ -44,12 +44,23 @@ describe.only('Pruebas de Navegabilidad', function() {
 			//Check number of elements
 			browser.assert.element('#menus');
 			browser.assert.element('#enlaces_secciones');
-			browser.assert.elements('.item-first_level', 7);
-			browser.assert.elements('.item-second_level', 8);
-
-			//TODO: check all links
-			
-			//Check menus are hide
+			browser.assert.elements('#menus .item-first_level', 7);
+			browser.assert.elements('#menus .item-second_level', 8);
+			browser.assert.elements('#menus a.grupos',3);
+			//Links
+			browser.assert.link('#menus a','Inicio','/index.html');
+			browser.assert.link('#menus a','Información Institucional','/infoInstitucional.html');
+			browser.assert.link('#menus a','Personal','/personal.html');
+			browser.assert.link('#menus a','Información Económica','/infoEconomica.html');
+			browser.assert.link('#menus a','Perfil del Contratante','/perfilContratante.html');
+			browser.assert.link('#menus a','Oferta y Demanda Académica','/ofertaDemanda.html');
+			browser.assert.link('#menus a','Claustro','/claustro.html');
+			browser.assert.link('#menus a','Estudiantes','/estudiantes.html');
+			browser.assert.link('#menus a','Gobierno','/gobierno.html');
+			browser.assert.link('#menus a','Rendimiento','/rendimiento.html');
+			browser.assert.link('#menus a','Normativa Legal','/normativaLegal.html');
+			browser.assert.link('#menus a','Solicitud de Información','/solicitudInfo.html');
+			//Clicking
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestion', 'display', 'none');
@@ -106,11 +117,9 @@ describe.only('Pruebas de Navegabilidad', function() {
 		});
 
 		it('Menu', function() {
-			//Check selected menu
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Inicio', '/index.html');
 
-			//Check menus are hide
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestion', 'display', 'none');

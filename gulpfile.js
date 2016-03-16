@@ -5,19 +5,20 @@ var istanbul = require('gulp-istanbul');
 var shell = require('gulp-shell');
 var pm2 = require('pm2');
 
-gulp.task('default', ['start'], function() {
+gulp.task('default', function() {
 	// place code for your default task here
 });
 
-gulp.task('install-dependencies', function() {
+
+gulp.task('get-resources', shell.task("bash getRecursos.sh"));
+
+gulp.task('install',['get-resources'], function() {
 	return gulp.src(['./bower.json', './package.json'])
 		.pipe(install());
 });
 
-gulp.task('get-resources', shell.task("bash getRecursos.sh"));
-
-gulp.task('pre-test', ['install-dependencies', 'stop', 'get-resources'], function() {
-	return gulp.src(['app/*/*.js', 'app/*.js'])
+gulp.task('pre-test', ['stop'], function() {
+	return gulp.src(['app/*/*.js', 'app/*.js', '*.js'])
 		// Covering files
 		.pipe(istanbul())
 		// Force `require` to return covered files

@@ -12,7 +12,7 @@ function clickAll(browser, selector, done) {
 	}, done);
 }
 
-describe('Pruebas de Navegabilidad', function() {
+describe.skip('Pruebas de Navegabilidad', function() {
 	var server;
 	var app;
 	var browser;

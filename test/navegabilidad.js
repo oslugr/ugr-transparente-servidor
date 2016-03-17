@@ -1,11 +1,11 @@
-/*var Browser = require('zombie');
+var Browser = require('zombie');
 var assert = require('chai').assert;
 var config = require('./config');
 var async = require('async');
 
 Browser.localhost('localhost', 3000);
 
-function clickAll(browser, selector, done) {
+/*function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
 	async.each(buttons, function(item, cb) {
 		browser.fire(item, 'click', cb);

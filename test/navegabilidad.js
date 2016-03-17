@@ -1,4 +1,4 @@
-var Browser = require('zombie');
+/*var Browser = require('zombie');
 var assert = require('chai').assert;
 var config = require('./config');
 var async = require('async');
@@ -180,4 +180,4 @@ describe.skip('Pruebas de Navegabilidad', function() {
 		});
 
 	});
-});
+});*/

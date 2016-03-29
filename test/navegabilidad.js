@@ -7,6 +7,7 @@ var async = require('async');
 	var port=process.env.PORT || require('../config/config').puerto;
 	var ip=process.env.IP || "127.0.0.1";
     Browser.localhost("127.0.0.1",3000);
+	var browser=new Browser();
 
 function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
@@ -18,7 +19,7 @@ function clickAll(browser, selector, done) {
 describe('Pruebas de Navegabilidad', function() {
 	var server;
 	var app;
-	var browser;
+
 	before(function(done) {
 		this.timeout(3000);
 		config.initServer(function(app2, server2) {
@@ -31,8 +32,6 @@ describe('Pruebas de Navegabilidad', function() {
 		server.close();
 	});
 	describe('Index & Layout', function() {
-		browser = new Browser();
-
 		beforeEach(function(done) {
 			this.timeout(4000);
 			browser.visit('/', function(err) {
@@ -95,8 +94,6 @@ describe('Pruebas de Navegabilidad', function() {
 	});
 
 	describe('Index', function() {
-		browser = new Browser();
-
 		beforeEach(function(done) {
 			this.timeout(4000);
 			browser.visit('/', function(err) {

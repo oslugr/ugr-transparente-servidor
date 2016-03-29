@@ -1,0 +1,26 @@
+server {
+	listen 80;
+	server_name transparente;
+
+	root /var/www/transparente;		
+
+	location / {
+		proxy_pass http://localhost:3000/;
+	}
+
+	location ~ ^/(imagenes/|img/|doc/|graph/) {
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ ^/(css/|lib/|script/) {
+		root $HOME/ugr-transparente-servidor/public;
+		try_files $uri $uri/ =404;
+	}
+
+	location /nginx_status {
+		stub_status on;
+		access_log off;
+		allow 127.0.0.1;
+		deny all;
+	}
+}

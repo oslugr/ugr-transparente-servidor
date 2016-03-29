@@ -1,16 +1,15 @@
 var assert = require('chai').assert;
 var config = require('./config');
 var async = require('async');
-try {
-	var Browser = require('zombie');
+var Browser = require('zombie');
 
-	var port = process.env.PORT || require('../config/config').puerto;
-	var ip = process.env.IP || "127.0.0.1";
-	Browser.localhost(ip, port);
-	var browser = new Browser();
-} catch (err) {
-	console.log("Weird ZombieJS error:" + err);
-}
+var port = process.env.PORT || require('../config/config').puerto;
+var ip = process.env.IP || "127.0.0.1";
+
+console.log(port);
+console.log(ip);
+Browser.localhost(ip, port);
+var browser = new Browser();
 
 function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);

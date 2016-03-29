@@ -4,9 +4,10 @@ var config = require('./config');
 var async = require('async');
 
 
-var port=process.env.PORT || config.puerto;
+var port=process.env.PORT || require('../config/config').puerto;
 var ip=process.env.IP || "127.0.0.1";
-
+console.log(ip);
+console.log(port);
 Browser.localhost(ip,port);
 
 function clickAll(browser, selector, done) {

@@ -42,7 +42,6 @@ module.exports = {
 		'/imagenes/osl.jpg',
 		'/graph/perfil_pdi_extranjero.png'
 	],
-	puerto: 3000,
 	initServer: function(done, dev) { // Función para iniciar el servidor express
 		if (dev === true) process.env.ENV = "dev";
 		else process.env.ENV = "prod";

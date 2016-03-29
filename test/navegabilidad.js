@@ -3,14 +3,11 @@ var assert = require('chai').assert;
 var config = require('./config');
 var async = require('async');
 
-try {
+
 	var port=process.env.PORT || require('../config/config').puerto;
 	var ip=process.env.IP || "127.0.0.1";
-    Browser.localhost(ip,port);
-}
-catch(err) {
-	console.log("Weird ZombieJS error:"+err);
-}
+    Browser.localhost("127.0.0.1",3000);
+
 function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
 	async.each(buttons, function(item, cb) {

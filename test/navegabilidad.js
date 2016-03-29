@@ -214,4 +214,48 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#pagina #contenido');
 		});
 	});
+	describe('Personal',function(){
+		var browser = new Browser();
+		beforeEach(function(done) {
+			this.timeout(8000);
+			browser.visit(url+'/personal.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			this.timeout(8000);
+			browser.assert.success();
+			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
+			browser.assert.status(200);
+			browser.visit(url+'/personal.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
+				browser.assert.status(200);
+				done();
+			});
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Personal', '/personal.html');
+
+			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			browser.assert.element('#pagina');
+			browser.assert.element('h1#titulo_pagina');
+			browser.assert.text('#titulo_pagina span', 'Personal');
+			browser.assert.element('#pagina #contenido');
+		});
+		it.skip('Tablas',function(){
+			throw (new Error("Not Implemented"));
+		});
+		
+		
+	});
 });

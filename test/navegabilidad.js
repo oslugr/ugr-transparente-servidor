@@ -6,9 +6,7 @@ var Browser = require('zombie');
 var port = process.env.PORT || require('../config/config').puerto;
 var ip = process.env.IP || "127.0.0.1";
 
-//Browser.localhost(ip,port);
 var url="http://"+ip+":"+port;
-
 
 function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
@@ -32,7 +30,7 @@ describe('Pruebas de Navegabilidad', function() {
 	after(function() {
 		server.close();
 	});
-	describe('Index & Layout', function() {
+	describe('Layout & Menu', function() {
 		beforeEach(function(done) {
 			this.timeout(4000);
 			browser.visit(url+'/', function(err) {
@@ -67,7 +65,6 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestion', 'display', 'none');
-
 
 			clickAll(browser, '.grupos', function(err) {
 				assert.notOk(err);
@@ -117,7 +114,6 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Inicio', '/index.html');
@@ -125,9 +121,8 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestion', 'display', 'none');
-
 		});
-		it('Index Layout', function() {
+		it('Layout', function() {
 			browser.assert.element('#pagina');
 			browser.assert.element('h1#titulo_pagina');
 			browser.assert.text('#titulo_pagina span', 'Inicio');
@@ -180,6 +175,43 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.attribute(elem.parentNode, 'href', '/normativaLegal.html');
 			browser.assert.hasClass(elem.parentNode, 'enlaces_index');
 		});
+	});
+	describe('Información Institucional', function() {
+		var browser = new Browser();
+		beforeEach(function(done) {
+			this.timeout(8000);
+			browser.visit(url+'/infoInstitucional.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			this.timeout(8000);
+			browser.assert.success();
+			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
+			browser.assert.status(200);
+			browser.visit(url+'/infoInstitucional.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
+				browser.assert.status(200);
+				done();
+			});
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.link('.tipo2-selected > a', 'Información Institucional', '/infoInstitucional.html');
 
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			browser.assert.element('#pagina');
+			browser.assert.element('h1#titulo_pagina');
+			browser.assert.text('#titulo_pagina span', 'Información Institucional');
+			browser.assert.element('#pagina #contenido');
+		});
 	});
 });

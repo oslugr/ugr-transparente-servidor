@@ -8,7 +8,7 @@ var ip = process.env.IP || "127.0.0.1";
 
 console.log(port);
 console.log(ip);
-Browser.localhost(ip, port);
+//Browser.localhost(ip, port);
 var browser = new Browser();
 
 function clickAll(browser, selector, done) {

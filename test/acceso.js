@@ -62,6 +62,8 @@ describe('Pruebas de acceso', function() {
 		this.timeout(5000);
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
+				console.log(url);
+				if(err) console.log(err);
 				assert.notOk(err);
 				callback();
 			});
@@ -144,4 +146,21 @@ describe("Pruebas en producción", function() {
 			done();
 		});
 	});
+});
+
+// Pruebas de acceso con configuración de producción
+describe("Pruebas de servidor", function() {
+	it('Ejecución de servidor',function(done){
+		this.timeout(3000);
+		var server=require('../app');
+		assert.ok(server);
+		setTimeout(function(){
+			request(server).get('/').expect(200).end(function(err, res) {
+				assert.notOk(err);
+				assert.ok(res);
+				server.close();
+				done();
+			});			
+		}, 700);
+	});	
 });

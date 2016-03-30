@@ -10,7 +10,7 @@ var ip = process.env.IP || "127.0.0.1";
 var url = "http://" + ip + ":" + port;
 
 var browser = new Browser();
-	
+
 function clickAll(selector, done) {
 	var buttons = browser.queryAll(selector);
 	async.each(buttons, function(item, cb) {
@@ -19,29 +19,53 @@ function clickAll(selector, done) {
 }
 
 function checkLink(link, done, status) {
-	var arr = link.split('/');
-	var url = arr[0] + "//" + arr[2];
-	var dir = link.split(arr[2])[1];
-	assert.ok(url);
+	var dir;
+	var url2;
+	if (link[0] === "#") return done();
+	if (link[0] === "/") {
+		dir = link;
+		url2 = url;
+	} else {
+		var arr = link.split('/');
+		url2 = arr[0] + "//" + arr[2];
+		dir = link.split(arr[2])[1];
+	}
+	assert.ok(url2);
 	assert.ok(dir);
 
-	request(url).get(dir)
+	request(url2).get(dir)
 		.end(function(err, res) {
-			console.log("GET "+link);
+			console.log("GET " + link);
 			assert.notOk(err);
 			if (status) assert.strictEqual(res.status, status);
 			else assert.notEqual(res.status, 404);
 			done();
 		});
 }
-function checkAllLinks(selector,done,status){
+
+function checkAllLinks(selector, done, status) {
 	var links = browser.queryAll(selector);
 	async.each(links, function(item, cb) {
-		var url=item.getAttribute("href");
+		var url = item.getAttribute("href");
 		assert.ok(url);
-		checkLink(url,cb,status);
+		checkLink(url, cb, status);
 	}, done);
 }
+
+function checkTables(done) {
+	var tables = browser.queryAll("#contenido div.level1 table");
+	async.each(tables, function(item, cb) {
+		var rows = browser.queryAll("tr", item);
+		assert.isAbove(rows.length, 1);
+		var links = browser.queryAll("a", item);
+		async.each(links, function(item, cb2) {
+			var url = item.getAttribute("href");
+			assert.ok(url);
+			checkLink(url, cb2);
+		}, cb);
+	}, done);
+}
+
 
 function checkConnection(url, done, title) {
 	title = title || "UGR Transparente | Universidad de Granada";
@@ -66,7 +90,7 @@ function checkLayout(title) {
 
 
 describe('Pruebas de Navegabilidad', function() {
-	this.timeout(10000);
+	this.timeout(15000);
 	var server;
 	var app;
 
@@ -232,8 +256,8 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLayout('Información Institucional');
 		});
 		it('Links', function(done) {
-			browser.assert.elements('#contenido li a',10);
-			checkAllLinks('#contenido li a',done);
+			browser.assert.elements('#contenido li a', 10);
+			checkAllLinks('#contenido li a', done);
 		});
 		describe('Personal', function() {
 			beforeEach(function(done) {
@@ -259,10 +283,11 @@ describe('Pruebas de Navegabilidad', function() {
 			it('Layout', function() {
 				checkLayout('Personal');
 			});
-			it.skip('Tablas', function() {
-				throw (new Error("Not Implemented"));
+			it('Tablas', function(done) {
+				checkTables(done);
 			});
 			describe('Información económica', function() {
+				this.timeout(25000);
 				beforeEach(function(done) {
 					browser.visit(url + '/infoEconomica.html', function(err) {
 						assert.notOk(err);
@@ -285,8 +310,8 @@ describe('Pruebas de Navegabilidad', function() {
 				it('Layout', function() {
 					checkLayout('Información Económica');
 				});
-				it.skip('Tablas', function() {
-					throw (new Error("Not Implemented"));
+				it('Tablas', function(done) {
+					checkTables(done);
 				});
 			});
 

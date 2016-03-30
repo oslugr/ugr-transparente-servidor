@@ -6,7 +6,7 @@ var Browser = require('zombie');
 var port = process.env.PORT || require('../config/config').puerto;
 var ip = process.env.IP || "127.0.0.1";
 
-var url="http://"+ip+":"+port;
+var url = "http://" + ip + ":" + port;
 
 function clickAll(browser, selector, done) {
 	var buttons = browser.queryAll(selector);
@@ -19,6 +19,28 @@ describe('Pruebas de Navegabilidad', function() {
 	var server;
 	var app;
 	var browser = new Browser();
+
+	function checkConnection(url, done, title) {
+		title = title || "UGR Transparente | Universidad de Granada";
+		browser.assert.success();
+		browser.assert.text('title', title);
+		browser.assert.status(200);
+		browser.visit(url, function(err) {
+			assert.notOk(err);
+			browser.assert.success();
+			browser.assert.text('title', title);
+			browser.assert.status(200);
+			done();
+		});
+	}
+
+	function checkLayout(title) {
+		browser.assert.element('#pagina');
+		browser.assert.element('h1#titulo_pagina');
+		browser.assert.text('#titulo_pagina span', title);
+		browser.assert.element('#pagina #contenido');
+	}
+
 	before(function(done) {
 		this.timeout(3000);
 		config.initServer(function(app2, server2) {
@@ -33,7 +55,7 @@ describe('Pruebas de Navegabilidad', function() {
 	describe('Layout & Menu', function() {
 		beforeEach(function(done) {
 			this.timeout(4000);
-			browser.visit(url+'/', function(err) {
+			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -95,7 +117,7 @@ describe('Pruebas de Navegabilidad', function() {
 		var browser = new Browser();
 		beforeEach(function(done) {
 			this.timeout(4000);
-			browser.visit(url+'/', function(err) {
+			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -103,16 +125,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 
 		it('Connection', function(done) {
-			browser.assert.success();
-			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-			browser.assert.status(200);
-			browser.visit(url+'/index.html', function(err) {
-				assert.notOk(err);
-				browser.assert.success();
-				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-				browser.assert.status(200);
-				done();
-			});
+			checkConnection(url + '/index.html', done);
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -123,10 +136,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_gestion', 'display', 'none');
 		});
 		it('Layout', function() {
-			browser.assert.element('#pagina');
-			browser.assert.element('h1#titulo_pagina');
-			browser.assert.text('#titulo_pagina span', 'Inicio');
-			browser.assert.element('#pagina #contenido');
+			checkLayout('Inicio');
 		});
 		it('Index Menu', function() {
 			var elem;
@@ -180,7 +190,7 @@ describe('Pruebas de Navegabilidad', function() {
 		var browser = new Browser();
 		beforeEach(function(done) {
 			this.timeout(8000);
-			browser.visit(url+'/infoInstitucional.html', function(err) {
+			browser.visit(url + '/infoInstitucional.html', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -188,16 +198,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Connection', function(done) {
 			this.timeout(8000);
-			browser.assert.success();
-			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-			browser.assert.status(200);
-			browser.visit(url+'/infoInstitucional.html', function(err) {
-				assert.notOk(err);
-				browser.assert.success();
-				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-				browser.assert.status(200);
-				done();
-			});
+			checkConnection(url + '/infoInstitucional.html', done);
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -208,17 +209,14 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_gestion', 'display', 'none');
 		});
 		it('Layout', function() {
-			browser.assert.element('#pagina');
-			browser.assert.element('h1#titulo_pagina');
-			browser.assert.text('#titulo_pagina span', 'Información Institucional');
-			browser.assert.element('#pagina #contenido');
+			checkLayout('Información Institucional');
 		});
 	});
-	describe('Personal',function(){
+	describe('Personal', function() {
 		var browser = new Browser();
 		beforeEach(function(done) {
 			this.timeout(8000);
-			browser.visit(url+'/personal.html', function(err) {
+			browser.visit(url + '/personal.html', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -226,16 +224,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Connection', function(done) {
 			this.timeout(8000);
-			browser.assert.success();
-			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-			browser.assert.status(200);
-			browser.visit(url+'/personal.html', function(err) {
-				assert.notOk(err);
-				browser.assert.success();
-				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
-				browser.assert.status(200);
-				done();
-			});
+			checkConnection(url + '/personal.html', done);
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -247,15 +236,41 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_gestion', 'display', 'none');
 		});
 		it('Layout', function() {
-			browser.assert.element('#pagina');
-			browser.assert.element('h1#titulo_pagina');
-			browser.assert.text('#titulo_pagina span', 'Personal');
-			browser.assert.element('#pagina #contenido');
+			checkLayout('Personal');
 		});
-		it.skip('Tablas',function(){
+		it.skip('Tablas', function() {
 			throw (new Error("Not Implemented"));
 		});
-		
-		
+		describe('Información económica', function() {
+			var browser = new Browser();
+			beforeEach(function(done) {
+				this.timeout(8000);
+				browser.visit(url + '/infoEconomica.html', function(err) {
+					assert.notOk(err);
+					browser.assert.success();
+					done();
+				});
+			});
+			it('Connection', function(done) {
+				this.timeout(8000);
+				checkConnection(url + '/infoEconomica.html', done);
+			});
+			it('Menu', function() {
+				browser.assert.elements('.tipo2-selected', 1);
+				browser.assert.elements('.tipo1-selected', 1);
+				browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
+
+				browser.assert.style('#menu_administración', 'display', 'block');
+				browser.assert.style('#menu_docencia', 'display', 'none');
+				browser.assert.style('#menu_gestion', 'display', 'none');
+			});
+			it('Layout', function() {
+				checkLayout('Información Económica');
+			});
+			it.skip('Tablas', function() {
+				throw (new Error("Not Implemented"));
+			});
+		});
+
 	});
 });

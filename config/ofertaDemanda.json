@@ -36,6 +36,9 @@
 		"link": "datos-oferta-academica",
 		"texto": "",
 		"datos": [{
+			"nombre": "Titulaciones 2015 - 2016",
+			"url": "http://opendata.ugr.es/dataset/titulaciones-2015-2016"
+		}, {
 			"nombre": "Titulaciones 2014 - 2015",
 			"url": "http://opendata.ugr.es/dataset/titulaciones-14-15"
 		}, {

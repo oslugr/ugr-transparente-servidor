@@ -7,7 +7,7 @@ var port = process.env.PORT || require('../config/config').puerto;
 var ip = process.env.IP || "127.0.0.1";
 
 //Browser.localhost(ip,port);
-var url="http://"+ip+":"+port;
+var url = "http://" + ip + ":" + port;
 
 
 function clickAll(browser, selector, done) {
@@ -35,7 +35,7 @@ describe('Pruebas de Navegabilidad', function() {
 	describe('Index & Layout', function() {
 		beforeEach(function(done) {
 			this.timeout(4000);
-			browser.visit(url+'/', function(err) {
+			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -98,7 +98,7 @@ describe('Pruebas de Navegabilidad', function() {
 		var browser = new Browser();
 		beforeEach(function(done) {
 			this.timeout(4000);
-			browser.visit(url+'/', function(err) {
+			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				done();
@@ -109,7 +109,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.success();
 			browser.assert.text('title', 'UGR Transparente | Universidad de Granada');
 			browser.assert.status(200);
-			browser.visit(url+'/index.html', function(err) {
+			browser.visit(url + '/index.html', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
 				browser.assert.text('title', 'UGR Transparente | Universidad de Granada');

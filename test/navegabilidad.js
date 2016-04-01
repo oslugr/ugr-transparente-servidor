@@ -35,7 +35,6 @@ function checkLink(link, done, status) {
 
 	request(url2).get(dir)
 		.end(function(err, res) {
-			console.log("GET " + link);
 			assert.notOk(err);
 			if (status) assert.strictEqual(res.status, status);
 			else assert.notEqual(res.status, 404);
@@ -67,18 +66,12 @@ function checkTables(done) {
 }
 
 
-function checkConnection(url, done, title) {
+function checkConnection(done, title) {
 	title = title || "UGR Transparente | Universidad de Granada";
 	browser.assert.success();
 	browser.assert.text('title', title);
 	browser.assert.status(200);
-	browser.visit(url, function(err) {
-		assert.notOk(err);
-		browser.assert.success();
-		browser.assert.text('title', title);
-		browser.assert.status(200);
-		done();
-	});
+	done();
 }
 
 function checkLayout(title) {
@@ -90,7 +83,7 @@ function checkLayout(title) {
 
 
 describe('Pruebas de Navegabilidad', function() {
-	this.timeout(15000);
+	this.timeout(50000);
 	var server;
 	var app;
 
@@ -172,7 +165,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 
 		it('Connection', function(done) {
-			checkConnection(url + '/index.html', done);
+			checkConnection(done);
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -242,7 +235,7 @@ describe('Pruebas de Navegabilidad', function() {
 			});
 		});
 		it('Connection', function(done) {
-			checkConnection(url + '/infoInstitucional.html', done);
+			checkConnection(done);
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -269,7 +262,7 @@ describe('Pruebas de Navegabilidad', function() {
 				});
 			});
 			it('Connection', function(done) {
-				checkConnection(url + '/personal.html', done);
+				checkConnection(done);
 			});
 			it('Menu', function() {
 				browser.assert.elements('.tipo2-selected', 1);
@@ -289,6 +282,7 @@ describe('Pruebas de Navegabilidad', function() {
 			describe('Información económica', function() {
 				this.timeout(25000);
 				beforeEach(function(done) {
+					this.timeout(50000);
 					browser.visit(url + '/infoEconomica.html', function(err) {
 						assert.notOk(err);
 						browser.assert.success();
@@ -296,7 +290,7 @@ describe('Pruebas de Navegabilidad', function() {
 					});
 				});
 				it('Connection', function(done) {
-					checkConnection(url + '/infoEconomica.html', done);
+					checkConnection(done);
 				});
 				it('Menu', function() {
 					browser.assert.elements('.tipo2-selected', 1);
@@ -314,7 +308,33 @@ describe('Pruebas de Navegabilidad', function() {
 					checkTables(done);
 				});
 			});
+			describe.skip('Perfil de Contratante',function(){
+				beforeEach(function(done) {
+					browser.visit(url + '/perfilContratante.html', function(err) {
+						assert.notOk(err);
+						browser.assert.success();
+						done();
+					});
+				});
+				it('Connection', function(done) {
+					checkConnection(done);
+				});
+				it('Menu', function() {
+					browser.assert.elements('.tipo2-selected', 1);
+					browser.assert.elements('.tipo1-selected', 1);
+					browser.assert.link('.tipo1-selected > a', 'Perfil de Contratante', '/perfilContratante.html');
 
+					browser.assert.style('#menu_administración', 'display', 'block');
+					browser.assert.style('#menu_docencia', 'display', 'none');
+					browser.assert.style('#menu_gestion', 'display', 'none');
+				});
+				it('Layout', function() {
+					checkLayout('Información Económica');
+				});
+				
+				
+				
+			});
 		});
 	});
 });

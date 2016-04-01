@@ -26,11 +26,11 @@ var async = require('async');
 var config = require('./config.js');
 
 // Pruebas de acceso a las páginas y recursos
-describe('Pruebas de acceso', function() {
+describe('Pruebas de acceso', function() {		
+	this.timeout(12000);
 	var server;
 	var app;
 	before(function(done) {
-		this.timeout(3000);
 		config.initServer(function(app2, server2) {
 			server = server2;
 			app = app2;
@@ -43,7 +43,6 @@ describe('Pruebas de acceso', function() {
 
 	// Acceso a todas las páginas del servidor, deben devolver código 200 y un html
 	it("Acceso a páginas", function(done) {
-		this.timeout(10000);
 		async.eachSeries(config.direcciones, function(url, callback) {
 			request(app).get(url)
 				.expect(200)
@@ -59,11 +58,8 @@ describe('Pruebas de acceso', function() {
 
 	// Acceso a recursos estáticos
 	it("Acceso a recursos", function(done) {
-		this.timeout(5000);
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
-				console.log(url);
-				if (err) console.log(err);
 				assert.notOk(err);
 				callback();
 			});
@@ -85,7 +81,6 @@ describe('Pruebas de acceso', function() {
 
 	// Comprueba las direcciones a los datos del buscador, espera un json código 200
 	it("Archivos de buscador", function(done) {
-		this.timeout(5000);
 		async.eachSeries(config.archivosBuscador, function(url, callback) {
 			request(app).get(url)
 				.expect(200)
@@ -104,10 +99,10 @@ describe('Pruebas de acceso', function() {
 
 // Pruebas de acceso con configuración de producción
 describe("Pruebas en producción", function() {
+	this.timeout(12000);
 	var server;
 	var app;
 	before(function(done) {
-		this.timeout(3000);
 		config.initServer(function(app2, server2) {
 			server = server2;
 			app = app2;
@@ -120,7 +115,6 @@ describe("Pruebas en producción", function() {
 
 	// Acceso a archivos estáticos en producción debe devolver 404
 	it("Archivos estáticos en producción", function(done) {
-		this.timeout(5000);
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(404).end(function(err, res) {
 				assert.notOk(err);
@@ -133,7 +127,6 @@ describe("Pruebas en producción", function() {
 
 	// Acceso a todas las páginas del servidor, deben devolver código 200 y un html
 	it("Acceso a páginas", function(done) {
-		this.timeout(10000);
 		async.eachSeries(config.direcciones, function(url, callback) {
 			request(app).get(url)
 				.expect(200)
@@ -150,8 +143,8 @@ describe("Pruebas en producción", function() {
 
 // Pruebas de acceso con configuración de producción
 describe("Pruebas de servidor", function() {
+	this.timeout(3000);
 	it('Ejecución de servidor', function(done) {
-		this.timeout(3000);
 		var server = require('../app');
 		assert.ok(server);
 		setTimeout(function() {

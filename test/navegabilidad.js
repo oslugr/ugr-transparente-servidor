@@ -99,7 +99,6 @@ describe('Pruebas de Navegabilidad', function() {
 		before(function(done) {
 			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -157,7 +156,6 @@ describe('Pruebas de Navegabilidad', function() {
 		before(function(done) {
 			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -228,7 +226,6 @@ describe('Pruebas de Navegabilidad', function() {
 		before(function(done) {
 			browser.visit(url + '/infoInstitucional.html', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -256,7 +253,6 @@ describe('Pruebas de Navegabilidad', function() {
 
 			browser.visit(url + '/personal.html', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -283,7 +279,6 @@ describe('Pruebas de Navegabilidad', function() {
 		before(function(done) {
 			browser.visit(url + '/infoEconomica.html', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -310,7 +305,6 @@ describe('Pruebas de Navegabilidad', function() {
 		before(function(done) {
 			browser.visit(url + '/perfilContratante.html', function(err) {
 				assert.notOk(err);
-				browser.assert.success();
 				done();
 			});
 		});
@@ -335,10 +329,31 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLink("http://econtra.ugr.es/licitacion", done);
 		});
 	});
-	describe.skip('Oferta y Demanda Académica',function(){
+	describe('Oferta y Demanda Académica',function(){
+		before(function(done) {
+			browser.visit(url + '/ofertaDemanda.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Oferta y Demanda Académica', '/ofertaDemanda.html');
 
-		
-		
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'block');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Oferta y Demanda Académica');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
 	describe.skip('Claustro',function(){
 		

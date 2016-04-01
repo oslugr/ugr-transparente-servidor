@@ -327,8 +327,13 @@ describe('Pruebas de Navegabilidad', function() {
 				browser.assert.style('#menu_docencia', 'display', 'none');
 				browser.assert.style('#menu_gestion', 'display', 'none');
 			});
-			it('Layout', function() {
+			it('Layout', function(done) {
 				checkLayout('Perfil del Contratante');
+				var elem = browser.query('#pagina strong');
+				browser.assert.text(elem, 'Acceso al Perfil del Contratante');
+		
+				browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
+				checkLink("http://econtra.ugr.es/licitacion",done);
 			});
 		});
 	});

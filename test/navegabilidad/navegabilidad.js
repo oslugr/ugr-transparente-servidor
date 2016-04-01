@@ -468,8 +468,30 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe.skip('Normativa Legal',function(){
-		
+	describe('Normativa Legal',function(){
+		before(function(done) {
+			browser.visit(url + '/normativaLegal.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.link('.tipo2-selected > a', 'Normativa Legal', '/normativaLegal.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Normativa Legal');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
 	describe.skip('Solicitud de Información',function(){
 		

@@ -355,8 +355,31 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe.skip('Claustro',function(){
-		
+	describe.only('Claustro',function(){
+		before(function(done) {
+			browser.visit(url + '/claustro.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Claustro', '/claustro.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'block');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Claustro');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
 	describe.skip('Estudiantes',function(){
 		

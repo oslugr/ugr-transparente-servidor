@@ -65,7 +65,6 @@ function checkTables(done) {
 	}, done);
 }
 
-
 function checkConnection(done, title) {
 	title = title || "UGR Transparente | Universidad de Granada";
 	browser.assert.success();
@@ -80,7 +79,6 @@ function checkLayout(title) {
 	browser.assert.text('#titulo_pagina span', title);
 	browser.assert.element('#pagina #contenido');
 }
-
 
 describe('Pruebas de Navegabilidad', function() {
 	this.timeout(50000);
@@ -98,7 +96,7 @@ describe('Pruebas de Navegabilidad', function() {
 		server.close();
 	});
 	describe('Layout & Menu', function() {
-		beforeEach(function(done) {
+		before(function(done) {
 			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
@@ -156,7 +154,7 @@ describe('Pruebas de Navegabilidad', function() {
 	});
 
 	describe('Index', function() {
-		beforeEach(function(done) {
+		before(function(done) {
 			browser.visit(url + '/', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
@@ -227,7 +225,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 	});
 	describe('Información Institucional', function() {
-		beforeEach(function(done) {
+		before(function(done) {
 			browser.visit(url + '/infoInstitucional.html', function(err) {
 				assert.notOk(err);
 				browser.assert.success();
@@ -252,89 +250,112 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('#contenido li a', 10);
 			checkAllLinks('#contenido li a', done);
 		});
-		describe('Personal', function() {
-			beforeEach(function(done) {
+	});
+	describe('Personal', function() {
+		before(function(done) {
 
-				browser.visit(url + '/personal.html', function(err) {
-					assert.notOk(err);
-					browser.assert.success();
-					done();
-				});
-			});
-			it('Connection', function(done) {
-				checkConnection(done);
-			});
-			it('Menu', function() {
-				browser.assert.elements('.tipo2-selected', 1);
-				browser.assert.elements('.tipo1-selected', 1);
-				browser.assert.link('.tipo1-selected > a', 'Personal', '/personal.html');
-
-				browser.assert.style('#menu_administración', 'display', 'block');
-				browser.assert.style('#menu_docencia', 'display', 'none');
-				browser.assert.style('#menu_gestion', 'display', 'none');
-			});
-			it('Layout', function() {
-				checkLayout('Personal');
-			});
-			it('Tablas', function(done) {
-				checkTables(done);
+			browser.visit(url + '/personal.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				done();
 			});
 		});
-		describe('Información económica', function() {
-			beforeEach(function(done) {
-				browser.visit(url + '/infoEconomica.html', function(err) {
-					assert.notOk(err);
-					browser.assert.success();
-					done();
-				});
-			});
-			it('Connection', function(done) {
-				checkConnection(done);
-			});
-			it('Menu', function() {
-				browser.assert.elements('.tipo2-selected', 1);
-				browser.assert.elements('.tipo1-selected', 1);
-				browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Personal', '/personal.html');
 
-				browser.assert.style('#menu_administración', 'display', 'block');
-				browser.assert.style('#menu_docencia', 'display', 'none');
-				browser.assert.style('#menu_gestion', 'display', 'none');
-			});
-			it('Layout', function() {
-				checkLayout('Información Económica');
-			});
-			it('Tablas', function(done) {
-				checkTables(done);
+			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Personal');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
+	});
+	describe('Información económica', function() {
+		before(function(done) {
+			browser.visit(url + '/infoEconomica.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				done();
 			});
 		});
-		describe('Perfil del Contratante', function() {
-			beforeEach(function(done) {
-				browser.visit(url + '/perfilContratante.html', function(err) {
-					assert.notOk(err);
-					browser.assert.success();
-					done();
-				});
-			});
-			it('Connection', function(done) {
-				checkConnection(done);
-			});
-			it('Menu', function() {
-				browser.assert.elements('.tipo2-selected', 1);
-				browser.assert.elements('.tipo1-selected', 1);
-				browser.assert.link('.tipo1-selected > a', 'Perfil del Contratante', '/perfilContratante.html');
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
 
-				browser.assert.style('#menu_administración', 'display', 'block');
-				browser.assert.style('#menu_docencia', 'display', 'none');
-				browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Información Económica');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
+	});
+	describe('Perfil del Contratante', function() {
+		before(function(done) {
+			browser.visit(url + '/perfilContratante.html', function(err) {
+				assert.notOk(err);
+				browser.assert.success();
+				done();
 			});
-			it('Layout', function(done) {
-				checkLayout('Perfil del Contratante');
-				var elem = browser.query('#pagina strong');
-				browser.assert.text(elem, 'Acceso al Perfil del Contratante');
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Perfil del Contratante', '/perfilContratante.html');
+
+			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function(done) {
+			checkLayout('Perfil del Contratante');
+			var elem = browser.query('#pagina strong');
+			browser.assert.text(elem, 'Acceso al Perfil del Contratante');
+
+			browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
+			checkLink("http://econtra.ugr.es/licitacion", done);
+		});
+	});
+	describe.skip('Oferta y Demanda Académica',function(){
+
 		
-				browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
-				checkLink("http://econtra.ugr.es/licitacion",done);
-			});
-		});
+		
+	});
+	describe.skip('Claustro',function(){
+		
+	});
+	describe.skip('Estudiantes',function(){
+		
+	});
+	describe.skip('Gobierno',function(){
+		
+	});
+	describe.skip('Rendimiento',function(){
+		
+	});
+	describe.skip('Normativa Legal',function(){
+		
+	});
+	describe.skip('Solicitud de Información',function(){
+		
 	});
 });

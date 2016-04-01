@@ -1,13 +1,18 @@
 var assert = require('chai').assert;
-var config = require('./config');
+var config = require('../config');
 var async = require('async');
 var Browser = require('zombie');
 var request = require('supertest');
 
-var port = process.env.PORT || require('../config/config').puerto;
+var runLocalServer=false;
+if(process.env.ENV==="prod") url="http://transparente.ugr.es/";
+else{
+var port = process.env.PORT || require('../../config/config').puerto;
 var ip = process.env.IP || "127.0.0.1";
 
 var url = "http://" + ip + ":" + port;
+runLocalServer=true;
+}
 
 var browser = new Browser();
 
@@ -37,7 +42,7 @@ function checkLink(link, done, status) {
 		.end(function(err, res) {
 			assert.notOk(err);
 			if (status) assert.strictEqual(res.status, status);
-			else assert.notEqual(res.status, 404);
+			else assert.notEqual(res.status, 404,"404 on "+link);
 			done();
 		});
 }
@@ -84,16 +89,20 @@ describe('Pruebas de Navegabilidad', function() {
 	this.timeout(50000);
 	var server;
 	var app;
-
+	console.log("Testing on:"+url);
+	if(runLocalServer) console.log("- Local Server -");
 	before(function(done) {
+		if(runLocalServer){
 		config.initServer(function(app2, server2) {
+			
 			server = server2;
 			app = app2;
-			done();
+			return done();
 		}, true);
+	} else return done();
 	});
 	after(function() {
-		server.close();
+	if(runLocalServer) server.close();
 	});
 	describe('Layout & Menu', function() {
 		before(function(done) {
@@ -355,7 +364,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe.only('Claustro',function(){
+	describe('Claustro',function(){
 		before(function(done) {
 			browser.visit(url + '/claustro.html', function(err) {
 				assert.notOk(err);
@@ -381,14 +390,83 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe.skip('Estudiantes',function(){
-		
+	describe('Estudiantes',function(){
+		before(function(done) {
+			browser.visit(url + '/estudiantes.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Estudiantes', '/estudiantes.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'block');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Estudiantes');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
-	describe.skip('Gobierno',function(){
-		
+	describe('Gobierno',function(){
+		before(function(done) {
+			browser.visit(url + '/gobierno.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Gobierno', '/gobierno.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'block');
+		});
+		it('Layout', function() {
+			checkLayout('Gobierno');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
-	describe.skip('Rendimiento',function(){
-		
+	describe('Rendimiento',function(){
+		before(function(done) {
+			browser.visit(url + '/rendimiento.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.elements('.tipo1-selected', 1);
+			browser.assert.link('.tipo1-selected > a', 'Rendimiento', '/rendimiento.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'block');
+		});
+		it('Layout', function() {
+			checkLayout('Rendimiento');
+		});
+		it('Tablas', function(done) {
+			checkTables(done);
+		});
 	});
 	describe.skip('Normativa Legal',function(){
 		

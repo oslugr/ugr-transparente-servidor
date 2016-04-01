@@ -75,6 +75,7 @@
 		"postinstall": "gulp install",
 		"restart": "ENV=prod pm2 restart app.js && pm2 save",
 		"test": "gulp test",
+		"test_navegabilidad": "mocha ./test/navegabilidad/navegabilidad.js",
 		"dev": "ENV=dev node app.js",
 		"rdev": "ENV=dev pm2 restart app.js",
 		"deploy": "fly transparente",

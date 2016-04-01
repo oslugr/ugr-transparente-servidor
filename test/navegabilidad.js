@@ -279,61 +279,56 @@ describe('Pruebas de Navegabilidad', function() {
 			it('Tablas', function(done) {
 				checkTables(done);
 			});
-			describe('Información económica', function() {
-				this.timeout(25000);
-				beforeEach(function(done) {
-					this.timeout(50000);
-					browser.visit(url + '/infoEconomica.html', function(err) {
-						assert.notOk(err);
-						browser.assert.success();
-						done();
-					});
-				});
-				it('Connection', function(done) {
-					checkConnection(done);
-				});
-				it('Menu', function() {
-					browser.assert.elements('.tipo2-selected', 1);
-					browser.assert.elements('.tipo1-selected', 1);
-					browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
-
-					browser.assert.style('#menu_administración', 'display', 'block');
-					browser.assert.style('#menu_docencia', 'display', 'none');
-					browser.assert.style('#menu_gestion', 'display', 'none');
-				});
-				it('Layout', function() {
-					checkLayout('Información Económica');
-				});
-				it('Tablas', function(done) {
-					checkTables(done);
+		});
+		describe('Información económica', function() {
+			beforeEach(function(done) {
+				browser.visit(url + '/infoEconomica.html', function(err) {
+					assert.notOk(err);
+					browser.assert.success();
+					done();
 				});
 			});
-			describe.skip('Perfil de Contratante',function(){
-				beforeEach(function(done) {
-					browser.visit(url + '/perfilContratante.html', function(err) {
-						assert.notOk(err);
-						browser.assert.success();
-						done();
-					});
-				});
-				it('Connection', function(done) {
-					checkConnection(done);
-				});
-				it('Menu', function() {
-					browser.assert.elements('.tipo2-selected', 1);
-					browser.assert.elements('.tipo1-selected', 1);
-					browser.assert.link('.tipo1-selected > a', 'Perfil de Contratante', '/perfilContratante.html');
+			it('Connection', function(done) {
+				checkConnection(done);
+			});
+			it('Menu', function() {
+				browser.assert.elements('.tipo2-selected', 1);
+				browser.assert.elements('.tipo1-selected', 1);
+				browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
 
-					browser.assert.style('#menu_administración', 'display', 'block');
-					browser.assert.style('#menu_docencia', 'display', 'none');
-					browser.assert.style('#menu_gestion', 'display', 'none');
+				browser.assert.style('#menu_administración', 'display', 'block');
+				browser.assert.style('#menu_docencia', 'display', 'none');
+				browser.assert.style('#menu_gestion', 'display', 'none');
+			});
+			it('Layout', function() {
+				checkLayout('Información Económica');
+			});
+			it('Tablas', function(done) {
+				checkTables(done);
+			});
+		});
+		describe('Perfil del Contratante', function() {
+			beforeEach(function(done) {
+				browser.visit(url + '/perfilContratante.html', function(err) {
+					assert.notOk(err);
+					browser.assert.success();
+					done();
 				});
-				it('Layout', function() {
-					checkLayout('Información Económica');
-				});
-				
-				
-				
+			});
+			it('Connection', function(done) {
+				checkConnection(done);
+			});
+			it('Menu', function() {
+				browser.assert.elements('.tipo2-selected', 1);
+				browser.assert.elements('.tipo1-selected', 1);
+				browser.assert.link('.tipo1-selected > a', 'Perfil del Contratante', '/perfilContratante.html');
+
+				browser.assert.style('#menu_administración', 'display', 'block');
+				browser.assert.style('#menu_docencia', 'display', 'none');
+				browser.assert.style('#menu_gestion', 'display', 'none');
+			});
+			it('Layout', function() {
+				checkLayout('Perfil del Contratante');
 			});
 		});
 	});

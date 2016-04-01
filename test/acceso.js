@@ -26,7 +26,7 @@ var async = require('async');
 var config = require('./config.js');
 
 // Pruebas de acceso a las páginas y recursos
-describe('Pruebas de acceso', function() {		
+describe('Pruebas de acceso', function() {
 	this.timeout(12000);
 	var server;
 	var app;

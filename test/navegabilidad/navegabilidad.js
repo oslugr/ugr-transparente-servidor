@@ -41,8 +41,13 @@ function checkLink(link, done, status) {
 	request(url2).get(dir)
 		.end(function(err, res) {
 			assert.notOk(err);
+			if(res.status>=300 && res.status < 400){
+				var loc=res.header.location;
+				assert.ok(loc);
+				return checkLink(loc,done,status);
+			}
 			if (status) assert.strictEqual(res.status, status);
-			else assert.notEqual(res.status, 404, "404 on " + link);
+			else assert.isBelow(res.status, 400, res.status+" on " + link);
 			done();
 		});
 }

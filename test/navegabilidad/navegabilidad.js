@@ -518,6 +518,8 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina a', 'Acceso al Formulario', 'https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html');
 			//https without certificate!
 			//checkLink('https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html', done);
+			browser.assert.link('#pagina a','Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.','http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
+			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf',done);
 		});
 	});
 	describe.skip('Buscador', function() {

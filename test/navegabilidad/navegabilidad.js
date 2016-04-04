@@ -532,7 +532,6 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Connection', function() {
 			var title = "UGR Transparente | Universidad de Granada";
-			browser.assert.success();
 			browser.assert.text('title', title);
 			browser.assert.status(404);
 		});

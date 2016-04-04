@@ -1,3 +1,4 @@
+"use strict";
 /*
 UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías

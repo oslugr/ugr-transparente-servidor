@@ -1,3 +1,4 @@
+"use strict";
 var express = require('express');
 
 // Configuración de los tests
@@ -51,7 +52,7 @@ module.exports = {
 		serverConfig(app);
 		routes(app);
 
-		server = app.listen(app.get('port'), app.get('ip'), function() {
+		var server = app.listen(app.get('port'), app.get('ip'), function() {
 			done(app, server);
 		});
 	}

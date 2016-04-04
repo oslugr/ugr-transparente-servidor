@@ -69,7 +69,7 @@ describe('Pruebas de acceso', function() {
 	});
 
 	// Comprueba un acceso a página inexistente (404)
-	it("Error", function(done) {
+	it("404 page", function(done) {
 		request(app)
 			.get("/foo")
 			.expect(404)

@@ -69,13 +69,11 @@ function checkTables(done) {
 		}, cb);
 	}, done);
 }
-
-function checkConnection(done, title) {
+function checkConnection(title) {
 	title = title || "UGR Transparente | Universidad de Granada";
 	browser.assert.success();
 	browser.assert.text('title', title);
 	browser.assert.status(200);
-	done();
 }
 
 function checkLayout(title) {
@@ -86,7 +84,7 @@ function checkLayout(title) {
 }
 
 describe('Pruebas de Navegabilidad', function() {
-	this.timeout(50000);
+	this.timeout(80000);
 	var server;
 	var app;
 	console.log("Testing on " + url);
@@ -169,8 +167,8 @@ describe('Pruebas de Navegabilidad', function() {
 			});
 		});
 
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -238,8 +236,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -265,8 +263,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -291,8 +289,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -317,8 +315,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -345,8 +343,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -371,8 +369,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -397,8 +395,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -423,8 +421,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -449,8 +447,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -475,8 +473,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -500,8 +498,8 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Connection', function(done) {
-			checkConnection(done);
+		it('Connection', function() {
+			checkConnection();
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 1);
@@ -525,5 +523,27 @@ describe('Pruebas de Navegabilidad', function() {
 	describe.skip('Buscador', function() {
 
 
+	});
+	describe('404 page',function(){
+		before(function(done) {
+			browser.visit(url + '/foo', function(err) {
+				done();
+			});
+		});
+		it('Connection', function() {
+			var title = "UGR Transparente | Universidad de Granada";
+			browser.assert.success();
+			browser.assert.text('title', title);
+			browser.assert.status(404);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 0);
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Página no encontrada (Error 404)');
+		});
 	});
 });

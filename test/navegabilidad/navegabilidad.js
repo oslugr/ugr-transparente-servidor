@@ -4,14 +4,14 @@ var async = require('async');
 var Browser = require('zombie');
 var request = require('supertest');
 
-var runLocalServer=false;
-if(process.env.ENV==="prod") url="http://transparente.ugr.es/";
-else{
-var port = process.env.PORT || require('../../config/config').puerto;
-var ip = process.env.IP || "127.0.0.1";
+var runLocalServer = false;
+if (process.env.ENV === "prod") url = "http://transparente.ugr.es/";
+else {
+	var port = process.env.PORT || require('../../config/config').puerto;
+	var ip = process.env.IP || "127.0.0.1";
 
-var url = "http://" + ip + ":" + port;
-runLocalServer=true;
+	var url = "http://" + ip + ":" + port;
+	runLocalServer = true;
 }
 
 var browser = new Browser();
@@ -42,7 +42,7 @@ function checkLink(link, done, status) {
 		.end(function(err, res) {
 			assert.notOk(err);
 			if (status) assert.strictEqual(res.status, status);
-			else assert.notEqual(res.status, 404,"404 on "+link);
+			else assert.notEqual(res.status, 404, "404 on " + link);
 			done();
 		});
 }
@@ -89,20 +89,20 @@ describe('Pruebas de Navegabilidad', function() {
 	this.timeout(50000);
 	var server;
 	var app;
-	console.log("Testing on:"+url);
-	if(runLocalServer) console.log("- Local Server -");
+	console.log("Testing on " + url);
+	if (runLocalServer) console.log("- Local Server -");
 	before(function(done) {
-		if(runLocalServer){
-		config.initServer(function(app2, server2) {
-			
-			server = server2;
-			app = app2;
-			return done();
-		}, true);
-	} else return done();
+		if (runLocalServer) {
+			config.initServer(function(app2, server2) {
+
+				server = server2;
+				app = app2;
+				return done();
+			}, true);
+		} else return done();
 	});
 	after(function() {
-	if(runLocalServer) server.close();
+		if (runLocalServer) server.close();
 	});
 	describe('Layout & Menu', function() {
 		before(function(done) {
@@ -338,7 +338,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLink("http://econtra.ugr.es/licitacion", done);
 		});
 	});
-	describe('Oferta y Demanda Académica',function(){
+	describe('Oferta y Demanda Académica', function() {
 		before(function(done) {
 			browser.visit(url + '/ofertaDemanda.html', function(err) {
 				assert.notOk(err);
@@ -364,7 +364,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe('Claustro',function(){
+	describe('Claustro', function() {
 		before(function(done) {
 			browser.visit(url + '/claustro.html', function(err) {
 				assert.notOk(err);
@@ -390,7 +390,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe('Estudiantes',function(){
+	describe('Estudiantes', function() {
 		before(function(done) {
 			browser.visit(url + '/estudiantes.html', function(err) {
 				assert.notOk(err);
@@ -416,7 +416,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe('Gobierno',function(){
+	describe('Gobierno', function() {
 		before(function(done) {
 			browser.visit(url + '/gobierno.html', function(err) {
 				assert.notOk(err);
@@ -442,7 +442,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe('Rendimiento',function(){
+	describe('Rendimiento', function() {
 		before(function(done) {
 			browser.visit(url + '/rendimiento.html', function(err) {
 				assert.notOk(err);
@@ -468,7 +468,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe('Normativa Legal',function(){
+	describe('Normativa Legal', function() {
 		before(function(done) {
 			browser.visit(url + '/normativaLegal.html', function(err) {
 				assert.notOk(err);
@@ -493,7 +493,35 @@ describe('Pruebas de Navegabilidad', function() {
 			checkTables(done);
 		});
 	});
-	describe.skip('Solicitud de Información',function(){
-		
+	describe('Solicitud de Información', function() {
+		before(function(done) {
+			browser.visit(url + '/solicitudInfo.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function(done) {
+			checkConnection(done);
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 1);
+			browser.assert.link('.tipo2-selected > a', 'Solicitud de Información', '/solicitudInfo.html');
+
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it('Layout', function() {
+			checkLayout('Solicitud de Información');
+		});
+		it('Formulario', function(done) {
+			browser.assert.link('#pagina a', 'Acceso al Formulario', 'https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html');
+			//https without certificate!
+			//checkLink('https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html', done);
+		});
+	});
+	describe.skip('Buscador', function() {
+
+
 	});
 });

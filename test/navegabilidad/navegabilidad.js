@@ -51,6 +51,9 @@ function checkLink(link, done, status) {
 			done();
 		});
 }
+function checkBreadcrumb(text){
+		browser.assert.text('#rastro-idiomas ul#rastro_breadcrumb li > span.first',text);
+}
 
 function checkAllLinks(selector, done, status) {
 	var links = browser.queryAll(selector);
@@ -244,8 +247,8 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.attribute(elem.parentNode, 'href', '/normativaLegal.html');
 			browser.assert.hasClass(elem.parentNode, 'enlaces_index');
 		});
-		it.skip('Dirección superior',function(){
-			
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Inicio");
 		});
 	});
 	describe('Información Institucional', function() {
@@ -273,10 +276,12 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('#contenido li a', 10);
 			checkAllLinks('#contenido li a', done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Información Institucional");
+		});
 	});
 	describe('Personal', function() {
 		before(function(done) {
-
 			browser.visit(url + '/personal.html', function(err) {
 				assert.notOk(err);
 				done();
@@ -300,8 +305,11 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Administración / Personal");
+		});
 	});
-	describe('Información económica', function() {
+	describe('Información Económica', function() {
 		before(function(done) {
 			browser.visit(url + '/infoEconomica.html', function(err) {
 				assert.notOk(err);
@@ -325,6 +333,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Administración / Información Económica");
 		});
 	});
 	describe('Perfil del Contratante', function() {
@@ -354,6 +365,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
 			checkLink("http://econtra.ugr.es/licitacion", done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Administración / Perfil del Contratante");
+		});
 	});
 	describe('Oferta y Demanda Académica', function() {
 		before(function(done) {
@@ -379,6 +393,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Docencia / Oferta y Demanda Académica");
 		});
 	});
 	describe('Claustro', function() {
@@ -406,6 +423,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Docencia / Claustro");
+		});
 	});
 	describe('Estudiantes', function() {
 		before(function(done) {
@@ -431,6 +451,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Docencia / Estudiantes");
 		});
 	});
 	describe('Gobierno', function() {
@@ -458,6 +481,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Gestión e Investigación / Gobierno");
+		});
 	});
 	describe('Rendimiento', function() {
 		before(function(done) {
@@ -484,6 +510,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Gestión e Investigación / Rendimiento");
+		});
 	});
 	describe('Normativa Legal', function() {
 		before(function(done) {
@@ -508,6 +537,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Normativa Legal");
 		});
 	});
 	describe('Solicitud de Información', function() {
@@ -538,6 +570,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina a', 'Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.', 'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
 			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf', done);
 		});
+		it('Menú de Rastro',function(){
+			checkBreadcrumb("Solicitud de Información");
+		});
 	});
 	describe.skip('Buscador', function() {
 		before(function(done) {
@@ -551,6 +586,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it.skip('Layout', function() {
 
+		});
+		it.skip('Menú de Rastro',function(){
+			checkBreadcrumb("Solicitud de Información");
 		});
 	});
 	describe('404 page', function() {

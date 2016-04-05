@@ -41,13 +41,13 @@ function checkLink(link, done, status) {
 	request(url2).get(dir)
 		.end(function(err, res) {
 			assert.notOk(err);
-			if(res.status>=300 && res.status < 400){
-				var loc=res.header.location;
+			if (res.status >= 300 && res.status < 400) {
+				var loc = res.header.location;
 				assert.ok(loc);
-				return checkLink(loc,done,status);
+				return checkLink(loc, done, status);
 			}
 			if (status) assert.strictEqual(res.status, status);
-			else assert.isBelow(res.status, 400, res.status+" on " + link);
+			else assert.isBelow(res.status, 400, res.status + " on " + link);
 			done();
 		});
 }
@@ -74,6 +74,7 @@ function checkTables(done) {
 		}, cb);
 	}, done);
 }
+
 function checkConnection(title) {
 	title = title || "UGR Transparente | Universidad de Granada";
 	browser.assert.success();
@@ -521,15 +522,15 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina a', 'Acceso al Formulario', 'https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html');
 			//https without certificate!
 			//checkLink('https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html', done);
-			browser.assert.link('#pagina a','Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.','http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
-			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf',done);
+			browser.assert.link('#pagina a', 'Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.', 'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
+			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf', done);
 		});
 	});
 	describe.skip('Buscador', function() {
 
 
 	});
-	describe('404 page',function(){
+	describe('404 page', function() {
 		before(function(done) {
 			browser.visit(url + '/foo', function(err) {
 				done();

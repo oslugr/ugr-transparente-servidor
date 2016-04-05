@@ -51,8 +51,9 @@ function checkLink(link, done, status) {
 			done();
 		});
 }
-function checkBreadcrumb(text){
-		browser.assert.text('#rastro-idiomas ul#rastro_breadcrumb li > span.first',text);
+
+function checkBreadcrumb(text) {
+	browser.assert.text('#rastro-idiomas ul#rastro_breadcrumb li > span.first', text);
 }
 
 function checkAllLinks(selector, done, status) {
@@ -101,7 +102,6 @@ describe('Pruebas de Navegabilidad', function() {
 	before(function(done) {
 		if (runLocalServer) {
 			config.initServer(function(app2, server2) {
-
 				server = server2;
 				app = app2;
 				return done();
@@ -166,15 +166,43 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#cabecera #enlace_stack', 'UGR Transparente', '/');
 			browser.assert.link('#cabecera #enlace_eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
 			browser.assert.element('#cabecera #buscador');
-			
+
 			checkLink('http://www.ugr.es/', function() {
 				checkLink('http://www.ugr.es/pages/administracion', function() {
 					done();
 				});
 			});
 		});
-		it.skip('Footer', function() {
-			throw (new Error("Not Implemented"));
+		it('Footer', function(done) {
+			var elem;
+			browser.assert.element('#pie');
+
+			elem = browser.query('#pie > #WAI');
+
+			browser.assert.attribute(elem, 'href', 'http://www.w3.org/WAI/WCAG2AA-Conformance');
+			browser.assert.element('#pie > #WAI > img#wcag2aa');
+			browser.assert.link('#pie > a', "Mapa del sitio", "mapaWeb.html");
+			browser.assert.link('#pie > a', "Este servidor es software libre", "https://github.com/oslugr/ugr-transparente-servidor");
+			browser.assert.link('#pie > a', "Liberado bajo GPL v3.0", "http://www.gnu.org/licenses/gpl-3.0.html");
+			browser.assert.link('#pie > a', "Contacto", "http://www.ugr.es/pages/contacto");
+			browser.assert.link('#pie > a', "Ir a sugerencias", "https://github.com/oslugr/ugr-transparente-servidor/issues");
+
+			browser.assert.element('#pie > p');
+			browser.assert.link('#pie > p a', "© 2016", 'http://www.ugr.es/pages/creditos');
+			browser.assert.link('#pie > p a', "Universidad de Granada", 'http://www.ugr.es');
+			checkLink('http://www.ugr.es/pages/creditos', function() {
+				checkLink('http://www.ugr.es/', function() {
+					checkLink('http://www.w3.org/WAI/WCAG2AA-Conformance', function() {
+						checkLink('https://github.com/oslugr/ugr-transparente-servidor', function() {
+							checkLink('http://www.gnu.org/licenses/gpl-3.0.html', function() {
+								checkLink('http://www.ugr.es/pages/contacto', function() {
+									checkLink('https://github.com/oslugr/ugr-transparente-servidor/issues', done);
+								});
+							});
+						});
+					});
+				});
+			});
 		});
 	});
 
@@ -247,7 +275,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.attribute(elem.parentNode, 'href', '/normativaLegal.html');
 			browser.assert.hasClass(elem.parentNode, 'enlaces_index');
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Inicio");
 		});
 	});
@@ -276,7 +304,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('#contenido li a', 10);
 			checkAllLinks('#contenido li a', done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Información Institucional");
 		});
 	});
@@ -305,7 +333,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Administración / Personal");
 		});
 	});
@@ -334,7 +362,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Administración / Información Económica");
 		});
 	});
@@ -365,7 +393,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
 			checkLink("http://econtra.ugr.es/licitacion", done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Administración / Perfil del Contratante");
 		});
 	});
@@ -394,7 +422,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Docencia / Oferta y Demanda Académica");
 		});
 	});
@@ -423,7 +451,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Docencia / Claustro");
 		});
 	});
@@ -452,7 +480,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Docencia / Estudiantes");
 		});
 	});
@@ -481,7 +509,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Gestión e Investigación / Gobierno");
 		});
 	});
@@ -510,7 +538,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Gestión e Investigación / Rendimiento");
 		});
 	});
@@ -538,7 +566,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Normativa Legal");
 		});
 	});
@@ -570,7 +598,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina a', 'Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.', 'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
 			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf', done);
 		});
-		it('Menú de Rastro',function(){
+		it('Menú de Rastro', function() {
 			checkBreadcrumb("Solicitud de Información");
 		});
 	});
@@ -587,7 +615,7 @@ describe('Pruebas de Navegabilidad', function() {
 		it.skip('Layout', function() {
 
 		});
-		it.skip('Menú de Rastro',function(){
+		it.skip('Menú de Rastro', function() {
 			checkBreadcrumb("Solicitud de Información");
 		});
 	});

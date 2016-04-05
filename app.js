@@ -1,3 +1,4 @@
+"use strict";
 /*
 UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
@@ -32,7 +33,7 @@ serverConfig(app);
 routes(app);
 
 // Creación del servidor
-server = app.listen(app.get('port'), app.get('ip'), function() {
+var server = app.listen(app.get('port'), app.get('ip'), function() {
 	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 

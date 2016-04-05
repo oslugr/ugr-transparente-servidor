@@ -75,13 +75,14 @@
 		"postinstall": "gulp install",
 		"restart": "ENV=prod pm2 restart app.js && pm2 save",
 		"test": "gulp test",
+		"zombie_test": "mocha ./test/navegabilidad/navegabilidad.js",
 		"dev": "ENV=dev node app.js",
 		"rdev": "ENV=dev pm2 restart app.js",
 		"deploy": "fly transparente",
 		"check": "npm-check",
 		"coveralls": "cat ./coverage/lcov.info | coveralls",
 		"save": "pm2 save",
-		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js",
+		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js public/script/*.js",
 		"sass": "node-sass ./public/styles/*.scss -o ./public/styles/css",
 		"jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js"
 	}

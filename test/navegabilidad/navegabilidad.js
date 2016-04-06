@@ -34,6 +34,7 @@ function checkLink(link, done, status) {
 		var arr = link.split('/');
 		url2 = arr[0] + "//" + arr[2];
 		dir = link.split(arr[2])[1];
+		if (dir === "") dir = "/";
 	}
 	assert.ok(url2);
 	assert.ok(dir);
@@ -157,8 +158,22 @@ describe('Pruebas de Navegabilidad', function() {
 				});
 			});
 		});
-		it.skip('Banners', function() {
-			throw (new Error("Not Implemented"));
+		it('Banners', function(done) {
+			browser.assert.element("#banners");
+			browser.assert.element('#banners ul');
+			browser.assert.elements('#banners ul li', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a>p', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a>strong', {
+				atLeast: 4
+			});
+			checkAllLinks("#banners ul a", done);
 		});
 		it('Header', function(done) {
 			browser.assert.element('#cabecera');
@@ -514,6 +529,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 	});
 	describe('Rendimiento', function() {
+		this.timeout(100000);
 		before(function(done) {
 			browser.visit(url + '/rendimiento.html', function(err) {
 				assert.notOk(err);
@@ -602,7 +618,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Solicitud de Información");
 		});
 	});
-	describe.skip('Buscador', function() {
+	describe('Buscador', function() {
 		before(function(done) {
 			browser.visit(url + '/', function(err) {
 				assert.notOk(err);

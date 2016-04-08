@@ -620,19 +620,35 @@ describe('Pruebas de Navegabilidad', function() {
 	});
 	describe('Buscador', function() {
 		before(function(done) {
-			browser.visit(url + '/', function(err) {
+			browser.visit(url + '/buscador.html', function(err) {
 				assert.notOk(err);
 				done();
 			});
 		});
-		it.skip('Búsqueda', function() {
-
+		it('Connection', function() {
+			checkConnection();
 		});
-		it.skip('Layout', function() {
-
+		it('Layout', function() {
+			browser.assert.element('#sq');
+			browser.assert.element('#submit_buscar');
+			browser.assert.element('#contenido p');
+			browser.assert.element('#buscador');
+			browser.assert.text('#buscador>h2',"Buscador del portal");
 		});
-		it.skip('Menú de Rastro', function() {
-			checkBreadcrumb("Solicitud de Información");
+		it('Búsqueda', function(done) {
+			browser.fill('#sq','estudiantes').pressButton('#submit_buscar', function(res){
+				setTimeout(function(){
+						assert.notOk(err);
+						checkConnection();
+						browser.assert.elements("#contenido li>a.seccion",{atLeast:10});
+						done();
+				}, 5*1000);
+				done();
+			});
+		});
+
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Buscador");
 		});
 	});
 	describe('404 page', function() {

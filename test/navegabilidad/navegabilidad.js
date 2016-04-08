@@ -633,16 +633,18 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#submit_buscar');
 			browser.assert.element('#contenido p');
 			browser.assert.element('#buscador');
-			browser.assert.text('#buscador>h2',"Buscador del portal");
+			browser.assert.text('#buscador>h2', "Buscador del portal");
 		});
 		it('Búsqueda', function(done) {
-			browser.fill('#sq','estudiantes').pressButton('#submit_buscar', function(res){
-				setTimeout(function(){
-						assert.notOk(err);
-						checkConnection();
-						browser.assert.elements("#contenido li>a.seccion",{atLeast:10});
-						done();
-				}, 5*1000);
+			browser.fill('#sq', 'estudiantes').pressButton('#submit_buscar', function(res) {
+				setTimeout(function() {
+					assert.notOk(err);
+					checkConnection();
+					browser.assert.elements("#contenido li>a.seccion", {
+						atLeast: 10
+					});
+					done();
+				}, 5 * 1000);
 				done();
 			});
 		});

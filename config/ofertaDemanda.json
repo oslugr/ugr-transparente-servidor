@@ -55,12 +55,6 @@
 			"nombre": "Oferta y demanda de plazas de grados 2015 - 2016",
 			"url": "2015_2016_oferta_demanda_grados.pdf"
 		}, {
-			"nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
-			"url": "2014_2015_oferta_demanda_grados.pdf"
-		}, {
-			"nombre": "Procedencia de los alumnos 2014 - 2015",
-			"url": "2014_2015_procedencia_alumnos.pdf"
-		}, {
 			"nombre": "Procedimientos de acceso curso 2015 - 2016",
 			"url": "2015_2016_procedimiento_acceso.pdf"
 		}, {
@@ -72,6 +66,12 @@
 		}, {
 			"nombre": "Evolución de la oferta de docencia y estructura de grupos 2015 - 2016",
 			"url": "2015_2016_evolucion_oferta_docencia.pdf"
+		}, {
+			"nombre": "Oferta y demanda de plazas de grados 2014 - 2015",
+			"url": "2014_2015_oferta_demanda_grados.pdf"
+		}, {
+			"nombre": "Procedencia de los alumnos 2014 - 2015",
+			"url": "2014_2015_procedencia_alumnos.pdf"
 		}]
 	}, {
 		"tipo": 1,

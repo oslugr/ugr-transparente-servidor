@@ -34,6 +34,7 @@ function checkLink(link, done, status) {
 		var arr = link.split('/');
 		url2 = arr[0] + "//" + arr[2];
 		dir = link.split(arr[2])[1];
+		if (dir === "") dir = "/";
 	}
 	assert.ok(url2);
 	assert.ok(dir);
@@ -50,6 +51,10 @@ function checkLink(link, done, status) {
 			else assert.isBelow(res.status, 400, res.status + " on " + link);
 			done();
 		});
+}
+
+function checkBreadcrumb(text) {
+	browser.assert.text('#rastro-idiomas ul#rastro_breadcrumb li > span.first', text);
 }
 
 function checkAllLinks(selector, done, status) {
@@ -98,7 +103,6 @@ describe('Pruebas de Navegabilidad', function() {
 	before(function(done) {
 		if (runLocalServer) {
 			config.initServer(function(app2, server2) {
-
 				server = server2;
 				app = app2;
 				return done();
@@ -154,14 +158,66 @@ describe('Pruebas de Navegabilidad', function() {
 				});
 			});
 		});
-		it.skip('Banners', function() {
-			throw (new Error("Not Implemented"));
+		it('Banners', function(done) {
+			browser.assert.element("#banners");
+			browser.assert.element('#banners ul');
+			browser.assert.elements('#banners ul li', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a>p', {
+				atLeast: 4
+			});
+			browser.assert.elements('#banners li a>strong', {
+				atLeast: 4
+			});
+			checkAllLinks("#banners ul a", done);
 		});
-		it.skip('Header', function() {
-			throw (new Error("Not Implemented"));
+		it('Header', function(done) {
+			browser.assert.element('#cabecera');
+			browser.assert.link('#cabecera #enlace_ugr', 'Universidad de Granada', 'http://www.ugr.es/');
+			browser.assert.link('#cabecera #enlace_stack', 'UGR Transparente', '/');
+			browser.assert.link('#cabecera #enlace_eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
+			browser.assert.element('#cabecera #buscador');
+
+			checkLink('http://www.ugr.es/', function() {
+				checkLink('http://www.ugr.es/pages/administracion', function() {
+					done();
+				});
+			});
 		});
-		it.skip('Footer', function() {
-			throw (new Error("Not Implemented"));
+		it('Footer', function(done) {
+			var elem;
+			browser.assert.element('#pie');
+
+			elem = browser.query('#pie > #WAI');
+
+			browser.assert.attribute(elem, 'href', 'http://www.w3.org/WAI/WCAG2AA-Conformance');
+			browser.assert.element('#pie > #WAI > img#wcag2aa');
+			browser.assert.link('#pie > a', "Mapa del sitio", "mapaWeb.html");
+			browser.assert.link('#pie > a', "Este servidor es software libre", "https://github.com/oslugr/ugr-transparente-servidor");
+			browser.assert.link('#pie > a', "Liberado bajo GPL v3.0", "http://www.gnu.org/licenses/gpl-3.0.html");
+			browser.assert.link('#pie > a', "Contacto", "http://www.ugr.es/pages/contacto");
+			browser.assert.link('#pie > a', "Ir a sugerencias", "https://github.com/oslugr/ugr-transparente-servidor/issues");
+
+			browser.assert.element('#pie > p');
+			browser.assert.link('#pie > p a', "© 2016", 'http://www.ugr.es/pages/creditos');
+			browser.assert.link('#pie > p a', "Universidad de Granada", 'http://www.ugr.es');
+			checkLink('http://www.ugr.es/pages/creditos', function() {
+				checkLink('http://www.ugr.es/', function() {
+					checkLink('http://www.w3.org/WAI/WCAG2AA-Conformance', function() {
+						checkLink('https://github.com/oslugr/ugr-transparente-servidor', function() {
+							checkLink('http://www.gnu.org/licenses/gpl-3.0.html', function() {
+								checkLink('http://www.ugr.es/pages/contacto', function() {
+									checkLink('https://github.com/oslugr/ugr-transparente-servidor/issues', done);
+								});
+							});
+						});
+					});
+				});
+			});
 		});
 	});
 
@@ -234,6 +290,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.attribute(elem.parentNode, 'href', '/normativaLegal.html');
 			browser.assert.hasClass(elem.parentNode, 'enlaces_index');
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Inicio");
+		});
 	});
 	describe('Información Institucional', function() {
 		before(function(done) {
@@ -260,10 +319,12 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('#contenido li a', 10);
 			checkAllLinks('#contenido li a', done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Información Institucional");
+		});
 	});
 	describe('Personal', function() {
 		before(function(done) {
-
 			browser.visit(url + '/personal.html', function(err) {
 				assert.notOk(err);
 				done();
@@ -287,8 +348,11 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Administración / Personal");
+		});
 	});
-	describe('Información económica', function() {
+	describe('Información Económica', function() {
 		before(function(done) {
 			browser.visit(url + '/infoEconomica.html', function(err) {
 				assert.notOk(err);
@@ -312,6 +376,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Administración / Información Económica");
 		});
 	});
 	describe('Perfil del Contratante', function() {
@@ -341,6 +408,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina p > a', 'perfil del contratante', 'http://econtra.ugr.es/licitacion');
 			checkLink("http://econtra.ugr.es/licitacion", done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Administración / Perfil del Contratante");
+		});
 	});
 	describe('Oferta y Demanda Académica', function() {
 		before(function(done) {
@@ -366,6 +436,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Docencia / Oferta y Demanda Académica");
 		});
 	});
 	describe('Claustro', function() {
@@ -393,6 +466,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Docencia / Claustro");
+		});
 	});
 	describe('Estudiantes', function() {
 		before(function(done) {
@@ -418,6 +494,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Docencia / Estudiantes");
 		});
 	});
 	describe('Gobierno', function() {
@@ -445,8 +524,12 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Tablas', function(done) {
 			checkTables(done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Gestión e Investigación / Gobierno");
+		});
 	});
 	describe('Rendimiento', function() {
+		this.timeout(100000);
 		before(function(done) {
 			browser.visit(url + '/rendimiento.html', function(err) {
 				assert.notOk(err);
@@ -470,6 +553,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Gestión e Investigación / Rendimiento");
 		});
 	});
 	describe('Normativa Legal', function() {
@@ -495,6 +581,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Tablas', function(done) {
 			checkTables(done);
+		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Normativa Legal");
 		});
 	});
 	describe('Solicitud de Información', function() {
@@ -525,10 +614,44 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#pagina a', 'Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.', 'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf');
 			checkLink('http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf', done);
 		});
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Solicitud de Información");
+		});
 	});
-	describe.skip('Buscador', function() {
+	describe('Buscador', function() {
+		before(function(done) {
+			browser.visit(url + '/buscador.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function() {
+			checkConnection();
+		});
+		it('Layout', function() {
+			browser.assert.element('#sq');
+			browser.assert.element('#submit_buscar');
+			browser.assert.element('#contenido p');
+			browser.assert.element('#buscador');
+			browser.assert.text('#buscador>h2', "Buscador del portal");
+		});
+		it('Búsqueda', function(done) {
+			browser.fill('#sq', 'estudiantes').pressButton('#submit_buscar', function(res) {
+				setTimeout(function() {
+					assert.notOk(err);
+					checkConnection();
+					browser.assert.elements("#contenido li>a.seccion", {
+						atLeast: 10
+					});
+					done();
+				}, 5 * 1000);
+				done();
+			});
+		});
 
-
+		it('Menú de Rastro', function() {
+			checkBreadcrumb("Buscador");
+		});
 	});
 	describe('404 page', function() {
 		before(function(done) {

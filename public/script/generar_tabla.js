@@ -57,55 +57,58 @@ tabla(document).ready(function() {
         tabla('#titulo_tabla').html(nombre);
 
         drawTable(tabla(this).attr("rel")); //use tabla.csv.toArrays(data)  to parse it as array
-        
-    /*    tabla.ajaxSetup({
-            'beforeSend': function(xhr) {
-                xhr.overrideMimeType('text/html; charset=ISO-8859-1');
-            }
-        });
-        var url=tabla(this).attr("rel");
-        tabla.ajax({
-            type: "GET",
-            url: tabla(this).attr("rel"),
-            dataType: "text",
-            success: function(data) {
-                drawTable(data,url); //use tabla.csv.toArrays(data)  to parse it as array
-            }
-        });*/
 
     });
 
     // If close button is clicked
     tabla('#close').click(function(e) {
         tabla('#mask, .window').hide();
-        tabla('#mask, .window').HTML("");
+        //tabla('#mask, .window').HTML("");
     });
 
     // If mask is clicked
     tabla('#mask').click(function() {
         tabla(this).hide();
         tabla('.window').hide();
-        tabla(this).HTML("");
-        tabla('.window').HTML("");
+    //    tabla(this).HTML("");
+    //    tabla('.window').HTML("");
     });
 
 });
 
 function drawTable(url) {
     $('#tabla').empty();
-    d3.text(url,"text/plain; charset=ISO-8859-1", function(data) {
-        console.log(data);
-                    var parsedCSV = d3.csv.parseRows(data);
-                    var container = d3.select("#tabla")
-                        .append("table")
+    d3.text(url, "text/plain; charset=ISO-8859-1", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+        var columns = parsedCSV.shift();
 
-                        .selectAll("tr")
-                            .data(parsedCSV).enter()
-                            .append("tr")
+        var table = d3.select("#tabla")
+            .append("table"),
+            thead = table.append("thead"),
+            tbody = table.append("tbody");
 
-                        .selectAll("td")
-                            .data(function(d) { return d; }).enter()
-                            .append("td")
-                            .text(function(d) { return d; });
-                });
+        thead.append('tr')
+            .selectAll('th')
+            .data(columns)
+            .enter()
+            .append('th')
+            .text(function(d) {
+                return d;
+            });
+
+        var rows = tbody.selectAll('tr')
+            .data(parsedCSV)
+            .enter()
+            .append('tr');
+
+        var cells = rows.selectAll('td')
+            .data(function(d) {
+                return d;
+            }).enter()
+            .append("td")
+            .text(function(d) {
+                return d;
+            });
+
+    });
 }

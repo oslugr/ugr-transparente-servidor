@@ -636,16 +636,15 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.text('#buscador>h2', "Buscador del portal");
 		});
 		it('Búsqueda', function(done) {
-			browser.fill('#sq', 'estudiantes').pressButton('#submit_buscar', function(res) {
+			browser.fill('#sq', 'personal').pressButton('#submit_buscar', function(err) {
+				assert.notOk(err);
 				setTimeout(function() {
-					assert.notOk(err);
 					checkConnection();
 					browser.assert.elements("#contenido li>a.seccion", {
 						atLeast: 10
 					});
 					done();
 				}, 5 * 1000);
-				done();
 			});
 		});
 

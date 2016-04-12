@@ -23,8 +23,8 @@
 			"nombre": "Manuales e Instrucciones",
 			"url": "http://ofcontrolinterno.ugr.es/pages/manuales_instrucciones"
 		}, {
-			"nombre": "Programación de la Oficina de Control Interno 2015",
-			"url": "http://secretariageneral.ugr.es/pages/normativa/ugr/nre923"
+			"nombre": "Programación de la Oficina de Control Interno 2016",
+			"url": "http://secretariageneral.ugr.es/bougr/pages/bougr102/_doc/nre1022%21"
 		}, {
 			"nombre": "Plan de Mecenazgo",
 			"url": "http://secretariageneral.ugr.es/bougr/pages/bougr75/_doc/nre753"
@@ -91,7 +91,7 @@
 			"nombre": "Normativa reguladora de la figura de Profesor Emérito en la Universidad de Granada, aprobada en Consejo de Gobierno de 18 de diciembre de 2012",
 			"url": "http://secretariageneral.ugr.es/bougr/pages/bougr67/ncg673"
 		}, {
-			"nombre": "Normativa reguladora de los concursos de profesores contratados doctores con plaza vinculada, aprobada en Consejo de Gobierno de 30 de octubre de 2015",
+			"nombre": "Normativa reguladora de los concursos de profesores contratados doctores con plaza vinculada",
 			"url": "http://secretariageneral.ugr.es/bougr/pages/bougr99/_doc/ncg992"
 		}, {
 			"nombre": "Otras normativas relacionadas con el Personal Docente e Investigador",
@@ -137,6 +137,9 @@
 		}, {
 			"nombre": "Plan Propio de Becas",
 			"url": "http://ve.ugr.es/pages/becas/propias"
+		}, {
+			"nombre": "Plan Propio de Cooperación al Desarrollo",
+			"url": "http://cicode.ugr.es/pages/plan-propio-cooperacion/plan-propio-de-cooperacion"
 		}]
 	}, {
 		"tipo": 2,

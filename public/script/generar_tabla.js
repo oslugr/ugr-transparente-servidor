@@ -57,11 +57,6 @@ tabla(document).ready(function() {
         tabla('#titulo_tabla').html(nombre);
 
         drawTable(tabla(this).attr("rel")); //use tabla.csv.toArrays(data)  to parse it as array
-        tabla('#tabla').dynatable({
-            table: {
-                defaultColumnIdStyle: 'trimDash'
-                }
-            });
     });
 
     // If close button is clicked
@@ -79,11 +74,27 @@ tabla(document).ready(function() {
     });
 });
 
+google.load('visualization', '1', {
+	packages: ['table']
+});
+
 function drawTable(url) {
     $('#tabla').empty();
     d3.text(url, "text/plain; charset=ISO-8859-1", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-        var columns = parsedCSV.shift();
+        var content = d3.csv.parseRows(data);
+        var columns = content.shift();
+        
+        var tableData = new google.visualization.DataTable();
+        
+        columns.map(function(item){
+            tableData.addColumn('string', item);
+        });
+        tableData.addRows(content);
+        //Using only D3js
+        /*d3.select('#tabla')
+            .data(columns)
+            .enter()
+            .tableData.addColumnn()
 
         var table = d3.select("#tabla")
             .append("table"),
@@ -100,7 +111,7 @@ function drawTable(url) {
             });
 
         var rows = tbody.selectAll('tr')
-            .data(parsedCSV)
+            .data(content)
             .enter()
             .append('tr');
 
@@ -111,6 +122,104 @@ function drawTable(url) {
             .append("td")
             .text(function(d) {
                 return d;
-            });
+            });*/
+            
+            var table = new google.visualization.Table(document.getElementById('tabla'));
+            table.draw(tableData, {showRowNumber: true, width: '100%', height: '100%'});
     });
 }
+
+
+
+
+/*
+
+google.load('visualization', '1', {
+	packages: ['table']
+});
+
+function isNumber(cell) {
+	var i = 0;
+	var cont = true;
+
+	if (cell.charAt(0) == '-') {
+		i++;
+	}
+
+	if (cell.charAt(0) == '0') {
+		if (cell.charAt(1) != ',' && cell.charAt(1) !== '') {
+			cont = false;
+		}
+	}
+
+	while (cont && i < cell.length) {
+		switch (cell.charAt(i)) {
+			case '0':
+				i++;
+				break;
+			case '1':
+				i++;
+				break;
+			case '2':
+				i++;
+				break;
+			case '3':
+				i++;
+				break;
+			case '4':
+				i++;
+				break;
+			case '5':
+				i++;
+				break;
+			case '6':
+				i++;
+				break;
+			case '7':
+				i++;
+				break;
+			case '8':
+				i++;
+				break;
+			case '9':
+				i++;
+				break;
+			case ',':
+				i++;
+				break;
+			default:
+				cont = false;
+		}
+	}
+
+	return cont;
+}
+
+function drawTable(csv) {
+	var data = new google.visualization.DataTable();
+	var table = new google.visualization.Table(document.getElementById('tabla'));
+	var i, j, a;
+
+	for (i = 0; i < csv[0].length; i++) {
+		data.addColumn('string', csv[0][i]);
+	}
+
+	data.addRows(csv.length - 1);
+
+	for (i = 1; i < csv.length; i++) {
+		for (j = 0; j < csv[0].length; j++) {
+			if (isNumber(csv[i][j])) {
+				data.setCell(i - 1, j, csv[i][j], csv[i][j], {
+					style: 'text-align: right'
+				});
+			} else {
+				data.setCell(i - 1, j, csv[i][j]);
+			}
+		}
+	}
+
+	table.draw(data, {
+		allowHtml: true,
+		showRowNumber: true
+	});
+}*/

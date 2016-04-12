@@ -57,7 +57,11 @@ tabla(document).ready(function() {
         tabla('#titulo_tabla').html(nombre);
 
         drawTable(tabla(this).attr("rel")); //use tabla.csv.toArrays(data)  to parse it as array
-
+        tabla('#tabla').dynatable({
+            table: {
+                defaultColumnIdStyle: 'trimDash'
+                }
+            });
     });
 
     // If close button is clicked
@@ -70,10 +74,9 @@ tabla(document).ready(function() {
     tabla('#mask').click(function() {
         tabla(this).hide();
         tabla('.window').hide();
-    //    tabla(this).HTML("");
-    //    tabla('.window').HTML("");
+        //    tabla(this).HTML("");
+        //    tabla('.window').HTML("");
     });
-
 });
 
 function drawTable(url) {
@@ -109,6 +112,5 @@ function drawTable(url) {
             .text(function(d) {
                 return d;
             });
-
     });
 }

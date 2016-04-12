@@ -36,6 +36,7 @@ html(lang="es")
 		link(rel='stylesheet', href='lib/lightbox2/dist/css/lightbox.min.css')
 		link(rel="stylesheet", id="css-style", type="text/css", href="/css/style.css", media="all")
 		link(rel="stylesheet", id="css-style2", type="text/css", href="/css/style2.css", media="all")
+		link(res='stylesheet',type='text/css',href='https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css')
 
 		case seccion
 			when "Inicio"
@@ -58,6 +59,7 @@ html(lang="es")
 				script(type='text/javascript', src="/lib/underscore/underscore-min.js")
 				script(type='text/javascript' src='https://www.google.com/jsapi')
 				script(type='text/javascript', src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js")
+				script(type='text/javascript',src='https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js')
 				script(type='text/javascript').
 					var tabla = $.noConflict(true);
 				script(type='text/javascript', src="/script/generar_tabla.js")
@@ -77,7 +79,7 @@ html(lang="es")
 			div(id="dialog" class="window" hidden)
 				img(id="close",src="/imagenes/close.png", alt="close", longdesc="cerrar")
 				h1#titulo_tabla
-				div(id="tabla")
+				div(id="tabla" class="tablesorter")
 			div(id="mask")
 		div(id="contenedor_margenes" class="")
 			div(id="contenedor" class="")

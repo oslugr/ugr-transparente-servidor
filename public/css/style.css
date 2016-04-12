@@ -2079,7 +2079,6 @@ li.model-resaltado-02 a.banner:hover {
   cursor: pointer;
 }
 #tabla {
-  overflow: scroll;
   width: 800px;
   height: 350px;
 }

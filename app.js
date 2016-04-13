@@ -34,7 +34,7 @@ routes(app);
 
 // Creación del servidor
 var server = app.listen(app.get('port'), app.get('ip'), function() {
-	console.log("UGR - Transparente "+ process.env.npm_package_version);
+	console.log("UGR - Transparente " + process.env.npm_package_version);
 	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 

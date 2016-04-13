@@ -1,0 +1,4 @@
+{
+  "glob": ["README.md", "app.js", "app/*js", "app/routes/*.js", "test/*js", "test/navegabilidad/*.js"],
+  "github": false
+}

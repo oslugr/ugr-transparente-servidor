@@ -74,10 +74,10 @@ function checkTables(done) {
 		var links = browser.queryAll("a", item);
 		async.each(links, function(item, cb2) {
 			var url = item.getAttribute("href");
-			var url2=item.getAttribute("rel");
+			var url2 = item.getAttribute("rel");
 			assert.ok(url);
-			checkLink(url, function(){
-				if(url2) checkLink(url2, cb2);
+			checkLink(url, function() {
+				if (url2) checkLink(url2, cb2);
 				else cb2();
 			});
 		}, cb);

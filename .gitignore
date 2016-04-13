@@ -1,6 +1,10 @@
 # Directorio instalación módulos
 node_modules
 
+# Documentación
+doc
+docs
+
 # Directorio resultado test cobertura
 coverage
 

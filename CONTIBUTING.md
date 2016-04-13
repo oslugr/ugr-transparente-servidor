@@ -17,9 +17,21 @@ El proyecto posee badges que marcan el estado actual de la rama master:
 * [![Coverage Status](https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master)](https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master)
 
 
-## Issues
+### Issues
 Se puede observar el estado actual del desarrollo (tareas por realizar, bugs...) en la ventana de [issues](https://github.com/oslugr/ugr-transparente-servidor/issues), para añadir nuevos issues es imprescindible comprobar que no se encuentra duplicado y explicar la razón del issue
 
+### Documentación
+La documentación se realizará mediante comentarios escritos con **markdown**, la herramienta [Groc](https://github.com/nevir/groc) generará documentación en html a partir de estos comentarios (configuración en el archivo `.groc.json`)
+
+Para generar la documentación usar: `npm run doc`
+
+La documentación deberá seguir las siguientes normas y la guía de estilo de Markdown (mirar abajo):
+* Los comentarios para generar deberán empezar con un espacio:
+  * `// Ejemplo de comentario`
+* Los comentarios sin espacio al principio **no** generarán documentación
+  * `//Comentario puntual`
+* Evitar usar bloques de comentario (`/* ... */`) salvo que sea necesario
+  * Los bloques de comentario siguen las mismas normas que los comentarios normales (`/*Esto no genera documentacion*/`)
 
 ## Guía de estilo
 
@@ -31,6 +43,10 @@ Todo el código de JS debe ser legible e indentado de una forma estándar, para 
 >Importante indicar si npm run beautify no ha funcionado correctamente, o no modifica un archivo necesario mediante un issue
 
 El código en **JSON** seguirá los mismos principios
+
+### Markdown
+* El texto en **negrita** se escribirá con doble asterisco (`**ejemplo**`)
+* El texto en _cursiva_ se escribirá con barra baja (`_ejemplo_`)
 
 ### JADE
 El código en jade se tabulará con tabuladores. Se recomienda usar jade-beautify

@@ -91,6 +91,8 @@ npm test
 
 El resultado de los tests unitarios se mostrarán por pantalla como salida de la ejecución, los resultados de los tests de cobertura se mostrarán en `coverage/lcov-report/index.html`.
 
+## Documentación
+Para generar automáticamente la documentación con groc ejecutar `npm run doc`. esta documentación se encontrará en `doc/index.html`.
 
 ## Integración continua
 Disponemos de un sistema de integración continua con [Travis CI](https://travis-ci.org/), que desplegará el sistema y ejecutará los tests con cada cambio del repositorio, el estado actual del sistema se puede observar a continuación:

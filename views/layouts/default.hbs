@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+	Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+	Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+	Copyright (C) 2016 Germán Martínez Maldonado, Andrés Ortiz Corrales
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/> 
+-->
+
+<html lang="es">
+
+<head>
+	<title>UGR Transparente | Universidad de Granada</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Universidad de Granada - UGR transparente">
+	<meta name="keywords" content="universidad, Granada, UGR transparente, ley de transparencia">
+	<link rel="shortcut icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
+	<link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
+	<link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+	<link rel="stylesheet" href="lib/jquery-ui/themes/smoothness/jquery-ui.min.css">
+	<link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css">
+	<link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all">
+	<link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
+	<script type="text/javascript" src="/script/desplegables.js"></script>
+	<!-- TODO: if else for scripts -->
+</head>
+
+<body>
+	<noscript>
+		<p class="jsDisabled">Esta página requiere funcionalidades JavaScript. Por favor,<a href="http://www.enable-javascript.com/es/" target="_blank">habilítelo</a> para una correcta visualización.</p>
+	</noscript>
+	<!-- TODO: div id boxes (poner o arreglar) -->
+	<div id="contenedor_margenes">
+		<div id="contenedor">
+			{{>cabecera}} 
+			{{{body}}}
+			{{>banners}}
+		</div>
+	</div>
+
+</body>

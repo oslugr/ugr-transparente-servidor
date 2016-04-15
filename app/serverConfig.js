@@ -27,6 +27,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var debug = require('debug')('ugr-transparente-servidor:server');
 var favicon = require('serve-favicon');
+var exphbs = require('express-handlebars');
+
 
 var logger = require('morgan');
 var path = require('path');
@@ -44,7 +46,8 @@ module.exports = function(app) {
 	// Directorio con las plantillas
 	app.set('views', 'views');
 	// Motor de visualización
-	app.set('view engine', 'jade');
+	app.engine('.hbs', exphbs({extname: '.hbs',defaultLayout: 'default'}));
+	app.set('view engine', '.hbs');
 
 	// Favicon
 	app.use(favicon('./public/favicon/favicon.ico'));

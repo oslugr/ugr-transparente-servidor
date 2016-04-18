@@ -37,7 +37,14 @@ module.exports={
         
         return li+onclick+ul;
     },
-    "firstLevelMenuEnd": function(){
+    firstLevelMenuEnd: function(){
         return "</ul></li>";
+    },
+    secondLevelItem: function(title,link,selected){
+        var item_class="tipo1";
+        if(selected===title) item_class="tipo1-selected";
+        var li="<li class=\""+item_class+" item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child\">";
+        var a="<a href=\""+link+"\">"+title+"</a>";
+        return li+a+"</li>";        
     }
 };

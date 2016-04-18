@@ -36,7 +36,7 @@
 	<link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css">
 	<link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all">
 	<link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
-	<script type="text/javascript" src="/script/desplegables.js"></script>
+	<script type="text/javascript" src="/script/menu.js"></script>
 	<!-- TODO: if else for scripts -->
 </head>
 
@@ -47,8 +47,14 @@
 	<!-- TODO: div id boxes (poner o arreglar) -->
 	<div id="contenedor_margenes">
 		<div id="contenedor">
-			{{>cabecera}} 
-			{{{body}}}
+			{{>cabecera}}
+			{{>breadcrumb}}
+			<div id="general">
+				{{>menu}}
+				<div id="pagina">
+					{{{body}}}
+				</div>
+			</div>
 			{{>banners}}
 			{{>footer}}
 		</div>

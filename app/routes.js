@@ -51,11 +51,6 @@ module.exports = function(app) {
 		app.get(routesList[i].url, setRoute(routesList[i]));
 	}
 
-	// Prueba de handlebars
-	app.get('/test',function(req,res){
-		res.render('test');
-	});
-
 	//LEGACY Routes
 	// Inicio
 	app.get('/', index.index);

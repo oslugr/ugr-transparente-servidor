@@ -32,7 +32,8 @@ var enlaces = [];
 function leerEnlaces() {
 	var l = config.archivosJson.index.enlaces.length;
 	for (var i = 0; i < l; i++) {
-		enlaces.push([config.archivosJson.index.enlaces[i].nombre, config.archivosJson.index.enlaces[i].href, config.archivosJson.index.enlaces[i].id]);
+		var enlace=config.archivosJson.index.enlaces[i];
+		enlaces.push({"nombre":enlace.nombre, "link":enlace.href, "id":enlace.id});
 	}
 }
 

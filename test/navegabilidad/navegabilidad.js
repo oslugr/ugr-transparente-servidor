@@ -669,12 +669,35 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 0);
+			browser.assert.elements('.tipo1-selected', 0);
 			browser.assert.style('#menu_administración', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestion', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Página no encontrada (Error 404)');
+		});
+	});
+	
+	describe('Mapa web',function(){
+		before(function(done) {
+			browser.visit(url + '/mapaWeb.html', function(err) {
+				assert.notOk(err);
+				done();
+			});
+		});
+		it('Connection', function() {
+			checkConnection();
+		});
+		it('Menu', function() {
+			browser.assert.elements('.tipo2-selected', 0);
+			browser.assert.elements('.tipo1-selected', 0);
+			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_docencia', 'display', 'none');
+			browser.assert.style('#menu_gestion', 'display', 'none');
+		});
+		it.skip('Layout', function() {
+			return new Error("Not implmented");
 		});
 	});
 });

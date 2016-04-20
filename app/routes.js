@@ -51,7 +51,7 @@ module.exports = function(app) {
 		app.get(routesList[i].url, setRoute(routesList[i]));
 	}
 
-	//LEGACY Routes
+	//Other Routes
 	// Inicio
 	app.get('/', index.index);
 	app.get('/index.html', index.index);

@@ -76,7 +76,7 @@ module.exports = function(app) {
 	// Manejador de errores:
 	app.use(function(req, res, next) {
 		res.status(404).render('error_404', {
-			titulo: config.error.titulo,
+			seccion: config.error.titulo,
 			texto: config.error.texto
 		});
 	});

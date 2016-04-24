@@ -56,6 +56,7 @@
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
     "gulp-shell": "^0.5.2",
+    "gulp-task-doc": "^1.0.8",
     "istanbul": "^0.4.2",
     "js-beautify": "^1.6.2",
     "jshint": "^2.9.1",

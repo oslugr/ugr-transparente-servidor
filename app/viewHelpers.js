@@ -20,10 +20,10 @@ function tabla1(item,servidor){
     for(var it in item.datos){
         var elem=item.datos[it];
         var tab="<tr>";
-        //nombre
+        //descripcion
         tab+="<td class=\"centeralign par\">"+elem.nombre+"</td>"; 
-        tab+="<td class=\"centeralign impar\">";
         //opendata
+        tab+="<td class=\"centeralign impar\">";
         var link=servidor+"/dataset/"+elem.id_dataset+"/resource/"+elem.url; 
         tab+="<a href=\""+link+"\" target=\"_blank\">";
         tab+="<img src=\"/imagenes/link.png\" alt=\"link\" class=\"link\">";
@@ -48,12 +48,59 @@ function tabla1(item,servidor){
     return html;
 }
 function tabla2(item,sevidor){
-    return "tabla2";
+    var html="<table class=\"inline\">";
+    html+="<colgroup><col span=\"1\" style=\"width: 90%;\"><col span=\"1\" style=\"width: 10%;\"></colgroup>";
     
+    html+="<tbody>";
+    html+="<tr><th class=\"centeralign\">Descripción</th><th class=\"centeralign\">Enlace</th></tr>";
+    for(var it in item.datos){
+        var elem=item.datos[it];
+        var tab="<tr>";
+        //descripcion
+        tab+="<td class=\"centeralign par\">"+elem.nombre+"</td>"; 
+        //enlace
+        tab+="<td class=\"centeralign impar\">";
+        tab+="<a href=\""+elem.url+"\" target=\"_blank\">";
+        tab+="<img src=\"/imagenes/link2.png\" alt=\"link\" class=\"link\">";
+        tab+="</a></td>";
+        tab+="</tr>";
+        html+=tab;
+    }
+    html+="</tbody></table>";
+    return html;
 }
 function tabla3(item,servidor){
+    var html="<table class=\"inline\">";
+    html+="<colgroup><col span=\"1\" style=\"width: 90%;\"><col span=\"1\" style=\"width: 10%;\"></colgroup>";
     
-        return "tabla3";
+    html+="<tbody>";
+    
+    html+="<tr><th class=\"centeralign\">Descripción</th><th class=\"centeralign\">Ver</th><th class=\"centeralign\">Descargar</th></tr>";
+    for(var it in item.datos){
+        var elem=item.datos[it];
+        var tab="<tr>";
+        //descripcion
+        tab+="<td class=\"centeralign par\">"+elem.nombre+"</td>"; 
+        //link
+        tab+="<td class=\"centeralign impar\">";
+        var link="/doc/"+elem.url;
+        tab+="<a href=\""+link+"\" target=\"_blank\">";
+        tab+="<img src=\"/imagenes/pdf.png\" alt=\"view\" class=\"view\">";
+        tab+="</a></td>";
+        
+        
+        //descarga
+        tab+="<td class=\"centeralign par\">";
+        link="/doc/"+elem.url;
+        tab+="<a href=\""+link+"\" download>";
+        tab+="<img src=\"/imagenes/flecha.png\" alt=\"save\" class=\"save\">";
+        tab+="</a></td>";
+        
+        tab+="</tr>";
+        html+=tab;
+    }
+    html+="</tbody></table>";
+    return html;
 }
 function tabla4(item,servidor){
         return "tabla4";

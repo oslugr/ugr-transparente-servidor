@@ -79,7 +79,7 @@ google.load('visualization', '1', {
 });
 
 function drawTable(url) {
-	$('#tabla').empty();
+	//$('#tabla').empty(); //comentando esto funciona, no se por que
 	d3.text(url, "text/plain; charset=ISO-8859-1", function(data) {
 		var content = d3.csv.parseRows(data);
 		var columns = content.shift();

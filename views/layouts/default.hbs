@@ -59,7 +59,15 @@
 	<noscript>
 		<p class="jsDisabled">Esta página requiere funcionalidades JavaScript. Por favor,<a href="http://www.enable-javascript.com/es/" target="_blank">habilítelo</a> para una correcta visualización.</p>
 	</noscript>
-	<!-- TODO: div id boxes (poner o arreglar) -->
+	<div id="boxes">
+		<div id="dialog" class="window" style="display: none;">
+			<img id="close" src="/imagenes/close.png" alt="close" longdesc="cerrar">
+			<h1 id="titulo_tabla"></h1>
+			<div id="tabla"></div>
+		
+		</div>
+		<div id="mask"></div>		
+	</div>
 	<div id="contenedor_margenes">
 		<div id="contenedor">
 			{{>cabecera}}

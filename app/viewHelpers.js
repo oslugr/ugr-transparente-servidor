@@ -10,13 +10,54 @@ function slugify(text) {
     return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/&/g, '-and-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 }
 
-function generarTablas(secciones){
-    var html="";
-    for (var seccion in secciones) {
-        html+="<p>"+seccion+"</p>";
-        
-    }
+function tabla1(item,servidor){
+    var html="<table class=\"inline\">";
+    html+="<colgroup><col span=\"1\" style=\"width: 90%;\"><col span=\"1\" style=\"width: 10%;\"></colgroup>";
+    
+    html+="<tbody>";
+    html+="<tr><th class=\"centeralign\">Descripción</th><th class=\"centeralign\">Datos en Opendata</th><th class=\"centeralign\">Ver</th><th class=\"centeralign\">Descargar</th></tr>";
+    
+    for(var it in item.datos){
+        var elem=item.datos[it];
+        var tab="<tr>";
+        //nombre
+        tab+="<td class=\"centeralign par\">"+elem.nombre+"</td>"; 
+        tab+="<td class=\"centeralign impar\">";
+        //opendata
+        var link=servidor+"/dataset/"+elem.id_dataset+"/resource/"+elem.url; 
+        tab+="<a href=\""+link+"\" target=\"_blank\">";
+        tab+="<img src=\"/imagenes/link.png\" alt=\"link\" class=\"link\">";
+        tab+="</a></td>";
+        //link
+        tab+="<td class=\"centeralign par\">";
+        link=servidor+"/dataset/"+elem.descarga;
+        tab+="<a href=\"#dialog\" rel=\""+link+"\" name=\""+elem.nombre+"\"class=\"view\">";
+        tab+="<img src=\"/imagenes/view.png\" alt=\"view\" class=\"view\">";
+        tab+="</a></td>";
+        //descarga
+        tab+="<td class=\"centeralign impar\">";
+        link=servidor+"/dataset/"+elem.descarga;
+        tab+="<a href=\""+link+"\">";
+        tab+="<img src=\"/imagenes/save.png\" alt=\"save\" class=\"save\">";
+        tab+="</a></td>";
+        tab+="</tr>";
+        html+=tab;
+    }  
+    
+    html+="</tbody></table>";
     return html;
+}
+function tabla2(item,sevidor){
+    return "tabla2";
+    
+}
+function tabla3(item,servidor){
+    
+        return "tabla3";
+}
+function tabla4(item,servidor){
+        return "tabla4";
+    
 }
 
 
@@ -91,11 +132,35 @@ module.exports = {
                 }
                 l += "</ul>";
             }
-
+            
             indexHtml += l;
         }
-        
-        indexHtml+=generarTablas(secciones);
+        indexHtml+="</ul>";
         return indexHtml;
+    },
+    tablasPrincipales: function(contenido,servidor){
+        var html="";
+        for(var elem in contenido){
+            var item=contenido[elem];
+            html+="<h1><a id=\""+item.link+"\" name=\"__doku_encabezado_de_primer_nivel\">"+item.encabezado+"</a></h1>";     
+            html+="<div class=\"level1\">";
+            html+="<p>"+item.texto+"</p>";
+            switch(item.tipo){
+                case 1:
+                    html+=tabla1(item,servidor);
+                    break;
+                case 2:
+                    html+=tabla2(item,servidor);
+                    break;
+                case 3:
+                    html+=tabla3(item,servidor);
+                    break;
+                case 4:
+                    html+=tabla4(item,servidor);
+                    break;    
+            }
+            html+="</div>";
+        }
+        return html;
     }
 };

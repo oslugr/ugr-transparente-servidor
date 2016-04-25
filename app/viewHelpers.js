@@ -124,7 +124,6 @@ function tabla4(item,servidor){
         tab+="<img src=\"/imagenes/flecha.png\" alt=\"save\" class=\"save\">";
         tab+="</a></td>";
         
-        
         tab+="</tr>";
         html+=tab;
     }

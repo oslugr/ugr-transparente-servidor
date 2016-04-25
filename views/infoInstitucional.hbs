@@ -1,14 +1,18 @@
-{{#each contenido}}
-<h1> 
+<div id="contenido" class="sec_interior">
+    <div class="content_doku">
+        {{#each contenido}}
+            <h1> 
     <a name="__doku_encabezado_de_primer_nivel">{{titulo}}</a>
 </h1>
-<ul class="enlaces">
-    <li class="level1">
-        {{#each lista}}
-            <div class="li">
-                <a class="enlaces-cabecera" href="{{link}}",target="_blank">{{item}}</a>
-            </div>
+            <ul class="enlaces">
+                <li class="level1">
+                    {{#each lista}}
+                        <div class="li">
+                            <a class="enlaces-cabecera" href="{{link}}" ,target="_blank">{{item}}</a>
+                        </div>
+                    {{/each}}
+                </li>
+            </ul>
         {{/each}}
-    </li>
-</ul>
-{{/each}}
+    </div>
+</div>

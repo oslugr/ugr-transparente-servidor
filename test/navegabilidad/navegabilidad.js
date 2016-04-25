@@ -678,8 +678,8 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLayout('Página no encontrada (Error 404)');
 		});
 	});
-	
-	describe('Mapa web',function(){
+
+	describe('Mapa web', function() {
 		before(function(done) {
 			browser.visit(url + '/mapaWeb.html', function(err) {
 				assert.notOk(err);

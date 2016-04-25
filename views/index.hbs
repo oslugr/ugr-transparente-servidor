@@ -1,5 +1,9 @@
-{{#each enlaces}}
-    <a href="/{{link}}" class="enlaces_index">
-        <div id="{{id}}"> {{nombre}}</div>
-    </a>
-{{~/each}}
+<div id="contenido" class="sec_interior">
+    <div class="content_doku">
+        {{#each enlaces}}
+            <a href="/{{link}}" class="enlaces_index">
+                <div id="{{id}}"> {{nombre}}</div>
+            </a>
+            {{~/each}}
+    </div>
+</div>

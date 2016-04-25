@@ -35,7 +35,7 @@ var path = require('path');
 var express = require('express');
 
 var config = require('../config/config');
-var hbsHelpers=require('./viewHelpers');
+var hbsHelpers = require('./viewHelpers');
 
 // Configura el servidor express app
 module.exports = function(app) {
@@ -47,10 +47,14 @@ module.exports = function(app) {
 	// Directorio con las plantillas
 	app.set('views', 'views');
 	// Motor de visualización
-	app.engine('.hbs', exphbs({extname: '.hbs',defaultLayout: 'default',helpers:hbsHelpers}));
+	app.engine('.hbs', exphbs({
+		extname: '.hbs',
+		defaultLayout: 'default',
+		helpers: hbsHelpers
+	}));
 	app.set('view engine', '.hbs');
-	if(app.get('env') === "prod") app.enable('view cache');
-	
+	if (app.get('env') === "prod") app.enable('view cache');
+
 
 	// Favicon
 	app.use(favicon('./public/favicon/favicon.ico'));

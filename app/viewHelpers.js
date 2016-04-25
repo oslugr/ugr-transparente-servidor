@@ -88,7 +88,6 @@ function tabla3(item,servidor){
         tab+="<img src=\"/imagenes/pdf.png\" alt=\"view\" class=\"view\">";
         tab+="</a></td>";
         
-        
         //descarga
         tab+="<td class=\"centeralign par\">";
         link="/doc/"+elem.url;
@@ -103,8 +102,34 @@ function tabla3(item,servidor){
     return html;
 }
 function tabla4(item,servidor){
-        return "tabla4";
+    var html="<table class=\"inline\">";
+    html+="<colgroup><col span=\"1\" style=\"width: 90%;\"><col span=\"1\" style=\"width: 10%;\"></colgroup>";
     
+    html+="<tbody>";
+    
+    html+="<tr><th class=\"centeralign\">Descripción</th><th class=\"centeralign\">Ver</th><th class=\"centeralign\">Descargar</th></tr>";
+    for(var it in item.datos){
+        var elem=item.datos[it];
+        var tab="<tr>";
+        //descripcion
+        tab+="<td class=\"centeralign par\">"+elem.nombre+"</td>"; 
+        //link
+        tab+="<td class=\"centeralign\">";
+        tab+="<a href=\"/graph/"+elem.url+"\" data-lightbox=\"image-1\" data-title=\""+elem.nombre+"\">";
+        tab+="<img src=\"/imagenes/grafico.png\" alt=\"view\" class=\"view\">";
+        tab+="</a></td>";
+        //descargar
+        tab+="<td class=\"centeralign par\">";
+        tab+="<a href=\"/graph/"+elem.url+"\" download>";
+        tab+="<img src=\"/imagenes/flecha.png\" alt=\"save\" class=\"save\">";
+        tab+="</a></td>";
+        
+        
+        tab+="</tr>";
+        html+=tab;
+    }
+    html+="</tbody></table>";
+    return html;
 }
 
 

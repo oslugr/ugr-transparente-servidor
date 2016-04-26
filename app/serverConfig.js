@@ -27,7 +27,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var debug = require('debug')('ugr-transparente-servidor:server');
 var favicon = require('serve-favicon');
-var exphbs = require('express-handlebars');
+//var exphbs = require('express-handlebars');
 
 
 var logger = require('morgan');
@@ -35,7 +35,8 @@ var path = require('path');
 var express = require('express');
 
 var config = require('../config/config');
-var hbsHelpers = require('./viewHelpers');
+var expressLayouts = require('express-ejs-layouts');
+//var hbsHelpers = require('./viewHelpers');
 
 // Configura el servidor express app
 module.exports = function(app) {
@@ -46,13 +47,17 @@ module.exports = function(app) {
 
 	// Directorio con las plantillas
 	app.set('views', 'views');
+	app.set('layout', 'layouts/default'); // defaults to 'layout' 
+	app.use(expressLayouts);
 	// Motor de visualización
-	app.engine('.hbs', exphbs({
+	/*app.engine('.hbs', exphbs({
 		extname: '.hbs',
 		defaultLayout: 'default',
 		helpers: hbsHelpers
 	}));
-	app.set('view engine', '.hbs');
+	
+	app.set('view engine', '.hbs');*/
+	app.set('view engine', 'ejs');  
 	if (app.get('env') === "prod") app.enable('view cache');
 
 

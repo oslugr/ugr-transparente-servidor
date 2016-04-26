@@ -1,0 +1,21 @@
+<%function getSuperSection(seccion) {
+	var res = "";
+	if (seccion === "Personal" || seccion === "Información Económica" || seccion == "Perfil del Contratante") res = "Administración";
+	else if (seccion === "Oferta y Demanda Académica" || seccion === "Claustro" || seccion === "Estudiantes") res = "Docencia";
+	else if (seccion === "Gobierno" || seccion === "Rendimiento") res = "Gestión e Investigación";
+	return res;
+}%>
+
+<%function breadCrumpText(seccion){
+    var s = getSuperSection(seccion);
+    if (s) return s + " / " + seccion;
+    else return seccion;
+}%>
+
+<div id="rastro-idiomas">
+    <div id="rastro">
+        <ul id="rastro_breadcrumb">
+            <li class="first"><span class="first"><%=breadCrumpText(seccion)%></span></li>
+        </ul>
+    </div>
+</div>

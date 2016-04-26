@@ -7,53 +7,105 @@
         <p><%=item.texto%></p>
         <%switch (item.tipo) { 
             case 1:%>
-            <table class="inline">
-                <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
-                <tbody>
-                    <tr>
-                        <th class="centeralign">Descripción</th>
-                        <th class="centeralign">Datos en Opendata</th>
-                        <th class="centeralign">Ver</th>
-                        <th class="centeralign">Descargar</th>
-                    </tr>
+        <table class="inline">
+            <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
+            <tbody>
+                <tr>
+                    <th class="centeralign">Descripción</th>
+                    <th class="centeralign">Datos en Opendata</th>
+                    <th class="centeralign">Ver</th>
+                    <th class="centeralign">Descargar</th>
+                </tr>
 
-                    <%for (var it in item.datos) {
+                <%for (var it in item.datos) {
                     var elem = item.datos[it]%>
-                    <tr>
-                        <%#Descripcion%>
-                        <td class="centeralign par"><%=elem.nombre%></td>
-                        <%#Opendata%>
-                        <td class="centeralign impar">
-                            <a href="<%=servidor%>/dataset/<%=elem.id_dataset%>/resource/<%=elem.url%>" target="_blank">
-                                <img src="/imagenes/link.png" alt="link" class="link">
-                            </a>
-                        </td>
-                        <%#Ver%>
-                        <td class="centeralign par">
-                            <a href="#dialog" rel="<%=servidor%>/dataset/<%=elem.descarga%>" name="<%=elem.nombre%>" class="view">
-                                <img src="/imagenes/view.png" alt="view" class="view">
-                            </a>
-                        </td>
-                        <%#Descarga%>
-                        <td class="centeralign impar">
-                            <a href="<%=servidor%>/dataset/<%=elem.descarga%>">
-                                <img src="/imagenes/save.png" alt="save" class="save">
-                            </a>
-                        </td>
-                    </tr>
-                <%}%>
-            </tbody>
-        </table>
-        <%break;%>
-        <%case 2:%>
-        <p>Tabla 2</p>
-        <%break;%>
-        <%case 3:%>
-        <p>Tabla 3</p>
-        <%break;%>
-        <%case 4:%>
-        <p>Tabla 4</p>
-        <%break;%>
-    <%}%>
+                <tr>
+                    <%#Descripcion%>
+                    <td class="centeralign par"><%=elem.nombre%></td>
+                    <%#Opendata%>
+                    <td class="centeralign impar">
+                        <a href="<%=servidor%>/dataset/<%=elem.id_dataset%>/resource/<%=elem.url%>" target="_blank">
+                            <img src="/imagenes/link.png" alt="link" class="link">
+                        </a>
+                    </td>
+                    <%#Ver%>
+                    <td class="centeralign par">
+                        <a href="#dialog" rel="<%=servidor%>/dataset/<%=elem.descarga%>" name="<%=elem.nombre%>" class="view">
+                            <img src="/imagenes/view.png" alt="view" class="view">
+                        </a>
+                    </td>
+                    <%#Descarga%>
+                    <td class="centeralign impar">
+                        <a href="<%=servidor%>/dataset/<%=elem.descarga%>">
+                            <img src="/imagenes/save.png" alt="save" class="save">
+                        </a>
+                    </td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+    <%break;%>
+    <%case 2:%>
+    <table class="inline">
+        <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
+        <tbody>
+            <tr>
+                <th class="centeralign">Descripción</th>
+                <th class="centeralign">Enlace</th>
+            </tr>
+            <%for (var it in item.datos) {%>
+                <%var elem = item.datos[it]%>
+                <tr>
+                    <%#descripcion %>
+                    <td class="centeralign par"><%=elem.nombre%></td>
+                    <%#enlace %>
+                    <td class="centeralign impar">
+                        <a href="<%=elem.url%>" target="_blank">
+                            <img src="/imagenes/link2.png" alt="link" class="link">
+                        </a>
+                    </td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+    <%break;%>
+    <%case 3:%>
+    <table class="inline">
+        <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
+        <tbody>
+            <tr>
+                <th class="centeralign">Descripción</th>
+                <th class="centeralign">Ver</th>
+                <th class="centeralign">Descargar</th>
+            </tr>
+            <%for (var it in item.datos) {
+        var elem = item.datos[it]; 
+        var link = "/doc/" + elem.url;
+        %>
+            <tr>
+                <%#descripcion%>
+                <td class="centeralign par"><%=elem.nombre%></td>
+                <%#enlace%>
+                <td class="centeralign impar">
+                    <a href="<%=link%>" target="_blank">
+                        <img src="/imagenes/pdf.png" alt="view" class="view">
+                    </a>
+                </td>
+
+                <%#descarga%>
+                <td class="centeralign par">
+                    <a href="<%=link%>" download>
+                        <img src="/imagenes/flecha.png" alt="save" class="save">
+                    </a>
+                </td>
+            </tr>
+        <%}%>
+    </tbody>
+</table>
+<%break;%>
+<%case 4:%>
+<p>Tabla 4</p>
+<%break;%>
+<%}%>
 </div>
 <%}%>

@@ -104,7 +104,37 @@
 </table>
 <%break;%>
 <%case 4:%>
-<p>Tabla 4</p>
+<table class="inline">
+    <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
+    <tbody>
+        <tr>
+            <th class="centeralign">Descripción</th>
+            <th class="centeralign">Ver</th>
+            <th class="centeralign">Descargar</th>
+        </tr>
+        <%for (var it in item.datos) {
+            var elem = item.datos[it];
+            var link="/graph/"+elem.url;
+            %>
+        <tr>
+            <%#Descripcion%>
+            <td class="centeralign par"><%=elem.nombre%></td>
+            <%#Ver%>
+            <td class="centeralign">
+                <a href="<%=link%>" data-lightbox="image-1" data-title="<%=elem.nombre%>">
+                    <img src="/imagenes/grafico.png" alt="view" class="view">
+                </a>
+            </td>
+            <%#Descarga%>
+            <td class="centeralign par">
+                <a href="<%=link%>" download>
+                    <img src="/imagenes/flecha.png" alt="save" class="save">
+                </a>
+            </td>
+        </tr>
+    <%}%>
+</tbody>
+</table>
 <%break;%>
 <%}%>
 </div>

@@ -1,0 +1,39 @@
+<ul class="enlaces">
+
+<%
+var secciones = {};
+for (var i = 0; i < contenido.length; i++) {
+    c = contenido[i];
+    if (c.seccion === "") secciones[c.encabezado] = c;
+    else {
+        if (!secciones[c.seccion]) secciones[c.seccion] = [];
+        secciones[c.seccion].push(c);
+    }
+}
+%>
+<%for (var seccion in secciones) {
+    var item = secciones[seccion];%>
+        <li class="level1">
+            <div class="li">
+    <% if (item.seccion === "") {%>
+        <a class="enlaces-cabecera" href="#<%=item.link%>"><%=item.encabezado%></a>
+        </div></li>
+    } else {
+        var sec = "<a class="enlaces-cabecera">" + seccion + "</a>";
+        l += sec;
+        l += "</div></li>";
+        l += "<ul class="enlaces">";
+        for (var it in item) {
+            var l2 = "<li class="level2">";
+            var elem = item[it];
+            l2 += "<div class="li">";
+            l2 += "<a class="enlaces-cabecera" href="#" + elem.link + "">" + elem.encabezado + "</a>";
+            l2 += "</div></li>";
+            l += l2;
+        }
+        l += "</ul>";
+    }
+
+    indexHtml += l;
+}
+</ul>

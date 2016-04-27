@@ -42,6 +42,8 @@ if (sel === title) {
 <%}%>
 
 <% function secondLevelItem(title, link, selected) {
+	console.log("selected:"+selected);
+	console.log("title:"+title);
 var item_class = "tipo1";
 if (selected === title) item_class = "tipo1-selected";
 %>
@@ -60,10 +62,10 @@ if (selected === title) item_class = "tipo1-selected";
             <%firstLevelMenu("Administración",seccion)%>
                 <%secondLevelItem("Personal","/personal.html",seccion)%>
                 <%secondLevelItem("Información Económica","/infoEconomica.html",seccion)%>
-                <%secondLevelItem("Perfil de Contratante","/perfilContratante.html",seccion)%>
+                <%secondLevelItem("Perfil del Contratante","/perfilContratante.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelMenu("Docencia",seccion)%>
-                <%secondLevelItem("Oferta y Demanada Académica","/ofertaDemanda.html",seccion)%>
+                <%secondLevelItem("Oferta y Demanda Académica","/ofertaDemanda.html",seccion)%>
                 <%secondLevelItem("Claustro","/claustro.html",seccion)%>
                 <%secondLevelItem("Estudiantes","/estudiantes.html",seccion)%>
             <%firstLevelMenuEnd()%>

@@ -40,7 +40,6 @@
     "debug": "^2.2.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "express-handlebars": "^3.0.0",
     "morgan": "^1.7.0",
     "node-sass": "^3.4.2",
     "serve-favicon": "^2.3.0"
@@ -61,7 +60,6 @@
     "js-beautify": "^1.6.2",
     "jshint": "^2.9.1",
     "mocha": "^2.4.5",
-    "npm-check": "^4.1.4",
     "pm2": "^1.0.2",
     "supertest": "^1.2.0",
     "underscore": "^1.8.3",

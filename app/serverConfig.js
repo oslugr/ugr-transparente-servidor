@@ -48,14 +48,8 @@ module.exports = function(app) {
 	app.set('layout', 'layouts/default'); // defaults to 'layout' 
 	app.use(expressLayouts);
 	// Motor de visualización
-	/*app.engine('.hbs', exphbs({
-		extname: '.hbs',
-		defaultLayout: 'default',
-		helpers: hbsHelpers
-	}));
-	
-	app.set('view engine', '.hbs');*/
-	app.set('view engine', 'ejs');  
+	app.set('view engine', 'ejs');
+	  
 	if (app.get('env') === "prod") app.enable('view cache');
 
 

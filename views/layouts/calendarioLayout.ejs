@@ -32,33 +32,19 @@
         <link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
         <link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
         <link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-        <!-- <link rel="stylesheet" href="lib/jquery-ui/themes/smoothness/jquery-ui.min.css"> -->
+
         <link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css">
         <link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all">
         <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
 
+        <script type='text/javascript' src='/lib/moment/min/moment.min.js'></script>
         <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
-        
-        <%switch(seccion){
-            case "Buscador":%>
-            <script type='text/javascript' src="/lib/jquery/dist/jquery.min.js"></script>
-            <script type='text/javascript' src='/script/buscar.js'></script>
-            <%break;%>
-            <%default:%>
-				<script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
-				<script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js'></script>
-				<script type='text/javascript' src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
-				<script type='text/javascript' src="/lib/underscore/underscore-min.js"></script>
-				<script type='text/javascript' src='https://www.google.com/jsapi'></script>
-				<script type='text/javascript' src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
-				<script type='text/javascript'>
-					var tabla = $.noConflict(true);
-                </script>
-				<script type='text/javascript' src="/script/generar_tabla.js"></script>
-            <%break;
-            }%>
-        <script type="text/javascript" src="/script/menu.js"></script>
-
+        <script type='text/javascript' src='/lib/fullcalendar/dist/fullcalendar.min.js'></script>
+        <script type='text/javascript' src='/lib/fullcalendar/dist/gcal.js'></script>
+        <script type='text/javascript'>
+            var calendario = $.noConflict(true);
+        </script>
+        <script type='text/javascript' src='/script/calendario.js'></script>
     </head>
 
     <body>
@@ -66,32 +52,13 @@
             <p class="jsDisabled">Esta página requiere funcionalidades JavaScript. Por favor,<a href="http://www.enable-javascript.com/es/" target="_blank">habilítelo</a>
                 para una correcta visualización.</p>
         </noscript>
-        <div id="boxes">
-            <div id="dialog" class="window" style="display: none;">
-                <img id="close" src="/imagenes/close.png" alt="close" longdesc="cerrar">
-                <h1 id="titulo_tabla"></h1>
-                <div id="tabla"></div>
-
-            </div>
-            <div id="mask"></div>
-        </div>
         <div id="contenedor_margenes">
             <div id="contenedor">
                 <%- include('../partials/cabecera') %>
                 <%- include('../partials/breadcrumb') %>
-                <div id="general">
-                <%- include('../partials/menu') %>
-                    <div id="pagina">
-                        <h1 id="titulo_pagina">
-                            <span class="texto_titulo"><%=seccion%></span>
-                        </h1>
-                        <%- body %>
-                    </div>
-                </div>
+                <%- body %>
                 <%- include('../partials/banners'); %>
                 <%- include('../partials/footer'); %>
-                <!-- script para mostrar graficos -->
-                <script type='text/javascript' src='/lib/lightbox2/dist/js/lightbox-plus-jquery.js'></script>
             </div>
         </div>
 

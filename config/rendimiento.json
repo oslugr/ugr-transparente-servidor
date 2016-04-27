@@ -1,5 +1,6 @@
 {
 	"nombre": "Rendimiento",
+	"plantilla": "rendimiento",
 	"contenido": [{
 		"tipo": 2,
 		"seccion": "Labor investigadora",
@@ -140,6 +141,10 @@
 			"dataset": "Estudio de egresados",
 			"nombre": "Estudio de Egresados",
 			"url": "http://marketing.ugr.es/encuesta/stats14/"
+		}, {
+			"dataset": "Estudio de egresados",
+			"nombre": "Situación laboral de los egresados de la Universidad de Granada en 2014: Estudios de seguimiento de las Promociones 2012-2013 y 2011-2012",
+			"url": "http://cpep.ugr.es/pages/empleo/_doc/_doc_observatorio/situacion_laboral_egresadosugr_2014"
 		}]
 	}, {
 		"tipo": 1,

@@ -1,5 +1,6 @@
 {
 	"nombre": "Claustro",
+	"plantilla": "claustro",
 	"contenido": [{
 		"tipo": 1,
 		"seccion": "",

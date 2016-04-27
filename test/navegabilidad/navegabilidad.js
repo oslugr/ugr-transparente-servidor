@@ -651,7 +651,9 @@ describe('Pruebas de Navegabilidad', function() {
 				}, 5 * 1000);
 			});
 		});
-
+		it.skip('Links',function(done){
+			return done(new Error("not implemented"));
+		});
 		it('Menú de Rastro', function() {
 			checkBreadcrumb("Buscador");
 		});

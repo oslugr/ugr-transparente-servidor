@@ -1,5 +1,6 @@
 {
 	"nombre": "Personal",
+	"plantilla": "personal",
 	"contenido": [{
 		"tipo": 3,
 		"seccion": "",

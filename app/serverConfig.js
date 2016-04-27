@@ -27,8 +27,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var debug = require('debug')('ugr-transparente-servidor:server');
 var favicon = require('serve-favicon');
-//var exphbs = require('express-handlebars');
-
 
 var logger = require('morgan');
 var path = require('path');

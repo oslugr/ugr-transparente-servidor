@@ -38,17 +38,36 @@
         <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
 
         <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
-        <!-- <script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js'></script> -->
-        <script type='text/javascript' src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
-        <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-        <script type='text/javascript' src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
-        <script type='text/javascript'>
-            var tabla = $.noConflict(true);
-        </script>
-        <script type='text/javascript' , src="/script/generar_tabla.js"></script>
+        
+        <%switch(seccion){
+            case "Buscador":%>
+            <script type='text/javascript' src="/lib/jquery/dist/jquery.min.js"></script>
+            <script type='text/javascript' src='/script/buscar.js'></script>
+            <%break;%>
+            <%case "Calendario":%>
+            <script type='text/javascript' src='/lib/moment/min/moment.min.js'></script>
+            <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
+            <script type='text/javascript' src='/lib/fullcalendar/dist/fullcalendar.min.js'></script>
+            <script type='text/javascript' src='/lib/fullcalendar/dist/gcal.js'></script>
+            <script type='text/javascript'>
+                var calendario = $.noConflict(true);
+            </script>
+            <script type='text/javascript' src='/script/calendario.js'></script>
+            <%break;%>
+            <%default:%>
+				<script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
+				<script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js'></script>
+				<script type='text/javascript' src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
+				<script type='text/javascript' src="/lib/underscore/underscore-min.js"></script>
+				<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+				<script type='text/javascript' src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
+				<script type='text/javascript'>
+					var tabla = $.noConflict(true);
+                </script>
+				<script type='text/javascript' src="/script/generar_tabla.js"></script>
+            <%break;
+            }%>
         <script type="text/javascript" src="/script/menu.js"></script>
-
-        <!-- Buscador script -->
 
     </head>
 

@@ -49,7 +49,7 @@ function checkLink(link, done, status) {
 			}
 			if (status) assert.strictEqual(res.status, status);
 			else assert.isBelow(res.status, 400, res.status + " on " + link);
-			done();
+			return done();
 		});
 }
 
@@ -102,7 +102,6 @@ describe('Pruebas de Navegabilidad', function() {
 	this.timeout(80000);
 	var server;
 	var app;
-	console.log("Testing on " + url);
 	if (runLocalServer) console.log("- Local Server -");
 	before(function(done) {
 		if (runLocalServer) {
@@ -144,20 +143,20 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.link('#menus a', 'Normativa Legal', '/normativaLegal.html');
 			browser.assert.link('#menus a', 'Solicitud de Información', '/solicitudInfo.html');
 			//Clicking
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 
 			clickAll('.grupos', function(err) {
 				assert.notOk(err);
-				browser.assert.style('#menu_administración', 'display', 'block');
+				browser.assert.style('#menu_administracin', 'display', 'block');
 				browser.assert.style('#menu_docencia', 'display', 'block');
-				browser.assert.style('#menu_gestion', 'display', 'block');
+				browser.assert.style('#menu_gestin-e-investigacin', 'display', 'block');
 				clickAll('.grupos', function(err) {
 					assert.notOk(err);
-					browser.assert.style('#menu_administración', 'display', 'none');
+					browser.assert.style('#menu_administracin', 'display', 'none');
 					browser.assert.style('#menu_docencia', 'display', 'none');
-					browser.assert.style('#menu_gestion', 'display', 'none');
+					browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 					done();
 				});
 			});
@@ -240,9 +239,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Inicio', '/index.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Inicio');
@@ -312,9 +311,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Información Institucional', '/infoInstitucional.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Información Institucional');
@@ -342,9 +341,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Personal', '/personal.html');
 
-			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_administracin', 'display', 'block');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Personal');
@@ -371,9 +370,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Información Económica', '/infoEconomica.html');
 
-			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_administracin', 'display', 'block');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Información Económica');
@@ -400,9 +399,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Perfil del Contratante', '/perfilContratante.html');
 
-			browser.assert.style('#menu_administración', 'display', 'block');
+			browser.assert.style('#menu_administracin', 'display', 'block');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function(done) {
 			checkLayout('Perfil del Contratante');
@@ -431,9 +430,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Oferta y Demanda Académica', '/ofertaDemanda.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'block');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Oferta y Demanda Académica');
@@ -460,9 +459,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Claustro', '/claustro.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'block');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Claustro');
@@ -489,9 +488,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Estudiantes', '/estudiantes.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'block');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Estudiantes');
@@ -518,9 +517,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Gobierno', '/gobierno.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'block');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'block');
 		});
 		it('Layout', function() {
 			checkLayout('Gobierno');
@@ -548,9 +547,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo1-selected', 1);
 			browser.assert.link('.tipo1-selected > a', 'Rendimiento', '/rendimiento.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'block');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'block');
 		});
 		it('Layout', function() {
 			checkLayout('Rendimiento');
@@ -576,9 +575,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Normativa Legal', '/normativaLegal.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Normativa Legal');
@@ -604,9 +603,9 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.tipo2-selected', 1);
 			browser.assert.link('.tipo2-selected > a', 'Solicitud de Información', '/solicitudInfo.html');
 
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Solicitud de Información');
@@ -672,9 +671,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 0);
 			browser.assert.elements('.tipo1-selected', 0);
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it('Layout', function() {
 			checkLayout('Página no encontrada (Error 404)');
@@ -694,9 +693,9 @@ describe('Pruebas de Navegabilidad', function() {
 		it('Menu', function() {
 			browser.assert.elements('.tipo2-selected', 0);
 			browser.assert.elements('.tipo1-selected', 0);
-			browser.assert.style('#menu_administración', 'display', 'none');
+			browser.assert.style('#menu_administracin', 'display', 'none');
 			browser.assert.style('#menu_docencia', 'display', 'none');
-			browser.assert.style('#menu_gestion', 'display', 'none');
+			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
 		it.skip('Layout', function() {
 			return new Error("Not implmented");

@@ -1,5 +1,6 @@
 {
 	"nombre": "Información Institucional",
+	"plantilla": "infoInstitucional",
 	"contenido": [{
 		"titulo": "Rectora Magnífica de la Universidad de Granada",
 		"lista": [{

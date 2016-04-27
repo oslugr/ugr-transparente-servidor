@@ -1,5 +1,6 @@
 {
 	"nombre": "Información Económica",
+	"plantilla": "infoEconomica",
 	"contenido": [{
 		"tipo": 2,
 		"seccion": "Año 2016",

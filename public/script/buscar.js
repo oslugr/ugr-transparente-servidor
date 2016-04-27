@@ -64,8 +64,6 @@ $(function() {
 		$.each(archivos, function(index, nombre) {
 
 			$.getJSON(nombre, function(data) {
-					console.log(data);
-
 					$.each(data.contenido, function(campo, contenido) {
 						if (campo === "datos") {
 							// Por cada campo de datos.

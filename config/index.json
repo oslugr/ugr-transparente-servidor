@@ -1,5 +1,6 @@
 {
 	"nombre": "Inicio",
+	"plantilla": "index",
 	"enlaces": [{
 		"nombre": "Información Institucional",
 		"href": "infoInstitucional.html",

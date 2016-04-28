@@ -54,7 +54,7 @@
 		"gulp": "^3.9.1",
 		"gulp-install": "^0.6.0",
 		"gulp-istanbul": "^0.10.3",
-    "gulp-task-doc": "^1.0.8",
+		"gulp-task-doc": "^1.0.8",
 		"gulp-mocha": "^2.2.0",
 		"gulp-shell": "^0.5.2",
 		"istanbul": "^0.4.2",

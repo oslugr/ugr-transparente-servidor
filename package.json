@@ -40,12 +40,14 @@
     "debug": "^2.2.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "express-ejs-layouts": "^2.1.0",
+    "gulp-task-doc": "^1.0.8",
     "morgan": "^1.7.0",
     "node-sass": "^3.4.2",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "async": "^1.5.2",
+    "async": "^2.0.0-rc.3",
     "bower": "^1.7.7",
     "chai": "^3.5.0",
     "coveralls": "^2.11.8",

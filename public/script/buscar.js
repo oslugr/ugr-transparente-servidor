@@ -57,7 +57,7 @@ $(function() {
 	];
 
 	var resultados = "";
-	
+
 	if (consulta.length > 3) {
 		var numResultados = 0;
 

@@ -49,7 +49,7 @@ module.exports = function(app) {
 	app.use(expressLayouts);
 	// Motor de visualización
 	app.set('view engine', 'ejs');
-	  
+
 	if (app.get('env') === "prod") app.enable('view cache');
 
 

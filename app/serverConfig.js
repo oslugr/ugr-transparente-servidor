@@ -1,6 +1,7 @@
+// # Configuración del servidor
+
 "use strict";
-/*
-UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 Copyright (C) 2016 Andrés Ortiz Corrales
@@ -18,23 +19,26 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 
-// Dependencias
+// ### Dependencias
+// * **Body-Parser:** Para leer el body de peticiones http
 var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
+//* **Body-Parser:** Para leer el body de peticiones http
+//var cookieParser = require('cookie-parser');
 var debug = require('debug')('ugr-transparente-servidor:server');
 var favicon = require('serve-favicon');
 
 var logger = require('morgan');
 var path = require('path');
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
+
+// #### Dependencias locales
 
 var config = require('../config/config');
-var expressLayouts = require('express-ejs-layouts');
-//var hbsHelpers = require('./viewHelpers');
+
 
 // Configura el servidor express app
 module.exports = function(app) {
@@ -45,7 +49,7 @@ module.exports = function(app) {
 
 	// Directorio con las plantillas
 	app.set('views', 'views');
-	app.set('layout', 'layouts/default'); // defaults to 'layout' 
+	app.set('layout', 'layouts/default'); // defaults to 'layout'
 	app.use(expressLayouts);
 	// Motor de visualización
 	app.set('view engine', 'ejs');
@@ -62,7 +66,7 @@ module.exports = function(app) {
 	app.use(bodyParser.urlencoded({
 		extended: false
 	}));
-	app.use(cookieParser());
+	//app.use(cookieParser());
 	// Manejador de enrutado
 	if (app.get('env') === "dev") {
 		app.use(express.static('./public'));

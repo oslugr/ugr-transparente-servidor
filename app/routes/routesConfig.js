@@ -1,6 +1,10 @@
-"use strict";
+// # Rutas Generales
 /*
-UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Configuración general de rutas
+*/
+
+"use strict";
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 Copyright (C) 2016 Andrés Ortiz Corrales
@@ -18,10 +22,14 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 var jsons = require('../../config/config').archivosJson;
+
+// **exports**
+// * routes: información de las rutas
+// * routesBusqueda: información de las rutas del buscador
+
 
 module.exports = {
 	routes: [{

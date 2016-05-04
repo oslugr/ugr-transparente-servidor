@@ -29,25 +29,24 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 // ### Dependencias locales
 
 // * [**Rutas configurables**](./routes/routesConfig.html): Rutas genéricas de transparente.ugr
-var routesList = require('./routes/routesConfig').routes;
-var routesBusqueda = require('./routes/routesConfig').routesBusqueda;
 // * **Configuración**: Configuración del servidor
-var config = require('../config/config');
-
 // * **Configuración de rutas específicas**
 //   * [**Index**](./routes/index.html): Ruta a página principal
-var index = require('./routes/index');
 //   * [**Mapa Web**](./routes/mapaWeb.html): Ruta a mapa web
-var mapaWeb = require('./routes/mapaWeb');
 //   * [**Calendario**](./routes/calendario.html): Ruta a calendario
-var calendario = require('./routes/calendario');
 //   * [**Calendario Solo**](./routes/calendarioSolo.html): Ruta a calendario Solo (_Legacy_)
+var routesList = require('./routes/routesConfig').routes;
+var routesBusqueda = require('./routes/routesConfig').routesBusqueda;
+var config = require('../config/config');
+
+var index = require('./routes/index');
+var mapaWeb = require('./routes/mapaWeb');
+var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
 
 // ### Configuración de Rutas
 // Asigna todas las rutas de transparente.ugr
 module.exports = function(app) {
-	// función: Configura una ruta
 	function setRoute(routeConf) {
 		return function(req, res) {
 			res.render(routeConf.plantilla, {
@@ -64,15 +63,13 @@ module.exports = function(app) {
 
 	// #### Otras Rutas
 	// * Inicio: / y /index.html
+	// * Mapa del sitio: /mapaWeb.html
+	// * Calendario: /calendario.html y calendarioSolo.html
 	app.get('/', index.index);
 	app.get('/index.html', index.index);
-
-	// * Mapa del sitio: /mapaWeb.html
 	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
-	// * Calendario: /calendario.html y calendarioSolo.html
 	app.get('/calendario.html', calendario.index);
 	app.get('/calendarioSolo.html', calendarioSolo.index);
-
 
 	// #### Rutas del buscador
 	function setRouteArchivos(routeConf) {
@@ -85,7 +82,7 @@ module.exports = function(app) {
 	}
 
 	// #### Manejador de errores
-	// Devuelve un 404 wn caso de no enrutar correctamente
+	// Devuelve un 404 en caso de no enrutar correctamente
 	app.use(function(req, res, next) {
 		res.status(404).render('error_404', {
 			seccion: config.error.titulo,

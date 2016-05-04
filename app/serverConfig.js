@@ -28,14 +28,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 // ### Dependencias
 
-//var debug = require('debug')('ugr-transparente-servidor:server');
 // * **Serve Favicon:** Devuelve el favicon.ico
-var favicon = require('serve-favicon');
-//var logger = require('morgan');
 // * **Express:** Middleware _static_ de express para servir archivos estáticos
-var expressStatic = require('express').static;
 // * **EJS Layouts:** Módulo para poder crear layouts con EJS
+var favicon = require('serve-favicon');
+var expressStatic = require('express').static;
 var expressLayouts = require('express-ejs-layouts');
+//var logger = require('morgan');
+//var debug = require('debug')('ugr-transparente-servidor:server');
 
 // #### Dependencias locales
 // * **Configuración**: Configuración del servidor
@@ -47,10 +47,10 @@ var config = require('../config/config');
 module.exports = function(app) {
 	// #### Variables de entorno
 	// * **PORT:** Puerto en el que ejecutar transparente
-	app.set('port', process.env.PORT || config.puerto);
 	// * **IP:** IP sobre la que ejecutar transparente (por defecto `127.0.0.1`)
-	app.set('ip', process.env.IP || "127.0.0.1");
 	// * **ENV:** Entorno de ejecución (`PROD` o `DEV`)
+	app.set('port', process.env.PORT || config.puerto);
+	app.set('ip', process.env.IP || "127.0.0.1");
 	app.set('env', process.env.ENV);
 
 	// ### Middlewares

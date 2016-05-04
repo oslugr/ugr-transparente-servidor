@@ -24,13 +24,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 // ### Dependencias
 // * **Body-Parser:** Para leer el body de peticiones http
-var bodyParser = require('body-parser');
-//* **Body-Parser:** Para leer el body de peticiones http
-//var cookieParser = require('cookie-parser');
-var debug = require('debug')('ugr-transparente-servidor:server');
+//var bodyParser = require('body-parser');
+//var debug = require('debug')('ugr-transparente-servidor:server');
 var favicon = require('serve-favicon');
 
-var logger = require('morgan');
+//var logger = require('morgan');
 var path = require('path');
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
@@ -59,14 +57,14 @@ module.exports = function(app) {
 
 	// Favicon
 	app.use(favicon('./public/favicon/favicon.ico'));
-	// Logger de solicitudes HTTP
+	//Logger de solicitudes HTTP
 	//app.use(logger('dev'));
+
 	// Parseadores
-	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({
+	//app.use(bodyParser.json());
+	/*app.use(bodyParser.urlencoded({
 		extended: false
-	}));
-	//app.use(cookieParser());
+	}));*/
 	// Manejador de enrutado
 	if (app.get('env') === "dev") {
 		app.use(express.static('./public'));

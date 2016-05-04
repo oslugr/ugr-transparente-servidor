@@ -35,14 +35,9 @@
 		"test": "test"
 	},
 	"dependencies": {
-		"body-parser": "^1.15.0",
-		"cookie-parser": "^1.4.0",
-		"debug": "^2.2.0",
 		"ejs": "^2.4.1",
 		"express": "^4.13.4",
 		"express-ejs-layouts": "^2.1.0",
-		"gulp-task-doc": "^1.0.8",
-		"morgan": "^1.7.0",
 		"node-sass": "^3.4.2",
 		"serve-favicon": "^2.3.0"
 	},
@@ -58,6 +53,7 @@
 		"gulp-istanbul": "^0.10.3",
 		"gulp-mocha": "^2.2.0",
 		"gulp-shell": "^0.5.2",
+		"gulp-task-doc": "^1.0.8",
 		"istanbul": "^0.4.2",
 		"js-beautify": "^1.6.2",
 		"jshint": "^2.9.1",

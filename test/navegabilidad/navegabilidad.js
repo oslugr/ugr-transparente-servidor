@@ -699,9 +699,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Layout', function() {
 			checkLayout('Mapa del sitio');
-			browser.assert.elements('.seccion',7);
-			browser.assert.elements('.seccion2',9);
-			browser.assert.elements('.seccion3',55);
+			browser.assert.elements('.seccion', 7);
+			browser.assert.elements('.seccion2', 9);
+			browser.assert.elements('.seccion3', 55);
 
 			//check links?
 		});

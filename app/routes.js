@@ -47,50 +47,50 @@ var calendarioSolo = require('./routes/calendarioSolo');
 // ### Configuración de Rutas
 module.exports = function(app) {
 	// función: Configura una ruta
-    function setRoute(routeConf) {
-        return function(req, res) {
-            res.render(routeConf.plantilla, {
-                servidor: config.servidor,
-                seccion: routeConf.datos.nombre,
-                contenido: routeConf.datos.contenido,
-            });
-        };
-    }
+	function setRoute(routeConf) {
+		return function(req, res) {
+			res.render(routeConf.plantilla, {
+				servidor: config.servidor,
+				seccion: routeConf.datos.nombre,
+				contenido: routeConf.datos.contenido,
+			});
+		};
+	}
 	// Configuración de rutas genéricas
-    for (var i = 0; i < routesList.length; i++) {
-        app.get(routesList[i].url, setRoute(routesList[i]));
-    }
+	for (var i = 0; i < routesList.length; i++) {
+		app.get(routesList[i].url, setRoute(routesList[i]));
+	}
 
-    // #### Otras Rutas
-    // * Inicio: / y /index.html
-    app.get('/', index.index);
-    app.get('/index.html', index.index);
+	// #### Otras Rutas
+	// * Inicio: / y /index.html
+	app.get('/', index.index);
+	app.get('/index.html', index.index);
 
-    // * Mapa del sitio: /mapaWeb.html
-    app.get('/mapaWeb.html', mapaWeb.mapaWeb);
-    // * Calendario: /calendario.html y calendarioSolo.html
-    app.get('/calendario.html', calendario.index);
-    app.get('/calendarioSolo.html', calendarioSolo.index);
+	// * Mapa del sitio: /mapaWeb.html
+	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
+	// * Calendario: /calendario.html y calendarioSolo.html
+	app.get('/calendario.html', calendario.index);
+	app.get('/calendarioSolo.html', calendarioSolo.index);
 
 
-    // #### Rutas del buscador
-    function setRouteArchivos(routeConf) {
-        return function(req, res) {
-            res.json(routeConf.datos);
-        };
-    }
-    for (i = 0; i < routesBusqueda.length; i++) {
-        app.get('/archivos' + routesBusqueda[i].url, setRouteArchivos(routesBusqueda[i]));
-    }
+	// #### Rutas del buscador
+	function setRouteArchivos(routeConf) {
+		return function(req, res) {
+			res.json(routeConf.datos);
+		};
+	}
+	for (i = 0; i < routesBusqueda.length; i++) {
+		app.get('/archivos' + routesBusqueda[i].url, setRouteArchivos(routesBusqueda[i]));
+	}
 
-    // #### Manejador de errores
-    // Devuelve un 404 wn caso de no enrutar correctamente
-    app.use(function(req, res, next) {
-        res.status(404).render('error_404', {
-            seccion: config.error.titulo,
-            texto: config.error.texto
-        });
-    });
+	// #### Manejador de errores
+	// Devuelve un 404 wn caso de no enrutar correctamente
+	app.use(function(req, res, next) {
+		res.status(404).render('error_404', {
+			seccion: config.error.titulo,
+			texto: config.error.texto
+		});
+	});
 };
 
 // **Exports:** function(app)

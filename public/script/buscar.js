@@ -65,21 +65,22 @@ $(function() {
 
 			$.getJSON(nombre, function(data) {
 					$.each(data.contenido, function(campo, contenido) {
-						if (campo === "datos") {
+							var link=contenido.link;
+							var encabezado=contenido.encabezado;
+							// Si la consulta coincide con parte de la descripción del conjunto de datos.
+							if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
+								resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + link + "'>" + encabezado + "</a></li>";
+								numResultados++;
+							}
 							// Por cada campo de datos.
-							$.each(valor, function(tabla, contenido) {
+							$.each(contenido.datos, function(tabla, contenido) {
 								// Si la consulta coincide con parte del título de la tabla.
 								if (contenido.nombre.toLowerCase().indexOf(consulta) > -1) {
-									resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html'>" + contenido.nombre + "</a></li>";
+									resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#"+link+"'>" + encabezado+" - "+contenido.nombre + "</a></li>";
 									numResultados++;
 								}
 							});
-						}
-						// Si la consulta coincide con parte de la descripción del conjunto de datos.
-						else if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
-							resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + contenido.link + "'>" + contenido.encabezado + "</a></li>";
-							numResultados++;
-						}
+
 					});
 				})
 				.done(function() {

@@ -644,7 +644,7 @@ describe('Pruebas de Navegabilidad', function() {
 				setTimeout(function() {
 					checkConnection();
 					browser.assert.elements("#contenido li>a.seccion", {
-						atLeast: 10
+						atLeast: 20
 					});
 					done();
 				}, 5 * 1000);

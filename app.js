@@ -1,6 +1,12 @@
-"use strict";
+// # Main App
+
 /*
-UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Ejecutable principal de transparente.ugr.es
+*/
+
+
+"use strict";
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
 Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 Copyright (C) 2016 Andrés Ortiz Corrales
@@ -18,24 +24,28 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
+
+// ### Dependencias
+// * **Express:** Framework web
 var express = require('express');
 var app = express();
 
-var serverConfig = require('./app/serverConfig'); //creates server
+// #### Dependencias Locales
+// * [**Server Config**](./serverConfig.html): Configuración del servidor
+var serverConfig = require('./app/serverConfig');
+// * [**Routes**](./routes.html): Rutas del servidor
 var routes = require('./app/routes');
 
-//will set server configuration
 serverConfig(app);
-//will set all routes
 routes(app);
 
-// Creación del servidor
+// Se levanta la aplicación en el puerto e ip determinados
 var server = app.listen(app.get('port'), app.get('ip'), function() {
 	console.log("UGR - Transparente " + process.env.npm_package_version);
 	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
+// **Exports:** server
 module.exports = server;

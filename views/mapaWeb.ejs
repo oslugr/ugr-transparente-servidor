@@ -3,7 +3,7 @@
         <% for(var i in secciones){
             var sec=secciones[i];
             var link="";
-            if (sec.enlace) link="href=\"" + sec.enlace + "\"";
+            if (sec.enlace) link="href=" + sec.enlace;
             %>
         <li>
             <a class="seccion" <%=link%>><%=sec.nombre%></a>

@@ -45,6 +45,7 @@ var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
 
 // ### Configuración de Rutas
+// Asigna todas las rutas de transparente.ugr
 module.exports = function(app) {
 	// función: Configura una ruta
 	function setRoute(routeConf) {

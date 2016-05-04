@@ -1,5 +1,9 @@
 // # Configuración del servidor
 
+/*
+Configuración del servidor express, variables de entorno, middlewares y demás
+*/
+
 "use strict";
 /*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
@@ -23,50 +27,49 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 
 // ### Dependencias
-// * **Body-Parser:** Para leer el body de peticiones http
-//var bodyParser = require('body-parser');
-//var debug = require('debug')('ugr-transparente-servidor:server');
-var favicon = require('serve-favicon');
 
+//var debug = require('debug')('ugr-transparente-servidor:server');
+// * **Serve Favicon:** Devuelve el favicon.ico
+var favicon = require('serve-favicon');
 //var logger = require('morgan');
-var path = require('path');
-var express = require('express');
+// * **Express:** Middleware _static_ de express para servir archivos estáticos
+var expressStatic = require('express').static;
+// * **EJS Layouts:** Módulo para poder crear layouts con EJS
 var expressLayouts = require('express-ejs-layouts');
 
 // #### Dependencias locales
-
+// * **Configuración**: Configuración del servidor
 var config = require('../config/config');
 
 
-// Configura el servidor express app
+// ### Configuración de servidor
+// Configura los middlewares y variables del servidor express
 module.exports = function(app) {
-	// Variables de entorno
+	// #### Variables de entorno
+	// * **PORT:** Puerto en el que ejecutar transparente
 	app.set('port', process.env.PORT || config.puerto);
+	// * **IP:** IP sobre la que ejecutar transparente (por defecto `127.0.0.1`)
 	app.set('ip', process.env.IP || "127.0.0.1");
+	// * **ENV:** Entorno de ejecución (`PROD` o `DEV`)
 	app.set('env', process.env.ENV);
 
-	// Directorio con las plantillas
+	// ### Middlewares
+	// Motor de renderizado (EJS), carpeta views por defecto para las platillas, layout por defecto `layouts/default`
 	app.set('views', 'views');
-	app.set('layout', 'layouts/default'); // defaults to 'layout'
+	app.set('layout', 'layouts/default');
 	app.use(expressLayouts);
-	// Motor de visualización
 	app.set('view engine', 'ejs');
-
+	//En entorno de producción activamos el cache de plantillas
 	if (app.get('env') === "prod") app.enable('view cache');
 
-
-	// Favicon
+	// **Favicon**: `public/favicon/favicon.ico`
 	app.use(favicon('./public/favicon/favicon.ico'));
 	//Logger de solicitudes HTTP
 	//app.use(logger('dev'));
 
-	// Parseadores
-	//app.use(bodyParser.json());
-	/*app.use(bodyParser.urlencoded({
-		extended: false
-	}));*/
-	// Manejador de enrutado
+	// Middleware de enrutado
+	// En entorno de desarrollo, express enrutará los ficheros estáticos, en entorno de producción no
 	if (app.get('env') === "dev") {
-		app.use(express.static('./public'));
+		app.use(expressStatic('./public'));
 	}
 };

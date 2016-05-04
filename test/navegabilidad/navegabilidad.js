@@ -697,8 +697,13 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.style('#menu_docencia', 'display', 'none');
 			browser.assert.style('#menu_gestin-e-investigacin', 'display', 'none');
 		});
-		it.skip('Layout', function() {
-			return new Error("Not implmented");
+		it('Layout', function() {
+			checkLayout('Mapa del sitio');
+			browser.assert.elements('.seccion',7);
+			browser.assert.elements('.seccion2',9);
+			browser.assert.elements('.seccion3',55);
+
+			//check links?
 		});
 	});
 });

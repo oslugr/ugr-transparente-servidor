@@ -38,7 +38,7 @@ var expressLayouts = require('express-ejs-layouts');
 //var debug = require('debug')('ugr-transparente-servidor:server');
 
 // #### Dependencias locales
-// * **Configuración**: Configuración del servidor
+// * [**Configuración**](./config/config.html): Configuración del servidor
 var config = require('../config/config');
 
 
@@ -73,3 +73,6 @@ module.exports = function(app) {
 		app.use(expressStatic('./public'));
 	}
 };
+
+// ### Exports
+// * function(app): realiza la configuración de servidor sobre app de express

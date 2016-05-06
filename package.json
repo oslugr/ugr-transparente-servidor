@@ -84,6 +84,6 @@
 		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js public/script/*.js",
 		"sass": "node-sass ./public/styles/*.scss -o ./public/styles/css",
 		"jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js",
-		"doc": "groc"
+		"doc": "rm -rf doc;groc"
 	}
 }

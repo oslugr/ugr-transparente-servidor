@@ -23,10 +23,12 @@ Configuración de la ruta del mapaweb `/mapaWeb`
   You should have received a copy of the GNU General Public License
   along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
+// ### Dependencias locales
+// * [**Configuración**](../config/config.html): Archivos json del servidor
 var config = require('../../config/config').archivosJson;
 
-// **exports**
-// * callback para renderizar mapaWeb
+// ### Exports
+// * `mapaWeb(req,res)`: callback para renderizar mapaWeb
 exports.mapaWeb = function(req, res) {
 	res.render('mapaWeb', {
 		seccion: 'Mapa del sitio',

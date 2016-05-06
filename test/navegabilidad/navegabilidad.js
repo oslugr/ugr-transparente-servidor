@@ -1,11 +1,56 @@
+// # Test de Navegabilidad
+// Pruebas de navegabilidad de transparente
+
+
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2015 Germán Martínez Maldonado
+Copyright (C) 2016 Andrés Ortiz Corrales
+
+This file is part of UGR Transparente.
+
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.*/
+
+// ### Dependencias
+
+// * **Chai:** Módulo de aserciones
+// * **Async:** Librería para código asíncrono
+// * **Zombie:** Módulo para tests de navegabilidad
+// * **Supertest:** Peticiones Http
+
 var assert = require('chai').assert;
-var config = require('../config');
 var async = require('async');
 var Browser = require('zombie');
 var request = require('supertest');
 
+// #### Dependencias locales
+
+// * [**Configuración de tests**](../config.html): Datos de configuración de los tests
+// * [**Configuración de servidor**](../../config/config.html): Puerto por defecto de transparente
+
+var config = require('../config');
+
+// ### Configuración de test
+// * `process.env.ENV==="prod"`: Pruebas sobre el servidor externo en producción (dado por la url)
+//   * url: web de transparente par realizar pruebas en producción
+// * `process.env.ENV!="prod"`: Pruebas sobre servidor local
+//   * `process.env.PORT:` Puerto del servidor local (por defecto el de configuración)
+//   * `rocess.env.IP`: Dirección IP del servidor local (por defecto localhost)
+
 var runLocalServer = false;
 if (process.env.ENV === "prod") url = "http://transparente.ugr.es/";
+
+
 else {
 	var port = process.env.PORT || require('../../config/config').puerto;
 	var ip = process.env.IP || "127.0.0.1";
@@ -16,13 +61,15 @@ else {
 
 var browser = new Browser();
 
+// ### Funciones Auxiliares
+// * `clickAll(selector,done)`: Pincha todos los elementos que coinciden con el selector dado, ejecuta callback después de haber pinchado todos los elementos
 function clickAll(selector, done) {
 	var buttons = browser.queryAll(selector);
 	async.each(buttons, function(item, cb) {
 		browser.fire(item, 'click', cb);
 	}, done);
 }
-
+// * `checkLink(link,done,status)`: Comprueba que el link proporcionado devuelve un código válido (menor de 400), si status está definido, se comprobará que el código coincide. Si el código devuelto es una redirección, se redireccionará antes de realizar las comprobaciones
 function checkLink(link, done, status) {
 	var dir;
 	var url2;
@@ -52,11 +99,11 @@ function checkLink(link, done, status) {
 			return done();
 		});
 }
-
+// * `checkBreadcrumb(text)`: Comprueba el texto del elemento breadcrumb (rastro)
 function checkBreadcrumb(text) {
 	browser.assert.text('#rastro-idiomas ul#rastro_breadcrumb li > span.first', text);
 }
-
+// * `checkAllLinks(selector, done, status)`: Ejecuta checkLink sobre todos los links coincidentes con el selector dado
 function checkAllLinks(selector, done, status) {
 	var links = browser.queryAll(selector);
 	async.each(links, function(item, cb) {
@@ -65,7 +112,7 @@ function checkAllLinks(selector, done, status) {
 		checkLink(url, cb, status);
 	}, done);
 }
-
+// * `checkTables(done)`: Función genérica de comprobación de tablas, comprobará que se han generado correctamente y los links de esta
 function checkTables(done) {
 	var tables = browser.queryAll("#contenido div.level1 table");
 	async.each(tables, function(item, cb) {
@@ -83,14 +130,14 @@ function checkTables(done) {
 		}, cb);
 	}, done);
 }
-
+// * `checkConnection(title)`: Función genérica de comprobación de conexión básica, comprobará el _status_ y el titulo (si no se define el titulo tomará un valor por defecto)
 function checkConnection(title) {
 	title = title || "UGR Transparente | Universidad de Granada";
 	browser.assert.success();
 	browser.assert.text('title', title);
 	browser.assert.status(200);
 }
-
+// * `checkLayout(title)`: Función genérica de comprobación de layout de contenido central, comprobará titulo y elementos contenedores básicos
 function checkLayout(title) {
 	browser.assert.element('#pagina');
 	browser.assert.element('h1#titulo_pagina');
@@ -98,6 +145,11 @@ function checkLayout(title) {
 	browser.assert.element('#pagina #contenido');
 }
 
+// ### Pruebas de Navegabilidad
+// Pruebas de simulación de navegación
+// * _before:_ Inicia el servidor
+// * _after:_ Cierra el servidor
+// * _timeout:_ 80 segundos
 describe('Pruebas de Navegabilidad', function() {
 	this.timeout(80000);
 	var server;
@@ -115,6 +167,12 @@ describe('Pruebas de Navegabilidad', function() {
 	after(function() {
 		if (runLocalServer) server.close();
 	});
+
+	// * **Layout & Menu**: Comprobación de Layout general y menú lateral
+	//    * Menu: Comprueba el menú lateral generado y su funcionamiento al pinchar
+	//    * Banners: Comprueba banners laterales generados
+	//    * Header: Prueba el Header (layout, menú de búsqueda,...)
+	//    * Footer: Comprueba el footer generado y links
 	describe('Layout & Menu', function() {
 		before(function(done) {
 			browser.visit(url + '/', function(err) {
@@ -223,15 +281,19 @@ describe('Pruebas de Navegabilidad', function() {
 			});
 		});
 	});
-
+	// * **Index**: Comprobación del menú principal `/index.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Index Menu: Prueba del menú central del inicio
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Index', function() {
 		before(function(done) {
-			browser.visit(url + '/', function(err) {
+			browser.visit(url + '/index.html', function(err) {
 				assert.notOk(err);
 				done();
 			});
 		});
-
 		it('Connection', function() {
 			checkConnection();
 		});
@@ -297,6 +359,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Inicio");
 		});
 	});
+	// * **Información Institucional**: Comprobación de la información institucional `/infoInstitucional.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Links: Prueba de los links del contenido principal
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Información Institucional', function() {
 		before(function(done) {
 			browser.visit(url + '/infoInstitucional.html', function(err) {
@@ -326,6 +394,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Información Institucional");
 		});
 	});
+	// * **Personal**: Comprobación de la información del personal `/personal.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Personal', function() {
 		before(function(done) {
 			browser.visit(url + '/personal.html', function(err) {
@@ -355,6 +429,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Administración / Personal");
 		});
 	});
+	// * **Información Económica**: Comprobación de la información económica `/infoEconomica.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Información Económica', function() {
 		before(function(done) {
 			browser.visit(url + '/infoEconomica.html', function(err) {
@@ -384,6 +464,11 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Administración / Información Económica");
 		});
 	});
+	// * **Perfil del Contratante**: Comprobación del perfil del contratante `/perfilContratante.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Perfil del Contratante', function() {
 		before(function(done) {
 			browser.visit(url + '/perfilContratante.html', function(err) {
@@ -415,6 +500,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Administración / Perfil del Contratante");
 		});
 	});
+	// * **Oferta y Demanda Académica**: Comprobación de la información de oferta y demanda académica `/ofertaDemanda.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Oferta y Demanda Académica', function() {
 		before(function(done) {
 			browser.visit(url + '/ofertaDemanda.html', function(err) {
@@ -444,6 +535,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Docencia / Oferta y Demanda Académica");
 		});
 	});
+	// * **Claustro**: Comprobación del claustro `/claustro.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Claustro', function() {
 		before(function(done) {
 			browser.visit(url + '/claustro.html', function(err) {
@@ -473,6 +570,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Docencia / Claustro");
 		});
 	});
+	// * **Estudiantes**: Comprobación de estudiantes `/estudiantes.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Estudiantes', function() {
 		before(function(done) {
 			browser.visit(url + '/estudiantes.html', function(err) {
@@ -502,6 +605,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Docencia / Estudiantes");
 		});
 	});
+	// * **Gobierno**: Comprobación de la información de gobierno `/gobierno.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Gobierno', function() {
 		before(function(done) {
 			browser.visit(url + '/gobierno.html', function(err) {
@@ -531,6 +640,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Gestión e Investigación / Gobierno");
 		});
 	});
+	// * **Rendimiento**: Comprobación de la información de rendimiento `/rendimiento.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Rendimiento', function() {
 		this.timeout(100000);
 		before(function(done) {
@@ -561,6 +676,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Gestión e Investigación / Rendimiento");
 		});
 	});
+	// * **Normativa Legal**: Comprobación de la normativa legal `/normativaLegal.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Tablas: Prueba genérica de las tablas generadas
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Normativa Legal', function() {
 		before(function(done) {
 			browser.visit(url + '/normativaLegal.html', function(err) {
@@ -589,6 +710,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Normativa Legal");
 		});
 	});
+	// * **Solicitud de Información**: Comprobación de menú de solicitud de información `/solicitudInfo.html`
+	//    * Connection: Comprobación de conexión y título
+	//    * Menu: Comprobación del estado del menú lateral
+	//    * Layout: Comprobación básica del Layout general
+	//    * Formulario: Prueba del acceso al formulario de solicitud
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Solicitud de Información', function() {
 		before(function(done) {
 			browser.visit(url + '/solicitudInfo.html', function(err) {
@@ -621,6 +748,12 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Solicitud de Información");
 		});
 	});
+	// * **Buscador**: Comprobación del buscador y resultados `/buscador.html`
+	//    * Connection: Comprobación de conexión
+	//    * Layout: Comprobación del layout especfico del buscador
+	//    * Búsqueda: Prueba de búsqueda y resultados obtenidos
+	//    * Links: Prueba de los links generados por el buscador
+	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Buscador', function() {
 		before(function(done) {
 			browser.visit(url + '/buscador.html', function(err) {
@@ -657,6 +790,10 @@ describe('Pruebas de Navegabilidad', function() {
 			checkBreadcrumb("Buscador");
 		});
 	});
+	// * **404 page**: Comprobación de la página de error 404 (probando con `/foo`)
+	//    * Connection: Comprobación de conexión, titúlo y estado 404
+	//    * Menu: Comprobación del menú lateral (nada seleccionado)
+	//    * Layout: Comprobación básica del Layout general
 	describe('404 page', function() {
 		before(function(done) {
 			browser.visit(url + '/foo', function(err) {
@@ -679,7 +816,10 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLayout('Página no encontrada (Error 404)');
 		});
 	});
-
+	// * **Mapa Web**: Comprobación del mapa web (`/mapaWeb.html`)
+	//    * Connection: Comprobación de conexión, titúlo y estado 404
+	//    * Menu: Comprobación del menú lateral
+	//    * Layout: Comprobación básica del Layout general y elementos específicos del mapa web
 	describe('Mapa web', function() {
 		before(function(done) {
 			browser.visit(url + '/mapaWeb.html', function(err) {
@@ -703,7 +843,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.elements('.seccion2', 9);
 			browser.assert.elements('.seccion3', 55);
 
-			//check links?
+			//TODO: check links?
 		});
 	});
 });

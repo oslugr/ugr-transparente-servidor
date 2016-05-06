@@ -1,4 +1,4 @@
-// # Menú Principal
+// # Ruta Menú Principal
 /*
 Configuración de la ruta del menú principal (`/` y `/index`)
 */
@@ -24,6 +24,8 @@ Configuración de la ruta del menú principal (`/` y `/index`)
   You should have received a copy of the GNU General Public License
   along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
+// ### Dependencias locales
+// * [**Configuración**](../config/config.html): Configuración del servidor
 var config = require('../../config/config');
 
 //Rellenamos el vector con los enlaces leidos del fichero de configuracion
@@ -42,8 +44,8 @@ function leerEnlaces() {
 	}
 }
 
-// **exports**
-// * callback para renderizar inicio
+// ### Exports
+// * `index(req,res)`: callback para renderizar inicio
 exports.index = function(req, res) {
 	if (enlaces.length === 0)
 		leerEnlaces();

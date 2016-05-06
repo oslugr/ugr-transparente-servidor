@@ -1,4 +1,4 @@
 {
   "glob": ["README.md", "app.js", "app/*js", "app/routes/index.js","app/routes/mapaWeb.js","app/routes/routesConfig.js", "test/*js", "test/navegabilidad/navegabilidad.js", "config/config.js"],
-  "github": false
+  "github": true
 }

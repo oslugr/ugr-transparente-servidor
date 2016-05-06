@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><title>serverConfig</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="serverConfig"><meta name="groc-project-path" content="app/serverConfig.js"><meta name="groc-github-url" content="https://github.com/oslugr/ugr-transparente-servidor"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/oslugr/ugr-transparente-servidor/blob/master/app/serverConfig.js">app/serverConfig.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="configuracin-del-servidor">Configuración del servidor</h1></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Configuración del servidor express, variables de entorno, middlewares y demás</p></div></div><div class="code"><div class="wrapper"><span class="hljs-pi">
+"use strict"</span>;
+<span class="hljs-comment">/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
+Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
+Copyright (C) 2016 Andrés Ortiz Corrales
+
+This file is part of UGR Transparente.
+
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="dependencias">Dependencias</h3></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Serve Favicon:</strong> Devuelve el favicon.ico</li>
+<li><strong>Express:</strong> Middleware <em>static</em> de express para servir archivos estáticos</li>
+<li><strong>EJS Layouts:</strong> Módulo para poder crear layouts con EJS</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> favicon = <span class="hljs-built_in">require</span>(<span class="hljs-string">'serve-favicon'</span>);
+<span class="hljs-keyword">var</span> expressStatic = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>).static;
+<span class="hljs-keyword">var</span> expressLayouts = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express-ejs-layouts'</span>);
+<span class="hljs-comment">//var logger = require('morgan');</span>
+<span class="hljs-comment">//var debug = require('debug')('ugr-transparente-servidor:server');</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="dependencias-locales">Dependencias locales</h4>
+<ul>
+<li><a href="./config/config.html"><strong>Configuración</strong></a>: Configuración del servidor</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../config/config'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="configuracin-de-servidor">Configuración de servidor</h3>
+<p>Configura los middlewares y variables del servidor express</p></div></div><div class="code"><div class="wrapper"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">app</span>) </span>{</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="variables-de-entorno">Variables de entorno</h4>
+<ul>
+<li><strong>PORT:</strong> Puerto en el que ejecutar transparente</li>
+<li><strong>IP:</strong> IP sobre la que ejecutar transparente (por defecto <code>127.0.0.1</code>)</li>
+<li><strong>ENV:</strong> Entorno de ejecución (<code>PROD</code> o <code>DEV</code>)</li>
+</ul></div></div><div class="code"><div class="wrapper">	app.set(<span class="hljs-string">'port'</span>, process.env.PORT || config.puerto);
+	app.set(<span class="hljs-string">'ip'</span>, process.env.IP || <span class="hljs-string">"127.0.0.1"</span>);
+	app.set(<span class="hljs-string">'env'</span>, process.env.ENV);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="middlewares">Middlewares</h3>
+<p>Motor de renderizado (EJS), carpeta views por defecto para las platillas, layout por defecto <code>layouts/default</code></p></div></div><div class="code"><div class="wrapper">	app.set(<span class="hljs-string">'views'</span>, <span class="hljs-string">'views'</span>);
+	app.set(<span class="hljs-string">'layout'</span>, <span class="hljs-string">'layouts/default'</span>);
+	app.use(expressLayouts);
+	app.set(<span class="hljs-string">'view engine'</span>, <span class="hljs-string">'ejs'</span>);
+	<span class="hljs-comment">//En entorno de producción activamos el cache de plantillas</span>
+	<span class="hljs-keyword">if</span> (app.get(<span class="hljs-string">'env'</span>) === <span class="hljs-string">"prod"</span>) app.enable(<span class="hljs-string">'view cache'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Favicon</strong>: <code>public/favicon/favicon.ico</code></p></div></div><div class="code"><div class="wrapper">	app.use(favicon(<span class="hljs-string">'./public/favicon/favicon.ico'</span>));
+	<span class="hljs-comment">//Logger de solicitudes HTTP</span>
+	<span class="hljs-comment">//app.use(logger('dev'));</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Middleware de enrutado
+En entorno de desarrollo, express enrutará los ficheros estáticos, en entorno de producción no</p></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">if</span> (app.get(<span class="hljs-string">'env'</span>) === <span class="hljs-string">"dev"</span>) {
+		app.use(expressStatic(<span class="hljs-string">'./public'</span>));
+	}
+};</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="exports">Exports</h3>
+<ul>
+<li>function(app): realiza la configuración de servidor sobre app de express</li>
+</ul></div></div></div></div></body></html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html><html lang="en"><head><title>test/navegabilidad/navegabilidad</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="test/navegabilidad/navegabilidad"><meta name="groc-project-path" content="test/navegabilidad/navegabilidad.js"><meta name="groc-github-url" content="https://github.com/oslugr/ugr-transparente-servidor"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/oslugr/ugr-transparente-servidor/blob/master/test/navegabilidad/navegabilidad.js">test/navegabilidad/navegabilidad.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="test-de-navegabilidad">Test de Navegabilidad</h1>
+<p>Pruebas de navegabilidad de transparente</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2015 Germán Martínez Maldonado
+Copyright (C) 2016 Andrés Ortiz Corrales
+
+This file is part of UGR Transparente.
+
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="dependencias">Dependencias</h3></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Chai:</strong> Módulo de aserciones</li>
+<li><strong>Async:</strong> Librería para código asíncrono</li>
+<li><strong>Zombie:</strong> Módulo para tests de navegabilidad</li>
+<li><strong>Supertest:</strong> Peticiones Http</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'chai'</span>).assert;
+<span class="hljs-keyword">var</span> <span class="hljs-keyword">async</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">'async'</span>);
+<span class="hljs-keyword">var</span> Browser = <span class="hljs-built_in">require</span>(<span class="hljs-string">'zombie'</span>);
+<span class="hljs-keyword">var</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">'supertest'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="dependencias-locales">Dependencias locales</h4></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><a href="../config.html"><strong>Configuración de tests</strong></a>: Datos de configuración de los tests</li>
+<li><a href="../../config/config.html"><strong>Configuración de servidor</strong></a>: Puerto por defecto de transparente</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../config'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="configuracin-de-test">Configuración de test</h3>
+<ul>
+<li><code>process.env.ENV===&quot;prod&quot;</code>: Pruebas sobre el servidor externo en producción (dado por la url)<ul>
+<li>url: web de transparente par realizar pruebas en producción</li>
+</ul>
+</li>
+<li><code>process.env.ENV!=&quot;prod&quot;</code>: Pruebas sobre servidor local<ul>
+<li><code>process.env.PORT:</code> Puerto del servidor local (por defecto el de configuración)</li>
+<li><code>rocess.env.IP</code>: Dirección IP del servidor local (por defecto localhost)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> runLocalServer = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">if</span> (process.env.ENV === <span class="hljs-string">"prod"</span>) url = <span class="hljs-string">"http://transparente.ugr.es/"</span>;
+
+
+<span class="hljs-keyword">else</span> {
+	<span class="hljs-keyword">var</span> port = process.env.PORT || <span class="hljs-built_in">require</span>(<span class="hljs-string">'../../config/config'</span>).puerto;
+	<span class="hljs-keyword">var</span> ip = process.env.IP || <span class="hljs-string">"127.0.0.1"</span>;
+
+	<span class="hljs-keyword">var</span> url = <span class="hljs-string">"http://"</span> + ip + <span class="hljs-string">":"</span> + port;
+	runLocalServer = <span class="hljs-literal">true</span>;
+}
+
+<span class="hljs-keyword">var</span> browser = <span class="hljs-keyword">new</span> Browser();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="funciones-auxiliares">Funciones Auxiliares</h3>
+<ul>
+<li><code>clickAll(selector,done)</code>: Pincha todos los elementos que coinciden con el selector dado, ejecuta callback después de haber pinchado todos los elementos</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickAll</span>(<span class="hljs-params">selector, done</span>) </span>{
+	<span class="hljs-keyword">var</span> buttons = browser.queryAll(selector);
+	<span class="hljs-keyword">async</span>.each(buttons, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb</span>) </span>{
+		browser.fire(item, <span class="hljs-string">'click'</span>, cb);
+	}, done);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkLink(link,done,status)</code>: Comprueba que el link proporcionado devuelve un código válido (menor de 400), si status está definido, se comprobará que el código coincide. Si el código devuelto es una redirección, se redireccionará antes de realizar las comprobaciones</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkLink</span>(<span class="hljs-params">link, done, status</span>) </span>{
+	<span class="hljs-keyword">var</span> dir;
+	<span class="hljs-keyword">var</span> url2;
+	<span class="hljs-keyword">if</span> (link[<span class="hljs-number">0</span>] === <span class="hljs-string">"#"</span>) <span class="hljs-keyword">return</span> done();
+	<span class="hljs-keyword">if</span> (link[<span class="hljs-number">0</span>] === <span class="hljs-string">"/"</span>) {
+		dir = link;
+		url2 = url;
+	} <span class="hljs-keyword">else</span> {
+		<span class="hljs-keyword">var</span> arr = link.split(<span class="hljs-string">'/'</span>);
+		url2 = arr[<span class="hljs-number">0</span>] + <span class="hljs-string">"//"</span> + arr[<span class="hljs-number">2</span>];
+		dir = link.split(arr[<span class="hljs-number">2</span>])[<span class="hljs-number">1</span>];
+		<span class="hljs-keyword">if</span> (dir === <span class="hljs-string">""</span>) dir = <span class="hljs-string">"/"</span>;
+	}
+	assert.ok(url2);
+	assert.ok(dir);
+
+	request(url2).get(dir)
+		.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+			assert.notOk(err);
+			<span class="hljs-keyword">if</span> (res.status &gt;= <span class="hljs-number">300</span> &amp;&amp; res.status &lt; <span class="hljs-number">400</span>) {
+				<span class="hljs-keyword">var</span> loc = res.header.location;
+				assert.ok(loc);
+				<span class="hljs-keyword">return</span> checkLink(loc, done, status);
+			}
+			<span class="hljs-keyword">if</span> (status) assert.strictEqual(res.status, status);
+			<span class="hljs-keyword">else</span> assert.isBelow(res.status, <span class="hljs-number">400</span>, res.status + <span class="hljs-string">" on "</span> + link);
+			<span class="hljs-keyword">return</span> done();
+		});
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkBreadcrumb(text)</code>: Comprueba el texto del elemento breadcrumb (rastro)</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkBreadcrumb</span>(<span class="hljs-params">text</span>) </span>{
+	browser.assert.text(<span class="hljs-string">'#rastro-idiomas ul#rastro_breadcrumb li &gt; span.first'</span>, text);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkAllLinks(selector, done, status)</code>: Ejecuta checkLink sobre todos los links coincidentes con el selector dado</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkAllLinks</span>(<span class="hljs-params">selector, done, status</span>) </span>{
+	<span class="hljs-keyword">var</span> links = browser.queryAll(selector);
+	<span class="hljs-keyword">async</span>.each(links, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb</span>) </span>{
+		<span class="hljs-keyword">var</span> url = item.getAttribute(<span class="hljs-string">"href"</span>);
+		assert.ok(url);
+		checkLink(url, cb, status);
+	}, done);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkTables(done)</code>: Función genérica de comprobación de tablas, comprobará que se han generado correctamente y los links de esta</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkTables</span>(<span class="hljs-params">done</span>) </span>{
+	<span class="hljs-keyword">var</span> tables = browser.queryAll(<span class="hljs-string">"#contenido div.level1 table"</span>);
+	<span class="hljs-keyword">async</span>.each(tables, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb</span>) </span>{
+		<span class="hljs-keyword">var</span> rows = browser.queryAll(<span class="hljs-string">"tr"</span>, item);
+		assert.isAbove(rows.length, <span class="hljs-number">1</span>);
+		<span class="hljs-keyword">var</span> links = browser.queryAll(<span class="hljs-string">"a"</span>, item);
+		<span class="hljs-keyword">async</span>.each(links, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb2</span>) </span>{
+			<span class="hljs-keyword">var</span> url = item.getAttribute(<span class="hljs-string">"href"</span>);
+			<span class="hljs-keyword">var</span> url2 = item.getAttribute(<span class="hljs-string">"rel"</span>);
+			assert.ok(url);
+			checkLink(url, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span> (url2) checkLink(url2, cb2);
+				<span class="hljs-keyword">else</span> cb2();
+			});
+		}, cb);
+	}, done);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkConnection(title)</code>: Función genérica de comprobación de conexión básica, comprobará el <em>status</em> y el titulo (si no se define el titulo tomará un valor por defecto)</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkConnection</span>(<span class="hljs-params">title</span>) </span>{
+	title = title || <span class="hljs-string">"UGR Transparente | Universidad de Granada"</span>;
+	browser.assert.success();
+	browser.assert.text(<span class="hljs-string">'title'</span>, title);
+	browser.assert.status(<span class="hljs-number">200</span>);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><code>checkLayout(title)</code>: Función genérica de comprobación de layout de contenido central, comprobará titulo y elementos contenedores básicos</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkLayout</span>(<span class="hljs-params">title</span>) </span>{
+	browser.assert.element(<span class="hljs-string">'#pagina'</span>);
+	browser.assert.element(<span class="hljs-string">'h1#titulo_pagina'</span>);
+	browser.assert.text(<span class="hljs-string">'#titulo_pagina span'</span>, title);
+	browser.assert.element(<span class="hljs-string">'#pagina #contenido'</span>);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="pruebas-de-navegabilidad">Pruebas de Navegabilidad</h3>
+<p>Pruebas de simulación de navegación</p>
+<ul>
+<li><em>before:</em> Inicia el servidor</li>
+<li><em>after:</em> Cierra el servidor</li>
+<li><em>timeout:</em> 80 segundos</li>
+</ul></div></div><div class="code"><div class="wrapper">describe(<span class="hljs-string">'Pruebas de Navegabilidad'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">80000</span>);
+	<span class="hljs-keyword">var</span> server;
+	<span class="hljs-keyword">var</span> app;
+	<span class="hljs-keyword">if</span> (runLocalServer) <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"- Local Server -"</span>);
+	before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">if</span> (runLocalServer) {
+			config.initServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">app2, server2</span>) </span>{
+				server = server2;
+				app = app2;
+				<span class="hljs-keyword">return</span> done();
+			}, <span class="hljs-literal">true</span>);
+		} <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> done();
+	});
+	after(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span> (runLocalServer) server.close();
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Layout &amp; Menu</strong>: Comprobación de Layout general y menú lateral<ul>
+<li>Menu: Comprueba el menú lateral generado y su funcionamiento al pinchar</li>
+<li>Banners: Comprueba banners laterales generados</li>
+<li>Header: Prueba el Header (layout, menú de búsqueda,...)</li>
+<li>Footer: Comprueba el footer generado y links</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Layout &amp; Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			<span class="hljs-comment">//Check number of elements</span>
+			browser.assert.element(<span class="hljs-string">'#menus'</span>);
+			browser.assert.element(<span class="hljs-string">'#enlaces_secciones'</span>);
+			browser.assert.elements(<span class="hljs-string">'#menus .item-first_level'</span>, <span class="hljs-number">7</span>);
+			browser.assert.elements(<span class="hljs-string">'#menus .item-second_level'</span>, <span class="hljs-number">8</span>);
+			browser.assert.elements(<span class="hljs-string">'#menus a.grupos'</span>, <span class="hljs-number">3</span>);
+			<span class="hljs-comment">//Links</span>
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Inicio'</span>, <span class="hljs-string">'/index.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Información Institucional'</span>, <span class="hljs-string">'/infoInstitucional.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Personal'</span>, <span class="hljs-string">'/personal.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Información Económica'</span>, <span class="hljs-string">'/infoEconomica.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Perfil del Contratante'</span>, <span class="hljs-string">'/perfilContratante.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Oferta y Demanda Académica'</span>, <span class="hljs-string">'/ofertaDemanda.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Claustro'</span>, <span class="hljs-string">'/claustro.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Estudiantes'</span>, <span class="hljs-string">'/estudiantes.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Gobierno'</span>, <span class="hljs-string">'/gobierno.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Rendimiento'</span>, <span class="hljs-string">'/rendimiento.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Normativa Legal'</span>, <span class="hljs-string">'/normativaLegal.html'</span>);
+			browser.assert.link(<span class="hljs-string">'#menus a'</span>, <span class="hljs-string">'Solicitud de Información'</span>, <span class="hljs-string">'/solicitudInfo.html'</span>);
+			<span class="hljs-comment">//Clicking</span>
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+
+			clickAll(<span class="hljs-string">'.grupos'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+				browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+				browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+				clickAll(<span class="hljs-string">'.grupos'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+					assert.notOk(err);
+					browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+					browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+					browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+					done();
+				});
+			});
+		});
+		it(<span class="hljs-string">'Banners'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.assert.element(<span class="hljs-string">"#banners"</span>);
+			browser.assert.element(<span class="hljs-string">'#banners ul'</span>);
+			browser.assert.elements(<span class="hljs-string">'#banners ul li'</span>, {
+				atLeast: <span class="hljs-number">4</span>
+			});
+			browser.assert.elements(<span class="hljs-string">'#banners li a'</span>, {
+				atLeast: <span class="hljs-number">4</span>
+			});
+			browser.assert.elements(<span class="hljs-string">'#banners li a&gt;p'</span>, {
+				atLeast: <span class="hljs-number">4</span>
+			});
+			browser.assert.elements(<span class="hljs-string">'#banners li a&gt;strong'</span>, {
+				atLeast: <span class="hljs-number">4</span>
+			});
+			checkAllLinks(<span class="hljs-string">"#banners ul a"</span>, done);
+		});
+		it(<span class="hljs-string">'Header'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.assert.element(<span class="hljs-string">'#cabecera'</span>);
+			browser.assert.link(<span class="hljs-string">'#cabecera #enlace_ugr'</span>, <span class="hljs-string">'Universidad de Granada'</span>, <span class="hljs-string">'http://www.ugr.es/'</span>);
+			browser.assert.link(<span class="hljs-string">'#cabecera #enlace_stack'</span>, <span class="hljs-string">'UGR Transparente'</span>, <span class="hljs-string">'/'</span>);
+			browser.assert.link(<span class="hljs-string">'#cabecera #enlace_eadministracion'</span>, <span class="hljs-string">'Administración electrónica'</span>, <span class="hljs-string">'http://www.ugr.es/pages/administracion'</span>);
+			browser.assert.element(<span class="hljs-string">'#cabecera #buscador'</span>);
+
+			checkLink(<span class="hljs-string">'http://www.ugr.es/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				checkLink(<span class="hljs-string">'http://www.ugr.es/pages/administracion'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					done();
+				});
+			});
+		});
+		it(<span class="hljs-string">'Footer'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			<span class="hljs-keyword">var</span> elem;
+			browser.assert.element(<span class="hljs-string">'#pie'</span>);
+
+			elem = browser.query(<span class="hljs-string">'#pie &gt; #WAI'</span>);
+
+			browser.assert.attribute(elem, <span class="hljs-string">'href'</span>, <span class="hljs-string">'http://www.w3.org/WAI/WCAG2AA-Conformance'</span>);
+			browser.assert.element(<span class="hljs-string">'#pie &gt; #WAI &gt; img#wcag2aa'</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; a'</span>, <span class="hljs-string">"Mapa del sitio"</span>, <span class="hljs-string">"mapaWeb.html"</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; a'</span>, <span class="hljs-string">"Este servidor es software libre"</span>, <span class="hljs-string">"https://github.com/oslugr/ugr-transparente-servidor"</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; a'</span>, <span class="hljs-string">"Liberado bajo GPL v3.0"</span>, <span class="hljs-string">"http://www.gnu.org/licenses/gpl-3.0.html"</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; a'</span>, <span class="hljs-string">"Contacto"</span>, <span class="hljs-string">"http://www.ugr.es/pages/contacto"</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; a'</span>, <span class="hljs-string">"Ir a sugerencias"</span>, <span class="hljs-string">"https://github.com/oslugr/ugr-transparente-servidor/issues"</span>);
+
+			browser.assert.element(<span class="hljs-string">'#pie &gt; p'</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; p a'</span>, <span class="hljs-string">"© 2016"</span>, <span class="hljs-string">'http://www.ugr.es/pages/creditos'</span>);
+			browser.assert.link(<span class="hljs-string">'#pie &gt; p a'</span>, <span class="hljs-string">"Universidad de Granada"</span>, <span class="hljs-string">'http://www.ugr.es'</span>);
+			checkLink(<span class="hljs-string">'http://www.ugr.es/pages/creditos'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				checkLink(<span class="hljs-string">'http://www.ugr.es/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					checkLink(<span class="hljs-string">'http://www.w3.org/WAI/WCAG2AA-Conformance'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						checkLink(<span class="hljs-string">'https://github.com/oslugr/ugr-transparente-servidor'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+							checkLink(<span class="hljs-string">'http://www.gnu.org/licenses/gpl-3.0.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+								checkLink(<span class="hljs-string">'http://www.ugr.es/pages/contacto'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+									checkLink(<span class="hljs-string">'https://github.com/oslugr/ugr-transparente-servidor/issues'</span>, done);
+								});
+							});
+						});
+					});
+				});
+			});
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Index</strong>: Comprobación del menú principal <code>/index.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Index Menu: Prueba del menú central del inicio</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Index'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/index.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo2-selected &gt; a'</span>, <span class="hljs-string">'Inicio'</span>, <span class="hljs-string">'/index.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Inicio'</span>);
+		});
+		it(<span class="hljs-string">'Index Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> elem;
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_infoInstitucional'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Información Institucional'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/infoInstitucional.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_personal'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Personal'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/personal.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_infoEconomica'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Información Económica'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/infoEconomica.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_ofertaDemanda'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Oferta y Demanda Académica'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/ofertaDemanda.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_claustro'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Claustro'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/claustro.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_estudiantes'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Estudiantes'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/estudiantes.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_gobierno'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Gobierno'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/gobierno.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_rendimiento'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Rendimiento'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/rendimiento.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+
+			elem = browser.query(<span class="hljs-string">'a &gt; #en_normativaLegal'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Normativa Legal'</span>);
+			browser.assert.attribute(elem.parentNode, <span class="hljs-string">'href'</span>, <span class="hljs-string">'/normativaLegal.html'</span>);
+			browser.assert.hasClass(elem.parentNode, <span class="hljs-string">'enlaces_index'</span>);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Inicio"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Información Institucional</strong>: Comprobación de la información institucional <code>/infoInstitucional.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Links: Prueba de los links del contenido principal</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Información Institucional'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/infoInstitucional.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo2-selected &gt; a'</span>, <span class="hljs-string">'Información Institucional'</span>, <span class="hljs-string">'/infoInstitucional.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Información Institucional'</span>);
+		});
+		it(<span class="hljs-string">'Links'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'#contenido li a'</span>, <span class="hljs-number">10</span>);
+			checkAllLinks(<span class="hljs-string">'#contenido li a'</span>, done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Información Institucional"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Personal</strong>: Comprobación de la información del personal <code>/personal.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Personal'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/personal.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Personal'</span>, <span class="hljs-string">'/personal.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Personal'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Administración / Personal"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Información Económica</strong>: Comprobación de la información económica <code>/infoEconomica.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Información Económica'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/infoEconomica.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Información Económica'</span>, <span class="hljs-string">'/infoEconomica.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Información Económica'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Administración / Información Económica"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Perfil del Contratante</strong>: Comprobación del perfil del contratante <code>/perfilContratante.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Perfil del Contratante'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/perfilContratante.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Perfil del Contratante'</span>, <span class="hljs-string">'/perfilContratante.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkLayout(<span class="hljs-string">'Perfil del Contratante'</span>);
+			<span class="hljs-keyword">var</span> elem = browser.query(<span class="hljs-string">'#pagina strong'</span>);
+			browser.assert.text(elem, <span class="hljs-string">'Acceso al Perfil del Contratante'</span>);
+
+			browser.assert.link(<span class="hljs-string">'#pagina p &gt; a'</span>, <span class="hljs-string">'perfil del contratante'</span>, <span class="hljs-string">'http://econtra.ugr.es/licitacion'</span>);
+			checkLink(<span class="hljs-string">"http://econtra.ugr.es/licitacion"</span>, done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Administración / Perfil del Contratante"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Oferta y Demanda Académica</strong>: Comprobación de la información de oferta y demanda académica <code>/ofertaDemanda.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Oferta y Demanda Académica'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/ofertaDemanda.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Oferta y Demanda Académica'</span>, <span class="hljs-string">'/ofertaDemanda.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Oferta y Demanda Académica'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Docencia / Oferta y Demanda Académica"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Claustro</strong>: Comprobación del claustro <code>/claustro.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Claustro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/claustro.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Claustro'</span>, <span class="hljs-string">'/claustro.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Claustro'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Docencia / Claustro"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Estudiantes</strong>: Comprobación de estudiantes <code>/estudiantes.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Estudiantes'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/estudiantes.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Estudiantes'</span>, <span class="hljs-string">'/estudiantes.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Estudiantes'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Docencia / Estudiantes"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Gobierno</strong>: Comprobación de la información de gobierno <code>/gobierno.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Gobierno'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/gobierno.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Gobierno'</span>, <span class="hljs-string">'/gobierno.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Gobierno'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Gestión e Investigación / Gobierno"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Rendimiento</strong>: Comprobación de la información de rendimiento <code>/rendimiento.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Rendimiento'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">100000</span>);
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/rendimiento.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo1-selected &gt; a'</span>, <span class="hljs-string">'Rendimiento'</span>, <span class="hljs-string">'/rendimiento.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'block'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Rendimiento'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Gestión e Investigación / Rendimiento"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Normativa Legal</strong>: Comprobación de la normativa legal <code>/normativaLegal.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Tablas: Prueba genérica de las tablas generadas</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Normativa Legal'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/normativaLegal.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo2-selected &gt; a'</span>, <span class="hljs-string">'Normativa Legal'</span>, <span class="hljs-string">'/normativaLegal.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Normativa Legal'</span>);
+		});
+		it(<span class="hljs-string">'Tablas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			checkTables(done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Normativa Legal"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Solicitud de Información</strong>: Comprobación de menú de solicitud de información <code>/solicitudInfo.html</code><ul>
+<li>Connection: Comprobación de conexión y título</li>
+<li>Menu: Comprobación del estado del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general</li>
+<li>Formulario: Prueba del acceso al formulario de solicitud</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Solicitud de Información'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/solicitudInfo.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">1</span>);
+			browser.assert.link(<span class="hljs-string">'.tipo2-selected &gt; a'</span>, <span class="hljs-string">'Solicitud de Información'</span>, <span class="hljs-string">'/solicitudInfo.html'</span>);
+
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Solicitud de Información'</span>);
+		});
+		it(<span class="hljs-string">'Formulario'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.assert.link(<span class="hljs-string">'#pagina a'</span>, <span class="hljs-string">'Acceso al Formulario'</span>, <span class="hljs-string">'https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html'</span>);
+			<span class="hljs-comment">//https without certificate!</span>
+			<span class="hljs-comment">//checkLink('https://sede.ugr.es/sede/catalogo-de-procedimientos/solicitud-generica.html', done);</span>
+			browser.assert.link(<span class="hljs-string">'#pagina a'</span>, <span class="hljs-string">'Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.'</span>, <span class="hljs-string">'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf'</span>);
+			checkLink(<span class="hljs-string">'http://www.boe.es/boe/dias/2013/12/10/pdfs/BOE-A-2013-12887.pdf'</span>, done);
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Solicitud de Información"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Buscador</strong>: Comprobación del buscador y resultados <code>/buscador.html</code><ul>
+<li>Connection: Comprobación de conexión</li>
+<li>Layout: Comprobación del layout especfico del buscador</li>
+<li>Búsqueda: Prueba de búsqueda y resultados obtenidos</li>
+<li>Links: Prueba de los links generados por el buscador</li>
+<li>Menú de Rastro: Comprobación del menú de ratro (breadcrumb)</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Buscador'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/buscador.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.element(<span class="hljs-string">'#sq'</span>);
+			browser.assert.element(<span class="hljs-string">'#submit_buscar'</span>);
+			browser.assert.element(<span class="hljs-string">'#contenido p'</span>);
+			browser.assert.element(<span class="hljs-string">'#buscador'</span>);
+			browser.assert.text(<span class="hljs-string">'#buscador&gt;h2'</span>, <span class="hljs-string">"Buscador del portal"</span>);
+		});
+		it(<span class="hljs-string">'Búsqueda'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.fill(<span class="hljs-string">'#sq'</span>, <span class="hljs-string">'personal'</span>).pressButton(<span class="hljs-string">'#submit_buscar'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					checkConnection();
+					browser.assert.elements(<span class="hljs-string">"#contenido li&gt;a.seccion"</span>, {
+						atLeast: <span class="hljs-number">20</span>
+					});
+					done();
+				}, <span class="hljs-number">5</span> * <span class="hljs-number">1000</span>);
+			});
+		});
+		it.skip(<span class="hljs-string">'Links'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			<span class="hljs-keyword">return</span> done(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"not implemented"</span>));
+		});
+		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkBreadcrumb(<span class="hljs-string">"Buscador"</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>404 page</strong>: Comprobación de la página de error 404 (probando con <code>/foo</code>)<ul>
+<li>Connection: Comprobación de conexión, titúlo y estado 404</li>
+<li>Menu: Comprobación del menú lateral (nada seleccionado)</li>
+<li>Layout: Comprobación básica del Layout general</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'404 page'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/foo'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> title = <span class="hljs-string">"UGR Transparente | Universidad de Granada"</span>;
+			browser.assert.text(<span class="hljs-string">'title'</span>, title);
+			browser.assert.status(<span class="hljs-number">404</span>);
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">0</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">0</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Página no encontrada (Error 404)'</span>);
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Mapa Web</strong>: Comprobación del mapa web (<code>/mapaWeb.html</code>)<ul>
+<li>Connection: Comprobación de conexión, titúlo y estado 404</li>
+<li>Menu: Comprobación del menú lateral</li>
+<li>Layout: Comprobación básica del Layout general y elementos específicos del mapa web</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Mapa web'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/mapaWeb.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+		});
+		it(<span class="hljs-string">'Connection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkConnection();
+		});
+		it(<span class="hljs-string">'Menu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			browser.assert.elements(<span class="hljs-string">'.tipo2-selected'</span>, <span class="hljs-number">0</span>);
+			browser.assert.elements(<span class="hljs-string">'.tipo1-selected'</span>, <span class="hljs-number">0</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_administracin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_docencia'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+			browser.assert.style(<span class="hljs-string">'#menu_gestin-e-investigacin'</span>, <span class="hljs-string">'display'</span>, <span class="hljs-string">'none'</span>);
+		});
+		it(<span class="hljs-string">'Layout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			checkLayout(<span class="hljs-string">'Mapa del sitio'</span>);
+			browser.assert.elements(<span class="hljs-string">'.seccion'</span>, <span class="hljs-number">7</span>);
+			browser.assert.elements(<span class="hljs-string">'.seccion2'</span>, <span class="hljs-number">9</span>);
+			browser.assert.elements(<span class="hljs-string">'.seccion3'</span>, <span class="hljs-number">55</span>);
+
+			<span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> check links?</span>
+		});
+	});
+});</div></div></div></div></body></html>

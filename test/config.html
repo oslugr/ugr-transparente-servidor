@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><title>test/config</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="test/config"><meta name="groc-project-path" content="test/config.js"><meta name="groc-github-url" content="https://github.com/oslugr/ugr-transparente-servidor"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/oslugr/ugr-transparente-servidor/blob/master/test/config.js">test/config.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="configuracin-de-tests">Configuración de tests</h1>
+<p>Datos de configuración de los tests y funciones auxiliares</p></div></div><div class="code"><div class="wrapper"><span class="hljs-pi">
+"use strict"</span>;
+<span class="hljs-comment">/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+  Copyright (C) 2015 Germán Martínez Maldonado
+	Copyright (C) 2016 Andrés Ortiz Corrales
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="dependencias">Dependencias</h3>
+<ul>
+<li><strong>Express:</strong> Framework web</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="exports">exports</h3>
+<ul>
+<li>direcciones: Urls locales a comprobar</li>
+<li>archivosBuscador: Lista de archivos del buscador (jsons)</li>
+<li>archivosEstaticos: Lista de archivos estáticos a probar</li>
+<li>initServer(done,dev): functión para levantar un servidor de prueba<ul>
+<li>Si dev==true, se levantará en modo desarrollo, producción en otro caso</li>
+</ul>
+</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-built_in">module</span>.exports = {
+	direcciones: [
+		<span class="hljs-string">'/'</span>,
+		<span class="hljs-string">'/index.html'</span>,
+		<span class="hljs-string">'/infoInstitucional.html'</span>,
+		<span class="hljs-string">'/personal.html'</span>,
+		<span class="hljs-string">'/infoEconomica.html'</span>,
+		<span class="hljs-string">'/perfilContratante.html'</span>,
+		<span class="hljs-string">'/claustro.html'</span>,
+		<span class="hljs-string">'/estudiantes.html'</span>,
+		<span class="hljs-string">'/gobierno.html'</span>,
+		<span class="hljs-string">'/rendimiento.html'</span>,
+		<span class="hljs-string">'/normativaLegal.html'</span>,
+		<span class="hljs-string">'/solicitudInfo.html'</span>,
+		<span class="hljs-string">'/mapaWeb.html'</span>,
+		<span class="hljs-string">'/buscador.html'</span>,
+		<span class="hljs-string">'/calendario.html'</span>,
+		<span class="hljs-string">'/calendarioSolo.html'</span>,
+		<span class="hljs-string">'/ofertaDemanda.html'</span>
+	],
+	archivosBuscador: [ <span class="hljs-comment">// Direcciones del buscador</span>
+		<span class="hljs-string">'/archivos/personal'</span>,
+		<span class="hljs-string">'/archivos/infoEconomica'</span>,
+		<span class="hljs-string">'/archivos/ofertaDemanda'</span>,
+		<span class="hljs-string">'/archivos/claustro'</span>,
+		<span class="hljs-string">'/archivos/estudiantes'</span>,
+		<span class="hljs-string">'/archivos/gobierno'</span>,
+		<span class="hljs-string">'/archivos/rendimiento'</span>,
+		<span class="hljs-string">'/archivos/normativaLegal'</span>
+	],
+	archivosEstaticos: [ <span class="hljs-comment">// Archivos estáticos a probar</span>
+		<span class="hljs-string">'/favicon/favicon.ico'</span>,
+		<span class="hljs-string">'/css/style.css'</span>,
+		<span class="hljs-string">'/css/style2.css'</span>,
+		<span class="hljs-string">'/script/buscar.js'</span>,
+		<span class="hljs-string">'/script/calendario.js'</span>,
+		<span class="hljs-string">'/script/generar_tabla.js'</span>,
+		<span class="hljs-string">'/img/transp.gif'</span>,
+		<span class="hljs-string">'/imagenes/osl.jpg'</span>,
+		<span class="hljs-string">'/graph/perfil_pdi_extranjero.png'</span>
+	],
+	initServer: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done, dev</span>) </span>{ <span class="hljs-comment">// Función para iniciar el servidor express</span>
+		<span class="hljs-keyword">if</span> (dev === <span class="hljs-literal">true</span>) process.env.ENV = <span class="hljs-string">"dev"</span>;
+		<span class="hljs-keyword">else</span> process.env.ENV = <span class="hljs-string">"prod"</span>;
+		<span class="hljs-keyword">var</span> app = express();
+		<span class="hljs-keyword">var</span> serverConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../app/serverConfig'</span>);
+		<span class="hljs-keyword">var</span> routes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../app/routes'</span>);
+		serverConfig(app);
+		routes(app);
+
+		<span class="hljs-keyword">var</span> server = app.listen(app.get(<span class="hljs-string">'port'</span>), app.get(<span class="hljs-string">'ip'</span>), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done(app, server);
+		});
+	}
+};</div></div></div></div></body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><title>config/config</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="config/config"><meta name="groc-project-path" content="config/config.js"><meta name="groc-github-url" content="https://github.com/oslugr/ugr-transparente-servidor"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/oslugr/ugr-transparente-servidor/blob/master/config/config.js">config/config.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="datos-de-configuracin">Datos de configuración</h1>
+<p>Datos de configuración de del servidor e índice de recursos</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2016 Andrés Ortiz Corrales
+
+This file is part of UGR Transparente.
+
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="exports">Exports</h3>
+<ul>
+<li><strong>servidor</strong>: servidor de <em>open data</em> <a href="http://opendata.ugr.es/">http://opendata.ugr.es/</a></li>
+<li><strong>puerto</strong>: puerto por defecto de transparente</li>
+<li><strong>archivosJson</strong>: índice de todos los archivos json necesarios</li>
+<li><strong>error</strong>: título y tecto del mensaje de error (404)</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-built_in">module</span>.exports = {
+	servidor: <span class="hljs-string">"http://opendata.ugr.es/"</span>,
+	puerto: <span class="hljs-number">3000</span>,
+	archivosJson: {
+		personal: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./personal.json'</span>),
+		infoEconomica: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./infoEconomica.json'</span>),
+		ofertaDemanda: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./ofertaDemanda.json'</span>),
+		claustro: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./claustro.json'</span>),
+		estudiantes: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./estudiantes.json'</span>),
+		gobierno: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./gobierno.json'</span>),
+		rendimiento: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./rendimiento.json'</span>),
+		normativaLegal: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./normativaLegal.json'</span>),
+		infoInstitucional: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./infoInstitucional.json'</span>),
+		index: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./index.json'</span>),
+		perfilContratante: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./perfilContratante.json'</span>),
+		solicitudInfo: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./solicitudInfo.json'</span>),
+		buscador: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./buscador.json'</span>)
+	},
+	error: {
+		<span class="hljs-string">"titulo"</span>: <span class="hljs-string">"Página no encontrada (Error 404)"</span>,
+		<span class="hljs-string">"texto"</span>: <span class="hljs-string">"Lo siento, la página no existe o está temporalmente inaccesible."</span>
+	}
+};</div></div></div></div></body></html>

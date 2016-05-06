@@ -1,0 +1,26 @@
+# Directorio instalación módulos
+node_modules
+
+# Documentación
+doc
+docs
+
+# Directorio resultado test cobertura
+coverage
+
+# Directorio de librerías instaladas con Bower
+public/lib
+
+# Directorios de archivos binarios
+public/imagenes
+public/img
+public/doc
+public/graph
+
+# Logs y copias de seguridad
+*.log
+*~
+*.out
+*.bak
+index.html
+recursos.zip

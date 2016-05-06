@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><title>test/acceso</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="test/acceso"><meta name="groc-project-path" content="test/acceso.js"><meta name="groc-github-url" content="https://github.com/oslugr/ugr-transparente-servidor"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/oslugr/ugr-transparente-servidor/blob/master/test/acceso.js">test/acceso.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="test-de-acceso">Test de Acceso</h1>
+<p>Pruebas de acceso a las diversas páginas y recursos de transparente</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Copyright (C) 2015 Germán Martínez Maldonado
+Copyright (C) 2016 Andrés Ortiz Corrales
+
+This file is part of UGR Transparente.
+
+UGR Transparente is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+UGR Transparente is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="dependencias">Dependencias</h3>
+<ul>
+<li><strong>Chai:</strong> Módulo de aserciones</li>
+<li><strong>Supertest:</strong> Peticiones Http</li>
+<li><strong>Async:</strong> Librería para código asíncrono</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'chai'</span>).assert;
+<span class="hljs-keyword">var</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">'supertest'</span>);
+<span class="hljs-keyword">var</span> <span class="hljs-keyword">async</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">'async'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="dependencias-locales">Dependencias locales</h4></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><a href="./config.html"><strong>Configuración de tests</strong></a>: Datos de configuración de los tests</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./config'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="pruebas-de-acceso">Pruebas de Acceso</h3>
+<p>Acceso a las diversas páginas y recursos del servidor local</p>
+<ul>
+<li><em>before:</em> Inicia el servidor</li>
+<li><em>after:</em> Cierra el servidor</li>
+<li><em>timeout:</em> 12 segundos</li>
+</ul></div></div><div class="code"><div class="wrapper">describe(<span class="hljs-string">'Pruebas de acceso'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">12000</span>);
+	<span class="hljs-keyword">var</span> server;
+	<span class="hljs-keyword">var</span> app;
+	before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		config.initServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">app2, server2</span>) </span>{
+			server = server2;
+			app = app2;
+			done();
+		}, <span class="hljs-literal">true</span>);
+	});
+
+	after(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		server.close();
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Acceso a páginas:</strong> Prueba todas las páginas del servidor, deben devolver código 200 y Html</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"Acceso a páginas"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">async</span>.eachSeries(config.direcciones, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+			request(app).get(url)
+				.expect(<span class="hljs-number">200</span>)
+				.expect(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">"text/html; charset=utf-8"</span>)
+				.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+					assert.notOk(err);
+					callback();
+				});
+		}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done();
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Acceso a recursos:</strong> Acceso a diversos recursos estáticos, debe devolver código 200</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"Acceso a recursos"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">async</span>.eachSeries(config.archivosEstaticos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+			request(app).get(url).expect(<span class="hljs-number">200</span>).end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+				assert.notOk(err);
+				callback();
+			});
+		}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done();
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>404 page:</strong> Comprueba un acceso a página inexistente (&#39;/foo&#39;), espera código 404</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"404 page"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		request(app)
+			.get(<span class="hljs-string">"/foo"</span>)
+			.expect(<span class="hljs-number">404</span>)
+			.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+				assert.notOk(err);
+				done();
+			});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Archivos de buscador:</strong> Comprueba las direcciones a los datos del buscador, espera un JSON y código 200</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"Archivos de buscador"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">async</span>.eachSeries(config.archivosBuscador, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+			request(app).get(url)
+				.expect(<span class="hljs-number">200</span>)
+				.expect(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">"application/json; charset=utf-8"</span>)
+				.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+					assert.notOk(err);
+					assert.ok(res.body);
+					assert.ok(res.body.nombre);
+					callback();
+				});
+		}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done();
+		});
+	});
+});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="pruebas-en-produccin">Pruebas en Producción</h3>
+<p>Pruebas de acceso con configuración de producción</p>
+<ul>
+<li><em>before:</em> Inicia el servidor en producción</li>
+<li><em>after:</em> Cierra el servidor</li>
+<li><em>timeout:</em> 12 segundos</li>
+</ul></div></div><div class="code"><div class="wrapper">describe(<span class="hljs-string">"Pruebas en producción"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">12000</span>);
+	<span class="hljs-keyword">var</span> server;
+	<span class="hljs-keyword">var</span> app;
+	before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		config.initServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">app2, server2</span>) </span>{
+			server = server2;
+			app = app2;
+			done();
+		}, <span class="hljs-literal">false</span>);
+	});
+	after(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		server.close();
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Archivos estáticos en producción:</strong> Acceso a archivos estáticos en producción, debe devolver 404<blockquote>
+<p>Los recursos no se sirven por express, sino por servidor externo, en local no se debe poder acceder a ellos</p>
+</blockquote>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"Archivos estáticos en producción"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">async</span>.eachSeries(config.archivosEstaticos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+			request(app).get(url).expect(<span class="hljs-number">404</span>).end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+				assert.notOk(err);
+				callback();
+			});
+		}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done();
+		});
+	});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Acceso a páginas:</strong> Comprobación de todas las páginas del servidor, deben devolver código 200 y un archivo Html</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">"Acceso a páginas"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">async</span>.eachSeries(config.direcciones, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+			request(app).get(url)
+				.expect(<span class="hljs-number">200</span>)
+				.expect(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">"text/html; charset=utf-8"</span>)
+				.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+					assert.notOk(err);
+					callback();
+				});
+		}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			done();
+		});
+	});
+});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="pruebas-de-servidor">Pruebas de Servidor</h3>
+<p>Prueba de acceso a servidor principal (<code>app.js</code>)</p>
+<ul>
+<li><em>timeout:</em> 3 segundos</li>
+</ul></div></div><div class="code"><div class="wrapper">describe(<span class="hljs-string">"Pruebas de servidor"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">3000</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><ul>
+<li><strong>Ejecución de servidor:</strong> Prueba de inicio del servidor y acceso a dirección principal (<code>/</code>)</li>
+</ul></div></div><div class="code"><div class="wrapper">	it(<span class="hljs-string">'Ejecución de servidor'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		<span class="hljs-keyword">var</span> server = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../app'</span>);
+		assert.ok(server);
+		setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			request(server).get(<span class="hljs-string">'/'</span>).expect(<span class="hljs-number">200</span>).end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{
+				assert.notOk(err);
+				assert.ok(res);
+				server.close();
+				done();
+			});
+		}, <span class="hljs-number">700</span>);
+	});
+});</div></div></div></div></body></html>

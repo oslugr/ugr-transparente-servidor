@@ -1,6 +1,10 @@
-"use strict";
+// # Ruta Mapa Web
 /*
-  UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Configuración de la ruta del mapaweb `/mapaWeb`
+*/
+
+"use strict";
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
 
@@ -17,13 +21,12 @@
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+  along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
-
-// Variable para las configuraciones
 var config = require('../../config/config').archivosJson;
 
+// **exports**
+// * callback para renderizar mapaWeb
 exports.mapaWeb = function(req, res) {
 	res.render('mapaWeb', {
 		seccion: 'Mapa del sitio',

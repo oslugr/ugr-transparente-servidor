@@ -72,6 +72,7 @@ module.exports = function(app) {
 	app.get('/calendarioSolo.html', calendarioSolo.index);
 
 	// #### Rutas del buscador
+	// Rutas a los recursos json que usa el buscador
 	function setRouteArchivos(routeConf) {
 		return function(req, res) {
 			res.json(routeConf.datos);

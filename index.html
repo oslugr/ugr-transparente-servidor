@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ugr-transparente-servidor by oslugr</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Ugr-transparente-servidor</h1>
+        <p class="header">Servidor de transparente.ugr.es</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/oslugr/ugr-transparente-servidor/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/oslugr/ugr-transparente-servidor/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/oslugr/ugr-transparente-servidor">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/oslugr">oslugr</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="ugr-transparente" class="anchor" href="#ugr-transparente" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UGR Transparente</h1>
+
+<p><em>Version 0.9</em><br>
+<a href="https://travis-ci.org/oslugr/ugr-transparente-servidor"><img src="https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master"><img src="https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://gemnasium.com/oslugr/ugr-transparente-servidor"><img src="https://gemnasium.com/oslugr/ugr-transparente-servidor.svg" alt="Dependency Status"></a>
+<a href="http://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/license-GPL%203.0-blue.svg" alt="License Status"></a>
+<a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/node-4.2.6-blue.svg" alt="Node"></a>
+<a href="https://codeclimate.com/github/oslugr/ugr-transparente-servidor"><img src="https://codeclimate.com/github/oslugr/ugr-transparente-servidor/badges/gpa.svg" alt="Code Climate"></a></p>
+
+<hr>
+
+<p>Portal de transparencia de la <a href="http://www.ugr.es/">UGR</a> para publicar los datos y hacerlos accesibles y tratables. Desarrollado con <a href="http://nodejs.org/">Node.js</a> y <a href="http://expressjs.com/">Express</a>.</p>
+
+<p>La aplicación es accesible desde <a href="http://transparente.ugr.es">http://transparente.ugr.es</a>.</p>
+
+<h2>
+<a id="instalación" class="anchor" href="#instalaci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instalación</h2>
+
+<ol>
+<li>
+<p>En caso de no tener instalado <code>git</code>:   </p>
+
+<pre><code>sudo apt-get install git
+</code></pre>
+</li>
+<li>
+<p>Instalamos <strong>Node.js</strong>:</p>
+
+<pre><code>wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p>Comprobamos que <strong>Node.js</strong> y <strong>NPM</strong> (su gestor de paquetes) se han instalado correctamente.</p>
+
+<pre><code>node -v
+npm -v
+</code></pre>
+</li>
+<li>
+<p>Descargamos todo el contenido del repositorio para poder ejecutar la aplicación.</p>
+
+<pre><code>git clone https://github.com/oslugr/ugr-transparente-servidor.git
+</code></pre>
+</li>
+<li><p>Instalamos todas las dependencias de la aplicación:</p></li>
+</ol>
+
+<pre><code>cd ugr-transparente-servidor
+sudo npm install
+</code></pre>
+
+<ol>
+<li>
+<p>Finalmente iniciamos la aplicación:</p>
+
+<pre><code>npm start
+</code></pre>
+</li>
+<li>
+<p>Igualmente podemos reiniciar o detener la aplicación de una forma similar:</p>
+
+<pre><code>npm restart|stop
+</code></pre>
+</li>
+</ol>
+
+<h2>
+<a id="provisionamiento" class="anchor" href="#provisionamiento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Provisionamiento</h2>
+
+<p>También podemos instalar la aplicación automáticamente aprovisionando el servidor con todo lo necesario mediante <a href="http://www.ansible.com/home">Ansible</a>.</p>
+
+<pre><code>sudo apt-get install ansible
+</code></pre>
+
+<ol>
+<li>
+<p>El archivo <code>ansible_hosts</code> dentro de la carpeta <code>provisioning</code> contiene la dirección del servidor; esta dirección puede ser una dirección IP o una dirección URL.</p>
+
+<pre><code>[transparente]
+transparente.ugr.es
+</code></pre>
+</li>
+<li>
+<p>Comprobamos que tenemos conexión SSH con el servidor.</p>
+
+<pre><code>ANSIBLE_HOSTS=provisioning/ansible_hosts ansible transparente -u USUARIO -m ping
+</code></pre>
+
+<p>Si el acceso es correcto la respuesta del servidor será la siguiente:</p>
+
+<pre><code>transparente.ugr.es | success &gt;&gt; {
+    "changed": false,
+    "ping": "pong"
+}
+</code></pre>
+</li>
+<li>
+<p>Para ejecutar el provisionamiento Ansible recibirá como variable de entorno la ruta del <code>ansible_hosts</code> (<code>ANSIBLE_HOSTS=provisioning/ansible_hosts</code>) y como parámetro el usuario con el que accederemos al servidor (<code>--extra-vars "user=USUARIO"</code>). El archivo <code>provisioning/transparente.yml</code> es el <strong>playbook</strong>, el archivo de instrucciones que <strong>Ansible</strong> seguirá para saber que tareas tiene que llevar a cabo durante el provisionamiento.</p>
+
+<pre><code>ANSIBLE_HOSTS=provisioning/ansible_hosts ansible-playbook provisioning/transparente.yml --extra-vars "user=USUARIO"
+</code></pre>
+</li>
+</ol>
+
+<h2>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>Se incluyen diversos tests unitarios y de integración, así como análisis de covertura usando las herramientas <a href="https://mochajs.org/">mocha</a>, <a href="http://chaijs.com/">chai</a> e <a href="https://github.com/gotwarlost/istanbul">istanbul</a>, ejecuta los tests con el comando:    </p>
+
+<pre><code>npm test
+</code></pre>
+
+<p>El resultado de los tests unitarios se mostrarán por pantalla como salida de la ejecución, los resultados de los tests de cobertura se mostrarán en <code>coverage/lcov-report/index.html</code>.</p>
+
+<h2>
+<a id="documentación" class="anchor" href="#documentaci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentación</h2>
+
+<p>Para generar automáticamente la documentación con groc ejecutar <code>npm run doc</code>. esta documentación se encontrará en <code>doc/index.html</code>.</p>
+
+<h2>
+<a id="integración-continua" class="anchor" href="#integraci%C3%B3n-continua" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integración continua</h2>
+
+<p>Disponemos de un sistema de integración continua con <a href="https://travis-ci.org/">Travis CI</a>, que desplegará el sistema y ejecutará los tests con cada cambio del repositorio, el estado actual del sistema se puede observar a continuación:</p>
+
+<ul>
+<li>
+<strong>master:</strong> <a href="https://travis-ci.org/oslugr/ugr-transparente-servidor"><img src="https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=master" alt="Build Status"></a>
+</li>
+<li>
+<strong>dev:</strong> <a href="https://travis-ci.org/oslugr/ugr-transparente-servidor"><img src="https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=dev" alt="Build Status"></a>
+</li>
+</ul>
+
+<p>La integración continua, además, ejecutará diversas herramientas con las que obtenemos información sobre cobertura, dependencias y calidad del código:<br>
+<a href="https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master"><img src="https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://gemnasium.com/oslugr/ugr-transparente-servidor"><img src="https://gemnasium.com/oslugr/ugr-transparente-servidor.svg" alt="Dependency Status"></a>
+<a href="https://codeclimate.com/github/oslugr/ugr-transparente-servidor"><img src="https://codeclimate.com/github/oslugr/ugr-transparente-servidor/badges/gpa.svg" alt="Code Climate"></a></p>
+
+<h2>
+<a id="despliegue-automático" class="anchor" href="#despliegue-autom%C3%A1tico" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Despliegue automático</h2>
+
+<p>Cuando hagamos cambios en nuestra aplicación y queramos aplicarlos en el servidor, no es necesario que accedamos a él manualmente y apliquemos dichos cambios, podemos usar <a href="https://github.com/pstadler/flightplan">Flightplan</a> para hacer esto automáticamente.</p>
+
+<p>Si queremos utilizar <strong>Flightplan</strong> para el despliegue automático es necesario que tengamos nuestra clave SSH copiada en el servidor como hicimos para el provisionamiento.</p>
+
+<pre><code>ssh-copy-id USUARIO@transparente.ugr.es
+</code></pre>
+
+<p>El archivo en el que hemos definido la configuración para el despliegue automático es <code>flightplan.js</code>. Podemos diferenciar dos partes esenciales: <code>plan.target</code> y <code>plan.remote</code>; el primero indica los parámetros para acceder al servidor, el segundo indica las tareas a realizar durante el despliegue. Solo falta dar a <strong>Flightplan</strong> la orden de despliegue automático, donde <code>USUARIO</code> es el usuario con permisos de superusuario con el que accederemos al servidor:</p>
+
+<pre><code>USER=USUARIO npm run deploy
+</code></pre>
+
+<h1>
+<a id="estructura-de-la-aplicación" class="anchor" href="#estructura-de-la-aplicaci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Estructura de la aplicación</h1>
+
+<h2>
+<a id="archivos-en-raíz" class="anchor" href="#archivos-en-ra%C3%ADz" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Archivos en raíz</h2>
+
+<p>La aplicación se encuentra estructurada de forma similar a cualquier proyecto de node.js:</p>
+
+<ul>
+<li>
+<code>README.md</code>, <code>LICENSE</code>, <code>.git</code> y <code>.gitignore</code>:  Archivos del repositorio <strong>git</strong>
+</li>
+<li>
+<code>.tavis.yml</code>: Archivo de configuración de Travis</li>
+<li>
+<code>package.json</code>: Información de la aplicación y dependencias</li>
+<li>
+<code>bower.json</code>, <code>getRecursos.sh</code>, <code>flightplan.js</code>: Archivos de despliegue</li>
+<li>
+<code>app.js</code>: Archivo principal de la aplicación</li>
+<li>
+<code>app/</code>: Archivos del programa
+
+<ul>
+<li>
+<code>app/routes/</code>: Archivos de enrutamiento de las páginas de la aplicación</li>
+</ul>
+</li>
+<li>
+<code>config/</code>: Archivos de configuración de la aplicación</li>
+<li>
+<code>public/</code>: Archivos públicos del portal</li>
+<li>
+<code>views/</code>: Vistas de las paginas con <a href="http://jade-lang.com/">Jade</a>
+</li>
+<li>
+<code>test/</code>: Archivos de tests unitarios y de integración</li>
+<li>
+<code>provisioning/</code>: Archivos de provisionamiento</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

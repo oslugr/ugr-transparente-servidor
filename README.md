@@ -1,5 +1,5 @@
 # UGR Transparente
-_Version 0.9.7_     
+_Version 0.9.8_     
 [![Build Status](https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=master)](https://travis-ci.org/oslugr/ugr-transparente-servidor)
 [![Coverage Status](https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master)](https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master)
 [![Dependency Status](https://gemnasium.com/oslugr/ugr-transparente-servidor.svg)](https://gemnasium.com/oslugr/ugr-transparente-servidor)
@@ -12,7 +12,7 @@ _Version 0.9.7_
 
 Portal de transparencia de la [UGR](http://www.ugr.es/) para publicar los datos y hacerlos accesibles y tratables. Desarrollado con [Node.js](http://nodejs.org/) y [Express](http://expressjs.com/).
 
-La aplicación es accesible desde <http://transparente.ugr.es>.
+La aplicación es accesible desde <http://transparente.ugr.es>. La documentación se encuentra en <https://oslugr.github.io/ugr-transparente-servidor/>
 
 ## Instalación
 

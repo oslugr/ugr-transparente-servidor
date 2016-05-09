@@ -755,7 +755,7 @@ describe('Pruebas de Navegabilidad', function() {
 	//    * Links: Prueba de los links generados por el buscador
 	//    * Menú de Rastro: Comprobación del menú de ratro (breadcrumb)
 	describe('Buscador', function() {
-		before(function(done) {
+		beforeEach(function(done) {
 			browser.visit(url + '/buscador.html', function(err) {
 				assert.notOk(err);
 				done();
@@ -770,6 +770,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#contenido p');
 			browser.assert.element('#buscador');
 			browser.assert.text('#buscador>h2', "Buscador del portal");
+			browser.assert.elements('#contenido li>a.seccion', 0);
 		});
 		it('Búsqueda', function(done) {
 			browser.fill('#sq', 'personal').pressButton('#submit_buscar', function(err) {
@@ -783,8 +784,17 @@ describe('Pruebas de Navegabilidad', function() {
 				}, 5 * 1000);
 			});
 		});
-		it.skip('Links', function(done) {
-			return done(new Error("not implemented"));
+		it('Links', function(done) {
+			browser.visit(url + '/buscador.html?query=personal&submit.x=0&submit.y=0', function(err) {
+				assert.notOk(err);
+				browser.assert.elements("#contenido li>a.seccion", {
+					atLeast: 20
+				});
+				checkAllLinks("#contenido li>a.seccion", function(err) {
+					assert.notOk(err);
+					done();
+				});
+			});
 		});
 		it('Menú de Rastro', function() {
 			checkBreadcrumb("Buscador");

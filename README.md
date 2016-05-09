@@ -12,7 +12,8 @@ _Version 0.9.8_
 
 Portal de transparencia de la [UGR](http://www.ugr.es/) para publicar los datos y hacerlos accesibles y tratables. Desarrollado con [Node.js](http://nodejs.org/) y [Express](http://expressjs.com/).
 
-La aplicación es accesible desde <http://transparente.ugr.es>. La documentación se encuentra en <https://oslugr.github.io/ugr-transparente-servidor/>
+La aplicación es accesible desde <http://transparente.ugr.es>.    
+La documentación se encuentra en <https://oslugr.github.io/ugr-transparente-servidor/>.   
 
 ## Instalación
 

@@ -771,7 +771,7 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 </ul>
 </li>
 </ul></div></div><div class="code"><div class="wrapper">	describe(<span class="hljs-string">'Buscador'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-		before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+		beforeEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
 			browser.visit(url + <span class="hljs-string">'/buscador.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
 				assert.notOk(err);
 				done();
@@ -786,6 +786,7 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 			browser.assert.element(<span class="hljs-string">'#contenido p'</span>);
 			browser.assert.element(<span class="hljs-string">'#buscador'</span>);
 			browser.assert.text(<span class="hljs-string">'#buscador&gt;h2'</span>, <span class="hljs-string">"Buscador del portal"</span>);
+			browser.assert.elements(<span class="hljs-string">'#contenido li&gt;a.seccion'</span>, <span class="hljs-number">0</span>);
 		});
 		it(<span class="hljs-string">'Búsqueda'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
 			browser.fill(<span class="hljs-string">'#sq'</span>, <span class="hljs-string">'personal'</span>).pressButton(<span class="hljs-string">'#submit_buscar'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
@@ -799,8 +800,17 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 				}, <span class="hljs-number">5</span> * <span class="hljs-number">1000</span>);
 			});
 		});
-		it.skip(<span class="hljs-string">'Links'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
-			<span class="hljs-keyword">return</span> done(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"not implemented"</span>));
+		it(<span class="hljs-string">'Links'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+			browser.visit(url + <span class="hljs-string">'/buscador.html?query=personal&amp;submit.x=0&amp;submit.y=0'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+				assert.notOk(err);
+				browser.assert.elements(<span class="hljs-string">"#contenido li&gt;a.seccion"</span>, {
+					atLeast: <span class="hljs-number">20</span>
+				});
+				checkAllLinks(<span class="hljs-string">"#contenido li&gt;a.seccion"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+					assert.notOk(err);
+					done();
+				});
+			});
 		});
 		it(<span class="hljs-string">'Menú de Rastro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
 			checkBreadcrumb(<span class="hljs-string">"Buscador"</span>);

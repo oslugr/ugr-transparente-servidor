@@ -17,9 +17,140 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "projectPath": "README.md",
         "targetPath": "index",
         "pageTitle": "index",
-        "title": "index"
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "UGR Transparente",
+            "slug": "ugr-transparente",
+            "isFileHeader": true
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Instalación",
+                "slug": "instalacin"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Provisionamiento",
+                "slug": "provisionamiento"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Testing",
+                "slug": "testing"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Documentación",
+                "slug": "documentacin"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Integración continua",
+                "slug": "integracin-continua"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Despliegue automático",
+                "slug": "despliegue-automtico"
+              },
+              "depth": 2
+            }
+          ]
+        },
+        "title": "UGR Transparente"
       },
-      "depth": 1
+      "depth": 1,
+      "outline": [
+        {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Instalación",
+            "slug": "instalacin"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Provisionamiento",
+            "slug": "provisionamiento"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Testing",
+            "slug": "testing"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Documentación",
+            "slug": "documentacin"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Integración continua",
+            "slug": "integracin-continua"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Despliegue automático",
+            "slug": "despliegue-automtico"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Estructura de la aplicación",
+            "slug": "estructura-de-la-aplicacin"
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Archivos en raíz",
+                "slug": "archivos-en-raz"
+              },
+              "depth": 2
+            }
+          ]
+        }
+      ]
     }, {
       "type": "file",
       "data": {
@@ -36,9 +167,79 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "projectPath": "app.js",
         "targetPath": "app",
         "pageTitle": "app",
-        "title": "app"
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Main App",
+            "slug": "main-app",
+            "isFileHeader": true
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias",
+                "slug": "dependencias"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Dependencias Locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
+        },
+        "title": "Main App"
       },
-      "depth": 1
+      "depth": 1,
+      "outline": [
+        {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Dependencias",
+            "slug": "dependencias"
+          },
+          "depth": 3,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Dependencias Locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 4
+            }
+          ]
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Exports",
+            "slug": "exports"
+          },
+          "depth": 3
+        }
+      ]
     }, {
       "type": "folder",
       "data": {
@@ -63,9 +264,41 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "config/config.js",
             "targetPath": "config/config",
             "pageTitle": "config/config",
-            "title": "config"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Datos de configuración",
+                "slug": "datos-de-configuracin",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Exports",
+                    "slug": "exports"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Datos de configuración"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
         }
       ]
     }, {
@@ -84,9 +317,127 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "projectPath": "app/routes.js",
         "targetPath": "routes",
         "pageTitle": "routes",
-        "title": "routes"
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Rutas",
+            "slug": "rutas",
+            "isFileHeader": true
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Configuración de Rutas",
+                "slug": "configuracin-de-rutas"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Otras Rutas",
+                    "slug": "otras-rutas"
+                  },
+                  "depth": 4
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Rutas del buscador",
+                    "slug": "rutas-del-buscador"
+                  },
+                  "depth": 4
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Manejador de errores",
+                    "slug": "manejador-de-errores"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
+        },
+        "title": "Rutas"
       },
       "depth": 1,
+      "outline": [
+        {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Dependencias locales",
+            "slug": "dependencias-locales"
+          },
+          "depth": 3
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Configuración de Rutas",
+            "slug": "configuracin-de-rutas"
+          },
+          "depth": 3,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Otras Rutas",
+                "slug": "otras-rutas"
+              },
+              "depth": 4
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Rutas del buscador",
+                "slug": "rutas-del-buscador"
+              },
+              "depth": 4
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Manejador de errores",
+                "slug": "manejador-de-errores"
+              },
+              "depth": 4
+            }
+          ]
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Exports",
+            "slug": "exports"
+          },
+          "depth": 3
+        }
+      ],
       "children": [
         {
           "type": "file",
@@ -104,9 +455,57 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "app/routes/index.js",
             "targetPath": "routes/index",
             "pageTitle": "routes/index",
-            "title": "index"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Ruta Menú Principal",
+                "slug": "ruta-men-principal",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Exports",
+                    "slug": "exports"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Ruta Menú Principal"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -123,9 +522,57 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "app/routes/mapaWeb.js",
             "targetPath": "routes/mapaWeb",
             "pageTitle": "routes/mapaWeb",
-            "title": "mapaWeb"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Ruta Mapa Web",
+                "slug": "ruta-mapa-web",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Exports",
+                    "slug": "exports"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Ruta Mapa Web"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -142,9 +589,57 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "app/routes/routesConfig.js",
             "targetPath": "routes/routesConfig",
             "pageTitle": "routes/routesConfig",
-            "title": "routesConfig"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Rutas Generales",
+                "slug": "rutas-generales",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Exports",
+                    "slug": "exports"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Rutas Generales"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
         }
       ]
     }, {
@@ -163,9 +658,133 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "projectPath": "app/serverConfig.js",
         "targetPath": "serverConfig",
         "pageTitle": "serverConfig",
-        "title": "serverConfig"
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Configuración del servidor",
+            "slug": "configuracin-del-servidor",
+            "isFileHeader": true
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias",
+                "slug": "dependencias"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Dependencias locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Configuración de servidor",
+                "slug": "configuracin-de-servidor"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Variables de entorno",
+                    "slug": "variables-de-entorno"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Middlewares",
+                "slug": "middlewares"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
+        },
+        "title": "Configuración del servidor"
       },
-      "depth": 1
+      "depth": 1,
+      "outline": [
+        {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Dependencias",
+            "slug": "dependencias"
+          },
+          "depth": 3,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Dependencias locales",
+                "slug": "dependencias-locales"
+              },
+              "depth": 4
+            }
+          ]
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Configuración de servidor",
+            "slug": "configuracin-de-servidor"
+          },
+          "depth": 3,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 4,
+                "title": "Variables de entorno",
+                "slug": "variables-de-entorno"
+              },
+              "depth": 4
+            }
+          ]
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Middlewares",
+            "slug": "middlewares"
+          },
+          "depth": 3
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 3,
+            "title": "Exports",
+            "slug": "exports"
+          },
+          "depth": 3
+        }
+      ]
     }, {
       "type": "folder",
       "data": {
@@ -190,9 +809,111 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "test/acceso.js",
             "targetPath": "test/acceso",
             "pageTitle": "test/acceso",
-            "title": "acceso"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Test de Acceso",
+                "slug": "test-de-acceso",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias",
+                    "slug": "dependencias"
+                  },
+                  "depth": 3,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 4,
+                        "title": "Dependencias locales",
+                        "slug": "dependencias-locales"
+                      },
+                      "depth": 4
+                    }
+                  ]
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Pruebas de Acceso",
+                    "slug": "pruebas-de-acceso"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Pruebas en Producción",
+                    "slug": "pruebas-en-produccin"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Pruebas de Servidor",
+                    "slug": "pruebas-de-servidor"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Test de Acceso"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias",
+                "slug": "dependencias"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Dependencias locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Pruebas de Acceso",
+                "slug": "pruebas-de-acceso"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Pruebas en Producción",
+                "slug": "pruebas-en-produccin"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Pruebas de Servidor",
+                "slug": "pruebas-de-servidor"
+              },
+              "depth": 3
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -209,9 +930,79 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "test/archivos.js",
             "targetPath": "test/archivos",
             "pageTitle": "test/archivos",
-            "title": "archivos"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Test de Archivos",
+                "slug": "test-de-archivos",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias",
+                    "slug": "dependencias"
+                  },
+                  "depth": 3,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 4,
+                        "title": "Dependencias Locales",
+                        "slug": "dependencias-locales"
+                      },
+                      "depth": 4
+                    }
+                  ]
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Pruebas de Configuración",
+                    "slug": "pruebas-de-configuracin"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Test de Archivos"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias",
+                "slug": "dependencias"
+              },
+              "depth": 3,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Dependencias Locales",
+                    "slug": "dependencias-locales"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Pruebas de Configuración",
+                "slug": "pruebas-de-configuracin"
+              },
+              "depth": 3
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -228,9 +1019,57 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "projectPath": "test/config.js",
             "targetPath": "test/config",
             "pageTitle": "test/config",
-            "title": "config"
+            "firstHeader": {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Configuración de tests",
+                "slug": "configuracin-de-tests",
+                "isFileHeader": true
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias",
+                    "slug": "dependencias"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "exports",
+                    "slug": "exports"
+                  },
+                  "depth": 3
+                }
+              ]
+            },
+            "title": "Configuración de tests"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "Dependencias",
+                "slug": "dependencias"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "exports",
+                "slug": "exports"
+              },
+              "depth": 3
+            }
+          ]
         }, {
           "type": "folder",
           "data": {
@@ -255,9 +1094,111 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "projectPath": "test/navegabilidad/navegabilidad.js",
                 "targetPath": "test/navegabilidad/navegabilidad",
                 "pageTitle": "test/navegabilidad/navegabilidad",
-                "title": "navegabilidad"
+                "firstHeader": {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Test de Navegabilidad",
+                    "slug": "test-de-navegabilidad",
+                    "isFileHeader": true
+                  },
+                  "depth": 1,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Dependencias",
+                        "slug": "dependencias"
+                      },
+                      "depth": 3,
+                      "children": [
+                        {
+                          "type": "heading",
+                          "data": {
+                            "level": 4,
+                            "title": "Dependencias locales",
+                            "slug": "dependencias-locales"
+                          },
+                          "depth": 4
+                        }
+                      ]
+                    }, {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Configuración de test",
+                        "slug": "configuracin-de-test"
+                      },
+                      "depth": 3
+                    }, {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Funciones Auxiliares",
+                        "slug": "funciones-auxiliares"
+                      },
+                      "depth": 3
+                    }, {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Pruebas de Navegabilidad",
+                        "slug": "pruebas-de-navegabilidad"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                },
+                "title": "Test de Navegabilidad"
               },
-              "depth": 3
+              "depth": 3,
+              "outline": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Dependencias",
+                    "slug": "dependencias"
+                  },
+                  "depth": 3,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 4,
+                        "title": "Dependencias locales",
+                        "slug": "dependencias-locales"
+                      },
+                      "depth": 4
+                    }
+                  ]
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Configuración de test",
+                    "slug": "configuracin-de-test"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Funciones Auxiliares",
+                    "slug": "funciones-auxiliares"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Pruebas de Navegabilidad",
+                    "slug": "pruebas-de-navegabilidad"
+                  },
+                  "depth": 3
+                }
+              ]
             }
           ]
         }

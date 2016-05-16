@@ -24,12 +24,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
+// ### Dependencias locales
+// * [**Configuración**](../config/config.html): Configuración del servidor
 var jsons = require('../../config/config').archivosJson;
 
-// **exports**
+// ### Exports
 // * routes: información de las rutas
 // * routesBusqueda: información de las rutas del buscador
-
 
 module.exports = {
 	routes: [{

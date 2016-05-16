@@ -18,7 +18,7 @@
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program. If not, see <http://www.gnu.org/licenses/> 
+	along with this program. If not, see <http://www.gnu.org/licenses/>
 -->
 
 <html lang="es">
@@ -38,7 +38,7 @@
         <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
 
         <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
-        
+
         <%switch(seccion){
             case "Buscador":%>
             <script type='text/javascript' src="/lib/jquery/dist/jquery.min.js"></script>
@@ -52,7 +52,8 @@
 				<script type='text/javascript' src='https://www.google.com/jsapi'></script>
 				<script type='text/javascript' src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
 				<script type='text/javascript'>
-					var tabla = $.noConflict(true);
+					//var tabla = $.noConflict(true);
+                    var tabla=$;
                 </script>
 				<script type='text/javascript' src="/script/generar_tabla.js"></script>
             <%break;

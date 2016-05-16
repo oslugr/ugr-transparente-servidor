@@ -29,12 +29,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 // ### Dependencias locales
 
 // * [**Rutas configurables**](./routes/routesConfig.html): Rutas genéricas de transparente.ugr
-// * **Configuración**: Configuración del servidor
+// * [**Configuración**](./config/config.html): Configuración del servidor
 // * **Configuración de rutas específicas**
 //   * [**Index**](./routes/index.html): Ruta a página principal
 //   * [**Mapa Web**](./routes/mapaWeb.html): Ruta a mapa web
-//   * [**Calendario**](./routes/calendario.html): Ruta a calendario
-//   * [**Calendario Solo**](./routes/calendarioSolo.html): Ruta a calendario Solo (_Legacy_)
 var routesList = require('./routes/routesConfig').routes;
 var routesBusqueda = require('./routes/routesConfig').routesBusqueda;
 var config = require('../config/config');
@@ -62,9 +60,9 @@ module.exports = function(app) {
 	}
 
 	// #### Otras Rutas
-	// * Inicio: / y /index.html
-	// * Mapa del sitio: /mapaWeb.html
-	// * Calendario: /calendario.html y calendarioSolo.html
+	// * Inicio: `/` y `/index.html`
+	// * Mapa del sitio: `/mapaWeb.html`
+	// * Calendario: `/calendario.html` y `/calendarioSolo.html`
 	app.get('/', index.index);
 	app.get('/index.html', index.index);
 	app.get('/mapaWeb.html', mapaWeb.mapaWeb);
@@ -72,6 +70,7 @@ module.exports = function(app) {
 	app.get('/calendarioSolo.html', calendarioSolo.index);
 
 	// #### Rutas del buscador
+	// Rutas a los recursos json que usa el buscador
 	function setRouteArchivos(routeConf) {
 		return function(req, res) {
 			res.json(routeConf.datos);
@@ -91,4 +90,5 @@ module.exports = function(app) {
 	});
 };
 
-// **Exports:** function(app)
+// ### Exports
+// * `function(app)`: asigna las rutas a la app de express

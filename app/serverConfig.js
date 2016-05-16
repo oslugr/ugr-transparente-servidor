@@ -34,11 +34,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 var favicon = require('serve-favicon');
 var expressStatic = require('express').static;
 var expressLayouts = require('express-ejs-layouts');
-//var logger = require('morgan');
+//var morgan = require('morgan');
 //var debug = require('debug')('ugr-transparente-servidor:server');
 
 // #### Dependencias locales
-// * **Configuración**: Configuración del servidor
+// * [**Configuración**](./config/config.html): Configuración del servidor
 var config = require('../config/config');
 
 
@@ -65,7 +65,7 @@ module.exports = function(app) {
 	// **Favicon**: `public/favicon/favicon.ico`
 	app.use(favicon('./public/favicon/favicon.ico'));
 	//Logger de solicitudes HTTP
-	//app.use(logger('dev'));
+	//app.use(morgan('dev'));
 
 	// Middleware de enrutado
 	// En entorno de desarrollo, express enrutará los ficheros estáticos, en entorno de producción no
@@ -73,3 +73,6 @@ module.exports = function(app) {
 		app.use(expressStatic('./public'));
 	}
 };
+
+// ### Exports
+// * function(app): realiza la configuración de servidor sobre app de express

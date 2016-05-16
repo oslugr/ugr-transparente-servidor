@@ -1,6 +1,12 @@
-"use strict";
+// # Ruta Calendario
 /*
-  UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Configuración de calendario
+
+### En Construcción
+*/
+
+"use strict";
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
   Copyright (C) 2016 Andrés Ortiz Corrales
@@ -19,11 +25,8 @@
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+  along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
-
-// Pagina de inicio
 exports.index = function(req, res) {
 	res.render('calendario', {
 		seccion: "Calendario",

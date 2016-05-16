@@ -1,6 +1,10 @@
-"use strict";
+// # Ruta Menú Principal
 /*
-  UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+Configuración de la ruta del menú principal (`/` y `/index`)
+*/
+
+"use strict";
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
   Copyright (C) 2014 Jaime Torres Benavente, Óscar Zafra Megías
   Copyright (C) 2015 Mario Heredia Moreno, Germán Martínez Maldonado
   Copyright (C) 2016 Andrés Ortiz Corrales
@@ -18,15 +22,14 @@
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+  along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
-
-// Variable para las configuraciones
+// ### Dependencias locales
+// * [**Configuración**](../config/config.html): Configuración del servidor
 var config = require('../../config/config');
 
-// Rellenamos el vector con los enlaces leidos del fichero de configuracion
-// Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
+//Rellenamos el vector con los enlaces leidos del fichero de configuracion
+//Cada posicion del vector es un enlace con su nombre, su dirección y su id para el CSS
 var enlaces = [];
 
 function leerEnlaces() {
@@ -41,7 +44,8 @@ function leerEnlaces() {
 	}
 }
 
-// Pagina de inicio
+// ### Exports
+// * `index(req,res)`: callback para renderizar inicio
 exports.index = function(req, res) {
 	if (enlaces.length === 0)
 		leerEnlaces();

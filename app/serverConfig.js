@@ -30,16 +30,23 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
 // * **Serve Favicon:** Devuelve el favicon.ico
 // * **Express:** Middleware _static_ de express para servir archivos estáticos
+// * **EJS:** Motor de renderizado de templates
 // * **EJS Layouts:** Módulo para poder crear layouts con EJS
+// * **Html Minifier:** Módulo para minificar html
+// * **Express Compression:** Módulo para comprimir las respuestas de express
 var favicon = require('serve-favicon');
 var expressStatic = require('express').static;
+var ejs = require('ejs');
 var expressLayouts = require('express-ejs-layouts');
+var htmlMinify = require('html-minifier').minify;
+var compress=require('compression');
 //var logger = require('morgan');
 //var debug = require('debug')('ugr-transparente-servidor:server');
 
 // #### Dependencias locales
 // * [**Configuración**](./config/config.html): Configuración del servidor
 var config = require('../config/config');
+
 
 
 // ### Configuración de servidor
@@ -53,12 +60,34 @@ module.exports = function(app) {
 	app.set('ip', process.env.IP || "127.0.0.1");
 	app.set('env', process.env.ENV);
 
+
+
+
 	// ### Middlewares
-	// Motor de renderizado (EJS), carpeta views por defecto para las platillas, layout por defecto `layouts/default`
+	// * Motor de renderizado (EJS)
+	// * Configuración de motor ejs para minificar html resultante
+	// * Carpeta views por defecto para las platillas
+	// * layout por defecto `layouts/default`
+	// * Compress para usar gzip
+
+	//configuración e la minificación de html
+	var minifyConfig={
+		removeAttributeQuotes: true,
+		collapseWhitespace:true,
+	};
+
+	app.engine('ejs', function (filePath, options, callback) {
+		ejs.__express(filePath, options, function (err, html) {
+			if (err) return callback(err);
+			callback(null, htmlMinify(html,minifyConfig));
+		});
+	});
+
 	app.set('views', 'views');
 	app.set('layout', 'layouts/default');
 	app.use(expressLayouts);
 	app.set('view engine', 'ejs');
+	app.use(compress());
 	//En entorno de producción activamos el cache de plantillas
 	if (app.get('env') === "prod") app.enable('view cache');
 

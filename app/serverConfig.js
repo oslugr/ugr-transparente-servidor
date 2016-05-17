@@ -39,7 +39,7 @@ var expressStatic = require('express').static;
 var ejs = require('ejs');
 var expressLayouts = require('express-ejs-layouts');
 var htmlMinify = require('html-minifier').minify;
-var compress=require('compression');
+var compress = require('compression');
 //var logger = require('morgan');
 //var debug = require('debug')('ugr-transparente-servidor:server');
 
@@ -60,9 +60,6 @@ module.exports = function(app) {
 	app.set('ip', process.env.IP || "127.0.0.1");
 	app.set('env', process.env.ENV);
 
-
-
-
 	// ### Middlewares
 	// * Motor de renderizado (EJS)
 	// * Configuración de motor ejs para minificar html resultante
@@ -71,15 +68,15 @@ module.exports = function(app) {
 	// * Compress para usar gzip
 
 	//configuración e la minificación de html
-	var minifyConfig={
+	var minifyConfig = {
 		removeAttributeQuotes: true,
-		collapseWhitespace:true,
+		collapseWhitespace: true,
 	};
 
-	app.engine('ejs', function (filePath, options, callback) {
-		ejs.__express(filePath, options, function (err, html) {
+	app.engine('ejs', function(filePath, options, callback) {
+		ejs.__express(filePath, options, function(err, html) {
 			if (err) return callback(err);
-			callback(null, htmlMinify(html,minifyConfig));
+			callback(null, htmlMinify(html, minifyConfig));
 		});
 	});
 

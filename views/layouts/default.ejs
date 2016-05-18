@@ -28,32 +28,33 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="description" content="Universidad de Granada - UGR transparente">
         <meta name="keywords" content="universidad, Granada, UGR transparente, ley de transparencia">
-        <link rel="shortcut icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
-        <link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
-        <link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
-        <link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-        <!-- <link rel="stylesheet" href="lib/jquery-ui/themes/smoothness/jquery-ui.min.css"> -->
-        <link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css">
-        <link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all">
-        <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all">
 
-        <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
+        <link rel="shortcut icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon" data-turbolinks-track="reload">
+        <link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon" data-turbolinks-track="reload">
+        <link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet" data-turbolinks-track="reload">
+        <link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print" data-turbolinks-track="reload">
+        <!-- <link rel="stylesheet" href="lib/jquery-ui/themes/smoothness/jquery-ui.min.css"> -->
+        <link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css" data-turbolinks-track="reload">
+        <link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all" data-turbolinks-track="reload">
+        <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all" data-turbolinks-track="reload">
+
+        <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js' data-turbolinks-track="reload"></script>
 
         <%switch(seccion){
             case "Buscador":%>
             <script type='text/javascript' src='/script/buscar.js'></script>
             <%break;%>
             <%default:%>
-				<script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js'></script>
-				<script type='text/javascript' src='/lib/d3/d3.min.js' charset='utf-8'></script>
-				<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+				<script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js' data-turbolinks-track="reload"></script>
+				<script type='text/javascript' src='/lib/d3/d3.min.js' charset='utf-8' data-turbolinks-track="reload"></script>
+				<script type='text/javascript' src='https://www.google.com/jsapi' data-turbolinks-track="reload"></script>
 				<script type='text/javascript'>
 					var tabla = $.noConflict(true);
                 </script>
-				<script type='text/javascript' src="/script/generar_tabla.js"></script>
+				<script type='text/javascript' src="/script/generar_tabla.js" data-turbolinks-track="reload"></script>
             <%break;
             }%>
-        <script type="text/javascript" src="/script/menu.js"></script>
+        <script type="text/javascript" src="/script/menu.js" data-turbolinks-track="reload"></script>
 
     </head>
 

@@ -18,7 +18,8 @@
 	You should have received a copy of the GNU General Public License
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-tabla('document').ready(function() {
+//tabla('document').ready(function() {
+    $(document).on('turbolinks:load',function(){
     // Select all the a tag with name equal to modal
     tabla('a[class=view]').click(function(e) {
         // Cancel the link behavior
@@ -72,6 +73,7 @@ tabla('document').ready(function() {
         //    tabla('.window').HTML("");
     });
 });
+//});
 google.load('visualization', '1', {
     packages: ['table']
 });

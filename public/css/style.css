@@ -25,14 +25,12 @@
   position: relative;
   top: 15px;
   left: 125px;
-  width: 210px;
-  height: 90px;
   padding: 20px 30px 20px 30px;
   CURSOR: pointer;
   color: #000000;
-  BORDER-BOTTOM: #336699 1px solid;
   FONT-FAMILY: Arial, Helvetica, sans-serif;
   background-image: url("/img/general/menu-subitem_on.png");
+  background-position: center;
 }
 .botonFormulario:hover {
   color: #0F3852;

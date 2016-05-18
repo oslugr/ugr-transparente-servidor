@@ -1,9 +1,10 @@
 // # Test de Acceso
+// Pruebas de acceso a las diversas páginas y recursos de transparente
 
 /*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2015 Germán Martínez Maldonado
 Copyright (C) 2016 Andrés Ortiz Corrales
- 
+
 This file is part of UGR Transparente.
 
 UGR Transparente is free software: you can redistribute it and/or modify
@@ -27,8 +28,10 @@ var assert = require('chai').assert;
 var request = require('supertest');
 var async = require('async');
 
-// Archivo de configuración de tests
-var config = require('./config.js');
+// #### Dependencias locales
+
+// * [**Configuración de tests**](./config.html): Datos de configuración de los tests
+var config = require('./config');
 
 // ### Pruebas de Acceso
 // Acceso a las diversas páginas y recursos del servidor local
@@ -51,9 +54,7 @@ describe('Pruebas de acceso', function() {
 		server.close();
 	});
 
-	// #### Test Unitarios
-
-	// * Acceso a todas las páginas del servidor, deben devolver código 200 y Html
+	// * **Acceso a páginas:** Prueba todas las páginas del servidor, deben devolver código 200 y Html
 	it("Acceso a páginas", function(done) {
 		async.eachSeries(config.direcciones, function(url, callback) {
 			request(app).get(url)
@@ -68,7 +69,7 @@ describe('Pruebas de acceso', function() {
 		});
 	});
 
-	// * Acceso a diversos recursos estáticos, debe devolver código 200
+	// * **Acceso a recursos:** Acceso a diversos recursos estáticos, debe devolver código 200
 	it("Acceso a recursos", function(done) {
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
 			request(app).get(url).expect(200).end(function(err, res) {
@@ -80,7 +81,7 @@ describe('Pruebas de acceso', function() {
 		});
 	});
 
-	// * Comprueba un acceso a página inexistente ('/foo'), espera código 404
+	// * **404 page:** Comprueba un acceso a página inexistente ('/foo'), espera código 404
 	it("404 page", function(done) {
 		request(app)
 			.get("/foo")
@@ -91,7 +92,7 @@ describe('Pruebas de acceso', function() {
 			});
 	});
 
-	// * Comprueba las direcciones a los datos del buscador, espera un JSON y código 200
+	// * **Archivos de buscador:** Comprueba las direcciones a los datos del buscador, espera un JSON y código 200
 	it("Archivos de buscador", function(done) {
 		async.eachSeries(config.archivosBuscador, function(url, callback) {
 			request(app).get(url)
@@ -129,7 +130,7 @@ describe("Pruebas en producción", function() {
 		server.close();
 	});
 
-	// * Acceso a archivos estáticos en producción debe devolver 404
+	// * **Archivos estáticos en producción:** Acceso a archivos estáticos en producción, debe devolver 404
 	// > Los recursos no se sirven por express, sino por servidor externo, en local no se debe poder acceder a ellos
 	it("Archivos estáticos en producción", function(done) {
 		async.eachSeries(config.archivosEstaticos, function(url, callback) {
@@ -142,7 +143,7 @@ describe("Pruebas en producción", function() {
 		});
 	});
 
-	// * Acceso a todas las páginas del servidor, deben devolver código 200 y un archivo Html
+	// * **Acceso a páginas:** Comprobación de todas las páginas del servidor, deben devolver código 200 y un archivo Html
 	it("Acceso a páginas", function(done) {
 		async.eachSeries(config.direcciones, function(url, callback) {
 			request(app).get(url)
@@ -163,7 +164,7 @@ describe("Pruebas en producción", function() {
 // * _timeout:_ 3 segundos
 describe("Pruebas de servidor", function() {
 	this.timeout(3000);
-	// * Ejecución de servidor y acceso a dirección principal (`/`)
+	// * **Ejecución de servidor:** Prueba de inicio del servidor y acceso a dirección principal (`/`)
 	it('Ejecución de servidor', function(done) {
 		var server = require('../app');
 		assert.ok(server);

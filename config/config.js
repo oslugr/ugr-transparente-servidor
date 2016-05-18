@@ -1,5 +1,7 @@
-/*
-UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+// # Datos de configuración
+// Datos de configuración de del servidor e índice de recursos
+
+/*UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
 Copyright (C) 2016 Andrés Ortiz Corrales
 
 This file is part of UGR Transparente.
@@ -15,10 +17,13 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 
-//Configuración de transparente y páginas
+// ### Exports
+// * **servidor**: servidor de _open data_ <http://opendata.ugr.es/>
+// * **puerto**: puerto por defecto de transparente
+// * **archivosJson**: índice de todos los archivos json necesarios
+// * **error**: título y tecto del mensaje de error (404)
 module.exports = {
 	servidor: "http://opendata.ugr.es/",
 	puerto: 3000,

@@ -47,5 +47,6 @@ var server = app.listen(app.get('port'), app.get('ip'), function() {
 	console.log('Express server listening on ' + app.get('ip') + ':' + app.get('port'));
 });
 
-// **Exports:** server
+// ###Exports
+// * server: servidor express en escucha
 module.exports = server;

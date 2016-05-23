@@ -20,21 +20,22 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+function convierteCadena(cadena) {
+	cadena = cadena.replace("%C3%A1", "a");
+	cadena = cadena.replace("%C3%A9", "e");
+	cadena = cadena.replace("%C3%AD", "i");
+	cadena = cadena.replace("%C3%B3", "o");
+	cadena = cadena.replace("%C3%BA", "u");
 
-$(function() {
+	cadena = cadena.replace("%C3%B1", "ñ");
 
+	return (cadena);
+}
+//$(function() {
+    $(document).on('turbolinks:load',function(){
+		if(window.location.pathname==="/buscador.html"){
 	// Pasa de codificación Unicode a UTF-8 y quita acentos
-	function convierteCadena(cadena) {
-		cadena = cadena.replace("%C3%A1", "a");
-		cadena = cadena.replace("%C3%A9", "e");
-		cadena = cadena.replace("%C3%AD", "i");
-		cadena = cadena.replace("%C3%B3", "o");
-		cadena = cadena.replace("%C3%BA", "u");
 
-		cadena = cadena.replace("%C3%B1", "ñ");
-
-		return (cadena);
-	}
 
 	var contenido = $('.content_doku'),
 		consulta = location.search,
@@ -97,5 +98,5 @@ $(function() {
 	} else {
 		contenido.html("<p>No se han encontrado coincidencias. Introduzca más de 3 caracteres.</p>");
 	}
-
+}
 });

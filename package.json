@@ -1,6 +1,6 @@
 {
   "name": "ugr-transparente-servidor",
-  "version": "0.9.9",
+  "version": "0.9.12",
   "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
   "contributors": [
     "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
@@ -40,12 +40,15 @@
     "express": "^4.13.4",
     "express-ejs-layouts": "^2.1.0",
     "html-minifier": "^2.1.3",
-    "node-sass": "^3.4.2",
-    "serve-favicon": "^2.3.0"
+    "mocha": "^2.5.1",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "turbolinks": "^5.0.0-beta5"
   },
   "devDependencies": {
     "async": "^2.0.0-rc.3",
     "bower": "^1.7.7",
+    "browserify": "^13.0.1",
     "chai": "^3.5.0",
     "coveralls": "^2.11.8",
     "flightplan": "^0.6.13",
@@ -63,6 +66,7 @@
     "pm2": "^1.0.2",
     "supertest": "^1.2.0",
     "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0",
     "zombie": "^4.2.1"
   },
   "engines": {
@@ -84,7 +88,6 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "save": "pm2 save",
     "beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js public/script/*.js",
-    "sass": "node-sass ./public/styles/*.scss -o ./public/styles/css",
     "jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js",
     "doc": "rm -rf doc;groc"
   }

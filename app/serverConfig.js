@@ -40,13 +40,11 @@ var ejs = require('ejs');
 var expressLayouts = require('express-ejs-layouts');
 var htmlMinify = require('html-minifier').minify;
 var compress = require('compression');
-//var logger = require('morgan');
-//var debug = require('debug')('ugr-transparente-servidor:server');
+//var morgan = require('morgan');
 
 // #### Dependencias locales
 // * [**Configuración**](./config/config.html): Configuración del servidor
 var config = require('../config/config');
-
 
 
 // ### Configuración de servidor
@@ -91,7 +89,7 @@ module.exports = function(app) {
 	// **Favicon**: `public/favicon/favicon.ico`
 	app.use(favicon('./public/favicon/favicon.ico'));
 	//Logger de solicitudes HTTP
-	//app.use(logger('dev'));
+	//app.use(morgan('dev'));
 
 	// Middleware de enrutado
 	// En entorno de desarrollo, express enrutará los ficheros estáticos, en entorno de producción no

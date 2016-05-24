@@ -24,3 +24,6 @@ public/graph
 *.bak
 index.html
 recursos.zip
+
+# bundle
+public/scripts/builds

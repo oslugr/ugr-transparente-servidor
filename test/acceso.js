@@ -157,6 +157,17 @@ describe("Pruebas en producción", function() {
 			done();
 		});
 	});
+
+	it.skip("Archivo inexistente", function(done) {
+		app.get('/foo.html', function(req, res) {
+			res.send('index');
+		});
+		request(app).get('/foo.html').expect(404).end(function(err, res) {
+			assert.notOk(err);
+			console.log(res);
+			done();
+		});
+	});
 });
 
 // ### Pruebas de Servidor

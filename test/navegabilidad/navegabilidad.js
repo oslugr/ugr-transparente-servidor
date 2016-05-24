@@ -59,7 +59,10 @@ else {
 	runLocalServer = true;
 }
 
-var browser = new Browser({maxWait: 10000,waitFor:6000});
+var browser = new Browser({
+	maxWait: 10000,
+	waitFor: 6000
+});
 
 // ### Funciones Auxiliares
 // * `clickAll(selector,done)`: Pincha todos los elementos que coinciden con el selector dado, ejecuta callback después de haber pinchado todos los elementos

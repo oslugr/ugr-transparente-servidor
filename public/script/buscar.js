@@ -32,71 +32,71 @@ function convierteCadena(cadena) {
 	return (cadena);
 }
 //$(function() {
-    $(document).on('turbolinks:load',function(){
-		if(window.location.pathname==="/buscador.html"){
-	// Pasa de codificación Unicode a UTF-8 y quita acentos
+$(document).on('turbolinks:load', function() {
+	if (window.location.pathname === "/buscador.html") {
+		// Pasa de codificación Unicode a UTF-8 y quita acentos
 
 
-	var contenido = $('.content_doku'),
-		consulta = location.search,
-		inicio = consulta.indexOf('='),
-		fin = consulta.indexOf('&');
+		var contenido = $('.content_doku'),
+			consulta = location.search,
+			inicio = consulta.indexOf('='),
+			fin = consulta.indexOf('&');
 
-	consulta = consulta.substring(inicio + 1, fin);
-	consulta = consulta.replace(/\+/g, " ");
+		consulta = consulta.substring(inicio + 1, fin);
+		consulta = consulta.replace(/\+/g, " ");
 
-	consulta = convierteCadena(consulta);
+		consulta = convierteCadena(consulta);
 
-	var archivos = ["archivos/personal",
-		"archivos/infoEconomica",
-		"archivos/ofertaDemanda",
-		"archivos/claustro",
-		"archivos/estudiantes",
-		"archivos/gobierno",
-		"archivos/rendimiento",
-		"archivos/normativaLegal"
-	];
+		var archivos = ["archivos/personal",
+			"archivos/infoEconomica",
+			"archivos/ofertaDemanda",
+			"archivos/claustro",
+			"archivos/estudiantes",
+			"archivos/gobierno",
+			"archivos/rendimiento",
+			"archivos/normativaLegal"
+		];
 
-	var resultados = "";
+		var resultados = "";
 
-	if (consulta.length > 3) {
-		var numResultados = 0;
+		if (consulta.length > 3) {
+			var numResultados = 0;
 
-		$.each(archivos, function(index, nombre) {
+			$.each(archivos, function(index, nombre) {
 
-			$.getJSON(nombre, function(data) {
-					$.each(data.contenido, function(campo, contenido) {
-						var link = contenido.link;
-						var encabezado = contenido.encabezado;
-						// Si la consulta coincide con parte de la descripción del conjunto de datos.
-						if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
-							resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + link + "'>" + encabezado + "</a></li>";
-							numResultados++;
-						}
-						// Por cada campo de datos.
-						$.each(contenido.datos, function(tabla, contenido) {
-							// Si la consulta coincide con parte del título de la tabla.
-							if (contenido.nombre.toLowerCase().indexOf(consulta) > -1) {
-								resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + link + "'>" + encabezado + " - " + contenido.nombre + "</a></li>";
+				$.getJSON(nombre, function(data) {
+						$.each(data.contenido, function(campo, contenido) {
+							var link = contenido.link;
+							var encabezado = contenido.encabezado;
+							// Si la consulta coincide con parte de la descripción del conjunto de datos.
+							if (contenido.texto.toLowerCase().indexOf(consulta) > -1) {
+								resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + link + "'>" + encabezado + "</a></li>";
 								numResultados++;
 							}
+							// Por cada campo de datos.
+							$.each(contenido.datos, function(tabla, contenido) {
+								// Si la consulta coincide con parte del título de la tabla.
+								if (contenido.nombre.toLowerCase().indexOf(consulta) > -1) {
+									resultados += "<li><a class='seccion' href='http://transparente.ugr.es/" + data.plantilla + ".html#" + link + "'>" + encabezado + " - " + contenido.nombre + "</a></li>";
+									numResultados++;
+								}
+							});
+
 						});
+					})
+					.done(function() {
+						if (numResultados == 1) {
+							contenido.html("<p>Se ha encontrado <strong><em>1</em></strong> coincidencia para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);
+						} else if (numResultados > 1) {
+							contenido.html("<p>Se han encontrado <strong><em>" + numResultados + "</em></strong> coincidencias para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);
+						} else {
+							contenido.html("<p>No se han encontrado coincidencias para <strong><em>" + consulta + "</em></strong>.</p>");
 
+						}
 					});
-				})
-				.done(function() {
-					if (numResultados == 1) {
-						contenido.html("<p>Se ha encontrado <strong><em>1</em></strong> coincidencia para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);
-					} else if (numResultados > 1) {
-						contenido.html("<p>Se han encontrado <strong><em>" + numResultados + "</em></strong> coincidencias para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);
-					} else {
-						contenido.html("<p>No se han encontrado coincidencias para <strong><em>" + consulta + "</em></strong>.</p>");
-
-					}
-				});
-		});
-	} else {
-		contenido.html("<p>No se han encontrado coincidencias. Introduzca más de 3 caracteres.</p>");
+			});
+		} else {
+			contenido.html("<p>No se han encontrado coincidencias. Introduzca más de 3 caracteres.</p>");
+		}
 	}
-}
 });

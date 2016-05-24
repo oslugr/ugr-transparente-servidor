@@ -4,6 +4,8 @@ var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var shell = require('gulp-shell');
 var pm2 = require('pm2');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 
 // Show the help
 gulp.task('help', gulp.help());
@@ -15,7 +17,7 @@ gulp.task('default', ["start"], function() {});
 gulp.task('get-resources', shell.task("bash getRecursos.sh"));
 
 // Install all necessary resources to run the server
-gulp.task('install', ['get-resources'], function() {
+gulp.task('install', ['get-resources','browserify'], function() {
 	return gulp.src(['./bower.json'])
 		.pipe(install());
 });
@@ -62,4 +64,13 @@ gulp.task('stop', function() {
 			pm2.disconnect();
 		});
 	});
+});
+
+gulp.task('browserify', function() {
+    return browserify('./src/main.js')
+        .bundle()
+        //Pass desired output filename to vinyl-source-stream
+        .pipe(source('bundle.js'))
+        // Start piping stream to tasks!
+        .pipe(gulp.dest('./public/scripts/build/'));
 });

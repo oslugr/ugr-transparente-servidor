@@ -30,9 +30,8 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 <span class="hljs-keyword">var</span> ejs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ejs'</span>);
 <span class="hljs-keyword">var</span> expressLayouts = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express-ejs-layouts'</span>);
 <span class="hljs-keyword">var</span> htmlMinify = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-minifier'</span>).minify;
-<span class="hljs-keyword">var</span> compress=<span class="hljs-built_in">require</span>(<span class="hljs-string">'compression'</span>);
-<span class="hljs-comment">//var logger = require('morgan');</span>
-<span class="hljs-comment">//var debug = require('debug')('ugr-transparente-servidor:server');</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="dependencias-locales">Dependencias locales</h4>
+<span class="hljs-keyword">var</span> compress = <span class="hljs-built_in">require</span>(<span class="hljs-string">'compression'</span>);
+<span class="hljs-comment">//var morgan = require('morgan');</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="dependencias-locales">Dependencias locales</h4>
 <ul>
 <li><a href="./config/config.html"><strong>Configuración</strong></a>: Configuración del servidor</li>
 </ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../config/config'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="configuracin-de-servidor">Configuración de servidor</h3>
@@ -51,15 +50,15 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 <li>layout por defecto <code>layouts/default</code></li>
 <li>Compress para usar gzip</li>
 </ul></div></div><div class="code"><div class="wrapper">	<span class="hljs-comment">//configuración e la minificación de html</span>
-	<span class="hljs-keyword">var</span> minifyConfig={
+	<span class="hljs-keyword">var</span> minifyConfig = {
 		removeAttributeQuotes: <span class="hljs-literal">true</span>,
-		collapseWhitespace:<span class="hljs-literal">true</span>,
+		collapseWhitespace: <span class="hljs-literal">true</span>,
 	};
 
-	app.engine(<span class="hljs-string">'ejs'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">filePath, options, callback</span>) </span>{
-		ejs.__express(filePath, options, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, html</span>) </span>{
+	app.engine(<span class="hljs-string">'ejs'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">filePath, options, callback</span>) </span>{
+		ejs.__express(filePath, options, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, html</span>) </span>{
 			<span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> callback(err);
-			callback(<span class="hljs-literal">null</span>, htmlMinify(html,minifyConfig));
+			callback(<span class="hljs-literal">null</span>, htmlMinify(html, minifyConfig));
 		});
 	});
 
@@ -71,7 +70,7 @@ along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.*/</sp
 	<span class="hljs-comment">//En entorno de producción activamos el cache de plantillas</span>
 	<span class="hljs-keyword">if</span> (app.get(<span class="hljs-string">'env'</span>) === <span class="hljs-string">"prod"</span>) app.enable(<span class="hljs-string">'view cache'</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Favicon</strong>: <code>public/favicon/favicon.ico</code></p></div></div><div class="code"><div class="wrapper">	app.use(favicon(<span class="hljs-string">'./public/favicon/favicon.ico'</span>));
 	<span class="hljs-comment">//Logger de solicitudes HTTP</span>
-	<span class="hljs-comment">//app.use(logger('dev'));</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Middleware de enrutado
+	<span class="hljs-comment">//app.use(morgan('dev'));</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Middleware de enrutado
 En entorno de desarrollo, express enrutará los ficheros estáticos, en entorno de producción no</p></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">if</span> (app.get(<span class="hljs-string">'env'</span>) === <span class="hljs-string">"dev"</span>) {
 		app.use(expressStatic(<span class="hljs-string">'./public'</span>));
 	}

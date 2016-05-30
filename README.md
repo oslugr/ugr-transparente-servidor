@@ -16,7 +16,6 @@ La aplicación es accesible desde <http://transparente.ugr.es>.
 La documentación se encuentra en <https://oslugr.github.io/ugr-transparente-servidor/>.   
 
 ## Instalación
-
 1. En caso de no tener instalado `git`:   
     ```
     sudo apt-get install git

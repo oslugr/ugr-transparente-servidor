@@ -68,10 +68,10 @@ gulp.task('stop', function() {
 });
 
 // Uglify bundle scripts
-gulp.task('uglify',['browserify'],function(){
+gulp.task('uglify', ['browserify'], function() {
 	return gulp.src('./public/scripts/builds/*.js')
-   .pipe(uglify())
-   .pipe(gulp.dest('./public/scripts/builds/'));
+		.pipe(uglify())
+		.pipe(gulp.dest('./public/scripts/builds/'));
 });
 
 // Browserify on code

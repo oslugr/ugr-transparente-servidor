@@ -36,8 +36,10 @@ before_script:
   - sleep 2
 script:
   - npm test
+  - npm run jshint
 #  - npm run zombie_test
-  
+
 # Coveralls coverage
 after_success:
     - npm run coveralls
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then npm run doc; fi

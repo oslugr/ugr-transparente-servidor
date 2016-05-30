@@ -48,17 +48,15 @@ var config = require('../config');
 //   * `rocess.env.IP`: Dirección IP del servidor local (por defecto localhost)
 
 var runLocalServer = false;
-if (process.env.ENV === "prod") url = "http://transparente.ugr.es/";
-
-
+var url;
+if (process.env.ENV === "prod") url = "http://transparente.ugr.es";
 else {
 	var port = process.env.PORT || require('../../config/config').puerto;
 	var ip = process.env.IP || "127.0.0.1";
 
-	var url = "http://" + ip + ":" + port;
+	url = "http://" + ip + ":" + port;
 	runLocalServer = true;
 }
-
 var browser = new Browser({
 	maxWait: 10000,
 	waitFor: 6000
@@ -152,9 +150,9 @@ function checkLayout(title) {
 // Pruebas de simulación de navegación
 // * _before:_ Inicia el servidor
 // * _after:_ Cierra el servidor
-// * _timeout:_ 100 segundos
+// * _timeout:_ 50 segundos
 describe('Pruebas de Navegabilidad', function() {
-	this.timeout(100000);
+	this.timeout(50000);
 	var server;
 	var app;
 	if (runLocalServer) console.log("- Local Server -");

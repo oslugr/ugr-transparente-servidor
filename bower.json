@@ -1,25 +1,25 @@
 {
-  "name": "ugr-transparente-servidor",
-  "version": "0.9.12",
-  "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
-  "contributors": [
-    "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
-    "Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
-    "Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
-    "Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
-    "Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
-    "Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
-  ],
-  "description": "Portal de transparencia de la Universidad de Granada",
-  "main": "app.js",
-  "license": "GPL-3.0",
-  "private": true,
-  "dependencies": {
-    "jquery": "^2.2.1",
-    "fullcalendar": "^2.6.1",
-    "jquery-ui": "^1.11.4",
-    "lightbox2": "^2.8.2",
-    "d3": "^3.5.17",
-    "moment": "^2.13.0"
-  }
+	"name": "ugr-transparente-servidor",
+	"version": "0.9.12",
+	"author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
+	"contributors": [
+		"Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
+		"Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
+		"Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
+		"Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
+		"Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
+		"Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
+	],
+	"description": "Portal de transparencia de la Universidad de Granada",
+	"main": "app.js",
+	"license": "GPL-3.0",
+	"private": true,
+	"dependencies": {
+		"jquery": "^2.2.1",
+		"fullcalendar": "^2.6.1",
+		"jquery-ui": "^1.11.4",
+		"lightbox2": "^2.8.2",
+		"d3": "^3.5.17",
+		"moment": "^2.13.0"
+	}
 }

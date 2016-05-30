@@ -17,7 +17,7 @@ gulp.task('default', ["start"], function() {});
 gulp.task('get-resources', shell.task("bash getRecursos.sh"));
 
 // Install all necessary resources to run the server
-gulp.task('install', ['get-resources','browserify'], function() {
+gulp.task('install', ['get-resources', 'browserify'], function() {
 	return gulp.src(['./bower.json'])
 		.pipe(install());
 });
@@ -67,10 +67,10 @@ gulp.task('stop', function() {
 });
 
 gulp.task('browserify', function() {
-    return browserify('./src/main.js')
-        .bundle()
-        //Pass desired output filename to vinyl-source-stream
-        .pipe(source('bundle.js'))
-        // Start piping stream to tasks!
-        .pipe(gulp.dest('./public/scripts/builds/'));
+	return browserify('./src/main.js')
+		.bundle()
+		//Pass desired output filename to vinyl-source-stream
+		.pipe(source('bundle.js'))
+		// Start piping stream to tasks!
+		.pipe(gulp.dest('./public/scripts/builds/'));
 });

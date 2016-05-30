@@ -1,94 +1,95 @@
 {
-	"name": "ugr-transparente-servidor",
-	"version": "0.9.12",
-	"author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
-	"contributors": [
-		"Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
-		"Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
-		"Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
-		"Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
-		"Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
-		"Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
-	],
-	"description": "Portal de transparencia de la Universidad de Granada",
-	"keywords": [
-		"opendata",
-		"transparencia",
-		"ugr"
-	],
-	"bugs": {
-		"url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
-	},
-	"license": "GPL-3.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/oslugr/ugr-transparente-servidor.git"
-	},
-	"homepage": "http://transparente.ugr.es/",
-	"main": "app.js",
-	"os": [
-		"linux"
-	],
-	"private": true,
-	"directories": {
-		"lib": "lib",
-		"test": "test"
-	},
-	"dependencies": {
-		"compression": "^1.6.2",
-		"ejs": "^2.4.1",
-		"express": "^4.13.4",
-		"express-ejs-layouts": "^2.1.0",
-		"html-minifier": "^2.1.3",
-		"mocha": "^2.5.1",
-		"morgan": "^1.7.0",
-		"serve-favicon": "^2.3.0",
-		"turbolinks": "^5.0.0-beta5"
-	},
-	"devDependencies": {
-		"async": "^2.0.0-rc.3",
-		"bower": "^1.7.7",
-		"browserify": "^13.0.1",
-		"chai": "^3.5.0",
-		"coveralls": "^2.11.8",
-		"flightplan": "^0.6.13",
-		"groc": "^0.8.0",
-		"gulp": "^3.9.1",
-		"gulp-install": "^0.6.0",
-		"gulp-istanbul": "^0.10.3",
-		"gulp-mocha": "^2.2.0",
-		"gulp-shell": "^0.5.2",
-		"gulp-task-doc": "^1.0.8",
-		"istanbul": "^0.4.2",
-		"js-beautify": "^1.6.2",
-		"jshint": "^2.9.1",
-		"mocha": "^2.4.5",
-		"pm2": "^1.0.2",
-		"supertest": "^1.2.0",
-		"underscore": "^1.8.3",
-		"vinyl-source-stream": "^1.1.0",
-		"zombie": "^4.2.1"
-	},
-	"engines": {
-		"node": ">=4.2.6",
-		"npm": ">=2.14.12"
-	},
-	"scripts": {
-		"start": "ENV=prod pm2 start app.js && pm2 save",
-		"stop": "pm2 stop app",
-		"postinstall": "gulp install",
-		"restart": "ENV=prod pm2 restart app.js && pm2 save",
-		"test": "gulp test",
-		"zombie_test": "mocha ./test/navegabilidad/navegabilidad.js",
-		"zombie_test_production": "ENV=prod mocha ./test/navegabilidad/navegabilidad.js",
-		"dev": "ENV=dev node app.js",
-		"rdev": "ENV=dev pm2 restart app.js",
-		"deploy": "fly transparente",
-		"check": "npm-check",
-		"coveralls": "cat ./coverage/lcov.info | coveralls",
-		"save": "pm2 save",
-		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js public/scripts/*.js",
-		"jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js",
-		"doc": "rm -rf doc;groc"
-	}
+  "name": "ugr-transparente-servidor",
+  "version": "0.9.12",
+  "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
+  "contributors": [
+    "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
+    "Germán Martínez Maldonado <germaaan@gmail.com> (https://twitter.com/germaaan_)",
+    "Andrés Ortiz Corrales <andresortizcorrales@gmail.com> (https://twitter.com/andrewortiz21)",
+    "Mario Heredia Moreno <mariohm1989@gmail.com> (https://twitter.com/mhmario89)",
+    "Jaime Torres Benavente <jtbenavente@gmail.com> (https://twitter.com/jtbenavente)",
+    "Óscar Zafra Megías <oskyar@gmail.com> (https://twitter.com/OscarRZM)"
+  ],
+  "description": "Portal de transparencia de la Universidad de Granada",
+  "keywords": [
+    "opendata",
+    "transparencia",
+    "ugr"
+  ],
+  "bugs": {
+    "url": "https://github.com/oslugr/ugr-transparente-servidor/issues"
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oslugr/ugr-transparente-servidor.git"
+  },
+  "homepage": "http://transparente.ugr.es/",
+  "main": "app.js",
+  "os": [
+    "linux"
+  ],
+  "private": true,
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-ejs-layouts": "^2.1.0",
+    "html-minifier": "^2.1.3",
+    "mocha": "^2.5.1",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "turbolinks": "^5.0.0-beta5"
+  },
+  "devDependencies": {
+    "async": "^2.0.0-rc.3",
+    "bower": "^1.7.7",
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.8",
+    "flightplan": "^0.6.13",
+    "groc": "^0.8.0",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.2.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-task-doc": "^1.0.8",
+    "gulp-uglify": "^1.5.3",
+    "istanbul": "^0.4.2",
+    "js-beautify": "^1.6.2",
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "pm2": "^1.0.2",
+    "supertest": "^1.2.0",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0",
+    "zombie": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=4.2.6",
+    "npm": ">=2.14.12"
+  },
+  "scripts": {
+    "start": "ENV=prod pm2 start app.js && pm2 save",
+    "stop": "pm2 stop app",
+    "postinstall": "gulp install",
+    "restart": "ENV=prod pm2 restart app.js && pm2 save",
+    "test": "gulp test",
+    "zombie_test": "mocha ./test/navegabilidad/navegabilidad.js",
+    "zombie_test_production": "ENV=prod mocha ./test/navegabilidad/navegabilidad.js",
+    "dev": "ENV=dev node app.js",
+    "rdev": "ENV=dev pm2 restart app.js",
+    "deploy": "fly transparente",
+    "check": "npm-check",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "save": "pm2 save",
+    "beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js public/scripts/*.js",
+    "jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js public/script/*.js",
+    "doc": "rm -rf doc;groc"
+  }
 }

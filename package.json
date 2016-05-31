@@ -1,6 +1,6 @@
 {
 	"name": "ugr-transparente-servidor",
-	"version": "0.9.13",
+	"version": "0.9.14",
 	"author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
 	"contributors": [
 		"Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
@@ -35,6 +35,7 @@
 		"test": "test"
 	},
 	"dependencies": {
+		"body-parser": "^1.15.1",
 		"compression": "^1.6.2",
 		"ejs": "^2.4.1",
 		"express": "^4.13.4",

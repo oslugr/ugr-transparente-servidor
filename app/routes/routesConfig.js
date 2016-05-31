@@ -77,10 +77,6 @@ module.exports = {
 		url: "/solicitudInfo.html",
 		plantilla: "solicitudInfo",
 		datos: jsons.solicitudInfo
-	}, {
-		url: "/buscador.html",
-		plantilla: "buscador",
-		datos: jsons.buscador
 	}],
 	routesBusqueda: [{
 		url: '/personal',

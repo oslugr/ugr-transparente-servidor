@@ -74,7 +74,7 @@ gulp.task('build', ['bundle-js', 'uglify', 'sass']);
 
 
 // Uglify bundle scripts
-gulp.task('uglify', ['webpack'], function() {
+gulp.task('uglify', ['bundle-js'], function() {
 	return gulp.src('./public/scripts/builds/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/scripts/builds/'));

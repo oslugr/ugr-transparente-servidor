@@ -48,7 +48,6 @@
 	"devDependencies": {
 		"async": "^2.0.0-rc.3",
 		"bower": "^1.7.7",
-		"browserify": "^13.0.1",
 		"chai": "^3.5.0",
 		"coveralls": "^2.11.8",
 		"flightplan": "^0.6.13",
@@ -68,7 +67,6 @@
 		"pm2": "^1.0.2",
 		"supertest": "^1.2.0",
 		"underscore": "^1.8.3",
-		"vinyl-source-stream": "^1.1.0",
 		"webpack-stream": "^3.2.0",
 		"zombie": "^4.2.1"
 	},

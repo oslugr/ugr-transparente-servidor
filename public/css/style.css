@@ -1962,67 +1962,6 @@ li.model-resaltado-02 a.banner:hover {
   font-size: 1.2em;
 }
 
-/*********************/
-
-
-/****** index ********/
-
-
-/*********************/
-
-.enlaces_index {
-  float: left;
-  text-align: center;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 1.1em;
-  width: 130px;
-  height: 77px;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  border: medium outset white;
-  font-family: Verdana;
-  /*background-image: url("/imagenes/ugr.png");*/
-}
-.enlaces_index div {
-  float: left;
-  padding-top: 20%;
-  width: 100%;
-  height: 68%;
-}
-.enlaces_index:hover {
-  opacity: 0.85;
-  /*filter: alpha(opacity=85);*/
-  /* For IE8 and earlier */
-}
-#en_infoInstitucional {
-  background-image: url("/img/inicio/infoInstitucional.png");
-}
-#en_personal {
-  background-image: url("/img/inicio/personal.png");
-}
-#en_infoEconomica {
-  background-image: url("/img/inicio/infoEconomica.png");
-}
-#en_ofertaDemanda {
-  background-image: url("/img/inicio/ofertaDemanda.png");
-}
-#en_claustro {
-  background-image: url("/img/inicio/claustro.png");
-}
-#en_estudiantes {
-  background-image: url("/img/inicio/estudiantes.png");
-}
-#en_gobierno {
-  background-image: url("/img/inicio/gobierno.png");
-}
-#en_rendimiento {
-  background-image: url("/img/inicio/rendimiento.png");
-}
-#en_normativaLegal {
-  background-image: url("/img/inicio/normativaLegal.png");
-}
-
 /***************************************/
 
 

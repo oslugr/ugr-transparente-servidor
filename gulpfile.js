@@ -4,9 +4,11 @@ var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var shell = require('gulp-shell');
 var pm2 = require('pm2');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
+//var browserify = require('browserify');
+//var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
+var sass = require('gulp-sass');
+var webpack = require('webpack-stream');
 
 // Show the help
 gulp.task('help', gulp.help());
@@ -18,7 +20,7 @@ gulp.task('default', ["start"], function() {});
 gulp.task('get-resources', shell.task("bash getRecursos.sh"));
 
 // Install all necessary resources to run the server
-gulp.task('install', ['get-resources', 'browserify', 'uglify'], function() {
+gulp.task('install', ['get-resources', 'build'], function() {
 	return gulp.src(['./bower.json'])
 		.pipe(install());
 });
@@ -67,17 +69,33 @@ gulp.task('stop', function() {
 	});
 });
 
+// Build resources
+gulp.task('build', ['bundle-js', 'uglify', 'sass']);
+
+
 // Uglify bundle scripts
-gulp.task('uglify', ['browserify'], function() {
+gulp.task('uglify', ['webpack'], function() {
 	return gulp.src('./public/scripts/builds/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/scripts/builds/'));
 });
 
-// Browserify on code
-gulp.task('browserify', function() {
-	return browserify('./src/main.js')
-		.bundle()
-		.pipe(source('bundle.js'))
+// Generates css from scss files using sass
+gulp.task('sass', function() {
+	return gulp.src('./src/sass/*')
+		.pipe(sass({
+			outputStyle: 'compressed'
+		}).on('error', sass.logError))
+		.pipe(gulp.dest('./public/css/builds'));
+});
+
+//bundle javascript client code
+gulp.task('bundle-js', function() {
+	return gulp.src('./src/js/main.js')
+		.pipe(webpack({
+			output: {
+				filename: 'bundle.js',
+			}
+		}))
 		.pipe(gulp.dest('./public/scripts/builds/'));
 });

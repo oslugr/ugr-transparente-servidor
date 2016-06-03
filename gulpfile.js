@@ -9,6 +9,7 @@ var pm2 = require('pm2');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var webpack = require('webpack-stream');
+var rename = require('gulp-rename');
 
 // Show the help
 gulp.task('help', gulp.help());
@@ -82,10 +83,11 @@ gulp.task('uglify', ['bundle-js'], function() {
 
 // Generates css from scss files using sass
 gulp.task('sass', function() {
-	return gulp.src('./src/sass/*')
+	return gulp.src('./src/sass/main.scss')
 		.pipe(sass({
-			outputStyle: 'compressed'
+			outputStyle: 'compressed',
 		}).on('error', sass.logError))
+		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('./public/css/builds'));
 });
 

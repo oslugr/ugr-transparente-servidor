@@ -34,12 +34,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.*/
 // * **EJS Layouts:** Módulo para poder crear layouts con EJS
 // * **Html Minifier:** Módulo para minificar html
 // * **Express Compression:** Módulo para comprimir las respuestas de express
+// * **Body Parser:** Módulo para leer el _body_ de una petición http
 var favicon = require('serve-favicon');
 var expressStatic = require('express').static;
 var ejs = require('ejs');
 var expressLayouts = require('express-ejs-layouts');
 var htmlMinify = require('html-minifier').minify;
 var compress = require('compression');
+var bodyParser = require('body-parser');
 //var morgan = require('morgan');
 
 // #### Dependencias locales
@@ -64,8 +66,9 @@ module.exports = function(app) {
 	// * Carpeta views por defecto para las platillas
 	// * layout por defecto `layouts/default`
 	// * Compress para usar gzip
+	// * Body Parser para renderizar el cuerpo en json de las peticiones
 
-	//configuración e la minificación de html
+	//configuración de la minificación de html
 	var minifyConfig = {
 		removeAttributeQuotes: true,
 		collapseWhitespace: true,
@@ -83,6 +86,7 @@ module.exports = function(app) {
 	app.use(expressLayouts);
 	app.set('view engine', 'ejs');
 	app.use(compress());
+	app.use(bodyParser.json());
 	//En entorno de producción activamos el cache de plantillas
 	if (app.get('env') === "prod") app.enable('view cache');
 

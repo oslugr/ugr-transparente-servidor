@@ -1,5 +1,5 @@
 # UGR Transparente
-_Version 0.9.13_     
+_Version 0.9.14_     
 [![Build Status](https://travis-ci.org/oslugr/ugr-transparente-servidor.svg?branch=master)](https://travis-ci.org/oslugr/ugr-transparente-servidor)
 [![Coverage Status](https://coveralls.io/repos/github/oslugr/ugr-transparente-servidor/badge.svg?branch=master)](https://coveralls.io/github/oslugr/ugr-transparente-servidor?branch=master)
 [![Dependency Status](https://gemnasium.com/oslugr/ugr-transparente-servidor.svg)](https://gemnasium.com/oslugr/ugr-transparente-servidor)
@@ -37,7 +37,7 @@ La documentación se encuentra en <https://oslugr.github.io/ugr-transparente-ser
     git clone https://github.com/oslugr/ugr-transparente-servidor.git
     ```
 
-4. Instalamos todas las dependencias de la aplicación:
+4. Instalamos todas las dependencias de la aplicación, descarga recursos y genera el _bundle_ de scripts:
 ```
 cd ugr-transparente-servidor
 sudo npm install
@@ -47,6 +47,7 @@ sudo npm install
     ```
     npm start
     ```
+    * Para iniciar la aplicación en modo desarrollo, ejecutar `npm run dev`
 
 6. Igualmente podemos reiniciar o detener la aplicación de una forma similar:
     ```
@@ -91,6 +92,9 @@ npm test
 
 El resultado de los tests unitarios se mostrarán por pantalla como salida de la ejecución, los resultados de los tests de cobertura se mostrarán en `coverage/lcov-report/index.html`.
 
+### Tests de navegabilidad
+Para realizar un test completo de navegabilidad, ejecutar `npm run zobie_test`
+
 ## Documentación
 Para generar automáticamente la documentación con groc ejecutar `npm run doc`. esta documentación se encontrará en `doc/index.html`.
 
@@ -119,8 +123,7 @@ El archivo en el que hemos definido la configuración para el despliegue automá
 USER=USUARIO npm run deploy
 ```
 
-# Estructura de la aplicación
-## Archivos en raíz
+## Estructura de la aplicación
 La aplicación se encuentra estructurada de forma similar a cualquier proyecto de node.js:
 * `README.md`, `LICENSE`, `.git` y `.gitignore`:  Archivos del repositorio **git**
 * `.tavis.yml`: Archivo de configuración de Travis
@@ -131,6 +134,6 @@ La aplicación se encuentra estructurada de forma similar a cualquier proyecto d
     * `app/routes/`: Archivos de enrutamiento de las páginas de la aplicación
 * `config/`: Archivos de configuración de la aplicación
 * `public/`: Archivos públicos del portal
-* `views/`: Vistas de las paginas con [Jade](http://jade-lang.com/)
+* `views/`: Templates de las páginas
 * `test/`: Archivos de tests unitarios y de integración
 * `provisioning/`: Archivos de provisionamiento

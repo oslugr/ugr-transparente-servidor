@@ -170,6 +170,68 @@ describe("Pruebas en producción", function() {
 	});
 });
 
+// ### Pruebas de Api
+// Pruebas de acceso a la Api
+// Acceso a las diversas Apis del servidor
+// * _before:_ Inicia el servidor
+// * _after:_ Cierra el servidor
+// * _timeout:_ 12 segundos
+describe('Pruebas de acceso', function() {
+	this.timeout(12000);
+	var server;
+	var app;
+	before(function(done) {
+		config.initServer(function(app2, server2) {
+			server = server2;
+			app = app2;
+			done();
+		}, true);
+	});
+
+	after(function() {
+		server.close();
+	});
+	it.skip("Búsqueda", function(done) {
+
+
+	});
+	it("Búsqueda vacía", function(done) {
+		request(app).post('/buscador.html')
+			.expect(200)
+			.expect('Content-Type', "application/json; charset=utf-8")
+			.send({
+				query: "foo"
+			})
+			.end(function(err, res) {
+				assert.notOk(err);
+				assert.ok(res.body);
+				assert.notOk(res.body.error);
+				assert.ok(res.body.data);
+				assert.strictEqual(res.body.data.length, 0);
+				assert.strictEqual(res.body.query, "foo");
+				assert.strictEqual(res.body.status, 200);
+				done();
+			});
+	});
+	it("Búsqueda incorrecta", function(done) {
+		request(app).post('/buscador.html')
+			.expect(400)
+			.expect('Content-Type', "application/json; charset=utf-8")
+			.end(function(err, res) {
+				assert.notOk(err);
+				assert.ok(res.body);
+				assert.ok(res.body.error);
+				assert.notOk(res.body.data);
+				var error = res.body.error;
+				assert.ok(error);
+				assert.notOk(error.query);
+				assert.strictEqual(error.status, 400);
+				done();
+			});
+	});
+});
+
+
 // ### Pruebas de Servidor
 // Prueba de acceso a servidor principal (`app.js`)
 // * _timeout:_ 3 segundos

@@ -41,6 +41,7 @@ var index = require('./routes/index');
 var mapaWeb = require('./routes/mapaWeb');
 var calendario = require('./routes/calendario');
 var calendarioSolo = require('./routes/calendarioSolo');
+var buscador = require('./routes/buscador');
 
 // ### Configuración de Rutas
 // Asigna todas las rutas de transparente.ugr
@@ -71,6 +72,8 @@ module.exports = function(app) {
 
 	// #### Rutas del buscador
 	// Rutas a los recursos json que usa el buscador
+	buscador('/buscador.html', app);
+
 	function setRouteArchivos(routeConf) {
 		return function(req, res) {
 			res.json(routeConf.datos);

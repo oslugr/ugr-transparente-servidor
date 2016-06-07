@@ -63,8 +63,7 @@ module.exports = {
 	],
 	archivosEstaticos: [ // Archivos estáticos a probar
 		'/favicon/favicon.ico',
-		'/css/style.css',
-		'/css/style2.css',
+		'/css/builds/bundle.css',
 		'/scripts/builds/bundle.js',
 		'/img/transp.gif',
 		'/imagenes/osl.jpg',

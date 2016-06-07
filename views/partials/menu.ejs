@@ -23,19 +23,20 @@
 
 <% function firstLevelMenu(title, selected) {
 var sel = getSuperSection(selected);
-var itemClass = "menu-link-tipo2";
-var submenuDisplay = "display:none"; //display:none;
 var slug = slugify(title);
-if (sel === title) {
-    itemClass = "menu-link-tipo2-selected";
-    submenuDisplay = "display:block";
-}%>
-
-<li>
-    <a onclick="mostrar_menu('menu_<%=slug%>')" class="<%=itemClass%>"><%=title%></a>
-    <ul id="menu_<%=slug%>" style="<%=submenuDisplay%>">
-        
-<%}%>
+if (sel === title) {%>
+	<li>
+	    <a class="menu-link-tipo2-selected"><%=title%></a>
+	    <ul id="menu_<%=slug%>" style="display:block">
+<%}
+else{%>
+	<li>
+	    <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2"><%=title%></a>
+	    <ul id="menu_<%=slug%>" style="display:none">
+	        
+<%}
+}
+%>
 
 <%function firstLevelMenuEnd() { %>
     </ul></li>

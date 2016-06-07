@@ -14,25 +14,25 @@
 
 <%# Menu Generators %>
 <% function firstLevelItem(title, link, selected) { 
-    var liClass="tipo2 item-first_level";
-    if (selected === title) liClass="selected tipo2-selected item-first_level"; %>
-    <li class="<%=liClass%>">
-    <a href="<%=link%>" class="link-menu"><%=title%></a>
+    var aClass="menu-link-tipo2";
+    if (selected === title) aClass="menu-link-tipo2-selected"; %>
+    <li>
+    <a href="<%=link%>" class="<%=aClass%>"><%=title%></a>
     </li>
 <%}%>
 
 <% function firstLevelMenu(title, selected) {
 var sel = getSuperSection(selected);
-var itemClass = "tipo2 item-first_level";
+var itemClass = "menu-link-tipo2";
 var submenuDisplay = "display:none"; //display:none;
 var slug = slugify(title);
 if (sel === title) {
-    itemClass = "selected tipo2-selected item-first_level";
+    itemClass = "menu-link-tipo2-selected";
     submenuDisplay = "display:block";
 }%>
 
-<li class="<%=itemClass%>">
-    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos link-menu"><%=title%></a>
+<li>
+    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos <%=itemClass%>"><%=title%></a>
     <ul id="menu_<%=slug%>" style="<%=submenuDisplay%>">
         
 <%}%>

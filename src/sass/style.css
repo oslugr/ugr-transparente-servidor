@@ -1851,10 +1851,7 @@ li.model-resaltado-02 a.banner:hover {
 
 /*********************/
 
-.grupos {
-  font-size: 1em;
-}
-.grupos:hover, .view:hover {
+.view:hover {
   cursor: pointer;
 }
 .content_doku p {

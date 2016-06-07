@@ -45,18 +45,21 @@
   border-color: #AAABAF;
   color: #0F3852;
 }
-.mod-menu_secciones li.tipo2 .link-menu, .mod-menu_secciones ul li.tipo2 .link-menu{
+.menu-link-tipo2{
+    @extend .link-menu;
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-item_off.png");
   border-color: #AAABAF;
   color: #024EA4;
 }
-.mod-menu_secciones li.tipo2 .link-menu:hover, .mod-menu_secciones ul li.tipo2 .link-menu:hover{
+.menu-link-tipo2:hover{
+        @extend .link-menu;
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-item_on.png");
   color: #024EA4;
 }
-.mod-menu_secciones li.tipo2-selected .link-menu, .mod-menu_secciones li.tipo2-selected .link-menu:hover{
+.menu-link-tipo2-selected{
+        @extend .link-menu;
   background-color: black;
   background-image: url("/img/general/menu-item_actual_off.png");
   background-position: 0 center;
@@ -68,4 +71,8 @@
   background-image: url("/img/general/menu-subitem_on.png");
   border-color: #AAABAF;
   color: #0F3852;
+}
+
+.grupos:hover {
+  cursor: pointer;
 }

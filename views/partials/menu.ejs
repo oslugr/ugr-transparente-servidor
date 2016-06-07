@@ -32,7 +32,7 @@ if (sel === title) {
 }%>
 
 <li>
-    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos <%=itemClass%>"><%=title%></a>
+    <a onclick="mostrar_menu('menu_<%=slug%>')" class="<%=itemClass%>"><%=title%></a>
     <ul id="menu_<%=slug%>" style="<%=submenuDisplay%>">
         
 <%}%>
@@ -42,12 +42,12 @@ if (sel === title) {
 <%}%>
 
 <% function secondLevelItem(title, link, selected) {
-var item_class = "tipo1";
-if (selected === title) item_class = "tipo1-selected";
+var item_class = "menu-link-tipo1";
+if (selected === title) item_class = "menu-link-tipo1-selected";
 %>
 
-<li class="<%=item_class%>">
-    <a href="<%=link%>" class="link-menu"><%=title%></a>
+<li class="menu-item-tipo1">
+    <a href="<%=link%>" class="<%=item_class%>"><%=title%></a>
 </li>
 <%}%>
 

@@ -26,6 +26,7 @@
     background-position: 0 center;
     font-family: Verdana, sans-serif;
     text-align: right;
+    cursor: pointer;
 }
 .menu-item-tipo1 {
     padding-left: 28px;
@@ -53,7 +54,6 @@
     background-image: url("/img/general/menu-subitem_on.png");
     border-color: #AAABAF;
     color: #0F3852;
-    cursor: pointer;
 }
 .menu-link-tipo2 {
     @extend .link-menu;
@@ -61,7 +61,6 @@
     background-image: url("/img/general/menu-item_off.png");
     border-color: #AAABAF;
     color: #024EA4;
-    cursor: pointer;
 }
 .menu-link-tipo2:hover {
     @extend .link-menu;

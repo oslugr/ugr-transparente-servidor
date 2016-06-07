@@ -1,4 +1,26 @@
-// Estilos del Menu Principal (Index)
+// Estilos del menu principal (index)
+
+/*
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+    Copyright (C) 2016 Andrés Ortiz Corrales
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// Estilo general de los enlaces
 .enlace_index {
     float: left;
     text-align: center;
@@ -13,6 +35,8 @@
     font-family: Verdana;
     /*background-image: url("/imagenes/ugr.png");*/
 }
+
+// Estilo on mouse hover
 .enlace_index:hover {
     opacity: 0.85;
     /*filter: alpha(opacity=85);*/
@@ -28,7 +52,7 @@
     background-image: url($background);
 }
 
-// Enlaces del ínfice
+// Enlaces del índice
 #en_infoInstitucional {
     @include enlace_index_content("/img/inicio/infoInstitucional.png");
 }

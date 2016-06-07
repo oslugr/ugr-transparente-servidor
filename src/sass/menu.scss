@@ -1,3 +1,26 @@
+// Estilos del menu lateral
+
+/*
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+    Copyright (C) 2016 Andrés Ortiz Corrales
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// Estilo general del menu
 #menus {
     border-bottom-width: 1px;
     float: left;
@@ -8,6 +31,8 @@
     border-color: #B2B2B4;
     border-style: solid;
 }
+
+// Secciones del menu
 .mod-menu_secciones {
     border-right-width: 1px;
     margin-bottom: 13px;
@@ -16,6 +41,8 @@
     border-color: #B2B2B4;
     border-style: solid;
 }
+
+// Estilo general de cada link del menu
 .link-menu {
     border-bottom-width: 1px;
     border-top-width: 1px;
@@ -28,6 +55,8 @@
     text-align: right;
     cursor: pointer;
 }
+
+// Estilos de elementos de tipo 1
 .menu-item-tipo1 {
     padding-left: 28px;
     width: 210px;
@@ -38,14 +67,10 @@
     background-image: url("/img/general/menu-subitem_off.png");
     background-position: 0 center;
     border-color: #AAABAF;
-    color: #6D6C71;
-        
+    color: #6D6C71;        
 }
 .menu-link-tipo1:hover {
-    @extend .link-menu;
-    background-color: #FFFFFF;
     background-image: url("/img/general/menu-subitem_on.png");
-    border-color: #AAABAF;
     color: #0F3852;
 }
 .menu-link-tipo1-selected {
@@ -55,6 +80,8 @@
     border-color: #AAABAF;
     color: #0F3852;
 }
+
+// Elementos del menu de tipo 2
 .menu-link-tipo2 {
     @extend .link-menu;
     background-color: #FFFFFF;
@@ -63,10 +90,7 @@
     color: #024EA4;
 }
 .menu-link-tipo2:hover {
-    @extend .link-menu;
-    background-color: #FFFFFF;
     background-image: url("/img/general/menu-item_on.png");
-    color: #024EA4;
 }
 .menu-link-tipo2-selected {
     @extend .link-menu;

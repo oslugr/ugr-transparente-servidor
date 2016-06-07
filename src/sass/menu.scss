@@ -9,7 +9,6 @@
   border-style: solid;
 }
 
-//FIXME
 .mod-menu_secciones {
   border-right-width: 1px;
   margin-bottom: 13px;
@@ -18,78 +17,55 @@
   border-color: #B2B2B4;
   border-style: solid;
 }
-.mod-menu_secciones li a, .mod-menu_secciones li h2 {
+.link-menu {
   border-bottom-width: 1px;
   border-top-width: 1px;
   display: block;
   margin-top: -1px;
   min-height: 19px;
   padding: 6px 46px 4px 38px;
+  background-position: 0 center;
+  font-family: Verdana, sans-serif;
+  text-align: right;
 }
 .mod-menu_secciones li.tipo1, .mod-menu_secciones li.tipo1-selected {
   padding-left: 28px;
   width: 210px;
 }
-div.mod-menu_secciones a.admin_edit, div.mod-menu_secciones h2.admin_edit {
-  display: block;
-  margin-bottom: 3px;
-  margin-left: 14px;
-  margin-top: 3px;
-}
-.mod-menu_secciones li a, .mod-menu_secciones li h2 {
-  background-position: 0 center;
-  font-family: Verdana, sans-serif;
-  text-align: right;
-}
-.mod-menu_secciones li.tipo1 a, .mod-menu_secciones li.tipo1 h2, .mod-menu_secciones ul li.tipo1 a, .mod-menu_secciones ul li.tipo1 h2 {
+.mod-menu_secciones li.tipo1 .link-menu, .mod-menu_secciones ul li.tipo1 .link-menu{
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-subitem_off.png");
   background-position: 0 center;
   border-color: #AAABAF;
   color: #6D6C71;
 }
-.mod-menu_secciones li.tipo1 a:hover, .mod-menu_secciones li.tipo1 h2:hover, .mod-menu_secciones ul li.tipo1 a:hover, .mod-menu_secciones ul li.tipo1 h2:hover {
+.mod-menu_secciones li.tipo1 .link-menu:hover, .mod-menu_secciones ul li.tipo1 .link-menu:hover{
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-subitem_on.png");
   border-color: #AAABAF;
   color: #0F3852;
 }
-.mod-menu_secciones li.tipo2 a, .mod-menu_secciones li.tipo2 h2, .mod-menu_secciones ul li.tipo2 a, .mod-menu_secciones ul li.tipo2 h2 {
+.mod-menu_secciones li.tipo2 .link-menu, .mod-menu_secciones ul li.tipo2 .link-menu{
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-item_off.png");
   border-color: #AAABAF;
   color: #024EA4;
 }
-.mod-menu_secciones li.tipo2 a:hover, .mod-menu_secciones li.tipo2 h2:hover, .mod-menu_secciones ul li.tipo2 a:hover, .mod-menu_secciones ul li.tipo2 h2:hover {
+.mod-menu_secciones li.tipo2 .link-menu:hover, .mod-menu_secciones ul li.tipo2 .link-menu:hover{
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-item_on.png");
   color: #024EA4;
 }
-.mod-menu_secciones li.tipo2-selected a, .mod-menu_secciones li.tipo2-selected h2, .mod-menu_secciones li.tipo2-selected a:hover, .mod-menu_secciones li.tipo2-selected h2:hover {
+.mod-menu_secciones li.tipo2-selected .link-menu, .mod-menu_secciones li.tipo2-selected .link-menu:hover{
   background-color: black;
   background-image: url("/img/general/menu-item_actual_off.png");
   background-position: 0 center;
   border-color: #AAABAF;
   color: #FFFFFF;
 }
-.mod-menu_secciones li.tipo1-selected a, .mod-menu_secciones li.tipo1-selected h2, .mod-menu_secciones li.tipo1-selected a:hover, .mod-menu_secciones li.tipo1-selected h2:hover {
+.mod-menu_secciones li.tipo1-selected .link-menu, .mod-menu_secciones li.tipo1-selected .link-menu:hover{
   background-color: #FFFFFF;
   background-image: url("/img/general/menu-subitem_on.png");
   border-color: #AAABAF;
   color: #0F3852;
-}
-.mod-menu_secciones li.adicional1 a, .mod-menu_secciones li.adicional1 h2 {
-  background-image: url("/img/general/menu-item_buscador_off.png");
-  border-color: #AAABAF;
-  color: #6D6C71;
-}
-.mod-menu_secciones li.adicional1 a:hover, .mod-menu_secciones li.adicional1 h2:hover {
-  background-image: url("/img/general/menu-item_buscador_on.png");
-  border-color: #AAABAF;
-  color: #FFFFFF;
-}
-.mod-menu_secciones li.adicional1-selected a, .mod-menu_secciones li.adicional1-selected a:hover {
-  background-image: url("/img/general/menu-item_buscador_on.png");
-  border-color: #AAABAF;
-  color: #FFFFFF;
 }

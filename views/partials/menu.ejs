@@ -17,7 +17,7 @@
     var liClass="tipo2 item-first_level";
     if (selected === title) liClass="selected tipo2-selected item-first_level"; %>
     <li class="<%=liClass%>">
-    <a href="<%=link%>"><%=title%></a>
+    <a href="<%=link%>" class="link-menu"><%=title%></a>
     </li>
 <%}%>
 
@@ -32,7 +32,7 @@ if (sel === title) {
 }%>
 
 <li class="<%=itemClass%>">
-    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos"><%=title%></a>
+    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos link-menu"><%=title%></a>
     <ul id="menu_<%=slug%>" style="<%=submenuDisplay%>">
         
 <%}%>
@@ -47,7 +47,7 @@ if (selected === title) item_class = "tipo1-selected";
 %>
 
 <li class="<%=item_class%>">
-    <a href="<%=link%>"><%=title%></a>
+    <a href="<%=link%>" class="link-menu"><%=title%></a>
 </li>
 <%}%>
 

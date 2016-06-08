@@ -1,10 +1,6 @@
 // Estilos del pie de página
 
-#interior_pie {
-  background-image: url("/img/general/sombra_dcha.png");
-  background-position: right center;
-  background-repeat: repeat-y;
-}
+
 #pie {
   border-top-width: 1px;
   clear: both;
@@ -19,7 +15,7 @@
   background-repeat: repeat-x;
   border-color: #6D6C71;
 }
-#pie a {
+.footer-link {
   display: block;
   float: left;
   margin-left: 20px;
@@ -29,7 +25,11 @@
   background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
   color: #FFFFFF;
 }
-#pie p {
+.footer-link:hover {
+  background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
+  color: #FFFFFF;
+}
+.ugr-copyright {
   height: 18px;
   margin-right: 0;
   margin-top: 115px;
@@ -39,7 +39,7 @@
   border-color: #C4C4C4;
   color: #8A8A8A;
 }
-#pie p a {
+.ugr-copyright > a {
   display: inline;
   float: none;
   margin: 0;
@@ -47,24 +47,8 @@
   background-image: none;
   color: #8A8A8A;
 }
-#pie a:hover {
-  background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
-  color: #FFFFFF;
-}
-#pie p a:hover {
+.ugr-copyright > a:hover {
   background-image: none;
   color: #DADADA;
   text-decoration: underline;
-}
-#pie p#pie_credits_txt {
-  float: left;
-  position: absolute;
-  text-indent: -999px;
-  top: -142px;
-}
-#pie p#pie_credits_img {
-  float: left;
-  position: relative;
-  top: -138px;
-  width: 103px;
 }

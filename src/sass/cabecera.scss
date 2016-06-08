@@ -1,0 +1,395 @@
+// Estilos de la cabecera
+
+/*
+	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
+    Copyright (C) 2016 Andrés Ortiz Corrales
+
+	This file is part of UGR Transparente.
+
+	UGR Transparente is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	UGR Transparente is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.enlaces-cabecera {
+  font-size: 1.2em;
+}
+
+#cabecera {
+  width: 100%;
+  height: 245px;
+  position: relative
+}
+#cabecera h1#cab_inf {
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+  position: absolute;
+  top: 80px;
+  left: 0
+}
+#cabecera #enlace_eadministracion {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 242px;
+  height: 19px;
+  padding-top: 2px;
+  padding-left: 24px
+}
+#cabecera #enlace_ugr {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 62px;
+  width: 208px
+}
+#cabecera #enlace_stack {
+  display: block;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 960px;
+  height: 141px
+}
+#cabecera #buscador {
+  position: absolute;
+  top: 36px;
+  left: 740px;
+  width: 208px;
+  height: 21px
+}
+#cabecera #formulario_buscar label#buscar {
+  position: absolute;
+  height: 17px;
+  width: 125px;
+  padding-top: 2px;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 2px;
+  top: 1px;
+  right: 21px
+}
+#cabecera #formulario_buscar #buscar input {
+  width: 123px
+}
+#cabecera #formulario_buscar label#enviar_buscar {
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 2px;
+  width: 19px;
+  height: 19px
+}
+#cabecera #formulario_buscar input#submit_buscar {
+  width: 19px;
+  height: 19px
+}
+#cabecera #language_selector {}
+#cabecera #language_selector_container #language_selector {
+  border-left: 1px solid #9a999d;
+  padding-left: 5px
+}
+#cabecera #language_selector a {
+  display: inline-block;
+  line-height: 17px;
+  padding-left: 0;
+  padding-right: 0;
+  border-right-width: 0
+}
+#cabecera #head_menu_services {
+  position: absolute;
+  right: 70px;
+  top: 140px;
+  height: 110px;
+  /*width: 201px;*/
+}
+#cabecera #head_menu_services ul {
+  margin-left: 17px;
+  margin-right: 10px;
+  margin-top: 5px
+}
+#cabecera #head_menu_services li {
+  min-height: 21px;
+  padding-top: 2px;
+  padding-left: 26px;
+  margin-bottom: 4px
+}
+#cabecera #head_menu_services li a {
+  display: block;
+  margin-left: 20px;
+  padding-left: 5px
+}
+#cabecera #cabecera_acciones {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid
+}
+#cabecera #cabecera_acciones div {
+  display: inline-block;
+  display: inline;
+  vertical-align: top
+}
+#cabecera #cabecera_acciones #redes {
+  width: 156px;
+  padding-left: 15px
+}
+#cabecera #cabecera_acciones #redes a {
+  display: inline-block;
+  display: inline;
+  width: 23px;
+  height: 23px;
+  margin: 11px 0;
+  vertical-align: top
+}
+#cabecera #cabecera_acciones #accesibilidad {
+  margin-left: 30px
+}
+#cabecera #cabecera_acciones #accesibilidad a {
+  display: inline-block;
+  display: inline;
+  height: 28px;
+  margin: 9px 0 9px 0;
+  vertical-align: top;
+  padding-left: 31px
+}
+#cabecera #cabecera_acciones #redes span.redes_txt {
+  display: inline-block;
+  display: inline;
+  margin: 10px 0 10px 5px;
+  padding-left: 5px
+}
+#cabecera #cabecera_acciones #redes span.redes_txt span {
+  display: inline-block;
+  display: inline;
+  width: 100%
+}
+#cabecera #cabecera_acciones #accesibilidad span {
+  display: inline-block;
+  display: inline;
+  line-height: 25px;
+  margin: 0 0 0 5px;
+  padding-left: 5px
+}
+#cabecera #cabecera_acciones #elvira_container {
+  margin-left: 45px
+}
+#cabecera #cabecera_acciones #elvira_container a {
+ /* width: 120px; */
+  height: 26px;
+  z-index: 1;
+  display: inline-block;
+  display: inline;
+  margin: 9px 0 10px;
+  padding-left: 45px
+}
+#cabecera #cabecera_acciones #elvira_container span.elvira_txt {
+  display: inline-block;
+  display: inline;
+  margin-left: 5px;
+  padding-left: 5px
+}
+#cabecera #cabecera_acciones #elvira_container span.elvira_txt span {
+  display: inline-block;
+  display: inline;
+  width: 100%
+}
+#cabecera #cabecera_acciones #elvira_container .elvira_txt span.elvira_primera {
+  text-transform: uppercase;
+  font-weight: bold
+}
+#cabecera #cabecera_acciones #elvira_container #biotic {
+  width: 104px;
+  height: 30px;
+  margin: 7px 0 8px;
+  vertical-align: top
+}
+#cabecera #cabecera_acciones #language_selector_container {
+  margin: 13px 0 15px;
+  padding-left: 85px
+}
+#cabecera {
+  background-image: url("/img/general/cabecera.png")
+}
+#cabecera #cab_inf {
+  text-indent: -9999em;
+  background-image: url("/img/general/banner-lupa.jpg");
+  border-color: #fe9900
+}
+#cabecera #enlace_eadministracion {
+  color: #c68106;
+  background: url("/img/general/cabecera-eadministracion.png") no-repeat left center
+}
+#cabecera #enlace_eadministracion:hover {
+  color: #e35327
+}
+#cabecera #enlace_ugr {
+  text-indent: -9999em;
+}
+#cabecera #enlace_stack {
+  text-indent: -9999em
+}
+#cabecera #formularios {}
+#cabecera #buscador h2 {
+  color: #ffffff;
+  font-family: Verdana, sans-serif;
+  font-size: 1.091em;
+  position: absolute;
+  left: -70px;
+  line-height: 20px
+}
+#cabecera #buscador label#buscar {
+  background-color: #ffe0b2;
+  text-transform: uppercase
+}
+#cabecera #buscador #buscar input {
+  border: none;
+  font-size: 0.909em;
+  background-color: #ffe0b2;
+  color: #fe9900
+}
+#cabecera label#enviar_buscar {}
+#cabecera input#submit_buscar {
+  background-color: transparent
+}
+#cabecera input#submit_buscar {
+  background-color: transparent;
+  background-image: url("/img/general/cabecera-buscar_submit_off.png")
+}
+#cabecera input#submit_buscar:hover {
+  background-image: url("/img/general/cabecera-buscar_submit_on.png")
+}
+#cabecera #language_selector_container i {
+  color: #f5b972;
+  font-size: 9px
+}
+#cabecera #language_selector {
+  font-size: 0.818em;
+  border-color: #f5b972
+}
+#cabecera #language_selector a {
+  background-image: url("/img/languages/header-lang_off.png");
+  background-position: left center;
+  color: #f5b972;
+  border-color: #f5b972
+}
+#cabecera #language_selector a:hover {
+  background-image: url("/img/languages/header-lang_on.png");
+  color: #e35327
+}
+#cabecera #language_selector a.language-en {
+  background-image: none
+}
+#cabecera #language_selector a.language-en:hover {
+  background-image: none
+}
+#cabecera #language_selector a.language-es {
+  background-image: none
+}
+#cabecera #language_selector a.language-es:hover {
+  background-image: none
+}
+#cabecera #head_menu_services li {
+  background-image: url("/img/general/cabecera-item-menu_servicios.png");
+  background-position: left 4px
+}
+#cabecera #head_menu_services li a {
+  border-left: 1px solid #ffffff;
+  color: #ffffff
+}
+#cabecera #head_menu_services li:hover {
+  cursor: pointer
+}
+#cabecera #head_menu_services li:hover a {
+  color: #dd3b15;
+  background-color: #ffffff
+}
+#cabecera #head_menu_services li a:hover {
+  color: #dd3b15;
+  background-color: #ffffff
+}
+#cabecera #head_menu_services a.admin_edit {
+  color: #ffffff
+}
+#cabecera #head_menu_services a.admin_edit:hover {
+  color: #f2a126
+}
+#cabecera #cabecera_acciones {
+  background-color: #f2f2f2;
+  border-color: #d9d8da
+}
+#cabecera #cabecera_acciones #redes a {
+  text-indent: -99999px
+}
+#cabecera #cabecera_acciones #redes span.redes_txt {
+  color: #9a999d;
+  border-left: 1px solid #d8d8d9
+}
+#cabecera #cabecera_acciones #accesibilidad span {
+  border-left: 1px solid #d8d8d9;
+  color: #9a999d
+}
+#cabecera #cabecera_acciones #elvira_container span.elvira_txt {
+  border-left: 1px solid #d8d8d9;
+  color: #9a999d
+}
+#cabecera #cabecera_acciones #redes #facebook {
+  background-image: url("/img/general/facebook_head-off.png")
+}
+#cabecera #cabecera_acciones #redes #facebook:hover {
+  background-image: url("/img/general/facebook_head-on.png")
+}
+#cabecera #cabecera_acciones #redes #twitter {
+  background-image: url("/img/general/twitter_head-off.png")
+}
+#cabecera #cabecera_acciones #redes #twitter:hover {
+  background-image: url("/img/general/twitter_head-on.png")
+}
+#cabecera #cabecera_acciones #accesibilidad #accesible {
+  background-image: url("/img/general/accesibilidad-head-off.png")
+}
+#cabecera #cabecera_acciones #accesibilidad #accesible:hover {
+  background-image: url("/img/general/accesibilidad-head-on.png")
+}
+#cabecera #cabecera_acciones #accesibilidad #accesible:hover span, #cabecera #cabecera_acciones #elvira_container #elvira:hover span.elvira_txt {
+  color: #e35327
+}
+#cabecera #cabecera_acciones #language_selector_container #language_selector a {
+  color: #f5b972
+}
+#cabecera #cabecera_acciones #language_selector_container #language_selector a.language-selected {
+  color: #dd3b15
+}
+#cabecera #cabecera_acciones #language_selector_container #language_selector a:hover {
+  color: #e35327
+}
+#cabecera #elvira {
+  background-image: url("/img/general/cabecera-elvira_off.png");
+}
+#cabecera #elvira:hover {
+  background-image: url("/img/general/cabecera-elvira_on.png");
+  ;
+  color: #e35327
+}
+#cabecera #biotic {
+  background-image: url("/img/general/cabecera-biotic_off.png");
+  ;
+  text-indent: -9999em
+}
+#cabecera #biotic:hover {
+  background-image: url("/img/general/cabecera-biotic_on.png");
+}

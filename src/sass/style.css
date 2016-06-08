@@ -1861,9 +1861,6 @@ li.model-resaltado-02 a.banner:hover {
   width: 30px;
   height: 30px;
 }
-.enlaces-cabecera {
-  font-size: 1.2em;
-}
 
 /***************************************/
 
@@ -1943,28 +1940,4 @@ li.model-resaltado-02 a.banner:hover {
 .texto_banner {
   color: white;
   padding-top: 10px;
-}
-
-/****************/
-
-
-/* Lista banner */
-
-
-/****************/
-
-#cabecera #head_menu_services li.head_services_item1 {
-  background-image: url("/img/general/cabecera-menu_servicios-acceso.png");
-}
-#cabecera #head_menu_services li.head_services_item2 {
-  background-image: url("/img/general/cabecera-menu_servicios-biblioteca.png");
-}
-#cabecera #head_menu_services li.head_services_item3 {
-  background-image: url("/img/general/cabecera-menu_servicios-correo.png");
-}
-#cabecera #head_menu_services li {
-  min-height: 21px;
-  padding-top: 2px;
-  padding-left: 26px;
-  margin-bottom: 4px;
 }

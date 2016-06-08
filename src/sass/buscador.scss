@@ -53,3 +53,32 @@
   width: 19px;
   height: 19px
 }
+#cabecera #buscador h2 {
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    font-size: 1.091em;
+    position: absolute;
+    left: -70px;
+    line-height: 20px;
+}
+#cabecera #buscador label#buscar {
+    background-color: #ffe0b2;
+    text-transform: uppercase;
+}
+#cabecera #buscador #buscar input {
+    border: none;
+    font-size: 0.909em;
+    background-color: #ffe0b2;
+    color: #fe9900;
+}
+#cabecera label#enviar_buscar {}
+#cabecera input#submit_buscar {
+    background-color: transparent;
+}
+#cabecera input#submit_buscar {
+    background-color: transparent;
+    background-image: url("/img/general/cabecera-buscar_submit_off.png");
+}
+#cabecera input#submit_buscar:hover {
+    background-image: url("/img/general/cabecera-buscar_submit_on.png");
+}

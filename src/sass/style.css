@@ -307,46 +307,6 @@ span.separador_enlaces {
 */
 
 
-/***************/
-
-
-/* Breadcrumbs */
-
-
-/***************/
-
-#rastro {
-  min-height: 20px;
-  padding: 4px 0 0;
-  line-height: 24px;
-  text-align: left;
-}
-#rastro li {
-  display: inline;
-}
-#rastro span {
-  margin-right: 3px;
-  padding-left: 15px;
-  width: 100%;
-  background: url("/img/general/rastro-enlace-sig.png") no-repeat scroll 0 60% transparent;
-  color: #99989C;
-  line-height: 24px;
-}
-#rastro span.first {
-  padding-left: 27px;
-  background: url("/img/general/rastro-enlace.png") no-repeat scroll 12px center transparent;
-}
-#rastro ul#rastro_breadcrumb {
-  margin-top: -4px;
-  border-color: #FFFFFF;
-}
-#rastro span.last {
-  color: #023A79;
-}
-#rastro span:hover {
-  color: #DD3B15;
-  text-decoration: none;
-}
 
 /***************/
 

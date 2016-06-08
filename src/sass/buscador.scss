@@ -20,14 +20,24 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#buscador {
+#buscador-top {
   position: absolute;
   top: 36px;
   left: 740px;
   width: 208px;
-  height: 21px
+  height: 21px;
 }
-#formulario_buscar label#buscar {
+.buscador-title {
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    font-size: 1.091em;
+    position: absolute;
+    left: -70px;
+    line-height: 20px;
+}
+
+// Input del buscador
+.busqueda-input-label {
   position: absolute;
   height: 17px;
   width: 125px;
@@ -36,12 +46,20 @@
   padding-left: 4px;
   padding-right: 2px;
   top: 1px;
-  right: 21px
+  right: 21px;
+  background-color: #ffe0b2;
+  text-transform: uppercase;
 }
-#cabecera #formulario_buscar #buscar input {
-  width: 123px
+.busqueda-input {
+  width: 123px;
+  border: none;
+  font-size: 0.909em;
+  background-color: #ffe0b2;
+  color: #fe9900;
 }
-#cabecera #formulario_buscar label#enviar_buscar {
+
+// Botón de enviar
+.submit-busqueda-label {
   position: absolute;
   display: block;
   top: 1px;
@@ -49,36 +67,12 @@
   width: 19px;
   height: 19px
 }
-#cabecera #formulario_buscar input#submit_buscar {
+.submit-busqueda {
   width: 19px;
-  height: 19px
+  height: 19px;
+  background-color: transparent;
+  background-image: url("/img/general/cabecera-buscar_submit_off.png");
 }
-#cabecera #buscador h2 {
-    color: #ffffff;
-    font-family: Verdana, sans-serif;
-    font-size: 1.091em;
-    position: absolute;
-    left: -70px;
-    line-height: 20px;
-}
-#cabecera #buscador label#buscar {
-    background-color: #ffe0b2;
-    text-transform: uppercase;
-}
-#cabecera #buscador #buscar input {
-    border: none;
-    font-size: 0.909em;
-    background-color: #ffe0b2;
-    color: #fe9900;
-}
-#cabecera label#enviar_buscar {}
-#cabecera input#submit_buscar {
-    background-color: transparent;
-}
-#cabecera input#submit_buscar {
-    background-color: transparent;
-    background-image: url("/img/general/cabecera-buscar_submit_off.png");
-}
-#cabecera input#submit_buscar:hover {
+.submit-busqueda:hover {
     background-image: url("/img/general/cabecera-buscar_submit_on.png");
 }

@@ -308,77 +308,6 @@ span.separador_enlaces {
 
 
 
-/***************/
-
-
-/* Pie         */
-
-
-/***************/
-
-#pie {
-  border-top-width: 1px;
-  clear: both;
-  height: 115px;
-  overflow: hidden;
-  padding-bottom: 40px;
-  padding-left: 0;
-  text-align: right;
-  background-color: #FFFFFF;
-  background-image: url("/img/general/pie-fondo.png");
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  border-color: #6D6C71;
-}
-#pie a {
-  display: block;
-  float: left;
-  margin-left: 20px;
-  margin-top: 17px;
-  padding-right: 20px;
-  text-align: right;
-  background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
-  color: #FFFFFF;
-}
-#pie p {
-  height: 18px;
-  margin-right: 0;
-  margin-top: 115px;
-  padding-top: 5px;
-  text-align: right;
-  background-color: #FFFFFF;
-  border-color: #C4C4C4;
-  color: #8A8A8A;
-}
-#pie p a {
-  display: inline;
-  float: none;
-  margin: 0;
-  padding: 0;
-  background-image: none;
-  color: #8A8A8A;
-}
-#pie a:hover {
-  background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
-  color: #FFFFFF;
-}
-#pie p a:hover {
-  background-image: none;
-  color: #DADADA;
-  text-decoration: underline;
-}
-#pie p#pie_credits_txt {
-  float: left;
-  position: absolute;
-  text-indent: -999px;
-  top: -142px;
-}
-#pie p#pie_credits_img {
-  float: left;
-  position: relative;
-  top: -138px;
-  width: 103px;
-}
 
 
 /************/
@@ -510,11 +439,7 @@ span.separador_enlaces {
   padding-left: 25px;
   padding-right: 25px;
 }
-#interior_pie {
-  background-image: url("/img/general/sombra_dcha.png");
-  background-position: right center;
-  background-repeat: repeat-y;
-}
+
 div.sec_interior a.doble_interno span.mas {
   display: none;
 }

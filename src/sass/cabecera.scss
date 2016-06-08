@@ -42,6 +42,7 @@
   left: 0
 }
 
+
 // Estilos enlaces
 #enlace_eadministracion {
   display: block;
@@ -69,131 +70,6 @@
   height: 141px
 }
 
-#cabecera #language_selector {}
-#cabecera #language_selector_container #language_selector {
-  border-left: 1px solid #9a999d;
-  padding-left: 5px
-}
-#cabecera #language_selector a {
-  display: inline-block;
-  line-height: 17px;
-  padding-left: 0;
-  padding-right: 0;
-  border-right-width: 0
-}
-#cabecera #head_menu_services {
-  position: absolute;
-  right: 70px;
-  top: 140px;
-  height: 110px;
-  /*width: 201px;*/
-}
-#cabecera #head_menu_services ul {
-  margin-left: 17px;
-  margin-right: 10px;
-  margin-top: 5px
-}
-#cabecera #head_menu_services li {
-  min-height: 21px;
-  padding-top: 2px;
-  padding-left: 26px;
-  margin-bottom: 4px
-}
-#cabecera #head_menu_services li a {
-  display: block;
-  margin-left: 20px;
-  padding-left: 5px
-}
-#cabecera #cabecera_acciones {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  border-bottom: 1px solid
-}
-#cabecera #cabecera_acciones div {
-  display: inline-block;
-  display: inline;
-  vertical-align: top
-}
-#cabecera #cabecera_acciones #redes {
-  width: 156px;
-  padding-left: 15px
-}
-#cabecera #cabecera_acciones #redes a {
-  display: inline-block;
-  display: inline;
-  width: 23px;
-  height: 23px;
-  margin: 11px 0;
-  vertical-align: top
-}
-#cabecera #cabecera_acciones #accesibilidad {
-  margin-left: 30px
-}
-#cabecera #cabecera_acciones #accesibilidad a {
-  display: inline-block;
-  display: inline;
-  height: 28px;
-  margin: 9px 0 9px 0;
-  vertical-align: top;
-  padding-left: 31px
-}
-#cabecera #cabecera_acciones #redes span.redes_txt {
-  display: inline-block;
-  display: inline;
-  margin: 10px 0 10px 5px;
-  padding-left: 5px
-}
-#cabecera #cabecera_acciones #redes span.redes_txt span {
-  display: inline-block;
-  display: inline;
-  width: 100%
-}
-#cabecera #cabecera_acciones #accesibilidad span {
-  display: inline-block;
-  display: inline;
-  line-height: 25px;
-  margin: 0 0 0 5px;
-  padding-left: 5px
-}
-#cabecera #cabecera_acciones #elvira_container {
-  margin-left: 45px
-}
-#cabecera #cabecera_acciones #elvira_container a {
- /* width: 120px; */
-  height: 26px;
-  z-index: 1;
-  display: inline-block;
-  display: inline;
-  margin: 9px 0 10px;
-  padding-left: 45px
-}
-#cabecera #cabecera_acciones #elvira_container span.elvira_txt {
-  display: inline-block;
-  display: inline;
-  margin-left: 5px;
-  padding-left: 5px
-}
-#cabecera #cabecera_acciones #elvira_container span.elvira_txt span {
-  display: inline-block;
-  display: inline;
-  width: 100%
-}
-#cabecera #cabecera_acciones #elvira_container .elvira_txt span.elvira_primera {
-  text-transform: uppercase;
-  font-weight: bold
-}
-#cabecera #cabecera_acciones #elvira_container #biotic {
-  width: 104px;
-  height: 30px;
-  margin: 7px 0 8px;
-  vertical-align: top
-}
-#cabecera #cabecera_acciones #language_selector_container {
-  margin: 13px 0 15px;
-  padding-left: 85px
-}
 #cabecera {
   background-image: url("/img/general/cabecera.png")
 }

@@ -420,23 +420,6 @@ span.separador_enlaces {
   width: 103px;
 }
 
-/************/
-
-
-/* BANNERS  */
-
-
-/************/
-
-#banners {
-  border-bottom-width: 1px;
-  clear: right;
-  float: right;
-  width: 165px;
-  background-color: #FFFFFF;
-  border-color: #B2B2B4;
-  border-style: solid;
-}
 
 /************/
 
@@ -1165,140 +1148,7 @@ div.sec_interior a.fn_top {
   font-size: 10px !important;
   text-decoration: none;
 }
-div.mod-banners ul {
-  display: block;
-  margin-top: 7px;
-  padding-left: 0;
-  z-index: 2;
-}
-div.mod-banners ul li {
-  border-bottom-width: 0;
-  border-top-width: 0;
-  display: block;
-  width: 100%;
-}
-div.mod-banners ul li a.banner {
-  display: block;
-  margin-bottom: 10px;
-  overflow: hidden;
-  padding-left: 12px;
-  padding-right: 21px;
-  padding-top: 5px;
-  position: relative;
-  z-index: -1;
-}
-div.mod-banners ul li:hover {
-  position: relative;
-  z-index: 0;
-}
-div.mod-banners ul li a.banner strong {
-  display: block;
-}
-div.mod-banners ul li a.banner strong, div.mod-banners ul li a.banner em, div.mod-banners ul li a.banner span {
-  display: block;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner {
-  height: 64px;
-  margin-top: 0;
-  z-index: 0;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner {
-  height: 133px;
-  margin-top: 0;
-  z-index: 0;
-}
-div.mod-banners ul li.model-resaltado-01:hover, div.mod-banners ul li.model-resaltado-02:hover {
-  position: relative;
-  z-index: 2;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner strong, div.mod-banners ul li.model-resaltado-02 a.banner strong, div.mod-banners ul li.model-resaltado-01 a.banner em, div.mod-banners ul li.model-resaltado-02 a.banner em, div.mod-banners ul li.model-resaltado-01 a.banner span, div.mod-banners ul li.model-resaltado-02 a.banner span {}
-div.mod-banners ul li.model-resaltado-01 a.banner strong, div.mod-banners ul li.model-resaltado-02 a.banner strong {
-  border-bottom-width: 1px;
-  display: block;
-  padding-bottom: 4px;
-  width: 153px;
-}
-div.mod-banners a.admin_edit {
-  display: block;
-  margin-left: 9px;
-  margin-top: 3px;
-}
-div.mod-banners ul li {
-  background-image: none !important;
-  line-height: 120%;
-}
-div.mod-banners ul li strong, div.mod-banners ul li em {
-  font-style: normal;
-  font-weight: normal;
-}
-div.mod-banners ul li.dont_showtext a.banner * {
-  text-indent: -9999em;
-}
-div.mod-banners ul li a.banner {
-  background-color: #FFFFFF;
-  background-position: 0 0;
-}
-div.mod-banners ul li a.banner strong {
-  border-color: #B2B2B4;
-  border-style: solid;
-  color: #FFFFFF;
-  font-weight: bold;
-}
-div.mod-banners ul li a.banner:hover strong {
-  color: #FFFFFF;
-}
-div.mod-banners ul li a.banner em {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover em {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner span {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover span {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover {
-  background-color: #FFFFFF;
-  text-decoration: none !important;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner strong {
-  color: #FFFFFF;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner:hover strong {
-  color: #FFFFFF;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner em {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner:hover em {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner span {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner:hover span {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner strong {
-  color: #FFFFFF;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner:hover strong {
-  color: #FFFFFF;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner em {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner:hover em {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner span {
-  color: #4A677A;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner:hover span {
-  color: #4A677A;
-}
+
 div.mod-forms fieldset {
   border-bottom-width: 4px;
   border-top-width: 5px;
@@ -1830,18 +1680,7 @@ div.genericfield div.file {
   float: left;
   padding-left: 22px;
 }
-li.model-resaltado-01 a.banner {
-  background-image: url("/img/banners/resaltado-01_off.png");
-}
-li.model-resaltado-01 a.banner:hover {
-  background-image: url("/img/banners/resaltado-01_on.png");
-}
-li.model-resaltado-02 a.banner {
-  background-image: url("/img/banners/resaltado-02_off.png");
-}
-li.model-resaltado-02 a.banner:hover {
-  background-image: url("/img/banners/resaltado-02_on.png");
-}
+
 
 /*********************/
 
@@ -1918,26 +1757,4 @@ li.model-resaltado-02 a.banner:hover {
 #tabla {
   width: 800px;
   height: 350px;
-}
-
-/************/
-
-
-/* BANNERS  */
-
-
-/************/
-
-#banners {
-  border-bottom-width: 1px;
-  clear: right;
-  float: right;
-  width: 165px;
-  background-color: #FFFFFF;
-  border-color: #B2B2B4;
-  border-style: solid;
-}
-.texto_banner {
-  color: white;
-  padding-top: 10px;
 }

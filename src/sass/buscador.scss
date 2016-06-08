@@ -1,5 +1,4 @@
 // Estilos del buscador
-
 /*
 	UGR Transparente. Sitio Web de la Universidad de Granada de acceso a Datos Abiertos.
     Copyright (C) 2016 Andrés Ortiz Corrales
@@ -19,13 +18,12 @@
 	You should have received a copy of the GNU General Public License
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
 #buscador-top {
-  position: absolute;
-  top: 36px;
-  left: 740px;
-  width: 208px;
-  height: 21px;
+    position: absolute;
+    top: 36px;
+    left: 740px;
+    width: 208px;
+    height: 21px;
 }
 .buscador-title {
     color: #ffffff;
@@ -35,43 +33,38 @@
     left: -70px;
     line-height: 20px;
 }
-
 // Input del buscador
 .busqueda-input-label {
-  position: absolute;
-  height: 17px;
-  width: 125px;
-  padding-top: 2px;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 2px;
-  top: 1px;
-  right: 21px;
-  background-color: #ffe0b2;
-  text-transform: uppercase;
+    position: absolute;
+    height: 17px;
+    width: 125px;
+    padding: 2px 2px 0 4px;
+    top: 1px;
+    right: 21px;
+    background-color: #ffe0b2;
+    text-transform: uppercase;
 }
 .busqueda-input {
-  width: 123px;
-  border: none;
-  font-size: 0.909em;
-  background-color: #ffe0b2;
-  color: #fe9900;
+    width: 123px;
+    border: none;
+    font-size: 0.909em;
+    background-color: #ffe0b2;
+    color: #fe9900;
 }
-
 // Botón de enviar
 .submit-busqueda-label {
-  position: absolute;
-  display: block;
-  top: 1px;
-  right: 2px;
-  width: 19px;
-  height: 19px
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 2px;
+    width: 19px;
+    height: 19px;
 }
 .submit-busqueda {
-  width: 19px;
-  height: 19px;
-  background-color: transparent;
-  background-image: url("/img/general/cabecera-buscar_submit_off.png");
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    background-image: url("/img/general/cabecera-buscar_submit_off.png");
 }
 .submit-busqueda:hover {
     background-image: url("/img/general/cabecera-buscar_submit_on.png");

@@ -11,45 +11,45 @@
 	return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/&/g, '-and-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 }%>
 
-
 <%# Menu Generators %>
 <% function firstLevelItem(title, link, selected) { 
     var aClass="menu-link-tipo2";
     if (selected === title) aClass="menu-link-tipo2-selected"; %>
-    <li>
+<li>
     <a href="<%=link%>" class="<%=aClass%>"><%=title%></a>
-    </li>
+</li>
 <%}%>
 
 <% function firstLevelMenu(title, selected) {
 var sel = getSuperSection(selected);
 var slug = slugify(title);
 if (sel === title) {%>
-	<li>
-	    <a class="menu-link-tipo2-selected"><%=title%></a>
-	    <ul id="menu_<%=slug%>" style="display:block">
-<%}
+<li>
+    <a class="menu-link-tipo2-selected"><%=title%></a>
+    <ul id="menu_<%=slug%>" style="display:block">
+    <%}
 else{%>
-	<li>
-	    <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2"><%=title%></a>
-	    <ul id="menu_<%=slug%>" style="display:none">
-	        
-<%}
+        <li>
+            <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2"><%=title%></a>
+            <ul id="menu_<%=slug%>" style="display:none">
+
+            <%}
 }
 %>
 
-<%function firstLevelMenuEnd() { %>
-    </ul></li>
-<%}%>
+            <%function firstLevelMenuEnd() { %>
+            </ul>
+        </li>
+    <%}%>
 
-<% function secondLevelItem(title, link, selected) {
+    <% function secondLevelItem(title, link, selected) {
 var item_class = "menu-link-tipo1";
 if (selected === title) item_class = "menu-link-tipo1-selected";
 %>
 
-<li class="menu-item-tipo1">
-    <a href="<%=link%>" class="<%=item_class%>"><%=title%></a>
-</li>
+    <li class="menu-item-tipo1">
+        <a href="<%=link%>" class="<%=item_class%>"><%=title%></a>
+    </li>
 <%}%>
 
 <%# MENU %>
@@ -59,18 +59,18 @@ if (selected === title) item_class = "menu-link-tipo1-selected";
             <%firstLevelItem("Inicio","/index.html",seccion)%>
             <%firstLevelItem("Información Institucional","/infoInstitucional.html",seccion)%>
             <%firstLevelMenu("Administración",seccion)%>
-                <%secondLevelItem("Personal","/personal.html",seccion)%>
-                <%secondLevelItem("Información Económica","/infoEconomica.html",seccion)%>
-                <%secondLevelItem("Perfil del Contratante","/perfilContratante.html",seccion)%>
+            <%secondLevelItem("Personal","/personal.html",seccion)%>
+            <%secondLevelItem("Información Económica","/infoEconomica.html",seccion)%>
+            <%secondLevelItem("Perfil del Contratante","/perfilContratante.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelMenu("Docencia",seccion)%>
-                <%secondLevelItem("Oferta y Demanda Académica","/ofertaDemanda.html",seccion)%>
-                <%secondLevelItem("Claustro","/claustro.html",seccion)%>
-                <%secondLevelItem("Estudiantes","/estudiantes.html",seccion)%>
+            <%secondLevelItem("Oferta y Demanda Académica","/ofertaDemanda.html",seccion)%>
+            <%secondLevelItem("Claustro","/claustro.html",seccion)%>
+            <%secondLevelItem("Estudiantes","/estudiantes.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelMenu("Gestión e Investigación",seccion)%>
-                <%secondLevelItem("Gobierno","/gobierno.html",seccion)%>
-                <%secondLevelItem("Rendimiento","/rendimiento.html",seccion)%>
+            <%secondLevelItem("Gobierno","/gobierno.html",seccion)%>
+            <%secondLevelItem("Rendimiento","/rendimiento.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelItem("Normativa Legal","/normativaLegal.html",seccion)%>
             <%firstLevelItem("Solicitud de Información","/solicitudInfo.html",seccion)%>

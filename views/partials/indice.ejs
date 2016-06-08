@@ -11,31 +11,31 @@ for (var i = 0; i < contenido.length; i++) {
     }
 }
 %>
-<%for (var seccion in secciones) {
+    <%for (var seccion in secciones) {
     var item = secciones[seccion];%>
-        <li class="level1">
-            <div class="li">
-    <% if (item.seccion === "") {%>
-            <a class="enlaces-cabecera" href="#<%=item.link%>"><%=item.encabezado%></a>
+    <li class="level1">
+        <div class="li">
+            <% if (item.seccion === "") {%>
+                <a class="enlaces-cabecera" href="#<%=item.link%>"><%=item.encabezado%></a>
             </div>
         </li>
     <%} else {%>
-            <a class="enlaces-cabecera"><%=seccion%></a>
-            </div>
-        </li>
-        <ul class="enlaces">
-        <%for (var it in item) {
+        <a class="enlaces-cabecera"><%=seccion%></a>
+    </div>
+</li>
+<ul class="enlaces">
+    <%for (var it in item) {
             var elem = item[it];
             %>
-            <li class="level2">
-                <div class="li">
-                <a class="enlaces-cabecera" href="#<%=elem.link%>">
-                    <%=elem.encabezado%>
-                </a>
-                </div>
-            </li>
-        <%}%>
-        </ul>
-    <%}%>
+    <li class="level2">
+        <div class="li">
+            <a class="enlaces-cabecera" href="#<%=elem.link%>">
+                <%=elem.encabezado%>
+            </a>
+        </div>
+    </li>
+<%}%>
+</ul>
+<%}%>
 <%}%>
 </ul>

@@ -3,20 +3,20 @@
         <%for(var i in contenido){
             var elem=contenido[i];
             %>
-            <h1> 
-    <a name="__doku_encabezado_de_primer_nivel"><%=elem.titulo%></a>
-</h1>
-            <ul class="enlaces">
-                <li class="level1">
-                    <% for(var j in elem.lista){
+        <h1>
+            <a name="__doku_encabezado_de_primer_nivel"><%=elem.titulo%></a>
+        </h1>
+        <ul class="enlaces">
+            <li class="level1">
+                <% for(var j in elem.lista){
                         var elem2=elem.lista[j];
                         %>
-                        <div class="li">
-                            <a class="enlaces-cabecera" href="<%=elem2.link%>" ,target="_blank"><%=elem2.item%></a>
-                        </div>
-                    <%}%>
-                </li>
-            </ul>
-        <%}%>
-    </div>
+                <div class="li">
+                    <a class="enlaces-cabecera" href="<%=elem2.link%>" ,target="_blank"><%=elem2.item%></a>
+                </div>
+            <%}%>
+        </li>
+    </ul>
+<%}%>
+</div>
 </div>

@@ -20,6 +20,8 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+@import 'buscador';
+
 .enlaces-cabecera {
   font-size: 1.2em;
 }
@@ -29,7 +31,7 @@
   height: 245px;
   position: relative
 }
-#cabecera h1#cab_inf {
+#cab_inf {
   width: 100%;
   height: 100%;
   padding-top: 0;
@@ -39,7 +41,9 @@
   top: 80px;
   left: 0
 }
-#cabecera #enlace_eadministracion {
+
+// Estilos enlaces
+#enlace_eadministracion {
   display: block;
   position: absolute;
   top: 44px;
@@ -48,7 +52,7 @@
   padding-top: 2px;
   padding-left: 24px
 }
-#cabecera #enlace_ugr {
+#enlace_ugr {
   display: block;
   position: absolute;
   top: 0;
@@ -56,7 +60,7 @@
   height: 62px;
   width: 208px
 }
-#cabecera #enlace_stack {
+#enlace_stack {
   display: block;
   position: absolute;
   top: 90px;
@@ -64,39 +68,7 @@
   width: 960px;
   height: 141px
 }
-#cabecera #buscador {
-  position: absolute;
-  top: 36px;
-  left: 740px;
-  width: 208px;
-  height: 21px
-}
-#cabecera #formulario_buscar label#buscar {
-  position: absolute;
-  height: 17px;
-  width: 125px;
-  padding-top: 2px;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 2px;
-  top: 1px;
-  right: 21px
-}
-#cabecera #formulario_buscar #buscar input {
-  width: 123px
-}
-#cabecera #formulario_buscar label#enviar_buscar {
-  position: absolute;
-  display: block;
-  top: 1px;
-  right: 2px;
-  width: 19px;
-  height: 19px
-}
-#cabecera #formulario_buscar input#submit_buscar {
-  width: 19px;
-  height: 19px
-}
+
 #cabecera #language_selector {}
 #cabecera #language_selector_container #language_selector {
   border-left: 1px solid #9a999d;

@@ -33,19 +33,19 @@
   padding-top: 10px;
 }
 
-div.mod-banners ul {
+.mod-banners {
   display: block;
   margin-top: 7px;
   padding-left: 0;
   z-index: 2;
 }
-div.mod-banners ul li {
+.banner_container {
   border-bottom-width: 0;
   border-top-width: 0;
   display: block;
   width: 100%;
 }
-div.mod-banners ul li a.banner {
+.banner {
   display: block;
   margin-bottom: 10px;
   overflow: hidden;
@@ -55,115 +55,83 @@ div.mod-banners ul li a.banner {
   position: relative;
   z-index: -1;
 }
-div.mod-banners ul li:hover {
+.banner_container:hover {
   position: relative;
   z-index: 0;
 }
-div.mod-banners ul li a.banner strong {
+.banner strong, .banner em, .banner span {
   display: block;
 }
-div.mod-banners ul li a.banner strong, div.mod-banners ul li a.banner em, div.mod-banners ul li a.banner span {
-  display: block;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner {
-  height: 64px;
-  margin-top: 0;
-  z-index: 0;
-}
-div.mod-banners ul li.model-resaltado-02 a.banner {
+.banner {
   height: 133px;
   margin-top: 0;
   z-index: 0;
 }
-div.mod-banners ul li.model-resaltado-01:hover, div.mod-banners ul li.model-resaltado-02:hover {
-  position: relative;
-  z-index: 2;
-}
-div.mod-banners ul li.model-resaltado-01 a.banner strong, div.mod-banners ul li.model-resaltado-02 a.banner strong {
+.banner strong {
   border-bottom-width: 1px;
   display: block;
   padding-bottom: 4px;
   width: 153px;
 }
-div.mod-banners a.admin_edit {
-  display: block;
-  margin-left: 9px;
-  margin-top: 3px;
-}
-div.mod-banners ul li {
+.banner_container {
   background-image: none !important;
   line-height: 120%;
 }
-div.mod-banners ul li strong, div.mod-banners ul li em {
+.banner_container strong, .banner_container em {
   font-style: normal;
   font-weight: normal;
 }
-div.mod-banners ul li.dont_showtext a.banner * {
-  text-indent: -9999em;
-}
-div.mod-banners ul li a.banner {
+.banner {
   background-color: #FFFFFF;
   background-position: 0 0;
 }
-div.mod-banners ul li a.banner strong {
+.banner strong {
   border-color: #B2B2B4;
   border-style: solid;
   color: #FFFFFF;
   font-weight: bold;
 }
-div.mod-banners ul li a.banner:hover strong {
+.banner:hover strong {
   color: #FFFFFF;
 }
-div.mod-banners ul li a.banner em {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover em {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner span {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover span {
-  color: #4A677A;
-}
-div.mod-banners ul li a.banner:hover {
+.banner_container a.banner:hover {
   background-color: #FFFFFF;
   text-decoration: none !important;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner strong {
+.banner_container.model-resaltado-01 a.banner strong {
   color: #FFFFFF;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner:hover strong {
+.banner_container.model-resaltado-01 a.banner:hover strong {
   color: #FFFFFF;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner em {
+.banner_container.model-resaltado-01 a.banner em {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner:hover em {
+.banner_container.model-resaltado-01 a.banner:hover em {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner span {
+.banner_container.model-resaltado-01 a.banner span {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-01 a.banner:hover span {
+.banner_container.model-resaltado-01 a.banner:hover span {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner strong {
+.banner_container.model-resaltado-02 a.banner strong {
   color: #FFFFFF;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner:hover strong {
+.banner_container.model-resaltado-02 a.banner:hover strong {
   color: #FFFFFF;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner em {
+.banner_container.model-resaltado-02 a.banner em {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner:hover em {
+.banner_container.model-resaltado-02 a.banner:hover em {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner span {
+.banner_container.model-resaltado-02 a.banner span {
   color: #4A677A;
 }
-div.mod-banners ul li.model-resaltado-02 a.banner:hover span {
+.banner_container.model-resaltado-02 a.banner:hover span {
   color: #4A677A;
 }
 li.model-resaltado-01 a.banner {

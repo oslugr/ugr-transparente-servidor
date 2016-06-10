@@ -1,13 +1,13 @@
 <%for (var elem in contenido) {%>
     <%var item = contenido[elem]%>
     <h1>
-        <a id="<%=item.link%>" name="__doku_encabezado_de_primer_nivel"><%=item.encabezado%></a>
+        <a id="<%=item.link%>"><%=item.encabezado%></a>
     </h1>
     <div>
         <p><%=item.texto%></p>
         <%switch (item.tipo) { 
             case 1:%>
-        <table>
+        <table class="tabla-datos">
             <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
             <tbody>
                 <tr>
@@ -46,7 +46,7 @@
     </table>
     <%break;%>
     <%case 2:%>
-    <table>
+    <table class="tabla-datos">
         <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
         <tbody>
             <tr>
@@ -70,7 +70,7 @@
     </table>
     <%break;%>
     <%case 3:%>
-    <table>
+    <table class="tabla-datos">
         <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
         <tbody>
             <tr>
@@ -103,7 +103,7 @@
 </table>
 <%break;%>
 <%case 4:%>
-<table>
+<table class="tabla-datos">
     <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
     <tbody>
         <tr>
@@ -119,7 +119,7 @@
             <%#Descripcion%>
             <td class="centeralign par"><%=elem.nombre%></td>
             <%#Ver%>
-            <td class="centeralign">
+            <td class="centeralign impar">
                 <a href="<%=link%>" data-lightbox="image-1" data-title="<%=elem.nombre%>">
                     <img src="/imagenes/grafico.png" alt="view">
                 </a>

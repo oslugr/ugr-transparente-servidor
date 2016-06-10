@@ -3,11 +3,11 @@
     <h1>
         <a id="<%=item.link%>" name="__doku_encabezado_de_primer_nivel"><%=item.encabezado%></a>
     </h1>
-    <div class="level1">
+    <div>
         <p><%=item.texto%></p>
         <%switch (item.tipo) { 
             case 1:%>
-        <table class="inline">
+        <table>
             <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
             <tbody>
                 <tr>
@@ -25,19 +25,19 @@
                     <%#Opendata%>
                     <td class="centeralign impar">
                         <a href="<%=servidor%>/dataset/<%=elem.id_dataset%>/resource/<%=elem.url%>" target="_blank">
-                            <img src="/imagenes/link.png" alt="link" class="link">
+                            <img src="/imagenes/link.png" alt="link opendata">
                         </a>
                     </td>
                     <%#Ver%>
                     <td class="centeralign par">
-                        <a href="#dialog" rel="<%=servidor%>/dataset/<%=elem.descarga%>" name="<%=elem.nombre%>" class="view">
-                            <img src="/imagenes/view.png" alt="view" class="view">
+                        <a href="#dialog" rel="<%=servidor%>/dataset/<%=elem.descarga%>" name="<%=elem.nombre%>" class="view-modal">
+                            <img src="/imagenes/view.png" alt="ver modal">
                         </a>
                     </td>
                     <%#Descarga%>
                     <td class="centeralign impar">
                         <a href="<%=servidor%>/dataset/<%=elem.descarga%>">
-                            <img src="/imagenes/save.png" alt="save" class="save">
+                            <img src="/imagenes/save.png" alt="save">
                         </a>
                     </td>
                 </tr>
@@ -46,7 +46,7 @@
     </table>
     <%break;%>
     <%case 2:%>
-    <table class="inline">
+    <table>
         <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
         <tbody>
             <tr>
@@ -61,7 +61,7 @@
                     <%#enlace %>
                     <td class="centeralign impar">
                         <a href="<%=elem.url%>" target="_blank">
-                            <img src="/imagenes/link2.png" alt="link" class="link">
+                            <img src="/imagenes/link2.png" alt="link">
                         </a>
                     </td>
                 </tr>
@@ -70,7 +70,7 @@
     </table>
     <%break;%>
     <%case 3:%>
-    <table class="inline">
+    <table>
         <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
         <tbody>
             <tr>
@@ -88,14 +88,13 @@
                 <%#enlace%>
                 <td class="centeralign impar">
                     <a href="<%=link%>" target="_blank">
-                        <img src="/imagenes/pdf.png" alt="view" class="view">
+                        <img src="/imagenes/pdf.png" alt="Ver Documento">
                     </a>
                 </td>
-
                 <%#descarga%>
                 <td class="centeralign par">
                     <a href="<%=link%>" download>
-                        <img src="/imagenes/flecha.png" alt="save" class="save">
+                        <img src="/imagenes/flecha.png" alt="Descargar">
                     </a>
                 </td>
             </tr>
@@ -104,7 +103,7 @@
 </table>
 <%break;%>
 <%case 4:%>
-<table class="inline">
+<table>
     <colgroup><col span="1" style="width: 90%;"><col span="1" style="width: 10%;"></colgroup>
     <tbody>
         <tr>
@@ -122,13 +121,13 @@
             <%#Ver%>
             <td class="centeralign">
                 <a href="<%=link%>" data-lightbox="image-1" data-title="<%=elem.nombre%>">
-                    <img src="/imagenes/grafico.png" alt="view" class="view">
+                    <img src="/imagenes/grafico.png" alt="view">
                 </a>
             </td>
             <%#Descarga%>
             <td class="centeralign par">
                 <a href="<%=link%>" download>
-                    <img src="/imagenes/flecha.png" alt="save" class="save">
+                    <img src="/imagenes/flecha.png" alt="Descargar">
                 </a>
             </td>
         </tr>

@@ -1,0 +1,60 @@
+// Estilos de las tablas
+
+div.sec_interior table td strong {
+  text-transform: uppercase;
+}
+div.sec_interior table td.leftalign, div.sec_interior table th.leftalign {
+  text-align: left;
+}
+div.sec_interior table td.centeralign, div.sec_interior table th.centeralign {
+  text-align: center;
+}
+div.sec_interior table td.rightalign, div.sec_interior table th.rightalign {
+  text-align: right;
+}
+div.sec_interior table td.par {
+  background-color: #F0F0F0;
+}
+div.sec_interior table tr:hover td {
+  background-color: #FBDCCC;
+  color: #DD3B15;
+}
+div.sec_interior table.titulacion tr td {
+  background-color: #F0F0F0;
+  color: #404040;
+}
+div.sec_interior table p {
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+div.sec_interior table {
+  border-collapse: collapse;
+  border-width: 1px 0 2px;
+  margin-bottom: 2em;
+  margin-left: 0;
+  table-layout: auto;
+  width: 460px;
+  border-bottom-color: #DD3B15;
+  border-collapse: collapse;
+  border-top-color: #DD3B15;
+  empty-cells: show;
+  text-align: left;
+  background-color: #DD3B15;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+div.sec_interior table th {
+  min-height: 26px;
+  padding: 4px 1em;
+  color: #FFFFFF;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+div.sec_interior table td {
+  padding: 4px 1em;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #999999;
+  border-top: 1px solid #999999;
+  color: #404040;
+}

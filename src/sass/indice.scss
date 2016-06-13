@@ -1,0 +1,80 @@
+//Indice
+div.sec_interior ul.enlaces {
+  border-width: 0 0 0;
+  margin-right: 27px;
+  border-color: #B6B5B8;
+  list-style-type: none;
+}
+div.sec_interior ul.enlaces li {
+  clear: both;
+  display: block;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+margin-top: 3px;
+}
+div.sec_interior ul.enlaces li div {
+  border-bottom-width: 1px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+div.sec_interior ul.enlaces li a {
+  border-width: 0 0 0;
+  padding: 2px 15px 2px 2px;
+}
+div.sec_interior ul.enlaces ul.enlaces {
+  margin-top: -1px;
+}
+div.sec_interior ul.enlaces ul.enlaces li {
+  width: 438px;
+}
+div.sec_interior ul.enlaces ul.enlaces ul.enlaces li {
+  width: 418px;
+}
+div.sec_interior ul.enlaces li {
+  background-image: none;
+}
+div.sec_interior ul.enlaces li div {
+  background-image: url("/img/interior/lista_enlaces-nivel1_off.png");
+  background-position: left center;
+  border-color: #B6B5B8;
+  border-style: solid;
+}
+div.sec_interior ul.enlaces li a {
+  background-color: #FFFFFF;
+  border-color: #B6B5B8;
+  color: #DD3B02;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+}
+div.sec_interior ul.enlaces li a:hover {
+  background-color: #DD3B02;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+div.sec_interior ul.enlaces li.level2 div {
+  background-image: url("/img/interior/lista_enlaces-nivel2-circulo_off.png");
+}
+div.sec_interior ul.enlaces ul.enlaces li a{
+  background-image: url("/img/interior/lista_enlaces-nivel2_off.gif");
+  color: #0F3852;
+}
+div.sec_interior ul.enlaces ul.enlaces li a:hover{
+  background-color: #6D6C71;
+  background-image: url("/img/interior/lista_enlaces-nivel2_on.png");
+  color: #FFFFFF;
+}
+div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a{
+  background-image: url("/img/interior/lista_enlaces-nivel3_off.png");
+  color: #A7A7AA;
+}
+div.sec_interior ul.enlaces ul.enlaces ul.enlaces li a:hover{
+  background-color: #A7A7AA;
+  background-image: url("/img/interior/lista_enlaces-nivel3_on.png");
+  color: #FFFFFF;
+}

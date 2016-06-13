@@ -1,4 +1,59 @@
 //Estilos del cuerpo de transparente
 
-@import 'index';
-@import 'tablas';
+@import 'tablas'; //tablas
+@import 'indice'; //indice del body
+
+
+// Documento
+
+#pagina {
+  float: right;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  width: 513px;
+  background-color: #FFFFFF;
+  background-image: url("/img/interior/contenido-fondo.png");
+  background-position: left 41px;
+  background-repeat: no-repeat;
+}
+#titulo_pagina {
+  min-height: 34px;
+  padding-left: 62px;
+  padding-top: 7px;
+  position: relative;
+  background-color: #FFFFFF;
+  background-image: url("/img/interior/pagina-titulo_principal.png");
+  border-bottom-style: solid;
+  border-color: #DD3B02;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+#titulo_pagina > span.texto_titulo {
+  display: block;
+  min-height: 26px;
+  padding-left: 13px;
+  padding-top: 8px;
+  background-color: #000000;
+  background-image: url("/img/interior/pagina-titulo_principal-h1.png");
+  background-position: 0 bottom;
+}
+#contenido {
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #4D4D4D;
+}
+
+/*
+<div id="pagina">
+    <h1 id="titulo_pagina">
+        <span class="texto_titulo"><%=seccion%></span>
+    </h1>
+    <div id="contenido" class="sec_interior">
+        <div class="content_doku">
+            <%- include('partials/indice')%>
+            <%- include('partials/tablas')%>
+        </div>
+    </div>
+</div>
+*/

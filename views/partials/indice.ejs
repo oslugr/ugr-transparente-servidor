@@ -14,7 +14,7 @@ for (var i = 0; i < contenido.length; i++) {
     <%for (var seccion in secciones) {
     var item = secciones[seccion];%>
     <li class="level1">
-        <div class="li">
+        <div>
             <% if (item.seccion === "") {%>
                 <a class="enlaces-cabecera" href="#<%=item.link%>"><%=item.encabezado%></a>
             </div>
@@ -28,7 +28,7 @@ for (var i = 0; i < contenido.length; i++) {
             var elem = item[it];
             %>
     <li class="level2">
-        <div class="li">
+        <div>
             <a class="enlaces-cabecera" href="#<%=elem.link%>">
                 <%=elem.encabezado%>
             </a>

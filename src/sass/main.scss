@@ -1,5 +1,7 @@
 // Fichero principal de compilación sass
 
+@import 'index'; 
+
 @import 'cabecera';
 @import 'menu';
 @import 'body';
@@ -8,6 +10,7 @@
 // estilos legacy
 @import 'style';
 @import 'style2';
+
 
 
 * {

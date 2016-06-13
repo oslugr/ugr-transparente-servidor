@@ -1,21 +1,4 @@
-#contenedor {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto
-}
-#contenedor {
-  font-family: Verdana, sans;
-  font-size: 0.688em
-}
-#contenedor.general #general div.container-banners_calendar {
-  overflow: hidden
-}
-#contenedor.general #general #menus form.widget_loginform #login_form_widget.mod-buttons .userprofile a {
-  color: #bb2b00
-}
-span.separador_enlaces {
-  display: none
-}
+
 
 /** ICONOS **/
 

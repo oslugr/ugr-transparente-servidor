@@ -1,4 +1,4 @@
-<ul class="enlaces">
+<ul class="indice-body">
 
 <%
 var secciones = {};
@@ -16,20 +16,20 @@ for (var i = 0; i < contenido.length; i++) {
     <li class="level1">
         <div>
             <% if (item.seccion === "") {%>
-                <a class="enlaces-cabecera" href="#<%=item.link%>"><%=item.encabezado%></a>
+                <a class="enlaces-indice-level1" href="#<%=item.link%>"><%=item.encabezado%></a>
             </div>
         </li>
     <%} else {%>
-        <a class="enlaces-cabecera"><%=seccion%></a>
+        <a class="enlaces-indice-level1"><%=seccion%></a>
     </div>
 </li>
-<ul class="enlaces">
+<ul class="indice-level2">
     <%for (var it in item) {
             var elem = item[it];
             %>
     <li class="level2">
         <div>
-            <a class="enlaces-cabecera" href="#<%=elem.link%>">
+            <a class="enlaces-indice-level2" href="#<%=elem.link%>">
                 <%=elem.encabezado%>
             </a>
         </div>

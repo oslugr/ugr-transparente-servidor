@@ -128,3 +128,36 @@ div.sec_interior blockquote {
   margin-bottom: 1em;
   margin-left: 34px;
 }
+
+
+div.sec_interior a.autolink {
+  text-decoration: none;
+}
+div.sec_interior h2 {
+  background-position: 0 32px;
+  background-repeat: repeat-x;
+  color: #0F3852;
+}
+div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {}
+div.sec_interior h3, div.sec_interior h4, div.sec_interior h5, div.sec_interior h6 {
+  background-image: url("/img/interior/cabecera-nivel2.png");
+  background-position: 0 4px;
+  color: #0F3852;
+  font-size: 13px;
+}
+div.sec_interior img.mediacenter, div.sec_interior img.medialeft, div.sec_interior img.mediaright {
+  border-color: #757575;
+  border-style: solid;
+}
+div.sec_interior p {}
+div.sec_interior p a {
+  color: #DD3B02;
+}
+div.sec_interior p a:hover {
+  background-color: #DD3B02;
+  color: #FFFFFF;
+}
+div.sec_interior p em.u {
+  font-style: normal;
+  text-decoration: underline;
+}

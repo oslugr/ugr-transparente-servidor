@@ -1,0 +1,57 @@
+/***************************************/
+
+
+/* Ventana Modal                       */
+
+
+/***************************************/
+
+
+/* Z-index of #mask must lower than #boxes .window */
+
+#mask {
+  position: absolute;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+#boxes .window {
+  position: absolute;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Customize your modal window here, you can add background image too */
+
+#boxes #dialog {
+  position: fixed;
+  width: 800px;
+  height: 450px;
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  /*box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#titulo_tabla {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+#close {
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+#close:hover {
+  cursor: pointer;
+}
+#tabla {
+  width: 800px;
+  height: 350px;
+}

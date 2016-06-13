@@ -1,9 +1,10 @@
 // Fichero principal de compilación sass
 
 @import 'index'; 
-@import 'calendario'
+@import 'calendario';
 
-
+@import 'modal';
+@import 'layout';
 @import 'cabecera';
 @import 'menu';
 @import 'body';

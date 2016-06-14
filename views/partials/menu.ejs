@@ -25,12 +25,12 @@ var sel = getSuperSection(selected);
 var slug = slugify(title);
 if (sel === title) {%>
 <li>
-    <a class="menu-link-tipo2-selected"><%=title%></a>
+    <a class="menu-link-tipo2-selected desplegable"><%=title%></a>
     <ul id="menu_<%=slug%>" style="display:block">
     <%}
 else{%>
         <li>
-            <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2"><%=title%></a>
+            <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2 desplegable"><%=title%></a>
             <ul id="menu_<%=slug%>" style="display:none">
 
             <%}

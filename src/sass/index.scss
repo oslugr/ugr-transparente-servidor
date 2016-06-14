@@ -1,5 +1,4 @@
 // Estilos del menu principal (index)
-
 // Estilo general de los enlaces
 .enlace_index {
     float: left;
@@ -15,14 +14,12 @@
     font-family: Verdana;
     /*background-image: url("/imagenes/ugr.png");*/
 }
-
 // Estilo on mouse hover
 .enlace_index:hover {
     opacity: 0.85;
     /*filter: alpha(opacity=85);*/
     /* For IE8 and earlier */
 }
-
 // Mixin para generar el contenido de los enlaces del index
 @mixin enlace_index_content($background) {
     float: left;
@@ -31,7 +28,6 @@
     height: 68%;
     background-image: url($background);
 }
-
 // Enlaces del índice
 #en_infoInstitucional {
     @include enlace_index_content("/img/inicio/infoInstitucional.png");

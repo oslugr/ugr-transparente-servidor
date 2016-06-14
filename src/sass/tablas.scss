@@ -1,58 +1,53 @@
 // Estilos de las tablas
-
 // Diseño general de tablas
 .tabla-datos {
-  border-collapse: collapse;
-  border-width: 1px 0 2px;
-  margin-bottom: 2em;
-  margin-left: 0;
-  table-layout: auto;
-  width: 460px;
-  border-bottom-color: #DD3B15;
-  border-collapse: collapse;
-  border-top-color: #DD3B15;
-  empty-cells: show;
-  text-align: left;
-  background-color: #DD3B15;
-  background-position: left top;
-  background-repeat: no-repeat;
+    border-collapse: collapse;
+    border-width: 1px 0 2px;
+    margin-bottom: 2em;
+    margin-left: 0;
+    table-layout: auto;
+    width: 460px;
+    border-bottom-color: #DD3B15;
+    border-collapse: collapse;
+    border-top-color: #DD3B15;
+    empty-cells: show;
+    text-align: left;
+    background-color: #DD3B15;
+    background-position: left top;
+    background-repeat: no-repeat;
 }
 .tabla-datos th {
-  min-height: 26px;
-  padding: 4px 1em;
-  color: #FFFFFF;
-  font-weight: normal;
-  text-transform: uppercase;
+    min-height: 26px;
+    padding: 4px 1em;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-transform: uppercase;
 }
-
-
 // Alineamiento de tablas
 .centeralign {
-  text-align: center;
+    text-align: center;
 }
 .rightalign {
-  text-align: right;
+    text-align: right;
 }
 .leftalign {
-  text-align: left;
+    text-align: left;
 }
-
 // Color de las columnas
 .tabla-datos td {
-  padding: 4px 1em;
-  border-bottom: 1px solid #999999;
-  border-top: 1px solid #999999;
-  color: #404040;
+    padding: 4px 1em;
+    border-bottom: 1px solid #999999;
+    border-top: 1px solid #999999;
+    color: #404040;
 }
 .par {
-  background-color: #F0F0F0;
+    background-color: #F0F0F0;
 }
 .impar {
-  background-color: #FFFFFF;
+    background-color: #FFFFFF;
 }
-
 // Hover en las filas
 .tabla-datos tr:hover td {
-  background-color: #FBDCCC;
-  color: #DD3B15;
+    background-color: #FBDCCC;
+    color: #DD3B15;
 }

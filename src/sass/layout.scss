@@ -1,50 +1,31 @@
-
-#lateral_doku {
-  clear: right;
-  float: right;
-  margin-top: 7px;
-  width: 162px;
-}
-
 #general {
-  border-width: 0 0 1px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 772px;
-  background-image: url("/img/general/sombra_izq.png");
-  background-position: left center;
-  background-repeat: repeat-y;
-  border-color: #FFFFFF;
+    border-width: 0 0 1px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 772px;
+    background-image: url("/img/general/sombra_izq.png");
+    background-position: left center;
+    background-repeat: repeat-y;
+    border-color: #FFFFFF;
 }
-
 #contenedor {
-  margin-left: auto;
-  margin-right: auto;
-  /*padding-top: 10px;*/
-  background-repeat: no-repeat;
-  font-family: Verdana, sans;
-  font-size: 11px;
-  width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding-top: 10px;*/
+    background-repeat: no-repeat;
+    font-family: Verdana, sans;
+    //font-size: 11px;
+    font-size: 0.688em;
+    width: 960px;
 }
 #contenedor_margenes {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
 }
-
-#contenedor {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto
-}
-#contenedor {
-  font-family: Verdana, sans;
-  font-size: 0.688em
-}
-#contenedor.general #general div.container-banners_calendar {
-  overflow: hidden
-}
-#contenedor.general #general #menus form.widget_loginform #login_form_widget.mod-buttons .userprofile a {
-  color: #bb2b00
+#background-derecho {
+    background-image: url("/img/general/sombra_dcha.png");
+    background-position: right center;
+    background-repeat: repeat-y;
 }

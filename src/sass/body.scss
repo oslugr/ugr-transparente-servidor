@@ -1,52 +1,47 @@
 //Estilos del cuerpo de transparente
-
 @import 'tablas'; //tablas
 @import 'indice'; //indice del body
-
-
 // Documento
-
 #pagina {
-  float: right;
-  margin-bottom: 10px;
-  padding-bottom: 30px;
-  width: 513px;
-  background-color: #FFFFFF;
-  background-image: url("/img/interior/contenido-fondo.png");
-  background-position: left 41px;
-  background-repeat: no-repeat;
+    float: right;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    width: 513px;
+    background-color: #FFFFFF;
+    background-image: url("/img/interior/contenido-fondo.png");
+    background-position: left 41px;
+    background-repeat: no-repeat;
 }
 #titulo_pagina {
-  min-height: 34px;
-  padding-left: 62px;
-  padding-top: 7px;
-  position: relative;
-  background-color: #FFFFFF;
-  background-image: url("/img/interior/pagina-titulo_principal.png");
-  border-bottom-style: solid;
-  border-color: #DD3B02;
-  color: #FFFFFF;
-  font-size: 18px;
+    min-height: 34px;
+    padding-left: 62px;
+    padding-top: 7px;
+    position: relative;
+    background-color: #FFFFFF;
+    background-image: url("/img/interior/pagina-titulo_principal.png");
+    border-bottom-style: solid;
+    border-color: #DD3B02;
+    color: #FFFFFF;
+    font-size: 18px;
 }
 #titulo_pagina > span.texto_titulo {
-  display: block;
-  min-height: 26px;
-  padding-left: 13px;
-  padding-top: 8px;
-  background-color: #000000;
-  background-image: url("/img/interior/pagina-titulo_principal-h1.png");
-  background-position: 0 bottom;
+    display: block;
+    min-height: 26px;
+    padding-left: 13px;
+    padding-top: 8px;
+    background-color: #000000;
+    background-image: url("/img/interior/pagina-titulo_principal-h1.png");
+    background-position: 0 bottom;
 }
 #contenido {
-  margin-top: 20px;
-  padding-left: 25px;
-  padding-right: 25px;
-  color: #4D4D4D;
-  p{
-      font-size: 1.2em;
-  }
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #4D4D4D;
+    p {
+        font-size: 1.2em;
+    }
 }
-
 /*
 <div id="pagina">
     <h1 id="titulo_pagina">
@@ -60,47 +55,47 @@
     </div>
 </div>
 */
-
-
 //LEGACY
-
-
-div.sec_interior h1 {
-  clear: both;
-  margin: 25px 0 2px;
-  padding-bottom: 15px;
-  padding-top: 5px;
-  background-color: #FFFFFF;
-  background-image: url("/img/interior/sombra-inferior-cabecera-nivel1.png");
-  background-position: 0 bottom;
-  background-repeat: repeat-x;
-  color: #0F3852;
-  color: red;
-  margin-left: 0;
-  margin-right: 0;
+.sec_interior h1 {
+    clear: both;
+    margin: 25px 0 2px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background-color: #FFFFFF;
+    background-image: url("/img/interior/sombra-inferior-cabecera-nivel1.png");
+    background-position: 0 bottom;
+    background-repeat: repeat-x;
+    color: #0F3852;
+    color: red;
+    margin-left: 0;
+    margin-right: 0;
 }
-div.sec_interior h1 a {
-  border-bottom-width: 1px;
-  display: block;
-  margin-bottom: 5px;
-  padding-bottom: 2px;
-  padding-left: 19px;
-  background-image: url("/img/interior/cabecera-nivel1_bullet.png");
-  background-position: 0 6px;
-  border-color: #718593;
-  color: #0F3852;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 24px;
-  text-align: left;
+.sec_header {
+    border-bottom-width: 1px;
+    display: block;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    padding-left: 19px;
+    background-image: url("/img/interior/cabecera-nivel1_bullet.png");
+    background-position: 0 6px;
+    border-color: #718593;
+    color: #0F3852;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 24px;
+    text-align: left;
 }
-div.sec_interior h2, div.sec_interior h3, div.sec_interior h4, div.sec_interior h5, div.sec_interior h6 {
-  clear: both;
-  padding-bottom: 15px;
-  padding-top: 5px;
+div.sec_interior h2,
+div.sec_interior h3,
+div.sec_interior h4,
+div.sec_interior h5,
+div.sec_interior h6 {
+    clear: both;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
-div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {
+/*div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {
   border-bottom-width: 1px;
   display: block;
   padding-bottom: 2px;
@@ -113,51 +108,37 @@ div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_int
   font-style: normal;
   line-height: 24px;
   text-align: left;
+}*/
+.sec_interior p {
+    clear: both;
+    margin-bottom: 1em;
+    margin-left: -20px;
+    overflow: hidden;
+    padding-left: 20px;
+    position: relative;
+    color: #404040;
+    text-align: justify;
 }
-div.sec_interior p {
-  clear: both;
-  margin-bottom: 1em;
-  margin-left: -20px;
-  overflow: hidden;
-  padding-left: 20px;
-  position: relative;
-  color: #404040;
-  text-align: justify;
-}
-div.sec_interior blockquote {
-  margin-bottom: 1em;
-  margin-left: 34px;
-}
-
-
-div.sec_interior a.autolink {
-  text-decoration: none;
+.sec_interior blockquote {
+    margin-bottom: 1em;
+    margin-left: 34px;
 }
 div.sec_interior h2 {
-  background-position: 0 32px;
-  background-repeat: repeat-x;
-  color: #0F3852;
+    background-position: 0 32px;
+    background-repeat: repeat-x;
+    color: #0F3852;
 }
-div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {}
-div.sec_interior h3, div.sec_interior h4, div.sec_interior h5, div.sec_interior h6 {
-  background-image: url("/img/interior/cabecera-nivel2.png");
-  background-position: 0 4px;
-  color: #0F3852;
-  font-size: 13px;
+.sec_interior h3,
+.sec_interior h4 {
+    background-image: url("/img/interior/cabecera-nivel2.png");
+    background-position: 0 4px;
+    color: #0F3852;
+    font-size: 13px;
 }
-div.sec_interior img.mediacenter, div.sec_interior img.medialeft, div.sec_interior img.mediaright {
-  border-color: #757575;
-  border-style: solid;
+.sec_interior p a {
+    color: #DD3B02;
 }
-div.sec_interior p {}
-div.sec_interior p a {
-  color: #DD3B02;
-}
-div.sec_interior p a:hover {
-  background-color: #DD3B02;
-  color: #FFFFFF;
-}
-div.sec_interior p em.u {
-  font-style: normal;
-  text-decoration: underline;
+.sec_interior p a:hover {
+    background-color: #DD3B02;
+    color: #FFFFFF;
 }

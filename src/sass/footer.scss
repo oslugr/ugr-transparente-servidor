@@ -1,54 +1,52 @@
 // Estilos del pie de página
-
-
 #pie {
-  border-top-width: 1px;
-  clear: both;
-  height: 115px;
-  overflow: hidden;
-  padding-bottom: 40px;
-  padding-left: 0;
-  text-align: right;
-  background-color: #FFFFFF;
-  background-image: url("/img/general/pie-fondo.png");
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  border-color: #6D6C71;
+    border-top-width: 1px;
+    clear: both;
+    height: 115px;
+    overflow: hidden;
+    padding-bottom: 40px;
+    padding-left: 0;
+    text-align: right;
+    background-color: #FFFFFF;
+    background-image: url("/img/general/pie-fondo.png");
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    border-color: #6D6C71;
 }
 .footer-link {
-  display: block;
-  float: left;
-  margin-left: 20px;
-  margin-top: 17px;
-  padding-right: 20px;
-  text-align: right;
-  background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
-  color: #FFFFFF;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 17px;
+    padding-right: 20px;
+    text-align: right;
+    background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
+    color: #FFFFFF;
 }
 .footer-link:hover {
-  background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
-  color: #FFFFFF;
+    background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
+    color: #FFFFFF;
 }
 .ugr-copyright {
-  height: 18px;
-  margin-right: 0;
-  margin-top: 115px;
-  padding-top: 5px;
-  text-align: right;
-  background-color: #FFFFFF;
-  border-color: #C4C4C4;
-  color: #8A8A8A;
+    height: 18px;
+    margin-right: 0;
+    margin-top: 115px;
+    padding-top: 5px;
+    text-align: right;
+    background-color: #FFFFFF;
+    border-color: #C4C4C4;
+    color: #8A8A8A;
 }
 .ugr-copyright > a {
-  display: inline;
-  float: none;
-  margin: 0;
-  padding: 0;
-  background-image: none;
-  color: #8A8A8A;
+    display: inline;
+    float: none;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    color: #8A8A8A;
 }
 .ugr-copyright > a:hover {
-  background-image: none;
-  color: #DADADA;
-  text-decoration: underline;
+    background-image: none;
+    color: #DADADA;
+    text-decoration: underline;
 }

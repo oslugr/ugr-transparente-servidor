@@ -37,7 +37,7 @@
 			"url": "http://escuelaposgrado.ugr.es/pages/titulos_propios/oferta_formativa"
 		}]
 	}, {
-		"tipo": 2,
+		"tipo": 3,
 		"seccion": "Oferta académica",
 		"encabezado": "Informes de oferta académica",
 		"link": "informes-oferta-academica",
@@ -72,7 +72,7 @@
 			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2015-2016). Distribución por vía de acceso",
 			"url": "2015_2016_alumnado_nuevo_ingreso_via_acceso.pdf"
 		}, {
-			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2015-2016). Distribución por edad:",
+			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2015-2016). Distribución por edad",
 			"url": "2015_2016_alumnado_nuevo_ingreso_edad.pdf"
 		}, {
 			"nombre": "Oferta y demanda de plazas de grados 2015 - 2016",

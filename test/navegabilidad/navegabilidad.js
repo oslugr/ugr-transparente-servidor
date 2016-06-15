@@ -115,7 +115,7 @@ function checkAllLinks(selector, done, status) {
 }
 // * `checkTables(done)`: Función genérica de comprobación de tablas, comprobará que se han generado correctamente y los links de esta
 function checkTables(done) {
-	var tables = browser.queryAll("#contenido div.level1 table");
+	var tables = browser.queryAll("#contenido table.tabla-datos");
 	async.each(tables, function(item, cb) {
 		var rows = browser.queryAll("tr", item);
 		assert.isAbove(rows.length, 1);

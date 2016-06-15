@@ -10,6 +10,12 @@
 		"datos": [{
 			"nombre": "Estructura académica y de docencia",
 			"url": "2014_2015_estructura_academica_docencia.pdf"
+		}, {
+			"nombre": "Plan de Ordenación Docente 2016-17",
+			"url": "2016_2017_plan_ordenacion_docente.pdf"
+		}, {
+			"nombre": "Programa de Apoyo a la Docencia Práctica",
+			"url": "2015_2016_programa_apoyo_docencia_practica.pdf"
 		}]
 	}, {
 		"tipo": 2,
@@ -29,6 +35,16 @@
 		}, {
 			"nombre": "Títulos propios",
 			"url": "http://escuelaposgrado.ugr.es/pages/titulos_propios/oferta_formativa"
+		}]
+	}, {
+		"tipo": 2,
+		"seccion": "Oferta académica",
+		"encabezado": "Informes de oferta académica",
+		"link": "informes-oferta-academica",
+		"texto": "Informes sobre aspectos importantes de la oferta académica de títulos reglados y propios de la Universidad de Granada.",
+		"datos": [{
+			"nombre": "Informe sobre los títulos de grado (Cursos 2010/11 - 2013/14)",
+			"url": "2010_2014_informe_titulos_grado_ugr.pdf"
 		}]
 	}, {
 		"tipo": 2,
@@ -53,6 +69,12 @@
 		"link": "informes-oferta-demanda",
 		"texto": "",
 		"datos": [{
+			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2015-2016). Distribución por vía de acceso",
+			"url": "2015_2016_alumnado_nuevo_ingreso_via_acceso.pdf"
+		}, {
+			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2015-2016). Distribución por edad:",
+			"url": "2015_2016_alumnado_nuevo_ingreso_edad.pdf"
+		}, {
 			"nombre": "Oferta y demanda de plazas de grados 2015 - 2016",
 			"url": "2015_2016_oferta_demanda_grados.pdf"
 		}, {

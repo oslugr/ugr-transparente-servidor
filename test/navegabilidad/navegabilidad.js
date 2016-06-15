@@ -241,10 +241,10 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Header', function(done) {
 			browser.assert.element('#cabecera');
-			browser.assert.link('#cabecera #enlace_ugr', 'Universidad de Granada', 'http://www.ugr.es/');
-			browser.assert.link('#cabecera #enlace_stack', 'UGR Transparente', '/');
-			browser.assert.link('#cabecera #enlace_eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
-			browser.assert.element('#cabecera #buscador');
+			browser.assert.link('#cabecera .enlace_ugr', 'Universidad de Granada', 'http://www.ugr.es/');
+			browser.assert.link('#cabecera .enlace_stack', 'UGR Transparente', '/');
+			browser.assert.link('#cabecera .enlace_eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
+			browser.assert.element('#cabecera #buscador-top');
 
 			checkLink('http://www.ugr.es/', function() {
 				checkLink('http://www.ugr.es/pages/administracion', function() {
@@ -253,13 +253,8 @@ describe('Pruebas de Navegabilidad', function() {
 			});
 		});
 		it('Footer', function(done) {
-			var elem;
 			browser.assert.element('#pie');
-
-			elem = browser.query('#pie > #WAI');
-
-			browser.assert.attribute(elem, 'href', 'http://www.w3.org/WAI/WCAG2AA-Conformance');
-			browser.assert.element('#pie > #WAI > img#wcag2aa');
+			browser.assert.elements('#pie  .footer-link',6);
 			browser.assert.link('#pie > a', "Mapa del sitio", "mapaWeb.html");
 			browser.assert.link('#pie > a', "Este servidor es software libre", "https://github.com/oslugr/ugr-transparente-servidor");
 			browser.assert.link('#pie > a', "Liberado bajo GPL v3.0", "http://www.gnu.org/licenses/gpl-3.0.html");

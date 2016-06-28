@@ -8,7 +8,7 @@
     padding-bottom: 30px;
     width: 513px;
     background-color: #FFFFFF;
-    background-image: url("/img/interior/contenido-fondo.png");
+    background-image: url('/img/interior/contenido-fondo.png');
     background-position: left 41px;
     background-repeat: no-repeat;
 }
@@ -18,20 +18,20 @@
     padding-top: 7px;
     position: relative;
     background-color: #FFFFFF;
-    background-image: url("/img/interior/pagina-titulo_principal.png");
+    background-image: url('/img/interior/pagina-titulo_principal.png');
     border-bottom-style: solid;
     border-color: #DD3B02;
     color: #FFFFFF;
     font-size: 18px;
-}
-#titulo_pagina > span.texto_titulo {
-    display: block;
-    min-height: 26px;
-    padding-left: 13px;
-    padding-top: 8px;
-    background-color: #000000;
-    background-image: url("/img/interior/pagina-titulo_principal-h1.png");
-    background-position: 0 bottom;
+    > .texto-titulo {
+        display: block;
+        min-height: 26px;
+        padding-left: 13px;
+        padding-top: 8px;
+        background-color: #000000;
+        background-image: url('/img/interior/pagina-titulo_principal-h1.png');
+        background-position: 0 bottom;
+    }
 }
 #contenido {
     margin-top: 20px;
@@ -42,90 +42,74 @@
         font-size: 1.2em;
     }
 }
-
-.sec_interior h1 {
-    clear: both;
-    margin: 25px 0 2px;
-    padding-bottom: 15px;
-    padding-top: 5px;
-    background-color: #FFFFFF;
-    background-image: url("/img/interior/sombra-inferior-cabecera-nivel1.png");
-    background-position: 0 bottom;
-    background-repeat: repeat-x;
-    color: #0F3852;
-    color: red;
-    margin-left: 0;
-    margin-right: 0;
+.sec-interior {
+    %interior-headers {
+        color: #0F3852;
+        clear: both;
+        padding-bottom: 15px;
+        padding-top: 5px;
+    }
+    h1 {
+        @extend %interior-headers;
+        margin: 25px 0 2px;
+        background-color: #FFFFFF;
+        background-image: url('/img/interior/sombra-inferior-cabecera-nivel1.png');
+        background-position: 0 bottom;
+        background-repeat: repeat-x;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h2 {
+        @extend %interior-headers;
+        background-position: 0 32px;
+        background-repeat: repeat-x;
+    }
+    h3,
+    h4 {
+        @extend %interior-headers;
+        background-image: url('/img/interior/cabecera-nivel2.png');
+        background-position: 0 4px;
+        font-size: 13px;
+    }
+    h5,
+    h6 {
+        @extend %interior-headers;
+    }
+    p {
+        clear: both;
+        margin-bottom: 1em;
+        margin-left: -20px;
+        overflow: hidden;
+        padding-left: 20px;
+        position: relative;
+        color: #404040;
+        text-align: justify;
+        a {
+            color: #DD3B02;
+            :hover {
+                background-color: #DD3B02;
+                color: #FFFFFF;
+            }
+        }
+    }
+    blockquote {
+        margin-bottom: 1em;
+        margin-left: 34px;
+    }
 }
-.sec_header {
+.sec-header {
     border-bottom-width: 1px;
     display: block;
     margin-bottom: 5px;
     padding-bottom: 2px;
     padding-left: 19px;
-    background-image: url("/img/interior/cabecera-nivel1_bullet.png");
+    background-image: url('/img/interior/cabecera-nivel1_bullet.png');
     background-position: 0 6px;
     border-color: #718593;
     color: #0F3852;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
     font-style: normal;
     line-height: 24px;
     text-align: left;
-}
-div.sec_interior h2,
-div.sec_interior h3,
-div.sec_interior h4,
-div.sec_interior h5,
-div.sec_interior h6 {
-    clear: both;
-    padding-bottom: 15px;
-    padding-top: 5px;
-}
-/*div.sec_interior h2 a, div.sec_interior h3 a, div.sec_interior h4 a, div.sec_interior h5 a, div.sec_interior h6 a {
-  border-bottom-width: 1px;
-  display: block;
-  padding-bottom: 2px;
-  padding-left: 30px;
-  background-position: 0 center;
-  border-color: #718593;
-  color: #0F3852;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 24px;
-  text-align: left;
-}*/
-.sec_interior p {
-    clear: both;
-    margin-bottom: 1em;
-    margin-left: -20px;
-    overflow: hidden;
-    padding-left: 20px;
-    position: relative;
-    color: #404040;
-    text-align: justify;
-}
-.sec_interior blockquote {
-    margin-bottom: 1em;
-    margin-left: 34px;
-}
-div.sec_interior h2 {
-    background-position: 0 32px;
-    background-repeat: repeat-x;
-    color: #0F3852;
-}
-.sec_interior h3,
-.sec_interior h4 {
-    background-image: url("/img/interior/cabecera-nivel2.png");
-    background-position: 0 4px;
-    color: #0F3852;
-    font-size: 13px;
-}
-.sec_interior p a {
-    color: #DD3B02;
-}
-.sec_interior p a:hover {
-    background-color: #DD3B02;
-    color: #FFFFFF;
 }

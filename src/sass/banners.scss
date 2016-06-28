@@ -14,7 +14,7 @@
     padding-left: 0;
     z-index: 2;
 }
-.banner_container {
+.banner-container {
     border-bottom-width: 0;
     border-top-width: 0;
     display: block;
@@ -33,13 +33,13 @@
     height: 133px;
     background-color: #FFFFFF;
     background-position: 0 0;
-    background-image: url("/img/banners/resaltado-02_off.png");
-}
-.banner:hover {
-    background-image: url("/img/banners/resaltado-02_on.png");
+    background-image: url('/img/banners/resaltado-02_off.png');
+    :hover {
+        background-image: url('/img/banners/resaltado-02_on.png');
+    }
 }
 .banner-text {
-    color: white;
+    color: #FFFFFF;
     padding-top: 10px;
 }
 .banner-title {

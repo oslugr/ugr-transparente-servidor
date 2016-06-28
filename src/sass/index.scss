@@ -1,27 +1,26 @@
 // Estilos del menu principal (index)
 // Estilo general de los enlaces
-.enlace_index {
+.enlace-index {
     float: left;
     text-align: center;
-    color: #FFF;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 1.1em;
     width: 130px;
     height: 77px;
     margin-left: 10px;
     margin-bottom: 15px;
-    border: medium outset white;
+    border: medium outset #FFFFFF;
     font-family: Verdana;
-    /*background-image: url("/imagenes/ugr.png");*/
-}
-// Estilo on mouse hover
-.enlace_index:hover {
-    opacity: 0.85;
-    /*filter: alpha(opacity=85);*/
-    /* For IE8 and earlier */
+    //background-image: url('/imagenes/ugr.png');
+    :hover {
+        opacity: 0.85;
+        //ilter: alpha(opacity=85);
+        // For IE8 and earlier 
+    }
 }
 // Mixin para generar el contenido de los enlaces del index
-@mixin enlace_index_content($background) {
+@mixin enlace-index-content($background) {
     float: left;
     padding-top: 20%;
     width: 100%;
@@ -30,29 +29,29 @@
 }
 // Enlaces del índice
 #en_infoInstitucional {
-    @include enlace_index_content("/img/inicio/infoInstitucional.png");
+    @include enlace-index-content('/img/inicio/infoInstitucional.png');
 }
 #en_personal {
-    @include enlace_index_content("/img/inicio/personal.png");
+    @include enlace-index-content('/img/inicio/personal.png');
 }
 #en_infoEconomica {
-    @include enlace_index_content("/img/inicio/infoEconomica.png");
+    @include enlace-index-content('/img/inicio/infoEconomica.png');
 }
 #en_ofertaDemanda {
-    @include enlace_index_content("/img/inicio/ofertaDemanda.png");
+    @include enlace-index-content('/img/inicio/ofertaDemanda.png');
 }
 #en_claustro {
-    @include enlace_index_content("/img/inicio/claustro.png");
+    @include enlace-index-content('/img/inicio/claustro.png');
 }
 #en_estudiantes {
-    @include enlace_index_content("/img/inicio/estudiantes.png");
+    @include enlace-index-content('/img/inicio/estudiantes.png');
 }
 #en_gobierno {
-    @include enlace_index_content("/img/inicio/gobierno.png");
+    @include enlace-index-content('/img/inicio/gobierno.png');
 }
 #en_rendimiento {
-    @include enlace_index_content("/img/inicio/rendimiento.png");
+    @include enlace-index-content('/img/inicio/rendimiento.png');
 }
 #en_normativaLegal {
-    @include enlace_index_content("/img/inicio/normativaLegal.png");
+    @include enlace-index-content('/img/inicio/normativaLegal.png');
 }

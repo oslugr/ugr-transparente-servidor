@@ -10,7 +10,7 @@
     border-color: #FFFFFF;
 }
 #calendar {
-    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-family: 'Lucida Grande', Helvetica, Arial, Verdana, sans-serif;
     font-size: 14px;
     position: absolute;
     top: 400px;
@@ -25,34 +25,34 @@
     width: 772px;
     height: 455px;
     background-color: #FFFFFF;
-    background-image: url("/img/interior/calendario-fondo.png");
+    background-image: url('/img/interior/calendario-fondo.png');
     background-position: left 41px;
     background-repeat: no-repeat;
-}
-#calendario h1#titulo_pagina {
-    min-height: 34px;
-    padding-left: 62px;
-    padding-top: 7px;
-    position: relative;
-    background-color: #FFFFFF;
-    background-image: url("/img/interior/pagina-titulo_principal.png");
-    border-bottom-style: solid;
-    border-color: #DD3B02;
-    color: #FFFFFF;
-    font-size: 18px;
-}
-#calendario h1#titulo_pagina span.texto-titulo {
-    display: block;
-    min-height: 26px;
-    width: 772px;
-    padding-left: 13px;
-    padding-top: 8px;
-    background-color: #000000;
-    background-image: url("/img/interior/calendario-titulo_principal-h1.png");
-    background-position: 0 bottom;
-}
-#calendario #contenido {
-    margin-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
+    #titulo_pagina {
+        min-height: 34px;
+        padding-left: 62px;
+        padding-top: 7px;
+        position: relative;
+        background-color: #FFFFFF;
+        background-image: url('/img/interior/pagina-titulo_principal.png');
+        border-bottom-style: solid;
+        border-color: #DD3B02;
+        color: #FFFFFF;
+        font-size: 18px;
+        .texto-titulo {
+            display: block;
+            min-height: 26px;
+            width: 772px;
+            padding-left: 13px;
+            padding-top: 8px;
+            background-color: #000000;
+            background-image: url('/img/interior/calendario-titulo_principal-h1.png');
+            background-position: 0 bottom;
+        }
+    }
+    #contenido {
+        margin-top: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }

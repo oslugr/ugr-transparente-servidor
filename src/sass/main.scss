@@ -10,8 +10,6 @@
 @import 'body';
 @import 'banners';
 @import 'footer';
-
-
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +17,9 @@
     border-style: solid;
     border-width: 0;
 }
-/*Style para JavaScript deshabilitado*/
-.jsDisabled {
-    border: 1px solid red;
+//Style para JavaScript deshabilitado
+.js-disabled {
+    border: 1px solid #FF0000;
     margin: 1.5em;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -29,18 +27,18 @@
     font-size: 1.25em;
     font-family: Arial, Helvetica, sans-serif;
 }
-a img {
-    border: medium none;
-}
 a {
     color: #543342;
     text-decoration: none;
-}
-a,
-a:active,
-a:hover,
-a:visited {
     outline: medium none;
+    img {
+        border: medium none;
+    }
+    :active,
+    :hover,
+    :visited {
+        outline: medium none;
+    }
 }
 ol,
 ul {

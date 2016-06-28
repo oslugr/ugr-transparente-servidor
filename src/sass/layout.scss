@@ -4,7 +4,7 @@
     overflow: hidden;
     position: relative;
     width: 772px;
-    background-image: url("/img/general/sombra_izq.png");
+    background-image: url('/img/general/sombra_izq.png');
     background-position: left center;
     background-repeat: repeat-y;
     border-color: #FFFFFF;
@@ -12,7 +12,7 @@
 #contenedor {
     margin-left: auto;
     margin-right: auto;
-    /*padding-top: 10px;*/
+    //padding-top: 10px;
     background-repeat: no-repeat;
     font-family: Verdana, sans;
     //font-size: 11px;
@@ -25,7 +25,7 @@
     width: 1024px;
 }
 #background-derecho {
-    background-image: url("/img/general/sombra_dcha.png");
+    background-image: url('/img/general/sombra_dcha.png');
     background-position: right center;
     background-repeat: repeat-y;
 }

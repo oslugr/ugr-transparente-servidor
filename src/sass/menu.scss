@@ -12,7 +12,7 @@
     border-style: solid;
 }
 // Secciones del menu
-.mod-menu_secciones {
+.mod-menu-secciones {
     border-right-width: 1px;
     margin-bottom: 13px;
     padding-bottom: 0;
@@ -21,7 +21,7 @@
     border-style: solid;
 }
 // Estilo general de cada link del menu
-.link-menu {
+%link-menu {
     border-bottom-width: 1px;
     border-top-width: 1px;
     display: block;
@@ -39,39 +39,39 @@
     width: 210px;
 }
 .menu-link-tipo1 {
-    @extend .link-menu;
+    @extend %link-menu;
     background-color: #FFFFFF;
-    background-image: url("/img/general/menu-subitem_off.png");
+    background-image: url('/img/general/menu-subitem_off.png');
     background-position: 0 center;
     border-color: #AAABAF;
     color: #6D6C71;
-}
-.menu-link-tipo1:hover {
-    background-image: url("/img/general/menu-subitem_on.png");
-    color: #0F3852;
+    :hover {
+        background-image: url('/img/general/menu-subitem_on.png');
+        color: #0F3852;
+    }
 }
 .menu-link-tipo1-selected {
-    @extend .link-menu;
+    @extend %link-menu;
     background-color: #FFFFFF;
-    background-image: url("/img/general/menu-subitem_on.png");
+    background-image: url('/img/general/menu-subitem_on.png');
     border-color: #AAABAF;
     color: #0F3852;
 }
 // Elementos del menu de tipo 2
 .menu-link-tipo2 {
-    @extend .link-menu;
+    @extend %link-menu;
     background-color: #FFFFFF;
-    background-image: url("/img/general/menu-item_off.png");
+    background-image: url('/img/general/menu-item_off.png');
     border-color: #AAABAF;
     color: #024EA4;
-}
-.menu-link-tipo2:hover {
-    background-image: url("/img/general/menu-item_on.png");
+    :hover {
+        background-image: url('/img/general/menu-item_on.png');
+    }
 }
 .menu-link-tipo2-selected {
-    @extend .link-menu;
-    background-color: black;
-    background-image: url("/img/general/menu-item_actual_off.png");
+    @extend %link-menu;
+    background-color: #000000;
+    background-image: url('/img/general/menu-item_actual_off.png');
     background-position: 0 center;
     border-color: #AAABAF;
     color: #FFFFFF;

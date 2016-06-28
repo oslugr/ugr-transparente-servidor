@@ -8,42 +8,20 @@
     margin-top: 6px;
     list-style-position: outside;
 }
-/*
-div.sec-interior ul li {
-  margin-bottom: 6px;
-  padding-left: 10px;
-  background-image: url("/img/interior/lista-nivel1.png");
-  background-position: left 4px;
-  background-repeat: no-repeat;
-  color: #404040;
-  text-align: justify;
-}*/
-.enlaces-indice {
+%enlaces-indice {
     border-width: 0 0 0;
     padding: 2px 15px 2px 2px;
-    background-image: url("/img/interior/lista_enlaces-nivel1-flecha_off.gif");
+    background-image: url('/img/interior/lista_enlaces-nivel1-flecha_off.gif');
     background-position: right center;
     font-size: 1.2em;
     padding-right: 14px;
+    :hover {
+        background-color: #DD3B15;
+        background-image: url('/img/interior/lista_enlaces-nivel1-flecha_on.png');
+        color: #FFFFFF;
+    }
 }
-.enlaces-indice:hover {
-    background-color: #DD3B15;
-    background-image: url("/img/interior/lista_enlaces-nivel1-flecha_on.png");
-    color: #FFFFFF;
-}
-//Common for .level1 and .level2 divs
-.list-div {
-    background-position: left center;
-    border-color: #B6B5B8;
-    border-style: solid;
-    border-bottom-width: 1px;
-    overflow: hidden;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-top: 5px;
-}
-.level1,
-.level2 {
+%indice-list {
     clear: both;
     display: block;
     margin-bottom: 0;
@@ -53,36 +31,48 @@ div.sec-interior ul li {
     position: relative;
     margin-top: 3px;
     background-image: none;
+    div {
+        background-position: left center;
+        border-color: #B6B5B8;
+        border-style: solid;
+        border-bottom-width: 1px;
+        overflow: hidden;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
 }
 //Level1
-.level1 div {
-    @extend .list-div;
-    background-image: url("/img/interior/lista_enlaces-nivel1_off.png");
+.level1 {
+    @extend %indice-list;
+    div {
+        background-image: url('/img/interior/lista_enlaces-nivel1_off.png');
+    }
 }
 .enlaces-indice-level1 {
-    @extend .enlaces-indice;
+    @extend %enlaces-indice;
     background-color: #FFFFFF;
     border-color: #B6B5B8;
     color: #DD3B02;
     line-height: 20px;
     text-align: left;
     text-decoration: none;
-}
-.enlaces-indice-level1:hover {
-    background-color: #DD3B02;
-    color: #FFFFFF;
-    text-decoration: none;
+    :hover {
+        background-color: #DD3B02;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
 }
 //Level2
 .enlaces-indice-level2 {
-    @extend .enlaces-indice;
-    background-image: url("/img/interior/lista_enlaces-nivel2_off.gif");
+    @extend %enlaces-indice;
+    background-image: url('/img/interior/lista_enlaces-nivel2_off.gif');
     color: #0F3852;
-}
-.enlaces-indice-level2:hover {
-    background-color: #6D6C71;
-    background-image: url("/img/interior/lista_enlaces-nivel2_on.png");
-    color: #FFFFFF;
+    :hover {
+        background-color: #6D6C71;
+        background-image: url('/img/interior/lista_enlaces-nivel2_on.png');
+        color: #FFFFFF;
+    }
 }
 .indice-level2 {
     margin-bottom: 0;
@@ -91,7 +81,9 @@ div.sec-interior ul li {
     list-style-type: none;
     margin-top: -1px;
 }
-.level2 div {
-    @extend .list-div;
-    background-image: url("/img/interior/lista_enlaces-nivel2-circulo_off.png");
+.level2 {
+    @extend %indice-list;
+    div {
+        background-image: url('/img/interior/lista_enlaces-nivel2-circulo_off.png');
+    }
 }

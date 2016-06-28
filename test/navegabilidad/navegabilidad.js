@@ -187,7 +187,7 @@ describe('Pruebas de Navegabilidad', function() {
 			browser.assert.element('#enlaces_secciones');
 			browser.assert.elements('#menus .menu-link-tipo2', 6);
 			browser.assert.elements('#menus .menu-link-tipo2-selected', 1);
-			browser.assert.elements('#menus .mod-menu_secciones>li', 7);
+			browser.assert.elements('#menus .mod-menu-secciones>li', 7);
 			browser.assert.elements('#menus .menu-link-tipo1', 8);
 			browser.assert.elements('#menus .desplegable', 3);
 			//Links
@@ -311,47 +311,47 @@ describe('Pruebas de Navegabilidad', function() {
 			elem = browser.query('a > #en_infoInstitucional');
 			browser.assert.text(elem, 'Información Institucional');
 			browser.assert.attribute(elem.parentNode, 'href', '/infoInstitucional.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_personal');
 			browser.assert.text(elem, 'Personal');
 			browser.assert.attribute(elem.parentNode, 'href', '/personal.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_infoEconomica');
 			browser.assert.text(elem, 'Información Económica');
 			browser.assert.attribute(elem.parentNode, 'href', '/infoEconomica.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_ofertaDemanda');
 			browser.assert.text(elem, 'Oferta y Demanda Académica');
 			browser.assert.attribute(elem.parentNode, 'href', '/ofertaDemanda.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_claustro');
 			browser.assert.text(elem, 'Claustro');
 			browser.assert.attribute(elem.parentNode, 'href', '/claustro.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_estudiantes');
 			browser.assert.text(elem, 'Estudiantes');
 			browser.assert.attribute(elem.parentNode, 'href', '/estudiantes.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_gobierno');
 			browser.assert.text(elem, 'Gobierno');
 			browser.assert.attribute(elem.parentNode, 'href', '/gobierno.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_rendimiento');
 			browser.assert.text(elem, 'Rendimiento');
 			browser.assert.attribute(elem.parentNode, 'href', '/rendimiento.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 
 			elem = browser.query('a > #en_normativaLegal');
 			browser.assert.text(elem, 'Normativa Legal');
 			browser.assert.attribute(elem.parentNode, 'href', '/normativaLegal.html');
-			browser.assert.hasClass(elem.parentNode, 'enlace_index');
+			browser.assert.hasClass(elem.parentNode, 'enlace-index');
 		});
 		it('Menú de Rastro', function() {
 			checkBreadcrumb("Inicio");

@@ -8,7 +8,7 @@
     padding-left: 0;
     text-align: right;
     background-color: #FFFFFF;
-    background-image: url("/img/general/pie-fondo.png");
+    background-image: url('/img/general/pie-fondo.png');
     background-position: 0 0;
     background-repeat: repeat-x;
     border-color: #6D6C71;
@@ -20,12 +20,12 @@
     margin-top: 17px;
     padding-right: 20px;
     text-align: right;
-    background: url("/img/general/contactos_flecha_off.png") no-repeat scroll right center transparent;
+    background: url('/img/general/contactos_flecha_off.png') no-repeat scroll right center transparent;
     color: #FFFFFF;
-}
-.footer-link:hover {
-    background: url("/img/general/contactos_flecha_on.png") no-repeat scroll right center transparent;
-    color: #FFFFFF;
+    :hover {
+        background: url('/img/general/contactos_flecha_on.png') no-repeat scroll right center transparent;
+        color: #FFFFFF;
+    }
 }
 .ugr-copyright {
     height: 18px;
@@ -44,9 +44,9 @@
     padding: 0;
     background-image: none;
     color: #8A8A8A;
-}
-.ugr-copyright > a:hover {
-    background-image: none;
-    color: #DADADA;
-    text-decoration: underline;
+    :hover {
+        background-image: none;
+        color: #DADADA;
+        text-decoration: underline;
+    }
 }

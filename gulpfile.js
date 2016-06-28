@@ -85,7 +85,7 @@ gulp.task('uglify', ['bundle-js'], function() {
 gulp.task('sass', function() {
 	return gulp.src('./src/sass/main.scss')
 		.pipe(sass({
-			outputStyle: 'compressed',
+			outputStyle: 'compressed'
 		}).on('error', sass.logError))
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('./public/css/builds'));
@@ -96,7 +96,7 @@ gulp.task('bundle-js', function() {
 	return gulp.src('./src/js/main.js')
 		.pipe(webpack({
 			output: {
-				filename: 'bundle.js',
+				filename: 'bundle.js'
 			}
 		}))
 		.pipe(gulp.dest('./public/scripts/builds/'));

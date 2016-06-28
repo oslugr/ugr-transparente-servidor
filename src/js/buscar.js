@@ -85,7 +85,7 @@ $(document).on('turbolinks:load', function() {
 						});
 					})
 					.done(function() {
-						if (numResultados == 1) {
+						if (numResultados === 1) {
 							contenido.html("<p>Se ha encontrado <strong><em>1</em></strong> coincidencia para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);
 						} else if (numResultados > 1) {
 							contenido.html("<p>Se han encontrado <strong><em>" + numResultados + "</em></strong> coincidencias para <strong><em>" + consulta + "</em></strong>.</p>" + resultados);

@@ -241,9 +241,9 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Header', function(done) {
 			browser.assert.element('#cabecera');
-			browser.assert.link('#cabecera .enlace_ugr', 'Universidad de Granada', 'http://www.ugr.es/');
-			browser.assert.link('#cabecera .enlace_stack', 'UGR Transparente', '/');
-			browser.assert.link('#cabecera .enlace_eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
+			browser.assert.link('#cabecera .enlace-ugr', 'Universidad de Granada', 'http://www.ugr.es/');
+			browser.assert.link('#cabecera .enlace-stack', 'UGR Transparente', '/');
+			browser.assert.link('#cabecera .enlace-eadministracion', 'Administración electrónica', 'http://www.ugr.es/pages/administracion');
 			browser.assert.element('#cabecera #buscador-top');
 
 			checkLink('http://www.ugr.es/', function() {

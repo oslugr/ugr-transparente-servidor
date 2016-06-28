@@ -28,8 +28,8 @@ rules:
   no-empty-rulesets: 1
   no-extends: 0
   no-ids: 0
-  no-important: 1
-  no-invalid-hex: 1
+  no-important: 2
+  no-invalid-hex: 2
   no-mergeable-selectors: 1
   no-misspelled-properties: 1
   no-qualifying-elements: 1
@@ -71,7 +71,9 @@ rules:
   indentation: 
     - 2
     - size: 4
-  leading-zero: 1
+  leading-zero:
+    - 2
+    - include: true
   nesting-depth: 1
   property-sort-order: 0
   pseudo-element: 1
@@ -92,5 +94,5 @@ rules:
   space-around-operator: 1
 
   # Final Items
-  trailing-semicolon: 1
-  final-newline: 1
+  trailing-semicolon: 2
+  final-newline: 0

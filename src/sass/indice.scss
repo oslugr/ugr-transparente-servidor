@@ -15,7 +15,7 @@
     background-position: right center;
     font-size: 1.2em;
     padding-right: 14px;
-    :hover {
+    &:hover {
         background-color: #DD3B15;
         background-image: url('/img/interior/lista_enlaces-nivel1-flecha_on.png');
         color: #FFFFFF;
@@ -57,7 +57,7 @@
     line-height: 20px;
     text-align: left;
     text-decoration: none;
-    :hover {
+    &:hover {
         background-color: #DD3B02;
         color: #FFFFFF;
         text-decoration: none;
@@ -68,7 +68,7 @@
     @extend %enlaces-indice;
     background-image: url('/img/interior/lista_enlaces-nivel2_off.gif');
     color: #0F3852;
-    :hover {
+    &:hover {
         background-color: #6D6C71;
         background-image: url('/img/interior/lista_enlaces-nivel2_on.png');
         color: #FFFFFF;

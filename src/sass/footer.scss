@@ -22,7 +22,7 @@
     text-align: right;
     background: url('/img/general/contactos_flecha_off.png') no-repeat scroll right center transparent;
     color: #FFFFFF;
-    :hover {
+    &:hover {
         background: url('/img/general/contactos_flecha_on.png') no-repeat scroll right center transparent;
         color: #FFFFFF;
     }
@@ -44,7 +44,7 @@
     padding: 0;
     background-image: none;
     color: #8A8A8A;
-    :hover {
+    &:hover {
         background-image: none;
         color: #DADADA;
         text-decoration: underline;

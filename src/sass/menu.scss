@@ -45,7 +45,7 @@
     background-position: 0 center;
     border-color: #AAABAF;
     color: #6D6C71;
-    :hover {
+    &:hover {
         background-image: url('/img/general/menu-subitem_on.png');
         color: #0F3852;
     }
@@ -64,7 +64,7 @@
     background-image: url('/img/general/menu-item_off.png');
     border-color: #AAABAF;
     color: #024EA4;
-    :hover {
+    &:hover {
         background-image: url('/img/general/menu-item_on.png');
     }
 }

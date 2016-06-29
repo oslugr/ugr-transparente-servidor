@@ -13,7 +13,7 @@
     border: medium outset #FFFFFF;
     font-family: Verdana;
     //background-image: url('/imagenes/ugr.png');
-    :hover {
+    &:hover {
         opacity: 0.85;
         //ilter: alpha(opacity=85);
         // For IE8 and earlier 

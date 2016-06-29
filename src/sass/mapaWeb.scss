@@ -23,7 +23,7 @@ ul {
     color: #DD3B02;
     font-size: 1.3em;
     line-height: 150%;
-    :hover {
+    &:hover {
         color: #0F3852;
         text-decoration: none;
     }
@@ -32,7 +32,7 @@ ul {
     color: #DD3B02;
     font-size: 1.2em;
     line-height: 150%;
-    :hover {
+    &:hover {
         color: #0F3852;
         text-decoration: none;
     }
@@ -41,7 +41,7 @@ ul {
     color: #DD3B02;
     font-size: 1.1em;
     line-height: 150%;
-    :hover {
+    &:hover {
         color: #0F3852;
         text-decoration: none;
     }

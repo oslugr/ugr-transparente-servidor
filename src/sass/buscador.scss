@@ -46,7 +46,7 @@
     height: 19px;
     background-color: transparent;
     background-image: url('/img/general/cabecera-buscar_submit_off.png');
-    :hover {
+    &:hover {
         background-image: url('/img/general/cabecera-buscar_submit_on.png');
     }
 }

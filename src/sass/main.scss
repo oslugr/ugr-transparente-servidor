@@ -35,7 +35,7 @@ a {
         border: medium none;
     }
     :active,
-    :hover,
+    &:hover,
     :visited {
         outline: medium none;
     }

@@ -34,7 +34,7 @@
     background-color: #FFFFFF;
     background-position: 0 0;
     background-image: url('/img/banners/resaltado-02_off.png');
-    :hover {
+    &:hover {
         background-image: url('/img/banners/resaltado-02_on.png');
     }
 }

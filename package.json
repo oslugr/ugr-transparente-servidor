@@ -1,6 +1,6 @@
 {
   "name": "ugr-transparente-servidor",
-  "version": "0.10.1",
+  "version": "0.10.3",
   "author": "Oficina de Software Libre de la Universidad de Granada <osl@ugr.es> (http://osl.ugr.es/)",
   "contributors": [
     "Juan Julián Merelo Guervós <jjmerelo@gmail.com> (https://twitter.com/jjmerelo)",
@@ -75,7 +75,7 @@
     "npm": ">=2.14.12"
   },
   "scripts": {
-    "start": "ENV=prod pm2 start app.js && pm2 save",
+    "start": "ENV=prod pm2 start app.js -i 2 && pm2 save",
     "stop": "pm2 stop app",
     "postinstall": "gulp install",
     "restart": "ENV=prod pm2 restart app.js && pm2 save",

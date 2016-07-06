@@ -66,7 +66,8 @@ module.exports = {
 		'/css/builds/bundle.css',
 		'/scripts/builds/bundle.js',
 		'/img/transp.gif',
-		'/imagenes/osl.jpg',
+		'/img/general/cabecera.png',
+		'/imagenes/link.png',
 		'/graph/perfil_pdi_extranjero.png'
 	],
 	initServer: function(done, dev) { // Función para iniciar el servidor express

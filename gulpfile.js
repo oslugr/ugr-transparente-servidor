@@ -104,7 +104,7 @@ gulp.task('bundle-js', function() {
 });
 
 //minify images
-gulp.task('imagemin', function() {
+gulp.task('imagemin', ['get-resources'],function() {
     gulp.src('public/imagenes/*')
         .pipe(imagemin())
         .pipe(gulp.dest('public/imagenes'));

@@ -1,0 +1,7 @@
+# Configuration for Code Climate analysis
+
+engines:
+  scss-lint:
+    enabled: true
+  eslint:
+    enabled: true

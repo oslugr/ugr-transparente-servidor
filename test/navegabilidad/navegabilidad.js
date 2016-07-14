@@ -181,7 +181,7 @@ describe('Pruebas de Navegabilidad', function() {
 				done();
 			});
 		});
-		it('Menu', function(done) {
+		it.only('Menu', function(done) {
 			//Check number of elements
 			browser.assert.element('#menus');
 			browser.assert.element('#enlaces_secciones');

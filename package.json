@@ -56,7 +56,8 @@
     "pm2": "^1.1.3",
     "serve-favicon": "^2.3.0",
     "turbolinks": "^5.0.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "snyk": "^1.17.1"
   },
   "devDependencies": {
     "async": "^2.0.0",
@@ -93,6 +94,9 @@
     "beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js test/*/*.js src/js/*.js",
     "jshint": "jshint *.json *.js app/*.js app/routes/*.js config/*.js config/*.json test/*.js src/*.js",
     "doc": "rm -rf doc;groc",
-    "build": "gulp build"
-  }
+    "build": "gulp build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }

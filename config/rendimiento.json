@@ -139,6 +139,12 @@
 		"datos": [{
 			"dataset": "Datos sobre principales rankings",
 			"id_dataset": "ranking",
+			"nombre": "Posición UGR en rankings internacionales",
+			"url": "df381a02-118c-45e7-9e9a-83c2b9f8262d",
+			"descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/df381a02-118c-45e7-9e9a-83c2b9f8262d/download/posicionugrprincipalesrankingsinternacionales2015.csv"
+		}, {
+			"dataset": "Datos sobre principales rankings",
+			"id_dataset": "ranking",
 			"nombre": "Citación de investigadores: Google Scholar",
 			"url": "c985229e-f0a4-44b7-94d8-7744406397fd",
 			"descarga": "62be6e13-0fd9-457c-a599-738a08be937b/resource/c985229e-f0a4-44b7-94d8-7744406397fd/download/investigadoresugrperfilgoogle.csv"

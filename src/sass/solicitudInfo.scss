@@ -1,0 +1,16 @@
+//Style para el botón del formulario de solicitudes
+.boton-formulario {
+    font-size: 15px;
+    position: relative;
+    top: 15px;
+    left: 125px;
+    padding: 20px 30px;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('/img/general/menu-subitem_on.png');
+    background-position: center;
+    &:hover {
+        color: #0F3852;
+    }
+}

@@ -1,0 +1,20 @@
+// Estilos del breadcrumb
+#breadcrumb {
+    min-height: 20px;
+    padding: 4px 0 0;
+    line-height: 24px;
+    text-align: left;
+}
+.breadcrumb-li {
+    display: inline;
+    margin-right: 3px;
+    padding-left: 27px;
+    width: 100%;
+    background: url('/img/general/rastro-enlace.png') no-repeat scroll 12px center transparent;
+    color: #99989C;
+    line-height: 24px;
+}
+.rastro-breadcrumb {
+    margin-top: -4px;
+    border-color: #FFFFFF;
+}

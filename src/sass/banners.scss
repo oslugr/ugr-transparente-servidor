@@ -1,0 +1,53 @@
+// Estilos de los banners
+#banners {
+    border-bottom-width: 1px;
+    clear: right;
+    float: right;
+    width: 165px;
+    background-color: #FFFFFF;
+    border-color: #B2B2B4;
+    border-style: solid;
+}
+.mod-banners {
+    display: block;
+    margin-top: 7px;
+    padding-left: 0;
+    z-index: 2;
+}
+.banner-container {
+    border-bottom-width: 0;
+    border-top-width: 0;
+    display: block;
+    width: 100%;
+    background-image: none;
+    line-height: 120%;
+}
+.banner {
+    display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-left: 12px;
+    padding-right: 21px;
+    padding-top: 5px;
+    position: relative;
+    height: 133px;
+    background-color: #FFFFFF;
+    background-position: 0 0;
+    background-image: url('/img/banners/resaltado-02_off.png');
+    &:hover {
+        background-image: url('/img/banners/resaltado-02_on.png');
+    }
+}
+.banner-text {
+    color: #FFFFFF;
+    padding-top: 10px;
+}
+.banner-title {
+    border-bottom-width: 1px;
+    display: block;
+    padding-bottom: 4px;
+    width: 153px;
+    border-color: #B2B2B4;
+    border-style: solid;
+    color: #FFFFFF;
+}

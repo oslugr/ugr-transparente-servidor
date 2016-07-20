@@ -1,0 +1,48 @@
+// Estilos del mapa web
+ul {
+    .square-seccion {
+        list-style-type: square;
+        list-style-position: inside;
+        color: #DD3B02;
+        padding: 0;
+    }
+    .square-seccion2 {
+        list-style-type: square;
+        list-style-position: inside;
+        color: #DD3B02;
+        padding-left: 50px;
+    }
+    .square-seccion3 {
+        list-style-type: square;
+        list-style-position: inside;
+        color: #DD3B02;
+        padding-left: 70px;
+    }
+}
+.seccion {
+    color: #DD3B02;
+    font-size: 1.3em;
+    line-height: 150%;
+    &:hover {
+        color: #0F3852;
+        text-decoration: none;
+    }
+}
+.seccion2 {
+    color: #DD3B02;
+    font-size: 1.2em;
+    line-height: 150%;
+    &:hover {
+        color: #0F3852;
+        text-decoration: none;
+    }
+}
+.seccion3 {
+    color: #DD3B02;
+    font-size: 1.1em;
+    line-height: 150%;
+    &:hover {
+        color: #0F3852;
+        text-decoration: none;
+    }
+}

@@ -22,7 +22,7 @@
 $(document).on('turbolinks:load', function() {
 	var tabla = $;
 	// Select all the a tag with name equal to modal
-	tabla('a[class=view]').click(function(e) {
+	tabla('.view-modal').click(function(e) {
 		// Cancel the link behavior
 		e.preventDefault();
 

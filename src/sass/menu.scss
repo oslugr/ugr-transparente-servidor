@@ -1,0 +1,78 @@
+// Estilos del menu lateral
+@import 'breadcrumb'; //importar estilos del breadcrumb
+// Estilo general del menu
+#menus {
+    border-bottom-width: 1px;
+    float: left;
+    height: 1%;
+    padding-bottom: 9px;
+    width: 238px;
+    background-color: #FFFFFF;
+    border-color: #B2B2B4;
+    border-style: solid;
+}
+// Secciones del menu
+.mod-menu-secciones {
+    border-right-width: 1px;
+    margin-bottom: 13px;
+    padding-bottom: 0;
+    width: 238px;
+    border-color: #B2B2B4;
+    border-style: solid;
+}
+// Estilo general de cada link del menu
+%link-menu {
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    display: block;
+    margin-top: -1px;
+    min-height: 19px;
+    padding: 6px 46px 4px 38px;
+    background-position: 0 center;
+    font-family: Verdana, sans-serif;
+    text-align: right;
+    cursor: pointer;
+}
+// Estilos de elementos de tipo 1
+.menu-item-tipo1 {
+    padding-left: 28px;
+    width: 210px;
+}
+.menu-link-tipo1 {
+    @extend %link-menu;
+    background-color: #FFFFFF;
+    background-image: url('/img/general/menu-subitem_off.png');
+    background-position: 0 center;
+    border-color: #AAABAF;
+    color: #6D6C71;
+    &:hover {
+        background-image: url('/img/general/menu-subitem_on.png');
+        color: #0F3852;
+    }
+}
+.menu-link-tipo1-selected {
+    @extend %link-menu;
+    background-color: #FFFFFF;
+    background-image: url('/img/general/menu-subitem_on.png');
+    border-color: #AAABAF;
+    color: #0F3852;
+}
+// Elementos del menu de tipo 2
+.menu-link-tipo2 {
+    @extend %link-menu;
+    background-color: #FFFFFF;
+    background-image: url('/img/general/menu-item_off.png');
+    border-color: #AAABAF;
+    color: #024EA4;
+    &:hover {
+        background-image: url('/img/general/menu-item_on.png');
+    }
+}
+.menu-link-tipo2-selected {
+    @extend %link-menu;
+    background-color: #000000;
+    background-image: url('/img/general/menu-item_actual_off.png');
+    background-position: 0 center;
+    border-color: #AAABAF;
+    color: #FFFFFF;
+}

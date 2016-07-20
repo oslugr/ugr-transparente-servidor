@@ -1,5 +1,5 @@
 <div id="contenido">
-    <ul class="square_seccion">
+    <ul class="square-seccion">
         <% for(var i in secciones){
             var sec=secciones[i];
             var link="";
@@ -8,14 +8,14 @@
         <li>
             <a class="seccion" <%=link%>><%=sec.nombre%></a>
         </li>
-        <ul class="square_seccion2">
+        <ul class="square-seccion2">
             <%for(var j in sec.subsecciones){
                 var subsec=sec.subsecciones[j];
                 %>
             <li>
                 <a class="seccion2" href="<%=subsec.enlace%>"><%=subsec.nombre%></a>
             </li>
-            <ul class="square_seccion3">
+            <ul class="square-seccion3">
                 <%for(var k in subsec.contenido){
                     var cont=subsec.contenido[k];
                     %>

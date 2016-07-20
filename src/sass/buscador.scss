@@ -1,0 +1,52 @@
+// Estilos del buscador
+#buscador-top {
+    position: absolute;
+    top: 36px;
+    left: 740px;
+    width: 208px;
+    height: 21px;
+}
+.buscador-title {
+    color: #FFFFFF;
+    font-family: Verdana, sans-serif;
+    font-size: 1.091em;
+    position: absolute;
+    left: -70px;
+    line-height: 20px;
+}
+// Input del buscador
+.busqueda-input-label {
+    position: absolute;
+    height: 17px;
+    width: 125px;
+    padding: 2px 2px 0 4px;
+    top: 1px;
+    right: 21px;
+    background-color: #FFE0B2;
+    text-transform: uppercase;
+}
+.busqueda-input {
+    width: 123px;
+    border: 0;
+    font-size: 0.909em;
+    background-color: #FFE0B2;
+    color: #FE9900;
+}
+// Botón de enviar
+.submit-busqueda-label {
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 2px;
+    width: 19px;
+    height: 19px;
+}
+.submit-busqueda {
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    background-image: url('/img/general/cabecera-buscar_submit_off.png');
+    &:hover {
+        background-image: url('/img/general/cabecera-buscar_submit_on.png');
+    }
+}

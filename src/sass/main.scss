@@ -1,0 +1,57 @@
+// Fichero principal de compilación sass
+@import 'index';
+@import 'calendario';
+@import 'solicitudInfo';
+@import 'mapaWeb';
+@import 'modal';
+@import 'layout';
+@import 'cabecera';
+@import 'menu';
+@import 'body';
+@import 'banners';
+@import 'footer';
+* {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    border-style: solid;
+    border-width: 0;
+}
+//Style para JavaScript deshabilitado
+.js-disabled {
+    border: 1px solid #FF0000;
+    margin: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 1.25em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: #543342;
+    text-decoration: none;
+    outline: medium none;
+    img {
+        border: medium none;
+    }
+    :active,
+    &:hover,
+    :visited {
+        outline: medium none;
+    }
+}
+ol,
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+}

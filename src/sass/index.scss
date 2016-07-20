@@ -1,0 +1,57 @@
+// Estilos del menu principal (index)
+// Estilo general de los enlaces
+.enlace-index {
+    float: left;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 130px;
+    height: 77px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border: medium outset #FFFFFF;
+    font-family: Verdana;
+    //background-image: url('/imagenes/ugr.png');
+    &:hover {
+        opacity: 0.85;
+        //ilter: alpha(opacity=85);
+        // For IE8 and earlier 
+    }
+}
+// Mixin para generar el contenido de los enlaces del index
+@mixin enlace-index-content($background) {
+    float: left;
+    padding-top: 20%;
+    width: 100%;
+    height: 68%;
+    background-image: url($background);
+}
+// Enlaces del índice
+#en_infoInstitucional {
+    @include enlace-index-content('/img/inicio/infoInstitucional.png');
+}
+#en_personal {
+    @include enlace-index-content('/img/inicio/personal.png');
+}
+#en_infoEconomica {
+    @include enlace-index-content('/img/inicio/infoEconomica.png');
+}
+#en_ofertaDemanda {
+    @include enlace-index-content('/img/inicio/ofertaDemanda.png');
+}
+#en_claustro {
+    @include enlace-index-content('/img/inicio/claustro.png');
+}
+#en_estudiantes {
+    @include enlace-index-content('/img/inicio/estudiantes.png');
+}
+#en_gobierno {
+    @include enlace-index-content('/img/inicio/gobierno.png');
+}
+#en_rendimiento {
+    @include enlace-index-content('/img/inicio/rendimiento.png');
+}
+#en_normativaLegal {
+    @include enlace-index-content('/img/inicio/normativaLegal.png');
+}

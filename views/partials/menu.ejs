@@ -11,65 +11,66 @@
 	return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/&/g, '-and-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 }%>
 
-
 <%# Menu Generators %>
 <% function firstLevelItem(title, link, selected) { 
-    var liClass="tipo2 item-first_level";
-    if (selected === title) liClass="selected tipo2-selected item-first_level"; %>
-    <li class="<%=liClass%>">
-    <a href="<%=link%>"><%=title%></a>
-    </li>
+    var aClass="menu-link-tipo2";
+    if (selected === title) aClass="menu-link-tipo2-selected"; %>
+<li>
+    <a href="<%=link%>" class="<%=aClass%>"><%=title%></a>
+</li>
 <%}%>
 
 <% function firstLevelMenu(title, selected) {
 var sel = getSuperSection(selected);
-var itemClass = "tipo2 item-first_level";
-var submenuDisplay = "display:none"; //display:none;
 var slug = slugify(title);
-if (sel === title) {
-    itemClass = "selected tipo2-selected item-first_level";
-    submenuDisplay = "display:block";
-}%>
+if (sel === title) {%>
+<li>
+    <a class="menu-link-tipo2-selected desplegable"><%=title%></a>
+    <ul id="menu_<%=slug%>" style="display:block">
+    <%}
+else{%>
+        <li>
+            <a onclick="mostrar_menu('menu_<%=slug%>')" class="menu-link-tipo2 desplegable"><%=title%></a>
+            <ul id="menu_<%=slug%>" style="display:none">
 
-<li class="<%=itemClass%>">
-    <a onclick="mostrar_menu('menu_<%=slug%>')" class="grupos"><%=title%></a>
-    <ul id="menu_<%=slug%>" style="<%=submenuDisplay%>">
-        
-<%}%>
-
-<%function firstLevelMenuEnd() { %>
-    </ul></li>
-<%}%>
-
-<% function secondLevelItem(title, link, selected) {
-var item_class = "tipo1";
-if (selected === title) item_class = "tipo1-selected";
+            <%}
+}
 %>
 
-<li class="<%=item_class%> item-second_level id_5944 tipo1-parent_5284 mainmenu_item1 mainmenu_itemid_5944 mainmenu_itemname_titulacionesenextincin mainmenu_nchar_26 mainmenu_nchar10_30 last-child">
-    <a href="<%=link%>"><%=title%></a>
-</li>
+            <%function firstLevelMenuEnd() { %>
+            </ul>
+        </li>
+    <%}%>
+
+    <% function secondLevelItem(title, link, selected) {
+var item_class = "menu-link-tipo1";
+if (selected === title) item_class = "menu-link-tipo1-selected";
+%>
+
+    <li class="menu-item-tipo1">
+        <a href="<%=link%>" class="<%=item_class%>"><%=title%></a>
+    </li>
 <%}%>
 
 <%# MENU %>
 <div id="menus">
-    <div id="enlaces_secciones" class="mod-menu_secciones">
-        <ul>
+    <div id="enlaces_secciones">
+        <ul class="mod-menu-secciones">
             <%firstLevelItem("Inicio","/index.html",seccion)%>
             <%firstLevelItem("Información Institucional","/infoInstitucional.html",seccion)%>
             <%firstLevelMenu("Administración",seccion)%>
-                <%secondLevelItem("Personal","/personal.html",seccion)%>
-                <%secondLevelItem("Información Económica","/infoEconomica.html",seccion)%>
-                <%secondLevelItem("Perfil del Contratante","/perfilContratante.html",seccion)%>
+            <%secondLevelItem("Personal","/personal.html",seccion)%>
+            <%secondLevelItem("Información Económica","/infoEconomica.html",seccion)%>
+            <%secondLevelItem("Perfil del Contratante","/perfilContratante.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelMenu("Docencia",seccion)%>
-                <%secondLevelItem("Oferta y Demanda Académica","/ofertaDemanda.html",seccion)%>
-                <%secondLevelItem("Claustro","/claustro.html",seccion)%>
-                <%secondLevelItem("Estudiantes","/estudiantes.html",seccion)%>
+            <%secondLevelItem("Oferta y Demanda Académica","/ofertaDemanda.html",seccion)%>
+            <%secondLevelItem("Claustro","/claustro.html",seccion)%>
+            <%secondLevelItem("Estudiantes","/estudiantes.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelMenu("Gestión e Investigación",seccion)%>
-                <%secondLevelItem("Gobierno","/gobierno.html",seccion)%>
-                <%secondLevelItem("Rendimiento","/rendimiento.html",seccion)%>
+            <%secondLevelItem("Gobierno","/gobierno.html",seccion)%>
+            <%secondLevelItem("Rendimiento","/rendimiento.html",seccion)%>
             <%firstLevelMenuEnd()%>
             <%firstLevelItem("Normativa Legal","/normativaLegal.html",seccion)%>
             <%firstLevelItem("Solicitud de Información","/solicitudInfo.html",seccion)%>

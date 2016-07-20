@@ -31,35 +31,27 @@
 
         <meta name="turbolinks-cache-control" content="no-cache">
 
-
-        <link rel="shortcut icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon" >
-        <link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon" >
-        <link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet" >
-        <link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print" >
+        <link rel="shortcut icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="icon" href="/img/general/favicon.ico" type="image/vnd.microsoft.icon">
+        <link href="lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
+        <link href="lib/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
         <!-- <link rel="stylesheet" href="lib/jquery-ui/themes/smoothness/jquery-ui.min.css"> -->
-        <link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css" >
-        <link rel="stylesheet" id="css-style" type="text/css" href="/css/style.css" media="all" >
-        <link rel="stylesheet" id="css-style2" type="text/css" href="/css/style2.css" media="all" >
+        <link rel="stylesheet" href="lib/lightbox2/dist/css/lightbox.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/builds/bundle.css" media="all">
 
         <script type='text/javascript' src='/lib/jquery/dist/jquery.min.js'></script>
-    <!--    <script type="text/javascript" src="/script/menu.js" ></script> -->
-    <!--    <script src="script/turbolinks.js"></script> -->
-    <!--    <script type='text/javascript' src='/script/buscar.js'></script>-->
 
-    <!--    <script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js' ></script>-->
-        <script type='text/javascript' src='/lib/d3/d3.min.js' charset='utf-8' ></script>
-        <script type='text/javascript' src='https://www.google.com/jsapi' ></script>
-    <!--    <script type='text/javascript'>
-            //var tabla = $.noConflict(true);
-            var tabla=$;
-        </script>  -->
-        <!--<script type='text/javascript' src="/script/generar_tabla.js" ></script>-->
+        <!--    <script type='text/javascript' src='/lib/jquery-ui/jquery-ui.min.js' ></script>-->
+        <script type='text/javascript' src='/lib/d3/d3.min.js' charset='utf-8'></script>
+        <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+
+        <!-- web scripts-->
         <script type='text/javascript' src='/scripts/builds/bundle.js'></script>
     </head>
 
     <body>
         <noscript>
-            <p class="jsDisabled">Esta página requiere funcionalidades JavaScript. Por favor,<a href="http://www.enable-javascript.com/es/" target="_blank">habilítelo</a>
+            <p class="js-disabled">Esta página requiere funcionalidades JavaScript. Por favor,<a href="http://www.enable-javascript.com/es/" target="_blank">habilítelo</a>
                 para una correcta visualización.</p>
         </noscript>
         <div id="boxes">
@@ -76,16 +68,18 @@
                 <%- include('../partials/cabecera') %>
                 <%- include('../partials/breadcrumb') %>
                 <div id="general">
-                <%- include('../partials/menu') %>
+                    <%- include('../partials/menu') %>
                     <div id="pagina">
                         <h1 id="titulo_pagina">
-                            <span class="texto_titulo"><%=seccion%></span>
+                            <span class="texto-titulo"><%=seccion%></span>
                         </h1>
                         <%- body %>
                     </div>
                 </div>
                 <%- include('../partials/banners'); %>
-                <%- include('../partials/footer'); %>
+                <div id="background-derecho">
+                    <%- include('../partials/footer'); %>
+                </div>
                 <!-- script para mostrar graficos -->
                 <script type='text/javascript' src='/lib/lightbox2/dist/js/lightbox-plus-jquery.js'></script>
             </div>

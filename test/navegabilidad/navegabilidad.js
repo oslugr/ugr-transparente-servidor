@@ -254,7 +254,7 @@ describe('Pruebas de Navegabilidad', function() {
 		});
 		it('Footer', function(done) {
 			browser.assert.element('#pie');
-			browser.assert.elements('#pie  .footer-link',6);
+			browser.assert.elements('#pie  .footer-link', 6);
 			browser.assert.link('#pie > a', "Mapa del sitio", "mapaWeb.html");
 			browser.assert.link('#pie > a', "Este servidor es software libre", "https://github.com/oslugr/ugr-transparente-servidor");
 			browser.assert.link('#pie > a', "Liberado bajo GPL v3.0", "http://www.gnu.org/licenses/gpl-3.0.html");
@@ -849,7 +849,7 @@ describe('Pruebas de Navegabilidad', function() {
 			checkLayout('Mapa del sitio');
 			browser.assert.elements('.seccion', 7);
 			browser.assert.elements('.seccion2', 9);
-			browser.assert.elements('.seccion3', 55);
+			browser.assert.elements('.seccion3', 56);
 
 			//TODO: check links?
 		});

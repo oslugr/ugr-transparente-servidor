@@ -36,39 +36,17 @@
 			"url": "2016_retribuciones_pdi.pdf"
 		}]
 	}, {
-		"tipo": 1,
+		"tipo": 2,
 		"seccion": "Personal Docente e Investigador",
 		"encabezado": "Datos sobre retribuciones del PDI",
 		"link": "datos-retribuciones-pdi",
 		"texto": "Datos de la información sobre la remuneración al Personal Docente e Investigador, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones.",
 		"datos": [{
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PDI",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Tramos docentes e investigadores, cargos académicos e indemnización por residencia",
-			"url": "2a5a0614-155b-47c3-9c8b-d1aa0c077765",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/2a5a0614-155b-47c3-9c8b-d1aa0c077765/download/tramosdocenteseinvestigadorescargosacademicoseindemnizacionporresidencia.csv"
+			"nombre": "Información salarial 2016",
+			"url": "http://opendata.ugr.es/dataset/informacion-salarial-2016"
 		}, {
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PDI",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Retribuciones: funcionarios docentes",
-			"url": "91353992-5fa3-453f-8647-1dd3016d6397",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/91353992-5fa3-453f-8647-1dd3016d6397/download/retribucionesfucionariosdocentes.csv"
-		}, {
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PDI",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Retribuciones: docentes contratados LOU",
-			"url": "1860f0d3-2d53-4ab8-b3d4-0226b8461e66",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/1860f0d3-2d53-4ab8-b3d4-0226b8461e66/download/retribucionesdocentescontratadoslou.csv"
-		}, {
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PDI",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Retribuciones: personal docente con plaza vinculada",
-			"url": "a07ce2b9-a1d6-4506-ad4c-7accef4ff2a1",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/a07ce2b9-a1d6-4506-ad4c-7accef4ff2a1/download/retribucionespersonaldocenteconplazavinculada.csv"
+			"nombre": "Bandas salariales 2016",
+			"url": "http://opendata.ugr.es/dataset/bandas-salariales-2016"
 		}]
 	}, {
 		"tipo": 2,
@@ -131,32 +109,17 @@
 			"url": "2016_retribuciones_pas.pdf"
 		}]
 	}, {
-		"tipo": 1,
+		"tipo": 2,
 		"seccion": "Personal de Administración y Servicios",
 		"encabezado": "Datos sobre retribuciones del PAS",
 		"link": "datos-retribuciones-pas",
 		"texto": "Datos de la información sobre la remuneración al Personal de Administración y Servicios, según las respectivas categorías. Datos sobre las retribuciones aplicables a los distintos tipos de personal a través de las tablas de retribuciones.",
 		"datos": [{
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PAS",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Retribuciones: PAS funcionarios",
-			"url": "9065d637-9df4-4784-a70e-1a7f1d5d1c13",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/9065d637-9df4-4784-a70e-1a7f1d5d1c13/download/retribucionespersonaldeadministracionyserviciosfuncionarios.csv"
+			"nombre": "Información salarial 2016",
+			"url": "http://opendata.ugr.es/dataset/informacion-salarial-2016"
 		}, {
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PAS",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Retribuciones: PAS laboral",
-			"url": "ff4d5ae9-e45b-44a0-8690-3715bcb11116",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/ff4d5ae9-e45b-44a0-8690-3715bcb11116/download/retribucionespersonaldeadministracionyservicioslaborales.csv"
-		}, {
-			"tipo": 1,
-			"dataset": "Datos sobre retribuciones del PAS",
-			"id_dataset": "bandas-salariales-2015",
-			"nombre": "Complemento de productividad: PAS",
-			"url": "e8bb4921-5121-4a19-80b9-d62457003957",
-			"descarga": "71e01655-9d3b-4f91-a849-a42f2c55633c/resource/e8bb4921-5121-4a19-80b9-d62457003957/download/complementodeproductividad2014pas4tramos.csv"
+			"nombre": "Bandas salariales 2016",
+			"url": "http://opendata.ugr.es/dataset/bandas-salariales-2016"
 		}]
 	}, {
 		"tipo": 2,

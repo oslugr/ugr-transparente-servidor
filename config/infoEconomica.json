@@ -13,6 +13,22 @@
 		}]
 	}, {
 		"tipo": 2,
+		"seccion": "Año 2016",
+		"encabezado": "Datos sobre información económica 2016",
+		"link": "datos-2016",
+		"texto": "Datos sobre la información económica para el año 2016 de la Universidad de Granada.",
+		"datos": [{
+			"nombre": "Presupuesto",
+			"url": "http://opendata.ugr.es/dataset/presupuesto-2016"
+		}, {
+			"nombre": "Ingresos",
+			"url": "http://opendata.ugr.es/dataset/desglose-de-ingresos-2016"
+		}, {
+			"nombre": "Gastos",
+			"url": "http://opendata.ugr.es/dataset/desglose-de-gastos-2016"
+		}]
+	}, {
+		"tipo": 2,
 		"seccion": "Año 2015",
 		"encabezado": "Datos sobre información económica 2015",
 		"link": "datos-2015",

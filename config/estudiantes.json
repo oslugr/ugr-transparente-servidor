@@ -249,6 +249,11 @@
 			"nombre": "Másteres Oficiales 2014-2016",
 			"url": "fb4a34c1-f65e-4168-a5e2-a8c3fc8bc6b6",
 			"descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/fb4a34c1-f65e-4168-a5e2-a8c3fc8bc6b6/download/masteresoficiales.csv"
+		}, {
+			"id_dataset": "estudiantes-fuera-comunidad",
+			"nombre": "Estudiantes de Enseñanzas propias 2015/2016",
+			"url": "3dff2625-1159-444a-b370-11c14b1e84b6",
+			"descarga": "c4f4ff66-1c82-4dea-8185-50d99db85338/resource/3dff2625-1159-444a-b370-11c14b1e84b6/download/estudiantesensenanzaspropias.csv"
 		}]
 	}]
 }

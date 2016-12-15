@@ -38,5 +38,5 @@ script:
 #  - npm run zombie_test
 
 # Coveralls coverage
-after_success:
-    - npm run coveralls
+#after_success:
+#    - npm run coveralls

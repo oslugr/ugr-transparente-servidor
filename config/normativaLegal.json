@@ -43,6 +43,9 @@
 		"link": "ordenacion-academica",
 		"texto": "",
 		"datos": [{
+			"nombre": "Normativa de evaluación y de calificación de los estudiantes de la Universidad de Granada",
+			"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg7121"
+		},{
 			"nombre": "Normas de permanencia",
 			"url": "http://secretariageneral.ugr.es/pages/normativa/temas/perindex"
 		}, {
@@ -54,12 +57,6 @@
 		}, {
 			"nombre": "Normativa reguladora de las enseñanzas oficiales de Doctorado y del título de Doctor",
 			"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/bougr110512"
-		}, {
-			"nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016",
-			"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre974"
-		}, {
-			"nombre": "Normativa para la formalización de la matrícula para el curso académico 2015-2016 para los estudios de Másteres y Programas de Doctorado",
-			"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/nre977"
 		}, {
 			"nombre": "Normativa reguladora de las Enseñanzas Propias",
 			"url": "http://secretariageneral.ugr.es/pages/normativa/fichasugr/ncg733"

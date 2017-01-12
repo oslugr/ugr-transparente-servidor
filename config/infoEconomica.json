@@ -3,12 +3,12 @@
 	"plantilla": "infoEconomica",
 	"contenido": [{
 		"tipo": 2,
-		"seccion": "Año 2016",
-		"encabezado": "Información económica 2016",
-		"link": "informacion-2016",
-		"texto": "Información económica para el año 2016 de la Universidad de Granada.",
+		"seccion": "Año 2017",
+		"encabezado": "Información económica 2017",
+		"link": "informacion-2017",
+		"texto": "Información económica para el año 2017 de la Universidad de Granada.",
 		"datos": [{
-			"nombre": "Presupuestos 2016",
+			"nombre": "Presupuestos 2017",
 			"url": "http://gerencia.ugr.es/pages/vger_eco/presupuestos/presupuestos"
 		}]
 	}, {

@@ -2,7 +2,7 @@ server {
 	listen 80;
 	server_name transparente;
 
-	root /var/www/transparente;		
+	root /var/www/transparente;
 
 	location / {
 		proxy_pass http://localhost:3000/;
@@ -12,7 +12,7 @@ server {
 		try_files $uri $uri/ =404;
 	}
 
-	location ~ ^/(css/|lib/|script/) {
+	location ~ ^/(css/|lib/|scripts/) {
 		root $HOME/ugr-transparente-servidor/public;
 		try_files $uri $uri/ =404;
 	}

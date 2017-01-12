@@ -5,7 +5,6 @@ _Version 0.10.5_
 [![Dependency Status](https://gemnasium.com/oslugr/ugr-transparente-servidor.svg)](https://gemnasium.com/oslugr/ugr-transparente-servidor)
 [![License Status](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Node](https://img.shields.io/badge/node-4.2.6-blue.svg)](https://nodejs.org/en/)
-[![Code Climate](https://codeclimate.com/github/oslugr/ugr-transparente-servidor/badges/gpa.svg)](https://codeclimate.com/github/oslugr/ugr-transparente-servidor)
 
 -------------------
 

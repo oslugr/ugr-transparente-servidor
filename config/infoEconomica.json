@@ -11,7 +11,51 @@
 			"nombre": "Presupuestos 2017",
 			"url": "http://gerencia.ugr.es/pages/vger_eco/presupuestos/presupuestos"
 		}]
+
 	}, {
+		"tipo": 3,
+		"seccion": "Año 2017",
+		"encabezado": "Documentos con información económica 2017 relativa a ingresos",
+		"link": "archivos-información-económica-2017",
+		"texto": "Archivos que contienen información económica de 2017 relativa a ingresos.",
+		"datos": [{
+		"nombre": "Estado de ingresos 2017",
+		"url": "2017_estado_ingresos.pdf"
+		}, {
+			"nombre": "Gráfica del Estado de Ingresos 2017",
+			"url": "2017_grafica_estado_ingresos.pdf"
+		}, {
+			"nombre": "Comparativa por Capítulos en el Presupuesto de Ingresos. Años 2015 a 2017",
+			"url": "2015-2017_comparativa_capitulos_presupuesto_ingresos.pdf"
+		}, {
+			"nombre": "Estado de Ingresos del Consejo Social",
+			"url": "2017_estado_ingresos_consejo_social.pdf"
+		}]
+
+		}, {
+			"tipo": 3,
+			"seccion": "Año 2017",
+			"encabezado": "Documentos con información económica 2017 relativa a gastos",
+			"link": "archivos-información-económica-2017",
+			"texto": "Archivos que contienen información económica de 2017 relativa a gastos.",
+			"datos": [{
+			"nombre": "Estado de Gastos detalle por conceptos y subconceptos",
+			"url": "2017_estado_gastos_concepto_subconcepto.pd"
+			}, {
+				"nombre": "Estado de Gastos por artículos",
+				"url": "2017_estado_gastos_articulo.pdf"
+			}, {
+				"nombre": "Gráfica del  Estado de Gastos",
+				"url": "2017_estado_gastos_gráfica.pdf"
+			}, {
+				"nombre": "Comparativa por Capítulos en el Presupuesto de Gastos. Años 2015 a 2017",
+				"url": "2015_2017_comparativa_capitulos_presupuestos_gastos.pdf"
+			}, {
+					"nombre": "Estado de Gastos del Consejo Social",
+					"url": "2017_estado_gastos_consejo_social.pdf"
+			}]
+
+  }, {
 		"tipo": 2,
 		"seccion": "Año 2017",
 		"encabezado": "Datos sobre información económica 2017",

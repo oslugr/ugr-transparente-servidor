@@ -31,14 +31,51 @@
 			"item": "Cartas de Servicio y Contratos Programa",
 			"link": "http://calidad.ugr.es/unidades"
 		}, {
+			"item": "Planes Estratégico y Propio: Estrategia de Internacionalización de la Universidad de Granada",
+			"link": "http://secretariageneral.ugr.es/bougr/pages/bougr115/_doc/acg1153"
+		}, {
 			"item": "Política de Calidad",
-			"link": "http://calidad.ugr.es/pages/politica/cartelpoliticacalidadugrcontrastefecha"
+			"link": "http://calidad.ugr.es/politica"
 		}, {
 			"item": "Memorias Académicas",
 			"link": "http://secretariageneral.ugr.es/pages/memorias/academica"
 		}, {
 			"item": "Memorias de Gestión",
 			"link": "http://secretariageneral.ugr.es/pages/memorias/gestion"
+
 		}]
+
+
+	}, {
+	"titulo": "Planes Estratégico y Propio",
+	"lista": [{
+	"item": "Estrategia de Internacionalización de la Universidad de Granada",
+	"link": "http://secretariageneral.ugr.es/bougr/pages/bougr115/_doc/acg1153"
+
+	}, {
+		"item": "Plan propio de investigación",
+		"link": "http://investigacion.ugr.es/pages/planpropio/2016"
+	}, {
+		"item": "Plan propio de Internacionalización",
+		"link": "http://internacional.ugr.es/pages/plan_propio#__doku_plan_propio_de_internacionalizacion_2016"
+	}, {
+		"item": "Plan propio de Becas",
+		"link": "http://ve.ugr.es/pages/becas/propias"
+	}, {
+		"item": "Plan propio de Cooperación al Desarrollo",
+		"link": "http://cicode.ugr.es/pages/plan-propio-cooperacion/plan-propio-de-cooperacion"
+	}, {
+		"item": "Plan Estratégico de la Biblioteca 2016-2019",
+		"link": "http://biblioteca.ugr.es/pages/biblioteca_ugr/normativa/planestrategicodelabibliotecadelaugr_v_3/%21"
+		}, {
+		"item": "Plan Estratégico de Recursos Humanos 2016-2019",
+		"link": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/20160427planestrategicopas20162019"
+
+
+}]
+
+
 	}]
+
+
 }

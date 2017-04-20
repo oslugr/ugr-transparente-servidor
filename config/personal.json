@@ -10,18 +10,33 @@
 		"datos": [{
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
-			"nombre": "Resumen de gastos del personal 2016",
-			"url": "2016_resumen_retribuciones.pdf"
+			"nombre": "Resumen de gastos del personal",
+			"url": "2017_resumen_gastos_personal.pdf"
 		}, {
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
-			"nombre": "Análisis de género",
-			"url": "2015_analisis_genero_plantilla.pdf"
+			"nombre": "Análisis por género de la plantilla",
+			"url": "2017_analisis_genero_plantilla.pdf"
+		}, {
+			"tipo": 3,
+			"dataset": "Información sobre Personal",
+			"nombre": "Análisis por género de la plantilla: incorporaciones últimos diez años",
+			"url": "2017_análisis_genero_plantilla_diez_años.pdf"
 		}, {
 			"tipo": 3,
 			"dataset": "Información sobre Personal",
 			"nombre": "Retribuciones por cargos académicos",
-			"url": "2016_retribuciones_cargos_academicos.pdf"
+			"url": "2017_retribuciones_cargos_académicos.pdf"
+		}, {
+			"tipo": 3,
+			"dataset": "Información sobre Personal",
+			"nombre": "Cuota patronal de la seguridad social",
+			"url": "2017_cuota_patronal_seguridad_social.pdf"
+		}, {
+			"tipo": 3,
+			"dataset": "Información sobre Personal",
+			"nombre": "Resumen Capítulo 1",
+			"url": "2017_resumen_capítulo_uno.pdf"
 		}]
 	}, {
 		"tipo": 3,
@@ -32,8 +47,13 @@
 		"datos": [{
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PDI",
-			"nombre": "Retribuciones básicas del PDI 2016",
-			"url": "2016_retribuciones_pdi.pdf"
+			"nombre": "Retribuciones básicas del PDI Funcionario",
+			"url": "2017_pdi_funcionario.pdf"
+		},{
+			"tipo": 3,
+			"dataset": "Informes sobre retribuciones del PDI",
+			"nombre": "Retribuciones básicas del PDI Contratado",
+			"url": "2017_pdi_contratado.pdf"
 		}]
 	}, {
 		"tipo": 2,
@@ -53,7 +73,7 @@
 		"seccion": "Personal Docente e Investigador",
 		"encabezado": "Oferta de empleo PDI",
 		"link": "oferta-empleo-pdi",
-		"texto": "Información sobre oferta de Empleo Público del Personal Docente e Investigador de la Universidad de Granada disponible en el Servicio de Personal Docente e Investigador. Fecha de actualización: 04/05/2016.",
+		"texto": "Información sobre oferta de Empleo Público del Personal Docente e Investigador de la Universidad de Granada disponible en el Servicio de Personal Docente e Investigador.",
 		"datos": [{
 			"tipo": 2,
 			"dataset": "Oferta de empleo PDI",
@@ -67,7 +87,7 @@
 		}, {
 			"tipo": 2,
 			"dataset": "Oferta de empleo PDI",
-			"nombre": "Oferta de empleo público 2016",
+			"nombre": "Oferta de empleo público",
 			"url": "http://serviciopdi.ugr.es/general/oep/"
 		}]
 	}, {
@@ -105,8 +125,18 @@
 		"datos": [{
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PAS",
-			"nombre": "Retribuciones básicas del PAS 2016",
-			"url": "2016_retribuciones_pas.pdf"
+			"nombre": "Retribuciones básicas del Pas Funcionario",
+			"url": "2017_retribuciones_pas_basicas.pdf"
+		},{
+			"tipo": 3,
+			"dataset": "Informes sobre retribuciones del PAS",
+			"nombre": "Retribuciones complementarias del Pas Funcionario",
+			"url": "2017_retribuciones_pas_funcionario_complementarias.pdf"
+		},{
+			"tipo": 3,
+			"dataset": "Informes sobre retribuciones del PAS",
+			"nombre": "Retribuciones del pas laboral",
+			"url": "2017_pas_laboral.pdf"
 		}]
 	}, {
 		"tipo": 2,
@@ -126,12 +156,12 @@
 		"seccion": "Personal de Administración y Servicios",
 		"encabezado": "Oferta de empleo PAS",
 		"link": "oferta-empleo-pas",
-		"texto": "Información sobre oferta de Empleo Público del Personal de Administración y Servicios de la Universidad de Granada disponible en el Servicio de Personal Docente e Investigador. Fecha de actualización: 15/02/2015.",
+		"texto": "Información sobre oferta de Empleo Público del Personal de Administración y Servicios de la Universidad de Granada disponible en el Servicio de Personal Docente e Investigador.",
 		"datos": [{
 			"tipo": 2,
 			"dataset": "Oferta de empleo PAS",
-			"nombre": "Oferta de empleo público 2015",
-			"url": "http://serviciopas.ugr.es/pages/oferta_empleo/ope2015/2015"
+			"nombre": "Oferta de empleo público",
+			"url": "http://serviciopas.ugr.es/pages/oferta_empleo/ope2016"
 		}, {
 			"tipo": 2,
 			"dataset": "Oferta de empleo PAS",

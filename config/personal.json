@@ -126,7 +126,7 @@
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PAS",
 			"nombre": "Retribuciones básicas del Pas Funcionario",
-			"url": "2017_retribuciones_pas_basicas.pdf"
+			"url": "2017_retribuciones_pas_funcionario_basicas.pdf"
 		},{
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PAS",
@@ -136,7 +136,7 @@
 			"tipo": 3,
 			"dataset": "Informes sobre retribuciones del PAS",
 			"nombre": "Retribuciones del pas laboral",
-			"url": "2017_pas_laboral.pdf"
+			"url": "2017_retribuciones_pas_laboral.pdf"
 		}]
 	}, {
 		"tipo": 2,

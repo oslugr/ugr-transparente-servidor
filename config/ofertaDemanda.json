@@ -11,8 +11,17 @@
 			"nombre": "Estructura académica y de docencia",
 			"url": "2015_2016_estructura_academica_docencia.pdf"
 		}, {
-			"nombre": "Plan de Ordenación Docente 2016-17",
-			"url": "2016_2017_plan_ordenacion_docente.pdf"
+			"nombre": "Plan de Ordenación Docente 2017-2018",
+			"url": "2017_2018_Plan_ordenacion_docente.pdf"
+		}, {
+			"nombre": "Estructura de grupos en las titulaciones de Grado 2017-2018",
+			"url": "2017_2018_estructura_grupos_titulaciones_grado.pdf"
+		}, {
+			"nombre": "Límites de admisión en los estudios de Grado 2017-2018",
+			"url": "2017_2018_limites_admision_estudios_grado.pdf"
+		}, {
+			"nombre": "Límites de admisión en los estudios de Máster 2017-2018",
+			"url": "2017_2018_limites_admision_estudios_master.pdf"
 		}]
 	}, {
 		"tipo": 2,
@@ -92,6 +101,9 @@
 		}, {
 			"nombre": "Procedencia de los alumnos 2014 - 2015",
 			"url": "2014_2015_procedencia_alumnos.pdf"
+		}, {
+			"nombre": "Procedencia de los alumnos 2016 - 2017",
+			"url": "2016_2017_procedencia_alumnos.pdf"
 		}]
 	}, {
 		"tipo": 1,

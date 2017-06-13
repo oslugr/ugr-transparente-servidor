@@ -45,11 +45,7 @@
 
 	}, {
 	"titulo": "Planes Estratégico y Propio",
-	"lista": [{
-	"item": "Estrategia de Internacionalización de la Universidad de Granada",
-	"link": "http://secretariageneral.ugr.es/bougr/pages/bougr115/_doc/acg1153"
-
-	}, {
+	"lista": [	{
 		"item": "Plan propio de investigación",
 		"link": "http://investigacion.ugr.es/pages/planpropio/2016"
 	}, {
@@ -64,10 +60,12 @@
 	}, {
 		"item": "Plan Estratégico de la Biblioteca 2016-2019",
 		"link": "http://biblioteca.ugr.es/pages/biblioteca_ugr/normativa/planestrategicodelabibliotecadelaugr_v_3/%21"
-		}, {
+	}, {
 		"item": "Plan Estratégico de Recursos Humanos 2016-2019",
 		"link": "http://gerencia.ugr.es/pages/recursos_humanos/normativa/20160427planestrategicopas20162019"
-
+	}, {
+		"item": "Plan de Calidad 2020 de los Servicios UGR",
+		"link": "http://calidad.ugr.es/plancalidad2020"
 
 }]
 

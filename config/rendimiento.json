@@ -27,6 +27,17 @@
 			"nombre": "Datos UGR - Investiga (a partir de 2014)",
 			"url": "http://opendata.ugr.es/organization/ugr-investiga"
 		}]
+		}, {
+			"tipo": 2,
+			"seccion": "Informe sobre el estado de los servicios de la UGR",
+			"encabezado": "Informe sobre el estado de los servicios de la UGR",
+			"link": "servicios-estado",
+			"texto": "",
+			"datos": [{
+				"dataset": "Informe sobre el estado de los servicios de la UGR",
+				"nombre": "Informe sobre el estado de los servicios de la UGR",
+				"url": "http://calidad.ugr.es/estadoservicios"
+			}]
 	}, {
 		"tipo": 1,
 		"seccion": "Rendimiento académico",
@@ -140,20 +151,20 @@
 			"nombre": "Academic Ranking of World Universities (Shanghai Ranking 2016)",
 			"url": "http://www.shanghairanking.com/World-University-Rankings/University-of-Granada.html"
 		}, {
-			"nombre": "QS World University Ranking 2016",
+			"nombre": "QS World University Ranking 2017",
 			"url": "http://www.topuniversities.com/universities/university-granada#wur"
 		}, {
-			"nombre": "Ranking Web of Universities 2016",
+			"nombre": "Ranking Web of Universities 2017",
 			"url": "http://www.webometrics.info/en/detalles/ugr.es"
 		}, {
 			"nombre": "SCImago Institutions Ranking 2016",
 			"url": "http://scimagoir.com/institution.php?idp=35759"
 		}, {
-			"nombre": "Times Higher Education World University Ranking 2016",
-			"url": "https://www.timeshighereducation.com/world-university-rankings/university-granada?ranking-dataset=133819"
+			"nombre": "Times Higher Education World University Ranking 2017",
+			"url": "https://www.timeshighereducation.com/world-university-rankings/university-granada?ranking-dataset=133819#ranking-dataset/589595"
 		}, {
-			"nombre": "UI GreenMetric 2015",
-			"url": "http://greenmetric.ui.ac.id/detailranking2015?univ=ugr.es"
+			"nombre": "UI GreenMetric 2016",
+			"url": "http://greenmetric.ui.ac.id/detailranking2016/?univ=ugr.es"
 		}, {
 			"nombre": "National University Ranking 2016 (NTU Ranking)",
 			"url": "http://nturanking.lis.ntu.edu.tw/DataPage/TOP300.aspx?query=ComputerScience&pagesize=25&y=2016"

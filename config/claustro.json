@@ -13,7 +13,18 @@
 			"url": "eac2ad23-3ea9-45f1-aee4-1f72236503d7",
 			"descarga": "ac01b638-dd1f-4f5a-8b13-a32f1b2dc1c7/resource/eac2ad23-3ea9-45f1-aee4-1f72236503d7/download/perfil.csv"
 		}]
-	}, {
+
+		}, {
+			"tipo": 3,
+			"seccion": "Personal Docente e Investigador 2017",
+			"encabezado": "Personal Docente e Investigador 2017",
+			"link": "Personal Docente e Investigador 2017",
+			"texto": "",
+			"datos": [{
+				"nombre": "Personal Docente e Investigador 2017",
+				"url": "2017_personal_docente_e_investigador.pdf"
+			}]
+		}, {
 		"tipo": 1,
 		"seccion": "Profesores extranjeros",
 		"encabezado": "Datos de Profesores Extranjeros",
@@ -48,6 +59,16 @@
 		}, {
 			"nombre": "PDI Extranjero por sexo y categorías",
 			"url": "pdi_extranjero_sexo_categorias.png"
+		}]
+	}, {
+		"tipo": 3,
+		"seccion": "Profesores extranjeros",
+		"encabezado": "Informe de Profesores Extranjeros",
+		"link": "graficos-profesores-extranjeros",
+		"texto": "",
+		"datos": [{
+			"nombre": "Informe por origen 2017",
+			"url": "pdi_extranjeros.pdf"
 		}]
 	}]
 }

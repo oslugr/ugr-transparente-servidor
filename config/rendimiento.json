@@ -220,6 +220,10 @@
 		"texto": "",
 		"datos": [{
 			"dataset": "Estudio de egresados",
+			"nombre": "Estudios sobre Egresados 2015",
+			"url": "http://cpep.ugr.es/pages/empleo/observatorio-ocupacional-universidad-de-granada"
+		}, {
+			"dataset": "Estudio de egresados",
 			"nombre": "Estudio de Egresados",
 			"url": "http://marketing.ugr.es/encuesta/stats14/"
 		}, {

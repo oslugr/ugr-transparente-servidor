@@ -76,10 +76,34 @@
 		"texto": "",
 		"datos": [{
 			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado. Distribuciones por vía de acceso y sexo. Curso 2016-2017",
-			"url": "2016_2017_nuevo_acceso_grados_via_acceso.pdf"
+			"url": "2016_2017_grados_nuevo_ingreso_via_acceso.pdf"
+		}, {
+			"nombre": "Alumnos de Grado distribución por ramas de conocimiento y sexo 2016-2017",
+			"url": "2016_2017_grados_matriculados_por_ramas.pdf"
+		}, {
+			"nombre": "Alumnos de Posgrado por ramas de conocimiento y sexo 2016-2017",
+			"url": "2016_2017_posgrados_matriculados_por_ramas.pdf"
 		}, {
 			"nombre": "Alumnado de nuevo ingreso en titulaciones de Grado (Curso 2016-2017). Distribución por edad",
 			"url": "2016_2017_nuevo_acceso_grados_por_edad.pdf"
+		}, {
+			"nombre": "Alumnado de Grado distribución por edad 2016-2017",
+			"url": "2016_2017_grados_matriculados_por_edad.pdf"
+		}, {
+			"nombre": "Oferta y demanda de plazas de grados 2016-2017",
+			"url": "2016_2017_oferta_demanda_plazas.pdf"
+		}, {
+			"nombre": "Notas de corte preinscripción 2016-2017",
+			"url": "2016_2017_notas_corte.pdf"
+		}, {
+			"nombre": "Alumnos matriculados por centro y titulaciones 2016-2017",
+			"url": "2016_2017_alumnos_matriculados_por_centro_y_titulaciones.pdf"
+		}, {
+			"nombre": "Demanda de titulaciones 2016-2017",
+			"url": "2016_2017_demanda_titulaciones.pdf"
+		}, {
+			"nombre": "Procedimientos de acceso 2016-2017",
+			"url": "2016_2017_procedimientos_acceso_curso.pdf"
 		}, {
 			"nombre": "Oferta y demanda de plazas de grados 2015 - 2016",
 			"url": "2015_2016_oferta_demanda_grados.pdf"
